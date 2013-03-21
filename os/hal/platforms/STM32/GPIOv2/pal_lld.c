@@ -66,6 +66,7 @@
 #error "missing or unsupported platform for GPIOv2 PAL driver"
 #endif
 
+
 /*===========================================================================*/
 /* Driver exported variables.                                                */
 /*===========================================================================*/
@@ -159,10 +160,71 @@ void _pal_lld_init(const PALConfig *config) {
  *
  * @notapi
  */
-#if 1
-void _pal_lld_setgroupmode(ioportid_t port,
-                           ioportmask_t mask,
-                           iomode_t mode) {
+
+// tsham modified 2013/03/20
+#define  ALTERNATE_TS   // To handle L3GD20h file, it will be modified.
+#define  ORIGIN
+
+
+#if defined(ALTERNATE_TS)
+void _pal_lld_setgroupmode(	ioportid_t 		port,
+                           					ioportmask_t 		mask,
+                           					iomode_t 		mode
+                           					//int 			       curpin
+                           				    )
+{
+   uint32_t 	moder	  = (mode & PAL_STM32_MODE_MASK) >> 0;
+// uint32_t 	otyper     = (mode & PAL_STM32_OTYPE_MASK) >> 2;
+//uint32_t 	ospeedr   = (mode & PAL_STM32_OSPEED_MASK) >> 3;
+//uint32_t 	pupdr	  = (mode & PAL_STM32_PUDR_MASK) >> 5;
+
+  uint32_t        altr	 	  = (mode & PAL_STM32_ALTERNATE_MASK) >> 15;
+  uint32_t        tmp	 	  = ((0x05) << ((uint32_t)((uint32_t)altr & (uint32_t)0x07) * 4));
+  uint32_t 	temp2;
+
+
+
+  if(altr < 0x08) 
+  	port->AFRL &=~((uint32_t)0x0F << ((uint32_t)((uint32_t) altr & (uint32_t)0x07)*4));
+  else
+  	port->AFRH &=~((uint32_t)0x0F << ((uint32_t)((uint32_t) altr & (uint32_t)0x07)*4));
+  
+
+  if(altr < 0x08){
+     temp2 = port->AFRL | tmp;
+     port->AFRL = temp2;
+  } else {
+     temp2 = port->AFRH | tmp;
+     port->AFRH = temp2;
+  }
+
+  if ( (moder & 0x02)   //GPIO_Mode_Out 
+		|| (moder &  0x04) // Alternate
+     )
+  {  /* Speed mode configuration */
+	  port->OSPEEDR &= ~(GPIO_OSPEEDER_OSPEEDR0);
+	  port->OSPEEDR |= ((uint32_t)(port->OSPEEDR));
+
+	  /* Check Output mode parameters */
+//		assert_param(IS_GPIO_OTYPE(GPIO_InitStruct->GPIO_OType));
+
+	  /* Output mode configuration */
+	  port->OTYPER &= ~(GPIO_OTYPER_OT_0);
+	  port->OTYPER |= (uint16_t)(((uint16_t)port->OTYPER));
+	}
+	
+	port->MODER  &= ~(GPIO_MODER_MODER0);
+	port->MODER |= (port->MODER);
+
+	/* Pull-up Pull down resistor configuration */
+	port->PUPDR &= ~(GPIO_PUPDR_PUPDR0);
+	port->PUPDR |= (port->PUPDR);
+}
+
+#elif defined(ORIGIN)
+void _pal_lld_setgroupmode(	ioportid_t port,
+                           					ioportmask_t mask,
+                           					iomode_t mode) {
 
   uint32_t moder   = (mode & PAL_STM32_MODE_MASK) >> 0;
   uint32_t otyper  = (mode & PAL_STM32_OTYPE_MASK) >> 2;
@@ -170,16 +232,20 @@ void _pal_lld_setgroupmode(ioportid_t port,
   uint32_t pupdr   = (mode & PAL_STM32_PUDR_MASK) >> 5;
   uint32_t altr    = (mode & PAL_STM32_ALTERNATE_MASK) >> 7;
   uint32_t bit     = 0;
+  
   while (TRUE) {
     if ((mask & 1) != 0) {
       uint32_t altrmask, m1, m2, m4;
 
       altrmask = altr << ((bit & 7) * 4);
       m4 = 15 << ((bit & 7) * 4);
-      if (bit < 8)
-        port->AFRL = (port->AFRL & ~m4) | altrmask;
-      else
-        port->AFRH = (port->AFRH & ~m4) | altrmask;
+
+      if ( bit < 8 )  {
+		port->AFRL = (port->AFRL & ~m4) | altrmask;
+	  } else {
+		port->AFRH = (port->AFRH & ~m4) | altrmask;
+	  }
+	  
       m1 = 1 << bit;
       port->OTYPER  = (port->OTYPER & ~m1) | otyper;
       m2 = 3 << (bit * 2);
@@ -195,7 +261,7 @@ void _pal_lld_setgroupmode(ioportid_t port,
     pupdr <<= 2;
     moder <<= 2;
     bit++;
-  }
+  }  
 }
 #else
 void _pal_lld_setgroupmode(ioportid_t port,
