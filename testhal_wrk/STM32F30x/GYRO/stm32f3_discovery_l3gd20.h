@@ -165,6 +165,8 @@ typedef struct
 #define L3GD20_SPI_MOSI_SOURCE           GPIOA_SPI1_MOSI
 #define L3GD20_SPI_MOSI_AF               ((uint8_t)0x05)
 
+#define L3GD20_SPI_AF				((uint8_t)0x05)  // 2013/03/21 added tsham
+
 #define L3GD20_SPI_CS_PIN                ((uint16_t)0x0008)       /* PE.03 */
 #define L3GD20_SPI_CS_GPIO_PORT          GPIOE                    /* GPIOE */
 #define L3GD20_SPI_CS_GPIO_CLK           RCC_AHBENR_GPIOEEN	  // RCC_AHBPeriph_GPIOE
