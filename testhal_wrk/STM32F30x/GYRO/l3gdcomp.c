@@ -543,104 +543,73 @@ static void  L3GD_SPI_Init(SPI_TypeDef *spi, SPIConfig *spiconfig)
 extern void SPI_I2S_DeInit(SPI_TypeDef* SPIx);
 
 
+#define  ALTERNATE_SHIFT   		7
+#define  PUDR_SHIFT 			5
+#define	 OSPEED_SHIFT			3
+#define  OTYPE_SHIFT			2
+#define	 MODE_SHIFT				0
+
 void RCC_AHBPeriphClockCmd(uint32_t RCC_AHBPeriph, FunctionalState NewState);
+
+// 210313tsham,
+// The following TEST1 and TEST2 has the same function between ST and ChibiOS function.
+// TEST1, and TEST2 are tested reciprocally. As a result, the _pal_lld_setgroupmode made 
+// problem, the testing environment from /TS_SPI/main.c cannot read chip_id. 
+// So,the alternate part was changed( os/hal/platforms/pal_lld.c,
+// The other parts also occurs same problems. it seems to be set register value 
+// seriously damaged.
+
 
 static void L3GD20_LowLevel_Init(SPIDriver *drvspi, SPIConfig *spi_cfg)
 {
-  GPIO_InitTypeDef   GPIO_InitStructure;
-//  SPI_InitTypeDef_A  SPI_InitStructure;
+  rccEnableAPB2(RCC_APB2RSTR_SPI1RST, TRUE);	
+  rccEnableAHB(GPIOA_SPI1_SCK | GPIOA_SPI1_MOSI | GPIOA_SPI1_MISO, TRUE);
+  rccEnableAHB(RCC_AHBENR_GPIOEEN, ENABLE);   // GPIOE Clock Enable
+  rccEnableAHB(RCC_AHBENR_GPIOEEN, ENABLE);   // GPIOE Clock Enable
+  rccEnableAHB(RCC_AHBENR_GPIOEEN, ENABLE);   // GPIOE Clock Enable
+
+  _pal_lld_setgroupmode(GPIOA,PAL_STM32_ALTERNATE_MASK,  L3GD20_SPI_SCK_SOURCE << ALTERNATE_SHIFT);
+  _pal_lld_setgroupmode(GPIOA,PAL_STM32_ALTERNATE_MASK, L3GD20_SPI_MISO_SOURCE << ALTERNATE_SHIFT);
+  _pal_lld_setgroupmode(GPIOA,PAL_STM32_ALTERNATE_MASK, L3GD20_SPI_MOSI_SOURCE << ALTERNATE_SHIFT);
 
 
-  /* Enable the SPI periph */
-  RCC_APB2PeriphClockCmd(L3GD20_SPI_CLK, ENABLE);
+  _pal_lld_setgroupmode(GPIOA, PAL_STM32_MODE_MASK, 0x04 << MODE_SHIFT);   // GPIO_Mode_AF  0x02->0x04
+  _pal_lld_setgroupmode(GPIOA, PAL_STM32_OTYPE_MASK, 0x00 << OTYPE_SHIFT); // GPIO_OType_PP
+  _pal_lld_setgroupmode(GPIOA, PAL_STM32_OTYPE_PUSHPULL, 0x00 << PUDR_SHIFT); //GPIO_PuPd_NOPUU
+  _pal_lld_setgroupmode(GPIOA, PAL_STM32_OSPEED_HIGHEST, 0x03 << OSPEED_SHIFT); // highest 50Hz
 
+  pal_lld_writepad(GPIOA,5, GPIO_BSRR_BS_5);  	//SCK
+  pal_lld_writepad(GPIOA,7, GPIO_BSRR_BS_7);  	//MOSI
+  pal_lld_writepad(GPIOA,6, GPIO_BSRR_BS_6);  	//MISO
 
-  /* Enable SCK, MOSI and MISO GPIO clocks */
-  RCC_AHBPeriphClockCmd(GPIOA_SPI1_SCK | GPIOA_SPI1_MOSI
-                        | GPIOA_SPI1_MISO, ENABLE);
+  /***  SPI Configuration -----------------------------------------------------*/
+  ///////////////////////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////////////////
 
-  /* Enable CS  GPIO clock */
-  RCC_AHBPeriphClockCmd(L3GD20_SPI_CS_GPIO_CLK, ENABLE);
+  rccEnableAPB2(RCC_APB2RSTR_SPI1RST, ENABLE);  // Enable SPI_De_Init
+  rccEnableAPB2(RCC_APB2RSTR_SPI1RST, DISABLE); // Disable SPI_De_Init
+
+  spi_cfg->ssport = GPIOE;              	// spi configuration ssport allocation 
+  spi_cfg->sspad  = GPIOE_SPI1_CS;		// spi sspad allocation from SPIOE_SPI1_CS
+	
+  ///////////////////////////////////////////////////////////////////////////////
+  //
+  L3GD_SPI_Init(drvspi->spi, spi_cfg); 		// drvspi->spi initialize, and spi_cfg initialize
+	
+  _pal_lld_setgroupmode(GPIOE, PAL_STM32_MODE_MASK, 0x02 << MODE_SHIFT);         // GPIO_Mode_OUT
+  _pal_lld_setgroupmode(GPIOE, PAL_STM32_OTYPE_MASK, 0x00 << OTYPE_SHIFT);       // 3: GPIO_OType_PP
+  _pal_lld_setgroupmode(GPIOE, PAL_STM32_OSPEED_HIGHEST,  0x03 << OSPEED_SHIFT); // 0x03:50MHz
+
+  pal_lld_writepad(GPIOE,3, GPIO_BSRR_BS_3);
+  pal_lld_setport(GPIOE, GPIO_BSRR_BS_3);   // Deselect : Chip Select high
   
-  /* Enable INT1 GPIO clock */
-  RCC_AHBPeriphClockCmd(L3GD20_SPI_INT1_GPIO_CLK, ENABLE);
-  
-  /* Enable INT2 GPIO clock */
-  RCC_AHBPeriphClockCmd(L3GD20_SPI_INT2_GPIO_CLK, ENABLE);
-
-
-  GPIO_PinAFConfig(L3GD20_SPI_SCK_GPIO_PORT, L3GD20_SPI_SCK_SOURCE, L3GD20_SPI_SCK_AF);
-  GPIO_PinAFConfig(L3GD20_SPI_MISO_GPIO_PORT, L3GD20_SPI_MISO_SOURCE, L3GD20_SPI_MISO_AF);
-  GPIO_PinAFConfig(L3GD20_SPI_MOSI_GPIO_PORT, L3GD20_SPI_MOSI_SOURCE, L3GD20_SPI_MOSI_AF);
-
-
-  GPIO_InitStructure.GPIO_Mode= GPIO_Mode_AF;
-  GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
-  GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL;//GPIO_PuPd_DOWN;
-  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-
-  /* SPI SCK pin configuration */
-  GPIO_InitStructure.GPIO_Pin = L3GD20_SPI_SCK_PIN;
-
-
-  GPIO_Init(L3GD20_SPI_SCK_GPIO_PORT, &GPIO_InitStructure);
-
-
-  /* SPI  MOSI pin configuration */
-  GPIO_InitStructure.GPIO_Pin =  L3GD20_SPI_MOSI_PIN;
-  GPIO_Init(L3GD20_SPI_MOSI_GPIO_PORT, &GPIO_InitStructure);
-
-  /* SPI MISO pin configuration */
-  GPIO_InitStructure.GPIO_Pin = L3GD20_SPI_MISO_PIN;
-  GPIO_Init(L3GD20_SPI_MISO_GPIO_PORT, &GPIO_InitStructure);
-
-  /* SPI configuration -------------------------------------------------------*/
-  SPI_I2S_DeInit(L3GD20_SPI);  
-  spi_cfg->ssport = GPIOE;
-  spi_cfg->sspad = GPIOE_SPI1_CS;
-
-#if 0  
-  SPI_InitStructure.SPI_Direction = SPI_Direction_2Lines_FullDuplex;
-  SPI_InitStructure.SPI_DataSize = SPI_DataSize_8b;
-  SPI_InitStructure.SPI_CPOL = SPI_CPOL_Low;
-  SPI_InitStructure.SPI_CPHA = SPI_CPHA_1Edge;
-  SPI_InitStructure.SPI_NSS = SPI_NSS_Soft;
-  SPI_InitStructure.SPI_BaudRatePrescaler = SPI_BaudRatePrescaler_8;
-  SPI_InitStructure.SPI_FirstBit = SPI_FirstBit_MSB;  // SPI_FirstBit_MSB
-  SPI_InitStructure.SPI_CRCPolynomial = 7;
-  SPI_InitStructure.SPI_Mode = SPI_Mode_Master;
-  SPI_Init(L3GD20_SPI, &SPI_InitStructure);
-
-  /* Configure the RX FIFO Threshold */
-  SPI_RxFIFOThresholdConfig(L3GD20_SPI, SPI_RxFIFOThreshold_QF);
-  /* Enable SPI1  */
-  SPI_Cmd(L3GD20_SPI, ENABLE);
-#else
-	L3GD_SPI_Init(drvspi->spi, spi_cfg);
-#endif
-
-  /* Configure GPIO PIN for Lis Chip select */
-  GPIO_InitStructure.GPIO_Pin = L3GD20_SPI_CS_PIN;
-  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;
-  GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
-  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-  GPIO_Init(L3GD20_SPI_CS_GPIO_PORT, &GPIO_InitStructure);
-
-  /* Deselect : Chip Select high */
-  GPIO_SetBits(L3GD20_SPI_CS_GPIO_PORT, L3GD20_SPI_CS_PIN);
-  
-  /* Configure GPIO PINs to detect Interrupts */
-  GPIO_InitStructure.GPIO_Pin = L3GD20_SPI_INT1_PIN;
-  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN;
-  GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
-  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-  GPIO_InitStructure.GPIO_PuPd  = GPIO_PuPd_NOPULL;
-  GPIO_Init(L3GD20_SPI_INT1_GPIO_PORT, &GPIO_InitStructure);
-  
-  GPIO_InitStructure.GPIO_Pin = L3GD20_SPI_INT2_PIN;
-  GPIO_Init(L3GD20_SPI_INT2_GPIO_PORT, &GPIO_InitStructure);
-  
-  //drvspi->state = SPI_READY;
+  _pal_lld_setgroupmode(GPIOE, PAL_STM32_MODE_MASK,0x01 << MODE_SHIFT);  	// GPIO_Mode_IN
+  _pal_lld_setgroupmode(GPIOE, PAL_STM32_OTYPE_MASK, 0x00 << OTYPE_SHIFT);
+  _pal_lld_setgroupmode(GPIOE, PAL_STM32_OSPEED_HIGHEST, 0x03 << OSPEED_SHIFT);
+  _pal_lld_setgroupmode(GPIOE, PAL_STM32_OTYPE_PUSHPULL, 0x00 << PUDR_SHIFT);
+	
+  pal_lld_writepad(GPIOE,0, GPIO_BSRR_BS_0);    		// INT1 pin	
+  pal_lld_writepad(GPIOE,1, GPIO_BSRR_BS_1);    		// INT2 pin
 }  
 
 /**
