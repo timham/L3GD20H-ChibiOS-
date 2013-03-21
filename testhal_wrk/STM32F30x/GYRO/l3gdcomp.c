@@ -568,19 +568,18 @@ static void L3GD20_LowLevel_Init(SPIDriver *drvspi, SPIConfig *spi_cfg)
   rccEnableAHB(RCC_AHBENR_GPIOEEN, ENABLE);   // GPIOE Clock Enable
   rccEnableAHB(RCC_AHBENR_GPIOEEN, ENABLE);   // GPIOE Clock Enable
 
-  _pal_lld_setgroupmode(GPIOA,PAL_STM32_ALTERNATE_MASK,  L3GD20_SPI_SCK_SOURCE << ALTERNATE_SHIFT);
-  _pal_lld_setgroupmode(GPIOA,PAL_STM32_ALTERNATE_MASK, L3GD20_SPI_MISO_SOURCE << ALTERNATE_SHIFT);
-  _pal_lld_setgroupmode(GPIOA,PAL_STM32_ALTERNATE_MASK, L3GD20_SPI_MOSI_SOURCE << ALTERNATE_SHIFT);
+  _pal_lld_setgroupmode(GPIOA, L3GD20_SPI_SCK_AF,  L3GD20_SPI_SCK_SOURCE << ALTERNATE_SHIFT);
+  _pal_lld_setgroupmode(GPIOA,L3GD20_SPI_MISO_AF, L3GD20_SPI_MISO_SOURCE << ALTERNATE_SHIFT);
+  _pal_lld_setgroupmode(GPIOA,L3GD20_SPI_MOSI_AF, L3GD20_SPI_MOSI_SOURCE << ALTERNATE_SHIFT);
 
+  _pal_lld_setgroupmode(GPIOA, L3GD20_SPI_AF, 0x04 << MODE_SHIFT);   // GPIO_Mode_AF  0x02->0x04
+  _pal_lld_setgroupmode(GPIOA, L3GD20_SPI_AF, 0x00 << OTYPE_SHIFT); // GPIO_OType_PP
+  _pal_lld_setgroupmode(GPIOA, L3GD20_SPI_AF, 0x00 << PUDR_SHIFT); //GPIO_PuPd_NOPUU
+  _pal_lld_setgroupmode(GPIOA, L3GD20_SPI_AF, 0x03 << OSPEED_SHIFT); // highest 50Hz
 
-  _pal_lld_setgroupmode(GPIOA, PAL_STM32_MODE_MASK, 0x04 << MODE_SHIFT);   // GPIO_Mode_AF  0x02->0x04
-  _pal_lld_setgroupmode(GPIOA, PAL_STM32_OTYPE_MASK, 0x00 << OTYPE_SHIFT); // GPIO_OType_PP
-  _pal_lld_setgroupmode(GPIOA, PAL_STM32_OTYPE_PUSHPULL, 0x00 << PUDR_SHIFT); //GPIO_PuPd_NOPUU
-  _pal_lld_setgroupmode(GPIOA, PAL_STM32_OSPEED_HIGHEST, 0x03 << OSPEED_SHIFT); // highest 50Hz
-
-  pal_lld_writepad(GPIOA,5, GPIO_BSRR_BS_5);  	//SCK
-  pal_lld_writepad(GPIOA,7, GPIO_BSRR_BS_7);  	//MOSI
-  pal_lld_writepad(GPIOA,6, GPIO_BSRR_BS_6);  	//MISO
+  pal_lld_writepad(GPIOA,GPIOA_SPI1_SCK, GPIO_BSRR_BS_5);  	//SCK
+  pal_lld_writepad(GPIOA,GPIOA_SPI1_MOSI, GPIO_BSRR_BS_7);  	//MOSI
+  pal_lld_writepad(GPIOA,GPIOA_SPI1_MISO, GPIO_BSRR_BS_6);  	//MISO
 
   /***  SPI Configuration -----------------------------------------------------*/
   ///////////////////////////////////////////////////////////////////////////////
@@ -596,17 +595,17 @@ static void L3GD20_LowLevel_Init(SPIDriver *drvspi, SPIConfig *spi_cfg)
   //
   L3GD_SPI_Init(drvspi->spi, spi_cfg); 		// drvspi->spi initialize, and spi_cfg initialize
 	
-  _pal_lld_setgroupmode(GPIOE, PAL_STM32_MODE_MASK, 0x02 << MODE_SHIFT);         // GPIO_Mode_OUT
-  _pal_lld_setgroupmode(GPIOE, PAL_STM32_OTYPE_MASK, 0x00 << OTYPE_SHIFT);       // 3: GPIO_OType_PP
-  _pal_lld_setgroupmode(GPIOE, PAL_STM32_OSPEED_HIGHEST,  0x03 << OSPEED_SHIFT); // 0x03:50MHz
+  _pal_lld_setgroupmode(GPIOE, L3GD20_SPI_AF, 0x02 << MODE_SHIFT);         // GPIO_Mode_OUT
+  _pal_lld_setgroupmode(GPIOE, L3GD20_SPI_AF, 0x00 << OTYPE_SHIFT);       // 3: GPIO_OType_PP
+  _pal_lld_setgroupmode(GPIOE, L3GD20_SPI_AF,  0x03 << OSPEED_SHIFT); // 0x03:50MHz
 
   pal_lld_writepad(GPIOE,3, GPIO_BSRR_BS_3);
   pal_lld_setport(GPIOE, GPIO_BSRR_BS_3);   // Deselect : Chip Select high
   
-  _pal_lld_setgroupmode(GPIOE, PAL_STM32_MODE_MASK,0x01 << MODE_SHIFT);  	// GPIO_Mode_IN
-  _pal_lld_setgroupmode(GPIOE, PAL_STM32_OTYPE_MASK, 0x00 << OTYPE_SHIFT);
-  _pal_lld_setgroupmode(GPIOE, PAL_STM32_OSPEED_HIGHEST, 0x03 << OSPEED_SHIFT);
-  _pal_lld_setgroupmode(GPIOE, PAL_STM32_OTYPE_PUSHPULL, 0x00 << PUDR_SHIFT);
+  _pal_lld_setgroupmode(GPIOE, L3GD20_SPI_AF,0x01 << MODE_SHIFT);  	// GPIO_Mode_IN
+  _pal_lld_setgroupmode(GPIOE, L3GD20_SPI_AF, 0x00 << OTYPE_SHIFT);
+  _pal_lld_setgroupmode(GPIOE, L3GD20_SPI_AF, 0x03 << OSPEED_SHIFT);
+  _pal_lld_setgroupmode(GPIOE, L3GD20_SPI_AF, 0x00 << PUDR_SHIFT);
 	
   pal_lld_writepad(GPIOE,0, GPIO_BSRR_BS_0);    		// INT1 pin	
   pal_lld_writepad(GPIOE,1, GPIO_BSRR_BS_1);    		// INT2 pin
