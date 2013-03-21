@@ -1,24 +1,24 @@
 build/obj/usb.o: ../../../os/hal/src/usb.c \
- c:/develop/gimst/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/string.h \
- c:/develop/gimst/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/_ansi.h \
- c:/develop/gimst/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/newlib.h \
- c:/develop/gimst/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/sys/config.h \
- c:/develop/gimst/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/machine/ieeefp.h \
- c:/develop/gimst/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/sys/features.h \
- c:/develop/gimst/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/sys/reent.h \
- c:/develop/gimst/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/_ansi.h \
- c:/develop/gimst/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/sys/_types.h \
- c:/develop/gimst/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/machine/_types.h \
- c:/develop/gimst/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/machine/_default_types.h \
- c:/develop/gimst/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/sys/lock.h \
- c:\develop\gimst\chibistudio\tools\yagarto-tools\yagarto-20121222\bin\../lib/gcc/arm-none-eabi/4.7.2/include/stddef.h \
- c:/develop/gimst/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/sys/cdefs.h \
- c:/develop/gimst/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/sys/string.h \
+ c:/develop/genist/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/string.h \
+ c:/develop/genist/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/_ansi.h \
+ c:/develop/genist/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/newlib.h \
+ c:/develop/genist/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/sys/config.h \
+ c:/develop/genist/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/machine/ieeefp.h \
+ c:/develop/genist/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/sys/features.h \
+ c:/develop/genist/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/sys/reent.h \
+ c:/develop/genist/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/_ansi.h \
+ c:/develop/genist/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/sys/_types.h \
+ c:/develop/genist/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/machine/_types.h \
+ c:/develop/genist/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/machine/_default_types.h \
+ c:/develop/genist/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/sys/lock.h \
+ c:\develop\genist\chibistudio\tools\yagarto-tools\yagarto-20121222\bin\../lib/gcc/arm-none-eabi/4.7.2/include/stddef.h \
+ c:/develop/genist/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/sys/cdefs.h \
+ c:/develop/genist/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/sys/string.h \
  ../../../os/kernel/include/ch.h chconf.h \
  ../../../os/ports/GCC/ARMCMx/chtypes.h \
- c:\develop\gimst\chibistudio\tools\yagarto-tools\yagarto-20121222\bin\../lib/gcc/arm-none-eabi/4.7.2/include/stdint.h \
- c:/develop/gimst/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/stdint.h \
- c:\develop\gimst\chibistudio\tools\yagarto-tools\yagarto-20121222\bin\../lib/gcc/arm-none-eabi/4.7.2/include/stdbool.h \
+ c:\develop\genist\chibistudio\tools\yagarto-tools\yagarto-20121222\bin\../lib/gcc/arm-none-eabi/4.7.2/include/stdint.h \
+ c:/develop/genist/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/stdint.h \
+ c:\develop\genist\chibistudio\tools\yagarto-tools\yagarto-20121222\bin\../lib/gcc/arm-none-eabi/4.7.2/include/stdbool.h \
  ../../../os/kernel/include/chlists.h \
  ../../../os/ports/GCC/ARMCMx/chcore.h \
  ../../../os/ports/GCC/ARMCMx/STM32F3xx/cmparams.h \
@@ -67,35 +67,35 @@ build/obj/usb.o: ../../../os/hal/src/usb.c \
  ../../../os/hal/include/mmc_spi.h ../../../os/hal/include/serial_usb.h \
  ../../../os/hal/include/usb.h
 
-c:/develop/gimst/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/string.h:
+c:/develop/genist/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/string.h:
 
-c:/develop/gimst/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/_ansi.h:
+c:/develop/genist/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/_ansi.h:
 
-c:/develop/gimst/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/newlib.h:
+c:/develop/genist/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/newlib.h:
 
-c:/develop/gimst/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/sys/config.h:
+c:/develop/genist/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/sys/config.h:
 
-c:/develop/gimst/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/machine/ieeefp.h:
+c:/develop/genist/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/machine/ieeefp.h:
 
-c:/develop/gimst/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/sys/features.h:
+c:/develop/genist/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/sys/features.h:
 
-c:/develop/gimst/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/sys/reent.h:
+c:/develop/genist/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/sys/reent.h:
 
-c:/develop/gimst/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/_ansi.h:
+c:/develop/genist/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/_ansi.h:
 
-c:/develop/gimst/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/sys/_types.h:
+c:/develop/genist/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/sys/_types.h:
 
-c:/develop/gimst/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/machine/_types.h:
+c:/develop/genist/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/machine/_types.h:
 
-c:/develop/gimst/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/machine/_default_types.h:
+c:/develop/genist/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/machine/_default_types.h:
 
-c:/develop/gimst/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/sys/lock.h:
+c:/develop/genist/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/sys/lock.h:
 
-c:\develop\gimst\chibistudio\tools\yagarto-tools\yagarto-20121222\bin\../lib/gcc/arm-none-eabi/4.7.2/include/stddef.h:
+c:\develop\genist\chibistudio\tools\yagarto-tools\yagarto-20121222\bin\../lib/gcc/arm-none-eabi/4.7.2/include/stddef.h:
 
-c:/develop/gimst/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/sys/cdefs.h:
+c:/develop/genist/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/sys/cdefs.h:
 
-c:/develop/gimst/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/sys/string.h:
+c:/develop/genist/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/sys/string.h:
 
 ../../../os/kernel/include/ch.h:
 
@@ -103,11 +103,11 @@ chconf.h:
 
 ../../../os/ports/GCC/ARMCMx/chtypes.h:
 
-c:\develop\gimst\chibistudio\tools\yagarto-tools\yagarto-20121222\bin\../lib/gcc/arm-none-eabi/4.7.2/include/stdint.h:
+c:\develop\genist\chibistudio\tools\yagarto-tools\yagarto-20121222\bin\../lib/gcc/arm-none-eabi/4.7.2/include/stdint.h:
 
-c:/develop/gimst/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/stdint.h:
+c:/develop/genist/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/stdint.h:
 
-c:\develop\gimst\chibistudio\tools\yagarto-tools\yagarto-20121222\bin\../lib/gcc/arm-none-eabi/4.7.2/include/stdbool.h:
+c:\develop\genist\chibistudio\tools\yagarto-tools\yagarto-20121222\bin\../lib/gcc/arm-none-eabi/4.7.2/include/stdbool.h:
 
 ../../../os/kernel/include/chlists.h:
 

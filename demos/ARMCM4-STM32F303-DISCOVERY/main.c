@@ -25,6 +25,7 @@
 /*
  * This is a periodic thread that does absolutely nothing except flashing LEDs.
  */
+
 static WORKING_AREA(waThread1, 128);
 static msg_t Thread1(void *arg) {
 
@@ -32,28 +33,28 @@ static msg_t Thread1(void *arg) {
   chRegSetThreadName("blinker");
   while (TRUE) {
     palSetPad(GPIOE, GPIOE_LED3_RED);
-    chThdSleepMilliseconds(125);
+    chThdSleepMilliseconds(10);
     palClearPad(GPIOE, GPIOE_LED3_RED);
     palSetPad(GPIOE, GPIOE_LED5_ORANGE);
-    chThdSleepMilliseconds(125);
+    chThdSleepMilliseconds(10);
     palClearPad(GPIOE, GPIOE_LED5_ORANGE);
     palSetPad(GPIOE, GPIOE_LED7_GREEN);
-    chThdSleepMilliseconds(125);
+    chThdSleepMilliseconds(10);
     palClearPad(GPIOE, GPIOE_LED7_GREEN);
     palSetPad(GPIOE, GPIOE_LED9_BLUE);
-    chThdSleepMilliseconds(125);
+    chThdSleepMilliseconds(10);
     palClearPad(GPIOE, GPIOE_LED9_BLUE);
     palSetPad(GPIOE, GPIOE_LED10_RED);
-    chThdSleepMilliseconds(125);
+    chThdSleepMilliseconds(10);
     palClearPad(GPIOE, GPIOE_LED10_RED);
     palSetPad(GPIOE, GPIOE_LED8_ORANGE);
-    chThdSleepMilliseconds(125);
+    chThdSleepMilliseconds(10);
     palClearPad(GPIOE, GPIOE_LED8_ORANGE);
     palSetPad(GPIOE, GPIOE_LED6_GREEN);
-    chThdSleepMilliseconds(125);
+    chThdSleepMilliseconds(10);
     palClearPad(GPIOE, GPIOE_LED6_GREEN);
     palSetPad(GPIOE, GPIOE_LED4_BLUE);
-    chThdSleepMilliseconds(125);
+    chThdSleepMilliseconds(10);
     palClearPad(GPIOE, GPIOE_LED4_BLUE);
   }
 }

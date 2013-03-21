@@ -63,6 +63,8 @@
 #define GPIOA_SPI1_SCK              5
 #define GPIOA_SPI1_MISO             6
 #define GPIOA_SPI1_MOSI             7
+
+
 #define GPIOA_PIN8                  8
 #define GPIOA_PIN9                  9
 #define GPIOA_PIN10                 10
@@ -139,6 +141,8 @@
 #define GPIOE_LED10_RED             13
 #define GPIOE_LED8_ORANGE           14
 #define GPIOE_LED6_GREEN            15
+
+
 
 #define GPIOF_OSC_IN                0
 #define GPIOF_OSC_OUT               1

@@ -51,6 +51,8 @@
 /* External declarations.                                                    */
 /*===========================================================================*/
 
+#include "io_channel.h" //tsham added
+
 extern BaseChannel CD1;
 
 #ifdef __cplusplus

@@ -2,10 +2,10 @@ build/obj/ext_lld_isr.o: \
  ../../../os/hal/platforms/STM32F30x/ext_lld_isr.c \
  ../../../os/kernel/include/ch.h chconf.h \
  ../../../os/ports/GCC/ARMCMx/chtypes.h \
- c:\develop\gimst\chibistudio\tools\yagarto-tools\yagarto-20121222\bin\../lib/gcc/arm-none-eabi/4.7.2/include/stddef.h \
- c:\develop\gimst\chibistudio\tools\yagarto-tools\yagarto-20121222\bin\../lib/gcc/arm-none-eabi/4.7.2/include/stdint.h \
- c:/develop/gimst/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/stdint.h \
- c:\develop\gimst\chibistudio\tools\yagarto-tools\yagarto-20121222\bin\../lib/gcc/arm-none-eabi/4.7.2/include/stdbool.h \
+ c:\develop\genist\chibistudio\tools\yagarto-tools\yagarto-20121222\bin\../lib/gcc/arm-none-eabi/4.7.2/include/stddef.h \
+ c:\develop\genist\chibistudio\tools\yagarto-tools\yagarto-20121222\bin\../lib/gcc/arm-none-eabi/4.7.2/include/stdint.h \
+ c:/develop/genist/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/stdint.h \
+ c:\develop\genist\chibistudio\tools\yagarto-tools\yagarto-20121222\bin\../lib/gcc/arm-none-eabi/4.7.2/include/stdbool.h \
  ../../../os/kernel/include/chlists.h \
  ../../../os/ports/GCC/ARMCMx/chcore.h \
  ../../../os/ports/GCC/ARMCMx/STM32F3xx/cmparams.h \
@@ -59,13 +59,13 @@ chconf.h:
 
 ../../../os/ports/GCC/ARMCMx/chtypes.h:
 
-c:\develop\gimst\chibistudio\tools\yagarto-tools\yagarto-20121222\bin\../lib/gcc/arm-none-eabi/4.7.2/include/stddef.h:
+c:\develop\genist\chibistudio\tools\yagarto-tools\yagarto-20121222\bin\../lib/gcc/arm-none-eabi/4.7.2/include/stddef.h:
 
-c:\develop\gimst\chibistudio\tools\yagarto-tools\yagarto-20121222\bin\../lib/gcc/arm-none-eabi/4.7.2/include/stdint.h:
+c:\develop\genist\chibistudio\tools\yagarto-tools\yagarto-20121222\bin\../lib/gcc/arm-none-eabi/4.7.2/include/stdint.h:
 
-c:/develop/gimst/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/stdint.h:
+c:/develop/genist/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/stdint.h:
 
-c:\develop\gimst\chibistudio\tools\yagarto-tools\yagarto-20121222\bin\../lib/gcc/arm-none-eabi/4.7.2/include/stdbool.h:
+c:\develop\genist\chibistudio\tools\yagarto-tools\yagarto-20121222\bin\../lib/gcc/arm-none-eabi/4.7.2/include/stdbool.h:
 
 ../../../os/kernel/include/chlists.h:
 

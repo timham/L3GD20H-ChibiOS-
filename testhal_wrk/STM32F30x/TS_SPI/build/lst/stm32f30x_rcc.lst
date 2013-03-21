@@ -1,4 +1,4 @@
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
   55 0030 1A60     		str	r2, [r3, #0]
   56              		.loc 1 217 0
   57 0032 5A68     		ldr	r2, [r3, #4]
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 2
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 2
 
 
   58 0034 22F4FE02 		bic	r2, r2, #8323072
@@ -118,7 +118,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  111              	RCC_AdjustHSICalibrationValue:
  112              	.LFB114:
  113              		.loc 1 309 0
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 3
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 3
 
 
  114              		.cfi_startproc
@@ -178,7 +178,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  165              		.type	RCC_LSEConfig, %function
  166              	RCC_LSEConfig:
  167              	.LFB116:
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 4
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 4
 
 
  168              		.loc 1 368 0
@@ -238,7 +238,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  222              		.size	RCC_LSEDriveConfig, .-RCC_LSEDriveConfig
  223 0018 AFF30080 		.section	.text.RCC_LSICmd,"ax",%progbits
  223      AFF30080 
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 5
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 5
 
 
  224              		.align	2
@@ -298,7 +298,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  278 001a 00BFAFF3 		.section	.text.RCC_PLLCmd,"ax",%progbits
  278      0080
  279              		.align	2
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 6
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 6
 
 
  280              		.p2align 4,,15
@@ -358,7 +358,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  333 0014 AFF30080 		.section	.text.RCC_ClockSecuritySystemCmd,"ax",%progbits
  333      AFF30080 
  333      AFF30080 
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 7
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 7
 
 
  334              		.align	2
@@ -418,7 +418,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  387              	.LFB124:
  388              		.loc 1 640 0
  389              		.cfi_startproc
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 8
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 8
 
 
  390              		@ args = 0, pretend = 0, frame = 0
@@ -478,7 +478,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  442              	RCC_HCLKConfig:
  443              	.LFB126:
  444              		.loc 1 693 0
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 9
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 9
 
 
  445              		.cfi_startproc
@@ -538,7 +538,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  497              	.LFE127:
  498              		.size	RCC_PCLK1Config, .-RCC_PCLK1Config
  499 0014 AFF30080 		.section	.text.RCC_PCLK2Config,"ax",%progbits
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 10
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 10
 
 
  499      AFF30080 
@@ -598,7 +598,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  550 0008 2DE9F001 		push	{r4, r5, r6, r7, r8}
  551              	.LCFI0:
  552              		.cfi_def_cfa_offset 20
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 11
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 11
 
 
  553              		.cfi_offset 4, -20
@@ -658,7 +658,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  607 0052 21FA05F5 		lsr	r5, r1, r5
  608              	.LVL48:
  609 0056 8560     		str	r5, [r0, #8]
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 12
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 12
 
 
  610              		.loc 1 865 0
@@ -718,7 +718,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  664 00b0 4361     		str	r3, [r0, #20]
  665              	.L29:
  666              		.loc 1 902 0
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 13
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 13
 
 
  667 00b2 4FF48053 		mov	r3, #4096
@@ -778,7 +778,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  721              		.loc 1 955 0
  722 011a 08BF     		it	eq
  723 011c 8162     		streq	r1, [r0, #40]
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 14
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 14
 
 
  724              		.loc 1 952 0
@@ -838,7 +838,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  778              		.loc 1 987 0
  779 0182 04BF     		itt	eq
  780 0184 4FF40043 		moveq	r3, #32768
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 15
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 15
 
 
  781 0188 C362     		streq	r3, [r0, #44]
@@ -898,7 +898,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  835 01f4 C4F20203 		movt	r3, 16386
  836 01f8 196B     		ldr	r1, [r3, #48]
  837 01fa 11F4401F 		tst	r1, #3145728
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 16
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 16
 
 
  838              		.loc 1 1021 0
@@ -958,7 +958,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  892 0262 1A6B     		ldr	r2, [r3, #48]
  893 0264 02F44002 		and	r2, r2, #12582912
  894 0268 B2F5000F 		cmp	r2, #8388608
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 17
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 17
 
 
  895              		.loc 1 1053 0
@@ -1018,7 +1018,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  949 02b0 5A68     		ldr	r2, [r3, #4]
  950              	.LVL69:
  951              		.loc 1 829 0
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 18
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 18
 
 
  952 02b2 5968     		ldr	r1, [r3, #4]
@@ -1078,7 +1078,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  1006              		.loc 1 835 0
  1007 02f6 4FF41066 		mov	r6, #2304
  1008              	.LVL84:
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 19
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 19
 
 
  1009 02fa C0F23D06 		movt	r6, 61
@@ -1138,7 +1138,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  1063              	.LVL89:
  1064 0024 D862     		str	r0, [r3, #44]
  1065 0026 7047     		bx	lr
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 20
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 20
 
 
  1066              		.cfi_endproc
@@ -1198,7 +1198,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  1118              		@ frame_needed = 0, uses_anonymous_args = 0
  1119              		@ link register save eliminated.
  1120              	.LVL92:
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 21
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 21
 
 
  1121              		.loc 1 1200 0
@@ -1258,7 +1258,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  1174              	.L81:
  1175              		.loc 1 1237 0
  1176 0012 4FF48053 		mov	r3, #4096
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 22
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 22
 
 
  1177              	.LVL97:
@@ -1318,7 +1318,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  1231              		.size	RCC_USARTCLKConfig, .-RCC_USARTCLKConfig
  1232 007a 00BFAFF3 		.section	.text.RCC_USBCLKConfig,"ax",%progbits
  1232      0080
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 23
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 23
 
 
  1233              		.align	2
@@ -1378,7 +1378,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  1286              		.thumb_func
  1287              		.type	RCC_I2SCLKConfig, %function
  1288              	RCC_I2SCLKConfig:
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 24
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 24
 
 
  1289              	.LFB136:
@@ -1438,7 +1438,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  1342              		.loc 1 1356 0
  1343 0000 4FF48863 		mov	r3, #1088
  1344 0004 C4F24223 		movt	r3, 16962
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 25
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 25
 
 
  1345 0008 1860     		str	r0, [r3, #0]
@@ -1498,7 +1498,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  1398              		@ frame_needed = 0, uses_anonymous_args = 0
  1399              		@ link register save eliminated.
  1400              	.LVL111:
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 26
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 26
 
 
  1401              		.loc 1 1427 0
@@ -1558,7 +1558,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  1454 0018 7047     		bx	lr
  1455              		.cfi_endproc
  1456              	.LFE141:
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 27
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 27
 
 
  1457              		.size	RCC_APB1PeriphClockCmd, .-RCC_APB1PeriphClockCmd
@@ -1618,7 +1618,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  1509              		.loc 1 1537 0
  1510 0000 4FF48053 		mov	r3, #4096
  1511 0004 C4F20203 		movt	r3, 16386
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 28
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 28
 
 
  1512 0008 DA68     		ldr	r2, [r3, #12]
@@ -1678,7 +1678,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  1565              		.size	RCC_APB1PeriphResetCmd, .-RCC_APB1PeriphResetCmd
  1566 001a 00BFAFF3 		.section	.text.RCC_ITConfig,"ax",%progbits
  1566      0080
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 29
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 29
 
 
  1567              		.align	2
@@ -1738,7 +1738,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  1620 0002 0BD1     		bne	.L121
  1621              		.loc 1 1673 0
  1622 0004 4FF48053 		mov	r3, #4096
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 30
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 30
 
 
  1623              	.LVL137:
@@ -1798,7 +1798,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  1677              		@ frame_needed = 0, uses_anonymous_args = 0
  1678 0000 00B5     		push	{lr}
  1679              	.LCFI1:
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 31
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 31
 
 
  1680              		.cfi_def_cfa_offset 4
@@ -1858,7 +1858,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  1734              	RCC_ClearFlag:
  1735              	.LFB147:
  1736              		.loc 1 1711 0
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 32
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 32
 
 
  1737              		.cfi_startproc
@@ -1918,7 +1918,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  1789              	.LFB149:
  1790              		.loc 1 1761 0
  1791              		.cfi_startproc
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 33
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 33
 
 
  1792              		@ args = 0, pretend = 0, frame = 0
@@ -1976,9 +1976,9 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  1844 000f 09       		.byte	9
  1845              		.text
  1846              	.Letext0:
- 1847              		.file 2 "c:/develop/gimst/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-
+ 1847              		.file 2 "c:/develop/genist/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none
  1848              		.file 3 "../../../os/hal/platforms/STM32F30x/stm32f30x.h"
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 34
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 34
 
 
  1849              		.file 4 "../../../Testhal_wrk/STM32F30x/Gyro/stm32f30x_rcc.h"
@@ -1992,8 +1992,8 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  1857 000b 01       		.uleb128 0x1
  1858 000c 87010000 		.4byte	.LASF128
  1859 0010 01       		.byte	0x1
- 1860 0011 C0060000 		.4byte	.LASF129
- 1861 0015 C4030000 		.4byte	.LASF130
+ 1860 0011 D5060000 		.4byte	.LASF129
+ 1861 0015 3B040000 		.4byte	.LASF130
  1862 0019 00000000 		.4byte	.Ldebug_ranges0+0
  1863 001d 00000000 		.4byte	0
  1864 0021 00000000 		.4byte	0
@@ -2001,7 +2001,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  1866 0029 02       		.uleb128 0x2
  1867 002a 01       		.byte	0x1
  1868 002b 06       		.byte	0x6
- 1869 002c F4060000 		.4byte	.LASF0
+ 1869 002c 09070000 		.4byte	.LASF0
  1870 0030 03       		.uleb128 0x3
  1871 0031 47030000 		.4byte	.LASF3
  1872 0035 02       		.byte	0x2
@@ -2010,41 +2010,41 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  1875 003b 02       		.uleb128 0x2
  1876 003c 01       		.byte	0x1
  1877 003d 08       		.byte	0x8
- 1878 003e 3A060000 		.4byte	.LASF1
+ 1878 003e 4F060000 		.4byte	.LASF1
  1879 0042 02       		.uleb128 0x2
  1880 0043 02       		.byte	0x2
  1881 0044 05       		.byte	0x5
- 1882 0045 B7040000 		.4byte	.LASF2
+ 1882 0045 CC040000 		.4byte	.LASF2
  1883 0049 03       		.uleb128 0x3
- 1884 004a 44040000 		.4byte	.LASF4
+ 1884 004a 10040000 		.4byte	.LASF4
  1885 004e 02       		.byte	0x2
  1886 004f 36       		.byte	0x36
  1887 0050 54000000 		.4byte	0x54
  1888 0054 02       		.uleb128 0x2
  1889 0055 02       		.byte	0x2
  1890 0056 07       		.byte	0x7
- 1891 0057 00070000 		.4byte	.LASF5
+ 1891 0057 15070000 		.4byte	.LASF5
  1892 005b 03       		.uleb128 0x3
- 1893 005c E9050000 		.4byte	.LASF6
+ 1893 005c FE050000 		.4byte	.LASF6
  1894 0060 02       		.byte	0x2
  1895 0061 4F       		.byte	0x4f
  1896 0062 66000000 		.4byte	0x66
  1897 0066 02       		.uleb128 0x2
  1898 0067 04       		.byte	0x4
  1899 0068 05       		.byte	0x5
- 1900 0069 D3040000 		.4byte	.LASF7
+ 1900 0069 E8040000 		.4byte	.LASF7
  1901 006d 03       		.uleb128 0x3
  1902 006e 50010000 		.4byte	.LASF8
  1903 0072 02       		.byte	0x2
  1904 0073 50       		.byte	0x50
  1905 0074 78000000 		.4byte	0x78
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 35
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 35
 
 
  1906 0078 02       		.uleb128 0x2
  1907 0079 04       		.byte	0x4
  1908 007a 07       		.byte	0x7
- 1909 007b C4050000 		.4byte	.LASF9
+ 1909 007b D9050000 		.4byte	.LASF9
  1910 007f 02       		.uleb128 0x2
  1911 0080 08       		.byte	0x8
  1912 0081 05       		.byte	0x5
@@ -2064,7 +2064,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  1926 009b 02       		.uleb128 0x2
  1927 009c 04       		.byte	0x4
  1928 009d 07       		.byte	0x7
- 1929 009e BB050000 		.4byte	.LASF13
+ 1929 009e D0050000 		.4byte	.LASF13
  1930 00a2 05       		.uleb128 0x5
  1931 00a3 6D000000 		.4byte	0x6d
  1932 00a7 05       		.uleb128 0x5
@@ -2080,7 +2080,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  1942 00bb 2201     		.2byte	0x122
  1943 00bd CE000000 		.4byte	0xce
  1944 00c1 08       		.uleb128 0x8
- 1945 00c2 16050000 		.4byte	.LASF14
+ 1945 00c2 2B050000 		.4byte	.LASF14
  1946 00c6 00       		.sleb128 0
  1947 00c7 09       		.uleb128 0x9
  1948 00c8 53455400 		.ascii	"SET\000"
@@ -2098,7 +2098,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  1960 00e2 B8000000 		.4byte	0xb8
  1961 00e6 07       		.uleb128 0x7
  1962 00e7 01       		.byte	0x1
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 36
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 36
 
 
  1963 00e8 03       		.byte	0x3
@@ -2108,7 +2108,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  1967 00f0 09030000 		.4byte	.LASF17
  1968 00f4 00       		.sleb128 0
  1969 00f5 08       		.uleb128 0x8
- 1970 00f6 B4050000 		.4byte	.LASF18
+ 1970 00f6 C9050000 		.4byte	.LASF18
  1971 00fa 01       		.sleb128 1
  1972 00fb 00       		.byte	0
  1973 00fc 0A       		.uleb128 0xa
@@ -2147,7 +2147,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2006 013f 23       		.byte	0x23
  2007 0140 00       		.uleb128 0
  2008 0141 0D       		.uleb128 0xd
- 2009 0142 32050000 		.4byte	.LASF23
+ 2009 0142 47050000 		.4byte	.LASF23
  2010 0146 03       		.byte	0x3
  2011 0147 9E02     		.2byte	0x29e
  2012 0149 A2000000 		.4byte	0xa2
@@ -2158,7 +2158,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2017 0151 43495200 		.ascii	"CIR\000"
  2018 0155 03       		.byte	0x3
  2019 0156 9F02     		.2byte	0x29f
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 37
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 37
 
 
  2020 0158 A2000000 		.4byte	0xa2
@@ -2190,7 +2190,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2046 018a 23       		.byte	0x23
  2047 018b 14       		.uleb128 0x14
  2048 018c 0D       		.uleb128 0xd
- 2049 018d 24040000 		.4byte	.LASF27
+ 2049 018d F0030000 		.4byte	.LASF27
  2050 0191 03       		.byte	0x3
  2051 0192 A302     		.2byte	0x2a3
  2052 0194 A2000000 		.4byte	0xa2
@@ -2218,7 +2218,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2074 01be 03       		.byte	0x3
  2075 01bf A602     		.2byte	0x2a6
  2076 01c1 A2000000 		.4byte	0xa2
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 38
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 38
 
 
  2077 01c5 02       		.byte	0x2
@@ -2233,7 +2233,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2086 01d5 23       		.byte	0x23
  2087 01d6 28       		.uleb128 0x28
  2088 01d7 0D       		.uleb128 0xd
- 2089 01d8 18040000 		.4byte	.LASF31
+ 2089 01d8 E4030000 		.4byte	.LASF31
  2090 01dc 03       		.byte	0x3
  2091 01dd A802     		.2byte	0x2a8
  2092 01df A2000000 		.4byte	0xa2
@@ -2241,7 +2241,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2094 01e4 23       		.byte	0x23
  2095 01e5 2C       		.uleb128 0x2c
  2096 01e6 0D       		.uleb128 0xd
- 2097 01e7 1E040000 		.4byte	.LASF32
+ 2097 01e7 EA030000 		.4byte	.LASF32
  2098 01eb 03       		.byte	0x3
  2099 01ec A902     		.2byte	0x2a9
  2100 01ee A2000000 		.4byte	0xa2
@@ -2276,9 +2276,9 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2129 0224 23       		.byte	0x23
  2130 0225 04       		.uleb128 0x4
  2131 0226 0F       		.uleb128 0xf
- 2132 0227 86060000 		.4byte	.LASF36
+ 2132 0227 9B060000 		.4byte	.LASF36
  2133 022b 04       		.byte	0x4
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 39
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 39
 
 
  2134 022c 36       		.byte	0x36
@@ -2287,7 +2287,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2137 0232 23       		.byte	0x23
  2138 0233 08       		.uleb128 0x8
  2139 0234 0F       		.uleb128 0xf
- 2140 0235 37050000 		.4byte	.LASF37
+ 2140 0235 4C050000 		.4byte	.LASF37
  2141 0239 04       		.byte	0x4
  2142 023a 37       		.byte	0x37
  2143 023b 6D000000 		.4byte	0x6d
@@ -2319,7 +2319,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2169 026a 23       		.byte	0x23
  2170 026b 18       		.uleb128 0x18
  2171 026c 0F       		.uleb128 0xf
- 2172 026d 54070000 		.4byte	.LASF41
+ 2172 026d 69070000 		.4byte	.LASF41
  2173 0271 04       		.byte	0x4
  2174 0272 3B       		.byte	0x3b
  2175 0273 6D000000 		.4byte	0x6d
@@ -2335,10 +2335,10 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2185 0286 23       		.byte	0x23
  2186 0287 20       		.uleb128 0x20
  2187 0288 0F       		.uleb128 0xf
- 2188 0289 C1040000 		.4byte	.LASF43
+ 2188 0289 D6040000 		.4byte	.LASF43
  2189 028d 04       		.byte	0x4
  2190 028e 3D       		.byte	0x3d
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 40
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 40
 
 
  2191 028f 6D000000 		.4byte	0x6d
@@ -2346,7 +2346,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2193 0294 23       		.byte	0x23
  2194 0295 24       		.uleb128 0x24
  2195 0296 0F       		.uleb128 0xf
- 2196 0297 4D040000 		.4byte	.LASF44
+ 2196 0297 19040000 		.4byte	.LASF44
  2197 029b 04       		.byte	0x4
  2198 029c 3E       		.byte	0x3e
  2199 029d 6D000000 		.4byte	0x6d
@@ -2354,7 +2354,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2201 02a2 23       		.byte	0x23
  2202 02a3 28       		.uleb128 0x28
  2203 02a4 0F       		.uleb128 0xf
- 2204 02a5 F4040000 		.4byte	.LASF45
+ 2204 02a5 09050000 		.4byte	.LASF45
  2205 02a9 04       		.byte	0x4
  2206 02aa 3F       		.byte	0x3f
  2207 02ab 6D000000 		.4byte	0x6d
@@ -2362,7 +2362,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2209 02b0 23       		.byte	0x23
  2210 02b1 2C       		.uleb128 0x2c
  2211 02b2 0F       		.uleb128 0xf
- 2212 02b3 A3040000 		.4byte	.LASF46
+ 2212 02b3 B8040000 		.4byte	.LASF46
  2213 02b7 04       		.byte	0x4
  2214 02b8 40       		.byte	0x40
  2215 02b9 6D000000 		.4byte	0x6d
@@ -2398,7 +2398,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2245 02ef CA       		.byte	0xca
  2246 02f0 01       		.byte	0x1
  2247 02f1 00000000 		.4byte	.LFB111
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 41
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 41
 
 
  2248 02f5 5A000000 		.4byte	.LFE111
@@ -2455,10 +2455,10 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2299 035e 00       		.byte	0
  2300 035f 13       		.uleb128 0x13
  2301 0360 01       		.byte	0x1
- 2302 0361 2F060000 		.4byte	.LASF54
+ 2302 0361 44060000 		.4byte	.LASF54
  2303 0365 01       		.byte	0x1
  2304 0366 5601     		.2byte	0x156
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 42
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 42
 
 
  2305 0368 01       		.byte	0x1
@@ -2479,7 +2479,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2320 0387 00       		.byte	0
  2321 0388 13       		.uleb128 0x13
  2322 0389 01       		.byte	0x1
- 2323 038a 61040000 		.4byte	.LASF56
+ 2323 038a 2D040000 		.4byte	.LASF56
  2324 038e 01       		.byte	0x1
  2325 038f 6F01     		.2byte	0x16f
  2326 0391 01       		.byte	0x1
@@ -2491,7 +2491,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2332 039d 01       		.byte	0x1
  2333 039e B3030000 		.4byte	0x3b3
  2334 03a2 14       		.uleb128 0x14
- 2335 03a3 B8060000 		.4byte	.LASF57
+ 2335 03a3 CD060000 		.4byte	.LASF57
  2336 03a7 01       		.byte	0x1
  2337 03a8 6F01     		.2byte	0x16f
  2338 03aa 6D000000 		.4byte	0x6d
@@ -2499,7 +2499,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2340 03b2 00       		.byte	0
  2341 03b3 13       		.uleb128 0x13
  2342 03b4 01       		.byte	0x1
- 2343 03b5 69060000 		.4byte	.LASF58
+ 2343 03b5 7E060000 		.4byte	.LASF58
  2344 03b9 01       		.byte	0x1
  2345 03ba 8901     		.2byte	0x189
  2346 03bc 01       		.byte	0x1
@@ -2511,14 +2511,14 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2352 03c8 01       		.byte	0x1
  2353 03c9 DE030000 		.4byte	0x3de
  2354 03cd 14       		.uleb128 0x14
- 2355 03ce 18060000 		.4byte	.LASF59
+ 2355 03ce 2D060000 		.4byte	.LASF59
  2356 03d2 01       		.byte	0x1
  2357 03d3 8901     		.2byte	0x189
  2358 03d5 6D000000 		.4byte	0x6d
  2359 03d9 6C000000 		.4byte	.LLST3
  2360 03dd 00       		.byte	0
  2361 03de 13       		.uleb128 0x13
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 43
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 43
 
 
  2362 03df 01       		.byte	0x1
@@ -2569,7 +2569,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2407 0441 00       		.byte	0
  2408 0442 13       		.uleb128 0x13
  2409 0443 01       		.byte	0x1
- 2410 0444 AD060000 		.4byte	.LASF64
+ 2410 0444 C2060000 		.4byte	.LASF64
  2411 0448 01       		.byte	0x1
  2412 0449 D201     		.2byte	0x1d2
  2413 044b 01       		.byte	0x1
@@ -2578,7 +2578,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2416 0454 02       		.byte	0x2
  2417 0455 7D       		.byte	0x7d
  2418 0456 00       		.sleb128 0
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 44
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 44
 
 
  2419 0457 01       		.byte	0x1
@@ -2605,7 +2605,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2440 0480 01       		.byte	0x1
  2441 0481 A6040000 		.4byte	0x4a6
  2442 0485 14       		.uleb128 0x14
- 2443 0486 F1050000 		.4byte	.LASF66
+ 2443 0486 06060000 		.4byte	.LASF66
  2444 048a 01       		.byte	0x1
  2445 048b E101     		.2byte	0x1e1
  2446 048d 6D000000 		.4byte	0x6d
@@ -2638,7 +2638,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2473 04cc 01       		.byte	0x1
  2474 04cd 50       		.byte	0x50
  2475 04ce 00       		.byte	0
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 45
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 45
 
 
  2476 04cf 13       		.uleb128 0x13
@@ -2655,7 +2655,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2487 04e4 01       		.byte	0x1
  2488 04e5 F8040000 		.4byte	0x4f8
  2489 04e9 16       		.uleb128 0x16
- 2490 04ea 87050000 		.4byte	.LASF70
+ 2490 04ea 9C050000 		.4byte	.LASF70
  2491 04ee 01       		.byte	0x1
  2492 04ef 1502     		.2byte	0x215
  2493 04f1 30000000 		.4byte	0x30
@@ -2690,7 +2690,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2522 0532 00       		.byte	0
  2523 0533 17       		.uleb128 0x17
  2524 0534 01       		.byte	0x1
- 2525 0535 A0050000 		.4byte	.LASF131
+ 2525 0535 B5050000 		.4byte	.LASF131
  2526 0539 01       		.byte	0x1
  2527 053a 9B02     		.2byte	0x29b
  2528 053c 01       		.byte	0x1
@@ -2698,7 +2698,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2530 0541 00000000 		.4byte	.LFB125
  2531 0545 10000000 		.4byte	.LFE125
  2532 0549 02       		.byte	0x2
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 46
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 46
 
 
  2533 054a 7D       		.byte	0x7d
@@ -2706,7 +2706,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2535 054c 01       		.byte	0x1
  2536 054d 13       		.uleb128 0x13
  2537 054e 01       		.byte	0x1
- 2538 054f F8030000 		.4byte	.LASF73
+ 2538 054f C4030000 		.4byte	.LASF73
  2539 0553 01       		.byte	0x1
  2540 0554 B402     		.2byte	0x2b4
  2541 0556 01       		.byte	0x1
@@ -2758,7 +2758,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2587 05c2 00       		.byte	0
  2588 05c3 13       		.uleb128 0x13
  2589 05c4 01       		.byte	0x1
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 47
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 47
 
 
  2590 05c5 05010000 		.4byte	.LASF77
@@ -2797,7 +2797,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2623 0614 01       		.byte	0x1
  2624 0615 A8060000 		.4byte	0x6a8
  2625 0619 16       		.uleb128 0x16
- 2626 061a 39040000 		.4byte	.LASF79
+ 2626 061a 05040000 		.4byte	.LASF79
  2627 061e 01       		.byte	0x1
  2628 061f 2A03     		.2byte	0x32a
  2629 0621 A8060000 		.4byte	0x6a8
@@ -2816,16 +2816,16 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2642 063f 6D000000 		.4byte	0x6d
  2643 0643 4B030000 		.4byte	.LLST18
  2644 0647 15       		.uleb128 0x15
- 2645 0648 7C060000 		.4byte	.LASF81
+ 2645 0648 91060000 		.4byte	.LASF81
  2646 064c 01       		.byte	0x1
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 48
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 48
 
 
  2647 064d 2C03     		.2byte	0x32c
  2648 064f 6D000000 		.4byte	0x6d
  2649 0653 9E030000 		.4byte	.LLST19
  2650 0657 15       		.uleb128 0x15
- 2651 0658 08050000 		.4byte	.LASF82
+ 2651 0658 1D050000 		.4byte	.LASF82
  2652 065c 01       		.byte	0x1
  2653 065d 2C03     		.2byte	0x32c
  2654 065f 6D000000 		.4byte	0x6d
@@ -2843,7 +2843,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2666 067f 6D000000 		.4byte	0x6d
  2667 0683 9E040000 		.4byte	.LLST22
  2668 0687 15       		.uleb128 0x15
- 2669 0688 5F060000 		.4byte	.LASF85
+ 2669 0688 74060000 		.4byte	.LASF85
  2670 068c 01       		.byte	0x1
  2671 068d 2D03     		.2byte	0x32d
  2672 068f 6D000000 		.4byte	0x6d
@@ -2872,13 +2872,13 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2695 06c3 01       		.byte	0x1
  2696 06c4 E9060000 		.4byte	0x6e9
  2697 06c8 14       		.uleb128 0x14
- 2698 06c9 E9040000 		.4byte	.LASF88
+ 2698 06c9 FE040000 		.4byte	.LASF88
  2699 06cd 01       		.byte	0x1
  2700 06ce 6104     		.2byte	0x461
  2701 06d0 6D000000 		.4byte	0x6d
  2702 06d4 A7050000 		.4byte	.LLST25
  2703 06d8 19       		.uleb128 0x19
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 49
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 49
 
 
  2704 06d9 746D7000 		.ascii	"tmp\000"
@@ -2915,7 +2915,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2735 0723 00       		.byte	0
  2736 0724 13       		.uleb128 0x13
  2737 0725 01       		.byte	0x1
- 2738 0726 92040000 		.4byte	.LASF91
+ 2738 0726 A7040000 		.4byte	.LASF91
  2739 072a 01       		.byte	0x1
  2740 072b A604     		.2byte	0x4a6
  2741 072d 01       		.byte	0x1
@@ -2927,7 +2927,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2747 0739 01       		.byte	0x1
  2748 073a 5F070000 		.4byte	0x75f
  2749 073e 14       		.uleb128 0x14
- 2750 073f 95050000 		.4byte	.LASF92
+ 2750 073f AA050000 		.4byte	.LASF92
  2751 0743 01       		.byte	0x1
  2752 0744 A604     		.2byte	0x4a6
  2753 0746 6D000000 		.4byte	0x6d
@@ -2938,7 +2938,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2758 0754 A804     		.2byte	0x4a8
  2759 0756 6D000000 		.4byte	0x6d
  2760 075a 58060000 		.4byte	.LLST30
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 50
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 50
 
 
  2761 075e 00       		.byte	0
@@ -2956,7 +2956,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2773 0774 01       		.byte	0x1
  2774 0775 9A070000 		.4byte	0x79a
  2775 0779 14       		.uleb128 0x14
- 2776 077a 2C040000 		.4byte	.LASF94
+ 2776 077a F8030000 		.4byte	.LASF94
  2777 077e 01       		.byte	0x1
  2778 077f C804     		.2byte	0x4c8
  2779 0781 6D000000 		.4byte	0x6d
@@ -2970,7 +2970,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2787 0799 00       		.byte	0
  2788 079a 13       		.uleb128 0x13
  2789 079b 01       		.byte	0x1
- 2790 079c 6F040000 		.4byte	.LASF95
+ 2790 079c 84040000 		.4byte	.LASF95
  2791 07a0 01       		.byte	0x1
  2792 07a1 F504     		.2byte	0x4f5
  2793 07a3 01       		.byte	0x1
@@ -2982,7 +2982,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2799 07af 01       		.byte	0x1
  2800 07b0 C3070000 		.4byte	0x7c3
  2801 07b4 16       		.uleb128 0x16
- 2802 07b5 58050000 		.4byte	.LASF96
+ 2802 07b5 6D050000 		.4byte	.LASF96
  2803 07b9 01       		.byte	0x1
  2804 07ba F504     		.2byte	0x4f5
  2805 07bc 6D000000 		.4byte	0x6d
@@ -2991,14 +2991,14 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2808 07c2 00       		.byte	0
  2809 07c3 13       		.uleb128 0x13
  2810 07c4 01       		.byte	0x1
- 2811 07c5 76050000 		.4byte	.LASF97
+ 2811 07c5 8B050000 		.4byte	.LASF97
  2812 07c9 01       		.byte	0x1
  2813 07ca 1405     		.2byte	0x514
  2814 07cc 01       		.byte	0x1
  2815 07cd 00000000 		.4byte	.LFB135
  2816 07d1 10000000 		.4byte	.LFE135
  2817 07d5 02       		.byte	0x2
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 51
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 51
 
 
  2818 07d6 7D       		.byte	0x7d
@@ -3006,7 +3006,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2820 07d8 01       		.byte	0x1
  2821 07d9 EE070000 		.4byte	0x7ee
  2822 07dd 14       		.uleb128 0x14
- 2823 07de 47050000 		.4byte	.LASF98
+ 2823 07de 5C050000 		.4byte	.LASF98
  2824 07e2 01       		.byte	0x1
  2825 07e3 1405     		.2byte	0x514
  2826 07e5 6D000000 		.4byte	0x6d
@@ -3035,7 +3035,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2849 0816 00       		.byte	0
  2850 0817 13       		.uleb128 0x13
  2851 0818 01       		.byte	0x1
- 2852 0819 75070000 		.4byte	.LASF101
+ 2852 0819 8A070000 		.4byte	.LASF101
  2853 081d 01       		.byte	0x1
  2854 081e 3705     		.2byte	0x537
  2855 0820 01       		.byte	0x1
@@ -3056,9 +3056,9 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2870 083f 00       		.byte	0
  2871 0840 13       		.uleb128 0x13
  2872 0841 01       		.byte	0x1
- 2873 0842 D6050000 		.4byte	.LASF102
+ 2873 0842 EB050000 		.4byte	.LASF102
  2874 0846 01       		.byte	0x1
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 52
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 52
 
 
  2875 0847 4705     		.2byte	0x547
@@ -3107,7 +3107,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2918 08a1 00       		.byte	0
  2919 08a2 13       		.uleb128 0x13
  2920 08a3 01       		.byte	0x1
- 2921 08a4 96060000 		.4byte	.LASF105
+ 2921 08a4 AB060000 		.4byte	.LASF105
  2922 08a8 01       		.byte	0x1
  2923 08a9 8B05     		.2byte	0x58b
  2924 08ab 01       		.byte	0x1
@@ -3118,7 +3118,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2929 08b6 00       		.sleb128 0
  2930 08b7 01       		.byte	0x1
  2931 08b8 DB080000 		.4byte	0x8db
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 53
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 53
 
 
  2932 08bc 14       		.uleb128 0x14
@@ -3149,7 +3149,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2957 08f0 01       		.byte	0x1
  2958 08f1 14090000 		.4byte	0x914
  2959 08f5 14       		.uleb128 0x14
- 2960 08f6 13070000 		.4byte	.LASF108
+ 2960 08f6 28070000 		.4byte	.LASF108
  2961 08fa 01       		.byte	0x1
  2962 08fb B805     		.2byte	0x5b8
  2963 08fd 6D000000 		.4byte	0x6d
@@ -3164,7 +3164,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2972 0913 00       		.byte	0
  2973 0914 13       		.uleb128 0x13
  2974 0915 01       		.byte	0x1
- 2975 0916 1C050000 		.4byte	.LASF109
+ 2975 0916 31050000 		.4byte	.LASF109
  2976 091a 01       		.byte	0x1
  2977 091b D905     		.2byte	0x5d9
  2978 091d 01       		.byte	0x1
@@ -3178,7 +3178,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2986 092e 14       		.uleb128 0x14
  2987 092f A0000000 		.4byte	.LASF104
  2988 0933 01       		.byte	0x1
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 54
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 54
 
 
  2989 0934 D905     		.2byte	0x5d9
@@ -3194,7 +3194,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  2999 094c 00       		.byte	0
  3000 094d 13       		.uleb128 0x13
  3001 094e 01       		.byte	0x1
- 3002 094f 01060000 		.4byte	.LASF110
+ 3002 094f 16060000 		.4byte	.LASF110
  3003 0953 01       		.byte	0x1
  3004 0954 F905     		.2byte	0x5f9
  3005 0956 01       		.byte	0x1
@@ -3221,7 +3221,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  3026 0985 00       		.byte	0
  3027 0986 13       		.uleb128 0x13
  3028 0987 01       		.byte	0x1
- 3029 0988 48060000 		.4byte	.LASF111
+ 3029 0988 5D060000 		.4byte	.LASF111
  3030 098c 01       		.byte	0x1
  3031 098d 2306     		.2byte	0x623
  3032 098f 01       		.byte	0x1
@@ -3233,12 +3233,12 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  3038 099b 01       		.byte	0x1
  3039 099c BF090000 		.4byte	0x9bf
  3040 09a0 14       		.uleb128 0x14
- 3041 09a1 13070000 		.4byte	.LASF108
+ 3041 09a1 28070000 		.4byte	.LASF108
  3042 09a5 01       		.byte	0x1
  3043 09a6 2306     		.2byte	0x623
  3044 09a8 6D000000 		.4byte	0x6d
  3045 09ac 58080000 		.4byte	.LLST39
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 55
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 55
 
 
  3046 09b0 16       		.uleb128 0x16
@@ -3251,7 +3251,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  3053 09be 00       		.byte	0
  3054 09bf 13       		.uleb128 0x13
  3055 09c0 01       		.byte	0x1
- 3056 09c1 69050000 		.4byte	.LASF112
+ 3056 09c1 7E050000 		.4byte	.LASF112
  3057 09c5 01       		.byte	0x1
  3058 09c6 5606     		.2byte	0x656
  3059 09c8 01       		.byte	0x1
@@ -3263,7 +3263,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  3065 09d4 01       		.byte	0x1
  3066 09d5 F8090000 		.4byte	0x9f8
  3067 09d9 14       		.uleb128 0x14
- 3068 09da 36070000 		.4byte	.LASF113
+ 3068 09da 4B070000 		.4byte	.LASF113
  3069 09de 01       		.byte	0x1
  3070 09df 5606     		.2byte	0x656
  3071 09e1 30000000 		.4byte	0x30
@@ -3278,7 +3278,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  3080 09f7 00       		.byte	0
  3081 09f8 1B       		.uleb128 0x1b
  3082 09f9 01       		.byte	0x1
- 3083 09fa 80040000 		.4byte	.LASF117
+ 3083 09fa 95040000 		.4byte	.LASF117
  3084 09fe 01       		.byte	0x1
  3085 09ff 7B06     		.2byte	0x67b
  3086 0a01 01       		.byte	0x1
@@ -3291,14 +3291,14 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  3093 0a11 01       		.byte	0x1
  3094 0a12 570A0000 		.4byte	0xa57
  3095 0a16 14       		.uleb128 0x14
- 3096 0a17 3D070000 		.4byte	.LASF114
+ 3096 0a17 52070000 		.4byte	.LASF114
  3097 0a1b 01       		.byte	0x1
  3098 0a1c 7B06     		.2byte	0x67b
  3099 0a1e 30000000 		.4byte	0x30
  3100 0a22 CC080000 		.4byte	.LLST41
  3101 0a26 19       		.uleb128 0x19
  3102 0a27 746D7000 		.ascii	"tmp\000"
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 56
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 56
 
 
  3103 0a2b 01       		.byte	0x1
@@ -3306,13 +3306,13 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  3105 0a2e 6D000000 		.4byte	0x6d
  3106 0a32 F8080000 		.4byte	.LLST42
  3107 0a36 15       		.uleb128 0x15
- 3108 0a37 22070000 		.4byte	.LASF115
+ 3108 0a37 37070000 		.4byte	.LASF115
  3109 0a3b 01       		.byte	0x1
  3110 0a3c 7E06     		.2byte	0x67e
  3111 0a3e 6D000000 		.4byte	0x6d
  3112 0a42 6F090000 		.4byte	.LLST43
  3113 0a46 15       		.uleb128 0x15
- 3114 0a47 2C070000 		.4byte	.LASF116
+ 3114 0a47 41070000 		.4byte	.LASF116
  3115 0a4b 01       		.byte	0x1
  3116 0a4c 7F06     		.2byte	0x67f
  3117 0a4e CE000000 		.4byte	0xce
@@ -3331,7 +3331,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  3130 0a71 01       		.byte	0x1
  3131 0a72 C90A0000 		.4byte	0xac9
  3132 0a76 15       		.uleb128 0x15
- 3133 0a77 66070000 		.4byte	.LASF119
+ 3133 0a77 7B070000 		.4byte	.LASF119
  3134 0a7b 01       		.byte	0x1
  3135 0a7c 1401     		.2byte	0x114
  3136 0a7e A2000000 		.4byte	0xa2
@@ -3343,7 +3343,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  3142 0a8e 1E010000 		.4byte	0x11e
  3143 0a92 4A0A0000 		.4byte	.LLST47
  3144 0a96 15       		.uleb128 0x15
- 3145 0a97 25060000 		.4byte	.LASF121
+ 3145 0a97 3A060000 		.4byte	.LASF121
  3146 0a9b 01       		.byte	0x1
  3147 0a9c 1601     		.2byte	0x116
  3148 0a9e CE000000 		.4byte	0xce
@@ -3358,7 +3358,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  3157 0ab6 01       		.byte	0x1
  3158 0ab7 41       		.byte	0x41
  3159 0ab8 00       		.byte	0
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 57
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 57
 
 
  3160 0ab9 1F       		.uleb128 0x1f
@@ -3373,7 +3373,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  3169 0ac8 00       		.byte	0
  3170 0ac9 20       		.uleb128 0x20
  3171 0aca 01       		.byte	0x1
- 3172 0acb 46070000 		.4byte	.LASF123
+ 3172 0acb 5B070000 		.4byte	.LASF123
  3173 0acf 01       		.byte	0x1
  3174 0ad0 AE06     		.2byte	0x6ae
  3175 0ad2 01       		.byte	0x1
@@ -3398,13 +3398,13 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  3194 0af8 01       		.byte	0x1
  3195 0af9 1E0B0000 		.4byte	0xb1e
  3196 0afd 14       		.uleb128 0x14
- 3197 0afe 36070000 		.4byte	.LASF113
+ 3197 0afe 4B070000 		.4byte	.LASF113
  3198 0b02 01       		.byte	0x1
  3199 0b03 C006     		.2byte	0x6c0
  3200 0b05 30000000 		.4byte	0x30
  3201 0b09 990A0000 		.4byte	.LLST49
  3202 0b0d 15       		.uleb128 0x15
- 3203 0b0e 2C070000 		.4byte	.LASF116
+ 3203 0b0e 41070000 		.4byte	.LASF116
  3204 0b12 01       		.byte	0x1
  3205 0b13 C206     		.2byte	0x6c2
  3206 0b15 DA000000 		.4byte	0xda
@@ -3418,7 +3418,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  3214 0b27 01       		.byte	0x1
  3215 0b28 00000000 		.4byte	.LFB149
  3216 0b2c 0C000000 		.4byte	.LFE149
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 58
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 58
 
 
  3217 0b30 02       		.byte	0x2
@@ -3427,7 +3427,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  3220 0b33 01       		.byte	0x1
  3221 0b34 470B0000 		.4byte	0xb47
  3222 0b38 16       		.uleb128 0x16
- 3223 0b39 36070000 		.4byte	.LASF113
+ 3223 0b39 4B070000 		.4byte	.LASF113
  3224 0b3d 01       		.byte	0x1
  3225 0b3e E006     		.2byte	0x6e0
  3226 0b40 30000000 		.4byte	0x30
@@ -3442,7 +3442,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  3235 0b55 0F       		.byte	0xf
  3236 0b56 00       		.byte	0
  3237 0b57 23       		.uleb128 0x23
- 3238 0b58 07040000 		.4byte	.LASF126
+ 3238 0b58 D3030000 		.4byte	.LASF126
  3239 0b5c 01       		.byte	0x1
  3240 0b5d 93       		.byte	0x93
  3241 0b5e 680B0000 		.4byte	0xb68
@@ -3473,12 +3473,12 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  3266 0b98 05       		.uleb128 0x5
  3267 0b99 720B0000 		.4byte	0xb72
  3268 0b9d 25       		.uleb128 0x25
- 3269 0b9e DC040000 		.4byte	.LASF132
+ 3269 0b9e F1040000 		.4byte	.LASF132
  3270 0ba2 05       		.byte	0x5
  3271 0ba3 9806     		.2byte	0x698
  3272 0ba5 A7000000 		.4byte	0xa7
  3273 0ba9 01       		.byte	0x1
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 59
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 59
 
 
  3274 0baa 01       		.byte	0x1
@@ -3538,7 +3538,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  3328 0032 3E       		.uleb128 0x3e
  3329 0033 0B       		.uleb128 0xb
  3330 0034 03       		.uleb128 0x3
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 60
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 60
 
 
  3331 0035 08       		.uleb128 0x8
@@ -3598,7 +3598,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  3385 006b 0A       		.uleb128 0xa
  3386 006c 16       		.uleb128 0x16
  3387 006d 00       		.byte	0
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 61
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 61
 
 
  3388 006e 03       		.uleb128 0x3
@@ -3658,7 +3658,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  3442 00a4 13       		.uleb128 0x13
  3443 00a5 01       		.byte	0x1
  3444 00a6 0B       		.uleb128 0xb
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 62
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 62
 
 
  3445 00a7 0B       		.uleb128 0xb
@@ -3718,7 +3718,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  3499 00de 3A       		.uleb128 0x3a
  3500 00df 0B       		.uleb128 0xb
  3501 00e0 3B       		.uleb128 0x3b
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 63
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 63
 
 
  3502 00e1 0B       		.uleb128 0xb
@@ -3778,7 +3778,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  3556 0119 00       		.byte	0
  3557 011a 14       		.uleb128 0x14
  3558 011b 05       		.uleb128 0x5
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 64
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 64
 
 
  3559 011c 00       		.byte	0
@@ -3838,7 +3838,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  3613 0152 27       		.uleb128 0x27
  3614 0153 0C       		.uleb128 0xc
  3615 0154 49       		.uleb128 0x49
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 65
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 65
 
 
  3616 0155 13       		.uleb128 0x13
@@ -3898,7 +3898,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  3670 018d 0B       		.uleb128 0xb
  3671 018e 0B       		.uleb128 0xb
  3672 018f 49       		.uleb128 0x49
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 66
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 66
 
 
  3673 0190 13       		.uleb128 0x13
@@ -3958,7 +3958,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  3727 01c8 13       		.uleb128 0x13
  3728 01c9 00       		.byte	0
  3729 01ca 00       		.byte	0
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 67
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 67
 
 
  3730 01cb 1D       		.uleb128 0x1d
@@ -4018,7 +4018,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  3784 0209 01       		.byte	0x1
  3785 020a 49       		.uleb128 0x49
  3786 020b 13       		.uleb128 0x13
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 68
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 68
 
 
  3787 020c 01       		.uleb128 0x1
@@ -4078,7 +4078,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  3841              	.Ldebug_loc0:
  3842              	.LLST0:
  3843 0000 00000000 		.4byte	.LVL1
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 69
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 69
 
 
  3844 0004 12000000 		.4byte	.LVL4
@@ -4138,7 +4138,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  3898 0085 00000000 		.4byte	0
  3899 0089 00000000 		.4byte	0
  3900              	.LLST4:
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 70
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 70
 
 
  3901 008d 00000000 		.4byte	.LVL11
@@ -4198,7 +4198,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  3955 0111 50       		.byte	0x50
  3956 0112 00000000 		.4byte	0
  3957 0116 00000000 		.4byte	0
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 71
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 71
 
 
  3958              	.LLST8:
@@ -4258,7 +4258,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  4012 019d 10000000 		.4byte	.LVL28
  4013 01a1 14000000 		.4byte	.LFE126
  4014 01a5 0100     		.2byte	0x1
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 72
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 72
 
 
  4015 01a7 50       		.byte	0x50
@@ -4318,7 +4318,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  4069 022c 12000000 		.4byte	.LVL36
  4070 0230 0100     		.2byte	0x1
  4071 0232 52       		.byte	0x52
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 73
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 73
 
 
  4072 0233 12000000 		.4byte	.LVL36
@@ -4378,7 +4378,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  4126 02b2 00       		.sleb128 0
  4127 02b3 0A       		.byte	0xa
  4128 02b4 0007     		.2byte	0x700
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 74
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 74
 
 
  4129 02b6 1A       		.byte	0x1a
@@ -4438,7 +4438,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  4183 0331 E8020000 		.4byte	.LVL81
  4184 0335 0100     		.2byte	0x1
  4185 0337 56       		.byte	0x56
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 75
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 75
 
 
  4186 0338 F6020000 		.4byte	.LVL83
@@ -4498,7 +4498,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  4240 03ba BC020000 		.4byte	.LVL73
  4241 03be 0700     		.2byte	0x7
  4242 03c0 71       		.byte	0x71
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 76
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 76
 
 
  4243 03c1 00       		.sleb128 0
@@ -4558,7 +4558,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  4297 0439 30       		.byte	0x30
  4298 043a 9F       		.byte	0x9f
  4299 043b 52000000 		.4byte	.LVL47
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 77
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 77
 
 
  4300 043f 56000000 		.4byte	.LVL48
@@ -4618,7 +4618,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  4354 04ae AC020000 		.4byte	.LVL66
  4355 04b2 0100     		.2byte	0x1
  4356 04b4 56       		.byte	0x56
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 78
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 78
 
 
  4357 04b5 AC020000 		.4byte	.LVL66
@@ -4678,7 +4678,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  4411 0543 0200     		.2byte	0x2
  4412 0545 30       		.byte	0x30
  4413 0546 9F       		.byte	0x9f
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 79
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 79
 
 
  4414 0547 0C030000 		.4byte	.LVL86
@@ -4738,7 +4738,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  4468 05d2 70       		.byte	0x70
  4469 05d3 00       		.sleb128 0
  4470 05d4 4C       		.byte	0x4c
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 80
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 80
 
 
  4471 05d5 25       		.byte	0x25
@@ -4798,7 +4798,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  4525 064a 0400     		.2byte	0x4
  4526 064c F3       		.byte	0xf3
  4527 064d 01       		.uleb128 0x1
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 81
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 81
 
 
  4528 064e 50       		.byte	0x50
@@ -4858,7 +4858,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  4582 06c4 53       		.byte	0x53
  4583 06c5 04000000 		.4byte	.LVL96
  4584 06c9 16000000 		.4byte	.LVL97
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 82
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 82
 
 
  4585 06cd 0300     		.2byte	0x3
@@ -4918,7 +4918,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  4639 073e 0100     		.2byte	0x1
  4640 0740 50       		.byte	0x50
  4641 0741 10000000 		.4byte	.LVL108
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 83
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 83
 
 
  4642 0745 14000000 		.4byte	.LVL109
@@ -4978,7 +4978,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  4696 07c1 50       		.byte	0x50
  4697 07c2 9F       		.byte	0x9f
  4698 07c3 14000000 		.4byte	.LVL117
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 84
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 84
 
 
  4699 07c7 16000000 		.4byte	.LVL118
@@ -5038,7 +5038,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  4753 0846 1A000000 		.4byte	.LFE143
  4754 084a 0400     		.2byte	0x4
  4755 084c F3       		.byte	0xf3
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 85
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 85
 
 
  4756 084d 01       		.uleb128 0x1
@@ -5098,7 +5098,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  4810 08c8 00000000 		.4byte	0
  4811              	.LLST41:
  4812 08cc 00000000 		.4byte	.LVL135
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 86
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 86
 
 
  4813 08d0 12000000 		.4byte	.LVL139
@@ -5158,7 +5158,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  4867 0946 0500     		.2byte	0x5
  4868 0948 70       		.byte	0x70
  4869 0949 00       		.sleb128 0
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 87
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 87
 
 
  4870 094a 35       		.byte	0x35
@@ -5218,7 +5218,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  4924 09cc 12000000 		.4byte	.LVL139
  4925 09d0 0D00     		.2byte	0xd
  4926 09d2 73       		.byte	0x73
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 88
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 88
 
 
  4927 09d3 00       		.sleb128 0
@@ -5278,7 +5278,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  4981              	.LLST47:
  4982 0a4a 08000000 		.4byte	.LVL147
  4983 0a4e 26000000 		.4byte	.LVL155
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 89
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 89
 
 
  4984 0a52 0200     		.2byte	0x2
@@ -5338,7 +5338,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  5038 0ad0 70       		.byte	0x70
  5039 0ad1 00       		.sleb128 0
  5040 0ad2 08       		.byte	0x8
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 90
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 90
 
 
  5041 0ad3 FF       		.byte	0xff
@@ -5398,7 +5398,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  5095 0064 0A000000 		.4byte	.LFE122-.LFB122
  5096 0068 00000000 		.4byte	.LFB123
  5097 006c 0C000000 		.4byte	.LFE123-.LFB123
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 91
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 91
 
 
  5098 0070 00000000 		.4byte	.LFB124
@@ -5458,7 +5458,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  5152 0148 00000000 		.4byte	0
  5153 014c 00000000 		.4byte	0
  5154              		.section	.debug_ranges,"",%progbits
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 92
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 92
 
 
  5155              	.Ldebug_ranges0:
@@ -5518,7 +5518,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  5209 00d4 0C000000 		.4byte	.LFE138
  5210 00d8 00000000 		.4byte	.LFB139
  5211 00dc 1A000000 		.4byte	.LFE139
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 93
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 93
 
 
  5212 00e0 00000000 		.4byte	.LFB140
@@ -5547,8 +5547,8 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  5235 013c 00000000 		.4byte	0
  5236              		.section	.debug_line,"",%progbits
  5237              	.Ldebug_line0:
- 5238 0000 1C050000 		.section	.debug_str,"MS",%progbits,1
- 5238      02004201 
+ 5238 0000 1D050000 		.section	.debug_str,"MS",%progbits,1
+ 5238      02004301 
  5238      00000201 
  5238      FB0E0D00 
  5238      01010101 
@@ -5578,7 +5578,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  5250      434C4B5F 
  5250      46726571 
  5250      75656E63 
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 94
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 94
 
 
  5250      7900
@@ -5638,7 +5638,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  5272      6600
  5273              	.LASF61:
  5274 00e4 5243435F 		.ascii	"RCC_PLLConfig\000"
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 95
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 95
 
 
  5274      504C4C43 
@@ -5698,7 +5698,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  5296      4320342E 
  5296      372E3200 
  5297              	.LASF125:
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 96
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 96
 
 
  5298 0193 5243435F 		.ascii	"RCC_ClearITPendingBit\000"
@@ -5758,7 +5758,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  5317              	.LASF42:
  5318 0241 54494D31 		.ascii	"TIM1CLK_Frequency\000"
  5318      434C4B5F 
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 97
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 97
 
 
  5318      46726571 
@@ -5818,7 +5818,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  5342      6300
  5343              	.LASF63:
  5344 02ed 5243435F 		.ascii	"RCC_PLLMul\000"
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 98
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 98
 
 
  5344      504C4C4D 
@@ -5878,7 +5878,7 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  5370      6720696E 
  5370      7400
  5371              	.LASF62:
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 99
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 99
 
 
  5372 0396 5243435F 		.ascii	"RCC_PLLSource\000"
@@ -5896,429 +5896,432 @@ ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 1
  5376      4C4B436F 
  5376      6E666967 
  5376      00
- 5377              	.LASF130:
- 5378 03c4 433A5C43 		.ascii	"C:\\ChibiStudio\\ChibiOS\\testhal_wrk\\STM32F30x\\T"
- 5378      68696269 
- 5378      53747564 
- 5378      696F5C43 
- 5378      68696269 
- 5379 03f2 735F5350 		.ascii	"s_SPI\000"
- 5379      4900
- 5380              	.LASF73:
- 5381 03f8 5243435F 		.ascii	"RCC_HCLKConfig\000"
- 5381      48434C4B 
- 5381      436F6E66 
- 5381      696700
- 5382              	.LASF126:
- 5383 0407 41504241 		.ascii	"APBAHBPrescTable\000"
- 5383      48425072 
- 5383      65736354 
- 5383      61626C65 
- 5383      00
- 5384              	.LASF31:
- 5385 0418 43464752 		.ascii	"CFGR2\000"
- 5385      3200
- 5386              	.LASF32:
- 5387 041e 43464752 		.ascii	"CFGR3\000"
- 5387      3300
- 5388              	.LASF27:
- 5389 0424 41504232 		.ascii	"APB2ENR\000"
- 5389      454E5200 
- 5390              	.LASF94:
- 5391 042c 5243435F 		.ascii	"RCC_USARTCLK\000"
- 5391      55534152 
- 5391      54434C4B 
- 5391      00
- 5392              	.LASF79:
- 5393 0439 5243435F 		.ascii	"RCC_Clocks\000"
- 5393      436C6F63 
- 5393      6B7300
- 5394              	.LASF4:
- 5395 0444 75696E74 		.ascii	"uint16_t\000"
- 5395      31365F74 
- 5395      00
- 5396              	.LASF44:
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 100
+ 5377              	.LASF73:
+ 5378 03c4 5243435F 		.ascii	"RCC_HCLKConfig\000"
+ 5378      48434C4B 
+ 5378      436F6E66 
+ 5378      696700
+ 5379              	.LASF126:
+ 5380 03d3 41504241 		.ascii	"APBAHBPrescTable\000"
+ 5380      48425072 
+ 5380      65736354 
+ 5380      61626C65 
+ 5380      00
+ 5381              	.LASF31:
+ 5382 03e4 43464752 		.ascii	"CFGR2\000"
+ 5382      3200
+ 5383              	.LASF32:
+ 5384 03ea 43464752 		.ascii	"CFGR3\000"
+ 5384      3300
+ 5385              	.LASF27:
+ 5386 03f0 41504232 		.ascii	"APB2ENR\000"
+ 5386      454E5200 
+ 5387              	.LASF94:
+ 5388 03f8 5243435F 		.ascii	"RCC_USARTCLK\000"
+ 5388      55534152 
+ 5388      54434C4B 
+ 5388      00
+ 5389              	.LASF79:
+ 5390 0405 5243435F 		.ascii	"RCC_Clocks\000"
+ 5390      436C6F63 
+ 5390      6B7300
+ 5391              	.LASF4:
+ 5392 0410 75696E74 		.ascii	"uint16_t\000"
+ 5392      31365F74 
+ 5392      00
+ 5393              	.LASF44:
+ 5394 0419 55534152 		.ascii	"USART1CLK_Frequency\000"
+ 5394      5431434C 
+ 5394      4B5F4672 
+ 5394      65717565 
+ 5394      6E637900 
+ 5395              	.LASF56:
+ 5396 042d 5243435F 		.ascii	"RCC_LSEConfig\000"
+ 5396      4C534543 
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 100
 
 
- 5397 044d 55534152 		.ascii	"USART1CLK_Frequency\000"
- 5397      5431434C 
- 5397      4B5F4672 
- 5397      65717565 
- 5397      6E637900 
- 5398              	.LASF56:
- 5399 0461 5243435F 		.ascii	"RCC_LSEConfig\000"
- 5399      4C534543 
- 5399      6F6E6669 
- 5399      6700
+ 5396      6F6E6669 
+ 5396      6700
+ 5397              	.LASF130:
+ 5398 043b 633A5C55 		.ascii	"c:\\Users\\TaisikHam\\Documents\\GitHub\\ChibiOS\\t"
+ 5398      73657273 
+ 5398      5C546169 
+ 5398      73696B48 
+ 5398      616D5C44 
+ 5399 0468 65737468 		.ascii	"esthal_wrk\\STM32F30x\\TS_SPI\000"
+ 5399      616C5F77 
+ 5399      726B5C53 
+ 5399      544D3332 
+ 5399      46333078 
  5400              	.LASF95:
- 5401 046f 5243435F 		.ascii	"RCC_USBCLKConfig\000"
+ 5401 0484 5243435F 		.ascii	"RCC_USBCLKConfig\000"
  5401      55534243 
  5401      4C4B436F 
  5401      6E666967 
  5401      00
  5402              	.LASF117:
- 5403 0480 5243435F 		.ascii	"RCC_GetFlagStatus\000"
+ 5403 0495 5243435F 		.ascii	"RCC_GetFlagStatus\000"
  5403      47657446 
  5403      6C616753 
  5403      74617475 
  5403      7300
  5404              	.LASF91:
- 5405 0492 5243435F 		.ascii	"RCC_TIMCLKConfig\000"
+ 5405 04a7 5243435F 		.ascii	"RCC_TIMCLKConfig\000"
  5405      54494D43 
  5405      4C4B436F 
  5405      6E666967 
  5405      00
  5406              	.LASF46:
- 5407 04a3 55534152 		.ascii	"USART3CLK_Frequency\000"
+ 5407 04b8 55534152 		.ascii	"USART3CLK_Frequency\000"
  5407      5433434C 
  5407      4B5F4672 
  5407      65717565 
  5407      6E637900 
  5408              	.LASF2:
- 5409 04b7 73686F72 		.ascii	"short int\000"
+ 5409 04cc 73686F72 		.ascii	"short int\000"
  5409      7420696E 
  5409      7400
  5410              	.LASF43:
- 5411 04c1 54494D38 		.ascii	"TIM8CLK_Frequency\000"
+ 5411 04d6 54494D38 		.ascii	"TIM8CLK_Frequency\000"
  5411      434C4B5F 
  5411      46726571 
  5411      75656E63 
  5411      7900
  5412              	.LASF7:
- 5413 04d3 6C6F6E67 		.ascii	"long int\000"
+ 5413 04e8 6C6F6E67 		.ascii	"long int\000"
  5413      20696E74 
  5413      00
  5414              	.LASF132:
- 5415 04dc 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 5415 04f1 49544D5F 		.ascii	"ITM_RxBuffer\000"
  5415      52784275 
  5415      66666572 
  5415      00
  5416              	.LASF88:
- 5417 04e9 5243435F 		.ascii	"RCC_PLLCLK\000"
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 101
+
+
+ 5417 04fe 5243435F 		.ascii	"RCC_PLLCLK\000"
  5417      504C4C43 
  5417      4C4B00
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 101
-
-
  5418              	.LASF45:
- 5419 04f4 55534152 		.ascii	"USART2CLK_Frequency\000"
+ 5419 0509 55534152 		.ascii	"USART2CLK_Frequency\000"
  5419      5432434C 
  5419      4B5F4672 
  5419      65717565 
  5419      6E637900 
  5420              	.LASF82:
- 5421 0508 70726564 		.ascii	"prediv1factor\000"
+ 5421 051d 70726564 		.ascii	"prediv1factor\000"
  5421      69763166 
  5421      6163746F 
  5421      7200
  5422              	.LASF14:
- 5423 0516 52455345 		.ascii	"RESET\000"
+ 5423 052b 52455345 		.ascii	"RESET\000"
  5423      5400
  5424              	.LASF109:
- 5425 051c 5243435F 		.ascii	"RCC_AHBPeriphResetCmd\000"
+ 5425 0531 5243435F 		.ascii	"RCC_AHBPeriphResetCmd\000"
  5425      41484250 
  5425      65726970 
  5425      68526573 
  5425      6574436D 
  5426              	.LASF23:
- 5427 0532 43464752 		.ascii	"CFGR\000"
+ 5427 0547 43464752 		.ascii	"CFGR\000"
  5427      00
  5428              	.LASF37:
- 5429 0537 50434C4B 		.ascii	"PCLK2_Frequency\000"
+ 5429 054c 50434C4B 		.ascii	"PCLK2_Frequency\000"
  5429      325F4672 
  5429      65717565 
  5429      6E637900 
  5430              	.LASF98:
- 5431 0547 5243435F 		.ascii	"RCC_RTCCLKSource\000"
+ 5431 055c 5243435F 		.ascii	"RCC_RTCCLKSource\000"
  5431      52544343 
  5431      4C4B536F 
  5431      75726365 
  5431      00
  5432              	.LASF96:
- 5433 0558 5243435F 		.ascii	"RCC_USBCLKSource\000"
+ 5433 056d 5243435F 		.ascii	"RCC_USBCLKSource\000"
  5433      55534243 
  5433      4C4B536F 
  5433      75726365 
  5433      00
  5434              	.LASF112:
- 5435 0569 5243435F 		.ascii	"RCC_ITConfig\000"
+ 5435 057e 5243435F 		.ascii	"RCC_ITConfig\000"
  5435      4954436F 
  5435      6E666967 
  5435      00
  5436              	.LASF97:
- 5437 0576 5243435F 		.ascii	"RCC_RTCCLKConfig\000"
+ 5437 058b 5243435F 		.ascii	"RCC_RTCCLKConfig\000"
  5437      52544343 
  5437      4C4B436F 
  5437      6E666967 
  5437      00
  5438              	.LASF70:
- 5439 0587 5243435F 		.ascii	"RCC_MCOSource\000"
+ 5439 059c 5243435F 		.ascii	"RCC_MCOSource\000"
  5439      4D434F53 
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 102
+
+
  5439      6F757263 
  5439      6500
  5440              	.LASF92:
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 102
-
-
- 5441 0595 5243435F 		.ascii	"RCC_TIMCLK\000"
+ 5441 05aa 5243435F 		.ascii	"RCC_TIMCLK\000"
  5441      54494D43 
  5441      4C4B00
  5442              	.LASF131:
- 5443 05a0 5243435F 		.ascii	"RCC_GetSYSCLKSource\000"
+ 5443 05b5 5243435F 		.ascii	"RCC_GetSYSCLKSource\000"
  5443      47657453 
  5443      5953434C 
  5443      4B536F75 
  5443      72636500 
  5444              	.LASF18:
- 5445 05b4 454E4142 		.ascii	"ENABLE\000"
+ 5445 05c9 454E4142 		.ascii	"ENABLE\000"
  5445      4C4500
  5446              	.LASF13:
- 5447 05bb 73697A65 		.ascii	"sizetype\000"
+ 5447 05d0 73697A65 		.ascii	"sizetype\000"
  5447      74797065 
  5447      00
  5448              	.LASF9:
- 5449 05c4 6C6F6E67 		.ascii	"long unsigned int\000"
+ 5449 05d9 6C6F6E67 		.ascii	"long unsigned int\000"
  5449      20756E73 
  5449      69676E65 
  5449      6420696E 
  5449      7400
  5450              	.LASF102:
- 5451 05d6 5243435F 		.ascii	"RCC_BackupResetCmd\000"
+ 5451 05eb 5243435F 		.ascii	"RCC_BackupResetCmd\000"
  5451      4261636B 
  5451      75705265 
  5451      73657443 
  5451      6D6400
  5452              	.LASF6:
- 5453 05e9 696E7433 		.ascii	"int32_t\000"
+ 5453 05fe 696E7433 		.ascii	"int32_t\000"
  5453      325F7400 
  5454              	.LASF66:
- 5455 05f1 5243435F 		.ascii	"RCC_PREDIV1_Div\000"
+ 5455 0606 5243435F 		.ascii	"RCC_PREDIV1_Div\000"
  5455      50524544 
  5455      4956315F 
  5455      44697600 
  5456              	.LASF110:
- 5457 0601 5243435F 		.ascii	"RCC_APB2PeriphResetCmd\000"
+ 5457 0616 5243435F 		.ascii	"RCC_APB2PeriphResetCmd\000"
  5457      41504232 
  5457      50657269 
  5457      70685265 
  5457      73657443 
  5458              	.LASF59:
- 5459 0618 5243435F 		.ascii	"RCC_LSEDrive\000"
+ 5459 062d 5243435F 		.ascii	"RCC_LSEDrive\000"
  5459      4C534544 
  5459      72697665 
  5459      00
  5460              	.LASF121:
- 5461 0625 48534553 		.ascii	"HSEStatus\000"
+ 5461 063a 48534553 		.ascii	"HSEStatus\000"
  5461      74617475 
  5461      7300
  5462              	.LASF54:
- 5463 062f 5243435F 		.ascii	"RCC_HSICmd\000"
+ 5463 0644 5243435F 		.ascii	"RCC_HSICmd\000"
  5463      48534943 
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 103
+
+
  5463      6D6400
  5464              	.LASF1:
- 5465 063a 756E7369 		.ascii	"unsigned char\000"
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 103
-
-
+ 5465 064f 756E7369 		.ascii	"unsigned char\000"
  5465      676E6564 
  5465      20636861 
  5465      7200
  5466              	.LASF111:
- 5467 0648 5243435F 		.ascii	"RCC_APB1PeriphResetCmd\000"
+ 5467 065d 5243435F 		.ascii	"RCC_APB1PeriphResetCmd\000"
  5467      41504231 
  5467      50657269 
  5467      70685265 
  5467      73657443 
  5468              	.LASF85:
- 5469 065f 61706232 		.ascii	"apb2presc\000"
+ 5469 0674 61706232 		.ascii	"apb2presc\000"
  5469      70726573 
  5469      6300
  5470              	.LASF58:
- 5471 0669 5243435F 		.ascii	"RCC_LSEDriveConfig\000"
+ 5471 067e 5243435F 		.ascii	"RCC_LSEDriveConfig\000"
  5471      4C534544 
  5471      72697665 
  5471      436F6E66 
  5471      696700
  5472              	.LASF81:
- 5473 067c 706C6C73 		.ascii	"pllsource\000"
+ 5473 0691 706C6C73 		.ascii	"pllsource\000"
  5473      6F757263 
  5473      6500
  5474              	.LASF36:
- 5475 0686 50434C4B 		.ascii	"PCLK1_Frequency\000"
+ 5475 069b 50434C4B 		.ascii	"PCLK1_Frequency\000"
  5475      315F4672 
  5475      65717565 
  5475      6E637900 
  5476              	.LASF105:
- 5477 0696 5243435F 		.ascii	"RCC_APB2PeriphClockCmd\000"
+ 5477 06ab 5243435F 		.ascii	"RCC_APB2PeriphClockCmd\000"
  5477      41504232 
  5477      50657269 
  5477      7068436C 
  5477      6F636B43 
  5478              	.LASF64:
- 5479 06ad 5243435F 		.ascii	"RCC_PLLCmd\000"
+ 5479 06c2 5243435F 		.ascii	"RCC_PLLCmd\000"
  5479      504C4C43 
  5479      6D6400
  5480              	.LASF57:
- 5481 06b8 5243435F 		.ascii	"RCC_LSE\000"
+ 5481 06cd 5243435F 		.ascii	"RCC_LSE\000"
  5481      4C534500 
  5482              	.LASF129:
- 5483 06c0 2E2E2F2E 		.ascii	"../../../Testhal_wrk/STM32F30x/Gyro/stm32f30x_rcc.c"
+ 5483 06d5 2E2E2F2E 		.ascii	"../../../Testhal_wrk/STM32F30x/Gyro/stm32f30x_rcc.c"
  5483      2E2F2E2E 
  5483      2F546573 
  5483      7468616C 
  5483      5F77726B 
- 5484 06f3 00       		.ascii	"\000"
+ 5484 0708 00       		.ascii	"\000"
  5485              	.LASF0:
- 5486 06f4 7369676E 		.ascii	"signed char\000"
+ 5486 0709 7369676E 		.ascii	"signed char\000"
  5486      65642063 
  5486      68617200 
  5487              	.LASF5:
- 5488 0700 73686F72 		.ascii	"short unsigned int\000"
+ 5488 0715 73686F72 		.ascii	"short unsigned int\000"
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 104
+
+
  5488      7420756E 
  5488      7369676E 
  5488      65642069 
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 104
-
-
  5488      6E7400
  5489              	.LASF108:
- 5490 0713 5243435F 		.ascii	"RCC_APB1Periph\000"
+ 5490 0728 5243435F 		.ascii	"RCC_APB1Periph\000"
  5490      41504231 
  5490      50657269 
  5490      706800
  5491              	.LASF115:
- 5492 0722 73746174 		.ascii	"statusreg\000"
+ 5492 0737 73746174 		.ascii	"statusreg\000"
  5492      75737265 
  5492      6700
  5493              	.LASF116:
- 5494 072c 62697473 		.ascii	"bitstatus\000"
+ 5494 0741 62697473 		.ascii	"bitstatus\000"
  5494      74617475 
  5494      7300
  5495              	.LASF113:
- 5496 0736 5243435F 		.ascii	"RCC_IT\000"
+ 5496 074b 5243435F 		.ascii	"RCC_IT\000"
  5496      495400
  5497              	.LASF114:
- 5498 073d 5243435F 		.ascii	"RCC_FLAG\000"
+ 5498 0752 5243435F 		.ascii	"RCC_FLAG\000"
  5498      464C4147 
  5498      00
  5499              	.LASF123:
- 5500 0746 5243435F 		.ascii	"RCC_ClearFlag\000"
+ 5500 075b 5243435F 		.ascii	"RCC_ClearFlag\000"
  5500      436C6561 
  5500      72466C61 
  5500      6700
  5501              	.LASF41:
- 5502 0754 49324332 		.ascii	"I2C2CLK_Frequency\000"
+ 5502 0769 49324332 		.ascii	"I2C2CLK_Frequency\000"
  5502      434C4B5F 
  5502      46726571 
  5502      75656E63 
  5502      7900
  5503              	.LASF119:
- 5504 0766 53746172 		.ascii	"StartUpCounter\000"
+ 5504 077b 53746172 		.ascii	"StartUpCounter\000"
  5504      74557043 
  5504      6F756E74 
  5504      657200
  5505              	.LASF101:
- 5506 0775 5243435F 		.ascii	"RCC_RTCCLKCmd\000"
+ 5506 078a 5243435F 		.ascii	"RCC_RTCCLKCmd\000"
  5506      52544343 
  5506      4C4B436D 
  5506      6400
  5507              		.ident	"GCC: (GNU) 4.7.2"
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 105
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 105
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f30x_rcc.c
-C:\cygwin\tmp\cc9cAYwl.s:19     .text.RCC_DeInit:00000000 $t
-C:\cygwin\tmp\cc9cAYwl.s:25     .text.RCC_DeInit:00000000 RCC_DeInit
-C:\cygwin\tmp\cc9cAYwl.s:79     .text.RCC_HSEConfig:00000000 $t
-C:\cygwin\tmp\cc9cAYwl.s:85     .text.RCC_HSEConfig:00000000 RCC_HSEConfig
-C:\cygwin\tmp\cc9cAYwl.s:105    .text.RCC_AdjustHSICalibrationValue:00000000 $t
-C:\cygwin\tmp\cc9cAYwl.s:111    .text.RCC_AdjustHSICalibrationValue:00000000 RCC_AdjustHSICalibrationValue
-C:\cygwin\tmp\cc9cAYwl.s:137    .text.RCC_HSICmd:00000000 $t
-C:\cygwin\tmp\cc9cAYwl.s:143    .text.RCC_HSICmd:00000000 RCC_HSICmd
-C:\cygwin\tmp\cc9cAYwl.s:160    .text.RCC_LSEConfig:00000000 $t
-C:\cygwin\tmp\cc9cAYwl.s:166    .text.RCC_LSEConfig:00000000 RCC_LSEConfig
-C:\cygwin\tmp\cc9cAYwl.s:194    .text.RCC_LSEDriveConfig:00000000 $t
-C:\cygwin\tmp\cc9cAYwl.s:200    .text.RCC_LSEDriveConfig:00000000 RCC_LSEDriveConfig
-C:\cygwin\tmp\cc9cAYwl.s:224    .text.RCC_LSICmd:00000000 $t
-C:\cygwin\tmp\cc9cAYwl.s:230    .text.RCC_LSICmd:00000000 RCC_LSICmd
-C:\cygwin\tmp\cc9cAYwl.s:247    .text.RCC_PLLConfig:00000000 $t
-C:\cygwin\tmp\cc9cAYwl.s:253    .text.RCC_PLLConfig:00000000 RCC_PLLConfig
-C:\cygwin\tmp\cc9cAYwl.s:279    .text.RCC_PLLCmd:00000000 $t
-C:\cygwin\tmp\cc9cAYwl.s:285    .text.RCC_PLLCmd:00000000 RCC_PLLCmd
-C:\cygwin\tmp\cc9cAYwl.s:302    .text.RCC_PREDIV1Config:00000000 $t
-C:\cygwin\tmp\cc9cAYwl.s:308    .text.RCC_PREDIV1Config:00000000 RCC_PREDIV1Config
-C:\cygwin\tmp\cc9cAYwl.s:334    .text.RCC_ClockSecuritySystemCmd:00000000 $t
-C:\cygwin\tmp\cc9cAYwl.s:340    .text.RCC_ClockSecuritySystemCmd:00000000 RCC_ClockSecuritySystemCmd
-C:\cygwin\tmp\cc9cAYwl.s:357    .text.RCC_MCOConfig:00000000 $t
-C:\cygwin\tmp\cc9cAYwl.s:363    .text.RCC_MCOConfig:00000000 RCC_MCOConfig
-C:\cygwin\tmp\cc9cAYwl.s:380    .text.RCC_SYSCLKConfig:00000000 $t
-C:\cygwin\tmp\cc9cAYwl.s:386    .text.RCC_SYSCLKConfig:00000000 RCC_SYSCLKConfig
-C:\cygwin\tmp\cc9cAYwl.s:412    .text.RCC_GetSYSCLKSource:00000000 $t
-C:\cygwin\tmp\cc9cAYwl.s:418    .text.RCC_GetSYSCLKSource:00000000 RCC_GetSYSCLKSource
-C:\cygwin\tmp\cc9cAYwl.s:436    .text.RCC_HCLKConfig:00000000 $t
-C:\cygwin\tmp\cc9cAYwl.s:442    .text.RCC_HCLKConfig:00000000 RCC_HCLKConfig
-C:\cygwin\tmp\cc9cAYwl.s:468    .text.RCC_PCLK1Config:00000000 $t
-C:\cygwin\tmp\cc9cAYwl.s:474    .text.RCC_PCLK1Config:00000000 RCC_PCLK1Config
-C:\cygwin\tmp\cc9cAYwl.s:500    .text.RCC_PCLK2Config:00000000 $t
-C:\cygwin\tmp\cc9cAYwl.s:506    .text.RCC_PCLK2Config:00000000 RCC_PCLK2Config
-C:\cygwin\tmp\cc9cAYwl.s:532    .text.RCC_GetClocksFreq:00000000 $t
-C:\cygwin\tmp\cc9cAYwl.s:538    .text.RCC_GetClocksFreq:00000000 RCC_GetClocksFreq
-C:\cygwin\tmp\cc9cAYwl.s:1016   .text.RCC_GetClocksFreq:00000304 $d
-C:\cygwin\tmp\cc9cAYwl.s:1021   .text.RCC_GetClocksFreq:0000030c $t
-C:\cygwin\tmp\cc9cAYwl.s:1033   .text.RCC_ADCCLKConfig:00000000 $t
-C:\cygwin\tmp\cc9cAYwl.s:1039   .text.RCC_ADCCLKConfig:00000000 RCC_ADCCLKConfig
-C:\cygwin\tmp\cc9cAYwl.s:1070   .text.RCC_I2CCLKConfig:00000000 $t
-C:\cygwin\tmp\cc9cAYwl.s:1076   .text.RCC_I2CCLKConfig:00000000 RCC_I2CCLKConfig
-C:\cygwin\tmp\cc9cAYwl.s:1107   .text.RCC_TIMCLKConfig:00000000 $t
-C:\cygwin\tmp\cc9cAYwl.s:1113   .text.RCC_TIMCLKConfig:00000000 RCC_TIMCLKConfig
-C:\cygwin\tmp\cc9cAYwl.s:1144   .text.RCC_USARTCLKConfig:00000000 $t
-C:\cygwin\tmp\cc9cAYwl.s:1150   .text.RCC_USARTCLKConfig:00000000 RCC_USARTCLKConfig
-C:\cygwin\tmp\cc9cAYwl.s:1168   .text.RCC_USARTCLKConfig:0000000c $d
-C:\cygwin\tmp\cc9cAYwl.s:1233   .text.RCC_USBCLKConfig:00000000 $t
-C:\cygwin\tmp\cc9cAYwl.s:1239   .text.RCC_USBCLKConfig:00000000 RCC_USBCLKConfig
-C:\cygwin\tmp\cc9cAYwl.s:1256   .text.RCC_RTCCLKConfig:00000000 $t
-C:\cygwin\tmp\cc9cAYwl.s:1262   .text.RCC_RTCCLKConfig:00000000 RCC_RTCCLKConfig
-C:\cygwin\tmp\cc9cAYwl.s:1282   .text.RCC_I2SCLKConfig:00000000 $t
-C:\cygwin\tmp\cc9cAYwl.s:1288   .text.RCC_I2SCLKConfig:00000000 RCC_I2SCLKConfig
-C:\cygwin\tmp\cc9cAYwl.s:1305   .text.RCC_RTCCLKCmd:00000000 $t
-C:\cygwin\tmp\cc9cAYwl.s:1311   .text.RCC_RTCCLKCmd:00000000 RCC_RTCCLKCmd
-ARM GAS  C:\cygwin\tmp\cc9cAYwl.s 			page 106
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:19     .text.RCC_DeInit:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:25     .text.RCC_DeInit:00000000 RCC_DeInit
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:79     .text.RCC_HSEConfig:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:85     .text.RCC_HSEConfig:00000000 RCC_HSEConfig
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:105    .text.RCC_AdjustHSICalibrationValue:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:111    .text.RCC_AdjustHSICalibrationValue:00000000 RCC_AdjustHSICalibrationValue
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:137    .text.RCC_HSICmd:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:143    .text.RCC_HSICmd:00000000 RCC_HSICmd
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:160    .text.RCC_LSEConfig:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:166    .text.RCC_LSEConfig:00000000 RCC_LSEConfig
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:194    .text.RCC_LSEDriveConfig:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:200    .text.RCC_LSEDriveConfig:00000000 RCC_LSEDriveConfig
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:224    .text.RCC_LSICmd:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:230    .text.RCC_LSICmd:00000000 RCC_LSICmd
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:247    .text.RCC_PLLConfig:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:253    .text.RCC_PLLConfig:00000000 RCC_PLLConfig
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:279    .text.RCC_PLLCmd:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:285    .text.RCC_PLLCmd:00000000 RCC_PLLCmd
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:302    .text.RCC_PREDIV1Config:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:308    .text.RCC_PREDIV1Config:00000000 RCC_PREDIV1Config
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:334    .text.RCC_ClockSecuritySystemCmd:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:340    .text.RCC_ClockSecuritySystemCmd:00000000 RCC_ClockSecuritySystemCmd
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:357    .text.RCC_MCOConfig:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:363    .text.RCC_MCOConfig:00000000 RCC_MCOConfig
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:380    .text.RCC_SYSCLKConfig:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:386    .text.RCC_SYSCLKConfig:00000000 RCC_SYSCLKConfig
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:412    .text.RCC_GetSYSCLKSource:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:418    .text.RCC_GetSYSCLKSource:00000000 RCC_GetSYSCLKSource
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:436    .text.RCC_HCLKConfig:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:442    .text.RCC_HCLKConfig:00000000 RCC_HCLKConfig
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:468    .text.RCC_PCLK1Config:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:474    .text.RCC_PCLK1Config:00000000 RCC_PCLK1Config
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:500    .text.RCC_PCLK2Config:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:506    .text.RCC_PCLK2Config:00000000 RCC_PCLK2Config
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:532    .text.RCC_GetClocksFreq:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:538    .text.RCC_GetClocksFreq:00000000 RCC_GetClocksFreq
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1016   .text.RCC_GetClocksFreq:00000304 $d
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1021   .text.RCC_GetClocksFreq:0000030c $t
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1033   .text.RCC_ADCCLKConfig:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1039   .text.RCC_ADCCLKConfig:00000000 RCC_ADCCLKConfig
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1070   .text.RCC_I2CCLKConfig:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1076   .text.RCC_I2CCLKConfig:00000000 RCC_I2CCLKConfig
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1107   .text.RCC_TIMCLKConfig:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1113   .text.RCC_TIMCLKConfig:00000000 RCC_TIMCLKConfig
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1144   .text.RCC_USARTCLKConfig:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1150   .text.RCC_USARTCLKConfig:00000000 RCC_USARTCLKConfig
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1168   .text.RCC_USARTCLKConfig:0000000c $d
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1233   .text.RCC_USBCLKConfig:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1239   .text.RCC_USBCLKConfig:00000000 RCC_USBCLKConfig
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1256   .text.RCC_RTCCLKConfig:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1262   .text.RCC_RTCCLKConfig:00000000 RCC_RTCCLKConfig
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1282   .text.RCC_I2SCLKConfig:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1288   .text.RCC_I2SCLKConfig:00000000 RCC_I2SCLKConfig
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1305   .text.RCC_RTCCLKCmd:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1311   .text.RCC_RTCCLKCmd:00000000 RCC_RTCCLKCmd
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s 			page 106
 
 
-C:\cygwin\tmp\cc9cAYwl.s:1328   .text.RCC_BackupResetCmd:00000000 $t
-C:\cygwin\tmp\cc9cAYwl.s:1334   .text.RCC_BackupResetCmd:00000000 RCC_BackupResetCmd
-C:\cygwin\tmp\cc9cAYwl.s:1351   .text.RCC_AHBPeriphClockCmd:00000000 $t
-C:\cygwin\tmp\cc9cAYwl.s:1357   .text.RCC_AHBPeriphClockCmd:00000000 RCC_AHBPeriphClockCmd
-C:\cygwin\tmp\cc9cAYwl.s:1387   .text.RCC_APB2PeriphClockCmd:00000000 $t
-C:\cygwin\tmp\cc9cAYwl.s:1393   .text.RCC_APB2PeriphClockCmd:00000000 RCC_APB2PeriphClockCmd
-C:\cygwin\tmp\cc9cAYwl.s:1423   .text.RCC_APB1PeriphClockCmd:00000000 $t
-C:\cygwin\tmp\cc9cAYwl.s:1429   .text.RCC_APB1PeriphClockCmd:00000000 RCC_APB1PeriphClockCmd
-C:\cygwin\tmp\cc9cAYwl.s:1459   .text.RCC_AHBPeriphResetCmd:00000000 $t
-C:\cygwin\tmp\cc9cAYwl.s:1465   .text.RCC_AHBPeriphResetCmd:00000000 RCC_AHBPeriphResetCmd
-C:\cygwin\tmp\cc9cAYwl.s:1495   .text.RCC_APB2PeriphResetCmd:00000000 $t
-C:\cygwin\tmp\cc9cAYwl.s:1501   .text.RCC_APB2PeriphResetCmd:00000000 RCC_APB2PeriphResetCmd
-C:\cygwin\tmp\cc9cAYwl.s:1531   .text.RCC_APB1PeriphResetCmd:00000000 $t
-C:\cygwin\tmp\cc9cAYwl.s:1537   .text.RCC_APB1PeriphResetCmd:00000000 RCC_APB1PeriphResetCmd
-C:\cygwin\tmp\cc9cAYwl.s:1567   .text.RCC_ITConfig:00000000 $t
-C:\cygwin\tmp\cc9cAYwl.s:1573   .text.RCC_ITConfig:00000000 RCC_ITConfig
-C:\cygwin\tmp\cc9cAYwl.s:1603   .text.RCC_GetFlagStatus:00000000 $t
-C:\cygwin\tmp\cc9cAYwl.s:1609   .text.RCC_GetFlagStatus:00000000 RCC_GetFlagStatus
-C:\cygwin\tmp\cc9cAYwl.s:1666   .text.RCC_WaitForHSEStartUp:00000000 $t
-C:\cygwin\tmp\cc9cAYwl.s:1672   .text.RCC_WaitForHSEStartUp:00000000 RCC_WaitForHSEStartUp
-C:\cygwin\tmp\cc9cAYwl.s:1728   .text.RCC_ClearFlag:00000000 $t
-C:\cygwin\tmp\cc9cAYwl.s:1734   .text.RCC_ClearFlag:00000000 RCC_ClearFlag
-C:\cygwin\tmp\cc9cAYwl.s:1752   .text.RCC_GetITStatus:00000000 $t
-C:\cygwin\tmp\cc9cAYwl.s:1758   .text.RCC_GetITStatus:00000000 RCC_GetITStatus
-C:\cygwin\tmp\cc9cAYwl.s:1782   .text.RCC_ClearITPendingBit:00000000 $t
-C:\cygwin\tmp\cc9cAYwl.s:1788   .text.RCC_ClearITPendingBit:00000000 RCC_ClearITPendingBit
-C:\cygwin\tmp\cc9cAYwl.s:1805   .data.ADCPrescTable:00000000 $d
-C:\cygwin\tmp\cc9cAYwl.s:1809   .data.ADCPrescTable:00000000 ADCPrescTable
-C:\cygwin\tmp\cc9cAYwl.s:1824   .data.APBAHBPrescTable:00000000 $d
-C:\cygwin\tmp\cc9cAYwl.s:1828   .data.APBAHBPrescTable:00000000 APBAHBPrescTable
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1328   .text.RCC_BackupResetCmd:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1334   .text.RCC_BackupResetCmd:00000000 RCC_BackupResetCmd
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1351   .text.RCC_AHBPeriphClockCmd:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1357   .text.RCC_AHBPeriphClockCmd:00000000 RCC_AHBPeriphClockCmd
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1387   .text.RCC_APB2PeriphClockCmd:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1393   .text.RCC_APB2PeriphClockCmd:00000000 RCC_APB2PeriphClockCmd
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1423   .text.RCC_APB1PeriphClockCmd:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1429   .text.RCC_APB1PeriphClockCmd:00000000 RCC_APB1PeriphClockCmd
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1459   .text.RCC_AHBPeriphResetCmd:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1465   .text.RCC_AHBPeriphResetCmd:00000000 RCC_AHBPeriphResetCmd
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1495   .text.RCC_APB2PeriphResetCmd:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1501   .text.RCC_APB2PeriphResetCmd:00000000 RCC_APB2PeriphResetCmd
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1531   .text.RCC_APB1PeriphResetCmd:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1537   .text.RCC_APB1PeriphResetCmd:00000000 RCC_APB1PeriphResetCmd
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1567   .text.RCC_ITConfig:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1573   .text.RCC_ITConfig:00000000 RCC_ITConfig
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1603   .text.RCC_GetFlagStatus:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1609   .text.RCC_GetFlagStatus:00000000 RCC_GetFlagStatus
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1666   .text.RCC_WaitForHSEStartUp:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1672   .text.RCC_WaitForHSEStartUp:00000000 RCC_WaitForHSEStartUp
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1728   .text.RCC_ClearFlag:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1734   .text.RCC_ClearFlag:00000000 RCC_ClearFlag
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1752   .text.RCC_GetITStatus:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1758   .text.RCC_GetITStatus:00000000 RCC_GetITStatus
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1782   .text.RCC_ClearITPendingBit:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1788   .text.RCC_ClearITPendingBit:00000000 RCC_ClearITPendingBit
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1805   .data.ADCPrescTable:00000000 $d
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1809   .data.ADCPrescTable:00000000 ADCPrescTable
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1824   .data.APBAHBPrescTable:00000000 $d
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1828   .data.APBAHBPrescTable:00000000 APBAHBPrescTable
                      .debug_frame:00000010 $d
-C:\cygwin\tmp\cc9cAYwl.s:1173   .text.RCC_USARTCLKConfig:00000011 $d
-C:\cygwin\tmp\cc9cAYwl.s:1173   .text.RCC_USARTCLKConfig:00000012 $t
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1173   .text.RCC_USARTCLKConfig:00000011 $d
+C:\Users\TaisikHam\AppData\Local\Temp\cclELrfj.s:1173   .text.RCC_USARTCLKConfig:00000012 $t
 
 NO UNDEFINED SYMBOLS

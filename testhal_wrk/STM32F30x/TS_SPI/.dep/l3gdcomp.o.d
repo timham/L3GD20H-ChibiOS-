@@ -1,10 +1,10 @@
 build/obj/l3gdcomp.o: ../../../Testhal_wrk/STM32F30x/Gyro/l3gdcomp.c \
  ../../../os/kernel/include/ch.h chconf.h \
  ../../../os/ports/GCC/ARMCMx/chtypes.h \
- c:\develop\gimst\chibistudio\tools\yagarto-tools\yagarto-20121222\bin\../lib/gcc/arm-none-eabi/4.7.2/include/stddef.h \
- c:\develop\gimst\chibistudio\tools\yagarto-tools\yagarto-20121222\bin\../lib/gcc/arm-none-eabi/4.7.2/include/stdint.h \
- c:/develop/gimst/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/stdint.h \
- c:\develop\gimst\chibistudio\tools\yagarto-tools\yagarto-20121222\bin\../lib/gcc/arm-none-eabi/4.7.2/include/stdbool.h \
+ c:\develop\genist\chibistudio\tools\yagarto-tools\yagarto-20121222\bin\../lib/gcc/arm-none-eabi/4.7.2/include/stddef.h \
+ c:\develop\genist\chibistudio\tools\yagarto-tools\yagarto-20121222\bin\../lib/gcc/arm-none-eabi/4.7.2/include/stdint.h \
+ c:/develop/genist/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/stdint.h \
+ c:\develop\genist\chibistudio\tools\yagarto-tools\yagarto-20121222\bin\../lib/gcc/arm-none-eabi/4.7.2/include/stdbool.h \
  ../../../os/kernel/include/chlists.h \
  ../../../os/ports/GCC/ARMCMx/chcore.h \
  ../../../os/ports/GCC/ARMCMx/STM32F3xx/cmparams.h \
@@ -52,9 +52,6 @@ build/obj/l3gdcomp.o: ../../../Testhal_wrk/STM32F30x/Gyro/l3gdcomp.c \
  ../../../os/hal/include/uart.h ../../../os/hal/include/usb.h \
  ../../../os/hal/include/mmc_spi.h ../../../os/hal/include/serial_usb.h \
  ../../../Testhal_wrk/STM32F30x/Gyro/stm32f3_discovery_l3gd20.h \
- ../../../Testhal_wrk/STM32F30x/Gyro/pal_lld.h \
- ../../../Testhal_wrk/STM32F30x/Gyro/stm32f30x_exti.h \
- ../../../Testhal_wrk/STM32F30x/Gyro/stm32f30x_syscfg.h \
  ../../../Testhal_wrk/STM32F30x/Gyro/stm32f30x_gpio.h
 
 ../../../os/kernel/include/ch.h:
@@ -63,13 +60,13 @@ chconf.h:
 
 ../../../os/ports/GCC/ARMCMx/chtypes.h:
 
-c:\develop\gimst\chibistudio\tools\yagarto-tools\yagarto-20121222\bin\../lib/gcc/arm-none-eabi/4.7.2/include/stddef.h:
+c:\develop\genist\chibistudio\tools\yagarto-tools\yagarto-20121222\bin\../lib/gcc/arm-none-eabi/4.7.2/include/stddef.h:
 
-c:\develop\gimst\chibistudio\tools\yagarto-tools\yagarto-20121222\bin\../lib/gcc/arm-none-eabi/4.7.2/include/stdint.h:
+c:\develop\genist\chibistudio\tools\yagarto-tools\yagarto-20121222\bin\../lib/gcc/arm-none-eabi/4.7.2/include/stdint.h:
 
-c:/develop/gimst/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/stdint.h:
+c:/develop/genist/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-eabi/sys-include/stdint.h:
 
-c:\develop\gimst\chibistudio\tools\yagarto-tools\yagarto-20121222\bin\../lib/gcc/arm-none-eabi/4.7.2/include/stdbool.h:
+c:\develop\genist\chibistudio\tools\yagarto-tools\yagarto-20121222\bin\../lib/gcc/arm-none-eabi/4.7.2/include/stdbool.h:
 
 ../../../os/kernel/include/chlists.h:
 
@@ -198,11 +195,5 @@ mcuconf.h:
 ../../../os/hal/include/serial_usb.h:
 
 ../../../Testhal_wrk/STM32F30x/Gyro/stm32f3_discovery_l3gd20.h:
-
-../../../Testhal_wrk/STM32F30x/Gyro/pal_lld.h:
-
-../../../Testhal_wrk/STM32F30x/Gyro/stm32f30x_exti.h:
-
-../../../Testhal_wrk/STM32F30x/Gyro/stm32f30x_syscfg.h:
 
 ../../../Testhal_wrk/STM32F30x/Gyro/stm32f30x_gpio.h:

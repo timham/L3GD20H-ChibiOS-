@@ -122,6 +122,7 @@ static const struct BaseChannelVMT vmt = {
 void conInit(void) {
 
   CD1.vmt = &vmt;
+ 
 }
 
 /** @} */

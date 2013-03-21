@@ -24,13 +24,16 @@
 
 #include "../gyro/stm32f3_discovery_l3gd20.h"
 
+//////////////////////////////////////////////////////////////////////////
 
-//==============================================================================================
 SPIDriver	gSpiDriver;
-SPIConfig   gSpiConfig;  
-//==============================================================================================
+SPIConfig   	gSpiConfig;  
 
-//#define _TEST_LAMP
+//////////////////////////////////////////////////////////////////////////
+
+#undef   _TEST_LAMP
+#undef   TEST_CHIPID
+
 #define _TEST_L3GD20
 
 #define gSpiDriver   SPID1
@@ -44,7 +47,9 @@ SPIConfig   gSpiConfig;
 #endif
 
 ///////////////////////////////////////////////////////////////////////////
-// extern 
+//
+// External Function 
+//
 
 extern  void L3GD20_Init_Setting(L3GD20_InitTypeDef *L3GD20_InitStruct);
 
@@ -66,7 +71,7 @@ bool   assert_check_led(DIR_t pos)
 		|| GPIOE_LED9_BLUE || GPIOE_LED10_RED)
 	     )
 	   )
-		return  TRUE;
+	return  TRUE;
 	
 	return FALSE;
 }
@@ -96,138 +101,154 @@ void  searching_led_position(DIR_t  pos)
 
 uint8_t  rxBuf[0x38];
 
-uint8_t   	OUT_X_L, OUT_X_H, 
-			OUT_Y_L, OUT_Y_H,
-			OUT_Z_L, OUT_Z_H,
-			WHO_AM_I;
+uint8_t OUT_X_L, OUT_X_H, 
+	OUT_Y_L, OUT_Y_H,
+	OUT_Z_L, OUT_Z_H,
+	WHO_AM_I;
 
-uint16_t  	gX, gY, gZ;
-uint8_t	    lhx, llx, lly,lhy, llz, lhz;
+uint16_t gX, gY, gZ;
+uint8_t	 lhx, llx, lly,lhy, llz, lhz;
 
 
 void  checking_coord(void)
 {
-	//#define  EX1
-	#define  EX2
-	//#define  EX3
-//#define  EX4
+  //#define  EX1
+  #define  EX2
+  //#define  EX3
+  //#define  EX4
 	
 #if defined(EX1)	
-		if( gZ >= 0 && gZ < 8192)
-			searching_led_position(N);
+  if( gZ >= 0 && gZ < 8192)
+    searching_led_position(N);
 		
-		else if(gZ >=  8192&& gZ < 2*8192)
-			searching_led_position(NE);
+  else if(gZ >=  8192&& gZ < 2*8192)
+    searching_led_position(NE);
 	
-		else if(gZ >= 2*8192 && gZ < 3*8192)
-			searching_led_position(E);
+  else if(gZ >= 2*8192 && gZ < 3*8192)
+    searching_led_position(E);
 		
-		else if(gZ >= 3*8192 && gZ < 4*8192)
-			searching_led_position(SE);
+  else if(gZ >= 3*8192 && gZ < 4*8192)
+    searching_led_position(SE);
 		
-		else if(gZ >= 4*8192 && gZ < 5*8192)
-			searching_led_position(S);
+  else if(gZ >= 4*8192 && gZ < 5*8192)
+    searching_led_position(S);
 
-		else if(gZ >= 5*8192 && gZ < 6*8192)
-			searching_led_position(SW);
+  else if(gZ >= 5*8192 && gZ < 6*8192)
+    searching_led_position(SW);
 		
-		else if(gZ >= 6*8192 && gZ < 7*8192)
-			searching_led_position(W);
+  else if(gZ >= 6*8192 && gZ < 7*8192)
+    searching_led_position(W);
 		
-		else if(gZ >= 7*8192 && gZ <= 65535)
-			searching_led_position(NW);
+  else if(gZ >= 7*8192 && gZ <= 65535)
+    searching_led_position(NW);
 	
 		
 #elif defined(EX2)
-		if(gZ>=0  && gZ < 4096)
-			searching_led_position(N);
+  if(gZ>=0  && gZ < 4096)
+    searching_led_position(N);
 
-		else if(gZ >=  4096&& gZ < 2*4096)
-			searching_led_position(NE);
+  else if(gZ >=  4096&& gZ < 2*4096)
+    searching_led_position(NE);
 
-		else if(gZ >= 2*4096 && gZ < 3*4096)
-			searching_led_position(E);
+  else if(gZ >= 2*4096 && gZ < 3*4096)
+    searching_led_position(E);
 
-		else if(gZ >= 3*4096 && gZ < 4*4096)
-			searching_led_position(SE);
+  else if(gZ >= 3*4096 && gZ < 4*4096)
+    searching_led_position(SE);
 
-		else if(gZ >= 4*4096 && gZ < 5*4096)
-			searching_led_position(S);
+  else if(gZ >= 4*4096 && gZ < 5*4096)
+    searching_led_position(S);
 
-		else if(gZ >= 5*4096 && gZ < 6*4096)
-			searching_led_position(SW);
+  else if(gZ >= 5*4096 && gZ < 6*4096)
+    searching_led_position(SW);
 
-		else if(gZ >= 6*4096 && gZ < 7*4096)
-			searching_led_position(W);
+  else if(gZ >= 6*4096 && gZ < 7*4096)
+    searching_led_position(W);
 
-		else if(gZ >= 7*4096 && gZ < 32768)
-			searching_led_position(NW);
+  else if(gZ >= 7*4096 && gZ < 32768)
+    searching_led_position(NW);
 		
 #elif defined(EX3)
-		if(gZ >= 90 && gZ < 112)
-			searching_led_position(N);
+  if(gZ >= 90 && gZ < 112)
+    searching_led_position(N);
 		
-		else if(gZ >= 112 && gZ < 134)
-			searching_led_position(E);
+  else if(gZ >= 112 && gZ < 134)
+    searching_led_position(E);
 	
-		else if(gZ >= 134 && gZ < 156)
-			searching_led_position(S);
+  else if(gZ >= 134 && gZ < 156)
+    searching_led_position(S);
 	
-		else if(gZ >= 156 && gZ < 180)
-			searching_led_position(W);
+  else if(gZ >= 156 && gZ < 180)
+    searching_led_position(W);
 	
-		else
-			searching_led_position(SW);
+  else
+    searching_led_position(SW);
 	
 #elif defined(EX4)
-		if(gZ >= 112 && gZ < 117)
-			searching_led_position(N);
+  if(gZ >= 112 && gZ < 117)
+    searching_led_position(N);
 		
-		else if(gZ >= 117 && gZ < 122)
-			searching_led_position(E);
+  else if(gZ >= 117 && gZ < 122)
+    searching_led_position(E);
 	
-		else if(gZ >= 122 && gZ < 127)
-			searching_led_position(S);
+  else if(gZ >= 122 && gZ < 127)
+    searching_led_position(S);
 	
-		else if(gZ >= 127 && gZ < 134)
-			searching_led_position(W);
+  else if(gZ >= 127 && gZ < 134)
+    searching_led_position(W);
 #endif
 
 }
 
-////////////////////////////////////////////////////////////////////////////
-//       
+///////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////       
 //      gRegStatus : 
 //      if (addr_register == r/w)
-//            gRegStatus  |= 0x00000001;
+//         gRegStatus  |= 0x00000001;
 //      else(addr_register == r) {
-//		gRegStatus  &= ~(0x0001 << value);
-
+//	   gRegStatus  &= ~(0x0001 << value);
+//
+//      - It needs to change register settings wholly
+//
+//
+////////////////////////////////////////////////////////////////////////////////////////////////
 
 const uint32_t	gRegStatus = 0x01FD403F;  // read / write depends from 0x20 address
 
-///////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////
 // 
 //
 
 static uint8_t  gRegTable[0x18]={
-	0x07, // 0x20
+	0x07, // 0x20 register
 };
 
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
+//  
+//  Function Name  : void  _l3gd_register_setting(uint8_t ctrl_reg, uint8_t regval)
+//  
+//  Object 	   : 
+//	-  In order to set register address, it could be set, but in case of setting
+//         read address it occurs serious result.
+//	   Therefore, gRegTable could be written whatever types of results.
+//
+////////////////////////////////////////////////////////////////////////////////////////////////
 
 void  _l3gd_register_setting(uint8_t ctrl_reg, uint8_t reg_val)
 {
  uint8_t  regaddr;
 
-   if(ctrl_reg < 0x20 || ctrl_reg > 0x38)
+   if(ctrl_reg < 0x20 || ctrl_reg > 0x38)  // In order to avoid wrong address register setting, 
    	    return;
 
    regaddr = ctrl_reg - 0x20; 	
 	
    if( (gRegStatus >> regaddr) & 0x01) {
-		gRegTable[regaddr] &= ~reg_val;
-		gRegTable[regaddr] |= reg_val;
-		L3GD20_Write(&gRegTable[regaddr], &ctrl_reg, 1);
+	gRegTable[regaddr] &= ~reg_val;
+	gRegTable[regaddr] |= reg_val;
+	L3GD20_Write(&gRegTable[regaddr], &ctrl_reg, 1);
    }
 }
 
@@ -245,7 +266,7 @@ static msg_t spi_thread_1(void *p) {
 	spiAcquireBus(&SPID1); 		/* Acquire ownership of the bus.	*/
 
 #if defined(_TEST_LAMP)
-	palSetPad(GPIOE, GPIOE_LED5_ORANGE);
+	palSetPad(GPIOE, NE);
 	chThdSleepMilliseconds(SLEEP_TIME);
 #endif
 
@@ -265,7 +286,7 @@ static msg_t spi_thread_1(void *p) {
 	// L3GD20_Init(&SPID1, &gSpiConfig);
 
 	spiStart(&SPID1, &gSpiConfig);     
-    	spiSelect(&SPID1);		/* Slave Select assertion.		  */	 
+    	spiSelect(&SPID1);		/* Slave Select assertion.  */	 
 
 	_l3gd_register_setting(0x20, 0x08);  // Pd set.
 	_l3gd_register_setting(0x23, 0x00);
@@ -281,7 +302,7 @@ static msg_t spi_thread_1(void *p) {
 	addr = L3GD20_OUT_Z_H_ADDR;   L3GD20_Read(&OUT_Z_H, &addr, 1);
 	spiUnselect(&SPID1);                	/* Slave Select de-assertion.       */
 
-#if 0 
+#if   defined(TEST_CHIPID) 
 	if(WHO_AM_I == I_AM_L3GD20)
 		palSetPad(GPIOE, N);
 #endif
@@ -298,7 +319,7 @@ static msg_t spi_thread_1(void *p) {
 	checking_coord();
 	
 #if defined(_TEST_LAMP)
-	palClearPad(GPIOE, GPIOE_LED5_ORANGE);
+	palClearPad(GPIOE, NE);
 	chThdSleepMilliseconds(SLEEP_TIME);
 #endif	
 	spiReleaseBus(&SPID1);              	/* Ownership release.               */
@@ -327,13 +348,6 @@ static msg_t spi_thread_2(void *p) {
 #endif
 
 #if defined(_TEST_LAMP)
-	spiStart(&SPID1, &gSpiConfig);
-	spiSelect(&SPID1);
-	spiExchange(&SPID1, 512, txbuf, rxbuf); /* Atomic transfer operations.		*/
-	spiUnselect(&SPID1);
-#endif
-
-#if defined(_TEST_LAMP)
 	palClearPad(GPIOE,NW);
 	chThdSleepMilliseconds(SLEEP_TIME);				
 #endif
@@ -356,11 +370,8 @@ int main(void) {
    * - Kernel initialization, the main() function becomes a thread and the
    *   RTOS is active.
    */
-
-   
   	halInit();
   	chSysInit();
-
 
 	L3GD20_Init(&SPID1, &gSpiConfig);
 

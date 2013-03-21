@@ -1,4 +1,4 @@
-ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 1
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 1
   55              		.weak	SVCallVector
   56              		.thumb_set SVCallVector,_unhandled_exception
   57              		.weak	DebugMonitorVector
-ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 2
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s 			page 2
 
 
   58              		.thumb_set DebugMonitorVector,_unhandled_exception
@@ -118,7 +118,7 @@ ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 1
  112              		.thumb_set Vector9C,_unhandled_exception
  113              		.weak	VectorA0
  114              		.thumb_set VectorA0,_unhandled_exception
-ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 3
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s 			page 3
 
 
  115              		.weak	VectorA4
@@ -178,7 +178,7 @@ ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 1
  169              		.weak	Vector110
  170              		.thumb_set Vector110,_unhandled_exception
  171              		.weak	Vector114
-ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 4
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s 			page 4
 
 
  172              		.thumb_set Vector114,_unhandled_exception
@@ -238,7 +238,7 @@ ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 1
  226              		.thumb_set Vector180,_unhandled_exception
  227              		.weak	Vector184
  228              		.thumb_set Vector184,_unhandled_exception
-ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 5
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s 			page 5
 
 
  229              		.weak	NMIVector
@@ -298,7 +298,7 @@ ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 1
  280 00ac 00000000 		.word	VectorAC
  281 00b0 00000000 		.word	VectorB0
  282 00b4 00000000 		.word	VectorB4
-ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 6
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s 			page 6
 
 
  283 00b8 00000000 		.word	VectorB8
@@ -355,10 +355,10 @@ ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 1
  334 0184 00000000 		.word	Vector184
  335              		.text
  336              	.Letext0:
- 337              		.file 2 "c:/develop/gimst/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-
+ 337              		.file 2 "c:/develop/genist/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none
  338              		.section	.debug_info,"",%progbits
  339              	.Ldebug_info0:
-ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 7
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s 			page 7
 
 
  340 0000 EC010000 		.4byte	0x1ec
@@ -366,10 +366,10 @@ ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 1
  342 0006 00000000 		.4byte	.Ldebug_abbrev0
  343 000a 04       		.byte	0x4
  344 000b 01       		.uleb128 0x1
- 345 000c 7A010000 		.4byte	.LASF34
+ 345 000c 8F010000 		.4byte	.LASF34
  346 0010 01       		.byte	0x1
- 347 0011 A3010000 		.4byte	.LASF35
- 348 0015 30010000 		.4byte	.LASF36
+ 347 0011 B8010000 		.4byte	.LASF35
+ 348 0015 74000000 		.4byte	.LASF36
  349 0019 00000000 		.4byte	.Ldebug_ranges0+0
  350 001d 00000000 		.4byte	0
  351 0021 00000000 		.4byte	0
@@ -381,11 +381,11 @@ ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 1
  357 0030 03       		.uleb128 0x3
  358 0031 04       		.byte	0x4
  359 0032 07       		.byte	0x7
- 360 0033 96000000 		.4byte	.LASF0
+ 360 0033 DF000000 		.4byte	.LASF0
  361 0037 03       		.uleb128 0x3
  362 0038 01       		.byte	0x1
  363 0039 06       		.byte	0x6
- 364 003a F3010000 		.4byte	.LASF1
+ 364 003a 08020000 		.4byte	.LASF1
  365 003e 03       		.uleb128 0x3
  366 003f 01       		.byte	0x1
  367 0040 08       		.byte	0x8
@@ -393,7 +393,7 @@ ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 1
  369 0045 03       		.uleb128 0x3
  370 0046 02       		.byte	0x2
  371 0047 05       		.byte	0x5
- 372 0048 8C000000 		.4byte	.LASF3
+ 372 0048 D5000000 		.4byte	.LASF3
  373 004c 03       		.uleb128 0x3
  374 004d 02       		.byte	0x2
  375 004e 07       		.byte	0x7
@@ -401,9 +401,9 @@ ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 1
  377 0053 03       		.uleb128 0x3
  378 0054 04       		.byte	0x4
  379 0055 05       		.byte	0x5
- 380 0056 EA010000 		.4byte	.LASF5
+ 380 0056 FF010000 		.4byte	.LASF5
  381 005a 04       		.uleb128 0x4
- 382 005b E1010000 		.4byte	.LASF12
+ 382 005b F6010000 		.4byte	.LASF12
  383 005f 02       		.byte	0x2
  384 0060 50       		.byte	0x50
  385 0061 65000000 		.4byte	0x65
@@ -414,26 +414,26 @@ ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 1
  390 006c 03       		.uleb128 0x3
  391 006d 08       		.byte	0x8
  392 006e 05       		.byte	0x5
- 393 006f 22010000 		.4byte	.LASF7
+ 393 006f 6B010000 		.4byte	.LASF7
  394 0073 03       		.uleb128 0x3
  395 0074 08       		.byte	0x8
  396 0075 07       		.byte	0x7
-ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 8
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s 			page 8
 
 
- 397 0076 AE000000 		.4byte	.LASF8
+ 397 0076 F7000000 		.4byte	.LASF8
  398 007a 03       		.uleb128 0x3
  399 007b 01       		.byte	0x1
  400 007c 02       		.byte	0x2
- 401 007d 1C020000 		.4byte	.LASF9
+ 401 007d 31020000 		.4byte	.LASF9
  402 0081 03       		.uleb128 0x3
  403 0082 04       		.byte	0x4
  404 0083 07       		.byte	0x7
- 405 0084 FA000000 		.4byte	.LASF10
+ 405 0084 43010000 		.4byte	.LASF10
  406 0088 03       		.uleb128 0x3
  407 0089 01       		.byte	0x1
  408 008a 08       		.byte	0x8
- 409 008b 64010000 		.4byte	.LASF11
+ 409 008b 79010000 		.4byte	.LASF11
  410 008f 04       		.uleb128 0x4
  411 0090 09000000 		.4byte	.LASF13
  412 0094 01       		.byte	0x1
@@ -458,7 +458,7 @@ ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 1
  431 00b7 23       		.byte	0x23
  432 00b8 00       		.uleb128 0
  433 00b9 08       		.uleb128 0x8
- 434 00ba D4010000 		.4byte	.LASF15
+ 434 00ba E9010000 		.4byte	.LASF15
  435 00be 01       		.byte	0x1
  436 00bf 2B       		.byte	0x2b
  437 00c0 8F000000 		.4byte	0x8f
@@ -466,7 +466,7 @@ ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 1
  439 00c5 23       		.byte	0x23
  440 00c6 04       		.uleb128 0x4
  441 00c7 08       		.uleb128 0x8
- 442 00c8 A3000000 		.4byte	.LASF16
+ 442 00c8 EC000000 		.4byte	.LASF16
  443 00cc 01       		.byte	0x1
  444 00cd 2C       		.byte	0x2c
  445 00ce 8F000000 		.4byte	0x8f
@@ -474,18 +474,18 @@ ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 1
  447 00d3 23       		.byte	0x23
  448 00d4 08       		.uleb128 0x8
  449 00d5 08       		.uleb128 0x8
- 450 00d6 11010000 		.4byte	.LASF17
+ 450 00d6 5A010000 		.4byte	.LASF17
  451 00da 01       		.byte	0x1
  452 00db 2D       		.byte	0x2d
  453 00dc 8F000000 		.4byte	0x8f
-ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 9
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s 			page 9
 
 
  454 00e0 02       		.byte	0x2
  455 00e1 23       		.byte	0x23
  456 00e2 0C       		.uleb128 0xc
  457 00e3 08       		.uleb128 0x8
- 458 00e4 69010000 		.4byte	.LASF18
+ 458 00e4 7E010000 		.4byte	.LASF18
  459 00e8 01       		.byte	0x1
  460 00e9 2E       		.byte	0x2e
  461 00ea 8F000000 		.4byte	0x8f
@@ -493,7 +493,7 @@ ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 1
  463 00ef 23       		.byte	0x23
  464 00f0 10       		.uleb128 0x10
  465 00f1 08       		.uleb128 0x8
- 466 00f2 C5000000 		.4byte	.LASF19
+ 466 00f2 0E010000 		.4byte	.LASF19
  467 00f6 01       		.byte	0x1
  468 00f7 2F       		.byte	0x2f
  469 00f8 8F000000 		.4byte	0x8f
@@ -501,7 +501,7 @@ ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 1
  471 00fd 23       		.byte	0x23
  472 00fe 14       		.uleb128 0x14
  473 00ff 08       		.uleb128 0x8
- 474 0100 DE000000 		.4byte	.LASF20
+ 474 0100 27010000 		.4byte	.LASF20
  475 0104 01       		.byte	0x1
  476 0105 30       		.byte	0x30
  477 0106 8F000000 		.4byte	0x8f
@@ -509,7 +509,7 @@ ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 1
  479 010b 23       		.byte	0x23
  480 010c 18       		.uleb128 0x18
  481 010d 08       		.uleb128 0x8
- 482 010e 74000000 		.4byte	.LASF21
+ 482 010e BD000000 		.4byte	.LASF21
  483 0112 01       		.byte	0x1
  484 0113 31       		.byte	0x31
  485 0114 8F000000 		.4byte	0x8f
@@ -517,7 +517,7 @@ ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 1
  487 0119 23       		.byte	0x23
  488 011a 1C       		.uleb128 0x1c
  489 011b 08       		.uleb128 0x8
- 490 011c 13020000 		.4byte	.LASF22
+ 490 011c 28020000 		.4byte	.LASF22
  491 0120 01       		.byte	0x1
  492 0121 32       		.byte	0x32
  493 0122 8F000000 		.4byte	0x8f
@@ -533,12 +533,12 @@ ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 1
  503 0135 23       		.byte	0x23
  504 0136 24       		.uleb128 0x24
  505 0137 08       		.uleb128 0x8
- 506 0138 D5000000 		.4byte	.LASF24
+ 506 0138 1E010000 		.4byte	.LASF24
  507 013c 01       		.byte	0x1
  508 013d 34       		.byte	0x34
  509 013e 8F000000 		.4byte	0x8f
  510 0142 02       		.byte	0x2
-ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 10
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s 			page 10
 
 
  511 0143 23       		.byte	0x23
@@ -552,7 +552,7 @@ ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 1
  519 0151 23       		.byte	0x23
  520 0152 2C       		.uleb128 0x2c
  521 0153 08       		.uleb128 0x8
- 522 0154 FF010000 		.4byte	.LASF26
+ 522 0154 14020000 		.4byte	.LASF26
  523 0158 01       		.byte	0x1
  524 0159 36       		.byte	0x36
  525 015a 8F000000 		.4byte	0x8f
@@ -568,7 +568,7 @@ ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 1
  535 016d 23       		.byte	0x23
  536 016e 34       		.uleb128 0x34
  537 016f 08       		.uleb128 0x8
- 538 0170 03010000 		.4byte	.LASF28
+ 538 0170 4C010000 		.4byte	.LASF28
  539 0174 01       		.byte	0x1
  540 0175 38       		.byte	0x38
  541 0176 8F000000 		.4byte	0x8f
@@ -576,7 +576,7 @@ ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 1
  543 017b 23       		.byte	0x23
  544 017c 38       		.uleb128 0x38
  545 017d 08       		.uleb128 0x8
- 546 017e 7D000000 		.4byte	.LASF29
+ 546 017e C6000000 		.4byte	.LASF29
  547 0182 01       		.byte	0x1
  548 0183 39       		.byte	0x39
  549 0184 8F000000 		.4byte	0x8f
@@ -584,7 +584,7 @@ ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 1
  551 0189 23       		.byte	0x23
  552 018a 3C       		.uleb128 0x3c
  553 018b 08       		.uleb128 0x8
- 554 018c 9B010000 		.4byte	.LASF30
+ 554 018c B0010000 		.4byte	.LASF30
  555 0190 01       		.byte	0x1
  556 0191 3A       		.byte	0x3a
  557 0192 A0010000 		.4byte	0x1a0
@@ -598,7 +598,7 @@ ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 1
  565 01a0 09       		.uleb128 0x9
  566 01a1 8F000000 		.4byte	0x8f
  567 01a5 B0010000 		.4byte	0x1b0
-ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 11
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s 			page 11
 
 
  568 01a9 0A       		.uleb128 0xa
@@ -606,13 +606,13 @@ ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 1
  570 01ae 51       		.byte	0x51
  571 01af 00       		.byte	0
  572 01b0 04       		.uleb128 0x4
- 573 01b1 F0000000 		.4byte	.LASF31
+ 573 01b1 39010000 		.4byte	.LASF31
  574 01b5 01       		.byte	0x1
  575 01b6 3B       		.byte	0x3b
  576 01b7 A2000000 		.4byte	0xa2
  577 01bb 0B       		.uleb128 0xb
  578 01bc 01       		.byte	0x1
- 579 01bd 86010000 		.4byte	.LASF37
+ 579 01bd 9B010000 		.4byte	.LASF37
  580 01c1 01       		.byte	0x1
  581 01c2 D0       		.byte	0xd0
  582 01c3 01       		.byte	0x1
@@ -623,7 +623,7 @@ ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 1
  587 01ce 00       		.sleb128 0
  588 01cf 01       		.byte	0x1
  589 01d0 0C       		.uleb128 0xc
- 590 01d1 22020000 		.4byte	.LASF32
+ 590 01d1 37020000 		.4byte	.LASF32
  591 01d5 01       		.byte	0x1
  592 01d6 3E       		.byte	0x3e
  593 01d7 5A000000 		.4byte	0x5a
@@ -658,7 +658,7 @@ ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 1
  622 000e 01       		.uleb128 0x1
  623 000f 52       		.uleb128 0x52
  624 0010 01       		.uleb128 0x1
-ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 12
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s 			page 12
 
 
  625 0011 10       		.uleb128 0x10
@@ -718,7 +718,7 @@ ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 1
  679 0047 00       		.byte	0
  680 0048 07       		.uleb128 0x7
  681 0049 13       		.uleb128 0x13
-ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 13
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s 			page 13
 
 
  682 004a 01       		.byte	0x1
@@ -778,7 +778,7 @@ ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 1
  736 0080 0B       		.uleb128 0xb
  737 0081 27       		.uleb128 0x27
  738 0082 0C       		.uleb128 0xc
-ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 14
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s 			page 14
 
 
  739 0083 11       		.uleb128 0x11
@@ -838,7 +838,7 @@ ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 1
  793 0014 02000000 		.4byte	.LFE7-.LFB7
  794 0018 00000000 		.4byte	0
  795 001c 00000000 		.4byte	0
-ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 15
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s 			page 15
 
 
  796              		.section	.debug_ranges,"",%progbits
@@ -849,8 +849,8 @@ ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 1
  801 000c 00000000 		.4byte	0
  802              		.section	.debug_line,"",%progbits
  803              	.Ldebug_line0:
- 804 0000 D3000000 		.section	.debug_str,"MS",%progbits,1
- 804      0200BD00 
+ 804 0000 D4000000 		.section	.debug_str,"MS",%progbits,1
+ 804      0200BE00 
  804      00000201 
  804      FB0E0D00 
  804      01010101 
@@ -897,263 +897,266 @@ ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 1
  822      7369676E 
  822      65642069 
  822      6E7400
- 823              	.LASF21:
-ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 16
+ 823              	.LASF36:
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s 			page 16
 
 
- 824 0074 76656374 		.ascii	"vector1c\000"
- 824      6F723163 
- 824      00
- 825              	.LASF29:
- 826 007d 73797374 		.ascii	"systick_vector\000"
- 826      69636B5F 
- 826      76656374 
- 826      6F7200
- 827              	.LASF3:
- 828 008c 73686F72 		.ascii	"short int\000"
- 828      7420696E 
- 828      7400
- 829              	.LASF0:
- 830 0096 756E7369 		.ascii	"unsigned int\000"
- 830      676E6564 
- 830      20696E74 
- 830      00
- 831              	.LASF16:
- 832 00a3 6E6D695F 		.ascii	"nmi_vector\000"
- 832      76656374 
- 832      6F7200
- 833              	.LASF8:
- 834 00ae 6C6F6E67 		.ascii	"long long unsigned int\000"
- 834      206C6F6E 
- 834      6720756E 
- 834      7369676E 
- 834      65642069 
- 835              	.LASF19:
- 836 00c5 62757366 		.ascii	"busfault_vector\000"
- 836      61756C74 
- 836      5F766563 
- 836      746F7200 
- 837              	.LASF24:
- 838 00d5 76656374 		.ascii	"vector28\000"
- 838      6F723238 
- 838      00
- 839              	.LASF20:
- 840 00de 75736167 		.ascii	"usagefault_vector\000"
- 840      65666175 
- 840      6C745F76 
- 840      6563746F 
- 840      7200
- 841              	.LASF31:
- 842 00f0 76656374 		.ascii	"vectors_t\000"
- 842      6F72735F 
- 842      7400
- 843              	.LASF10:
- 844 00fa 73697A65 		.ascii	"sizetype\000"
- 844      74797065 
- 844      00
- 845              	.LASF28:
- 846 0103 70656E64 		.ascii	"pendsv_vector\000"
- 846      73765F76 
- 846      6563746F 
- 846      7200
- 847              	.LASF17:
- 848 0111 68617264 		.ascii	"hardfault_vector\000"
-ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 17
+ 824 0074 633A5C55 		.ascii	"c:\\Users\\TaisikHam\\Documents\\GitHub\\ChibiOS\\t"
+ 824      73657273 
+ 824      5C546169 
+ 824      73696B48 
+ 824      616D5C44 
+ 825 00a1 65737468 		.ascii	"esthal_wrk\\STM32F30x\\TS_SPI\000"
+ 825      616C5F77 
+ 825      726B5C53 
+ 825      544D3332 
+ 825      46333078 
+ 826              	.LASF21:
+ 827 00bd 76656374 		.ascii	"vector1c\000"
+ 827      6F723163 
+ 827      00
+ 828              	.LASF29:
+ 829 00c6 73797374 		.ascii	"systick_vector\000"
+ 829      69636B5F 
+ 829      76656374 
+ 829      6F7200
+ 830              	.LASF3:
+ 831 00d5 73686F72 		.ascii	"short int\000"
+ 831      7420696E 
+ 831      7400
+ 832              	.LASF0:
+ 833 00df 756E7369 		.ascii	"unsigned int\000"
+ 833      676E6564 
+ 833      20696E74 
+ 833      00
+ 834              	.LASF16:
+ 835 00ec 6E6D695F 		.ascii	"nmi_vector\000"
+ 835      76656374 
+ 835      6F7200
+ 836              	.LASF8:
+ 837 00f7 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 837      206C6F6E 
+ 837      6720756E 
+ 837      7369676E 
+ 837      65642069 
+ 838              	.LASF19:
+ 839 010e 62757366 		.ascii	"busfault_vector\000"
+ 839      61756C74 
+ 839      5F766563 
+ 839      746F7200 
+ 840              	.LASF24:
+ 841 011e 76656374 		.ascii	"vector28\000"
+ 841      6F723238 
+ 841      00
+ 842              	.LASF20:
+ 843 0127 75736167 		.ascii	"usagefault_vector\000"
+ 843      65666175 
+ 843      6C745F76 
+ 843      6563746F 
+ 843      7200
+ 844              	.LASF31:
+ 845 0139 76656374 		.ascii	"vectors_t\000"
+ 845      6F72735F 
+ 845      7400
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s 			page 17
 
 
- 848      6661756C 
- 848      745F7665 
- 848      63746F72 
- 848      00
- 849              	.LASF7:
- 850 0122 6C6F6E67 		.ascii	"long long int\000"
- 850      206C6F6E 
- 850      6720696E 
- 850      7400
- 851              	.LASF36:
- 852 0130 433A5C43 		.ascii	"C:\\ChibiStudio\\ChibiOS\\testhal_wrk\\STM32F30x\\T"
- 852      68696269 
- 852      53747564 
- 852      696F5C43 
- 852      68696269 
- 853 015e 735F5350 		.ascii	"s_SPI\000"
- 853      4900
+ 846              	.LASF10:
+ 847 0143 73697A65 		.ascii	"sizetype\000"
+ 847      74797065 
+ 847      00
+ 848              	.LASF28:
+ 849 014c 70656E64 		.ascii	"pendsv_vector\000"
+ 849      73765F76 
+ 849      6563746F 
+ 849      7200
+ 850              	.LASF17:
+ 851 015a 68617264 		.ascii	"hardfault_vector\000"
+ 851      6661756C 
+ 851      745F7665 
+ 851      63746F72 
+ 851      00
+ 852              	.LASF7:
+ 853 016b 6C6F6E67 		.ascii	"long long int\000"
+ 853      206C6F6E 
+ 853      6720696E 
+ 853      7400
  854              	.LASF11:
- 855 0164 63686172 		.ascii	"char\000"
+ 855 0179 63686172 		.ascii	"char\000"
  855      00
  856              	.LASF18:
- 857 0169 6D656D6D 		.ascii	"memmanage_vector\000"
+ 857 017e 6D656D6D 		.ascii	"memmanage_vector\000"
  857      616E6167 
  857      655F7665 
  857      63746F72 
  857      00
  858              	.LASF34:
- 859 017a 474E5520 		.ascii	"GNU C 4.7.2\000"
+ 859 018f 474E5520 		.ascii	"GNU C 4.7.2\000"
  859      4320342E 
  859      372E3200 
  860              	.LASF37:
- 861 0186 5F756E68 		.ascii	"_unhandled_exception\000"
+ 861 019b 5F756E68 		.ascii	"_unhandled_exception\000"
  861      616E646C 
  861      65645F65 
  861      78636570 
  861      74696F6E 
  862              	.LASF30:
- 863 019b 76656374 		.ascii	"vectors\000"
+ 863 01b0 76656374 		.ascii	"vectors\000"
  863      6F727300 
  864              	.LASF35:
- 865 01a3 2E2E2F2E 		.ascii	"../../../os/ports/GCC/ARMCMx/STM32F3xx/vectors.c\000"
+ 865 01b8 2E2E2F2E 		.ascii	"../../../os/ports/GCC/ARMCMx/STM32F3xx/vectors.c\000"
  865      2E2F2E2E 
  865      2F6F732F 
  865      706F7274 
  865      732F4743 
  866              	.LASF15:
- 867 01d4 72657365 		.ascii	"reset_vector\000"
+ 867 01e9 72657365 		.ascii	"reset_vector\000"
  867      745F7665 
  867      63746F72 
  867      00
  868              	.LASF12:
- 869 01e1 75696E74 		.ascii	"uint32_t\000"
+ 869 01f6 75696E74 		.ascii	"uint32_t\000"
  869      33325F74 
  869      00
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s 			page 18
+
+
  870              	.LASF5:
- 871 01ea 6C6F6E67 		.ascii	"long int\000"
+ 871 01ff 6C6F6E67 		.ascii	"long int\000"
  871      20696E74 
-ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 18
-
-
  871      00
  872              	.LASF1:
- 873 01f3 7369676E 		.ascii	"signed char\000"
+ 873 0208 7369676E 		.ascii	"signed char\000"
  873      65642063 
  873      68617200 
  874              	.LASF26:
- 875 01ff 64656275 		.ascii	"debugmonitor_vector\000"
+ 875 0214 64656275 		.ascii	"debugmonitor_vector\000"
  875      676D6F6E 
  875      69746F72 
  875      5F766563 
  875      746F7200 
  876              	.LASF22:
- 877 0213 76656374 		.ascii	"vector20\000"
+ 877 0228 76656374 		.ascii	"vector20\000"
  877      6F723230 
  877      00
  878              	.LASF9:
- 879 021c 5F426F6F 		.ascii	"_Bool\000"
+ 879 0231 5F426F6F 		.ascii	"_Bool\000"
  879      6C00
  880              	.LASF32:
- 881 0222 5F5F6D61 		.ascii	"__main_stack_end__\000"
+ 881 0237 5F5F6D61 		.ascii	"__main_stack_end__\000"
  881      696E5F73 
  881      7461636B 
  881      5F656E64 
  881      5F5F00
  882              		.ident	"GCC: (GNU) 4.7.2"
-ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 19
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s 			page 19
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 vectors.c
-C:\cygwin\tmp\ccc10Sek.s:19     .text._unhandled_exception:00000000 $t
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 _unhandled_exception
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 HardFaultVector
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 MemManageVector
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 BusFaultVector
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 UsageFaultVector
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector1C
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector20
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector24
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector28
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 SVCallVector
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 DebugMonitorVector
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector34
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 PendSVVector
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 SysTickVector
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector40
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector44
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector48
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector4C
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector50
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector54
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector58
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector5C
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector60
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector64
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector68
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector6C
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector70
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector74
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector78
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector7C
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector80
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector84
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector88
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector8C
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector90
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector94
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector98
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector9C
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 VectorA0
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 VectorA4
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 VectorA8
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 VectorAC
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 VectorB0
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 VectorB4
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 VectorB8
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 VectorBC
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 VectorC0
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 VectorC4
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 VectorC8
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 VectorCC
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 VectorD0
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 VectorD4
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 VectorD8
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 VectorDC
-ARM GAS  C:\cygwin\tmp\ccc10Sek.s 			page 20
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:19     .text._unhandled_exception:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 _unhandled_exception
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 HardFaultVector
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 MemManageVector
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 BusFaultVector
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 UsageFaultVector
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector1C
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector20
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector24
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector28
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 SVCallVector
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 DebugMonitorVector
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector34
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 PendSVVector
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 SysTickVector
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector40
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector44
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector48
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector4C
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector50
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector54
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector58
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector5C
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector60
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector64
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector68
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector6C
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector70
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector74
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector78
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector7C
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector80
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector84
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector88
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector8C
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector90
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector94
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector98
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector9C
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 VectorA0
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 VectorA4
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 VectorA8
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 VectorAC
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 VectorB0
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 VectorB4
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 VectorB8
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 VectorBC
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 VectorC0
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 VectorC4
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 VectorC8
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 VectorCC
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 VectorD0
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 VectorD4
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 VectorD8
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 VectorDC
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s 			page 20
 
 
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 VectorE0
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 VectorE4
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 VectorE8
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 VectorEC
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 VectorF0
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 VectorF4
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 VectorF8
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 VectorFC
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector100
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector104
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector108
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector10C
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector110
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector114
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector118
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector11C
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector120
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector124
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector128
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector12C
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector130
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector134
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector138
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector13C
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector140
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector144
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector148
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector14C
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector150
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector154
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector158
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector15C
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector160
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector164
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector168
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector16C
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector170
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector174
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector178
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector17C
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector180
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 Vector184
-C:\cygwin\tmp\ccc10Sek.s:25     .text._unhandled_exception:00000000 NMIVector
-C:\cygwin\tmp\ccc10Sek.s:236    vectors:00000000 _vectors
-C:\cygwin\tmp\ccc10Sek.s:233    vectors:00000000 $d
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 VectorE0
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 VectorE4
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 VectorE8
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 VectorEC
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 VectorF0
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 VectorF4
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 VectorF8
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 VectorFC
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector100
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector104
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector108
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector10C
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector110
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector114
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector118
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector11C
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector120
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector124
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector128
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector12C
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector130
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector134
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector138
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector13C
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector140
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector144
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector148
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector14C
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector150
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector154
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector158
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector15C
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector160
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector164
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector168
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector16C
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector170
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector174
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector178
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector17C
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector180
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 Vector184
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:25     .text._unhandled_exception:00000000 NMIVector
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:236    vectors:00000000 _vectors
+C:\Users\TaisikHam\AppData\Local\Temp\ccwJQVML.s:233    vectors:00000000 $d
                      .debug_frame:00000010 $d
 
 UNDEFINED SYMBOLS

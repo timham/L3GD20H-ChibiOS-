@@ -37,10 +37,6 @@
 
 /* Includes ------------------------------------------------------------------*/
  #include "stm32f30x.h"
- #include "pal_lld.h"   // tsham
- #include "stm32f30x_exti.h"  // tsham added
- #include "stm32f30x_syscfg.h"
- //#include "stm32f30x_gpio.h"
 // #include "../../../os/hal/platforms/STM32/GPIOv2/pal_lld.h"
 
 
@@ -70,7 +66,7 @@ typedef struct
   uint8_t BlockData_Update;                   /* Block Data Update */
   uint8_t Endianness;                         /* Endian Data selection */
   uint8_t Full_Scale;                         /* Full Scale selection */
-//  uint8_t Full_Scale_0;                        
+//uint8_t Full_Scale_0;                        
 }L3GD20_InitTypeDef;
 
 /* L3GD20 High Pass Filter struct */
@@ -83,9 +79,9 @@ typedef struct
 /* L3GD20 Interrupt struct */
 typedef struct
 {
-  uint8_t Latch_Request;                      /* Latch interrupt request into CLICK_SRC register */
-  uint8_t Interrupt_Axes;                     /* X, Y, Z Axes Interrupts */ 
-  uint8_t Interrupt_ActiveEdge;               /*  Interrupt Active edge */
+  uint8_t Latch_Request;             /* Latch interrupt request into CLICK_SRC register */
+  uint8_t Interrupt_Axes;            /* X, Y, Z Axes Interrupts */ 
+  uint8_t Interrupt_ActiveEdge;      /*  Interrupt Active edge */
 }L3GD20_InterruptConfigTypeDef;  
 
 /**
@@ -148,7 +144,7 @@ typedef struct
 /**
   * @brief  L3GD20 SPI Interface pins
   */
-#define L3GD20_SPI                       SPI1  //  tsham blocked : SPI1
+#define L3GD20_SPI                       SPI1
 #define L3GD20_SPI_CLK                   RCC_APB2RSTR_SPI1RST     //RCC_APB2PERIPH_S   //  tsham blocked : RCC_APB2Periph_SPI1
 
 #define L3GD20_SPI_SCK_PIN               ((uint16_t)0x0020) 	  //GPIO_Pin_5         //GPIO_Pin_5 /* PA.05 */

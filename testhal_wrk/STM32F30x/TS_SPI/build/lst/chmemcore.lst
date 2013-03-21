@@ -1,4 +1,4 @@
-ARM GAS  C:\cygwin\tmp\ccbAAEDr.s 			page 1
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccE906Pk.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\cygwin\tmp\ccbAAEDr.s 			page 1
   55              	.L2:
   56 0028 07000000 		.word	__heap_base__+7
   57              		.cfi_endproc
-ARM GAS  C:\cygwin\tmp\ccbAAEDr.s 			page 2
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccE906Pk.s 			page 2
 
 
   58              	.LFE7:
@@ -118,7 +118,7 @@ ARM GAS  C:\cygwin\tmp\ccbAAEDr.s 			page 1
  112 002c 00000000 		.word	.LANCHOR1
  113              		.cfi_endproc
  114              	.LFE9:
-ARM GAS  C:\cygwin\tmp\ccbAAEDr.s 			page 3
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccE906Pk.s 			page 3
 
 
  115              		.size	chCoreAllocI, .-chCoreAllocI
@@ -178,7 +178,7 @@ ARM GAS  C:\cygwin\tmp\ccbAAEDr.s 			page 1
  169              	.LBE4:
  170              		.loc 1 91 0
  171 0020 2046     		mov	r0, r4
-ARM GAS  C:\cygwin\tmp\ccbAAEDr.s 			page 4
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccE906Pk.s 			page 4
 
 
  172 0022 10BD     		pop	{r4, pc}
@@ -231,23 +231,23 @@ ARM GAS  C:\cygwin\tmp\ccbAAEDr.s 			page 1
  216 0000 00000000 		.space	4
  217              		.text
  218              	.Letext0:
- 219              		.file 2 "c:\\develop\\gimst\\chibistudio\\tools\\yagarto-tools\\yagarto-20121222\\bin\\../lib/gcc/
- 220              		.file 3 "c:/develop/gimst/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none-
+ 219              		.file 2 "c:\\develop\\genist\\chibistudio\\tools\\yagarto-tools\\yagarto-20121222\\bin\\../lib/gcc
+ 220              		.file 3 "c:/develop/genist/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none
  221              		.file 4 "../../../os/kernel/include/chdebug.h"
  222              		.section	.debug_info,"",%progbits
  223              	.Ldebug_info0:
  224 0000 37020000 		.4byte	0x237
  225 0004 0200     		.2byte	0x2
-ARM GAS  C:\cygwin\tmp\ccbAAEDr.s 			page 5
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccE906Pk.s 			page 5
 
 
  226 0006 00000000 		.4byte	.Ldebug_abbrev0
  227 000a 04       		.byte	0x4
  228 000b 01       		.uleb128 0x1
- 229 000c 44010000 		.4byte	.LASF25
+ 229 000c 50010000 		.4byte	.LASF25
  230 0010 01       		.byte	0x1
- 231 0011 5A010000 		.4byte	.LASF26
- 232 0015 FE000000 		.4byte	.LASF27
+ 231 0011 66010000 		.4byte	.LASF26
+ 232 0015 8B000000 		.4byte	.LASF27
  233 0019 18000000 		.4byte	.Ldebug_ranges0+0x18
  234 001d 00000000 		.4byte	0
  235 0021 00000000 		.4byte	0
@@ -264,24 +264,24 @@ ARM GAS  C:\cygwin\tmp\ccbAAEDr.s 			page 1
  246 003b 04       		.uleb128 0x4
  247 003c 04       		.byte	0x4
  248 003d 07       		.byte	0x7
- 249 003e AD000000 		.4byte	.LASF0
+ 249 003e ED000000 		.4byte	.LASF0
  250 0042 04       		.uleb128 0x4
  251 0043 01       		.byte	0x1
  252 0044 06       		.byte	0x6
- 253 0045 92010000 		.4byte	.LASF1
+ 253 0045 9E010000 		.4byte	.LASF1
  254 0049 03       		.uleb128 0x3
- 255 004a D1000000 		.4byte	.LASF3
+ 255 004a 11010000 		.4byte	.LASF3
  256 004e 03       		.byte	0x3
  257 004f 2A       		.byte	0x2a
  258 0050 54000000 		.4byte	0x54
  259 0054 04       		.uleb128 0x4
  260 0055 01       		.byte	0x1
  261 0056 08       		.byte	0x8
- 262 0057 94000000 		.4byte	.LASF4
+ 262 0057 D4000000 		.4byte	.LASF4
  263 005b 04       		.uleb128 0x4
  264 005c 02       		.byte	0x2
  265 005d 05       		.byte	0x5
- 266 005e 50010000 		.4byte	.LASF5
+ 266 005e 5C010000 		.4byte	.LASF5
  267 0062 04       		.uleb128 0x4
  268 0063 02       		.byte	0x2
  269 0064 07       		.byte	0x7
@@ -289,47 +289,47 @@ ARM GAS  C:\cygwin\tmp\ccbAAEDr.s 			page 1
  271 0069 04       		.uleb128 0x4
  272 006a 04       		.byte	0x4
  273 006b 05       		.byte	0x5
- 274 006c 89010000 		.4byte	.LASF7
+ 274 006c 95010000 		.4byte	.LASF7
  275 0070 03       		.uleb128 0x3
- 276 0071 8B000000 		.4byte	.LASF8
+ 276 0071 AA010000 		.4byte	.LASF8
  277 0075 03       		.byte	0x3
  278 0076 50       		.byte	0x50
  279 0077 7B000000 		.4byte	0x7b
  280 007b 04       		.uleb128 0x4
  281 007c 04       		.byte	0x4
  282 007d 07       		.byte	0x7
-ARM GAS  C:\cygwin\tmp\ccbAAEDr.s 			page 6
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccE906Pk.s 			page 6
 
 
  283 007e 59000000 		.4byte	.LASF9
  284 0082 04       		.uleb128 0x4
  285 0083 08       		.byte	0x8
  286 0084 05       		.byte	0x5
- 287 0085 F0000000 		.4byte	.LASF10
+ 287 0085 30010000 		.4byte	.LASF10
  288 0089 04       		.uleb128 0x4
  289 008a 08       		.byte	0x8
  290 008b 07       		.byte	0x7
- 291 008c BA000000 		.4byte	.LASF11
+ 291 008c FA000000 		.4byte	.LASF11
  292 0090 04       		.uleb128 0x4
  293 0091 01       		.byte	0x1
  294 0092 02       		.byte	0x2
- 295 0093 9E010000 		.4byte	.LASF12
+ 295 0093 B3010000 		.4byte	.LASF12
  296 0097 05       		.uleb128 0x5
  297 0098 04       		.byte	0x4
  298 0099 04       		.uleb128 0x4
  299 009a 04       		.byte	0x4
  300 009b 07       		.byte	0x7
- 301 009c E7000000 		.4byte	.LASF13
+ 301 009c 27010000 		.4byte	.LASF13
  302 00a0 04       		.uleb128 0x4
  303 00a1 01       		.byte	0x1
  304 00a2 08       		.byte	0x8
- 305 00a3 32010000 		.4byte	.LASF14
+ 305 00a3 3E010000 		.4byte	.LASF14
  306 00a7 06       		.uleb128 0x6
  307 00a8 04       		.byte	0x4
  308 00a9 49000000 		.4byte	0x49
  309 00ad 07       		.uleb128 0x7
  310 00ae 01       		.byte	0x1
- 311 00af A2000000 		.4byte	.LASF28
+ 311 00af E2000000 		.4byte	.LASF28
  312 00b3 01       		.byte	0x1
  313 00b4 3B       		.byte	0x3b
  314 00b5 01       		.byte	0x1
@@ -341,14 +341,14 @@ ARM GAS  C:\cygwin\tmp\ccbAAEDr.s 			page 1
  320 00c1 01       		.byte	0x1
  321 00c2 E1000000 		.4byte	0xe1
  322 00c6 08       		.uleb128 0x8
- 323 00c7 D9000000 		.4byte	.LASF15
+ 323 00c7 19010000 		.4byte	.LASF15
  324 00cb 01       		.byte	0x1
  325 00cc 3D       		.byte	0x3d
  326 00cd E1000000 		.4byte	0xe1
  327 00d1 01       		.byte	0x1
  328 00d2 01       		.byte	0x1
  329 00d3 08       		.uleb128 0x8
- 330 00d4 37010000 		.4byte	.LASF16
+ 330 00d4 43010000 		.4byte	.LASF16
  331 00d8 01       		.byte	0x1
  332 00d9 3E       		.byte	0x3e
  333 00da E1000000 		.4byte	0xe1
@@ -358,7 +358,7 @@ ARM GAS  C:\cygwin\tmp\ccbAAEDr.s 			page 1
  337 00e1 09       		.uleb128 0x9
  338 00e2 49000000 		.4byte	0x49
  339 00e6 EC000000 		.4byte	0xec
-ARM GAS  C:\cygwin\tmp\ccbAAEDr.s 			page 7
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccE906Pk.s 			page 7
 
 
  340 00ea 0A       		.uleb128 0xa
@@ -393,7 +393,7 @@ ARM GAS  C:\cygwin\tmp\ccbAAEDr.s 			page 1
  369 012f 00       		.byte	0
  370 0130 0B       		.uleb128 0xb
  371 0131 01       		.byte	0x1
- 372 0132 7D010000 		.4byte	.LASF18
+ 372 0132 89010000 		.4byte	.LASF18
  373 0136 01       		.byte	0x1
  374 0137 54       		.byte	0x54
  375 0138 01       		.byte	0x1
@@ -418,7 +418,7 @@ ARM GAS  C:\cygwin\tmp\ccbAAEDr.s 			page 1
  394 016a 0F       		.uleb128 0xf
  395 016b 00000000 		.4byte	.Ldebug_ranges0+0
  396 016f 83010000 		.4byte	0x183
-ARM GAS  C:\cygwin\tmp\ccbAAEDr.s 			page 8
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccE906Pk.s 			page 8
 
 
  397 0173 0D       		.uleb128 0xd
@@ -478,7 +478,7 @@ ARM GAS  C:\cygwin\tmp\ccbAAEDr.s 			page 1
  451 01eb 05       		.byte	0x5
  452 01ec 03       		.byte	0x3
  453 01ed 00000000 		.4byte	nextmem
-ARM GAS  C:\cygwin\tmp\ccbAAEDr.s 			page 9
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccE906Pk.s 			page 9
 
 
  454 01f1 14       		.uleb128 0x14
@@ -490,14 +490,14 @@ ARM GAS  C:\cygwin\tmp\ccbAAEDr.s 			page 1
  460 01fd 03       		.byte	0x3
  461 01fe 00000000 		.4byte	endmem
  462 0202 08       		.uleb128 0x8
- 463 0203 D9000000 		.4byte	.LASF15
+ 463 0203 19010000 		.4byte	.LASF15
  464 0207 01       		.byte	0x1
  465 0208 3D       		.byte	0x3d
  466 0209 E1000000 		.4byte	0xe1
  467 020d 01       		.byte	0x1
  468 020e 01       		.byte	0x1
  469 020f 08       		.uleb128 0x8
- 470 0210 37010000 		.4byte	.LASF16
+ 470 0210 43010000 		.4byte	.LASF16
  471 0214 01       		.byte	0x1
  472 0215 3E       		.byte	0x3e
  473 0216 E1000000 		.4byte	0xe1
@@ -538,7 +538,7 @@ ARM GAS  C:\cygwin\tmp\ccbAAEDr.s 			page 1
  508 0008 0E       		.uleb128 0xe
  509 0009 1B       		.uleb128 0x1b
  510 000a 0E       		.uleb128 0xe
-ARM GAS  C:\cygwin\tmp\ccbAAEDr.s 			page 10
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccE906Pk.s 			page 10
 
 
  511 000b 55       		.uleb128 0x55
@@ -598,7 +598,7 @@ ARM GAS  C:\cygwin\tmp\ccbAAEDr.s 			page 1
  565 0041 00       		.byte	0
  566 0042 0B       		.uleb128 0xb
  567 0043 0B       		.uleb128 0xb
-ARM GAS  C:\cygwin\tmp\ccbAAEDr.s 			page 11
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccE906Pk.s 			page 11
 
 
  568 0044 49       		.uleb128 0x49
@@ -658,7 +658,7 @@ ARM GAS  C:\cygwin\tmp\ccbAAEDr.s 			page 1
  622 007b 00       		.byte	0
  623 007c 0A       		.uleb128 0xa
  624 007d 21       		.uleb128 0x21
-ARM GAS  C:\cygwin\tmp\ccbAAEDr.s 			page 12
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccE906Pk.s 			page 12
 
 
  625 007e 00       		.byte	0
@@ -718,7 +718,7 @@ ARM GAS  C:\cygwin\tmp\ccbAAEDr.s 			page 1
  679 00b5 49       		.uleb128 0x49
  680 00b6 13       		.uleb128 0x13
  681 00b7 02       		.uleb128 0x2
-ARM GAS  C:\cygwin\tmp\ccbAAEDr.s 			page 13
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccE906Pk.s 			page 13
 
 
  682 00b8 06       		.uleb128 0x6
@@ -778,7 +778,7 @@ ARM GAS  C:\cygwin\tmp\ccbAAEDr.s 			page 1
  736 00f5 00       		.byte	0
  737 00f6 3F       		.uleb128 0x3f
  738 00f7 0C       		.uleb128 0xc
-ARM GAS  C:\cygwin\tmp\ccbAAEDr.s 			page 14
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccE906Pk.s 			page 14
 
 
  739 00f8 03       		.uleb128 0x3
@@ -838,7 +838,7 @@ ARM GAS  C:\cygwin\tmp\ccbAAEDr.s 			page 1
  793              	.Ldebug_loc0:
  794              	.LLST0:
  795 0000 00000000 		.4byte	.LFB9
-ARM GAS  C:\cygwin\tmp\ccbAAEDr.s 			page 15
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccE906Pk.s 			page 15
 
 
  796 0004 02000000 		.4byte	.LCFI0
@@ -898,7 +898,7 @@ ARM GAS  C:\cygwin\tmp\ccbAAEDr.s 			page 1
  850 008b 24000000 		.4byte	.LFE8
  851 008f 0200     		.2byte	0x2
  852 0091 7D       		.byte	0x7d
-ARM GAS  C:\cygwin\tmp\ccbAAEDr.s 			page 16
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccE906Pk.s 			page 16
 
 
  853 0092 08       		.sleb128 8
@@ -958,7 +958,7 @@ ARM GAS  C:\cygwin\tmp\ccbAAEDr.s 			page 1
  907 0010 00000000 		.4byte	.LFB7
  908 0014 2C000000 		.4byte	.LFE7-.LFB7
  909 0018 00000000 		.4byte	.LFB9
-ARM GAS  C:\cygwin\tmp\ccbAAEDr.s 			page 17
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccE906Pk.s 			page 17
 
 
  910 001c 30000000 		.4byte	.LFE9-.LFB9
@@ -988,8 +988,8 @@ ARM GAS  C:\cygwin\tmp\ccbAAEDr.s 			page 1
  934 003c 00000000 		.4byte	0
  935              		.section	.debug_line,"",%progbits
  936              	.Ldebug_line0:
- 937 0000 AD010000 		.section	.debug_str,"MS",%progbits,1
- 937      02005001 
+ 937 0000 AF010000 		.section	.debug_str,"MS",%progbits,1
+ 937      02005201 
  937      00000201 
  937      FB0E0D00 
  937      01010101 
@@ -1018,7 +1018,7 @@ ARM GAS  C:\cygwin\tmp\ccbAAEDr.s 			page 1
  947      00
  948              	.LASF20:
  949 003f 6E657874 		.ascii	"nextmem\000"
-ARM GAS  C:\cygwin\tmp\ccbAAEDr.s 			page 18
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccE906Pk.s 			page 18
 
 
  949      6D656D00 
@@ -1047,119 +1047,125 @@ ARM GAS  C:\cygwin\tmp\ccbAAEDr.s 			page 1
  959      7369676E 
  959      65642069 
  959      6E7400
- 960              	.LASF8:
- 961 008b 75696E74 		.ascii	"uint32_t\000"
- 961      33325F74 
- 961      00
- 962              	.LASF4:
- 963 0094 756E7369 		.ascii	"unsigned char\000"
- 963      676E6564 
- 963      20636861 
- 963      7200
- 964              	.LASF28:
- 965 00a2 5F636F72 		.ascii	"_core_init\000"
- 965      655F696E 
- 965      697400
- 966              	.LASF0:
- 967 00ad 756E7369 		.ascii	"unsigned int\000"
- 967      676E6564 
- 967      20696E74 
- 967      00
- 968              	.LASF11:
- 969 00ba 6C6F6E67 		.ascii	"long long unsigned int\000"
- 969      206C6F6E 
- 969      6720756E 
- 969      7369676E 
- 969      65642069 
- 970              	.LASF3:
- 971 00d1 75696E74 		.ascii	"uint8_t\000"
- 971      385F7400 
- 972              	.LASF15:
- 973 00d9 5F5F6865 		.ascii	"__heap_base__\000"
- 973      61705F62 
- 973      6173655F 
-ARM GAS  C:\cygwin\tmp\ccbAAEDr.s 			page 19
+ 960              	.LASF27:
+ 961 008b 633A5C55 		.ascii	"c:\\Users\\TaisikHam\\Documents\\GitHub\\ChibiOS\\t"
+ 961      73657273 
+ 961      5C546169 
+ 961      73696B48 
+ 961      616D5C44 
+ 962 00b8 65737468 		.ascii	"esthal_wrk\\STM32F30x\\TS_SPI\000"
+ 962      616C5F77 
+ 962      726B5C53 
+ 962      544D3332 
+ 962      46333078 
+ 963              	.LASF4:
+ 964 00d4 756E7369 		.ascii	"unsigned char\000"
+ 964      676E6564 
+ 964      20636861 
+ 964      7200
+ 965              	.LASF28:
+ 966 00e2 5F636F72 		.ascii	"_core_init\000"
+ 966      655F696E 
+ 966      697400
+ 967              	.LASF0:
+ 968 00ed 756E7369 		.ascii	"unsigned int\000"
+ 968      676E6564 
+ 968      20696E74 
+ 968      00
+ 969              	.LASF11:
+ 970 00fa 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 970      206C6F6E 
+ 970      6720756E 
+ 970      7369676E 
+ 970      65642069 
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccE906Pk.s 			page 19
 
 
- 973      5F00
- 974              	.LASF13:
- 975 00e7 73697A65 		.ascii	"sizetype\000"
- 975      74797065 
- 975      00
- 976              	.LASF10:
- 977 00f0 6C6F6E67 		.ascii	"long long int\000"
- 977      206C6F6E 
- 977      6720696E 
- 977      7400
- 978              	.LASF27:
- 979 00fe 433A5C43 		.ascii	"C:\\ChibiStudio\\ChibiOS\\testhal_wrk\\STM32F30x\\T"
- 979      68696269 
- 979      53747564 
- 979      696F5C43 
- 979      68696269 
- 980 012c 735F5350 		.ascii	"s_SPI\000"
- 980      4900
- 981              	.LASF14:
- 982 0132 63686172 		.ascii	"char\000"
+ 971              	.LASF3:
+ 972 0111 75696E74 		.ascii	"uint8_t\000"
+ 972      385F7400 
+ 973              	.LASF15:
+ 974 0119 5F5F6865 		.ascii	"__heap_base__\000"
+ 974      61705F62 
+ 974      6173655F 
+ 974      5F00
+ 975              	.LASF13:
+ 976 0127 73697A65 		.ascii	"sizetype\000"
+ 976      74797065 
+ 976      00
+ 977              	.LASF10:
+ 978 0130 6C6F6E67 		.ascii	"long long int\000"
+ 978      206C6F6E 
+ 978      6720696E 
+ 978      7400
+ 979              	.LASF14:
+ 980 013e 63686172 		.ascii	"char\000"
+ 980      00
+ 981              	.LASF16:
+ 982 0143 5F5F6865 		.ascii	"__heap_end__\000"
+ 982      61705F65 
+ 982      6E645F5F 
  982      00
- 983              	.LASF16:
- 984 0137 5F5F6865 		.ascii	"__heap_end__\000"
- 984      61705F65 
- 984      6E645F5F 
- 984      00
- 985              	.LASF25:
- 986 0144 474E5520 		.ascii	"GNU C 4.7.2\000"
- 986      4320342E 
- 986      372E3200 
- 987              	.LASF5:
- 988 0150 73686F72 		.ascii	"short int\000"
- 988      7420696E 
- 988      7400
- 989              	.LASF26:
- 990 015a 2E2E2F2E 		.ascii	"../../../os/kernel/src/chmemcore.c\000"
- 990      2E2F2E2E 
- 990      2F6F732F 
- 990      6B65726E 
- 990      656C2F73 
- 991              	.LASF18:
- 992 017d 6368436F 		.ascii	"chCoreAlloc\000"
- 992      7265416C 
- 992      6C6F6300 
- 993              	.LASF7:
- 994 0189 6C6F6E67 		.ascii	"long int\000"
- 994      20696E74 
- 994      00
- 995              	.LASF1:
- 996 0192 7369676E 		.ascii	"signed char\000"
- 996      65642063 
- 996      68617200 
+ 983              	.LASF25:
+ 984 0150 474E5520 		.ascii	"GNU C 4.7.2\000"
+ 984      4320342E 
+ 984      372E3200 
+ 985              	.LASF5:
+ 986 015c 73686F72 		.ascii	"short int\000"
+ 986      7420696E 
+ 986      7400
+ 987              	.LASF26:
+ 988 0166 2E2E2F2E 		.ascii	"../../../os/kernel/src/chmemcore.c\000"
+ 988      2E2F2E2E 
+ 988      2F6F732F 
+ 988      6B65726E 
+ 988      656C2F73 
+ 989              	.LASF18:
+ 990 0189 6368436F 		.ascii	"chCoreAlloc\000"
+ 990      7265416C 
+ 990      6C6F6300 
+ 991              	.LASF7:
+ 992 0195 6C6F6E67 		.ascii	"long int\000"
+ 992      20696E74 
+ 992      00
+ 993              	.LASF1:
+ 994 019e 7369676E 		.ascii	"signed char\000"
+ 994      65642063 
+ 994      68617200 
+ 995              	.LASF8:
+ 996 01aa 75696E74 		.ascii	"uint32_t\000"
+ 996      33325F74 
+ 996      00
  997              	.LASF12:
- 998 019e 5F426F6F 		.ascii	"_Bool\000"
+ 998 01b3 5F426F6F 		.ascii	"_Bool\000"
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccE906Pk.s 			page 20
+
+
  998      6C00
  999              		.ident	"GCC: (GNU) 4.7.2"
-ARM GAS  C:\cygwin\tmp\ccbAAEDr.s 			page 20
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccE906Pk.s 			page 21
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 chmemcore.c
-C:\cygwin\tmp\ccbAAEDr.s:19     .text._core_init:00000000 $t
-C:\cygwin\tmp\ccbAAEDr.s:25     .text._core_init:00000000 _core_init
-C:\cygwin\tmp\ccbAAEDr.s:212    .bss.nextmem:00000000 .LANCHOR0
-C:\cygwin\tmp\ccbAAEDr.s:205    .bss.endmem:00000000 .LANCHOR1
-C:\cygwin\tmp\ccbAAEDr.s:56     .text._core_init:00000028 $d
-C:\cygwin\tmp\ccbAAEDr.s:61     .text.chCoreAllocI:00000000 $t
-C:\cygwin\tmp\ccbAAEDr.s:67     .text.chCoreAllocI:00000000 chCoreAllocI
-C:\cygwin\tmp\ccbAAEDr.s:111    .text.chCoreAllocI:00000028 $d
-C:\cygwin\tmp\ccbAAEDr.s:117    .text.chCoreAlloc:00000000 $t
-C:\cygwin\tmp\ccbAAEDr.s:123    .text.chCoreAlloc:00000000 chCoreAlloc
-C:\cygwin\tmp\ccbAAEDr.s:177    .text.chCoreStatus:00000000 $t
-C:\cygwin\tmp\ccbAAEDr.s:183    .text.chCoreStatus:00000000 chCoreStatus
-C:\cygwin\tmp\ccbAAEDr.s:204    .bss.endmem:00000000 $d
-C:\cygwin\tmp\ccbAAEDr.s:208    .bss.endmem:00000000 endmem
-C:\cygwin\tmp\ccbAAEDr.s:211    .bss.nextmem:00000000 $d
-C:\cygwin\tmp\ccbAAEDr.s:215    .bss.nextmem:00000000 nextmem
+C:\Users\TaisikHam\AppData\Local\Temp\ccE906Pk.s:19     .text._core_init:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\ccE906Pk.s:25     .text._core_init:00000000 _core_init
+C:\Users\TaisikHam\AppData\Local\Temp\ccE906Pk.s:212    .bss.nextmem:00000000 .LANCHOR0
+C:\Users\TaisikHam\AppData\Local\Temp\ccE906Pk.s:205    .bss.endmem:00000000 .LANCHOR1
+C:\Users\TaisikHam\AppData\Local\Temp\ccE906Pk.s:56     .text._core_init:00000028 $d
+C:\Users\TaisikHam\AppData\Local\Temp\ccE906Pk.s:61     .text.chCoreAllocI:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\ccE906Pk.s:67     .text.chCoreAllocI:00000000 chCoreAllocI
+C:\Users\TaisikHam\AppData\Local\Temp\ccE906Pk.s:111    .text.chCoreAllocI:00000028 $d
+C:\Users\TaisikHam\AppData\Local\Temp\ccE906Pk.s:117    .text.chCoreAlloc:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\ccE906Pk.s:123    .text.chCoreAlloc:00000000 chCoreAlloc
+C:\Users\TaisikHam\AppData\Local\Temp\ccE906Pk.s:177    .text.chCoreStatus:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\ccE906Pk.s:183    .text.chCoreStatus:00000000 chCoreStatus
+C:\Users\TaisikHam\AppData\Local\Temp\ccE906Pk.s:204    .bss.endmem:00000000 $d
+C:\Users\TaisikHam\AppData\Local\Temp\ccE906Pk.s:208    .bss.endmem:00000000 endmem
+C:\Users\TaisikHam\AppData\Local\Temp\ccE906Pk.s:211    .bss.nextmem:00000000 $d
+C:\Users\TaisikHam\AppData\Local\Temp\ccE906Pk.s:215    .bss.nextmem:00000000 nextmem
                      .debug_frame:00000010 $d
-C:\cygwin\tmp\ccbAAEDr.s:60     .text._core_init:0000002c $t
+C:\Users\TaisikHam\AppData\Local\Temp\ccE906Pk.s:60     .text._core_init:0000002c $t
 
 UNDEFINED SYMBOLS
 __heap_end__

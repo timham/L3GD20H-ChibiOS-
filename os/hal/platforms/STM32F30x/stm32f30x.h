@@ -555,7 +555,8 @@ typedef struct
   * @brief General Purpose I/O
   */
 /* CHIBIOS FIX */
-#if 0
+
+#if 0  //  origin
 typedef struct
 {
   __IO uint32_t MODER;        /*!< GPIO port mode register,                                  Address offset: 0x00 */
@@ -573,6 +574,27 @@ typedef struct
   __IO uint16_t BRR;          /*!< GPIO bit reset register,                                  Address offset: 0x28 */
   uint16_t RESERVED3;         /*!< Reserved,                                                                 0x2A */
 }GPIO_TypeDef;
+#else  // tsham moved from pal_lld.h
+// In order to share it's structure stm32f3discovery_l3gd20.h
+typedef struct {
+
+  volatile uint32_t     MODER;
+  volatile uint32_t     OTYPER;
+  volatile uint32_t     OSPEEDR;
+  volatile uint32_t     PUPDR;
+  volatile uint32_t     IDR;
+  volatile uint32_t     ODR;
+  volatile union {
+    uint32_t            W;
+    struct {
+      uint16_t          set;
+      uint16_t          clear;
+    } H;
+  } BSRR;
+  volatile uint32_t     LCKR;
+  volatile uint32_t     AFRL;
+  volatile uint32_t     AFRH;
+} GPIO_TypeDef;
 #endif
 
 /** 
@@ -4349,6 +4371,8 @@ typedef struct
 #define GPIO_BRR_BR_13             ((uint32_t)0x00002000)
 #define GPIO_BRR_BR_14             ((uint32_t)0x00004000)
 #define GPIO_BRR_BR_15             ((uint32_t)0x00008000)
+
+
 
 /******************************************************************************/
 /*                                                                            */

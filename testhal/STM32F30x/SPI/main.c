@@ -153,9 +153,10 @@ int main(void) {
   /*
    * Starting the blinker thread.
    */
+#if 0   
   chThdCreateStatic(blinker_wa, sizeof(blinker_wa),
                     NORMALPRIO-1, blinker, NULL);
-
+#endif
   /*
    * Normal main() thread activity, in this demo it does nothing.
    */

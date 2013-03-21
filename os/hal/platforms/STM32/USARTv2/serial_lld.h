@@ -49,7 +49,7 @@
  * @note    The default is @p TRUE.
  */
 #if !defined(STM32_SERIAL_USE_USART1) || defined(__DOXYGEN__)
-#define STM32_SERIAL_USE_USART1             FALSE
+#define STM32_SERIAL_USE_USART1            TRUE 
 #endif
 
 /**
@@ -58,7 +58,7 @@
  * @note    The default is @p TRUE.
  */
 #if !defined(STM32_SERIAL_USE_USART2) || defined(__DOXYGEN__)
-#define STM32_SERIAL_USE_USART2             FALSE
+#define STM32_SERIAL_USE_USART2            TRUE 
 #endif
 
 /**
@@ -67,7 +67,7 @@
  * @note    The default is @p TRUE.
  */
 #if !defined(STM32_SERIAL_USE_USART3) || defined(__DOXYGEN__)
-#define STM32_SERIAL_USE_USART3             FALSE
+#define STM32_SERIAL_USE_USART3            TRUE 
 #endif
 
 /**
@@ -76,7 +76,7 @@
  * @note    The default is @p TRUE.
  */
 #if !defined(STM32_SERIAL_USE_UART4) || defined(__DOXYGEN__)
-#define STM32_SERIAL_USE_UART4              FALSE
+#define STM32_SERIAL_USE_UART4             TRUE 
 #endif
 
 /**

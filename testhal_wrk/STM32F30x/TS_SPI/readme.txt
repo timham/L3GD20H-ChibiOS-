@@ -28,3 +28,6 @@ Also note that not all the files present in the ST library are distributed
 with ChibiOS/RT, you can find the whole library on the ST web site:
 
                              http://www.st.com
+
+			    
+timham : add for L3GD20 device driver operation

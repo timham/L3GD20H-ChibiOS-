@@ -141,6 +141,7 @@
 /**
  * @brief   STM32 GPIO registers block.
  */
+#if 0 // tsham blocked : moved stm32f30x.h 
 typedef struct {
 
   volatile uint32_t     MODER;
@@ -160,6 +161,7 @@ typedef struct {
   volatile uint32_t     AFRL;
   volatile uint32_t     AFRH;
 } GPIO_TypeDef;
+#endif
 
 /**
  * @brief   GPIO port setup info.
