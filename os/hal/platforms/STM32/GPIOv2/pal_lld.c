@@ -37,9 +37,10 @@
 
 #if defined(STM32L1XX_MD)
 #define AHB_EN_MASK     (RCC_AHBENR_GPIOAEN | RCC_AHBENR_GPIOBEN |          \
-                         RCC_AHBENR_GPIOCEN | RCC_AHBENR_GPIODEN |          \
-                         RCC_AHBENR_GPIOEEN | RCC_AHBENR_GPIOHEN)
+	                         RCC_AHBENR_GPIOCEN | RCC_AHBENR_GPIODEN |          \
+	                         RCC_AHBENR_GPIOEEN | RCC_AHBENR_GPIOHEN)
 #define AHB_LPEN_MASK   AHB_EN_MASK
+
 #elif defined(STM32F0XX)
 #define AHB_EN_MASK     (RCC_AHBENR_GPIOAEN | RCC_AHBENR_GPIOBEN |          \
                          RCC_AHBENR_GPIOCEN | RCC_AHBENR_GPIODEN |          \
@@ -163,23 +164,23 @@ void _pal_lld_init(const PALConfig *config) {
 
 // tsham modified 2013/03/20
 #define  ALTERNATE_TS   // To handle L3GD20h file, it will be modified.
-#define  ORIGIN
+#undef  ORIGIN
 
 
 #if defined(ALTERNATE_TS)
 void _pal_lld_setgroupmode(	ioportid_t 		port,
-                           					ioportmask_t 		mask,
+                           					ioportmask_t 		shift,
                            					iomode_t 		mode
                            					//int 			       curpin
                            				    )
 {
    uint32_t 	moder	  = (mode & PAL_STM32_MODE_MASK) >> 0;
-// uint32_t 	otyper     = (mode & PAL_STM32_OTYPE_MASK) >> 2;
-//uint32_t 	ospeedr   = (mode & PAL_STM32_OSPEED_MASK) >> 3;
+//uint32_t 	otyper       = (mode & PAL_STM32_OTYPE_MASK) >> 2;
+//uint32_t 	ospeedr     = (mode & PAL_STM32_OSPEED_MASK) >> 3;
 //uint32_t 	pupdr	  = (mode & PAL_STM32_PUDR_MASK) >> 5;
 
   uint32_t        altr	 	  = (mode & PAL_STM32_ALTERNATE_MASK) >> 15;
-  uint32_t        tmp	 	  = ((0x05) << ((uint32_t)((uint32_t)altr & (uint32_t)0x07) * 4));
+  uint32_t        tmp	 	  = ((shift) << ((uint32_t)((uint32_t)altr & (uint32_t)0x07) * 4));
   uint32_t 	temp2;
 
 
