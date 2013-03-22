@@ -393,6 +393,7 @@ static uint8_t L3GD20_SendByte(uint8_t byte)
 
   
   spiExchange(&SPID1,1, &byte, &rxbuf); // to need checkig.
+
   return rxbuf;
   
   /* Send a Byte through the SPI peripheral */
@@ -541,7 +542,6 @@ static void  L3GD_SPI_Init(SPI_TypeDef *spi, SPIConfig *spiconfig)
 }
 
 extern void SPI_I2S_DeInit(SPI_TypeDef* SPIx);
-
 
 #define  ALTERNATE_SHIFT   		7
 #define  PUDR_SHIFT 			5
