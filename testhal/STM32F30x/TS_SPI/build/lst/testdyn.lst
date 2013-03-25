@@ -1,0 +1,4780 @@
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m4
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"testdyn.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text.regfind,"ax",%progbits
+  19              		.align	2
+  20              		.p2align 4,,15
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	regfind, %function
+  24              	regfind:
+  25              	.LFB12:
+  26              		.file 1 "../../../test/testdyn.c"
+  27              		.loc 1 195 0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              	.LVL0:
+  32 0000 38B5     		push	{r3, r4, r5, lr}
+  33              	.LCFI0:
+  34              		.cfi_def_cfa_offset 16
+  35              		.cfi_offset 3, -16
+  36              		.cfi_offset 4, -12
+  37              		.cfi_offset 5, -8
+  38              		.cfi_offset 14, -4
+  39              		.loc 1 195 0
+  40 0002 0546     		mov	r5, r0
+  41              		.loc 1 199 0
+  42 0004 FFF7FEFF 		bl	chRegFirstThread
+  43              	.LVL1:
+  44              		.loc 1 197 0
+  45 0008 0024     		movs	r4, #0
+  46              		.loc 1 199 0
+  47 000a 0346     		mov	r3, r0
+  48              	.LVL2:
+  49              	.L2:
+  50              		.loc 1 202 0 discriminator 1
+  51 000c 1846     		mov	r0, r3
+  52              		.loc 1 201 0 discriminator 1
+  53 000e AB42     		cmp	r3, r5
+  54 0010 08BF     		it	eq
+  55 0012 44F00104 		orreq	r4, r4, #1
+  56              	.LVL3:
+  57              		.loc 1 202 0 discriminator 1
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 2
+
+
+  58 0016 FFF7FEFF 		bl	chRegNextThread
+  59              	.LVL4:
+  60              		.loc 1 203 0 discriminator 1
+  61 001a 0346     		mov	r3, r0
+  62 001c 0028     		cmp	r0, #0
+  63 001e F5D1     		bne	.L2
+  64              		.loc 1 205 0
+  65 0020 2046     		mov	r0, r4
+  66              	.LVL5:
+  67 0022 38BD     		pop	{r3, r4, r5, pc}
+  68              		.cfi_endproc
+  69              	.LFE12:
+  70              		.size	regfind, .-regfind
+  71 0024 AFF30080 		.section	.text.dyn3_execute,"ax",%progbits
+  71      AFF30080 
+  71      AFF30080 
+  72              		.align	2
+  73              		.p2align 4,,15
+  74              		.thumb
+  75              		.thumb_func
+  76              		.type	dyn3_execute, %function
+  77              	dyn3_execute:
+  78              	.LFB14:
+  79              		.loc 1 212 0
+  80              		.cfi_startproc
+  81              		@ args = 0, pretend = 0, frame = 0
+  82              		@ frame_needed = 0, uses_anonymous_args = 0
+  83              	.LVL6:
+  84 0000 10B5     		push	{r4, lr}
+  85              	.LCFI1:
+  86              		.cfi_def_cfa_offset 8
+  87              		.cfi_offset 4, -8
+  88              		.cfi_offset 14, -4
+  89              		.loc 1 214 0
+  90 0002 4C4B     		ldr	r3, .L10
+  91              		.loc 1 217 0
+  92 0004 4C49     		ldr	r1, .L10+4
+  93              		.loc 1 214 0
+  94 0006 9B69     		ldr	r3, [r3, #24]
+  95              		.loc 1 217 0
+  96 0008 4C48     		ldr	r0, .L10+8
+  97 000a 9A68     		ldr	r2, [r3, #8]
+  98 000c 4C4B     		ldr	r3, .L10+12
+  99              		.loc 1 212 0
+ 100 000e 82B0     		sub	sp, sp, #8
+ 101              	.LCFI2:
+ 102              		.cfi_def_cfa_offset 16
+ 103              		.loc 1 217 0
+ 104 0010 013A     		subs	r2, r2, #1
+ 105 0012 0091     		str	r1, [sp, #0]
+ 106 0014 4FF49871 		mov	r1, #304
+ 107 0018 FFF7FEFF 		bl	chThdCreateFromHeap
+ 108              	.LVL7:
+ 109 001c 0446     		mov	r4, r0
+ 110              	.LVL8:
+ 111              		.loc 1 218 0
+ 112 001e 0120     		movs	r0, #1
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 3
+
+
+ 113              	.LVL9:
+ 114 0020 94F82210 		ldrb	r1, [r4, #34]	@ zero_extendqisi2
+ 115 0024 B1EB000C 		subs	ip, r1, r0
+ 116 0028 DCF10001 		rsbs	r1, ip, #0
+ 117 002c 51EB0C01 		adcs	r1, r1, ip
+ 118 0030 FFF7FEFF 		bl	_test_assert
+ 119              	.LVL10:
+ 120 0034 08B1     		cbz	r0, .L9
+ 121              	.L5:
+ 122              		.loc 1 240 0
+ 123 0036 02B0     		add	sp, sp, #8
+ 124 0038 10BD     		pop	{r4, pc}
+ 125              	.L9:
+ 126              		.loc 1 219 0
+ 127 003a 2046     		mov	r0, r4
+ 128 003c FFF7FEFF 		bl	chThdAddRef
+ 129              	.LVL11:
+ 130              		.loc 1 220 0
+ 131 0040 94F82210 		ldrb	r1, [r4, #34]	@ zero_extendqisi2
+ 132 0044 0220     		movs	r0, #2
+ 133 0046 B1EB000E 		subs	lr, r1, r0
+ 134 004a DEF10001 		rsbs	r1, lr, #0
+ 135 004e 51EB0E01 		adcs	r1, r1, lr
+ 136 0052 FFF7FEFF 		bl	_test_assert
+ 137              	.LVL12:
+ 138 0056 0028     		cmp	r0, #0
+ 139 0058 EDD1     		bne	.L5
+ 140              		.loc 1 221 0
+ 141 005a 2046     		mov	r0, r4
+ 142 005c FFF7FEFF 		bl	chThdRelease
+ 143              	.LVL13:
+ 144              		.loc 1 222 0
+ 145 0060 94F82210 		ldrb	r1, [r4, #34]	@ zero_extendqisi2
+ 146 0064 0320     		movs	r0, #3
+ 147 0066 4A1E     		subs	r2, r1, #1
+ 148 0068 5142     		rsbs	r1, r2, #0
+ 149 006a 5141     		adcs	r1, r1, r2
+ 150 006c FFF7FEFF 		bl	_test_assert
+ 151              	.LVL14:
+ 152 0070 0028     		cmp	r0, #0
+ 153 0072 E0D1     		bne	.L5
+ 154              		.loc 1 225 0
+ 155 0074 2046     		mov	r0, r4
+ 156 0076 FFF7FEFF 		bl	regfind
+ 157              	.LVL15:
+ 158 007a 0146     		mov	r1, r0
+ 159 007c 0420     		movs	r0, #4
+ 160 007e FFF7FEFF 		bl	_test_assert
+ 161              	.LVL16:
+ 162 0082 0028     		cmp	r0, #0
+ 163 0084 D7D1     		bne	.L5
+ 164              		.loc 1 226 0
+ 165 0086 2046     		mov	r0, r4
+ 166 0088 FFF7FEFF 		bl	regfind
+ 167              	.LVL17:
+ 168 008c 0146     		mov	r1, r0
+ 169 008e 0520     		movs	r0, #5
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 4
+
+
+ 170 0090 FFF7FEFF 		bl	_test_assert
+ 171              	.LVL18:
+ 172 0094 0028     		cmp	r0, #0
+ 173 0096 CED1     		bne	.L5
+ 174              		.loc 1 229 0
+ 175 0098 2046     		mov	r0, r4
+ 176 009a FFF7FEFF 		bl	chThdRelease
+ 177              	.LVL19:
+ 178              		.loc 1 230 0
+ 179 009e 94F82210 		ldrb	r1, [r4, #34]	@ zero_extendqisi2
+ 180 00a2 0620     		movs	r0, #6
+ 181 00a4 D1F10101 		rsbs	r1, r1, #1
+ 182 00a8 38BF     		it	cc
+ 183 00aa 0021     		movcc	r1, #0
+ 184 00ac FFF7FEFF 		bl	_test_assert
+ 185              	.LVL20:
+ 186 00b0 0028     		cmp	r0, #0
+ 187 00b2 C0D1     		bne	.L5
+ 188              		.loc 1 231 0
+ 189 00b4 94F82010 		ldrb	r1, [r4, #32]	@ zero_extendqisi2
+ 190 00b8 0720     		movs	r0, #7
+ 191 00ba D1F10101 		rsbs	r1, r1, #1
+ 192 00be 38BF     		it	cc
+ 193 00c0 0021     		movcc	r1, #0
+ 194 00c2 FFF7FEFF 		bl	_test_assert
+ 195              	.LVL21:
+ 196 00c6 0028     		cmp	r0, #0
+ 197 00c8 B5D1     		bne	.L5
+ 198              		.loc 1 232 0
+ 199 00ca 2046     		mov	r0, r4
+ 200 00cc FFF7FEFF 		bl	regfind
+ 201              	.LVL22:
+ 202 00d0 0146     		mov	r1, r0
+ 203 00d2 0820     		movs	r0, #8
+ 204 00d4 FFF7FEFF 		bl	_test_assert
+ 205              	.LVL23:
+ 206 00d8 0028     		cmp	r0, #0
+ 207 00da ACD1     		bne	.L5
+ 208              		.loc 1 233 0
+ 209 00dc 2046     		mov	r0, r4
+ 210 00de FFF7FEFF 		bl	regfind
+ 211              	.LVL24:
+ 212 00e2 0146     		mov	r1, r0
+ 213 00e4 0920     		movs	r0, #9
+ 214 00e6 FFF7FEFF 		bl	_test_assert
+ 215              	.LVL25:
+ 216 00ea 0028     		cmp	r0, #0
+ 217 00ec A3D1     		bne	.L5
+ 218              		.loc 1 234 0
+ 219 00ee 3220     		movs	r0, #50
+ 220 00f0 FFF7FEFF 		bl	chThdSleep
+ 221              	.LVL26:
+ 222              		.loc 1 235 0
+ 223 00f4 94F82010 		ldrb	r1, [r4, #32]	@ zero_extendqisi2
+ 224 00f8 0A20     		movs	r0, #10
+ 225 00fa B1F10E03 		subs	r3, r1, #14
+ 226 00fe 5942     		rsbs	r1, r3, #0
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 5
+
+
+ 227 0100 5941     		adcs	r1, r1, r3
+ 228 0102 FFF7FEFF 		bl	_test_assert
+ 229              	.LVL27:
+ 230 0106 0028     		cmp	r0, #0
+ 231 0108 95D1     		bne	.L5
+ 232              		.loc 1 238 0
+ 233 010a 2046     		mov	r0, r4
+ 234 010c FFF7FEFF 		bl	regfind
+ 235              	.LVL28:
+ 236 0110 0146     		mov	r1, r0
+ 237 0112 0B20     		movs	r0, #11
+ 238 0114 FFF7FEFF 		bl	_test_assert
+ 239              	.LVL29:
+ 240 0118 0028     		cmp	r0, #0
+ 241 011a 8CD1     		bne	.L5
+ 242              		.loc 1 239 0
+ 243 011c 2046     		mov	r0, r4
+ 244 011e FFF7FEFF 		bl	regfind
+ 245              	.LVL30:
+ 246 0122 80F00101 		eor	r1, r0, #1
+ 247 0126 C9B2     		uxtb	r1, r1
+ 248 0128 0C20     		movs	r0, #12
+ 249              		.loc 1 240 0
+ 250 012a 02B0     		add	sp, sp, #8
+ 251 012c BDE81040 		pop	{r4, lr}
+ 252              		.loc 1 239 0
+ 253 0130 FFF7FEBF 		b	_test_assert
+ 254              	.LVL31:
+ 255              	.L11:
+ 256              		.align	2
+ 257              	.L10:
+ 258 0134 00000000 		.word	rlist
+ 259 0138 00000000 		.word	.LC0
+ 260 013c 00000000 		.word	.LANCHOR0
+ 261 0140 00000000 		.word	thread
+ 262              		.cfi_endproc
+ 263              	.LFE14:
+ 264              		.size	dyn3_execute, .-dyn3_execute
+ 265 0144 AFF30080 		.section	.text.thread,"ax",%progbits
+ 265      AFF30080 
+ 265      AFF30080 
+ 266              		.align	2
+ 267              		.p2align 4,,15
+ 268              		.thumb
+ 269              		.thumb_func
+ 270              		.type	thread, %function
+ 271              	thread:
+ 272              	.LFB7:
+ 273              		.loc 1 75 0
+ 274              		.cfi_startproc
+ 275              		@ args = 0, pretend = 0, frame = 0
+ 276              		@ frame_needed = 0, uses_anonymous_args = 0
+ 277              	.LVL32:
+ 278 0000 08B5     		push	{r3, lr}
+ 279              	.LCFI3:
+ 280              		.cfi_def_cfa_offset 8
+ 281              		.cfi_offset 3, -8
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 6
+
+
+ 282              		.cfi_offset 14, -4
+ 283              		.loc 1 77 0
+ 284 0002 0078     		ldrb	r0, [r0, #0]	@ zero_extendqisi2
+ 285              	.LVL33:
+ 286 0004 FFF7FEFF 		bl	test_emit_token
+ 287              	.LVL34:
+ 288              		.loc 1 79 0
+ 289 0008 0020     		movs	r0, #0
+ 290 000a 08BD     		pop	{r3, pc}
+ 291              		.cfi_endproc
+ 292              	.LFE7:
+ 293              		.size	thread, .-thread
+ 294 000c AFF30080 		.section	.text.dyn3_setup,"ax",%progbits
+ 295              		.align	2
+ 296              		.p2align 4,,15
+ 297              		.thumb
+ 298              		.thumb_func
+ 299              		.type	dyn3_setup, %function
+ 300              	dyn3_setup:
+ 301              	.LFB13:
+ 302              		.loc 1 207 0
+ 303              		.cfi_startproc
+ 304              		@ args = 0, pretend = 0, frame = 0
+ 305              		@ frame_needed = 0, uses_anonymous_args = 0
+ 306              		@ link register save eliminated.
+ 307              		.loc 1 209 0
+ 308 0000 40F20000 		movw	r0, #:lower16:.LANCHOR0
+ 309 0004 40F20001 		movw	r1, #:lower16:test
+ 310 0008 C0F20000 		movt	r0, #:upper16:.LANCHOR0
+ 311 000c C0F20001 		movt	r1, #:upper16:test
+ 312 0010 4FF4BE62 		mov	r2, #1520
+ 313              		.loc 1 210 0
+ 314              		.loc 1 209 0
+ 315 0014 FFF7FEBF 		b	chHeapInit
+ 316              	.LVL35:
+ 317              		.cfi_endproc
+ 318              	.LFE13:
+ 319              		.size	dyn3_setup, .-dyn3_setup
+ 320 0018 AFF30080 		.section	.text.dyn1_setup,"ax",%progbits
+ 320      AFF30080 
+ 321              		.align	2
+ 322              		.p2align 4,,15
+ 323              		.thumb
+ 324              		.thumb_func
+ 325              		.type	dyn1_setup, %function
+ 326              	dyn1_setup:
+ 327              	.LFB8:
+ 328              		.loc 1 82 0
+ 329              		.cfi_startproc
+ 330              		@ args = 0, pretend = 0, frame = 0
+ 331              		@ frame_needed = 0, uses_anonymous_args = 0
+ 332              		@ link register save eliminated.
+ 333              		.loc 1 84 0
+ 334 0000 40F20000 		movw	r0, #:lower16:.LANCHOR0
+ 335 0004 40F20001 		movw	r1, #:lower16:test
+ 336 0008 C0F20000 		movt	r0, #:upper16:.LANCHOR0
+ 337 000c C0F20001 		movt	r1, #:upper16:test
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 7
+
+
+ 338 0010 4FF4BE62 		mov	r2, #1520
+ 339              		.loc 1 85 0
+ 340              		.loc 1 84 0
+ 341 0014 FFF7FEBF 		b	chHeapInit
+ 342              	.LVL36:
+ 343              		.cfi_endproc
+ 344              	.LFE8:
+ 345              		.size	dyn1_setup, .-dyn1_setup
+ 346 0018 AFF30080 		.section	.text.dyn2_execute,"ax",%progbits
+ 346      AFF30080 
+ 347              		.align	2
+ 348              		.p2align 4,,15
+ 349              		.thumb
+ 350              		.thumb_func
+ 351              		.type	dyn2_execute, %function
+ 352              	dyn2_execute:
+ 353              	.LFB11:
+ 354              		.loc 1 145 0
+ 355              		.cfi_startproc
+ 356              		@ args = 0, pretend = 0, frame = 0
+ 357              		@ frame_needed = 0, uses_anonymous_args = 0
+ 358              		.loc 1 147 0
+ 359 0000 324B     		ldr	r3, .L29
+ 360 0002 9B69     		ldr	r3, [r3, #24]
+ 361              		.loc 1 145 0
+ 362 0004 70B5     		push	{r4, r5, r6, lr}
+ 363              	.LCFI4:
+ 364              		.cfi_def_cfa_offset 16
+ 365              		.cfi_offset 4, -16
+ 366              		.cfi_offset 5, -12
+ 367              		.cfi_offset 6, -8
+ 368              		.cfi_offset 14, -4
+ 369 0006 324C     		ldr	r4, .L29+4
+ 370              		.loc 1 147 0
+ 371 0008 9D68     		ldr	r5, [r3, #8]
+ 372              	.LVL37:
+ 373              		.loc 1 145 0
+ 374 000a 04F11006 		add	r6, r4, #16
+ 375              	.LVL38:
+ 376              	.L16:
+ 377              		.loc 1 151 0 discriminator 2
+ 378 000e 54F8041F 		ldr	r1, [r4, #4]!
+ 379 0012 3048     		ldr	r0, .L29+8
+ 380 0014 FFF7FEFF 		bl	chPoolFree
+ 381              	.LVL39:
+ 382              		.loc 1 150 0 discriminator 2
+ 383 0018 B442     		cmp	r4, r6
+ 384 001a F8D1     		bne	.L16
+ 385              		.loc 1 154 0
+ 386 001c 691E     		subs	r1, r5, #1
+ 387 001e 2E4A     		ldr	r2, .L29+12
+ 388 0020 2E4B     		ldr	r3, .L29+16
+ 389 0022 2C48     		ldr	r0, .L29+8
+ 390 0024 2E4C     		ldr	r4, .L29+20
+ 391 0026 FFF7FEFF 		bl	chThdCreateFromMemoryPool
+ 392              	.LVL40:
+ 393              		.loc 1 155 0
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 8
+
+
+ 394 002a A91E     		subs	r1, r5, #2
+ 395              		.loc 1 154 0
+ 396 002c 2060     		str	r0, [r4, #0]
+ 397              		.loc 1 155 0
+ 398 002e 2A4A     		ldr	r2, .L29+12
+ 399 0030 2C4B     		ldr	r3, .L29+24
+ 400 0032 2848     		ldr	r0, .L29+8
+ 401 0034 FFF7FEFF 		bl	chThdCreateFromMemoryPool
+ 402              	.LVL41:
+ 403              		.loc 1 156 0
+ 404 0038 E91E     		subs	r1, r5, #3
+ 405              		.loc 1 155 0
+ 406 003a 6060     		str	r0, [r4, #4]
+ 407              		.loc 1 156 0
+ 408 003c 264A     		ldr	r2, .L29+12
+ 409 003e 2A4B     		ldr	r3, .L29+28
+ 410 0040 2448     		ldr	r0, .L29+8
+ 411 0042 FFF7FEFF 		bl	chThdCreateFromMemoryPool
+ 412              	.LVL42:
+ 413              		.loc 1 157 0
+ 414 0046 291F     		subs	r1, r5, #4
+ 415              		.loc 1 156 0
+ 416 0048 A060     		str	r0, [r4, #8]
+ 417              		.loc 1 157 0
+ 418 004a 234A     		ldr	r2, .L29+12
+ 419 004c 274B     		ldr	r3, .L29+32
+ 420 004e 2148     		ldr	r0, .L29+8
+ 421 0050 FFF7FEFF 		bl	chThdCreateFromMemoryPool
+ 422              	.LVL43:
+ 423              		.loc 1 158 0
+ 424 0054 691F     		subs	r1, r5, #5
+ 425              		.loc 1 157 0
+ 426 0056 E060     		str	r0, [r4, #12]
+ 427              		.loc 1 158 0
+ 428 0058 1F4A     		ldr	r2, .L29+12
+ 429 005a 1E48     		ldr	r0, .L29+8
+ 430 005c 244B     		ldr	r3, .L29+36
+ 431 005e FFF7FEFF 		bl	chThdCreateFromMemoryPool
+ 432              	.LVL44:
+ 433              		.loc 1 160 0
+ 434 0062 2168     		ldr	r1, [r4, #0]
+ 435              		.loc 1 158 0
+ 436 0064 2061     		str	r0, [r4, #16]
+ 437              		.loc 1 160 0
+ 438 0066 49B1     		cbz	r1, .L17
+ 439              		.loc 1 160 0 is_stmt 0 discriminator 1
+ 440 0068 6168     		ldr	r1, [r4, #4]
+ 441 006a 39B1     		cbz	r1, .L17
+ 442              		.loc 1 160 0 discriminator 3
+ 443 006c A168     		ldr	r1, [r4, #8]
+ 444 006e 29B1     		cbz	r1, .L17
+ 445              		.loc 1 160 0 discriminator 4
+ 446 0070 E168     		ldr	r1, [r4, #12]
+ 447 0072 19B1     		cbz	r1, .L17
+ 448              		.loc 1 160 0 discriminator 5
+ 449 0074 D0F10101 		rsbs	r1, r0, #1
+ 450 0078 38BF     		it	cc
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 9
+
+
+ 451 007a 0021     		movcc	r1, #0
+ 452              	.L17:
+ 453              		.loc 1 160 0 discriminator 7
+ 454 007c 0120     		movs	r0, #1
+ 455 007e FFF7FEFF 		bl	_test_assert
+ 456              	.LVL45:
+ 457 0082 00B1     		cbz	r0, .L28
+ 458              	.L15:
+ 459 0084 70BD     		pop	{r4, r5, r6, pc}
+ 460              	.L28:
+ 461              		.loc 1 168 0 is_stmt 1
+ 462 0086 FFF7FEFF 		bl	test_wait_threads
+ 463              	.LVL46:
+ 464              		.loc 1 169 0
+ 465 008a 0220     		movs	r0, #2
+ 466 008c 1949     		ldr	r1, .L29+40
+ 467 008e FFF7FEFF 		bl	_test_assert_sequence
+ 468              	.LVL47:
+ 469 0092 0028     		cmp	r0, #0
+ 470 0094 F6D1     		bne	.L15
+ 471 0096 0424     		movs	r4, #4
+ 472              	.L21:
+ 473              		.loc 1 173 0
+ 474 0098 0E48     		ldr	r0, .L29+8
+ 475 009a FFF7FEFF 		bl	chPoolAlloc
+ 476              	.LVL48:
+ 477 009e 011C     		adds	r1, r0, #0
+ 478 00a0 18BF     		it	ne
+ 479 00a2 0121     		movne	r1, #1
+ 480 00a4 0320     		movs	r0, #3
+ 481 00a6 FFF7FEFF 		bl	_test_assert
+ 482              	.LVL49:
+ 483 00aa 0028     		cmp	r0, #0
+ 484 00ac EAD1     		bne	.L15
+ 485              		.loc 1 172 0
+ 486 00ae 013C     		subs	r4, r4, #1
+ 487 00b0 F2D1     		bne	.L21
+ 488              		.loc 1 174 0
+ 489 00b2 0848     		ldr	r0, .L29+8
+ 490 00b4 FFF7FEFF 		bl	chPoolAlloc
+ 491              	.LVL50:
+ 492 00b8 D0F10101 		rsbs	r1, r0, #1
+ 493 00bc 38BF     		it	cc
+ 494 00be 0021     		movcc	r1, #0
+ 495 00c0 0420     		movs	r0, #4
+ 496              		.loc 1 175 0
+ 497 00c2 BDE87040 		pop	{r4, r5, r6, lr}
+ 498              		.loc 1 174 0
+ 499 00c6 FFF7FEBF 		b	_test_assert
+ 500              	.LVL51:
+ 501              	.L30:
+ 502 00ca 00BF     		.align	2
+ 503              	.L29:
+ 504 00cc 00000000 		.word	rlist
+ 505 00d0 FCFFFFFF 		.word	wa-4
+ 506 00d4 00000000 		.word	.LANCHOR1
+ 507 00d8 00000000 		.word	thread
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 10
+
+
+ 508 00dc 00000000 		.word	.LC0
+ 509 00e0 00000000 		.word	threads
+ 510 00e4 04000000 		.word	.LC1
+ 511 00e8 08000000 		.word	.LC2
+ 512 00ec 0C000000 		.word	.LC3
+ 513 00f0 10000000 		.word	.LC4
+ 514 00f4 14000000 		.word	.LC5
+ 515              		.cfi_endproc
+ 516              	.LFE11:
+ 517              		.size	dyn2_execute, .-dyn2_execute
+ 518 00f8 AFF30080 		.section	.text.dyn2_setup,"ax",%progbits
+ 518      AFF30080 
+ 519              		.align	2
+ 520              		.p2align 4,,15
+ 521              		.thumb
+ 522              		.thumb_func
+ 523              		.type	dyn2_setup, %function
+ 524              	dyn2_setup:
+ 525              	.LFB10:
+ 526              		.loc 1 140 0
+ 527              		.cfi_startproc
+ 528              		@ args = 0, pretend = 0, frame = 0
+ 529              		@ frame_needed = 0, uses_anonymous_args = 0
+ 530              		@ link register save eliminated.
+ 531              		.loc 1 142 0
+ 532 0000 40F20000 		movw	r0, #:lower16:.LANCHOR1
+ 533 0004 C0F20000 		movt	r0, #:upper16:.LANCHOR1
+ 534 0008 4FF49871 		mov	r1, #304
+ 535 000c 0022     		movs	r2, #0
+ 536              		.loc 1 143 0
+ 537              		.loc 1 142 0
+ 538 000e FFF7FEBF 		b	chPoolInit
+ 539              	.LVL52:
+ 540              		.cfi_endproc
+ 541              	.LFE10:
+ 542              		.size	dyn2_setup, .-dyn2_setup
+ 543 0012 00BFAFF3 		.section	.text.dyn1_execute,"ax",%progbits
+ 543      0080AFF3 
+ 543      0080AFF3 
+ 543      0080
+ 544              		.align	2
+ 545              		.p2align 4,,15
+ 546              		.thumb
+ 547              		.thumb_func
+ 548              		.type	dyn1_execute, %function
+ 549              	dyn1_execute:
+ 550              	.LFB9:
+ 551              		.loc 1 87 0
+ 552              		.cfi_startproc
+ 553              		@ args = 0, pretend = 0, frame = 8
+ 554              		@ frame_needed = 0, uses_anonymous_args = 0
+ 555 0000 70B5     		push	{r4, r5, r6, lr}
+ 556              	.LCFI5:
+ 557              		.cfi_def_cfa_offset 16
+ 558              		.cfi_offset 4, -16
+ 559              		.cfi_offset 5, -12
+ 560              		.cfi_offset 6, -8
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 11
+
+
+ 561              		.cfi_offset 14, -4
+ 562              		.loc 1 90 0
+ 563 0002 334B     		ldr	r3, .L42
+ 564              		.loc 1 92 0
+ 565 0004 3348     		ldr	r0, .L42+4
+ 566              		.loc 1 90 0
+ 567 0006 9B69     		ldr	r3, [r3, #24]
+ 568              		.loc 1 94 0
+ 569 0008 334C     		ldr	r4, .L42+8
+ 570              		.loc 1 90 0
+ 571 000a 9D68     		ldr	r5, [r3, #8]
+ 572              	.LVL53:
+ 573              		.loc 1 87 0
+ 574 000c 84B0     		sub	sp, sp, #16
+ 575              	.LCFI6:
+ 576              		.cfi_def_cfa_offset 32
+ 577              		.loc 1 92 0
+ 578 000e 03A9     		add	r1, sp, #12
+ 579 0010 FFF7FEFF 		bl	chHeapStatus
+ 580              	.LVL54:
+ 581              		.loc 1 94 0
+ 582 0014 314A     		ldr	r2, .L42+12
+ 583 0016 324B     		ldr	r3, .L42+16
+ 584 0018 0092     		str	r2, [sp, #0]
+ 585 001a 4FF49871 		mov	r1, #304
+ 586 001e 6A1E     		subs	r2, r5, #1
+ 587 0020 2C48     		ldr	r0, .L42+4
+ 588 0022 FFF7FEFF 		bl	chThdCreateFromHeap
+ 589              	.LVL55:
+ 590 0026 2060     		str	r0, [r4, #0]
+ 591              		.loc 1 96 0
+ 592 0028 2E48     		ldr	r0, .L42+20
+ 593 002a 2D4B     		ldr	r3, .L42+16
+ 594 002c 0090     		str	r0, [sp, #0]
+ 595 002e AA1E     		subs	r2, r5, #2
+ 596 0030 4FF49871 		mov	r1, #304
+ 597 0034 2748     		ldr	r0, .L42+4
+ 598 0036 FFF7FEFF 		bl	chThdCreateFromHeap
+ 599              	.LVL56:
+ 600              		.loc 1 99 0
+ 601 003a 02A9     		add	r1, sp, #8
+ 602              		.loc 1 96 0
+ 603 003c 6060     		str	r0, [r4, #4]
+ 604              		.loc 1 99 0
+ 605 003e 2548     		ldr	r0, .L42+4
+ 606 0040 FFF7FEFF 		bl	chHeapStatus
+ 607              	.LVL57:
+ 608              		.loc 1 100 0
+ 609 0044 0299     		ldr	r1, [sp, #8]
+ 610 0046 2348     		ldr	r0, .L42+4
+ 611 0048 FFF7FEFF 		bl	chHeapAlloc
+ 612              	.LVL58:
+ 613              		.loc 1 101 0
+ 614 004c 264A     		ldr	r2, .L42+24
+ 615 004e 244B     		ldr	r3, .L42+16
+ 616 0050 0092     		str	r2, [sp, #0]
+ 617 0052 4FF49871 		mov	r1, #304
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 12
+
+
+ 618              		.loc 1 100 0
+ 619 0056 0646     		mov	r6, r0
+ 620              	.LVL59:
+ 621              		.loc 1 101 0
+ 622 0058 EA1E     		subs	r2, r5, #3
+ 623 005a 1E48     		ldr	r0, .L42+4
+ 624              	.LVL60:
+ 625 005c FFF7FEFF 		bl	chThdCreateFromHeap
+ 626              	.LVL61:
+ 627 0060 A060     		str	r0, [r4, #8]
+ 628              		.loc 1 103 0
+ 629 0062 3046     		mov	r0, r6
+ 630 0064 FFF7FEFF 		bl	chHeapFree
+ 631              	.LVL62:
+ 632              		.loc 1 105 0
+ 633 0068 2168     		ldr	r1, [r4, #0]
+ 634 006a 29B1     		cbz	r1, .L33
+ 635              		.loc 1 105 0 is_stmt 0 discriminator 1
+ 636 006c 6168     		ldr	r1, [r4, #4]
+ 637 006e 19B1     		cbz	r1, .L33
+ 638              		.loc 1 105 0 discriminator 3
+ 639 0070 A168     		ldr	r1, [r4, #8]
+ 640 0072 0029     		cmp	r1, #0
+ 641 0074 23D0     		beq	.L40
+ 642              		.loc 1 105 0
+ 643 0076 0021     		movs	r1, #0
+ 644              	.L33:
+ 645              		.loc 1 105 0 discriminator 7
+ 646 0078 0120     		movs	r0, #1
+ 647 007a FFF7FEFF 		bl	_test_assert
+ 648              	.LVL63:
+ 649 007e 08B1     		cbz	r0, .L41
+ 650              	.L32:
+ 651              		.loc 1 119 0 is_stmt 1
+ 652 0080 04B0     		add	sp, sp, #16
+ 653 0082 70BD     		pop	{r4, r5, r6, pc}
+ 654              	.L41:
+ 655              		.loc 1 113 0
+ 656 0084 FFF7FEFF 		bl	test_wait_threads
+ 657              	.LVL64:
+ 658              		.loc 1 114 0
+ 659 0088 0220     		movs	r0, #2
+ 660 008a 1849     		ldr	r1, .L42+28
+ 661 008c FFF7FEFF 		bl	_test_assert_sequence
+ 662              	.LVL65:
+ 663 0090 0028     		cmp	r0, #0
+ 664 0092 F5D1     		bne	.L32
+ 665              		.loc 1 117 0
+ 666 0094 02A9     		add	r1, sp, #8
+ 667 0096 0F48     		ldr	r0, .L42+4
+ 668 0098 FFF7FEFF 		bl	chHeapStatus
+ 669              	.LVL66:
+ 670 009c 421E     		subs	r2, r0, #1
+ 671 009e 5142     		rsbs	r1, r2, #0
+ 672 00a0 5141     		adcs	r1, r1, r2
+ 673 00a2 0320     		movs	r0, #3
+ 674 00a4 FFF7FEFF 		bl	_test_assert
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 13
+
+
+ 675              	.LVL67:
+ 676 00a8 0028     		cmp	r0, #0
+ 677 00aa E9D1     		bne	.L32
+ 678              		.loc 1 118 0
+ 679 00ac 0299     		ldr	r1, [sp, #8]
+ 680              	.LVL68:
+ 681 00ae 039B     		ldr	r3, [sp, #12]
+ 682 00b0 0420     		movs	r0, #4
+ 683 00b2 CB1A     		subs	r3, r1, r3
+ 684 00b4 5942     		rsbs	r1, r3, #0
+ 685 00b6 5941     		adcs	r1, r1, r3
+ 686 00b8 FFF7FEFF 		bl	_test_assert
+ 687              	.LVL69:
+ 688 00bc E0E7     		b	.L32
+ 689              	.LVL70:
+ 690              	.L40:
+ 691              		.loc 1 105 0 discriminator 4
+ 692 00be E368     		ldr	r3, [r4, #12]
+ 693 00c0 002B     		cmp	r3, #0
+ 694 00c2 D9D1     		bne	.L33
+ 695              		.loc 1 105 0 is_stmt 0 discriminator 5
+ 696 00c4 2169     		ldr	r1, [r4, #16]
+ 697 00c6 D1F10101 		rsbs	r1, r1, #1
+ 698 00ca 38BF     		it	cc
+ 699 00cc 0021     		movcc	r1, #0
+ 700 00ce D3E7     		b	.L33
+ 701              	.L43:
+ 702              		.align	2
+ 703              	.L42:
+ 704 00d0 00000000 		.word	rlist
+ 705 00d4 00000000 		.word	.LANCHOR0
+ 706 00d8 00000000 		.word	threads
+ 707 00dc 00000000 		.word	.LC0
+ 708 00e0 00000000 		.word	thread
+ 709 00e4 04000000 		.word	.LC1
+ 710 00e8 08000000 		.word	.LC2
+ 711 00ec 1C000000 		.word	.LC6
+ 712              		.cfi_endproc
+ 713              	.LFE9:
+ 714              		.size	dyn1_execute, .-dyn1_execute
+ 715              		.global	patterndyn
+ 716              		.global	testdyn3
+ 717              		.global	testdyn2
+ 718              		.global	testdyn1
+ 719              		.section	.rodata.testdyn1,"a",%progbits
+ 720              		.align	2
+ 721              		.type	testdyn1, %object
+ 722              		.size	testdyn1, 16
+ 723              	testdyn1:
+ 724 0000 78000000 		.word	.LC9
+ 725 0004 00000000 		.word	dyn1_setup
+ 726 0008 00000000 		.word	0
+ 727 000c 00000000 		.word	dyn1_execute
+ 728              		.section	.rodata.testdyn2,"a",%progbits
+ 729              		.align	2
+ 730              		.type	testdyn2, %object
+ 731              		.size	testdyn2, 16
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 14
+
+
+ 732              	testdyn2:
+ 733 0000 48000000 		.word	.LC8
+ 734 0004 00000000 		.word	dyn2_setup
+ 735 0008 00000000 		.word	0
+ 736 000c 00000000 		.word	dyn2_execute
+ 737              		.section	.rodata.testdyn3,"a",%progbits
+ 738              		.align	2
+ 739              		.type	testdyn3, %object
+ 740              		.size	testdyn3, 16
+ 741              	testdyn3:
+ 742 0000 20000000 		.word	.LC7
+ 743 0004 00000000 		.word	dyn3_setup
+ 744 0008 00000000 		.word	0
+ 745 000c 00000000 		.word	dyn3_execute
+ 746              		.section	.bss.mp1,"aw",%nobits
+ 747              		.align	2
+ 748              		.set	.LANCHOR1,. + 0
+ 749              		.type	mp1, %object
+ 750              		.size	mp1, 12
+ 751              	mp1:
+ 752 0000 00000000 		.space	12
+ 752      00000000 
+ 752      00000000 
+ 753              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 754              		.align	2
+ 755              	.LC0:
+ 756 0000 4100     		.ascii	"A\000"
+ 757 0002 0000     		.space	2
+ 758              	.LC1:
+ 759 0004 4200     		.ascii	"B\000"
+ 760 0006 0000     		.space	2
+ 761              	.LC2:
+ 762 0008 4300     		.ascii	"C\000"
+ 763 000a 0000     		.space	2
+ 764              	.LC3:
+ 765 000c 4400     		.ascii	"D\000"
+ 766 000e 0000     		.space	2
+ 767              	.LC4:
+ 768 0010 4500     		.ascii	"E\000"
+ 769 0012 0000     		.space	2
+ 770              	.LC5:
+ 771 0014 41424344 		.ascii	"ABCD\000"
+ 771      00
+ 772 0019 000000   		.space	3
+ 773              	.LC6:
+ 774 001c 414200   		.ascii	"AB\000"
+ 775 001f 00       		.space	1
+ 776              	.LC7:
+ 777 0020 44796E61 		.ascii	"Dynamic APIs, registry and references\000"
+ 777      6D696320 
+ 777      41504973 
+ 777      2C207265 
+ 777      67697374 
+ 778 0046 0000     		.space	2
+ 779              	.LC8:
+ 780 0048 44796E61 		.ascii	"Dynamic APIs, threads creation from memory pool\000"
+ 780      6D696320 
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 15
+
+
+ 780      41504973 
+ 780      2C207468 
+ 780      72656164 
+ 781              	.LC9:
+ 782 0078 44796E61 		.ascii	"Dynamic APIs, threads creation from heap\000"
+ 782      6D696320 
+ 782      41504973 
+ 782      2C207468 
+ 782      72656164 
+ 783 00a1 000000   		.section	.rodata.patterndyn,"a",%progbits
+ 784              		.align	2
+ 785              		.type	patterndyn, %object
+ 786              		.size	patterndyn, 16
+ 787              	patterndyn:
+ 788 0000 00000000 		.word	testdyn1
+ 789 0004 00000000 		.word	testdyn2
+ 790 0008 00000000 		.word	testdyn3
+ 791 000c 00000000 		.word	0
+ 792              		.section	.bss.heap1,"aw",%nobits
+ 793              		.align	3
+ 794              		.set	.LANCHOR0,. + 0
+ 795              		.type	heap1, %object
+ 796              		.size	heap1, 32
+ 797              	heap1:
+ 798 0000 00000000 		.space	32
+ 798      00000000 
+ 798      00000000 
+ 798      00000000 
+ 798      00000000 
+ 799              		.text
+ 800              	.Letext0:
+ 801              		.file 2 "c:\\develop\\genist\\chibistudio\\tools\\yagarto-tools\\yagarto-20121222\\bin\\../lib/gcc
+ 802              		.file 3 "c:/develop/genist/chibistudio/tools/yagarto-tools/yagarto-20121222/lib/gcc/../../arm-none
+ 803              		.file 4 "../../../os/ports/GCC/ARMCMx/chtypes.h"
+ 804              		.file 5 "../../../os/kernel/include/chlists.h"
+ 805              		.file 6 "../../../os/kernel/include/chthreads.h"
+ 806              		.file 7 "../../../os/ports/GCC/ARMCMx/chcore_v7m.h"
+ 807              		.file 8 "../../../os/kernel/include/chschd.h"
+ 808              		.file 9 "../../../os/kernel/include/chmtx.h"
+ 809              		.file 10 "../../../os/kernel/include/chmemcore.h"
+ 810              		.file 11 "../../../os/kernel/include/chheap.h"
+ 811              		.file 12 "../../../os/kernel/include/chmempools.h"
+ 812              		.file 13 "../../../test/test.h"
+ 813              		.file 14 "../../../os/kernel/include/chregistry.h"
+ 814              		.file 15 "../../../os/kernel/include/chdynamic.h"
+ 815              		.section	.debug_info,"",%progbits
+ 816              	.Ldebug_info0:
+ 817 0000 32100000 		.4byte	0x1032
+ 818 0004 0200     		.2byte	0x2
+ 819 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 820 000a 04       		.byte	0x4
+ 821 000b 01       		.uleb128 0x1
+ 822 000c F8020000 		.4byte	.LASF126
+ 823 0010 01       		.byte	0x1
+ 824 0011 49050000 		.4byte	.LASF127
+ 825 0015 2B010000 		.4byte	.LASF128
+ 826 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 16
+
+
+ 827 001d 00000000 		.4byte	0
+ 828 0021 00000000 		.4byte	0
+ 829 0025 00000000 		.4byte	.Ldebug_line0
+ 830 0029 02       		.uleb128 0x2
+ 831 002a 04       		.byte	0x4
+ 832 002b 05       		.byte	0x5
+ 833 002c 696E7400 		.ascii	"int\000"
+ 834 0030 03       		.uleb128 0x3
+ 835 0031 0E000000 		.4byte	.LASF2
+ 836 0035 02       		.byte	0x2
+ 837 0036 D5       		.byte	0xd5
+ 838 0037 3B000000 		.4byte	0x3b
+ 839 003b 04       		.uleb128 0x4
+ 840 003c 04       		.byte	0x4
+ 841 003d 07       		.byte	0x7
+ 842 003e CD010000 		.4byte	.LASF0
+ 843 0042 04       		.uleb128 0x4
+ 844 0043 01       		.byte	0x1
+ 845 0044 06       		.byte	0x6
+ 846 0045 AF000000 		.4byte	.LASF1
+ 847 0049 03       		.uleb128 0x3
+ 848 004a F1040000 		.4byte	.LASF3
+ 849 004e 03       		.byte	0x3
+ 850 004f 2A       		.byte	0x2a
+ 851 0050 54000000 		.4byte	0x54
+ 852 0054 04       		.uleb128 0x4
+ 853 0055 01       		.byte	0x1
+ 854 0056 08       		.byte	0x8
+ 855 0057 5D030000 		.4byte	.LASF4
+ 856 005b 04       		.uleb128 0x4
+ 857 005c 02       		.byte	0x2
+ 858 005d 05       		.byte	0x5
+ 859 005e 80030000 		.4byte	.LASF5
+ 860 0062 04       		.uleb128 0x4
+ 861 0063 02       		.byte	0x2
+ 862 0064 07       		.byte	0x7
+ 863 0065 12020000 		.4byte	.LASF6
+ 864 0069 03       		.uleb128 0x3
+ 865 006a 55030000 		.4byte	.LASF7
+ 866 006e 03       		.byte	0x3
+ 867 006f 4F       		.byte	0x4f
+ 868 0070 74000000 		.4byte	0x74
+ 869 0074 04       		.uleb128 0x4
+ 870 0075 04       		.byte	0x4
+ 871 0076 05       		.byte	0x5
+ 872 0077 FD000000 		.4byte	.LASF8
+ 873 007b 03       		.uleb128 0x3
+ 874 007c 0C040000 		.4byte	.LASF9
+ 875 0080 03       		.byte	0x3
+ 876 0081 50       		.byte	0x50
+ 877 0082 86000000 		.4byte	0x86
+ 878 0086 04       		.uleb128 0x4
+ 879 0087 04       		.byte	0x4
+ 880 0088 07       		.byte	0x7
+ 881 0089 DA010000 		.4byte	.LASF10
+ 882 008d 04       		.uleb128 0x4
+ 883 008e 08       		.byte	0x8
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 17
+
+
+ 884 008f 05       		.byte	0x5
+ 885 0090 A1000000 		.4byte	.LASF11
+ 886 0094 03       		.uleb128 0x3
+ 887 0095 21000000 		.4byte	.LASF12
+ 888 0099 03       		.byte	0x3
+ 889 009a 78       		.byte	0x78
+ 890 009b 9F000000 		.4byte	0x9f
+ 891 009f 04       		.uleb128 0x4
+ 892 00a0 08       		.byte	0x8
+ 893 00a1 07       		.byte	0x7
+ 894 00a2 42000000 		.4byte	.LASF13
+ 895 00a6 03       		.uleb128 0x3
+ 896 00a7 C9000000 		.4byte	.LASF14
+ 897 00ab 04       		.byte	0x4
+ 898 00ac 24       		.byte	0x24
+ 899 00ad B1000000 		.4byte	0xb1
+ 900 00b1 04       		.uleb128 0x4
+ 901 00b2 01       		.byte	0x1
+ 902 00b3 02       		.byte	0x2
+ 903 00b4 4F030000 		.4byte	.LASF15
+ 904 00b8 03       		.uleb128 0x3
+ 905 00b9 38020000 		.4byte	.LASF16
+ 906 00bd 04       		.byte	0x4
+ 907 00be 25       		.byte	0x25
+ 908 00bf 49000000 		.4byte	0x49
+ 909 00c3 03       		.uleb128 0x3
+ 910 00c4 1A010000 		.4byte	.LASF17
+ 911 00c8 04       		.byte	0x4
+ 912 00c9 26       		.byte	0x26
+ 913 00ca 49000000 		.4byte	0x49
+ 914 00ce 03       		.uleb128 0x3
+ 915 00cf 29030000 		.4byte	.LASF18
+ 916 00d3 04       		.byte	0x4
+ 917 00d4 27       		.byte	0x27
+ 918 00d5 49000000 		.4byte	0x49
+ 919 00d9 03       		.uleb128 0x3
+ 920 00da F3000000 		.4byte	.LASF19
+ 921 00de 04       		.byte	0x4
+ 922 00df 28       		.byte	0x28
+ 923 00e0 49000000 		.4byte	0x49
+ 924 00e4 03       		.uleb128 0x3
+ 925 00e5 40030000 		.4byte	.LASF20
+ 926 00e9 04       		.byte	0x4
+ 927 00ea 29       		.byte	0x29
+ 928 00eb 7B000000 		.4byte	0x7b
+ 929 00ef 03       		.uleb128 0x3
+ 930 00f0 32020000 		.4byte	.LASF21
+ 931 00f4 04       		.byte	0x4
+ 932 00f5 2A       		.byte	0x2a
+ 933 00f6 69000000 		.4byte	0x69
+ 934 00fa 03       		.uleb128 0x3
+ 935 00fb 4C020000 		.4byte	.LASF22
+ 936 00ff 04       		.byte	0x4
+ 937 0100 2C       		.byte	0x2c
+ 938 0101 7B000000 		.4byte	0x7b
+ 939 0105 03       		.uleb128 0x3
+ 940 0106 68040000 		.4byte	.LASF23
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 18
+
+
+ 941 010a 04       		.byte	0x4
+ 942 010b 2E       		.byte	0x2e
+ 943 010c 7B000000 		.4byte	0x7b
+ 944 0110 03       		.uleb128 0x3
+ 945 0111 DA030000 		.4byte	.LASF24
+ 946 0115 05       		.byte	0x5
+ 947 0116 23       		.byte	0x23
+ 948 0117 1B010000 		.4byte	0x11b
+ 949 011b 05       		.uleb128 0x5
+ 950 011c DA030000 		.4byte	.LASF24
+ 951 0120 4C       		.byte	0x4c
+ 952 0121 06       		.byte	0x6
+ 953 0122 57       		.byte	0x57
+ 954 0123 4E020000 		.4byte	0x24e
+ 955 0127 06       		.uleb128 0x6
+ 956 0128 BE030000 		.4byte	.LASF25
+ 957 012c 06       		.byte	0x6
+ 958 012d 58       		.byte	0x58
+ 959 012e 73020000 		.4byte	0x273
+ 960 0132 02       		.byte	0x2
+ 961 0133 23       		.byte	0x23
+ 962 0134 00       		.uleb128 0
+ 963 0135 06       		.uleb128 0x6
+ 964 0136 31030000 		.4byte	.LASF26
+ 965 013a 06       		.byte	0x6
+ 966 013b 5A       		.byte	0x5a
+ 967 013c 73020000 		.4byte	0x273
+ 968 0140 02       		.byte	0x2
+ 969 0141 23       		.byte	0x23
+ 970 0142 04       		.uleb128 0x4
+ 971 0143 06       		.uleb128 0x6
+ 972 0144 8F000000 		.4byte	.LASF27
+ 973 0148 06       		.byte	0x6
+ 974 0149 5C       		.byte	0x5c
+ 975 014a E4000000 		.4byte	0xe4
+ 976 014e 02       		.byte	0x2
+ 977 014f 23       		.byte	0x23
+ 978 0150 08       		.uleb128 0x8
+ 979 0151 06       		.uleb128 0x6
+ 980 0152 33050000 		.4byte	.LASF28
+ 981 0156 06       		.byte	0x6
+ 982 0157 5D       		.byte	0x5d
+ 983 0158 4C030000 		.4byte	0x34c
+ 984 015c 02       		.byte	0x2
+ 985 015d 23       		.byte	0x23
+ 986 015e 0C       		.uleb128 0xc
+ 987 015f 06       		.uleb128 0x6
+ 988 0160 7D010000 		.4byte	.LASF29
+ 989 0164 06       		.byte	0x6
+ 990 0165 5F       		.byte	0x5f
+ 991 0166 73020000 		.4byte	0x273
+ 992 016a 02       		.byte	0x2
+ 993 016b 23       		.byte	0x23
+ 994 016c 10       		.uleb128 0x10
+ 995 016d 06       		.uleb128 0x6
+ 996 016e B2020000 		.4byte	.LASF30
+ 997 0172 06       		.byte	0x6
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 19
+
+
+ 998 0173 60       		.byte	0x60
+ 999 0174 73020000 		.4byte	0x273
+ 1000 0178 02       		.byte	0x2
+ 1001 0179 23       		.byte	0x23
+ 1002 017a 14       		.uleb128 0x14
+ 1003 017b 06       		.uleb128 0x6
+ 1004 017c 17050000 		.4byte	.LASF31
+ 1005 0180 06       		.byte	0x6
+ 1006 0181 67       		.byte	0x67
+ 1007 0182 91050000 		.4byte	0x591
+ 1008 0186 02       		.byte	0x2
+ 1009 0187 23       		.byte	0x23
+ 1010 0188 18       		.uleb128 0x18
+ 1011 0189 06       		.uleb128 0x6
+ 1012 018a C2010000 		.4byte	.LASF32
+ 1013 018e 06       		.byte	0x6
+ 1014 018f 6D       		.byte	0x6d
+ 1015 0190 A3050000 		.4byte	0x5a3
+ 1016 0194 02       		.byte	0x2
+ 1017 0195 23       		.byte	0x23
+ 1018 0196 1C       		.uleb128 0x1c
+ 1019 0197 06       		.uleb128 0x6
+ 1020 0198 8A030000 		.4byte	.LASF33
+ 1021 019c 06       		.byte	0x6
+ 1022 019d 72       		.byte	0x72
+ 1023 019e C3000000 		.4byte	0xc3
+ 1024 01a2 02       		.byte	0x2
+ 1025 01a3 23       		.byte	0x23
+ 1026 01a4 20       		.uleb128 0x20
+ 1027 01a5 06       		.uleb128 0x6
+ 1028 01a6 C5030000 		.4byte	.LASF34
+ 1029 01aa 06       		.byte	0x6
+ 1030 01ab 76       		.byte	0x76
+ 1031 01ac B8000000 		.4byte	0xb8
+ 1032 01b0 02       		.byte	0x2
+ 1033 01b1 23       		.byte	0x23
+ 1034 01b2 21       		.uleb128 0x21
+ 1035 01b3 06       		.uleb128 0x6
+ 1036 01b4 D2040000 		.4byte	.LASF35
+ 1037 01b8 06       		.byte	0x6
+ 1038 01b9 7B       		.byte	0x7b
+ 1039 01ba CE000000 		.4byte	0xce
+ 1040 01be 02       		.byte	0x2
+ 1041 01bf 23       		.byte	0x23
+ 1042 01c0 22       		.uleb128 0x22
+ 1043 01c1 06       		.uleb128 0x6
+ 1044 01c2 92030000 		.4byte	.LASF36
+ 1045 01c6 06       		.byte	0x6
+ 1046 01c7 81       		.byte	0x81
+ 1047 01c8 D9000000 		.4byte	0xd9
+ 1048 01cc 02       		.byte	0x2
+ 1049 01cd 23       		.byte	0x23
+ 1050 01ce 23       		.uleb128 0x23
+ 1051 01cf 06       		.uleb128 0x6
+ 1052 01d0 8F040000 		.4byte	.LASF37
+ 1053 01d4 06       		.byte	0x6
+ 1054 01d5 88       		.byte	0x88
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 20
+
+
+ 1055 01d6 76030000 		.4byte	0x376
+ 1056 01da 02       		.byte	0x2
+ 1057 01db 23       		.byte	0x23
+ 1058 01dc 24       		.uleb128 0x24
+ 1059 01dd 07       		.uleb128 0x7
+ 1060 01de 705F7500 		.ascii	"p_u\000"
+ 1061 01e2 06       		.byte	0x6
+ 1062 01e3 AD       		.byte	0xad
+ 1063 01e4 5C050000 		.4byte	0x55c
+ 1064 01e8 02       		.byte	0x2
+ 1065 01e9 23       		.byte	0x23
+ 1066 01ea 28       		.uleb128 0x28
+ 1067 01eb 06       		.uleb128 0x6
+ 1068 01ec 39050000 		.4byte	.LASF38
+ 1069 01f0 06       		.byte	0x6
+ 1070 01f1 B2       		.byte	0xb2
+ 1071 01f2 9B020000 		.4byte	0x29b
+ 1072 01f6 02       		.byte	0x2
+ 1073 01f7 23       		.byte	0x23
+ 1074 01f8 2C       		.uleb128 0x2c
+ 1075 01f9 06       		.uleb128 0x6
+ 1076 01fa 9D040000 		.4byte	.LASF39
+ 1077 01fe 06       		.byte	0x6
+ 1078 01ff B8       		.byte	0xb8
+ 1079 0200 79020000 		.4byte	0x279
+ 1080 0204 02       		.byte	0x2
+ 1081 0205 23       		.byte	0x23
+ 1082 0206 30       		.uleb128 0x30
+ 1083 0207 06       		.uleb128 0x6
+ 1084 0208 08000000 		.4byte	.LASF40
+ 1085 020c 06       		.byte	0x6
+ 1086 020d BC       		.byte	0xbc
+ 1087 020e EF000000 		.4byte	0xef
+ 1088 0212 02       		.byte	0x2
+ 1089 0213 23       		.byte	0x23
+ 1090 0214 38       		.uleb128 0x38
+ 1091 0215 06       		.uleb128 0x6
+ 1092 0216 F6030000 		.4byte	.LASF41
+ 1093 021a 06       		.byte	0x6
+ 1094 021b C2       		.byte	0xc2
+ 1095 021c FA000000 		.4byte	0xfa
+ 1096 0220 02       		.byte	0x2
+ 1097 0221 23       		.byte	0x23
+ 1098 0222 3C       		.uleb128 0x3c
+ 1099 0223 06       		.uleb128 0x6
+ 1100 0224 76030000 		.4byte	.LASF42
+ 1101 0228 06       		.byte	0x6
+ 1102 0229 C9       		.byte	0xc9
+ 1103 022a A9050000 		.4byte	0x5a9
+ 1104 022e 02       		.byte	0x2
+ 1105 022f 23       		.byte	0x23
+ 1106 0230 40       		.uleb128 0x40
+ 1107 0231 06       		.uleb128 0x6
+ 1108 0232 72040000 		.4byte	.LASF43
+ 1109 0236 06       		.byte	0x6
+ 1110 0237 CD       		.byte	0xcd
+ 1111 0238 E4000000 		.4byte	0xe4
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 21
+
+
+ 1112 023c 02       		.byte	0x2
+ 1113 023d 23       		.byte	0x23
+ 1114 023e 44       		.uleb128 0x44
+ 1115 023f 06       		.uleb128 0x6
+ 1116 0240 C1000000 		.4byte	.LASF44
+ 1117 0244 06       		.byte	0x6
+ 1118 0245 D3       		.byte	0xd3
+ 1119 0246 B1020000 		.4byte	0x2b1
+ 1120 024a 02       		.byte	0x2
+ 1121 024b 23       		.byte	0x23
+ 1122 024c 48       		.uleb128 0x48
+ 1123 024d 00       		.byte	0
+ 1124 024e 08       		.uleb128 0x8
+ 1125 024f 08       		.byte	0x8
+ 1126 0250 05       		.byte	0x5
+ 1127 0251 5A       		.byte	0x5a
+ 1128 0252 73020000 		.4byte	0x273
+ 1129 0256 06       		.uleb128 0x6
+ 1130 0257 BE030000 		.4byte	.LASF25
+ 1131 025b 05       		.byte	0x5
+ 1132 025c 5B       		.byte	0x5b
+ 1133 025d 73020000 		.4byte	0x273
+ 1134 0261 02       		.byte	0x2
+ 1135 0262 23       		.byte	0x23
+ 1136 0263 00       		.uleb128 0
+ 1137 0264 06       		.uleb128 0x6
+ 1138 0265 31030000 		.4byte	.LASF26
+ 1139 0269 05       		.byte	0x5
+ 1140 026a 5D       		.byte	0x5d
+ 1141 026b 73020000 		.4byte	0x273
+ 1142 026f 02       		.byte	0x2
+ 1143 0270 23       		.byte	0x23
+ 1144 0271 04       		.uleb128 0x4
+ 1145 0272 00       		.byte	0
+ 1146 0273 09       		.uleb128 0x9
+ 1147 0274 04       		.byte	0x4
+ 1148 0275 10010000 		.4byte	0x110
+ 1149 0279 03       		.uleb128 0x3
+ 1150 027a C0020000 		.4byte	.LASF45
+ 1151 027e 05       		.byte	0x5
+ 1152 027f 5F       		.byte	0x5f
+ 1153 0280 4E020000 		.4byte	0x24e
+ 1154 0284 08       		.uleb128 0x8
+ 1155 0285 04       		.byte	0x4
+ 1156 0286 05       		.byte	0x5
+ 1157 0287 64       		.byte	0x64
+ 1158 0288 9B020000 		.4byte	0x29b
+ 1159 028c 06       		.uleb128 0x6
+ 1160 028d BE030000 		.4byte	.LASF25
+ 1161 0291 05       		.byte	0x5
+ 1162 0292 66       		.byte	0x66
+ 1163 0293 73020000 		.4byte	0x273
+ 1164 0297 02       		.byte	0x2
+ 1165 0298 23       		.byte	0x23
+ 1166 0299 00       		.uleb128 0
+ 1167 029a 00       		.byte	0
+ 1168 029b 03       		.uleb128 0x3
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 22
+
+
+ 1169 029c 40020000 		.4byte	.LASF46
+ 1170 02a0 05       		.byte	0x5
+ 1171 02a1 69       		.byte	0x69
+ 1172 02a2 84020000 		.4byte	0x284
+ 1173 02a6 03       		.uleb128 0x3
+ 1174 02a7 B3010000 		.4byte	.LASF47
+ 1175 02ab 07       		.byte	0x7
+ 1176 02ac DE       		.byte	0xde
+ 1177 02ad B1020000 		.4byte	0x2b1
+ 1178 02b1 0A       		.uleb128 0xa
+ 1179 02b2 04       		.byte	0x4
+ 1180 02b3 03       		.uleb128 0x3
+ 1181 02b4 6A020000 		.4byte	.LASF48
+ 1182 02b8 07       		.byte	0x7
+ 1183 02b9 E4       		.byte	0xe4
+ 1184 02ba 94000000 		.4byte	0x94
+ 1185 02be 0B       		.uleb128 0xb
+ 1186 02bf 96040000 		.4byte	.LASF49
+ 1187 02c3 24       		.byte	0x24
+ 1188 02c4 07       		.byte	0x7
+ 1189 02c5 0501     		.2byte	0x105
+ 1190 02c7 4C030000 		.4byte	0x34c
+ 1191 02cb 0C       		.uleb128 0xc
+ 1192 02cc 723400   		.ascii	"r4\000"
+ 1193 02cf 07       		.byte	0x7
+ 1194 02d0 1801     		.2byte	0x118
+ 1195 02d2 A6020000 		.4byte	0x2a6
+ 1196 02d6 02       		.byte	0x2
+ 1197 02d7 23       		.byte	0x23
+ 1198 02d8 00       		.uleb128 0
+ 1199 02d9 0C       		.uleb128 0xc
+ 1200 02da 723500   		.ascii	"r5\000"
+ 1201 02dd 07       		.byte	0x7
+ 1202 02de 1901     		.2byte	0x119
+ 1203 02e0 A6020000 		.4byte	0x2a6
+ 1204 02e4 02       		.byte	0x2
+ 1205 02e5 23       		.byte	0x23
+ 1206 02e6 04       		.uleb128 0x4
+ 1207 02e7 0C       		.uleb128 0xc
+ 1208 02e8 723600   		.ascii	"r6\000"
+ 1209 02eb 07       		.byte	0x7
+ 1210 02ec 1A01     		.2byte	0x11a
+ 1211 02ee A6020000 		.4byte	0x2a6
+ 1212 02f2 02       		.byte	0x2
+ 1213 02f3 23       		.byte	0x23
+ 1214 02f4 08       		.uleb128 0x8
+ 1215 02f5 0C       		.uleb128 0xc
+ 1216 02f6 723700   		.ascii	"r7\000"
+ 1217 02f9 07       		.byte	0x7
+ 1218 02fa 1B01     		.2byte	0x11b
+ 1219 02fc A6020000 		.4byte	0x2a6
+ 1220 0300 02       		.byte	0x2
+ 1221 0301 23       		.byte	0x23
+ 1222 0302 0C       		.uleb128 0xc
+ 1223 0303 0C       		.uleb128 0xc
+ 1224 0304 723800   		.ascii	"r8\000"
+ 1225 0307 07       		.byte	0x7
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 23
+
+
+ 1226 0308 1C01     		.2byte	0x11c
+ 1227 030a A6020000 		.4byte	0x2a6
+ 1228 030e 02       		.byte	0x2
+ 1229 030f 23       		.byte	0x23
+ 1230 0310 10       		.uleb128 0x10
+ 1231 0311 0C       		.uleb128 0xc
+ 1232 0312 723900   		.ascii	"r9\000"
+ 1233 0315 07       		.byte	0x7
+ 1234 0316 1D01     		.2byte	0x11d
+ 1235 0318 A6020000 		.4byte	0x2a6
+ 1236 031c 02       		.byte	0x2
+ 1237 031d 23       		.byte	0x23
+ 1238 031e 14       		.uleb128 0x14
+ 1239 031f 0C       		.uleb128 0xc
+ 1240 0320 72313000 		.ascii	"r10\000"
+ 1241 0324 07       		.byte	0x7
+ 1242 0325 1E01     		.2byte	0x11e
+ 1243 0327 A6020000 		.4byte	0x2a6
+ 1244 032b 02       		.byte	0x2
+ 1245 032c 23       		.byte	0x23
+ 1246 032d 18       		.uleb128 0x18
+ 1247 032e 0C       		.uleb128 0xc
+ 1248 032f 72313100 		.ascii	"r11\000"
+ 1249 0333 07       		.byte	0x7
+ 1250 0334 1F01     		.2byte	0x11f
+ 1251 0336 A6020000 		.4byte	0x2a6
+ 1252 033a 02       		.byte	0x2
+ 1253 033b 23       		.byte	0x23
+ 1254 033c 1C       		.uleb128 0x1c
+ 1255 033d 0C       		.uleb128 0xc
+ 1256 033e 6C7200   		.ascii	"lr\000"
+ 1257 0341 07       		.byte	0x7
+ 1258 0342 2001     		.2byte	0x120
+ 1259 0344 A6020000 		.4byte	0x2a6
+ 1260 0348 02       		.byte	0x2
+ 1261 0349 23       		.byte	0x23
+ 1262 034a 20       		.uleb128 0x20
+ 1263 034b 00       		.byte	0
+ 1264 034c 0B       		.uleb128 0xb
+ 1265 034d 05020000 		.4byte	.LASF50
+ 1266 0351 04       		.byte	0x4
+ 1267 0352 07       		.byte	0x7
+ 1268 0353 2A01     		.2byte	0x12a
+ 1269 0355 69030000 		.4byte	0x369
+ 1270 0359 0C       		.uleb128 0xc
+ 1271 035a 72313300 		.ascii	"r13\000"
+ 1272 035e 07       		.byte	0x7
+ 1273 035f 2B01     		.2byte	0x12b
+ 1274 0361 69030000 		.4byte	0x369
+ 1275 0365 02       		.byte	0x2
+ 1276 0366 23       		.byte	0x23
+ 1277 0367 00       		.uleb128 0
+ 1278 0368 00       		.byte	0
+ 1279 0369 09       		.uleb128 0x9
+ 1280 036a 04       		.byte	0x4
+ 1281 036b BE020000 		.4byte	0x2be
+ 1282 036f 04       		.uleb128 0x4
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 24
+
+
+ 1283 0370 04       		.byte	0x4
+ 1284 0371 07       		.byte	0x7
+ 1285 0372 75020000 		.4byte	.LASF51
+ 1286 0376 0D       		.uleb128 0xd
+ 1287 0377 05010000 		.4byte	0x105
+ 1288 037b 08       		.uleb128 0x8
+ 1289 037c 1C       		.byte	0x1c
+ 1290 037d 08       		.byte	0x8
+ 1291 037e 57       		.byte	0x57
+ 1292 037f D8030000 		.4byte	0x3d8
+ 1293 0383 06       		.uleb128 0x6
+ 1294 0384 15040000 		.4byte	.LASF52
+ 1295 0388 08       		.byte	0x8
+ 1296 0389 58       		.byte	0x58
+ 1297 038a 79020000 		.4byte	0x279
+ 1298 038e 02       		.byte	0x2
+ 1299 038f 23       		.byte	0x23
+ 1300 0390 00       		.uleb128 0
+ 1301 0391 06       		.uleb128 0x6
+ 1302 0392 A4030000 		.4byte	.LASF53
+ 1303 0396 08       		.byte	0x8
+ 1304 0397 59       		.byte	0x59
+ 1305 0398 E4000000 		.4byte	0xe4
+ 1306 039c 02       		.byte	0x2
+ 1307 039d 23       		.byte	0x23
+ 1308 039e 08       		.uleb128 0x8
+ 1309 039f 06       		.uleb128 0x6
+ 1310 03a0 BA020000 		.4byte	.LASF54
+ 1311 03a4 08       		.byte	0x8
+ 1312 03a5 5B       		.byte	0x5b
+ 1313 03a6 4C030000 		.4byte	0x34c
+ 1314 03aa 02       		.byte	0x2
+ 1315 03ab 23       		.byte	0x23
+ 1316 03ac 0C       		.uleb128 0xc
+ 1317 03ad 06       		.uleb128 0x6
+ 1318 03ae 9F010000 		.4byte	.LASF55
+ 1319 03b2 08       		.byte	0x8
+ 1320 03b3 5E       		.byte	0x5e
+ 1321 03b4 73020000 		.4byte	0x273
+ 1322 03b8 02       		.byte	0x2
+ 1323 03b9 23       		.byte	0x23
+ 1324 03ba 10       		.uleb128 0x10
+ 1325 03bb 06       		.uleb128 0x6
+ 1326 03bc 0E030000 		.4byte	.LASF56
+ 1327 03c0 08       		.byte	0x8
+ 1328 03c1 5F       		.byte	0x5f
+ 1329 03c2 73020000 		.4byte	0x273
+ 1330 03c6 02       		.byte	0x2
+ 1331 03c7 23       		.byte	0x23
+ 1332 03c8 14       		.uleb128 0x14
+ 1333 03c9 06       		.uleb128 0x6
+ 1334 03ca 04030000 		.4byte	.LASF57
+ 1335 03ce 08       		.byte	0x8
+ 1336 03cf 62       		.byte	0x62
+ 1337 03d0 73020000 		.4byte	0x273
+ 1338 03d4 02       		.byte	0x2
+ 1339 03d5 23       		.byte	0x23
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 25
+
+
+ 1340 03d6 18       		.uleb128 0x18
+ 1341 03d7 00       		.byte	0
+ 1342 03d8 03       		.uleb128 0x3
+ 1343 03d9 D9040000 		.4byte	.LASF58
+ 1344 03dd 08       		.byte	0x8
+ 1345 03de 64       		.byte	0x64
+ 1346 03df 7B030000 		.4byte	0x37b
+ 1347 03e3 05       		.uleb128 0x5
+ 1348 03e4 58020000 		.4byte	.LASF59
+ 1349 03e8 10       		.byte	0x10
+ 1350 03e9 09       		.byte	0x9
+ 1351 03ea 25       		.byte	0x25
+ 1352 03eb 1A040000 		.4byte	0x41a
+ 1353 03ef 06       		.uleb128 0x6
+ 1354 03f0 D0000000 		.4byte	.LASF60
+ 1355 03f4 09       		.byte	0x9
+ 1356 03f5 26       		.byte	0x26
+ 1357 03f6 79020000 		.4byte	0x279
+ 1358 03fa 02       		.byte	0x2
+ 1359 03fb 23       		.byte	0x23
+ 1360 03fc 00       		.uleb128 0
+ 1361 03fd 06       		.uleb128 0x6
+ 1362 03fe 2B050000 		.4byte	.LASF61
+ 1363 0402 09       		.byte	0x9
+ 1364 0403 28       		.byte	0x28
+ 1365 0404 73020000 		.4byte	0x273
+ 1366 0408 02       		.byte	0x2
+ 1367 0409 23       		.byte	0x23
+ 1368 040a 08       		.uleb128 0x8
+ 1369 040b 06       		.uleb128 0x6
+ 1370 040c 61040000 		.4byte	.LASF62
+ 1371 0410 09       		.byte	0x9
+ 1372 0411 2A       		.byte	0x2a
+ 1373 0412 1A040000 		.4byte	0x41a
+ 1374 0416 02       		.byte	0x2
+ 1375 0417 23       		.byte	0x23
+ 1376 0418 0C       		.uleb128 0xc
+ 1377 0419 00       		.byte	0
+ 1378 041a 09       		.uleb128 0x9
+ 1379 041b 04       		.byte	0x4
+ 1380 041c E3030000 		.4byte	0x3e3
+ 1381 0420 03       		.uleb128 0x3
+ 1382 0421 58020000 		.4byte	.LASF59
+ 1383 0425 09       		.byte	0x9
+ 1384 0426 2C       		.byte	0x2c
+ 1385 0427 E3030000 		.4byte	0x3e3
+ 1386 042b 03       		.uleb128 0x3
+ 1387 042c 35000000 		.4byte	.LASF63
+ 1388 0430 0A       		.byte	0xa
+ 1389 0431 25       		.byte	0x25
+ 1390 0432 36040000 		.4byte	0x436
+ 1391 0436 09       		.uleb128 0x9
+ 1392 0437 04       		.byte	0x4
+ 1393 0438 3C040000 		.4byte	0x43c
+ 1394 043c 0E       		.uleb128 0xe
+ 1395 043d 01       		.byte	0x1
+ 1396 043e B1020000 		.4byte	0x2b1
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 26
+
+
+ 1397 0442 4C040000 		.4byte	0x44c
+ 1398 0446 0F       		.uleb128 0xf
+ 1399 0447 30000000 		.4byte	0x30
+ 1400 044b 00       		.byte	0
+ 1401 044c 03       		.uleb128 0x3
+ 1402 044d 16030000 		.4byte	.LASF64
+ 1403 0451 0B       		.byte	0xb
+ 1404 0452 2D       		.byte	0x2d
+ 1405 0453 57040000 		.4byte	0x457
+ 1406 0457 05       		.uleb128 0x5
+ 1407 0458 7E020000 		.4byte	.LASF65
+ 1408 045c 20       		.byte	0x20
+ 1409 045d 0B       		.byte	0xb
+ 1410 045e 40       		.byte	0x40
+ 1411 045f 8E040000 		.4byte	0x48e
+ 1412 0463 06       		.uleb128 0x6
+ 1413 0464 6B030000 		.4byte	.LASF66
+ 1414 0468 0B       		.byte	0xb
+ 1415 0469 41       		.byte	0x41
+ 1416 046a 2B040000 		.4byte	0x42b
+ 1417 046e 02       		.byte	0x2
+ 1418 046f 23       		.byte	0x23
+ 1419 0470 00       		.uleb128 0
+ 1420 0471 06       		.uleb128 0x6
+ 1421 0472 62000000 		.4byte	.LASF67
+ 1422 0476 0B       		.byte	0xb
+ 1423 0477 43       		.byte	0x43
+ 1424 0478 AD040000 		.4byte	0x4ad
+ 1425 047c 02       		.byte	0x2
+ 1426 047d 23       		.byte	0x23
+ 1427 047e 08       		.uleb128 0x8
+ 1428 047f 06       		.uleb128 0x6
+ 1429 0480 BB000000 		.4byte	.LASF68
+ 1430 0484 0B       		.byte	0xb
+ 1431 0485 45       		.byte	0x45
+ 1432 0486 20040000 		.4byte	0x420
+ 1433 048a 02       		.byte	0x2
+ 1434 048b 23       		.byte	0x23
+ 1435 048c 10       		.uleb128 0x10
+ 1436 048d 00       		.byte	0
+ 1437 048e 10       		.uleb128 0x10
+ 1438 048f 04       		.byte	0x4
+ 1439 0490 0B       		.byte	0xb
+ 1440 0491 35       		.byte	0x35
+ 1441 0492 AD040000 		.4byte	0x4ad
+ 1442 0496 11       		.uleb128 0x11
+ 1443 0497 8A000000 		.4byte	.LASF69
+ 1444 049b 0B       		.byte	0xb
+ 1445 049c 36       		.byte	0x36
+ 1446 049d CE040000 		.4byte	0x4ce
+ 1447 04a1 11       		.uleb128 0x11
+ 1448 04a2 1D040000 		.4byte	.LASF70
+ 1449 04a6 0B       		.byte	0xb
+ 1450 04a7 37       		.byte	0x37
+ 1451 04a8 D4040000 		.4byte	0x4d4
+ 1452 04ac 00       		.byte	0
+ 1453 04ad 12       		.uleb128 0x12
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 27
+
+
+ 1454 04ae AB030000 		.4byte	.LASF90
+ 1455 04b2 08       		.byte	0x8
+ 1456 04b3 0B       		.byte	0xb
+ 1457 04b4 32       		.byte	0x32
+ 1458 04b5 CE040000 		.4byte	0x4ce
+ 1459 04b9 11       		.uleb128 0x11
+ 1460 04ba BC010000 		.4byte	.LASF71
+ 1461 04be 0B       		.byte	0xb
+ 1462 04bf 33       		.byte	0x33
+ 1463 04c0 B3020000 		.4byte	0x2b3
+ 1464 04c4 13       		.uleb128 0x13
+ 1465 04c5 6800     		.ascii	"h\000"
+ 1466 04c7 0B       		.byte	0xb
+ 1467 04c8 3A       		.byte	0x3a
+ 1468 04c9 DA040000 		.4byte	0x4da
+ 1469 04cd 00       		.byte	0
+ 1470 04ce 09       		.uleb128 0x9
+ 1471 04cf 04       		.byte	0x4
+ 1472 04d0 AD040000 		.4byte	0x4ad
+ 1473 04d4 09       		.uleb128 0x9
+ 1474 04d5 04       		.byte	0x4
+ 1475 04d6 4C040000 		.4byte	0x44c
+ 1476 04da 08       		.uleb128 0x8
+ 1477 04db 08       		.byte	0x8
+ 1478 04dc 0B       		.byte	0xb
+ 1479 04dd 34       		.byte	0x34
+ 1480 04de FD040000 		.4byte	0x4fd
+ 1481 04e2 07       		.uleb128 0x7
+ 1482 04e3 7500     		.ascii	"u\000"
+ 1483 04e5 0B       		.byte	0xb
+ 1484 04e6 38       		.byte	0x38
+ 1485 04e7 8E040000 		.4byte	0x48e
+ 1486 04eb 02       		.byte	0x2
+ 1487 04ec 23       		.byte	0x23
+ 1488 04ed 00       		.uleb128 0
+ 1489 04ee 06       		.uleb128 0x6
+ 1490 04ef 0D020000 		.4byte	.LASF72
+ 1491 04f3 0B       		.byte	0xb
+ 1492 04f4 39       		.byte	0x39
+ 1493 04f5 30000000 		.4byte	0x30
+ 1494 04f9 02       		.byte	0x2
+ 1495 04fa 23       		.byte	0x23
+ 1496 04fb 04       		.uleb128 0x4
+ 1497 04fc 00       		.byte	0
+ 1498 04fd 05       		.uleb128 0x5
+ 1499 04fe C6040000 		.4byte	.LASF73
+ 1500 0502 04       		.byte	0x4
+ 1501 0503 0C       		.byte	0xc
+ 1502 0504 25       		.byte	0x25
+ 1503 0505 18050000 		.4byte	0x518
+ 1504 0509 06       		.uleb128 0x6
+ 1505 050a 21030000 		.4byte	.LASF74
+ 1506 050e 0C       		.byte	0xc
+ 1507 050f 26       		.byte	0x26
+ 1508 0510 18050000 		.4byte	0x518
+ 1509 0514 02       		.byte	0x2
+ 1510 0515 23       		.byte	0x23
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 28
+
+
+ 1511 0516 00       		.uleb128 0
+ 1512 0517 00       		.byte	0
+ 1513 0518 09       		.uleb128 0x9
+ 1514 0519 04       		.byte	0x4
+ 1515 051a FD040000 		.4byte	0x4fd
+ 1516 051e 08       		.uleb128 0x8
+ 1517 051f 0C       		.byte	0xc
+ 1518 0520 0C       		.byte	0xc
+ 1519 0521 2D       		.byte	0x2d
+ 1520 0522 51050000 		.4byte	0x551
+ 1521 0526 06       		.uleb128 0x6
+ 1522 0527 23010000 		.4byte	.LASF75
+ 1523 052b 0C       		.byte	0xc
+ 1524 052c 2E       		.byte	0x2e
+ 1525 052d 18050000 		.4byte	0x518
+ 1526 0531 02       		.byte	0x2
+ 1527 0532 23       		.byte	0x23
+ 1528 0533 00       		.uleb128 0
+ 1529 0534 06       		.uleb128 0x6
+ 1530 0535 CD020000 		.4byte	.LASF76
+ 1531 0539 0C       		.byte	0xc
+ 1532 053a 2F       		.byte	0x2f
+ 1533 053b 30000000 		.4byte	0x30
+ 1534 053f 02       		.byte	0x2
+ 1535 0540 23       		.byte	0x23
+ 1536 0541 04       		.uleb128 0x4
+ 1537 0542 06       		.uleb128 0x6
+ 1538 0543 A7010000 		.4byte	.LASF77
+ 1539 0547 0C       		.byte	0xc
+ 1540 0548 31       		.byte	0x31
+ 1541 0549 2B040000 		.4byte	0x42b
+ 1542 054d 02       		.byte	0x2
+ 1543 054e 23       		.byte	0x23
+ 1544 054f 08       		.uleb128 0x8
+ 1545 0550 00       		.byte	0
+ 1546 0551 03       		.uleb128 0x3
+ 1547 0552 2A000000 		.4byte	.LASF78
+ 1548 0556 0C       		.byte	0xc
+ 1549 0557 33       		.byte	0x33
+ 1550 0558 1E050000 		.4byte	0x51e
+ 1551 055c 10       		.uleb128 0x10
+ 1552 055d 04       		.byte	0x4
+ 1553 055e 06       		.byte	0x6
+ 1554 055f 8F       		.byte	0x8f
+ 1555 0560 91050000 		.4byte	0x591
+ 1556 0564 11       		.uleb128 0x11
+ 1557 0565 1A000000 		.4byte	.LASF79
+ 1558 0569 06       		.byte	0x6
+ 1559 056a 96       		.byte	0x96
+ 1560 056b EF000000 		.4byte	0xef
+ 1561 056f 11       		.uleb128 0x11
+ 1562 0570 59000000 		.4byte	.LASF80
+ 1563 0574 06       		.byte	0x6
+ 1564 0575 9D       		.byte	0x9d
+ 1565 0576 EF000000 		.4byte	0xef
+ 1566 057a 11       		.uleb128 0x11
+ 1567 057b 10050000 		.4byte	.LASF81
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 29
+
+
+ 1568 057f 06       		.byte	0x6
+ 1569 0580 A4       		.byte	0xa4
+ 1570 0581 B1020000 		.4byte	0x2b1
+ 1571 0585 11       		.uleb128 0x11
+ 1572 0586 B7030000 		.4byte	.LASF82
+ 1573 058a 06       		.byte	0x6
+ 1574 058b AB       		.byte	0xab
+ 1575 058c FA000000 		.4byte	0xfa
+ 1576 0590 00       		.byte	0
+ 1577 0591 09       		.uleb128 0x9
+ 1578 0592 04       		.byte	0x4
+ 1579 0593 97050000 		.4byte	0x597
+ 1580 0597 14       		.uleb128 0x14
+ 1581 0598 9C050000 		.4byte	0x59c
+ 1582 059c 04       		.uleb128 0x4
+ 1583 059d 01       		.byte	0x1
+ 1584 059e 08       		.byte	0x8
+ 1585 059f 22040000 		.4byte	.LASF83
+ 1586 05a3 09       		.uleb128 0x9
+ 1587 05a4 04       		.byte	0x4
+ 1588 05a5 B3020000 		.4byte	0x2b3
+ 1589 05a9 09       		.uleb128 0x9
+ 1590 05aa 04       		.byte	0x4
+ 1591 05ab 20040000 		.4byte	0x420
+ 1592 05af 03       		.uleb128 0x3
+ 1593 05b0 00000000 		.4byte	.LASF84
+ 1594 05b4 06       		.byte	0x6
+ 1595 05b5 DE       		.byte	0xde
+ 1596 05b6 BA050000 		.4byte	0x5ba
+ 1597 05ba 09       		.uleb128 0x9
+ 1598 05bb 04       		.byte	0x4
+ 1599 05bc C0050000 		.4byte	0x5c0
+ 1600 05c0 0E       		.uleb128 0xe
+ 1601 05c1 01       		.byte	0x1
+ 1602 05c2 EF000000 		.4byte	0xef
+ 1603 05c6 D0050000 		.4byte	0x5d0
+ 1604 05ca 0F       		.uleb128 0xf
+ 1605 05cb B1020000 		.4byte	0x2b1
+ 1606 05cf 00       		.byte	0
+ 1607 05d0 05       		.uleb128 0x5
+ 1608 05d1 ED030000 		.4byte	.LASF85
+ 1609 05d5 10       		.byte	0x10
+ 1610 05d6 0D       		.byte	0xd
+ 1611 05d7 3F       		.byte	0x3f
+ 1612 05d8 15060000 		.4byte	0x615
+ 1613 05dc 06       		.uleb128 0x6
+ 1614 05dd 00020000 		.4byte	.LASF86
+ 1615 05e1 0D       		.byte	0xd
+ 1616 05e2 40       		.byte	0x40
+ 1617 05e3 91050000 		.4byte	0x591
+ 1618 05e7 02       		.byte	0x2
+ 1619 05e8 23       		.byte	0x23
+ 1620 05e9 00       		.uleb128 0
+ 1621 05ea 06       		.uleb128 0x6
+ 1622 05eb DC020000 		.4byte	.LASF87
+ 1623 05ef 0D       		.byte	0xd
+ 1624 05f0 41       		.byte	0x41
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 30
+
+
+ 1625 05f1 17060000 		.4byte	0x617
+ 1626 05f5 02       		.byte	0x2
+ 1627 05f6 23       		.byte	0x23
+ 1628 05f7 04       		.uleb128 0x4
+ 1629 05f8 06       		.uleb128 0x6
+ 1630 05f9 EC010000 		.4byte	.LASF88
+ 1631 05fd 0D       		.byte	0xd
+ 1632 05fe 42       		.byte	0x42
+ 1633 05ff 17060000 		.4byte	0x617
+ 1634 0603 02       		.byte	0x2
+ 1635 0604 23       		.byte	0x23
+ 1636 0605 08       		.uleb128 0x8
+ 1637 0606 06       		.uleb128 0x6
+ 1638 0607 38030000 		.4byte	.LASF89
+ 1639 060b 0D       		.byte	0xd
+ 1640 060c 43       		.byte	0x43
+ 1641 060d 17060000 		.4byte	0x617
+ 1642 0611 02       		.byte	0x2
+ 1643 0612 23       		.byte	0x23
+ 1644 0613 0C       		.uleb128 0xc
+ 1645 0614 00       		.byte	0
+ 1646 0615 15       		.uleb128 0x15
+ 1647 0616 01       		.byte	0x1
+ 1648 0617 09       		.uleb128 0x9
+ 1649 0618 04       		.byte	0x4
+ 1650 0619 15060000 		.4byte	0x615
+ 1651 061d 16       		.uleb128 0x16
+ 1652 061e F005     		.2byte	0x5f0
+ 1653 0620 0D       		.byte	0xd
+ 1654 0621 48       		.byte	0x48
+ 1655 0622 6C060000 		.4byte	0x66c
+ 1656 0626 07       		.uleb128 0x7
+ 1657 0627 543000   		.ascii	"T0\000"
+ 1658 062a 0D       		.byte	0xd
+ 1659 062b 49       		.byte	0x49
+ 1660 062c 6C060000 		.4byte	0x66c
+ 1661 0630 02       		.byte	0x2
+ 1662 0631 23       		.byte	0x23
+ 1663 0632 00       		.uleb128 0
+ 1664 0633 07       		.uleb128 0x7
+ 1665 0634 543100   		.ascii	"T1\000"
+ 1666 0637 0D       		.byte	0xd
+ 1667 0638 4A       		.byte	0x4a
+ 1668 0639 6C060000 		.4byte	0x66c
+ 1669 063d 03       		.byte	0x3
+ 1670 063e 23       		.byte	0x23
+ 1671 063f B002     		.uleb128 0x130
+ 1672 0641 07       		.uleb128 0x7
+ 1673 0642 543200   		.ascii	"T2\000"
+ 1674 0645 0D       		.byte	0xd
+ 1675 0646 4B       		.byte	0x4b
+ 1676 0647 6C060000 		.4byte	0x66c
+ 1677 064b 03       		.byte	0x3
+ 1678 064c 23       		.byte	0x23
+ 1679 064d E004     		.uleb128 0x260
+ 1680 064f 07       		.uleb128 0x7
+ 1681 0650 543300   		.ascii	"T3\000"
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 31
+
+
+ 1682 0653 0D       		.byte	0xd
+ 1683 0654 4C       		.byte	0x4c
+ 1684 0655 6C060000 		.4byte	0x66c
+ 1685 0659 03       		.byte	0x3
+ 1686 065a 23       		.byte	0x23
+ 1687 065b 9007     		.uleb128 0x390
+ 1688 065d 07       		.uleb128 0x7
+ 1689 065e 543400   		.ascii	"T4\000"
+ 1690 0661 0D       		.byte	0xd
+ 1691 0662 4D       		.byte	0x4d
+ 1692 0663 6C060000 		.4byte	0x66c
+ 1693 0667 03       		.byte	0x3
+ 1694 0668 23       		.byte	0x23
+ 1695 0669 C009     		.uleb128 0x4c0
+ 1696 066b 00       		.byte	0
+ 1697 066c 17       		.uleb128 0x17
+ 1698 066d B3020000 		.4byte	0x2b3
+ 1699 0671 7C060000 		.4byte	0x67c
+ 1700 0675 18       		.uleb128 0x18
+ 1701 0676 6F030000 		.4byte	0x36f
+ 1702 067a 25       		.byte	0x25
+ 1703 067b 00       		.byte	0
+ 1704 067c 19       		.uleb128 0x19
+ 1705 067d B9040000 		.4byte	.LASF91
+ 1706 0681 F005     		.2byte	0x5f0
+ 1707 0683 0D       		.byte	0xd
+ 1708 0684 47       		.byte	0x47
+ 1709 0685 9F060000 		.4byte	0x69f
+ 1710 0689 13       		.uleb128 0x13
+ 1711 068a 776100   		.ascii	"wa\000"
+ 1712 068d 0D       		.byte	0xd
+ 1713 068e 4E       		.byte	0x4e
+ 1714 068f 1D060000 		.4byte	0x61d
+ 1715 0693 11       		.uleb128 0x11
+ 1716 0694 7D040000 		.4byte	.LASF92
+ 1717 0698 0D       		.byte	0xd
+ 1718 0699 4F       		.byte	0x4f
+ 1719 069a 9F060000 		.4byte	0x69f
+ 1720 069e 00       		.byte	0
+ 1721 069f 17       		.uleb128 0x17
+ 1722 06a0 49000000 		.4byte	0x49
+ 1723 06a4 B0060000 		.4byte	0x6b0
+ 1724 06a8 1A       		.uleb128 0x1a
+ 1725 06a9 6F030000 		.4byte	0x36f
+ 1726 06ad EF05     		.2byte	0x5ef
+ 1727 06af 00       		.byte	0
+ 1728 06b0 1B       		.uleb128 0x1b
+ 1729 06b1 E3040000 		.4byte	.LASF94
+ 1730 06b5 01       		.byte	0x1
+ 1731 06b6 C3       		.byte	0xc3
+ 1732 06b7 01       		.byte	0x1
+ 1733 06b8 A6000000 		.4byte	0xa6
+ 1734 06bc 00000000 		.4byte	.LFB12
+ 1735 06c0 24000000 		.4byte	.LFE12
+ 1736 06c4 00000000 		.4byte	.LLST0
+ 1737 06c8 01       		.byte	0x1
+ 1738 06c9 0C070000 		.4byte	0x70c
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 32
+
+
+ 1739 06cd 1C       		.uleb128 0x1c
+ 1740 06ce 747000   		.ascii	"tp\000"
+ 1741 06d1 01       		.byte	0x1
+ 1742 06d2 C3       		.byte	0xc3
+ 1743 06d3 73020000 		.4byte	0x273
+ 1744 06d7 20000000 		.4byte	.LLST1
+ 1745 06db 1D       		.uleb128 0x1d
+ 1746 06dc 66747000 		.ascii	"ftp\000"
+ 1747 06e0 01       		.byte	0x1
+ 1748 06e1 C4       		.byte	0xc4
+ 1749 06e2 73020000 		.4byte	0x273
+ 1750 06e6 3E000000 		.4byte	.LLST2
+ 1751 06ea 1E       		.uleb128 0x1e
+ 1752 06eb B3040000 		.4byte	.LASF93
+ 1753 06ef 01       		.byte	0x1
+ 1754 06f0 C5       		.byte	0xc5
+ 1755 06f1 A6000000 		.4byte	0xa6
+ 1756 06f5 67000000 		.4byte	.LLST3
+ 1757 06f9 1F       		.uleb128 0x1f
+ 1758 06fa 08000000 		.4byte	.LVL1
+ 1759 06fe 5A0E0000 		.4byte	0xe5a
+ 1760 0702 1F       		.uleb128 0x1f
+ 1761 0703 1A000000 		.4byte	.LVL4
+ 1762 0707 680E0000 		.4byte	0xe68
+ 1763 070b 00       		.byte	0
+ 1764 070c 20       		.uleb128 0x20
+ 1765 070d A5020000 		.4byte	.LASF96
+ 1766 0711 01       		.byte	0x1
+ 1767 0712 D4       		.byte	0xd4
+ 1768 0713 01       		.byte	0x1
+ 1769 0714 00000000 		.4byte	.LFB14
+ 1770 0718 44010000 		.4byte	.LFE14
+ 1771 071c 86000000 		.4byte	.LLST4
+ 1772 0720 01       		.byte	0x1
+ 1773 0721 19090000 		.4byte	0x919
+ 1774 0725 1D       		.uleb128 0x1d
+ 1775 0726 747000   		.ascii	"tp\000"
+ 1776 0729 01       		.byte	0x1
+ 1777 072a D5       		.byte	0xd5
+ 1778 072b 73020000 		.4byte	0x273
+ 1779 072f B2000000 		.4byte	.LLST5
+ 1780 0733 21       		.uleb128 0x21
+ 1781 0734 15000000 		.4byte	.LASF100
+ 1782 0738 01       		.byte	0x1
+ 1783 0739 D6       		.byte	0xd6
+ 1784 073a E4000000 		.4byte	0xe4
+ 1785 073e 22       		.uleb128 0x22
+ 1786 073f 1C000000 		.4byte	.LVL7
+ 1787 0743 800E0000 		.4byte	0xe80
+ 1788 0747 6F070000 		.4byte	0x76f
+ 1789 074b 23       		.uleb128 0x23
+ 1790 074c 01       		.byte	0x1
+ 1791 074d 53       		.byte	0x53
+ 1792 074e 05       		.byte	0x5
+ 1793 074f 03       		.byte	0x3
+ 1794 0750 00000000 		.4byte	thread
+ 1795 0754 23       		.uleb128 0x23
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 33
+
+
+ 1796 0755 01       		.byte	0x1
+ 1797 0756 51       		.byte	0x51
+ 1798 0757 03       		.byte	0x3
+ 1799 0758 0A       		.byte	0xa
+ 1800 0759 3001     		.2byte	0x130
+ 1801 075b 23       		.uleb128 0x23
+ 1802 075c 01       		.byte	0x1
+ 1803 075d 50       		.byte	0x50
+ 1804 075e 05       		.byte	0x5
+ 1805 075f 03       		.byte	0x3
+ 1806 0760 00000000 		.4byte	.LANCHOR0
+ 1807 0764 23       		.uleb128 0x23
+ 1808 0765 02       		.byte	0x2
+ 1809 0766 7D       		.byte	0x7d
+ 1810 0767 00       		.sleb128 0
+ 1811 0768 05       		.byte	0x5
+ 1812 0769 03       		.byte	0x3
+ 1813 076a 00000000 		.4byte	.LC0
+ 1814 076e 00       		.byte	0
+ 1815 076f 22       		.uleb128 0x22
+ 1816 0770 34000000 		.4byte	.LVL10
+ 1817 0774 AC0E0000 		.4byte	0xeac
+ 1818 0778 82070000 		.4byte	0x782
+ 1819 077c 23       		.uleb128 0x23
+ 1820 077d 01       		.byte	0x1
+ 1821 077e 50       		.byte	0x50
+ 1822 077f 01       		.byte	0x1
+ 1823 0780 31       		.byte	0x31
+ 1824 0781 00       		.byte	0
+ 1825 0782 22       		.uleb128 0x22
+ 1826 0783 40000000 		.4byte	.LVL11
+ 1827 0787 C90E0000 		.4byte	0xec9
+ 1828 078b 96070000 		.4byte	0x796
+ 1829 078f 23       		.uleb128 0x23
+ 1830 0790 01       		.byte	0x1
+ 1831 0791 50       		.byte	0x50
+ 1832 0792 02       		.byte	0x2
+ 1833 0793 74       		.byte	0x74
+ 1834 0794 00       		.sleb128 0
+ 1835 0795 00       		.byte	0
+ 1836 0796 22       		.uleb128 0x22
+ 1837 0797 56000000 		.4byte	.LVL12
+ 1838 079b AC0E0000 		.4byte	0xeac
+ 1839 079f A9070000 		.4byte	0x7a9
+ 1840 07a3 23       		.uleb128 0x23
+ 1841 07a4 01       		.byte	0x1
+ 1842 07a5 50       		.byte	0x50
+ 1843 07a6 01       		.byte	0x1
+ 1844 07a7 32       		.byte	0x32
+ 1845 07a8 00       		.byte	0
+ 1846 07a9 22       		.uleb128 0x22
+ 1847 07aa 60000000 		.4byte	.LVL13
+ 1848 07ae E10E0000 		.4byte	0xee1
+ 1849 07b2 BD070000 		.4byte	0x7bd
+ 1850 07b6 23       		.uleb128 0x23
+ 1851 07b7 01       		.byte	0x1
+ 1852 07b8 50       		.byte	0x50
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 34
+
+
+ 1853 07b9 02       		.byte	0x2
+ 1854 07ba 74       		.byte	0x74
+ 1855 07bb 00       		.sleb128 0
+ 1856 07bc 00       		.byte	0
+ 1857 07bd 22       		.uleb128 0x22
+ 1858 07be 70000000 		.4byte	.LVL14
+ 1859 07c2 AC0E0000 		.4byte	0xeac
+ 1860 07c6 D0070000 		.4byte	0x7d0
+ 1861 07ca 23       		.uleb128 0x23
+ 1862 07cb 01       		.byte	0x1
+ 1863 07cc 50       		.byte	0x50
+ 1864 07cd 01       		.byte	0x1
+ 1865 07ce 33       		.byte	0x33
+ 1866 07cf 00       		.byte	0
+ 1867 07d0 22       		.uleb128 0x22
+ 1868 07d1 7A000000 		.4byte	.LVL15
+ 1869 07d5 B0060000 		.4byte	0x6b0
+ 1870 07d9 E4070000 		.4byte	0x7e4
+ 1871 07dd 23       		.uleb128 0x23
+ 1872 07de 01       		.byte	0x1
+ 1873 07df 50       		.byte	0x50
+ 1874 07e0 02       		.byte	0x2
+ 1875 07e1 74       		.byte	0x74
+ 1876 07e2 00       		.sleb128 0
+ 1877 07e3 00       		.byte	0
+ 1878 07e4 22       		.uleb128 0x22
+ 1879 07e5 82000000 		.4byte	.LVL16
+ 1880 07e9 AC0E0000 		.4byte	0xeac
+ 1881 07ed F7070000 		.4byte	0x7f7
+ 1882 07f1 23       		.uleb128 0x23
+ 1883 07f2 01       		.byte	0x1
+ 1884 07f3 50       		.byte	0x50
+ 1885 07f4 01       		.byte	0x1
+ 1886 07f5 34       		.byte	0x34
+ 1887 07f6 00       		.byte	0
+ 1888 07f7 22       		.uleb128 0x22
+ 1889 07f8 8C000000 		.4byte	.LVL17
+ 1890 07fc B0060000 		.4byte	0x6b0
+ 1891 0800 0B080000 		.4byte	0x80b
+ 1892 0804 23       		.uleb128 0x23
+ 1893 0805 01       		.byte	0x1
+ 1894 0806 50       		.byte	0x50
+ 1895 0807 02       		.byte	0x2
+ 1896 0808 74       		.byte	0x74
+ 1897 0809 00       		.sleb128 0
+ 1898 080a 00       		.byte	0
+ 1899 080b 22       		.uleb128 0x22
+ 1900 080c 94000000 		.4byte	.LVL18
+ 1901 0810 AC0E0000 		.4byte	0xeac
+ 1902 0814 1E080000 		.4byte	0x81e
+ 1903 0818 23       		.uleb128 0x23
+ 1904 0819 01       		.byte	0x1
+ 1905 081a 50       		.byte	0x50
+ 1906 081b 01       		.byte	0x1
+ 1907 081c 35       		.byte	0x35
+ 1908 081d 00       		.byte	0
+ 1909 081e 22       		.uleb128 0x22
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 35
+
+
+ 1910 081f 9E000000 		.4byte	.LVL19
+ 1911 0823 E10E0000 		.4byte	0xee1
+ 1912 0827 32080000 		.4byte	0x832
+ 1913 082b 23       		.uleb128 0x23
+ 1914 082c 01       		.byte	0x1
+ 1915 082d 50       		.byte	0x50
+ 1916 082e 02       		.byte	0x2
+ 1917 082f 74       		.byte	0x74
+ 1918 0830 00       		.sleb128 0
+ 1919 0831 00       		.byte	0
+ 1920 0832 22       		.uleb128 0x22
+ 1921 0833 B0000000 		.4byte	.LVL20
+ 1922 0837 AC0E0000 		.4byte	0xeac
+ 1923 083b 45080000 		.4byte	0x845
+ 1924 083f 23       		.uleb128 0x23
+ 1925 0840 01       		.byte	0x1
+ 1926 0841 50       		.byte	0x50
+ 1927 0842 01       		.byte	0x1
+ 1928 0843 36       		.byte	0x36
+ 1929 0844 00       		.byte	0
+ 1930 0845 22       		.uleb128 0x22
+ 1931 0846 C6000000 		.4byte	.LVL21
+ 1932 084a AC0E0000 		.4byte	0xeac
+ 1933 084e 58080000 		.4byte	0x858
+ 1934 0852 23       		.uleb128 0x23
+ 1935 0853 01       		.byte	0x1
+ 1936 0854 50       		.byte	0x50
+ 1937 0855 01       		.byte	0x1
+ 1938 0856 37       		.byte	0x37
+ 1939 0857 00       		.byte	0
+ 1940 0858 22       		.uleb128 0x22
+ 1941 0859 D0000000 		.4byte	.LVL22
+ 1942 085d B0060000 		.4byte	0x6b0
+ 1943 0861 6C080000 		.4byte	0x86c
+ 1944 0865 23       		.uleb128 0x23
+ 1945 0866 01       		.byte	0x1
+ 1946 0867 50       		.byte	0x50
+ 1947 0868 02       		.byte	0x2
+ 1948 0869 74       		.byte	0x74
+ 1949 086a 00       		.sleb128 0
+ 1950 086b 00       		.byte	0
+ 1951 086c 22       		.uleb128 0x22
+ 1952 086d D8000000 		.4byte	.LVL23
+ 1953 0871 AC0E0000 		.4byte	0xeac
+ 1954 0875 7F080000 		.4byte	0x87f
+ 1955 0879 23       		.uleb128 0x23
+ 1956 087a 01       		.byte	0x1
+ 1957 087b 50       		.byte	0x50
+ 1958 087c 01       		.byte	0x1
+ 1959 087d 38       		.byte	0x38
+ 1960 087e 00       		.byte	0
+ 1961 087f 22       		.uleb128 0x22
+ 1962 0880 E2000000 		.4byte	.LVL24
+ 1963 0884 B0060000 		.4byte	0x6b0
+ 1964 0888 93080000 		.4byte	0x893
+ 1965 088c 23       		.uleb128 0x23
+ 1966 088d 01       		.byte	0x1
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 36
+
+
+ 1967 088e 50       		.byte	0x50
+ 1968 088f 02       		.byte	0x2
+ 1969 0890 74       		.byte	0x74
+ 1970 0891 00       		.sleb128 0
+ 1971 0892 00       		.byte	0
+ 1972 0893 22       		.uleb128 0x22
+ 1973 0894 EA000000 		.4byte	.LVL25
+ 1974 0898 AC0E0000 		.4byte	0xeac
+ 1975 089c A6080000 		.4byte	0x8a6
+ 1976 08a0 23       		.uleb128 0x23
+ 1977 08a1 01       		.byte	0x1
+ 1978 08a2 50       		.byte	0x50
+ 1979 08a3 01       		.byte	0x1
+ 1980 08a4 39       		.byte	0x39
+ 1981 08a5 00       		.byte	0
+ 1982 08a6 22       		.uleb128 0x22
+ 1983 08a7 F4000000 		.4byte	.LVL26
+ 1984 08ab F50E0000 		.4byte	0xef5
+ 1985 08af BA080000 		.4byte	0x8ba
+ 1986 08b3 23       		.uleb128 0x23
+ 1987 08b4 01       		.byte	0x1
+ 1988 08b5 50       		.byte	0x50
+ 1989 08b6 02       		.byte	0x2
+ 1990 08b7 08       		.byte	0x8
+ 1991 08b8 32       		.byte	0x32
+ 1992 08b9 00       		.byte	0
+ 1993 08ba 22       		.uleb128 0x22
+ 1994 08bb 06010000 		.4byte	.LVL27
+ 1995 08bf AC0E0000 		.4byte	0xeac
+ 1996 08c3 CD080000 		.4byte	0x8cd
+ 1997 08c7 23       		.uleb128 0x23
+ 1998 08c8 01       		.byte	0x1
+ 1999 08c9 50       		.byte	0x50
+ 2000 08ca 01       		.byte	0x1
+ 2001 08cb 3A       		.byte	0x3a
+ 2002 08cc 00       		.byte	0
+ 2003 08cd 22       		.uleb128 0x22
+ 2004 08ce 10010000 		.4byte	.LVL28
+ 2005 08d2 B0060000 		.4byte	0x6b0
+ 2006 08d6 E1080000 		.4byte	0x8e1
+ 2007 08da 23       		.uleb128 0x23
+ 2008 08db 01       		.byte	0x1
+ 2009 08dc 50       		.byte	0x50
+ 2010 08dd 02       		.byte	0x2
+ 2011 08de 74       		.byte	0x74
+ 2012 08df 00       		.sleb128 0
+ 2013 08e0 00       		.byte	0
+ 2014 08e1 22       		.uleb128 0x22
+ 2015 08e2 18010000 		.4byte	.LVL29
+ 2016 08e6 AC0E0000 		.4byte	0xeac
+ 2017 08ea F4080000 		.4byte	0x8f4
+ 2018 08ee 23       		.uleb128 0x23
+ 2019 08ef 01       		.byte	0x1
+ 2020 08f0 50       		.byte	0x50
+ 2021 08f1 01       		.byte	0x1
+ 2022 08f2 3B       		.byte	0x3b
+ 2023 08f3 00       		.byte	0
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 37
+
+
+ 2024 08f4 22       		.uleb128 0x22
+ 2025 08f5 22010000 		.4byte	.LVL30
+ 2026 08f9 B0060000 		.4byte	0x6b0
+ 2027 08fd 08090000 		.4byte	0x908
+ 2028 0901 23       		.uleb128 0x23
+ 2029 0902 01       		.byte	0x1
+ 2030 0903 50       		.byte	0x50
+ 2031 0904 02       		.byte	0x2
+ 2032 0905 74       		.byte	0x74
+ 2033 0906 00       		.sleb128 0
+ 2034 0907 00       		.byte	0
+ 2035 0908 24       		.uleb128 0x24
+ 2036 0909 34010000 		.4byte	.LVL31
+ 2037 090d 01       		.byte	0x1
+ 2038 090e AC0E0000 		.4byte	0xeac
+ 2039 0912 23       		.uleb128 0x23
+ 2040 0913 01       		.byte	0x1
+ 2041 0914 50       		.byte	0x50
+ 2042 0915 01       		.byte	0x1
+ 2043 0916 3C       		.byte	0x3c
+ 2044 0917 00       		.byte	0
+ 2045 0918 00       		.byte	0
+ 2046 0919 1B       		.uleb128 0x1b
+ 2047 091a 48030000 		.4byte	.LASF95
+ 2048 091e 01       		.byte	0x1
+ 2049 091f 4B       		.byte	0x4b
+ 2050 0920 01       		.byte	0x1
+ 2051 0921 EF000000 		.4byte	0xef
+ 2052 0925 00000000 		.4byte	.LFB7
+ 2053 0929 0C000000 		.4byte	.LFE7
+ 2054 092d D0000000 		.4byte	.LLST6
+ 2055 0931 01       		.byte	0x1
+ 2056 0932 4D090000 		.4byte	0x94d
+ 2057 0936 1C       		.uleb128 0x1c
+ 2058 0937 7000     		.ascii	"p\000"
+ 2059 0939 01       		.byte	0x1
+ 2060 093a 4B       		.byte	0x4b
+ 2061 093b B1020000 		.4byte	0x2b1
+ 2062 093f F0000000 		.4byte	.LLST7
+ 2063 0943 1F       		.uleb128 0x1f
+ 2064 0944 08000000 		.4byte	.LVL34
+ 2065 0948 0A0F0000 		.4byte	0xf0a
+ 2066 094c 00       		.byte	0
+ 2067 094d 25       		.uleb128 0x25
+ 2068 094e 37040000 		.4byte	.LASF97
+ 2069 0952 01       		.byte	0x1
+ 2070 0953 CF       		.byte	0xcf
+ 2071 0954 01       		.byte	0x1
+ 2072 0955 00000000 		.4byte	.LFB13
+ 2073 0959 18000000 		.4byte	.LFE13
+ 2074 095d 02       		.byte	0x2
+ 2075 095e 7D       		.byte	0x7d
+ 2076 095f 00       		.sleb128 0
+ 2077 0960 01       		.byte	0x1
+ 2078 0961 81090000 		.4byte	0x981
+ 2079 0965 24       		.uleb128 0x24
+ 2080 0966 18000000 		.4byte	.LVL35
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 38
+
+
+ 2081 096a 01       		.byte	0x1
+ 2082 096b 1E0F0000 		.4byte	0xf1e
+ 2083 096f 23       		.uleb128 0x23
+ 2084 0970 01       		.byte	0x1
+ 2085 0971 52       		.byte	0x52
+ 2086 0972 03       		.byte	0x3
+ 2087 0973 0A       		.byte	0xa
+ 2088 0974 F005     		.2byte	0x5f0
+ 2089 0976 23       		.uleb128 0x23
+ 2090 0977 01       		.byte	0x1
+ 2091 0978 50       		.byte	0x50
+ 2092 0979 05       		.byte	0x5
+ 2093 097a 03       		.byte	0x3
+ 2094 097b 00000000 		.4byte	.LANCHOR0
+ 2095 097f 00       		.byte	0
+ 2096 0980 00       		.byte	0
+ 2097 0981 25       		.uleb128 0x25
+ 2098 0982 F5010000 		.4byte	.LASF98
+ 2099 0986 01       		.byte	0x1
+ 2100 0987 52       		.byte	0x52
+ 2101 0988 01       		.byte	0x1
+ 2102 0989 00000000 		.4byte	.LFB8
+ 2103 098d 18000000 		.4byte	.LFE8
+ 2104 0991 02       		.byte	0x2
+ 2105 0992 7D       		.byte	0x7d
+ 2106 0993 00       		.sleb128 0
+ 2107 0994 01       		.byte	0x1
+ 2108 0995 B5090000 		.4byte	0x9b5
+ 2109 0999 24       		.uleb128 0x24
+ 2110 099a 18000000 		.4byte	.LVL36
+ 2111 099e 01       		.byte	0x1
+ 2112 099f 1E0F0000 		.4byte	0xf1e
+ 2113 09a3 23       		.uleb128 0x23
+ 2114 09a4 01       		.byte	0x1
+ 2115 09a5 52       		.byte	0x52
+ 2116 09a6 03       		.byte	0x3
+ 2117 09a7 0A       		.byte	0xa
+ 2118 09a8 F005     		.2byte	0x5f0
+ 2119 09aa 23       		.uleb128 0x23
+ 2120 09ab 01       		.byte	0x1
+ 2121 09ac 50       		.byte	0x50
+ 2122 09ad 05       		.byte	0x5
+ 2123 09ae 03       		.byte	0x3
+ 2124 09af 00000000 		.4byte	.LANCHOR0
+ 2125 09b3 00       		.byte	0
+ 2126 09b4 00       		.byte	0
+ 2127 09b5 20       		.uleb128 0x20
+ 2128 09b6 25020000 		.4byte	.LASF99
+ 2129 09ba 01       		.byte	0x1
+ 2130 09bb 91       		.byte	0x91
+ 2131 09bc 01       		.byte	0x1
+ 2132 09bd 00000000 		.4byte	.LFB11
+ 2133 09c1 F8000000 		.4byte	.LFE11
+ 2134 09c5 11010000 		.4byte	.LLST8
+ 2135 09c9 01       		.byte	0x1
+ 2136 09ca 740B0000 		.4byte	0xb74
+ 2137 09ce 1D       		.uleb128 0x1d
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 39
+
+
+ 2138 09cf 6900     		.ascii	"i\000"
+ 2139 09d1 01       		.byte	0x1
+ 2140 09d2 92       		.byte	0x92
+ 2141 09d3 29000000 		.4byte	0x29
+ 2142 09d7 31010000 		.4byte	.LLST9
+ 2143 09db 26       		.uleb128 0x26
+ 2144 09dc 15000000 		.4byte	.LASF100
+ 2145 09e0 01       		.byte	0x1
+ 2146 09e1 93       		.byte	0x93
+ 2147 09e2 E4000000 		.4byte	0xe4
+ 2148 09e6 01       		.byte	0x1
+ 2149 09e7 55       		.byte	0x55
+ 2150 09e8 22       		.uleb128 0x22
+ 2151 09e9 18000000 		.4byte	.LVL39
+ 2152 09ed 3C0F0000 		.4byte	0xf3c
+ 2153 09f1 FF090000 		.4byte	0x9ff
+ 2154 09f5 23       		.uleb128 0x23
+ 2155 09f6 01       		.byte	0x1
+ 2156 09f7 50       		.byte	0x50
+ 2157 09f8 05       		.byte	0x5
+ 2158 09f9 03       		.byte	0x3
+ 2159 09fa 00000000 		.4byte	.LANCHOR1
+ 2160 09fe 00       		.byte	0
+ 2161 09ff 22       		.uleb128 0x22
+ 2162 0a00 2A000000 		.4byte	.LVL40
+ 2163 0a04 5B0F0000 		.4byte	0xf5b
+ 2164 0a08 2E0A0000 		.4byte	0xa2e
+ 2165 0a0c 23       		.uleb128 0x23
+ 2166 0a0d 01       		.byte	0x1
+ 2167 0a0e 53       		.byte	0x53
+ 2168 0a0f 05       		.byte	0x5
+ 2169 0a10 03       		.byte	0x3
+ 2170 0a11 00000000 		.4byte	.LC0
+ 2171 0a15 23       		.uleb128 0x23
+ 2172 0a16 01       		.byte	0x1
+ 2173 0a17 52       		.byte	0x52
+ 2174 0a18 05       		.byte	0x5
+ 2175 0a19 03       		.byte	0x3
+ 2176 0a1a 00000000 		.4byte	thread
+ 2177 0a1e 23       		.uleb128 0x23
+ 2178 0a1f 01       		.byte	0x1
+ 2179 0a20 51       		.byte	0x51
+ 2180 0a21 02       		.byte	0x2
+ 2181 0a22 75       		.byte	0x75
+ 2182 0a23 7F       		.sleb128 -1
+ 2183 0a24 23       		.uleb128 0x23
+ 2184 0a25 01       		.byte	0x1
+ 2185 0a26 50       		.byte	0x50
+ 2186 0a27 05       		.byte	0x5
+ 2187 0a28 03       		.byte	0x3
+ 2188 0a29 00000000 		.4byte	.LANCHOR1
+ 2189 0a2d 00       		.byte	0
+ 2190 0a2e 22       		.uleb128 0x22
+ 2191 0a2f 38000000 		.4byte	.LVL41
+ 2192 0a33 5B0F0000 		.4byte	0xf5b
+ 2193 0a37 5D0A0000 		.4byte	0xa5d
+ 2194 0a3b 23       		.uleb128 0x23
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 40
+
+
+ 2195 0a3c 01       		.byte	0x1
+ 2196 0a3d 53       		.byte	0x53
+ 2197 0a3e 05       		.byte	0x5
+ 2198 0a3f 03       		.byte	0x3
+ 2199 0a40 04000000 		.4byte	.LC1
+ 2200 0a44 23       		.uleb128 0x23
+ 2201 0a45 01       		.byte	0x1
+ 2202 0a46 52       		.byte	0x52
+ 2203 0a47 05       		.byte	0x5
+ 2204 0a48 03       		.byte	0x3
+ 2205 0a49 00000000 		.4byte	thread
+ 2206 0a4d 23       		.uleb128 0x23
+ 2207 0a4e 01       		.byte	0x1
+ 2208 0a4f 51       		.byte	0x51
+ 2209 0a50 02       		.byte	0x2
+ 2210 0a51 75       		.byte	0x75
+ 2211 0a52 7E       		.sleb128 -2
+ 2212 0a53 23       		.uleb128 0x23
+ 2213 0a54 01       		.byte	0x1
+ 2214 0a55 50       		.byte	0x50
+ 2215 0a56 05       		.byte	0x5
+ 2216 0a57 03       		.byte	0x3
+ 2217 0a58 00000000 		.4byte	.LANCHOR1
+ 2218 0a5c 00       		.byte	0
+ 2219 0a5d 22       		.uleb128 0x22
+ 2220 0a5e 46000000 		.4byte	.LVL42
+ 2221 0a62 5B0F0000 		.4byte	0xf5b
+ 2222 0a66 8C0A0000 		.4byte	0xa8c
+ 2223 0a6a 23       		.uleb128 0x23
+ 2224 0a6b 01       		.byte	0x1
+ 2225 0a6c 53       		.byte	0x53
+ 2226 0a6d 05       		.byte	0x5
+ 2227 0a6e 03       		.byte	0x3
+ 2228 0a6f 08000000 		.4byte	.LC2
+ 2229 0a73 23       		.uleb128 0x23
+ 2230 0a74 01       		.byte	0x1
+ 2231 0a75 52       		.byte	0x52
+ 2232 0a76 05       		.byte	0x5
+ 2233 0a77 03       		.byte	0x3
+ 2234 0a78 00000000 		.4byte	thread
+ 2235 0a7c 23       		.uleb128 0x23
+ 2236 0a7d 01       		.byte	0x1
+ 2237 0a7e 51       		.byte	0x51
+ 2238 0a7f 02       		.byte	0x2
+ 2239 0a80 75       		.byte	0x75
+ 2240 0a81 7D       		.sleb128 -3
+ 2241 0a82 23       		.uleb128 0x23
+ 2242 0a83 01       		.byte	0x1
+ 2243 0a84 50       		.byte	0x50
+ 2244 0a85 05       		.byte	0x5
+ 2245 0a86 03       		.byte	0x3
+ 2246 0a87 00000000 		.4byte	.LANCHOR1
+ 2247 0a8b 00       		.byte	0
+ 2248 0a8c 22       		.uleb128 0x22
+ 2249 0a8d 54000000 		.4byte	.LVL43
+ 2250 0a91 5B0F0000 		.4byte	0xf5b
+ 2251 0a95 BB0A0000 		.4byte	0xabb
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 41
+
+
+ 2252 0a99 23       		.uleb128 0x23
+ 2253 0a9a 01       		.byte	0x1
+ 2254 0a9b 53       		.byte	0x53
+ 2255 0a9c 05       		.byte	0x5
+ 2256 0a9d 03       		.byte	0x3
+ 2257 0a9e 0C000000 		.4byte	.LC3
+ 2258 0aa2 23       		.uleb128 0x23
+ 2259 0aa3 01       		.byte	0x1
+ 2260 0aa4 52       		.byte	0x52
+ 2261 0aa5 05       		.byte	0x5
+ 2262 0aa6 03       		.byte	0x3
+ 2263 0aa7 00000000 		.4byte	thread
+ 2264 0aab 23       		.uleb128 0x23
+ 2265 0aac 01       		.byte	0x1
+ 2266 0aad 51       		.byte	0x51
+ 2267 0aae 02       		.byte	0x2
+ 2268 0aaf 75       		.byte	0x75
+ 2269 0ab0 7C       		.sleb128 -4
+ 2270 0ab1 23       		.uleb128 0x23
+ 2271 0ab2 01       		.byte	0x1
+ 2272 0ab3 50       		.byte	0x50
+ 2273 0ab4 05       		.byte	0x5
+ 2274 0ab5 03       		.byte	0x3
+ 2275 0ab6 00000000 		.4byte	.LANCHOR1
+ 2276 0aba 00       		.byte	0
+ 2277 0abb 22       		.uleb128 0x22
+ 2278 0abc 62000000 		.4byte	.LVL44
+ 2279 0ac0 5B0F0000 		.4byte	0xf5b
+ 2280 0ac4 EA0A0000 		.4byte	0xaea
+ 2281 0ac8 23       		.uleb128 0x23
+ 2282 0ac9 01       		.byte	0x1
+ 2283 0aca 53       		.byte	0x53
+ 2284 0acb 05       		.byte	0x5
+ 2285 0acc 03       		.byte	0x3
+ 2286 0acd 10000000 		.4byte	.LC4
+ 2287 0ad1 23       		.uleb128 0x23
+ 2288 0ad2 01       		.byte	0x1
+ 2289 0ad3 52       		.byte	0x52
+ 2290 0ad4 05       		.byte	0x5
+ 2291 0ad5 03       		.byte	0x3
+ 2292 0ad6 00000000 		.4byte	thread
+ 2293 0ada 23       		.uleb128 0x23
+ 2294 0adb 01       		.byte	0x1
+ 2295 0adc 51       		.byte	0x51
+ 2296 0add 02       		.byte	0x2
+ 2297 0ade 75       		.byte	0x75
+ 2298 0adf 7B       		.sleb128 -5
+ 2299 0ae0 23       		.uleb128 0x23
+ 2300 0ae1 01       		.byte	0x1
+ 2301 0ae2 50       		.byte	0x50
+ 2302 0ae3 05       		.byte	0x5
+ 2303 0ae4 03       		.byte	0x3
+ 2304 0ae5 00000000 		.4byte	.LANCHOR1
+ 2305 0ae9 00       		.byte	0
+ 2306 0aea 22       		.uleb128 0x22
+ 2307 0aeb 82000000 		.4byte	.LVL45
+ 2308 0aef AC0E0000 		.4byte	0xeac
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 42
+
+
+ 2309 0af3 FD0A0000 		.4byte	0xafd
+ 2310 0af7 23       		.uleb128 0x23
+ 2311 0af8 01       		.byte	0x1
+ 2312 0af9 50       		.byte	0x50
+ 2313 0afa 01       		.byte	0x1
+ 2314 0afb 31       		.byte	0x31
+ 2315 0afc 00       		.byte	0
+ 2316 0afd 1F       		.uleb128 0x1f
+ 2317 0afe 8A000000 		.4byte	.LVL46
+ 2318 0b02 820F0000 		.4byte	0xf82
+ 2319 0b06 22       		.uleb128 0x22
+ 2320 0b07 92000000 		.4byte	.LVL47
+ 2321 0b0b 8C0F0000 		.4byte	0xf8c
+ 2322 0b0f 220B0000 		.4byte	0xb22
+ 2323 0b13 23       		.uleb128 0x23
+ 2324 0b14 01       		.byte	0x1
+ 2325 0b15 51       		.byte	0x51
+ 2326 0b16 05       		.byte	0x5
+ 2327 0b17 03       		.byte	0x3
+ 2328 0b18 14000000 		.4byte	.LC5
+ 2329 0b1c 23       		.uleb128 0x23
+ 2330 0b1d 01       		.byte	0x1
+ 2331 0b1e 50       		.byte	0x50
+ 2332 0b1f 01       		.byte	0x1
+ 2333 0b20 32       		.byte	0x32
+ 2334 0b21 00       		.byte	0
+ 2335 0b22 22       		.uleb128 0x22
+ 2336 0b23 9E000000 		.4byte	.LVL48
+ 2337 0b27 AF0F0000 		.4byte	0xfaf
+ 2338 0b2b 390B0000 		.4byte	0xb39
+ 2339 0b2f 23       		.uleb128 0x23
+ 2340 0b30 01       		.byte	0x1
+ 2341 0b31 50       		.byte	0x50
+ 2342 0b32 05       		.byte	0x5
+ 2343 0b33 03       		.byte	0x3
+ 2344 0b34 00000000 		.4byte	.LANCHOR1
+ 2345 0b38 00       		.byte	0
+ 2346 0b39 22       		.uleb128 0x22
+ 2347 0b3a AA000000 		.4byte	.LVL49
+ 2348 0b3e AC0E0000 		.4byte	0xeac
+ 2349 0b42 4C0B0000 		.4byte	0xb4c
+ 2350 0b46 23       		.uleb128 0x23
+ 2351 0b47 01       		.byte	0x1
+ 2352 0b48 50       		.byte	0x50
+ 2353 0b49 01       		.byte	0x1
+ 2354 0b4a 33       		.byte	0x33
+ 2355 0b4b 00       		.byte	0
+ 2356 0b4c 22       		.uleb128 0x22
+ 2357 0b4d B8000000 		.4byte	.LVL50
+ 2358 0b51 AF0F0000 		.4byte	0xfaf
+ 2359 0b55 630B0000 		.4byte	0xb63
+ 2360 0b59 23       		.uleb128 0x23
+ 2361 0b5a 01       		.byte	0x1
+ 2362 0b5b 50       		.byte	0x50
+ 2363 0b5c 05       		.byte	0x5
+ 2364 0b5d 03       		.byte	0x3
+ 2365 0b5e 00000000 		.4byte	.LANCHOR1
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 43
+
+
+ 2366 0b62 00       		.byte	0
+ 2367 0b63 24       		.uleb128 0x24
+ 2368 0b64 CA000000 		.4byte	.LVL51
+ 2369 0b68 01       		.byte	0x1
+ 2370 0b69 AC0E0000 		.4byte	0xeac
+ 2371 0b6d 23       		.uleb128 0x23
+ 2372 0b6e 01       		.byte	0x1
+ 2373 0b6f 50       		.byte	0x50
+ 2374 0b70 01       		.byte	0x1
+ 2375 0b71 34       		.byte	0x34
+ 2376 0b72 00       		.byte	0
+ 2377 0b73 00       		.byte	0
+ 2378 0b74 25       		.uleb128 0x25
+ 2379 0b75 96000000 		.4byte	.LASF101
+ 2380 0b79 01       		.byte	0x1
+ 2381 0b7a 8C       		.byte	0x8c
+ 2382 0b7b 01       		.byte	0x1
+ 2383 0b7c 00000000 		.4byte	.LFB10
+ 2384 0b80 12000000 		.4byte	.LFE10
+ 2385 0b84 02       		.byte	0x2
+ 2386 0b85 7D       		.byte	0x7d
+ 2387 0b86 00       		.sleb128 0
+ 2388 0b87 01       		.byte	0x1
+ 2389 0b88 AD0B0000 		.4byte	0xbad
+ 2390 0b8c 24       		.uleb128 0x24
+ 2391 0b8d 12000000 		.4byte	.LVL52
+ 2392 0b91 01       		.byte	0x1
+ 2393 0b92 C70F0000 		.4byte	0xfc7
+ 2394 0b96 23       		.uleb128 0x23
+ 2395 0b97 01       		.byte	0x1
+ 2396 0b98 52       		.byte	0x52
+ 2397 0b99 01       		.byte	0x1
+ 2398 0b9a 30       		.byte	0x30
+ 2399 0b9b 23       		.uleb128 0x23
+ 2400 0b9c 01       		.byte	0x1
+ 2401 0b9d 51       		.byte	0x51
+ 2402 0b9e 03       		.byte	0x3
+ 2403 0b9f 0A       		.byte	0xa
+ 2404 0ba0 3001     		.2byte	0x130
+ 2405 0ba2 23       		.uleb128 0x23
+ 2406 0ba3 01       		.byte	0x1
+ 2407 0ba4 50       		.byte	0x50
+ 2408 0ba5 05       		.byte	0x5
+ 2409 0ba6 03       		.byte	0x3
+ 2410 0ba7 00000000 		.4byte	.LANCHOR1
+ 2411 0bab 00       		.byte	0
+ 2412 0bac 00       		.byte	0
+ 2413 0bad 20       		.uleb128 0x20
+ 2414 0bae 70010000 		.4byte	.LASF102
+ 2415 0bb2 01       		.byte	0x1
+ 2416 0bb3 57       		.byte	0x57
+ 2417 0bb4 01       		.byte	0x1
+ 2418 0bb5 00000000 		.4byte	.LFB9
+ 2419 0bb9 F0000000 		.4byte	.LFE9
+ 2420 0bbd 45010000 		.4byte	.LLST10
+ 2421 0bc1 01       		.byte	0x1
+ 2422 0bc2 7D0D0000 		.4byte	0xd7d
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 44
+
+
+ 2423 0bc6 27       		.uleb128 0x27
+ 2424 0bc7 6E00     		.ascii	"n\000"
+ 2425 0bc9 01       		.byte	0x1
+ 2426 0bca 58       		.byte	0x58
+ 2427 0bcb 30000000 		.4byte	0x30
+ 2428 0bcf 02       		.byte	0x2
+ 2429 0bd0 91       		.byte	0x91
+ 2430 0bd1 68       		.sleb128 -24
+ 2431 0bd2 1D       		.uleb128 0x1d
+ 2432 0bd3 737A00   		.ascii	"sz\000"
+ 2433 0bd6 01       		.byte	0x1
+ 2434 0bd7 58       		.byte	0x58
+ 2435 0bd8 30000000 		.4byte	0x30
+ 2436 0bdc 71010000 		.4byte	.LLST11
+ 2437 0be0 1D       		.uleb128 0x1d
+ 2438 0be1 703100   		.ascii	"p1\000"
+ 2439 0be4 01       		.byte	0x1
+ 2440 0be5 59       		.byte	0x59
+ 2441 0be6 B1020000 		.4byte	0x2b1
+ 2442 0bea 85010000 		.4byte	.LLST12
+ 2443 0bee 26       		.uleb128 0x26
+ 2444 0bef 15000000 		.4byte	.LASF100
+ 2445 0bf3 01       		.byte	0x1
+ 2446 0bf4 5A       		.byte	0x5a
+ 2447 0bf5 E4000000 		.4byte	0xe4
+ 2448 0bf9 01       		.byte	0x1
+ 2449 0bfa 55       		.byte	0x55
+ 2450 0bfb 22       		.uleb128 0x22
+ 2451 0bfc 14000000 		.4byte	.LVL54
+ 2452 0c00 E50F0000 		.4byte	0xfe5
+ 2453 0c04 180C0000 		.4byte	0xc18
+ 2454 0c08 23       		.uleb128 0x23
+ 2455 0c09 01       		.byte	0x1
+ 2456 0c0a 51       		.byte	0x51
+ 2457 0c0b 02       		.byte	0x2
+ 2458 0c0c 91       		.byte	0x91
+ 2459 0c0d 6C       		.sleb128 -20
+ 2460 0c0e 23       		.uleb128 0x23
+ 2461 0c0f 01       		.byte	0x1
+ 2462 0c10 50       		.byte	0x50
+ 2463 0c11 05       		.byte	0x5
+ 2464 0c12 03       		.byte	0x3
+ 2465 0c13 00000000 		.4byte	.LANCHOR0
+ 2466 0c17 00       		.byte	0
+ 2467 0c18 22       		.uleb128 0x22
+ 2468 0c19 26000000 		.4byte	.LVL55
+ 2469 0c1d 800E0000 		.4byte	0xe80
+ 2470 0c21 4F0C0000 		.4byte	0xc4f
+ 2471 0c25 23       		.uleb128 0x23
+ 2472 0c26 01       		.byte	0x1
+ 2473 0c27 53       		.byte	0x53
+ 2474 0c28 05       		.byte	0x5
+ 2475 0c29 03       		.byte	0x3
+ 2476 0c2a 00000000 		.4byte	thread
+ 2477 0c2e 23       		.uleb128 0x23
+ 2478 0c2f 01       		.byte	0x1
+ 2479 0c30 52       		.byte	0x52
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 45
+
+
+ 2480 0c31 02       		.byte	0x2
+ 2481 0c32 75       		.byte	0x75
+ 2482 0c33 7F       		.sleb128 -1
+ 2483 0c34 23       		.uleb128 0x23
+ 2484 0c35 01       		.byte	0x1
+ 2485 0c36 51       		.byte	0x51
+ 2486 0c37 03       		.byte	0x3
+ 2487 0c38 0A       		.byte	0xa
+ 2488 0c39 3001     		.2byte	0x130
+ 2489 0c3b 23       		.uleb128 0x23
+ 2490 0c3c 01       		.byte	0x1
+ 2491 0c3d 50       		.byte	0x50
+ 2492 0c3e 05       		.byte	0x5
+ 2493 0c3f 03       		.byte	0x3
+ 2494 0c40 00000000 		.4byte	.LANCHOR0
+ 2495 0c44 23       		.uleb128 0x23
+ 2496 0c45 02       		.byte	0x2
+ 2497 0c46 7D       		.byte	0x7d
+ 2498 0c47 00       		.sleb128 0
+ 2499 0c48 05       		.byte	0x5
+ 2500 0c49 03       		.byte	0x3
+ 2501 0c4a 00000000 		.4byte	.LC0
+ 2502 0c4e 00       		.byte	0
+ 2503 0c4f 22       		.uleb128 0x22
+ 2504 0c50 3A000000 		.4byte	.LVL56
+ 2505 0c54 800E0000 		.4byte	0xe80
+ 2506 0c58 860C0000 		.4byte	0xc86
+ 2507 0c5c 23       		.uleb128 0x23
+ 2508 0c5d 01       		.byte	0x1
+ 2509 0c5e 53       		.byte	0x53
+ 2510 0c5f 05       		.byte	0x5
+ 2511 0c60 03       		.byte	0x3
+ 2512 0c61 00000000 		.4byte	thread
+ 2513 0c65 23       		.uleb128 0x23
+ 2514 0c66 01       		.byte	0x1
+ 2515 0c67 52       		.byte	0x52
+ 2516 0c68 02       		.byte	0x2
+ 2517 0c69 75       		.byte	0x75
+ 2518 0c6a 7E       		.sleb128 -2
+ 2519 0c6b 23       		.uleb128 0x23
+ 2520 0c6c 01       		.byte	0x1
+ 2521 0c6d 51       		.byte	0x51
+ 2522 0c6e 03       		.byte	0x3
+ 2523 0c6f 0A       		.byte	0xa
+ 2524 0c70 3001     		.2byte	0x130
+ 2525 0c72 23       		.uleb128 0x23
+ 2526 0c73 01       		.byte	0x1
+ 2527 0c74 50       		.byte	0x50
+ 2528 0c75 05       		.byte	0x5
+ 2529 0c76 03       		.byte	0x3
+ 2530 0c77 00000000 		.4byte	.LANCHOR0
+ 2531 0c7b 23       		.uleb128 0x23
+ 2532 0c7c 02       		.byte	0x2
+ 2533 0c7d 7D       		.byte	0x7d
+ 2534 0c7e 00       		.sleb128 0
+ 2535 0c7f 05       		.byte	0x5
+ 2536 0c80 03       		.byte	0x3
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 46
+
+
+ 2537 0c81 04000000 		.4byte	.LC1
+ 2538 0c85 00       		.byte	0
+ 2539 0c86 22       		.uleb128 0x22
+ 2540 0c87 44000000 		.4byte	.LVL57
+ 2541 0c8b E50F0000 		.4byte	0xfe5
+ 2542 0c8f A30C0000 		.4byte	0xca3
+ 2543 0c93 23       		.uleb128 0x23
+ 2544 0c94 01       		.byte	0x1
+ 2545 0c95 51       		.byte	0x51
+ 2546 0c96 02       		.byte	0x2
+ 2547 0c97 91       		.byte	0x91
+ 2548 0c98 68       		.sleb128 -24
+ 2549 0c99 23       		.uleb128 0x23
+ 2550 0c9a 01       		.byte	0x1
+ 2551 0c9b 50       		.byte	0x50
+ 2552 0c9c 05       		.byte	0x5
+ 2553 0c9d 03       		.byte	0x3
+ 2554 0c9e 00000000 		.4byte	.LANCHOR0
+ 2555 0ca2 00       		.byte	0
+ 2556 0ca3 22       		.uleb128 0x22
+ 2557 0ca4 4C000000 		.4byte	.LVL58
+ 2558 0ca8 08100000 		.4byte	0x1008
+ 2559 0cac BA0C0000 		.4byte	0xcba
+ 2560 0cb0 23       		.uleb128 0x23
+ 2561 0cb1 01       		.byte	0x1
+ 2562 0cb2 50       		.byte	0x50
+ 2563 0cb3 05       		.byte	0x5
+ 2564 0cb4 03       		.byte	0x3
+ 2565 0cb5 00000000 		.4byte	.LANCHOR0
+ 2566 0cb9 00       		.byte	0
+ 2567 0cba 22       		.uleb128 0x22
+ 2568 0cbb 60000000 		.4byte	.LVL61
+ 2569 0cbf 800E0000 		.4byte	0xe80
+ 2570 0cc3 F10C0000 		.4byte	0xcf1
+ 2571 0cc7 23       		.uleb128 0x23
+ 2572 0cc8 01       		.byte	0x1
+ 2573 0cc9 53       		.byte	0x53
+ 2574 0cca 05       		.byte	0x5
+ 2575 0ccb 03       		.byte	0x3
+ 2576 0ccc 00000000 		.4byte	thread
+ 2577 0cd0 23       		.uleb128 0x23
+ 2578 0cd1 01       		.byte	0x1
+ 2579 0cd2 52       		.byte	0x52
+ 2580 0cd3 02       		.byte	0x2
+ 2581 0cd4 75       		.byte	0x75
+ 2582 0cd5 7D       		.sleb128 -3
+ 2583 0cd6 23       		.uleb128 0x23
+ 2584 0cd7 01       		.byte	0x1
+ 2585 0cd8 51       		.byte	0x51
+ 2586 0cd9 03       		.byte	0x3
+ 2587 0cda 0A       		.byte	0xa
+ 2588 0cdb 3001     		.2byte	0x130
+ 2589 0cdd 23       		.uleb128 0x23
+ 2590 0cde 01       		.byte	0x1
+ 2591 0cdf 50       		.byte	0x50
+ 2592 0ce0 05       		.byte	0x5
+ 2593 0ce1 03       		.byte	0x3
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 47
+
+
+ 2594 0ce2 00000000 		.4byte	.LANCHOR0
+ 2595 0ce6 23       		.uleb128 0x23
+ 2596 0ce7 02       		.byte	0x2
+ 2597 0ce8 7D       		.byte	0x7d
+ 2598 0ce9 00       		.sleb128 0
+ 2599 0cea 05       		.byte	0x5
+ 2600 0ceb 03       		.byte	0x3
+ 2601 0cec 08000000 		.4byte	.LC2
+ 2602 0cf0 00       		.byte	0
+ 2603 0cf1 22       		.uleb128 0x22
+ 2604 0cf2 68000000 		.4byte	.LVL62
+ 2605 0cf6 25100000 		.4byte	0x1025
+ 2606 0cfa 050D0000 		.4byte	0xd05
+ 2607 0cfe 23       		.uleb128 0x23
+ 2608 0cff 01       		.byte	0x1
+ 2609 0d00 50       		.byte	0x50
+ 2610 0d01 02       		.byte	0x2
+ 2611 0d02 76       		.byte	0x76
+ 2612 0d03 00       		.sleb128 0
+ 2613 0d04 00       		.byte	0
+ 2614 0d05 22       		.uleb128 0x22
+ 2615 0d06 7E000000 		.4byte	.LVL63
+ 2616 0d0a AC0E0000 		.4byte	0xeac
+ 2617 0d0e 180D0000 		.4byte	0xd18
+ 2618 0d12 23       		.uleb128 0x23
+ 2619 0d13 01       		.byte	0x1
+ 2620 0d14 50       		.byte	0x50
+ 2621 0d15 01       		.byte	0x1
+ 2622 0d16 31       		.byte	0x31
+ 2623 0d17 00       		.byte	0
+ 2624 0d18 1F       		.uleb128 0x1f
+ 2625 0d19 88000000 		.4byte	.LVL64
+ 2626 0d1d 820F0000 		.4byte	0xf82
+ 2627 0d21 22       		.uleb128 0x22
+ 2628 0d22 90000000 		.4byte	.LVL65
+ 2629 0d26 8C0F0000 		.4byte	0xf8c
+ 2630 0d2a 3D0D0000 		.4byte	0xd3d
+ 2631 0d2e 23       		.uleb128 0x23
+ 2632 0d2f 01       		.byte	0x1
+ 2633 0d30 51       		.byte	0x51
+ 2634 0d31 05       		.byte	0x5
+ 2635 0d32 03       		.byte	0x3
+ 2636 0d33 1C000000 		.4byte	.LC6
+ 2637 0d37 23       		.uleb128 0x23
+ 2638 0d38 01       		.byte	0x1
+ 2639 0d39 50       		.byte	0x50
+ 2640 0d3a 01       		.byte	0x1
+ 2641 0d3b 32       		.byte	0x32
+ 2642 0d3c 00       		.byte	0
+ 2643 0d3d 22       		.uleb128 0x22
+ 2644 0d3e 9C000000 		.4byte	.LVL66
+ 2645 0d42 E50F0000 		.4byte	0xfe5
+ 2646 0d46 5A0D0000 		.4byte	0xd5a
+ 2647 0d4a 23       		.uleb128 0x23
+ 2648 0d4b 01       		.byte	0x1
+ 2649 0d4c 51       		.byte	0x51
+ 2650 0d4d 02       		.byte	0x2
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 48
+
+
+ 2651 0d4e 91       		.byte	0x91
+ 2652 0d4f 68       		.sleb128 -24
+ 2653 0d50 23       		.uleb128 0x23
+ 2654 0d51 01       		.byte	0x1
+ 2655 0d52 50       		.byte	0x50
+ 2656 0d53 05       		.byte	0x5
+ 2657 0d54 03       		.byte	0x3
+ 2658 0d55 00000000 		.4byte	.LANCHOR0
+ 2659 0d59 00       		.byte	0
+ 2660 0d5a 22       		.uleb128 0x22
+ 2661 0d5b A8000000 		.4byte	.LVL67
+ 2662 0d5f AC0E0000 		.4byte	0xeac
+ 2663 0d63 6D0D0000 		.4byte	0xd6d
+ 2664 0d67 23       		.uleb128 0x23
+ 2665 0d68 01       		.byte	0x1
+ 2666 0d69 50       		.byte	0x50
+ 2667 0d6a 01       		.byte	0x1
+ 2668 0d6b 33       		.byte	0x33
+ 2669 0d6c 00       		.byte	0
+ 2670 0d6d 28       		.uleb128 0x28
+ 2671 0d6e BC000000 		.4byte	.LVL69
+ 2672 0d72 AC0E0000 		.4byte	0xeac
+ 2673 0d76 23       		.uleb128 0x23
+ 2674 0d77 01       		.byte	0x1
+ 2675 0d78 50       		.byte	0x50
+ 2676 0d79 01       		.byte	0x1
+ 2677 0d7a 34       		.byte	0x34
+ 2678 0d7b 00       		.byte	0
+ 2679 0d7c 00       		.byte	0
+ 2680 0d7d 26       		.uleb128 0x26
+ 2681 0d7e 43050000 		.4byte	.LASF103
+ 2682 0d82 01       		.byte	0x1
+ 2683 0d83 3A       		.byte	0x3a
+ 2684 0d84 4C040000 		.4byte	0x44c
+ 2685 0d88 05       		.byte	0x5
+ 2686 0d89 03       		.byte	0x3
+ 2687 0d8a 00000000 		.4byte	heap1
+ 2688 0d8e 27       		.uleb128 0x27
+ 2689 0d8f 6D703100 		.ascii	"mp1\000"
+ 2690 0d93 01       		.byte	0x1
+ 2691 0d94 3D       		.byte	0x3d
+ 2692 0d95 51050000 		.4byte	0x551
+ 2693 0d99 05       		.byte	0x5
+ 2694 0d9a 03       		.byte	0x3
+ 2695 0d9b 00000000 		.4byte	mp1
+ 2696 0d9f 29       		.uleb128 0x29
+ 2697 0da0 EB040000 		.4byte	.LASF104
+ 2698 0da4 08       		.byte	0x8
+ 2699 0da5 68       		.byte	0x68
+ 2700 0da6 D8030000 		.4byte	0x3d8
+ 2701 0daa 01       		.byte	0x1
+ 2702 0dab 01       		.byte	0x1
+ 2703 0dac 17       		.uleb128 0x17
+ 2704 0dad 73020000 		.4byte	0x273
+ 2705 0db1 BC0D0000 		.4byte	0xdbc
+ 2706 0db5 18       		.uleb128 0x18
+ 2707 0db6 6F030000 		.4byte	0x36f
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 49
+
+
+ 2708 0dba 04       		.byte	0x4
+ 2709 0dbb 00       		.byte	0
+ 2710 0dbc 29       		.uleb128 0x29
+ 2711 0dbd 9C030000 		.4byte	.LASF105
+ 2712 0dc1 0D       		.byte	0xd
+ 2713 0dc2 A9       		.byte	0xa9
+ 2714 0dc3 AC0D0000 		.4byte	0xdac
+ 2715 0dc7 01       		.byte	0x1
+ 2716 0dc8 01       		.byte	0x1
+ 2717 0dc9 29       		.uleb128 0x29
+ 2718 0dca 69000000 		.4byte	.LASF106
+ 2719 0dce 0D       		.byte	0xd
+ 2720 0dcf AA       		.byte	0xaa
+ 2721 0dd0 7C060000 		.4byte	0x67c
+ 2722 0dd4 01       		.byte	0x1
+ 2723 0dd5 01       		.byte	0x1
+ 2724 0dd6 17       		.uleb128 0x17
+ 2725 0dd7 B1020000 		.4byte	0x2b1
+ 2726 0ddb E10D0000 		.4byte	0xde1
+ 2727 0ddf 2A       		.uleb128 0x2a
+ 2728 0de0 00       		.byte	0
+ 2729 0de1 2B       		.uleb128 0x2b
+ 2730 0de2 776100   		.ascii	"wa\000"
+ 2731 0de5 0D       		.byte	0xd
+ 2732 0de6 AB       		.byte	0xab
+ 2733 0de7 ED0D0000 		.4byte	0xded
+ 2734 0deb 01       		.byte	0x1
+ 2735 0dec 01       		.byte	0x1
+ 2736 0ded 14       		.uleb128 0x14
+ 2737 0dee D60D0000 		.4byte	0xdd6
+ 2738 0df2 2C       		.uleb128 0x2c
+ 2739 0df3 8A020000 		.4byte	.LASF107
+ 2740 0df7 01       		.byte	0x1
+ 2741 0df8 79       		.byte	0x79
+ 2742 0df9 040E0000 		.4byte	0xe04
+ 2743 0dfd 01       		.byte	0x1
+ 2744 0dfe 05       		.byte	0x5
+ 2745 0dff 03       		.byte	0x3
+ 2746 0e00 00000000 		.4byte	testdyn1
+ 2747 0e04 14       		.uleb128 0x14
+ 2748 0e05 D0050000 		.4byte	0x5d0
+ 2749 0e09 2C       		.uleb128 0x2c
+ 2750 0e0a 93020000 		.4byte	.LASF108
+ 2751 0e0e 01       		.byte	0x1
+ 2752 0e0f B1       		.byte	0xb1
+ 2753 0e10 040E0000 		.4byte	0xe04
+ 2754 0e14 01       		.byte	0x1
+ 2755 0e15 05       		.byte	0x5
+ 2756 0e16 03       		.byte	0x3
+ 2757 0e17 00000000 		.4byte	testdyn2
+ 2758 0e1b 2C       		.uleb128 0x2c
+ 2759 0e1c 9C020000 		.4byte	.LASF109
+ 2760 0e20 01       		.byte	0x1
+ 2761 0e21 F2       		.byte	0xf2
+ 2762 0e22 040E0000 		.4byte	0xe04
+ 2763 0e26 01       		.byte	0x1
+ 2764 0e27 05       		.byte	0x5
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 50
+
+
+ 2765 0e28 03       		.byte	0x3
+ 2766 0e29 00000000 		.4byte	testdyn3
+ 2767 0e2d 17       		.uleb128 0x17
+ 2768 0e2e 3D0E0000 		.4byte	0xe3d
+ 2769 0e32 3D0E0000 		.4byte	0xe3d
+ 2770 0e36 18       		.uleb128 0x18
+ 2771 0e37 6F030000 		.4byte	0x36f
+ 2772 0e3b 03       		.byte	0x3
+ 2773 0e3c 00       		.byte	0
+ 2774 0e3d 09       		.uleb128 0x9
+ 2775 0e3e 04       		.byte	0x4
+ 2776 0e3f 040E0000 		.4byte	0xe04
+ 2777 0e43 2C       		.uleb128 0x2c
+ 2778 0e44 84040000 		.4byte	.LASF110
+ 2779 0e48 01       		.byte	0x1
+ 2780 0e49 FE       		.byte	0xfe
+ 2781 0e4a 550E0000 		.4byte	0xe55
+ 2782 0e4e 01       		.byte	0x1
+ 2783 0e4f 05       		.byte	0x5
+ 2784 0e50 03       		.byte	0x3
+ 2785 0e51 00000000 		.4byte	patterndyn
+ 2786 0e55 14       		.uleb128 0x14
+ 2787 0e56 2D0E0000 		.4byte	0xe2d
+ 2788 0e5a 2D       		.uleb128 0x2d
+ 2789 0e5b 01       		.byte	0x1
+ 2790 0e5c 6E000000 		.4byte	.LASF129
+ 2791 0e60 0E       		.byte	0xe
+ 2792 0e61 78       		.byte	0x78
+ 2793 0e62 01       		.byte	0x1
+ 2794 0e63 73020000 		.4byte	0x273
+ 2795 0e67 01       		.byte	0x1
+ 2796 0e68 2E       		.uleb128 0x2e
+ 2797 0e69 01       		.byte	0x1
+ 2798 0e6a 27040000 		.4byte	.LASF111
+ 2799 0e6e 0E       		.byte	0xe
+ 2800 0e6f 79       		.byte	0x79
+ 2801 0e70 01       		.byte	0x1
+ 2802 0e71 73020000 		.4byte	0x273
+ 2803 0e75 01       		.byte	0x1
+ 2804 0e76 800E0000 		.4byte	0xe80
+ 2805 0e7a 0F       		.uleb128 0xf
+ 2806 0e7b 73020000 		.4byte	0x273
+ 2807 0e7f 00       		.byte	0
+ 2808 0e80 2E       		.uleb128 0x2e
+ 2809 0e81 01       		.byte	0x1
+ 2810 0e82 06010000 		.4byte	.LASF112
+ 2811 0e86 0F       		.byte	0xf
+ 2812 0e87 35       		.byte	0x35
+ 2813 0e88 01       		.byte	0x1
+ 2814 0e89 73020000 		.4byte	0x273
+ 2815 0e8d 01       		.byte	0x1
+ 2816 0e8e AC0E0000 		.4byte	0xeac
+ 2817 0e92 0F       		.uleb128 0xf
+ 2818 0e93 D4040000 		.4byte	0x4d4
+ 2819 0e97 0F       		.uleb128 0xf
+ 2820 0e98 30000000 		.4byte	0x30
+ 2821 0e9c 0F       		.uleb128 0xf
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 51
+
+
+ 2822 0e9d E4000000 		.4byte	0xe4
+ 2823 0ea1 0F       		.uleb128 0xf
+ 2824 0ea2 AF050000 		.4byte	0x5af
+ 2825 0ea6 0F       		.uleb128 0xf
+ 2826 0ea7 B1020000 		.4byte	0x2b1
+ 2827 0eab 00       		.byte	0
+ 2828 0eac 2E       		.uleb128 0x2e
+ 2829 0ead 01       		.byte	0x1
+ 2830 0eae 1E050000 		.4byte	.LASF113
+ 2831 0eb2 0D       		.byte	0xd
+ 2832 0eb3 5C       		.byte	0x5c
+ 2833 0eb4 01       		.byte	0x1
+ 2834 0eb5 A6000000 		.4byte	0xa6
+ 2835 0eb9 01       		.byte	0x1
+ 2836 0eba C90E0000 		.4byte	0xec9
+ 2837 0ebe 0F       		.uleb128 0xf
+ 2838 0ebf 3B000000 		.4byte	0x3b
+ 2839 0ec3 0F       		.uleb128 0xf
+ 2840 0ec4 A6000000 		.4byte	0xa6
+ 2841 0ec8 00       		.byte	0
+ 2842 0ec9 2E       		.uleb128 0x2e
+ 2843 0eca 01       		.byte	0x1
+ 2844 0ecb 5E020000 		.4byte	.LASF114
+ 2845 0ecf 0F       		.byte	0xf
+ 2846 0ed0 32       		.byte	0x32
+ 2847 0ed1 01       		.byte	0x1
+ 2848 0ed2 73020000 		.4byte	0x273
+ 2849 0ed6 01       		.byte	0x1
+ 2850 0ed7 E10E0000 		.4byte	0xee1
+ 2851 0edb 0F       		.uleb128 0xf
+ 2852 0edc 73020000 		.4byte	0x273
+ 2853 0ee0 00       		.byte	0
+ 2854 0ee1 2F       		.uleb128 0x2f
+ 2855 0ee2 01       		.byte	0x1
+ 2856 0ee3 CD030000 		.4byte	.LASF115
+ 2857 0ee7 0F       		.byte	0xf
+ 2858 0ee8 33       		.byte	0x33
+ 2859 0ee9 01       		.byte	0x1
+ 2860 0eea 01       		.byte	0x1
+ 2861 0eeb F50E0000 		.4byte	0xef5
+ 2862 0eef 0F       		.uleb128 0xf
+ 2863 0ef0 73020000 		.4byte	0x273
+ 2864 0ef4 00       		.byte	0
+ 2865 0ef5 30       		.uleb128 0x30
+ 2866 0ef6 01       		.byte	0x1
+ 2867 0ef7 01040000 		.4byte	.LASF116
+ 2868 0efb 06       		.byte	0x6
+ 2869 0efc 6E01     		.2byte	0x16e
+ 2870 0efe 01       		.byte	0x1
+ 2871 0eff 01       		.byte	0x1
+ 2872 0f00 0A0F0000 		.4byte	0xf0a
+ 2873 0f04 0F       		.uleb128 0xf
+ 2874 0f05 05010000 		.4byte	0x105
+ 2875 0f09 00       		.byte	0
+ 2876 0f0a 2F       		.uleb128 0x2f
+ 2877 0f0b 01       		.byte	0x1
+ 2878 0f0c D8000000 		.4byte	.LASF117
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 52
+
+
+ 2879 0f10 0D       		.byte	0xd
+ 2880 0f11 5A       		.byte	0x5a
+ 2881 0f12 01       		.byte	0x1
+ 2882 0f13 01       		.byte	0x1
+ 2883 0f14 1E0F0000 		.4byte	0xf1e
+ 2884 0f18 0F       		.uleb128 0xf
+ 2885 0f19 9C050000 		.4byte	0x59c
+ 2886 0f1d 00       		.byte	0
+ 2887 0f1e 2F       		.uleb128 0x2f
+ 2888 0f1f 01       		.byte	0x1
+ 2889 0f20 7F000000 		.4byte	.LASF118
+ 2890 0f24 0B       		.byte	0xb
+ 2891 0f25 50       		.byte	0x50
+ 2892 0f26 01       		.byte	0x1
+ 2893 0f27 01       		.byte	0x1
+ 2894 0f28 3C0F0000 		.4byte	0xf3c
+ 2895 0f2c 0F       		.uleb128 0xf
+ 2896 0f2d D4040000 		.4byte	0x4d4
+ 2897 0f31 0F       		.uleb128 0xf
+ 2898 0f32 B1020000 		.4byte	0x2b1
+ 2899 0f36 0F       		.uleb128 0xf
+ 2900 0f37 30000000 		.4byte	0x30
+ 2901 0f3b 00       		.byte	0
+ 2902 0f3c 2F       		.uleb128 0x2f
+ 2903 0f3d 01       		.byte	0x1
+ 2904 0f3e 05050000 		.4byte	.LASF119
+ 2905 0f42 0C       		.byte	0xc
+ 2906 0f43 7D       		.byte	0x7d
+ 2907 0f44 01       		.byte	0x1
+ 2908 0f45 01       		.byte	0x1
+ 2909 0f46 550F0000 		.4byte	0xf55
+ 2910 0f4a 0F       		.uleb128 0xf
+ 2911 0f4b 550F0000 		.4byte	0xf55
+ 2912 0f4f 0F       		.uleb128 0xf
+ 2913 0f50 B1020000 		.4byte	0x2b1
+ 2914 0f54 00       		.byte	0
+ 2915 0f55 09       		.uleb128 0x9
+ 2916 0f56 04       		.byte	0x4
+ 2917 0f57 51050000 		.4byte	0x551
+ 2918 0f5b 2E       		.uleb128 0x2e
+ 2919 0f5c 01       		.byte	0x1
+ 2920 0f5d 85010000 		.4byte	.LASF120
+ 2921 0f61 0F       		.byte	0xf
+ 2922 0f62 39       		.byte	0x39
+ 2923 0f63 01       		.byte	0x1
+ 2924 0f64 73020000 		.4byte	0x273
+ 2925 0f68 01       		.byte	0x1
+ 2926 0f69 820F0000 		.4byte	0xf82
+ 2927 0f6d 0F       		.uleb128 0xf
+ 2928 0f6e 550F0000 		.4byte	0xf55
+ 2929 0f72 0F       		.uleb128 0xf
+ 2930 0f73 E4000000 		.4byte	0xe4
+ 2931 0f77 0F       		.uleb128 0xf
+ 2932 0f78 AF050000 		.4byte	0x5af
+ 2933 0f7c 0F       		.uleb128 0xf
+ 2934 0f7d B1020000 		.4byte	0x2b1
+ 2935 0f81 00       		.byte	0
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 53
+
+
+ 2936 0f82 31       		.uleb128 0x31
+ 2937 0f83 01       		.byte	0x1
+ 2938 0f84 4F040000 		.4byte	.LASF130
+ 2939 0f88 0D       		.byte	0xd
+ 2940 0f89 60       		.byte	0x60
+ 2941 0f8a 01       		.byte	0x1
+ 2942 0f8b 01       		.byte	0x1
+ 2943 0f8c 2E       		.uleb128 0x2e
+ 2944 0f8d 01       		.byte	0x1
+ 2945 0f8e E2020000 		.4byte	.LASF121
+ 2946 0f92 0D       		.byte	0xd
+ 2947 0f93 5D       		.byte	0x5d
+ 2948 0f94 01       		.byte	0x1
+ 2949 0f95 A6000000 		.4byte	0xa6
+ 2950 0f99 01       		.byte	0x1
+ 2951 0f9a A90F0000 		.4byte	0xfa9
+ 2952 0f9e 0F       		.uleb128 0xf
+ 2953 0f9f 3B000000 		.4byte	0x3b
+ 2954 0fa3 0F       		.uleb128 0xf
+ 2955 0fa4 A90F0000 		.4byte	0xfa9
+ 2956 0fa8 00       		.byte	0
+ 2957 0fa9 09       		.uleb128 0x9
+ 2958 0faa 04       		.byte	0x4
+ 2959 0fab 9C050000 		.4byte	0x59c
+ 2960 0faf 2E       		.uleb128 0x2e
+ 2961 0fb0 01       		.byte	0x1
+ 2962 0fb1 F9040000 		.4byte	.LASF122
+ 2963 0fb5 0C       		.byte	0xc
+ 2964 0fb6 7B       		.byte	0x7b
+ 2965 0fb7 01       		.byte	0x1
+ 2966 0fb8 B1020000 		.4byte	0x2b1
+ 2967 0fbc 01       		.byte	0x1
+ 2968 0fbd C70F0000 		.4byte	0xfc7
+ 2969 0fc1 0F       		.uleb128 0xf
+ 2970 0fc2 550F0000 		.4byte	0xf55
+ 2971 0fc6 00       		.byte	0
+ 2972 0fc7 2F       		.uleb128 0x2f
+ 2973 0fc8 01       		.byte	0x1
+ 2974 0fc9 A8040000 		.4byte	.LASF123
+ 2975 0fcd 0C       		.byte	0xc
+ 2976 0fce 78       		.byte	0x78
+ 2977 0fcf 01       		.byte	0x1
+ 2978 0fd0 01       		.byte	0x1
+ 2979 0fd1 E50F0000 		.4byte	0xfe5
+ 2980 0fd5 0F       		.uleb128 0xf
+ 2981 0fd6 550F0000 		.4byte	0xf55
+ 2982 0fda 0F       		.uleb128 0xf
+ 2983 0fdb 30000000 		.4byte	0x30
+ 2984 0fdf 0F       		.uleb128 0xf
+ 2985 0fe0 2B040000 		.4byte	0x42b
+ 2986 0fe4 00       		.byte	0
+ 2987 0fe5 2E       		.uleb128 0x2e
+ 2988 0fe6 01       		.byte	0x1
+ 2989 0fe7 42040000 		.4byte	.LASF124
+ 2990 0feb 0B       		.byte	0xb
+ 2991 0fec 54       		.byte	0x54
+ 2992 0fed 01       		.byte	0x1
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 54
+
+
+ 2993 0fee 30000000 		.4byte	0x30
+ 2994 0ff2 01       		.byte	0x1
+ 2995 0ff3 02100000 		.4byte	0x1002
+ 2996 0ff7 0F       		.uleb128 0xf
+ 2997 0ff8 D4040000 		.4byte	0x4d4
+ 2998 0ffc 0F       		.uleb128 0xf
+ 2999 0ffd 02100000 		.4byte	0x1002
+ 3000 1001 00       		.byte	0
+ 3001 1002 09       		.uleb128 0x9
+ 3002 1003 04       		.byte	0x4
+ 3003 1004 30000000 		.4byte	0x30
+ 3004 1008 2E       		.uleb128 0x2e
+ 3005 1009 01       		.byte	0x1
+ 3006 100a E1030000 		.4byte	.LASF125
+ 3007 100e 0B       		.byte	0xb
+ 3008 100f 52       		.byte	0x52
+ 3009 1010 01       		.byte	0x1
+ 3010 1011 B1020000 		.4byte	0x2b1
+ 3011 1015 01       		.byte	0x1
+ 3012 1016 25100000 		.4byte	0x1025
+ 3013 101a 0F       		.uleb128 0xf
+ 3014 101b D4040000 		.4byte	0x4d4
+ 3015 101f 0F       		.uleb128 0xf
+ 3016 1020 30000000 		.4byte	0x30
+ 3017 1024 00       		.byte	0
+ 3018 1025 32       		.uleb128 0x32
+ 3019 1026 01       		.byte	0x1
+ 3020 1027 E8000000 		.4byte	.LASF131
+ 3021 102b 0B       		.byte	0xb
+ 3022 102c 53       		.byte	0x53
+ 3023 102d 01       		.byte	0x1
+ 3024 102e 01       		.byte	0x1
+ 3025 102f 0F       		.uleb128 0xf
+ 3026 1030 B1020000 		.4byte	0x2b1
+ 3027 1034 00       		.byte	0
+ 3028 1035 00       		.byte	0
+ 3029              		.section	.debug_abbrev,"",%progbits
+ 3030              	.Ldebug_abbrev0:
+ 3031 0000 01       		.uleb128 0x1
+ 3032 0001 11       		.uleb128 0x11
+ 3033 0002 01       		.byte	0x1
+ 3034 0003 25       		.uleb128 0x25
+ 3035 0004 0E       		.uleb128 0xe
+ 3036 0005 13       		.uleb128 0x13
+ 3037 0006 0B       		.uleb128 0xb
+ 3038 0007 03       		.uleb128 0x3
+ 3039 0008 0E       		.uleb128 0xe
+ 3040 0009 1B       		.uleb128 0x1b
+ 3041 000a 0E       		.uleb128 0xe
+ 3042 000b 55       		.uleb128 0x55
+ 3043 000c 06       		.uleb128 0x6
+ 3044 000d 11       		.uleb128 0x11
+ 3045 000e 01       		.uleb128 0x1
+ 3046 000f 52       		.uleb128 0x52
+ 3047 0010 01       		.uleb128 0x1
+ 3048 0011 10       		.uleb128 0x10
+ 3049 0012 06       		.uleb128 0x6
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 55
+
+
+ 3050 0013 00       		.byte	0
+ 3051 0014 00       		.byte	0
+ 3052 0015 02       		.uleb128 0x2
+ 3053 0016 24       		.uleb128 0x24
+ 3054 0017 00       		.byte	0
+ 3055 0018 0B       		.uleb128 0xb
+ 3056 0019 0B       		.uleb128 0xb
+ 3057 001a 3E       		.uleb128 0x3e
+ 3058 001b 0B       		.uleb128 0xb
+ 3059 001c 03       		.uleb128 0x3
+ 3060 001d 08       		.uleb128 0x8
+ 3061 001e 00       		.byte	0
+ 3062 001f 00       		.byte	0
+ 3063 0020 03       		.uleb128 0x3
+ 3064 0021 16       		.uleb128 0x16
+ 3065 0022 00       		.byte	0
+ 3066 0023 03       		.uleb128 0x3
+ 3067 0024 0E       		.uleb128 0xe
+ 3068 0025 3A       		.uleb128 0x3a
+ 3069 0026 0B       		.uleb128 0xb
+ 3070 0027 3B       		.uleb128 0x3b
+ 3071 0028 0B       		.uleb128 0xb
+ 3072 0029 49       		.uleb128 0x49
+ 3073 002a 13       		.uleb128 0x13
+ 3074 002b 00       		.byte	0
+ 3075 002c 00       		.byte	0
+ 3076 002d 04       		.uleb128 0x4
+ 3077 002e 24       		.uleb128 0x24
+ 3078 002f 00       		.byte	0
+ 3079 0030 0B       		.uleb128 0xb
+ 3080 0031 0B       		.uleb128 0xb
+ 3081 0032 3E       		.uleb128 0x3e
+ 3082 0033 0B       		.uleb128 0xb
+ 3083 0034 03       		.uleb128 0x3
+ 3084 0035 0E       		.uleb128 0xe
+ 3085 0036 00       		.byte	0
+ 3086 0037 00       		.byte	0
+ 3087 0038 05       		.uleb128 0x5
+ 3088 0039 13       		.uleb128 0x13
+ 3089 003a 01       		.byte	0x1
+ 3090 003b 03       		.uleb128 0x3
+ 3091 003c 0E       		.uleb128 0xe
+ 3092 003d 0B       		.uleb128 0xb
+ 3093 003e 0B       		.uleb128 0xb
+ 3094 003f 3A       		.uleb128 0x3a
+ 3095 0040 0B       		.uleb128 0xb
+ 3096 0041 3B       		.uleb128 0x3b
+ 3097 0042 0B       		.uleb128 0xb
+ 3098 0043 01       		.uleb128 0x1
+ 3099 0044 13       		.uleb128 0x13
+ 3100 0045 00       		.byte	0
+ 3101 0046 00       		.byte	0
+ 3102 0047 06       		.uleb128 0x6
+ 3103 0048 0D       		.uleb128 0xd
+ 3104 0049 00       		.byte	0
+ 3105 004a 03       		.uleb128 0x3
+ 3106 004b 0E       		.uleb128 0xe
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 56
+
+
+ 3107 004c 3A       		.uleb128 0x3a
+ 3108 004d 0B       		.uleb128 0xb
+ 3109 004e 3B       		.uleb128 0x3b
+ 3110 004f 0B       		.uleb128 0xb
+ 3111 0050 49       		.uleb128 0x49
+ 3112 0051 13       		.uleb128 0x13
+ 3113 0052 38       		.uleb128 0x38
+ 3114 0053 0A       		.uleb128 0xa
+ 3115 0054 00       		.byte	0
+ 3116 0055 00       		.byte	0
+ 3117 0056 07       		.uleb128 0x7
+ 3118 0057 0D       		.uleb128 0xd
+ 3119 0058 00       		.byte	0
+ 3120 0059 03       		.uleb128 0x3
+ 3121 005a 08       		.uleb128 0x8
+ 3122 005b 3A       		.uleb128 0x3a
+ 3123 005c 0B       		.uleb128 0xb
+ 3124 005d 3B       		.uleb128 0x3b
+ 3125 005e 0B       		.uleb128 0xb
+ 3126 005f 49       		.uleb128 0x49
+ 3127 0060 13       		.uleb128 0x13
+ 3128 0061 38       		.uleb128 0x38
+ 3129 0062 0A       		.uleb128 0xa
+ 3130 0063 00       		.byte	0
+ 3131 0064 00       		.byte	0
+ 3132 0065 08       		.uleb128 0x8
+ 3133 0066 13       		.uleb128 0x13
+ 3134 0067 01       		.byte	0x1
+ 3135 0068 0B       		.uleb128 0xb
+ 3136 0069 0B       		.uleb128 0xb
+ 3137 006a 3A       		.uleb128 0x3a
+ 3138 006b 0B       		.uleb128 0xb
+ 3139 006c 3B       		.uleb128 0x3b
+ 3140 006d 0B       		.uleb128 0xb
+ 3141 006e 01       		.uleb128 0x1
+ 3142 006f 13       		.uleb128 0x13
+ 3143 0070 00       		.byte	0
+ 3144 0071 00       		.byte	0
+ 3145 0072 09       		.uleb128 0x9
+ 3146 0073 0F       		.uleb128 0xf
+ 3147 0074 00       		.byte	0
+ 3148 0075 0B       		.uleb128 0xb
+ 3149 0076 0B       		.uleb128 0xb
+ 3150 0077 49       		.uleb128 0x49
+ 3151 0078 13       		.uleb128 0x13
+ 3152 0079 00       		.byte	0
+ 3153 007a 00       		.byte	0
+ 3154 007b 0A       		.uleb128 0xa
+ 3155 007c 0F       		.uleb128 0xf
+ 3156 007d 00       		.byte	0
+ 3157 007e 0B       		.uleb128 0xb
+ 3158 007f 0B       		.uleb128 0xb
+ 3159 0080 00       		.byte	0
+ 3160 0081 00       		.byte	0
+ 3161 0082 0B       		.uleb128 0xb
+ 3162 0083 13       		.uleb128 0x13
+ 3163 0084 01       		.byte	0x1
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 57
+
+
+ 3164 0085 03       		.uleb128 0x3
+ 3165 0086 0E       		.uleb128 0xe
+ 3166 0087 0B       		.uleb128 0xb
+ 3167 0088 0B       		.uleb128 0xb
+ 3168 0089 3A       		.uleb128 0x3a
+ 3169 008a 0B       		.uleb128 0xb
+ 3170 008b 3B       		.uleb128 0x3b
+ 3171 008c 05       		.uleb128 0x5
+ 3172 008d 01       		.uleb128 0x1
+ 3173 008e 13       		.uleb128 0x13
+ 3174 008f 00       		.byte	0
+ 3175 0090 00       		.byte	0
+ 3176 0091 0C       		.uleb128 0xc
+ 3177 0092 0D       		.uleb128 0xd
+ 3178 0093 00       		.byte	0
+ 3179 0094 03       		.uleb128 0x3
+ 3180 0095 08       		.uleb128 0x8
+ 3181 0096 3A       		.uleb128 0x3a
+ 3182 0097 0B       		.uleb128 0xb
+ 3183 0098 3B       		.uleb128 0x3b
+ 3184 0099 05       		.uleb128 0x5
+ 3185 009a 49       		.uleb128 0x49
+ 3186 009b 13       		.uleb128 0x13
+ 3187 009c 38       		.uleb128 0x38
+ 3188 009d 0A       		.uleb128 0xa
+ 3189 009e 00       		.byte	0
+ 3190 009f 00       		.byte	0
+ 3191 00a0 0D       		.uleb128 0xd
+ 3192 00a1 35       		.uleb128 0x35
+ 3193 00a2 00       		.byte	0
+ 3194 00a3 49       		.uleb128 0x49
+ 3195 00a4 13       		.uleb128 0x13
+ 3196 00a5 00       		.byte	0
+ 3197 00a6 00       		.byte	0
+ 3198 00a7 0E       		.uleb128 0xe
+ 3199 00a8 15       		.uleb128 0x15
+ 3200 00a9 01       		.byte	0x1
+ 3201 00aa 27       		.uleb128 0x27
+ 3202 00ab 0C       		.uleb128 0xc
+ 3203 00ac 49       		.uleb128 0x49
+ 3204 00ad 13       		.uleb128 0x13
+ 3205 00ae 01       		.uleb128 0x1
+ 3206 00af 13       		.uleb128 0x13
+ 3207 00b0 00       		.byte	0
+ 3208 00b1 00       		.byte	0
+ 3209 00b2 0F       		.uleb128 0xf
+ 3210 00b3 05       		.uleb128 0x5
+ 3211 00b4 00       		.byte	0
+ 3212 00b5 49       		.uleb128 0x49
+ 3213 00b6 13       		.uleb128 0x13
+ 3214 00b7 00       		.byte	0
+ 3215 00b8 00       		.byte	0
+ 3216 00b9 10       		.uleb128 0x10
+ 3217 00ba 17       		.uleb128 0x17
+ 3218 00bb 01       		.byte	0x1
+ 3219 00bc 0B       		.uleb128 0xb
+ 3220 00bd 0B       		.uleb128 0xb
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 58
+
+
+ 3221 00be 3A       		.uleb128 0x3a
+ 3222 00bf 0B       		.uleb128 0xb
+ 3223 00c0 3B       		.uleb128 0x3b
+ 3224 00c1 0B       		.uleb128 0xb
+ 3225 00c2 01       		.uleb128 0x1
+ 3226 00c3 13       		.uleb128 0x13
+ 3227 00c4 00       		.byte	0
+ 3228 00c5 00       		.byte	0
+ 3229 00c6 11       		.uleb128 0x11
+ 3230 00c7 0D       		.uleb128 0xd
+ 3231 00c8 00       		.byte	0
+ 3232 00c9 03       		.uleb128 0x3
+ 3233 00ca 0E       		.uleb128 0xe
+ 3234 00cb 3A       		.uleb128 0x3a
+ 3235 00cc 0B       		.uleb128 0xb
+ 3236 00cd 3B       		.uleb128 0x3b
+ 3237 00ce 0B       		.uleb128 0xb
+ 3238 00cf 49       		.uleb128 0x49
+ 3239 00d0 13       		.uleb128 0x13
+ 3240 00d1 00       		.byte	0
+ 3241 00d2 00       		.byte	0
+ 3242 00d3 12       		.uleb128 0x12
+ 3243 00d4 17       		.uleb128 0x17
+ 3244 00d5 01       		.byte	0x1
+ 3245 00d6 03       		.uleb128 0x3
+ 3246 00d7 0E       		.uleb128 0xe
+ 3247 00d8 0B       		.uleb128 0xb
+ 3248 00d9 0B       		.uleb128 0xb
+ 3249 00da 3A       		.uleb128 0x3a
+ 3250 00db 0B       		.uleb128 0xb
+ 3251 00dc 3B       		.uleb128 0x3b
+ 3252 00dd 0B       		.uleb128 0xb
+ 3253 00de 01       		.uleb128 0x1
+ 3254 00df 13       		.uleb128 0x13
+ 3255 00e0 00       		.byte	0
+ 3256 00e1 00       		.byte	0
+ 3257 00e2 13       		.uleb128 0x13
+ 3258 00e3 0D       		.uleb128 0xd
+ 3259 00e4 00       		.byte	0
+ 3260 00e5 03       		.uleb128 0x3
+ 3261 00e6 08       		.uleb128 0x8
+ 3262 00e7 3A       		.uleb128 0x3a
+ 3263 00e8 0B       		.uleb128 0xb
+ 3264 00e9 3B       		.uleb128 0x3b
+ 3265 00ea 0B       		.uleb128 0xb
+ 3266 00eb 49       		.uleb128 0x49
+ 3267 00ec 13       		.uleb128 0x13
+ 3268 00ed 00       		.byte	0
+ 3269 00ee 00       		.byte	0
+ 3270 00ef 14       		.uleb128 0x14
+ 3271 00f0 26       		.uleb128 0x26
+ 3272 00f1 00       		.byte	0
+ 3273 00f2 49       		.uleb128 0x49
+ 3274 00f3 13       		.uleb128 0x13
+ 3275 00f4 00       		.byte	0
+ 3276 00f5 00       		.byte	0
+ 3277 00f6 15       		.uleb128 0x15
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 59
+
+
+ 3278 00f7 15       		.uleb128 0x15
+ 3279 00f8 00       		.byte	0
+ 3280 00f9 27       		.uleb128 0x27
+ 3281 00fa 0C       		.uleb128 0xc
+ 3282 00fb 00       		.byte	0
+ 3283 00fc 00       		.byte	0
+ 3284 00fd 16       		.uleb128 0x16
+ 3285 00fe 13       		.uleb128 0x13
+ 3286 00ff 01       		.byte	0x1
+ 3287 0100 0B       		.uleb128 0xb
+ 3288 0101 05       		.uleb128 0x5
+ 3289 0102 3A       		.uleb128 0x3a
+ 3290 0103 0B       		.uleb128 0xb
+ 3291 0104 3B       		.uleb128 0x3b
+ 3292 0105 0B       		.uleb128 0xb
+ 3293 0106 01       		.uleb128 0x1
+ 3294 0107 13       		.uleb128 0x13
+ 3295 0108 00       		.byte	0
+ 3296 0109 00       		.byte	0
+ 3297 010a 17       		.uleb128 0x17
+ 3298 010b 01       		.uleb128 0x1
+ 3299 010c 01       		.byte	0x1
+ 3300 010d 49       		.uleb128 0x49
+ 3301 010e 13       		.uleb128 0x13
+ 3302 010f 01       		.uleb128 0x1
+ 3303 0110 13       		.uleb128 0x13
+ 3304 0111 00       		.byte	0
+ 3305 0112 00       		.byte	0
+ 3306 0113 18       		.uleb128 0x18
+ 3307 0114 21       		.uleb128 0x21
+ 3308 0115 00       		.byte	0
+ 3309 0116 49       		.uleb128 0x49
+ 3310 0117 13       		.uleb128 0x13
+ 3311 0118 2F       		.uleb128 0x2f
+ 3312 0119 0B       		.uleb128 0xb
+ 3313 011a 00       		.byte	0
+ 3314 011b 00       		.byte	0
+ 3315 011c 19       		.uleb128 0x19
+ 3316 011d 17       		.uleb128 0x17
+ 3317 011e 01       		.byte	0x1
+ 3318 011f 03       		.uleb128 0x3
+ 3319 0120 0E       		.uleb128 0xe
+ 3320 0121 0B       		.uleb128 0xb
+ 3321 0122 05       		.uleb128 0x5
+ 3322 0123 3A       		.uleb128 0x3a
+ 3323 0124 0B       		.uleb128 0xb
+ 3324 0125 3B       		.uleb128 0x3b
+ 3325 0126 0B       		.uleb128 0xb
+ 3326 0127 01       		.uleb128 0x1
+ 3327 0128 13       		.uleb128 0x13
+ 3328 0129 00       		.byte	0
+ 3329 012a 00       		.byte	0
+ 3330 012b 1A       		.uleb128 0x1a
+ 3331 012c 21       		.uleb128 0x21
+ 3332 012d 00       		.byte	0
+ 3333 012e 49       		.uleb128 0x49
+ 3334 012f 13       		.uleb128 0x13
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 60
+
+
+ 3335 0130 2F       		.uleb128 0x2f
+ 3336 0131 05       		.uleb128 0x5
+ 3337 0132 00       		.byte	0
+ 3338 0133 00       		.byte	0
+ 3339 0134 1B       		.uleb128 0x1b
+ 3340 0135 2E       		.uleb128 0x2e
+ 3341 0136 01       		.byte	0x1
+ 3342 0137 03       		.uleb128 0x3
+ 3343 0138 0E       		.uleb128 0xe
+ 3344 0139 3A       		.uleb128 0x3a
+ 3345 013a 0B       		.uleb128 0xb
+ 3346 013b 3B       		.uleb128 0x3b
+ 3347 013c 0B       		.uleb128 0xb
+ 3348 013d 27       		.uleb128 0x27
+ 3349 013e 0C       		.uleb128 0xc
+ 3350 013f 49       		.uleb128 0x49
+ 3351 0140 13       		.uleb128 0x13
+ 3352 0141 11       		.uleb128 0x11
+ 3353 0142 01       		.uleb128 0x1
+ 3354 0143 12       		.uleb128 0x12
+ 3355 0144 01       		.uleb128 0x1
+ 3356 0145 40       		.uleb128 0x40
+ 3357 0146 06       		.uleb128 0x6
+ 3358 0147 9742     		.uleb128 0x2117
+ 3359 0149 0C       		.uleb128 0xc
+ 3360 014a 01       		.uleb128 0x1
+ 3361 014b 13       		.uleb128 0x13
+ 3362 014c 00       		.byte	0
+ 3363 014d 00       		.byte	0
+ 3364 014e 1C       		.uleb128 0x1c
+ 3365 014f 05       		.uleb128 0x5
+ 3366 0150 00       		.byte	0
+ 3367 0151 03       		.uleb128 0x3
+ 3368 0152 08       		.uleb128 0x8
+ 3369 0153 3A       		.uleb128 0x3a
+ 3370 0154 0B       		.uleb128 0xb
+ 3371 0155 3B       		.uleb128 0x3b
+ 3372 0156 0B       		.uleb128 0xb
+ 3373 0157 49       		.uleb128 0x49
+ 3374 0158 13       		.uleb128 0x13
+ 3375 0159 02       		.uleb128 0x2
+ 3376 015a 06       		.uleb128 0x6
+ 3377 015b 00       		.byte	0
+ 3378 015c 00       		.byte	0
+ 3379 015d 1D       		.uleb128 0x1d
+ 3380 015e 34       		.uleb128 0x34
+ 3381 015f 00       		.byte	0
+ 3382 0160 03       		.uleb128 0x3
+ 3383 0161 08       		.uleb128 0x8
+ 3384 0162 3A       		.uleb128 0x3a
+ 3385 0163 0B       		.uleb128 0xb
+ 3386 0164 3B       		.uleb128 0x3b
+ 3387 0165 0B       		.uleb128 0xb
+ 3388 0166 49       		.uleb128 0x49
+ 3389 0167 13       		.uleb128 0x13
+ 3390 0168 02       		.uleb128 0x2
+ 3391 0169 06       		.uleb128 0x6
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 61
+
+
+ 3392 016a 00       		.byte	0
+ 3393 016b 00       		.byte	0
+ 3394 016c 1E       		.uleb128 0x1e
+ 3395 016d 34       		.uleb128 0x34
+ 3396 016e 00       		.byte	0
+ 3397 016f 03       		.uleb128 0x3
+ 3398 0170 0E       		.uleb128 0xe
+ 3399 0171 3A       		.uleb128 0x3a
+ 3400 0172 0B       		.uleb128 0xb
+ 3401 0173 3B       		.uleb128 0x3b
+ 3402 0174 0B       		.uleb128 0xb
+ 3403 0175 49       		.uleb128 0x49
+ 3404 0176 13       		.uleb128 0x13
+ 3405 0177 02       		.uleb128 0x2
+ 3406 0178 06       		.uleb128 0x6
+ 3407 0179 00       		.byte	0
+ 3408 017a 00       		.byte	0
+ 3409 017b 1F       		.uleb128 0x1f
+ 3410 017c 898201   		.uleb128 0x4109
+ 3411 017f 00       		.byte	0
+ 3412 0180 11       		.uleb128 0x11
+ 3413 0181 01       		.uleb128 0x1
+ 3414 0182 31       		.uleb128 0x31
+ 3415 0183 13       		.uleb128 0x13
+ 3416 0184 00       		.byte	0
+ 3417 0185 00       		.byte	0
+ 3418 0186 20       		.uleb128 0x20
+ 3419 0187 2E       		.uleb128 0x2e
+ 3420 0188 01       		.byte	0x1
+ 3421 0189 03       		.uleb128 0x3
+ 3422 018a 0E       		.uleb128 0xe
+ 3423 018b 3A       		.uleb128 0x3a
+ 3424 018c 0B       		.uleb128 0xb
+ 3425 018d 3B       		.uleb128 0x3b
+ 3426 018e 0B       		.uleb128 0xb
+ 3427 018f 27       		.uleb128 0x27
+ 3428 0190 0C       		.uleb128 0xc
+ 3429 0191 11       		.uleb128 0x11
+ 3430 0192 01       		.uleb128 0x1
+ 3431 0193 12       		.uleb128 0x12
+ 3432 0194 01       		.uleb128 0x1
+ 3433 0195 40       		.uleb128 0x40
+ 3434 0196 06       		.uleb128 0x6
+ 3435 0197 9742     		.uleb128 0x2117
+ 3436 0199 0C       		.uleb128 0xc
+ 3437 019a 01       		.uleb128 0x1
+ 3438 019b 13       		.uleb128 0x13
+ 3439 019c 00       		.byte	0
+ 3440 019d 00       		.byte	0
+ 3441 019e 21       		.uleb128 0x21
+ 3442 019f 34       		.uleb128 0x34
+ 3443 01a0 00       		.byte	0
+ 3444 01a1 03       		.uleb128 0x3
+ 3445 01a2 0E       		.uleb128 0xe
+ 3446 01a3 3A       		.uleb128 0x3a
+ 3447 01a4 0B       		.uleb128 0xb
+ 3448 01a5 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 62
+
+
+ 3449 01a6 0B       		.uleb128 0xb
+ 3450 01a7 49       		.uleb128 0x49
+ 3451 01a8 13       		.uleb128 0x13
+ 3452 01a9 00       		.byte	0
+ 3453 01aa 00       		.byte	0
+ 3454 01ab 22       		.uleb128 0x22
+ 3455 01ac 898201   		.uleb128 0x4109
+ 3456 01af 01       		.byte	0x1
+ 3457 01b0 11       		.uleb128 0x11
+ 3458 01b1 01       		.uleb128 0x1
+ 3459 01b2 31       		.uleb128 0x31
+ 3460 01b3 13       		.uleb128 0x13
+ 3461 01b4 01       		.uleb128 0x1
+ 3462 01b5 13       		.uleb128 0x13
+ 3463 01b6 00       		.byte	0
+ 3464 01b7 00       		.byte	0
+ 3465 01b8 23       		.uleb128 0x23
+ 3466 01b9 8A8201   		.uleb128 0x410a
+ 3467 01bc 00       		.byte	0
+ 3468 01bd 02       		.uleb128 0x2
+ 3469 01be 0A       		.uleb128 0xa
+ 3470 01bf 9142     		.uleb128 0x2111
+ 3471 01c1 0A       		.uleb128 0xa
+ 3472 01c2 00       		.byte	0
+ 3473 01c3 00       		.byte	0
+ 3474 01c4 24       		.uleb128 0x24
+ 3475 01c5 898201   		.uleb128 0x4109
+ 3476 01c8 01       		.byte	0x1
+ 3477 01c9 11       		.uleb128 0x11
+ 3478 01ca 01       		.uleb128 0x1
+ 3479 01cb 9542     		.uleb128 0x2115
+ 3480 01cd 0C       		.uleb128 0xc
+ 3481 01ce 31       		.uleb128 0x31
+ 3482 01cf 13       		.uleb128 0x13
+ 3483 01d0 00       		.byte	0
+ 3484 01d1 00       		.byte	0
+ 3485 01d2 25       		.uleb128 0x25
+ 3486 01d3 2E       		.uleb128 0x2e
+ 3487 01d4 01       		.byte	0x1
+ 3488 01d5 03       		.uleb128 0x3
+ 3489 01d6 0E       		.uleb128 0xe
+ 3490 01d7 3A       		.uleb128 0x3a
+ 3491 01d8 0B       		.uleb128 0xb
+ 3492 01d9 3B       		.uleb128 0x3b
+ 3493 01da 0B       		.uleb128 0xb
+ 3494 01db 27       		.uleb128 0x27
+ 3495 01dc 0C       		.uleb128 0xc
+ 3496 01dd 11       		.uleb128 0x11
+ 3497 01de 01       		.uleb128 0x1
+ 3498 01df 12       		.uleb128 0x12
+ 3499 01e0 01       		.uleb128 0x1
+ 3500 01e1 40       		.uleb128 0x40
+ 3501 01e2 0A       		.uleb128 0xa
+ 3502 01e3 9742     		.uleb128 0x2117
+ 3503 01e5 0C       		.uleb128 0xc
+ 3504 01e6 01       		.uleb128 0x1
+ 3505 01e7 13       		.uleb128 0x13
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 63
+
+
+ 3506 01e8 00       		.byte	0
+ 3507 01e9 00       		.byte	0
+ 3508 01ea 26       		.uleb128 0x26
+ 3509 01eb 34       		.uleb128 0x34
+ 3510 01ec 00       		.byte	0
+ 3511 01ed 03       		.uleb128 0x3
+ 3512 01ee 0E       		.uleb128 0xe
+ 3513 01ef 3A       		.uleb128 0x3a
+ 3514 01f0 0B       		.uleb128 0xb
+ 3515 01f1 3B       		.uleb128 0x3b
+ 3516 01f2 0B       		.uleb128 0xb
+ 3517 01f3 49       		.uleb128 0x49
+ 3518 01f4 13       		.uleb128 0x13
+ 3519 01f5 02       		.uleb128 0x2
+ 3520 01f6 0A       		.uleb128 0xa
+ 3521 01f7 00       		.byte	0
+ 3522 01f8 00       		.byte	0
+ 3523 01f9 27       		.uleb128 0x27
+ 3524 01fa 34       		.uleb128 0x34
+ 3525 01fb 00       		.byte	0
+ 3526 01fc 03       		.uleb128 0x3
+ 3527 01fd 08       		.uleb128 0x8
+ 3528 01fe 3A       		.uleb128 0x3a
+ 3529 01ff 0B       		.uleb128 0xb
+ 3530 0200 3B       		.uleb128 0x3b
+ 3531 0201 0B       		.uleb128 0xb
+ 3532 0202 49       		.uleb128 0x49
+ 3533 0203 13       		.uleb128 0x13
+ 3534 0204 02       		.uleb128 0x2
+ 3535 0205 0A       		.uleb128 0xa
+ 3536 0206 00       		.byte	0
+ 3537 0207 00       		.byte	0
+ 3538 0208 28       		.uleb128 0x28
+ 3539 0209 898201   		.uleb128 0x4109
+ 3540 020c 01       		.byte	0x1
+ 3541 020d 11       		.uleb128 0x11
+ 3542 020e 01       		.uleb128 0x1
+ 3543 020f 31       		.uleb128 0x31
+ 3544 0210 13       		.uleb128 0x13
+ 3545 0211 00       		.byte	0
+ 3546 0212 00       		.byte	0
+ 3547 0213 29       		.uleb128 0x29
+ 3548 0214 34       		.uleb128 0x34
+ 3549 0215 00       		.byte	0
+ 3550 0216 03       		.uleb128 0x3
+ 3551 0217 0E       		.uleb128 0xe
+ 3552 0218 3A       		.uleb128 0x3a
+ 3553 0219 0B       		.uleb128 0xb
+ 3554 021a 3B       		.uleb128 0x3b
+ 3555 021b 0B       		.uleb128 0xb
+ 3556 021c 49       		.uleb128 0x49
+ 3557 021d 13       		.uleb128 0x13
+ 3558 021e 3F       		.uleb128 0x3f
+ 3559 021f 0C       		.uleb128 0xc
+ 3560 0220 3C       		.uleb128 0x3c
+ 3561 0221 0C       		.uleb128 0xc
+ 3562 0222 00       		.byte	0
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 64
+
+
+ 3563 0223 00       		.byte	0
+ 3564 0224 2A       		.uleb128 0x2a
+ 3565 0225 21       		.uleb128 0x21
+ 3566 0226 00       		.byte	0
+ 3567 0227 00       		.byte	0
+ 3568 0228 00       		.byte	0
+ 3569 0229 2B       		.uleb128 0x2b
+ 3570 022a 34       		.uleb128 0x34
+ 3571 022b 00       		.byte	0
+ 3572 022c 03       		.uleb128 0x3
+ 3573 022d 08       		.uleb128 0x8
+ 3574 022e 3A       		.uleb128 0x3a
+ 3575 022f 0B       		.uleb128 0xb
+ 3576 0230 3B       		.uleb128 0x3b
+ 3577 0231 0B       		.uleb128 0xb
+ 3578 0232 49       		.uleb128 0x49
+ 3579 0233 13       		.uleb128 0x13
+ 3580 0234 3F       		.uleb128 0x3f
+ 3581 0235 0C       		.uleb128 0xc
+ 3582 0236 3C       		.uleb128 0x3c
+ 3583 0237 0C       		.uleb128 0xc
+ 3584 0238 00       		.byte	0
+ 3585 0239 00       		.byte	0
+ 3586 023a 2C       		.uleb128 0x2c
+ 3587 023b 34       		.uleb128 0x34
+ 3588 023c 00       		.byte	0
+ 3589 023d 03       		.uleb128 0x3
+ 3590 023e 0E       		.uleb128 0xe
+ 3591 023f 3A       		.uleb128 0x3a
+ 3592 0240 0B       		.uleb128 0xb
+ 3593 0241 3B       		.uleb128 0x3b
+ 3594 0242 0B       		.uleb128 0xb
+ 3595 0243 49       		.uleb128 0x49
+ 3596 0244 13       		.uleb128 0x13
+ 3597 0245 3F       		.uleb128 0x3f
+ 3598 0246 0C       		.uleb128 0xc
+ 3599 0247 02       		.uleb128 0x2
+ 3600 0248 0A       		.uleb128 0xa
+ 3601 0249 00       		.byte	0
+ 3602 024a 00       		.byte	0
+ 3603 024b 2D       		.uleb128 0x2d
+ 3604 024c 2E       		.uleb128 0x2e
+ 3605 024d 00       		.byte	0
+ 3606 024e 3F       		.uleb128 0x3f
+ 3607 024f 0C       		.uleb128 0xc
+ 3608 0250 03       		.uleb128 0x3
+ 3609 0251 0E       		.uleb128 0xe
+ 3610 0252 3A       		.uleb128 0x3a
+ 3611 0253 0B       		.uleb128 0xb
+ 3612 0254 3B       		.uleb128 0x3b
+ 3613 0255 0B       		.uleb128 0xb
+ 3614 0256 27       		.uleb128 0x27
+ 3615 0257 0C       		.uleb128 0xc
+ 3616 0258 49       		.uleb128 0x49
+ 3617 0259 13       		.uleb128 0x13
+ 3618 025a 3C       		.uleb128 0x3c
+ 3619 025b 0C       		.uleb128 0xc
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 65
+
+
+ 3620 025c 00       		.byte	0
+ 3621 025d 00       		.byte	0
+ 3622 025e 2E       		.uleb128 0x2e
+ 3623 025f 2E       		.uleb128 0x2e
+ 3624 0260 01       		.byte	0x1
+ 3625 0261 3F       		.uleb128 0x3f
+ 3626 0262 0C       		.uleb128 0xc
+ 3627 0263 03       		.uleb128 0x3
+ 3628 0264 0E       		.uleb128 0xe
+ 3629 0265 3A       		.uleb128 0x3a
+ 3630 0266 0B       		.uleb128 0xb
+ 3631 0267 3B       		.uleb128 0x3b
+ 3632 0268 0B       		.uleb128 0xb
+ 3633 0269 27       		.uleb128 0x27
+ 3634 026a 0C       		.uleb128 0xc
+ 3635 026b 49       		.uleb128 0x49
+ 3636 026c 13       		.uleb128 0x13
+ 3637 026d 3C       		.uleb128 0x3c
+ 3638 026e 0C       		.uleb128 0xc
+ 3639 026f 01       		.uleb128 0x1
+ 3640 0270 13       		.uleb128 0x13
+ 3641 0271 00       		.byte	0
+ 3642 0272 00       		.byte	0
+ 3643 0273 2F       		.uleb128 0x2f
+ 3644 0274 2E       		.uleb128 0x2e
+ 3645 0275 01       		.byte	0x1
+ 3646 0276 3F       		.uleb128 0x3f
+ 3647 0277 0C       		.uleb128 0xc
+ 3648 0278 03       		.uleb128 0x3
+ 3649 0279 0E       		.uleb128 0xe
+ 3650 027a 3A       		.uleb128 0x3a
+ 3651 027b 0B       		.uleb128 0xb
+ 3652 027c 3B       		.uleb128 0x3b
+ 3653 027d 0B       		.uleb128 0xb
+ 3654 027e 27       		.uleb128 0x27
+ 3655 027f 0C       		.uleb128 0xc
+ 3656 0280 3C       		.uleb128 0x3c
+ 3657 0281 0C       		.uleb128 0xc
+ 3658 0282 01       		.uleb128 0x1
+ 3659 0283 13       		.uleb128 0x13
+ 3660 0284 00       		.byte	0
+ 3661 0285 00       		.byte	0
+ 3662 0286 30       		.uleb128 0x30
+ 3663 0287 2E       		.uleb128 0x2e
+ 3664 0288 01       		.byte	0x1
+ 3665 0289 3F       		.uleb128 0x3f
+ 3666 028a 0C       		.uleb128 0xc
+ 3667 028b 03       		.uleb128 0x3
+ 3668 028c 0E       		.uleb128 0xe
+ 3669 028d 3A       		.uleb128 0x3a
+ 3670 028e 0B       		.uleb128 0xb
+ 3671 028f 3B       		.uleb128 0x3b
+ 3672 0290 05       		.uleb128 0x5
+ 3673 0291 27       		.uleb128 0x27
+ 3674 0292 0C       		.uleb128 0xc
+ 3675 0293 3C       		.uleb128 0x3c
+ 3676 0294 0C       		.uleb128 0xc
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 66
+
+
+ 3677 0295 01       		.uleb128 0x1
+ 3678 0296 13       		.uleb128 0x13
+ 3679 0297 00       		.byte	0
+ 3680 0298 00       		.byte	0
+ 3681 0299 31       		.uleb128 0x31
+ 3682 029a 2E       		.uleb128 0x2e
+ 3683 029b 00       		.byte	0
+ 3684 029c 3F       		.uleb128 0x3f
+ 3685 029d 0C       		.uleb128 0xc
+ 3686 029e 03       		.uleb128 0x3
+ 3687 029f 0E       		.uleb128 0xe
+ 3688 02a0 3A       		.uleb128 0x3a
+ 3689 02a1 0B       		.uleb128 0xb
+ 3690 02a2 3B       		.uleb128 0x3b
+ 3691 02a3 0B       		.uleb128 0xb
+ 3692 02a4 27       		.uleb128 0x27
+ 3693 02a5 0C       		.uleb128 0xc
+ 3694 02a6 3C       		.uleb128 0x3c
+ 3695 02a7 0C       		.uleb128 0xc
+ 3696 02a8 00       		.byte	0
+ 3697 02a9 00       		.byte	0
+ 3698 02aa 32       		.uleb128 0x32
+ 3699 02ab 2E       		.uleb128 0x2e
+ 3700 02ac 01       		.byte	0x1
+ 3701 02ad 3F       		.uleb128 0x3f
+ 3702 02ae 0C       		.uleb128 0xc
+ 3703 02af 03       		.uleb128 0x3
+ 3704 02b0 0E       		.uleb128 0xe
+ 3705 02b1 3A       		.uleb128 0x3a
+ 3706 02b2 0B       		.uleb128 0xb
+ 3707 02b3 3B       		.uleb128 0x3b
+ 3708 02b4 0B       		.uleb128 0xb
+ 3709 02b5 27       		.uleb128 0x27
+ 3710 02b6 0C       		.uleb128 0xc
+ 3711 02b7 3C       		.uleb128 0x3c
+ 3712 02b8 0C       		.uleb128 0xc
+ 3713 02b9 00       		.byte	0
+ 3714 02ba 00       		.byte	0
+ 3715 02bb 00       		.byte	0
+ 3716              		.section	.debug_loc,"",%progbits
+ 3717              	.Ldebug_loc0:
+ 3718              	.LLST0:
+ 3719 0000 00000000 		.4byte	.LFB12
+ 3720 0004 02000000 		.4byte	.LCFI0
+ 3721 0008 0200     		.2byte	0x2
+ 3722 000a 7D       		.byte	0x7d
+ 3723 000b 00       		.sleb128 0
+ 3724 000c 02000000 		.4byte	.LCFI0
+ 3725 0010 24000000 		.4byte	.LFE12
+ 3726 0014 0200     		.2byte	0x2
+ 3727 0016 7D       		.byte	0x7d
+ 3728 0017 10       		.sleb128 16
+ 3729 0018 00000000 		.4byte	0
+ 3730 001c 00000000 		.4byte	0
+ 3731              	.LLST1:
+ 3732 0020 00000000 		.4byte	.LVL0
+ 3733 0024 07000000 		.4byte	.LVL1-1
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 67
+
+
+ 3734 0028 0100     		.2byte	0x1
+ 3735 002a 50       		.byte	0x50
+ 3736 002b 07000000 		.4byte	.LVL1-1
+ 3737 002f 24000000 		.4byte	.LFE12
+ 3738 0033 0100     		.2byte	0x1
+ 3739 0035 55       		.byte	0x55
+ 3740 0036 00000000 		.4byte	0
+ 3741 003a 00000000 		.4byte	0
+ 3742              	.LLST2:
+ 3743 003e 0C000000 		.4byte	.LVL2
+ 3744 0042 19000000 		.4byte	.LVL4-1
+ 3745 0046 0100     		.2byte	0x1
+ 3746 0048 50       		.byte	0x50
+ 3747 0049 1A000000 		.4byte	.LVL4
+ 3748 004d 22000000 		.4byte	.LVL5
+ 3749 0051 0100     		.2byte	0x1
+ 3750 0053 50       		.byte	0x50
+ 3751 0054 22000000 		.4byte	.LVL5
+ 3752 0058 24000000 		.4byte	.LFE12
+ 3753 005c 0100     		.2byte	0x1
+ 3754 005e 53       		.byte	0x53
+ 3755 005f 00000000 		.4byte	0
+ 3756 0063 00000000 		.4byte	0
+ 3757              	.LLST3:
+ 3758 0067 00000000 		.4byte	.LVL0
+ 3759 006b 0C000000 		.4byte	.LVL2
+ 3760 006f 0200     		.2byte	0x2
+ 3761 0071 30       		.byte	0x30
+ 3762 0072 9F       		.byte	0x9f
+ 3763 0073 0C000000 		.4byte	.LVL2
+ 3764 0077 24000000 		.4byte	.LFE12
+ 3765 007b 0100     		.2byte	0x1
+ 3766 007d 54       		.byte	0x54
+ 3767 007e 00000000 		.4byte	0
+ 3768 0082 00000000 		.4byte	0
+ 3769              	.LLST4:
+ 3770 0086 00000000 		.4byte	.LFB14
+ 3771 008a 02000000 		.4byte	.LCFI1
+ 3772 008e 0200     		.2byte	0x2
+ 3773 0090 7D       		.byte	0x7d
+ 3774 0091 00       		.sleb128 0
+ 3775 0092 02000000 		.4byte	.LCFI1
+ 3776 0096 10000000 		.4byte	.LCFI2
+ 3777 009a 0200     		.2byte	0x2
+ 3778 009c 7D       		.byte	0x7d
+ 3779 009d 08       		.sleb128 8
+ 3780 009e 10000000 		.4byte	.LCFI2
+ 3781 00a2 44010000 		.4byte	.LFE14
+ 3782 00a6 0200     		.2byte	0x2
+ 3783 00a8 7D       		.byte	0x7d
+ 3784 00a9 10       		.sleb128 16
+ 3785 00aa 00000000 		.4byte	0
+ 3786 00ae 00000000 		.4byte	0
+ 3787              	.LLST5:
+ 3788 00b2 1E000000 		.4byte	.LVL8
+ 3789 00b6 20000000 		.4byte	.LVL9
+ 3790 00ba 0100     		.2byte	0x1
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 68
+
+
+ 3791 00bc 50       		.byte	0x50
+ 3792 00bd 20000000 		.4byte	.LVL9
+ 3793 00c1 44010000 		.4byte	.LFE14
+ 3794 00c5 0100     		.2byte	0x1
+ 3795 00c7 54       		.byte	0x54
+ 3796 00c8 00000000 		.4byte	0
+ 3797 00cc 00000000 		.4byte	0
+ 3798              	.LLST6:
+ 3799 00d0 00000000 		.4byte	.LFB7
+ 3800 00d4 02000000 		.4byte	.LCFI3
+ 3801 00d8 0200     		.2byte	0x2
+ 3802 00da 7D       		.byte	0x7d
+ 3803 00db 00       		.sleb128 0
+ 3804 00dc 02000000 		.4byte	.LCFI3
+ 3805 00e0 0C000000 		.4byte	.LFE7
+ 3806 00e4 0200     		.2byte	0x2
+ 3807 00e6 7D       		.byte	0x7d
+ 3808 00e7 08       		.sleb128 8
+ 3809 00e8 00000000 		.4byte	0
+ 3810 00ec 00000000 		.4byte	0
+ 3811              	.LLST7:
+ 3812 00f0 00000000 		.4byte	.LVL32
+ 3813 00f4 04000000 		.4byte	.LVL33
+ 3814 00f8 0100     		.2byte	0x1
+ 3815 00fa 50       		.byte	0x50
+ 3816 00fb 04000000 		.4byte	.LVL33
+ 3817 00ff 0C000000 		.4byte	.LFE7
+ 3818 0103 0400     		.2byte	0x4
+ 3819 0105 F3       		.byte	0xf3
+ 3820 0106 01       		.uleb128 0x1
+ 3821 0107 50       		.byte	0x50
+ 3822 0108 9F       		.byte	0x9f
+ 3823 0109 00000000 		.4byte	0
+ 3824 010d 00000000 		.4byte	0
+ 3825              	.LLST8:
+ 3826 0111 00000000 		.4byte	.LFB11
+ 3827 0115 06000000 		.4byte	.LCFI4
+ 3828 0119 0200     		.2byte	0x2
+ 3829 011b 7D       		.byte	0x7d
+ 3830 011c 00       		.sleb128 0
+ 3831 011d 06000000 		.4byte	.LCFI4
+ 3832 0121 F8000000 		.4byte	.LFE11
+ 3833 0125 0200     		.2byte	0x2
+ 3834 0127 7D       		.byte	0x7d
+ 3835 0128 10       		.sleb128 16
+ 3836 0129 00000000 		.4byte	0
+ 3837 012d 00000000 		.4byte	0
+ 3838              	.LLST9:
+ 3839 0131 0A000000 		.4byte	.LVL37
+ 3840 0135 0E000000 		.4byte	.LVL38
+ 3841 0139 0200     		.2byte	0x2
+ 3842 013b 30       		.byte	0x30
+ 3843 013c 9F       		.byte	0x9f
+ 3844 013d 00000000 		.4byte	0
+ 3845 0141 00000000 		.4byte	0
+ 3846              	.LLST10:
+ 3847 0145 00000000 		.4byte	.LFB9
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 69
+
+
+ 3848 0149 02000000 		.4byte	.LCFI5
+ 3849 014d 0200     		.2byte	0x2
+ 3850 014f 7D       		.byte	0x7d
+ 3851 0150 00       		.sleb128 0
+ 3852 0151 02000000 		.4byte	.LCFI5
+ 3853 0155 0E000000 		.4byte	.LCFI6
+ 3854 0159 0200     		.2byte	0x2
+ 3855 015b 7D       		.byte	0x7d
+ 3856 015c 10       		.sleb128 16
+ 3857 015d 0E000000 		.4byte	.LCFI6
+ 3858 0161 F0000000 		.4byte	.LFE9
+ 3859 0165 0200     		.2byte	0x2
+ 3860 0167 7D       		.byte	0x7d
+ 3861 0168 20       		.sleb128 32
+ 3862 0169 00000000 		.4byte	0
+ 3863 016d 00000000 		.4byte	0
+ 3864              	.LLST11:
+ 3865 0171 AE000000 		.4byte	.LVL68
+ 3866 0175 BE000000 		.4byte	.LVL70
+ 3867 0179 0200     		.2byte	0x2
+ 3868 017b 91       		.byte	0x91
+ 3869 017c 6C       		.sleb128 -20
+ 3870 017d 00000000 		.4byte	0
+ 3871 0181 00000000 		.4byte	0
+ 3872              	.LLST12:
+ 3873 0185 58000000 		.4byte	.LVL59
+ 3874 0189 5C000000 		.4byte	.LVL60
+ 3875 018d 0100     		.2byte	0x1
+ 3876 018f 50       		.byte	0x50
+ 3877 0190 5C000000 		.4byte	.LVL60
+ 3878 0194 F0000000 		.4byte	.LFE9
+ 3879 0198 0100     		.2byte	0x1
+ 3880 019a 56       		.byte	0x56
+ 3881 019b 00000000 		.4byte	0
+ 3882 019f 00000000 		.4byte	0
+ 3883              		.section	.debug_aranges,"",%progbits
+ 3884 0000 54000000 		.4byte	0x54
+ 3885 0004 0200     		.2byte	0x2
+ 3886 0006 00000000 		.4byte	.Ldebug_info0
+ 3887 000a 04       		.byte	0x4
+ 3888 000b 00       		.byte	0
+ 3889 000c 0000     		.2byte	0
+ 3890 000e 0000     		.2byte	0
+ 3891 0010 00000000 		.4byte	.LFB12
+ 3892 0014 24000000 		.4byte	.LFE12-.LFB12
+ 3893 0018 00000000 		.4byte	.LFB14
+ 3894 001c 44010000 		.4byte	.LFE14-.LFB14
+ 3895 0020 00000000 		.4byte	.LFB7
+ 3896 0024 0C000000 		.4byte	.LFE7-.LFB7
+ 3897 0028 00000000 		.4byte	.LFB13
+ 3898 002c 18000000 		.4byte	.LFE13-.LFB13
+ 3899 0030 00000000 		.4byte	.LFB8
+ 3900 0034 18000000 		.4byte	.LFE8-.LFB8
+ 3901 0038 00000000 		.4byte	.LFB11
+ 3902 003c F8000000 		.4byte	.LFE11-.LFB11
+ 3903 0040 00000000 		.4byte	.LFB10
+ 3904 0044 12000000 		.4byte	.LFE10-.LFB10
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 70
+
+
+ 3905 0048 00000000 		.4byte	.LFB9
+ 3906 004c F0000000 		.4byte	.LFE9-.LFB9
+ 3907 0050 00000000 		.4byte	0
+ 3908 0054 00000000 		.4byte	0
+ 3909              		.section	.debug_ranges,"",%progbits
+ 3910              	.Ldebug_ranges0:
+ 3911 0000 00000000 		.4byte	.LFB12
+ 3912 0004 24000000 		.4byte	.LFE12
+ 3913 0008 00000000 		.4byte	.LFB14
+ 3914 000c 44010000 		.4byte	.LFE14
+ 3915 0010 00000000 		.4byte	.LFB7
+ 3916 0014 0C000000 		.4byte	.LFE7
+ 3917 0018 00000000 		.4byte	.LFB13
+ 3918 001c 18000000 		.4byte	.LFE13
+ 3919 0020 00000000 		.4byte	.LFB8
+ 3920 0024 18000000 		.4byte	.LFE8
+ 3921 0028 00000000 		.4byte	.LFB11
+ 3922 002c F8000000 		.4byte	.LFE11
+ 3923 0030 00000000 		.4byte	.LFB10
+ 3924 0034 12000000 		.4byte	.LFE10
+ 3925 0038 00000000 		.4byte	.LFB9
+ 3926 003c F0000000 		.4byte	.LFE9
+ 3927 0040 00000000 		.4byte	0
+ 3928 0044 00000000 		.4byte	0
+ 3929              		.section	.debug_line,"",%progbits
+ 3930              	.Ldebug_line0:
+ 3931 0000 3C030000 		.section	.debug_str,"MS",%progbits,1
+ 3931      0200FB01 
+ 3931      00000201 
+ 3931      FB0E0D00 
+ 3931      01010101 
+ 3932              	.LASF84:
+ 3933 0000 7466756E 		.ascii	"tfunc_t\000"
+ 3933      635F7400 
+ 3934              	.LASF40:
+ 3935 0008 705F6D73 		.ascii	"p_msg\000"
+ 3935      6700
+ 3936              	.LASF2:
+ 3937 000e 73697A65 		.ascii	"size_t\000"
+ 3937      5F7400
+ 3938              	.LASF100:
+ 3939 0015 7072696F 		.ascii	"prio\000"
+ 3939      00
+ 3940              	.LASF79:
+ 3941 001a 7264796D 		.ascii	"rdymsg\000"
+ 3941      736700
+ 3942              	.LASF12:
+ 3943 0021 75696E74 		.ascii	"uint64_t\000"
+ 3943      36345F74 
+ 3943      00
+ 3944              	.LASF78:
+ 3945 002a 4D656D6F 		.ascii	"MemoryPool\000"
+ 3945      7279506F 
+ 3945      6F6C00
+ 3946              	.LASF63:
+ 3947 0035 6D656D67 		.ascii	"memgetfunc_t\000"
+ 3947      65746675 
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 71
+
+
+ 3947      6E635F74 
+ 3947      00
+ 3948              	.LASF13:
+ 3949 0042 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 3949      206C6F6E 
+ 3949      6720756E 
+ 3949      7369676E 
+ 3949      65642069 
+ 3950              	.LASF80:
+ 3951 0059 65786974 		.ascii	"exitcode\000"
+ 3951      636F6465 
+ 3951      00
+ 3952              	.LASF67:
+ 3953 0062 685F6672 		.ascii	"h_free\000"
+ 3953      656500
+ 3954              	.LASF106:
+ 3955 0069 74657374 		.ascii	"test\000"
+ 3955      00
+ 3956              	.LASF129:
+ 3957 006e 63685265 		.ascii	"chRegFirstThread\000"
+ 3957      67466972 
+ 3957      73745468 
+ 3957      72656164 
+ 3957      00
+ 3958              	.LASF118:
+ 3959 007f 63684865 		.ascii	"chHeapInit\000"
+ 3959      6170496E 
+ 3959      697400
+ 3960              	.LASF69:
+ 3961 008a 6E657874 		.ascii	"next\000"
+ 3961      00
+ 3962              	.LASF27:
+ 3963 008f 705F7072 		.ascii	"p_prio\000"
+ 3963      696F00
+ 3964              	.LASF101:
+ 3965 0096 64796E32 		.ascii	"dyn2_setup\000"
+ 3965      5F736574 
+ 3965      757000
+ 3966              	.LASF11:
+ 3967 00a1 6C6F6E67 		.ascii	"long long int\000"
+ 3967      206C6F6E 
+ 3967      6720696E 
+ 3967      7400
+ 3968              	.LASF1:
+ 3969 00af 7369676E 		.ascii	"signed char\000"
+ 3969      65642063 
+ 3969      68617200 
+ 3970              	.LASF68:
+ 3971 00bb 685F6D74 		.ascii	"h_mtx\000"
+ 3971      7800
+ 3972              	.LASF44:
+ 3973 00c1 705F6D70 		.ascii	"p_mpool\000"
+ 3973      6F6F6C00 
+ 3974              	.LASF14:
+ 3975 00c9 626F6F6C 		.ascii	"bool_t\000"
+ 3975      5F7400
+ 3976              	.LASF60:
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 72
+
+
+ 3977 00d0 6D5F7175 		.ascii	"m_queue\000"
+ 3977      65756500 
+ 3978              	.LASF117:
+ 3979 00d8 74657374 		.ascii	"test_emit_token\000"
+ 3979      5F656D69 
+ 3979      745F746F 
+ 3979      6B656E00 
+ 3980              	.LASF131:
+ 3981 00e8 63684865 		.ascii	"chHeapFree\000"
+ 3981      61704672 
+ 3981      656500
+ 3982              	.LASF19:
+ 3983 00f3 74736C69 		.ascii	"tslices_t\000"
+ 3983      6365735F 
+ 3983      7400
+ 3984              	.LASF8:
+ 3985 00fd 6C6F6E67 		.ascii	"long int\000"
+ 3985      20696E74 
+ 3985      00
+ 3986              	.LASF112:
+ 3987 0106 63685468 		.ascii	"chThdCreateFromHeap\000"
+ 3987      64437265 
+ 3987      61746546 
+ 3987      726F6D48 
+ 3987      65617000 
+ 3988              	.LASF17:
+ 3989 011a 74737461 		.ascii	"tstate_t\000"
+ 3989      74655F74 
+ 3989      00
+ 3990              	.LASF75:
+ 3991 0123 6D705F6E 		.ascii	"mp_next\000"
+ 3991      65787400 
+ 3992              	.LASF128:
+ 3993 012b 633A5C55 		.ascii	"c:\\Users\\TaisikHam\\Documents\\GitHub\\ChibiOS\\t"
+ 3993      73657273 
+ 3993      5C546169 
+ 3993      73696B48 
+ 3993      616D5C44 
+ 3994 0158 65737468 		.ascii	"esthal\\STM32F30x\\TS_SPI\000"
+ 3994      616C5C53 
+ 3994      544D3332 
+ 3994      46333078 
+ 3994      5C54535F 
+ 3995              	.LASF102:
+ 3996 0170 64796E31 		.ascii	"dyn1_execute\000"
+ 3996      5F657865 
+ 3996      63757465 
+ 3996      00
+ 3997              	.LASF29:
+ 3998 017d 705F6E65 		.ascii	"p_newer\000"
+ 3998      77657200 
+ 3999              	.LASF120:
+ 4000 0185 63685468 		.ascii	"chThdCreateFromMemoryPool\000"
+ 4000      64437265 
+ 4000      61746546 
+ 4000      726F6D4D 
+ 4000      656D6F72 
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 73
+
+
+ 4001              	.LASF55:
+ 4002 019f 725F6E65 		.ascii	"r_newer\000"
+ 4002      77657200 
+ 4003              	.LASF77:
+ 4004 01a7 6D705F70 		.ascii	"mp_provider\000"
+ 4004      726F7669 
+ 4004      64657200 
+ 4005              	.LASF47:
+ 4006 01b3 72656761 		.ascii	"regarm_t\000"
+ 4006      726D5F74 
+ 4006      00
+ 4007              	.LASF71:
+ 4008 01bc 616C6967 		.ascii	"align\000"
+ 4008      6E00
+ 4009              	.LASF32:
+ 4010 01c2 705F7374 		.ascii	"p_stklimit\000"
+ 4010      6B6C696D 
+ 4010      697400
+ 4011              	.LASF0:
+ 4012 01cd 756E7369 		.ascii	"unsigned int\000"
+ 4012      676E6564 
+ 4012      20696E74 
+ 4012      00
+ 4013              	.LASF10:
+ 4014 01da 6C6F6E67 		.ascii	"long unsigned int\000"
+ 4014      20756E73 
+ 4014      69676E65 
+ 4014      6420696E 
+ 4014      7400
+ 4015              	.LASF88:
+ 4016 01ec 74656172 		.ascii	"teardown\000"
+ 4016      646F776E 
+ 4016      00
+ 4017              	.LASF98:
+ 4018 01f5 64796E31 		.ascii	"dyn1_setup\000"
+ 4018      5F736574 
+ 4018      757000
+ 4019              	.LASF86:
+ 4020 0200 6E616D65 		.ascii	"name\000"
+ 4020      00
+ 4021              	.LASF50:
+ 4022 0205 636F6E74 		.ascii	"context\000"
+ 4022      65787400 
+ 4023              	.LASF72:
+ 4024 020d 73697A65 		.ascii	"size\000"
+ 4024      00
+ 4025              	.LASF6:
+ 4026 0212 73686F72 		.ascii	"short unsigned int\000"
+ 4026      7420756E 
+ 4026      7369676E 
+ 4026      65642069 
+ 4026      6E7400
+ 4027              	.LASF99:
+ 4028 0225 64796E32 		.ascii	"dyn2_execute\000"
+ 4028      5F657865 
+ 4028      63757465 
+ 4028      00
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 74
+
+
+ 4029              	.LASF21:
+ 4030 0232 6D73675F 		.ascii	"msg_t\000"
+ 4030      7400
+ 4031              	.LASF16:
+ 4032 0238 746D6F64 		.ascii	"tmode_t\000"
+ 4032      655F7400 
+ 4033              	.LASF46:
+ 4034 0240 54687265 		.ascii	"ThreadsList\000"
+ 4034      6164734C 
+ 4034      69737400 
+ 4035              	.LASF22:
+ 4036 024c 6576656E 		.ascii	"eventmask_t\000"
+ 4036      746D6173 
+ 4036      6B5F7400 
+ 4037              	.LASF59:
+ 4038 0258 4D757465 		.ascii	"Mutex\000"
+ 4038      7800
+ 4039              	.LASF114:
+ 4040 025e 63685468 		.ascii	"chThdAddRef\000"
+ 4040      64416464 
+ 4040      52656600 
+ 4041              	.LASF48:
+ 4042 026a 73746B61 		.ascii	"stkalign_t\000"
+ 4042      6C69676E 
+ 4042      5F7400
+ 4043              	.LASF51:
+ 4044 0275 73697A65 		.ascii	"sizetype\000"
+ 4044      74797065 
+ 4044      00
+ 4045              	.LASF65:
+ 4046 027e 6D656D6F 		.ascii	"memory_heap\000"
+ 4046      72795F68 
+ 4046      65617000 
+ 4047              	.LASF107:
+ 4048 028a 74657374 		.ascii	"testdyn1\000"
+ 4048      64796E31 
+ 4048      00
+ 4049              	.LASF108:
+ 4050 0293 74657374 		.ascii	"testdyn2\000"
+ 4050      64796E32 
+ 4050      00
+ 4051              	.LASF109:
+ 4052 029c 74657374 		.ascii	"testdyn3\000"
+ 4052      64796E33 
+ 4052      00
+ 4053              	.LASF96:
+ 4054 02a5 64796E33 		.ascii	"dyn3_execute\000"
+ 4054      5F657865 
+ 4054      63757465 
+ 4054      00
+ 4055              	.LASF30:
+ 4056 02b2 705F6F6C 		.ascii	"p_older\000"
+ 4056      64657200 
+ 4057              	.LASF54:
+ 4058 02ba 725F6374 		.ascii	"r_ctx\000"
+ 4058      7800
+ 4059              	.LASF45:
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 75
+
+
+ 4060 02c0 54687265 		.ascii	"ThreadsQueue\000"
+ 4060      61647351 
+ 4060      75657565 
+ 4060      00
+ 4061              	.LASF76:
+ 4062 02cd 6D705F6F 		.ascii	"mp_object_size\000"
+ 4062      626A6563 
+ 4062      745F7369 
+ 4062      7A6500
+ 4063              	.LASF87:
+ 4064 02dc 73657475 		.ascii	"setup\000"
+ 4064      7000
+ 4065              	.LASF121:
+ 4066 02e2 5F746573 		.ascii	"_test_assert_sequence\000"
+ 4066      745F6173 
+ 4066      73657274 
+ 4066      5F736571 
+ 4066      75656E63 
+ 4067              	.LASF126:
+ 4068 02f8 474E5520 		.ascii	"GNU C 4.7.2\000"
+ 4068      4320342E 
+ 4068      372E3200 
+ 4069              	.LASF57:
+ 4070 0304 725F6375 		.ascii	"r_current\000"
+ 4070      7272656E 
+ 4070      7400
+ 4071              	.LASF56:
+ 4072 030e 725F6F6C 		.ascii	"r_older\000"
+ 4072      64657200 
+ 4073              	.LASF64:
+ 4074 0316 4D656D6F 		.ascii	"MemoryHeap\000"
+ 4074      72794865 
+ 4074      617000
+ 4075              	.LASF74:
+ 4076 0321 70685F6E 		.ascii	"ph_next\000"
+ 4076      65787400 
+ 4077              	.LASF18:
+ 4078 0329 74726566 		.ascii	"trefs_t\000"
+ 4078      735F7400 
+ 4079              	.LASF26:
+ 4080 0331 705F7072 		.ascii	"p_prev\000"
+ 4080      657600
+ 4081              	.LASF89:
+ 4082 0338 65786563 		.ascii	"execute\000"
+ 4082      75746500 
+ 4083              	.LASF20:
+ 4084 0340 74707269 		.ascii	"tprio_t\000"
+ 4084      6F5F7400 
+ 4085              	.LASF95:
+ 4086 0348 74687265 		.ascii	"thread\000"
+ 4086      616400
+ 4087              	.LASF15:
+ 4088 034f 5F426F6F 		.ascii	"_Bool\000"
+ 4088      6C00
+ 4089              	.LASF7:
+ 4090 0355 696E7433 		.ascii	"int32_t\000"
+ 4090      325F7400 
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 76
+
+
+ 4091              	.LASF4:
+ 4092 035d 756E7369 		.ascii	"unsigned char\000"
+ 4092      676E6564 
+ 4092      20636861 
+ 4092      7200
+ 4093              	.LASF66:
+ 4094 036b 685F7072 		.ascii	"h_provider\000"
+ 4094      6F766964 
+ 4094      657200
+ 4095              	.LASF42:
+ 4096 0376 705F6D74 		.ascii	"p_mtxlist\000"
+ 4096      786C6973 
+ 4096      7400
+ 4097              	.LASF5:
+ 4098 0380 73686F72 		.ascii	"short int\000"
+ 4098      7420696E 
+ 4098      7400
+ 4099              	.LASF33:
+ 4100 038a 705F7374 		.ascii	"p_state\000"
+ 4100      61746500 
+ 4101              	.LASF36:
+ 4102 0392 705F7072 		.ascii	"p_preempt\000"
+ 4102      65656D70 
+ 4102      7400
+ 4103              	.LASF105:
+ 4104 039c 74687265 		.ascii	"threads\000"
+ 4104      61647300 
+ 4105              	.LASF53:
+ 4106 03a4 725F7072 		.ascii	"r_prio\000"
+ 4106      696F00
+ 4107              	.LASF90:
+ 4108 03ab 68656170 		.ascii	"heap_header\000"
+ 4108      5F686561 
+ 4108      64657200 
+ 4109              	.LASF82:
+ 4110 03b7 65776D61 		.ascii	"ewmask\000"
+ 4110      736B00
+ 4111              	.LASF25:
+ 4112 03be 705F6E65 		.ascii	"p_next\000"
+ 4112      787400
+ 4113              	.LASF34:
+ 4114 03c5 705F666C 		.ascii	"p_flags\000"
+ 4114      61677300 
+ 4115              	.LASF115:
+ 4116 03cd 63685468 		.ascii	"chThdRelease\000"
+ 4116      6452656C 
+ 4116      65617365 
+ 4116      00
+ 4117              	.LASF24:
+ 4118 03da 54687265 		.ascii	"Thread\000"
+ 4118      616400
+ 4119              	.LASF125:
+ 4120 03e1 63684865 		.ascii	"chHeapAlloc\000"
+ 4120      6170416C 
+ 4120      6C6F6300 
+ 4121              	.LASF85:
+ 4122 03ed 74657374 		.ascii	"testcase\000"
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 77
+
+
+ 4122      63617365 
+ 4122      00
+ 4123              	.LASF41:
+ 4124 03f6 705F6570 		.ascii	"p_epending\000"
+ 4124      656E6469 
+ 4124      6E6700
+ 4125              	.LASF116:
+ 4126 0401 63685468 		.ascii	"chThdSleep\000"
+ 4126      64536C65 
+ 4126      657000
+ 4127              	.LASF9:
+ 4128 040c 75696E74 		.ascii	"uint32_t\000"
+ 4128      33325F74 
+ 4128      00
+ 4129              	.LASF52:
+ 4130 0415 725F7175 		.ascii	"r_queue\000"
+ 4130      65756500 
+ 4131              	.LASF70:
+ 4132 041d 68656170 		.ascii	"heap\000"
+ 4132      00
+ 4133              	.LASF83:
+ 4134 0422 63686172 		.ascii	"char\000"
+ 4134      00
+ 4135              	.LASF111:
+ 4136 0427 63685265 		.ascii	"chRegNextThread\000"
+ 4136      674E6578 
+ 4136      74546872 
+ 4136      65616400 
+ 4137              	.LASF97:
+ 4138 0437 64796E33 		.ascii	"dyn3_setup\000"
+ 4138      5F736574 
+ 4138      757000
+ 4139              	.LASF124:
+ 4140 0442 63684865 		.ascii	"chHeapStatus\000"
+ 4140      61705374 
+ 4140      61747573 
+ 4140      00
+ 4141              	.LASF130:
+ 4142 044f 74657374 		.ascii	"test_wait_threads\000"
+ 4142      5F776169 
+ 4142      745F7468 
+ 4142      72656164 
+ 4142      7300
+ 4143              	.LASF62:
+ 4144 0461 6D5F6E65 		.ascii	"m_next\000"
+ 4144      787400
+ 4145              	.LASF23:
+ 4146 0468 73797374 		.ascii	"systime_t\000"
+ 4146      696D655F 
+ 4146      7400
+ 4147              	.LASF43:
+ 4148 0472 705F7265 		.ascii	"p_realprio\000"
+ 4148      616C7072 
+ 4148      696F00
+ 4149              	.LASF92:
+ 4150 047d 62756666 		.ascii	"buffer\000"
+ 4150      657200
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 78
+
+
+ 4151              	.LASF110:
+ 4152 0484 70617474 		.ascii	"patterndyn\000"
+ 4152      65726E64 
+ 4152      796E00
+ 4153              	.LASF37:
+ 4154 048f 705F7469 		.ascii	"p_time\000"
+ 4154      6D6500
+ 4155              	.LASF49:
+ 4156 0496 696E7463 		.ascii	"intctx\000"
+ 4156      747800
+ 4157              	.LASF39:
+ 4158 049d 705F6D73 		.ascii	"p_msgqueue\000"
+ 4158      67717565 
+ 4158      756500
+ 4159              	.LASF123:
+ 4160 04a8 6368506F 		.ascii	"chPoolInit\000"
+ 4160      6F6C496E 
+ 4160      697400
+ 4161              	.LASF93:
+ 4162 04b3 666F756E 		.ascii	"found\000"
+ 4162      6400
+ 4163              	.LASF91:
+ 4164 04b9 74657374 		.ascii	"test_buffers\000"
+ 4164      5F627566 
+ 4164      66657273 
+ 4164      00
+ 4165              	.LASF73:
+ 4166 04c6 706F6F6C 		.ascii	"pool_header\000"
+ 4166      5F686561 
+ 4166      64657200 
+ 4167              	.LASF35:
+ 4168 04d2 705F7265 		.ascii	"p_refs\000"
+ 4168      667300
+ 4169              	.LASF58:
+ 4170 04d9 52656164 		.ascii	"ReadyList\000"
+ 4170      794C6973 
+ 4170      7400
+ 4171              	.LASF94:
+ 4172 04e3 72656766 		.ascii	"regfind\000"
+ 4172      696E6400 
+ 4173              	.LASF104:
+ 4174 04eb 726C6973 		.ascii	"rlist\000"
+ 4174      7400
+ 4175              	.LASF3:
+ 4176 04f1 75696E74 		.ascii	"uint8_t\000"
+ 4176      385F7400 
+ 4177              	.LASF122:
+ 4178 04f9 6368506F 		.ascii	"chPoolAlloc\000"
+ 4178      6F6C416C 
+ 4178      6C6F6300 
+ 4179              	.LASF119:
+ 4180 0505 6368506F 		.ascii	"chPoolFree\000"
+ 4180      6F6C4672 
+ 4180      656500
+ 4181              	.LASF81:
+ 4182 0510 77746F62 		.ascii	"wtobjp\000"
+ 4182      6A7000
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 79
+
+
+ 4183              	.LASF31:
+ 4184 0517 705F6E61 		.ascii	"p_name\000"
+ 4184      6D6500
+ 4185              	.LASF113:
+ 4186 051e 5F746573 		.ascii	"_test_assert\000"
+ 4186      745F6173 
+ 4186      73657274 
+ 4186      00
+ 4187              	.LASF61:
+ 4188 052b 6D5F6F77 		.ascii	"m_owner\000"
+ 4188      6E657200 
+ 4189              	.LASF28:
+ 4190 0533 705F6374 		.ascii	"p_ctx\000"
+ 4190      7800
+ 4191              	.LASF38:
+ 4192 0539 705F7761 		.ascii	"p_waiting\000"
+ 4192      6974696E 
+ 4192      6700
+ 4193              	.LASF103:
+ 4194 0543 68656170 		.ascii	"heap1\000"
+ 4194      3100
+ 4195              	.LASF127:
+ 4196 0549 2E2E2F2E 		.ascii	"../../../test/testdyn.c\000"
+ 4196      2E2F2E2E 
+ 4196      2F746573 
+ 4196      742F7465 
+ 4196      73746479 
+ 4197              		.ident	"GCC: (GNU) 4.7.2"
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 80
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 testdyn.c
+C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s:19     .text.regfind:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s:24     .text.regfind:00000000 regfind
+C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s:72     .text.dyn3_execute:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s:77     .text.dyn3_execute:00000000 dyn3_execute
+C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s:258    .text.dyn3_execute:00000134 $d
+C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s:271    .text.thread:00000000 thread
+C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s:266    .text.thread:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s:295    .text.dyn3_setup:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s:300    .text.dyn3_setup:00000000 dyn3_setup
+C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s:794    .bss.heap1:00000000 .LANCHOR0
+C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s:321    .text.dyn1_setup:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s:326    .text.dyn1_setup:00000000 dyn1_setup
+C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s:347    .text.dyn2_execute:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s:352    .text.dyn2_execute:00000000 dyn2_execute
+C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s:504    .text.dyn2_execute:000000cc $d
+C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s:519    .text.dyn2_setup:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s:524    .text.dyn2_setup:00000000 dyn2_setup
+C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s:748    .bss.mp1:00000000 .LANCHOR1
+C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s:544    .text.dyn1_execute:00000000 $t
+C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s:549    .text.dyn1_execute:00000000 dyn1_execute
+C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s:704    .text.dyn1_execute:000000d0 $d
+C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s:787    .rodata.patterndyn:00000000 patterndyn
+C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s:741    .rodata.testdyn3:00000000 testdyn3
+C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s:732    .rodata.testdyn2:00000000 testdyn2
+C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s:723    .rodata.testdyn1:00000000 testdyn1
+C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s:720    .rodata.testdyn1:00000000 $d
+C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s:729    .rodata.testdyn2:00000000 $d
+C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s:738    .rodata.testdyn3:00000000 $d
+C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s:747    .bss.mp1:00000000 $d
+C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s:751    .bss.mp1:00000000 mp1
+C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s:754    .rodata.str1.4:00000000 $d
+C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s:784    .rodata.patterndyn:00000000 $d
+C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s:793    .bss.heap1:00000000 $d
+C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s:797    .bss.heap1:00000000 heap1
+                     .debug_frame:00000010 $d
+C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s:265    .text.dyn3_execute:00000144 $t
+C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s:518    .text.dyn2_execute:000000f8 $t
+
+UNDEFINED SYMBOLS
+chRegFirstThread
+chRegNextThread
+chThdCreateFromHeap
+_test_assert
+chThdAddRef
+chThdRelease
+chThdSleep
+rlist
+test_emit_token
+test
+chHeapInit
+chPoolFree
+chThdCreateFromMemoryPool
+test_wait_threads
+_test_assert_sequence
+chPoolAlloc
+ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccSyrVyr.s 			page 81
+
+
+wa
+threads
+chPoolInit
+chHeapStatus
+chHeapAlloc
+chHeapFree
