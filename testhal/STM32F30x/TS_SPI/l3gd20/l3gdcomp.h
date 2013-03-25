@@ -92,6 +92,12 @@ typedef struct
 // SPI_CRC_Polynomial
 #define IS_SPI_CRC_POLYNOMIAL(POLYNOMIAL)   ((POLYNOMIAL) >= 0x01)
 
+#define  ALTERNATE_SHIFT    7
+#define  PUDR_SHIFT         5
+#define  OSPEED_SHIFT       3
+#define  OTYPE_SHIFT        2
+#define  MODE_SHIFT         0
+
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
 // 

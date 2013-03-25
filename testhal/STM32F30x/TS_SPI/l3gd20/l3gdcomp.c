@@ -48,7 +48,7 @@ static uint8_t 	L3GD20_SendByte(uint8_t byte);
   External global Variables :
 *****************************************************************************/
 extern SPIDriver	gSpiDriver;
-extern SPIConfig    gSpiConfig;  
+extern SPIConfig        gSpiConfig;  
 
 /*****************************************************************************
   TypeDef 				
@@ -88,48 +88,6 @@ typedef struct
 /** 
   * @brief Serial Peripheral Interface
   */
-
-#if 0  
-typedef struct
-{
-  __IO uint16_t CR1;      /*!< SPI Control register 1 (not used in I2S mode),       Address offset: 0x00 */
-  uint16_t  RESERVED0;    /*!< Reserved, 0x02                                                            */
-  __IO uint16_t CR2;      /*!< SPI Control register 2,                              Address offset: 0x04 */
-  uint16_t  RESERVED1;    /*!< Reserved, 0x06                                                            */
-  __IO uint16_t SR;       /*!< SPI Status register,                                 Address offset: 0x08 */
-  uint16_t  RESERVED2;    /*!< Reserved, 0x0A                                                            */
-  __IO uint16_t DR;       /*!< SPI data register,                                   Address offset: 0x0C */
-  uint16_t  RESERVED3;    /*!< Reserved, 0x0E                                                            */
-  __IO uint16_t CRCPR;    /*!< SPI CRC polynomial register (not used in I2S mode),  Address offset: 0x10 */
-  uint16_t  RESERVED4;    /*!< Reserved, 0x12                                                            */
-  __IO uint16_t RXCRCR;   /*!< SPI Rx CRC register (not used in I2S mode),          Address offset: 0x14 */
-  uint16_t  RESERVED5;    /*!< Reserved, 0x16                                                            */
-  __IO uint16_t TXCRCR;   /*!< SPI Tx CRC register (not used in I2S mode),          Address offset: 0x18 */
-  uint16_t  RESERVED6;    /*!< Reserved, 0x1A                                                            */ 
-  __IO uint16_t I2SCFGR;  /*!< SPI_I2S configuration register,                      Address offset: 0x1C */
-  uint16_t  RESERVED7;    /*!< Reserved, 0x1E                                                            */
-  __IO uint16_t I2SPR;    /*!< SPI_I2S prescaler register,                          Address offset: 0x20 */
-  uint16_t  RESERVED8;    /*!< Reserved, 0x22                                                            */    
-} SPI_TypeDef;
-#endif
-
-
-//#if 1
-
-/*
-typedef struct 
-{
-	uint16_t   SPI_Direction;
-	uint16_t   SPI_Mode;
-	uint16_t   SPI_DataSize;
-	uint16_t   SPI_CPOL;
-	uint16_t   SPI_CPHA;
-	uint16_t   SPI_NSS;
-	uint16_t   SPI_BaudRatePrescaler;
-	uint16_t   SPI_FirstBit;
-	uint16_t   SPI_CRCPolynomial;
-}SPI_InitTypeDef_A;
-*/
 
 extern void RCC_APB2PeriphClockCmd(u32 RCC_APB2Periph, FunctionalState NewState);
 
@@ -450,6 +408,7 @@ static uint8_t L3GD20_SendByte(uint8_t byte)
   *         contains the configuration information for the specified SPI peripheral.
   * @retval None
   */
+
 void SPI_Init_A(SPI_TypeDef* SPIx, SPI_InitTypeDef_A* SPI_InitStruct, SPIConfig *scfg)
 {
   uint16_t tmpreg = 0;
@@ -459,15 +418,15 @@ void SPI_Init_A(SPI_TypeDef* SPIx, SPI_InitTypeDef_A* SPI_InitStruct, SPIConfig 
   {
     tmpreg = SPIx->CR1;
 	
-    tmpreg &= 0x3040;  //CR1_CLEAR_MASK;
+    tmpreg &= CR1_CLEAR_MASK;
 
     tmpreg |= (uint16_t)((uint16_t)(SPI_InitStruct->SPI_Direction | SPI_InitStruct->SPI_Mode) |
-                  (uint16_t)((uint16_t)(SPI_InitStruct->SPI_CPOL | SPI_InitStruct->SPI_CPHA) |
-                  (uint16_t)((uint16_t)(SPI_InitStruct->SPI_NSS | SPI_InitStruct->SPI_BaudRatePrescaler) | 
-                  SPI_InitStruct->SPI_FirstBit)));
+              (uint16_t)((uint16_t)(SPI_InitStruct->SPI_CPOL | SPI_InitStruct->SPI_CPHA) |
+              (uint16_t)((uint16_t)(SPI_InitStruct->SPI_NSS | SPI_InitStruct->SPI_BaudRatePrescaler) | 
+                                    SPI_InitStruct->SPI_FirstBit)));
     /* Write to SPIx CR1 */
     SPIx->CR1 = tmpreg;
-	scfg->cr1 = tmpreg;
+    scfg->cr1 = tmpreg;
 	
     /*-------------------------Data Size Configuration -----------------------*/
     /* Get the SPIx CR2 value */
@@ -524,6 +483,8 @@ void SPI_Init_A(SPI_TypeDef* SPIx, SPI_InitTypeDef_A* SPI_InitStruct, SPIConfig 
   SPIx->CRCPR = SPI_InitStruct->SPI_CRCPolynomial;
 }
 
+// In order to replace SPI_Init_A, it will be reorganized.
+
 void SPI_Initialize(SPI_TypeDef *SPIx, SPIConfig *scfg)
 {
   uint16_t   reg = 0;
@@ -545,18 +506,18 @@ void SPI_Initialize(SPI_TypeDef *SPIx, SPIConfig *scfg)
        : (SPIx->CR2 = scfg->cr2 = reg);
 
   if(gSPI_Init.SPI_Mode == SPI_MODE_MASTER){
-	reg = SPIx->CR2;
-	reg &= (uint16_t)~SPI_CR2_DS;
+       reg = SPIx->CR2;
+       reg &= (uint16_t)~SPI_CR2_DS;
 
 	// Configure SPIx : Data Size */
-	reg |= (uint16_t)(gSPI_Init.SPI_DataSize);
-	SPIx->CR2 = scfg->cr2 = reg;
+       reg |= (uint16_t)(gSPI_Init.SPI_DataSize);
+       SPIx->CR2 = scfg->cr2 = reg;
   } else {
-	reg = SPIx->CR1;
-	reg &= CR1_CLEAR_MASK;
-	reg |= VAR_OR(gSPI_Init);
+       reg = SPIx->CR1;
+       reg &= CR1_CLEAR_MASK;
+       reg |= VAR_OR(gSPI_Init);
 
-	SPIx->CR1 = scfg->cr1 = reg;
+       SPIx->CR1 = scfg->cr1 = reg;
   }
  
   /* Activate the SPI mode (Reset I2SMOD bit in I2SCFGR register) */
@@ -609,22 +570,20 @@ static void  L3GD_SPI_Init(SPI_TypeDef *spi, SPIConfig *spiconfig)
 
 extern void SPI_I2S_DeInit(SPI_TypeDef* SPIx);
 
-#define  ALTERNATE_SHIFT   		7
-#define  PUDR_SHIFT 			5
-#define	 OSPEED_SHIFT			3
-#define  OTYPE_SHIFT			2
-#define	 MODE_SHIFT				0
-
 void RCC_AHBPeriphClockCmd(uint32_t RCC_AHBPeriph, FunctionalState NewState);
 
-// 210313tsham,
-// The following TEST1 and TEST2 has the same function between ST and ChibiOS function.
-// TEST1, and TEST2 are tested reciprocally. As a result, the _pal_lld_setgroupmode made 
-// problem, the testing environment from /TS_SPI/main.c cannot read chip_id. 
-// So,the alternate part was changed( os/hal/platforms/pal_lld.c,
-// The other parts also occurs same problems. it seems to be set register value 
-// seriously damaged.
+/*****************************************************************************
+- 210313tsham,
 
+   The following TEST1 and TEST2 has the same function between ST and ChibiOS function.
+   TEST1, and TEST2 are tested reciprocally. As a result, the _pal_lld_setgroupmode made 
+   problem, the testing environment from /TS_SPI/main.c cannot read chip_id. 
+   So,the alternate part was changed( os/hal/platforms/pal_lld.c,
+   The other parts also occurs same problems. it seems to be set register value 
+   seriously damaged.
+
+*****************************************************************************
+*****************************************************************************/
 
 static void L3GD20_LowLevel_Init(SPIDriver *drvspi, SPIConfig *spi_cfg)
 {
@@ -638,9 +597,9 @@ static void L3GD20_LowLevel_Init(SPIDriver *drvspi, SPIConfig *spi_cfg)
   _pal_lld_setgroupmode(GPIOA,L3GD20_SPI_MISO_AF, L3GD20_SPI_MISO_SOURCE << ALTERNATE_SHIFT);
   _pal_lld_setgroupmode(GPIOA,L3GD20_SPI_MOSI_AF, L3GD20_SPI_MOSI_SOURCE << ALTERNATE_SHIFT);
 
-  _pal_lld_setgroupmode(GPIOA, L3GD20_SPI_AF, 0x04 << MODE_SHIFT);   // GPIO_Mode_AF  0x02->0x04
+  _pal_lld_setgroupmode(GPIOA, L3GD20_SPI_AF, 0x04 << MODE_SHIFT);  // GPIO_Mode_AF  0x02->0x04
   _pal_lld_setgroupmode(GPIOA, L3GD20_SPI_AF, 0x00 << OTYPE_SHIFT); // GPIO_OType_PP
-  _pal_lld_setgroupmode(GPIOA, L3GD20_SPI_AF, 0x00 << PUDR_SHIFT); //GPIO_PuPd_NOPUU
+  _pal_lld_setgroupmode(GPIOA, L3GD20_SPI_AF, 0x00 << PUDR_SHIFT);  //GPIO_PuPd_NOPUU
   _pal_lld_setgroupmode(GPIOA, L3GD20_SPI_AF, 0x03 << OSPEED_SHIFT); // highest 50Hz
 
   pal_lld_writepad(GPIOA,GPIOA_SPI1_SCK, GPIO_BSRR_BS_5);  	//SCK
@@ -659,11 +618,11 @@ static void L3GD20_LowLevel_Init(SPIDriver *drvspi, SPIConfig *spi_cfg)
 	
   ///////////////////////////////////////////////////////////////////////////////
   //
-  L3GD_SPI_Init(drvspi->spi, spi_cfg); 		// drvspi->spi initialize, and spi_cfg initialize
+  L3GD_SPI_Init(drvspi->spi, spi_cfg); // drvspi->spi initialize, and spi_cfg initialize
 	
-  _pal_lld_setgroupmode(GPIOE, L3GD20_SPI_AF, 0x02 << MODE_SHIFT);         // GPIO_Mode_OUT
-  _pal_lld_setgroupmode(GPIOE, L3GD20_SPI_AF, 0x00 << OTYPE_SHIFT);       // 3: GPIO_OType_PP
-  _pal_lld_setgroupmode(GPIOE, L3GD20_SPI_AF,  0x03 << OSPEED_SHIFT); // 0x03:50MHz
+  _pal_lld_setgroupmode(GPIOE, L3GD20_SPI_AF, 0x02 << MODE_SHIFT);   // GPIO_Mode_OUT
+  _pal_lld_setgroupmode(GPIOE, L3GD20_SPI_AF, 0x00 << OTYPE_SHIFT);  // 3: GPIO_OType_PP
+  _pal_lld_setgroupmode(GPIOE, L3GD20_SPI_AF, 0x03 << OSPEED_SHIFT); // 0x03:50MHz
 
   pal_lld_writepad(GPIOE,3, GPIO_BSRR_BS_3);
   pal_lld_setport(GPIOE, GPIO_BSRR_BS_3);   // Deselect : Chip Select high
