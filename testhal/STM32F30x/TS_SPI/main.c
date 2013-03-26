@@ -32,11 +32,10 @@ SPIConfig   	gSpiConfig;
 //////////////////////////////////////////////////////////////////////////
 
 #undef   _TEST_LAMP
-#define   TEST_CHIPID
-
+#undef   TEST_CHIPID
 
 #define   gSpiDriver   SPID1
-#define   SLEEP_TIME   450
+#define   SLEEP_TIME   250
  
 ///////////////////////////////////////////////////////////////////////////
 //
@@ -70,133 +69,69 @@ bool   assert_check_led(DIR_t pos)
 
 void  searching_led_position(DIR_t  pos)
 {
-	static uint8_t   cur_pos = 0xff,  prev_pos = 0x00;
+  static uint8_t   cur_pos = 0xff,  prev_pos = 0x00;
 
-	if(assert_check_led(pos) == FALSE)
-		return;
+  if(assert_check_led(pos) == FALSE)
+      return;
 	
-	cur_pos = pos;
-	if(cur_pos != prev_pos) {
-		palSetPad(GPIOE, cur_pos);
-		chThdSleepMilliseconds(SLEEP_TIME);
-	}
+  cur_pos = pos;
 
-	if(assert_check_led(prev_pos) == FALSE)
-		return;
-	
-	palClearPad(GPIOE, prev_pos);
+  if(cur_pos != prev_pos) {
+  	if(assert_check_led(prev_pos) == TRUE)
+        {
+  	   palClearPad(GPIOE, prev_pos);
+  	   chThdSleepMilliseconds(SLEEP_TIME);
+        }
+	palSetPad(GPIOE, cur_pos);
 	chThdSleepMilliseconds(SLEEP_TIME);
-	prev_pos = cur_pos;
+  	prev_pos = cur_pos;
+  }
 } 
 
+uint8_t   rxBuf[0x38];
 
+uint8_t   OUT_X_L, OUT_X_H, 
+	  OUT_Y_L, OUT_Y_H,
+	  OUT_Z_L, OUT_Z_H,
+	  WHO_AM_I;
 
-uint8_t  rxBuf[0x38];
-
-uint8_t OUT_X_L, OUT_X_H, 
-	OUT_Y_L, OUT_Y_H,
-	OUT_Z_L, OUT_Z_H,
-	WHO_AM_I;
-
-int16_t  gX, gY, gZ;
-int8_t	 lhx, llx, lly,lhy, llz, lhz;
+int16_t   gX, gY, gZ;
+int8_t	  lhx, llx, lly,lhy, llz, lhz;
 
 
 void  checking_coord(void)
 {
-  //#define  EX1
-  #define  EX2
-  //#define  EX3
-  //#define  EX4
-#define DIV1  4096 	
-	
-	
-#if defined(EX1)	
-  if( gZ >= 0 && gZ < 8192)
-    searching_led_position(N);
+#define  EX2
+#define  DIV1  2048 //4096
 		
-  else if(gZ >=  8192&& gZ < 2*8192)
-    searching_led_position(NE);
-	
-  else if(gZ >= 2*8192 && gZ < 3*8192)
-    searching_led_position(E);
-		
-  else if(gZ >= 3*8192 && gZ < 4*8192)
-    searching_led_position(SE);
-		
-  else if(gZ >= 4*8192 && gZ < 5*8192)
-    searching_led_position(S);
-
-  else if(gZ >= 5*8192 && gZ < 6*8192)
-    searching_led_position(SW);
-		
-  else if(gZ >= 6*8192 && gZ < 7*8192)
-    searching_led_position(W);
-		
-  else if(gZ >= 7*8192 && gZ <= 65535)
-    searching_led_position(NW);
-
-  else 
-    searching_led_position(N);
-		
-#elif defined(EX2)
-  if( ( gZ < (DIV1 * 1) && ( gZ >= 0 ) )
-  	|| ( gZ >= (DIV1 * -1) && ( gZ <0 ) )
-   )	
+#if defined(EX2)
+   if( ( (gX < DIV1 * 1) && ( gX >= 0 ))
+  	|| (gX >= (DIV1 * -1) && gX <0) )	
 	searching_led_position(N);
 
-   else if(gZ >=  (DIV1 * (-3)) && gZ < (DIV1 * (-1)))
+   else if(gX >=  (DIV1 * (-3)) && gX < (DIV1 * (-1)))
 	searching_led_position(NE);
 
-   else if(gZ >= ((-5)* DIV1) && gZ < ((-3)*DIV1) )
-	searching_led_position(E);
+   else if(gX >= ((-5)* DIV1) && gX < (-3)*DIV1)
+        searching_led_position(E);
 
-   else if(gZ >= ((-7) * DIV1) && gZ < ((-5)* DIV1) )
-	searching_led_position(SE);
+   else if(gX >= ((-7) * DIV1) && gX < (-5)* DIV1)
+        searching_led_position(SE);
 
-   else if(  (gZ >= (-8 *  DIV1+1) 
-      && gZ < (-7 * DIV1) )
-      ||  (gZ >= (7 * DIV1) 
-      && gZ < (8*DIV1-1) )  )
+   else if(  (gX >= (-8 *  DIV1+1) 
+	   && gX < (-7 * DIV1) )
+	   ||  (gX >= (7 * DIV1) 
+	   && gX < (8*DIV1-1) )  )
 	searching_led_position(S);
 
-   else if(gZ >= 5*DIV1 && gZ < 7*DIV1)
-	searching_led_position(SW);
+   else if(gX >= 5*DIV1 && gX < 7*DIV1)
+        searching_led_position(SW);
 
-   else if(gZ >= 3*DIV1 && gZ < 5*DIV1)
-	searching_led_position(W);
+   else if(gX >= 3*DIV1 && gX < 5*DIV1)
+        searching_led_position(W);
 
-   else if(gZ >= 1*DIV1 && gZ < 3* DIV1)
-	searching_led_position(NW);
-				
-#elif defined(EX3)
-   if(gZ >= 90 && gZ < 112)
-    	searching_led_position(N);
-		
-  else if(gZ >= 112 && gZ < 134)
-    searching_led_position(E);
-	
-  else if(gZ >= 134 && gZ < 156)
-    searching_led_position(S);
-	
-  else if(gZ >= 156 && gZ < 180)
-    searching_led_position(W);
-	
-  else
-    searching_led_position(SW);
-	
-#elif defined(EX4)
-  if(gZ >= 112 && gZ < 117)
-    searching_led_position(N);
-		
-  else if(gZ >= 117 && gZ < 122)
-    searching_led_position(E);
-	
-  else if(gZ >= 122 && gZ < 127)
-    searching_led_position(S);
-	
-  else if(gZ >= 127 && gZ < 134)
-    searching_led_position(W);
+   else if(gX >= 1*DIV1 && gX < 3* DIV1)
+        searching_led_position(NW);
 #endif
 
 }
@@ -290,17 +225,19 @@ static msg_t spi_thread_1(void *p) {
 	spiUnselect(&SPID1);                	/* Slave Select de-assertion.       */
 
 #if   defined(TEST_CHIPID) 
-	if(WHO_AM_I == I_AM_L3GD20)
+	if(WHO_AM_I == I_AM_L3GD20) {
 		palSetPad(GPIOE, N);
+	        chThdSleepMilliseconds(SLEEP_TIME);
+        }
 #endif
 
-	llx = ~(OUT_X_L); lhx = ~(OUT_X_H);
+	llx = (OUT_X_L); lhx = (OUT_X_H);
 	gX = (uint16_t)((lhx << 7) | (llx));
 	
-	lly = ~(OUT_Y_L); lhy = ~(OUT_Y_H);
+	lly = (OUT_Y_L); lhy = (OUT_Y_H);
 	gY = (uint16_t)((lhy << 7)  | (lly));
 	
-	llz = ~(OUT_Z_L); lhz = ~(OUT_Z_H);
+	llz = (OUT_Z_L); lhz = (OUT_Z_H);
 	gZ = (uint16_t)((lhz << 7) | (llz));
 
 	checking_coord();
