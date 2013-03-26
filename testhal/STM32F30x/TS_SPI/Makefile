@@ -71,7 +71,7 @@ include $(CHIBIOS)/os/hal/platforms/STM32F30x/platform.mk
 include $(CHIBIOS)/os/hal/hal.mk
 include $(CHIBIOS)/os/ports/GCC/ARMCMx/STM32F3xx/port.mk
 include $(CHIBIOS)/os/kernel/kernel.mk
-include $(CHIBIOS)/Testhal_wrk/STM32F30x/Gyro/Gyro.mak
+include $(CHIBIOS)/testhal/STM32F30x/TS_SPI/l3gd20/l3gd20.mak
 include $(CHIBIOS)/os/hal/platforms/stm32/GPIOv2/pal_lld.mak
 include $(CHIBIOS)/test/test.mk
 
