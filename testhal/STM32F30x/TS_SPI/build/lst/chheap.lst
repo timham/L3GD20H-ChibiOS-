@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
   55              		.size	_heap_init, .-_heap_init
   56              		.section	.text.chHeapInit,"ax",%progbits
   57              		.align	2
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 2
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 2
 
 
   58              		.p2align 4,,15
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  112 0024 85E84800 		stmia	r5, {r3, r6}
  113              		.loc 1 107 0
  114 0028 BDE87040 		pop	{r4, r5, r6, lr}
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 3
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 3
 
 
  115              		.loc 1 103 0
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  167              	.LVL13:
  168              		.loc 1 135 0
  169 001c 00E0     		b	.L13
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 4
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 4
 
 
  170              	.LVL14:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  224 0060 2260     		str	r2, [r4, #0]
  225 0062 F5E7     		b	.L15
  226              	.L25:
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 5
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 5
 
 
  227              		.loc 1 160 0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  280              		.cfi_offset 3, -24
  281              		.cfi_offset 4, -20
  282              		.cfi_offset 5, -16
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 6
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 6
 
 
  283              		.cfi_offset 6, -12
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  337 003c EEE7     		b	.L38
  338              	.LVL34:
  339              	.L34:
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 7
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 7
 
 
  340              		.loc 1 209 0
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  394 0098 0833     		adds	r3, r3, #8
  395              		.loc 1 217 0
  396 009a 84E80C00 		stmia	r4, {r2, r3}
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 8
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 8
 
 
  397 009e E0E7     		b	.L37
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  451 0018 0022     		movs	r2, #0
  452 001a 1446     		mov	r4, r2
  453              	.LVL43:
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 9
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 9
 
 
  454              	.L51:
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  502 001f 00       		.space	1
  503              	.LC2:
  504 0020 63684865 		.ascii	"chHeapFree(), #1\000"
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 10
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 10
 
 
  504      61704672 
@@ -578,7 +578,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  531 000c 01020000 		.4byte	.LASF81
  532 0010 01       		.byte	0x1
  533 0011 B9010000 		.4byte	.LASF82
- 534 0015 DC000000 		.4byte	.LASF83
+ 534 0015 69010000 		.4byte	.LASF83
  535 0019 00000000 		.4byte	.Ldebug_ranges0+0
  536 001d 00000000 		.4byte	0
  537 0021 00000000 		.4byte	0
@@ -595,10 +595,10 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  548 003b 04       		.uleb128 0x4
  549 003c 04       		.byte	0x4
  550 003d 07       		.byte	0x7
- 551 003e 43010000 		.4byte	.LASF0
+ 551 003e FE000000 		.4byte	.LASF0
  552 0042 04       		.uleb128 0x4
  553 0043 01       		.byte	0x1
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 11
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 11
 
 
  554 0044 06       		.byte	0x6
@@ -619,7 +619,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  569 0062 04       		.uleb128 0x4
  570 0063 02       		.byte	0x2
  571 0064 07       		.byte	0x7
- 572 0065 6F010000 		.4byte	.LASF6
+ 572 0065 2A010000 		.4byte	.LASF6
  573 0069 03       		.uleb128 0x3
  574 006a 35020000 		.4byte	.LASF7
  575 006e 03       		.byte	0x3
@@ -637,7 +637,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  587 0086 04       		.uleb128 0x4
  588 0087 04       		.byte	0x4
  589 0088 07       		.byte	0x7
- 590 0089 50010000 		.4byte	.LASF10
+ 590 0089 0B010000 		.4byte	.LASF10
  591 008d 04       		.uleb128 0x4
  592 008e 08       		.byte	0x8
  593 008f 05       		.byte	0x5
@@ -656,9 +656,9 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  606 00a8 02       		.byte	0x2
  607 00a9 2F020000 		.4byte	.LASF14
  608 00ad 03       		.uleb128 0x3
- 609 00ae 88010000 		.4byte	.LASF15
+ 609 00ae 43010000 		.4byte	.LASF15
  610 00b2 04       		.byte	0x4
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 12
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 12
 
 
  611 00b3 25       		.byte	0x25
@@ -684,12 +684,12 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  631 00df 29       		.byte	0x29
  632 00e0 7B000000 		.4byte	0x7b
  633 00e4 03       		.uleb128 0x3
- 634 00e5 82010000 		.4byte	.LASF20
+ 634 00e5 3D010000 		.4byte	.LASF20
  635 00e9 04       		.byte	0x4
  636 00ea 2A       		.byte	0x2a
  637 00eb 69000000 		.4byte	0x69
  638 00ef 03       		.uleb128 0x3
- 639 00f0 9C010000 		.4byte	.LASF21
+ 639 00f0 57010000 		.4byte	.LASF21
  640 00f4 04       		.byte	0x4
  641 00f5 2C       		.byte	0x2c
  642 00f6 7B000000 		.4byte	0x7b
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  665 0128 23       		.byte	0x23
  666 0129 00       		.uleb128 0
  667 012a 06       		.uleb128 0x6
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 13
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 13
 
 
  668 012b 20020000 		.4byte	.LASF25
@@ -745,7 +745,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  689 0152 23       		.byte	0x23
  690 0153 0C       		.uleb128 0xc
  691 0154 06       		.uleb128 0x6
- 692 0155 21010000 		.4byte	.LASF28
+ 692 0155 DC000000 		.4byte	.LASF28
  693 0159 06       		.byte	0x6
  694 015a 5F       		.byte	0x5f
  695 015b 68020000 		.4byte	0x268
@@ -769,7 +769,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  713 017c 23       		.byte	0x23
  714 017d 18       		.uleb128 0x18
  715 017e 06       		.uleb128 0x6
- 716 017f 38010000 		.4byte	.LASF31
+ 716 017f F3000000 		.4byte	.LASF31
  717 0183 06       		.byte	0x6
  718 0184 6D       		.byte	0x6d
  719 0185 D1040000 		.4byte	0x4d1
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  722 018b 1C       		.uleb128 0x1c
  723 018c 06       		.uleb128 0x6
  724 018d 6A020000 		.4byte	.LASF32
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 14
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 14
 
 
  725 0191 06       		.byte	0x6
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  779 01ee 06       		.uleb128 0x6
  780 01ef 13030000 		.4byte	.LASF38
  781 01f3 06       		.byte	0x6
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 15
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 15
 
 
  782 01f4 B8       		.byte	0xb8
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  836 0251 5B       		.byte	0x5b
  837 0252 68020000 		.4byte	0x268
  838 0256 02       		.byte	0x2
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 16
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 16
 
 
  839 0257 23       		.byte	0x23
@@ -935,12 +935,12 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  870 028e 00       		.uleb128 0
  871 028f 00       		.byte	0
  872 0290 03       		.uleb128 0x3
- 873 0291 90010000 		.4byte	.LASF45
+ 873 0291 4B010000 		.4byte	.LASF45
  874 0295 05       		.byte	0x5
  875 0296 69       		.byte	0x69
  876 0297 79020000 		.4byte	0x279
  877 029b 03       		.uleb128 0x3
- 878 029c 29010000 		.4byte	.LASF46
+ 878 029c E4000000 		.4byte	.LASF46
  879 02a0 07       		.byte	0x7
  880 02a1 DE       		.byte	0xde
  881 02a2 A6020000 		.4byte	0x2a6
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  893 02ba 0501     		.2byte	0x105
  894 02bc 41030000 		.4byte	0x341
  895 02c0 0C       		.uleb128 0xc
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 17
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 17
 
 
  896 02c1 723400   		.ascii	"r4\000"
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  950 0322 18       		.uleb128 0x18
  951 0323 0C       		.uleb128 0xc
  952 0324 72313100 		.ascii	"r11\000"
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 18
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 18
 
 
  953 0328 07       		.byte	0x7
@@ -1037,7 +1037,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  966 033f 20       		.uleb128 0x20
  967 0340 00       		.byte	0
  968 0341 0B       		.uleb128 0xb
- 969 0342 62010000 		.4byte	.LASF49
+ 969 0342 1D010000 		.4byte	.LASF49
  970 0346 04       		.byte	0x4
  971 0347 07       		.byte	0x7
  972 0348 2A01     		.2byte	0x12a
@@ -1061,7 +1061,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  990 036b 0D       		.uleb128 0xd
  991 036c FA000000 		.4byte	0xfa
  992 0370 05       		.uleb128 0x5
- 993 0371 A8010000 		.4byte	.LASF51
+ 993 0371 63010000 		.4byte	.LASF51
  994 0375 10       		.byte	0x10
  995 0376 08       		.byte	0x8
  996 0377 25       		.byte	0x25
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  1007 038b 56030000 		.4byte	.LASF53
  1008 038f 08       		.byte	0x8
  1009 0390 28       		.byte	0x28
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 19
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 19
 
 
  1010 0391 68020000 		.4byte	0x268
@@ -1098,7 +1098,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  1024 03a8 04       		.byte	0x4
  1025 03a9 70030000 		.4byte	0x370
  1026 03ad 03       		.uleb128 0x3
- 1027 03ae A8010000 		.4byte	.LASF51
+ 1027 03ae 63010000 		.4byte	.LASF51
  1028 03b2 08       		.byte	0x8
  1029 03b3 2C       		.byte	0x2c
  1030 03b4 70030000 		.4byte	0x370
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  1064 03fd 00       		.uleb128 0
  1065 03fe 06       		.uleb128 0x6
  1066 03ff 4A000000 		.4byte	.LASF59
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 20
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 20
 
 
  1067 0403 0A       		.byte	0xa
@@ -1179,7 +1179,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  1102 0441 32       		.byte	0x32
  1103 0442 5B040000 		.4byte	0x45b
  1104 0446 11       		.uleb128 0x11
- 1105 0447 32010000 		.4byte	.LASF63
+ 1105 0447 ED000000 		.4byte	.LASF63
  1106 044b 0A       		.byte	0xa
  1107 044c 33       		.byte	0x33
  1108 044d A8020000 		.4byte	0x2a8
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  1121 0467 08       		.uleb128 0x8
  1122 0468 08       		.byte	0x8
  1123 0469 0A       		.byte	0xa
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 21
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 21
 
 
  1124 046a 34       		.byte	0x34
@@ -1212,7 +1212,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  1132 0479 23       		.byte	0x23
  1133 047a 00       		.uleb128 0
  1134 047b 06       		.uleb128 0x6
- 1135 047c 6A010000 		.4byte	.LASF64
+ 1135 047c 25010000 		.4byte	.LASF64
  1136 0480 0A       		.byte	0xa
  1137 0481 39       		.byte	0x39
  1138 0482 30000000 		.4byte	0x30
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  1178 04d1 09       		.uleb128 0x9
  1179 04d2 04       		.byte	0x4
  1180 04d3 A8020000 		.4byte	0x2a8
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 22
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 22
 
 
  1181 04d7 09       		.uleb128 0x9
@@ -1313,12 +1313,12 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  1230 053b A6020000 		.4byte	0x2a6
  1231 053f 3E000000 		.4byte	.LLST2
  1232 0543 19       		.uleb128 0x19
- 1233 0544 6A010000 		.4byte	.LASF64
+ 1233 0544 25010000 		.4byte	.LASF64
  1234 0548 01       		.byte	0x1
  1235 0549 5C       		.byte	0x5c
  1236 054a 30000000 		.4byte	0x30
  1237 054e 5C000000 		.4byte	.LLST3
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 23
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 23
 
 
  1238 0552 1B       		.uleb128 0x1b
@@ -1370,7 +1370,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  1284 05ac 61040000 		.4byte	0x461
  1285 05b0 A7000000 		.4byte	.LLST5
  1286 05b4 19       		.uleb128 0x19
- 1287 05b5 6A010000 		.4byte	.LASF64
+ 1287 05b5 25010000 		.4byte	.LASF64
  1288 05b9 01       		.byte	0x1
  1289 05ba 7D       		.byte	0x7d
  1290 05bb 30000000 		.4byte	0x30
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  1292 05c3 1E       		.uleb128 0x1e
  1293 05c4 717000   		.ascii	"qp\000"
  1294 05c7 01       		.byte	0x1
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 24
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 24
 
 
  1295 05c8 7E       		.byte	0x7e
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  1349 063b 7000     		.ascii	"p\000"
  1350 063d 01       		.byte	0x1
  1351 063e BB       		.byte	0xbb
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 25
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 25
 
 
  1352 063f A6020000 		.4byte	0x2a6
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  1406 06b5 10000000 		.4byte	.LC1
  1407 06b9 00       		.byte	0
  1408 06ba 00       		.byte	0
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 26
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 26
 
 
  1409 06bb 1D       		.uleb128 0x1d
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  1463 0735 30000000 		.4byte	.LVL47
  1464 0739 91070000 		.4byte	0x791
  1465 073d 00       		.byte	0
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 27
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 27
 
 
  1466 073e 09       		.uleb128 0x9
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  1520              	.Ldebug_abbrev0:
  1521 0000 01       		.uleb128 0x1
  1522 0001 11       		.uleb128 0x11
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 28
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 28
 
 
  1523 0002 01       		.byte	0x1
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  1577 0038 05       		.uleb128 0x5
  1578 0039 13       		.uleb128 0x13
  1579 003a 01       		.byte	0x1
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 29
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 29
 
 
  1580 003b 03       		.uleb128 0x3
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  1634 0071 00       		.byte	0
  1635 0072 09       		.uleb128 0x9
  1636 0073 0F       		.uleb128 0xf
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 30
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 30
 
 
  1637 0074 00       		.byte	0
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  1691 00aa 27       		.uleb128 0x27
  1692 00ab 0C       		.uleb128 0xc
  1693 00ac 49       		.uleb128 0x49
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 31
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 31
 
 
  1694 00ad 13       		.uleb128 0x13
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  1748 00e3 0D       		.uleb128 0xd
  1749 00e4 00       		.byte	0
  1750 00e5 03       		.uleb128 0x3
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 32
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 32
 
 
  1751 00e6 08       		.uleb128 0x8
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  1805 0122 00       		.byte	0
  1806 0123 02       		.uleb128 0x2
  1807 0124 0A       		.uleb128 0xa
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 33
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 33
 
 
  1808 0125 9142     		.uleb128 0x2111
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  1862 015d 13       		.uleb128 0x13
  1863 015e 02       		.uleb128 0x2
  1864 015f 06       		.uleb128 0x6
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 34
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 34
 
 
  1865 0160 00       		.byte	0
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  1919 0199 00       		.byte	0
  1920 019a 1E       		.uleb128 0x1e
  1921 019b 34       		.uleb128 0x34
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 35
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 35
 
 
  1922 019c 00       		.byte	0
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  1976 01d9 00       		.byte	0
  1977 01da 23       		.uleb128 0x23
  1978 01db 898201   		.uleb128 0x4109
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 36
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 36
 
 
  1979 01de 01       		.byte	0x1
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  2033 0214 49       		.uleb128 0x49
  2034 0215 13       		.uleb128 0x13
  2035 0216 3C       		.uleb128 0x3c
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 37
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 37
 
 
  2036 0217 0C       		.uleb128 0xc
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  2090 007d 08       		.sleb128 8
  2091 007e 9F       		.byte	0x9f
  2092 007f 00000000 		.4byte	0
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 38
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 38
 
 
  2093 0083 00000000 		.4byte	0
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  2147 0110 54       		.byte	0x54
  2148 0111 00000000 		.4byte	0
  2149 0115 00000000 		.4byte	0
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 39
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 39
 
 
  2150              	.LLST8:
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  2204 01a3 08000000 		.4byte	.LVL29
  2205 01a7 A0000000 		.4byte	.LVL37
  2206 01ab 0100     		.2byte	0x1
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 40
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 40
 
 
  2207 01ad 57       		.byte	0x57
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  2261 023c 0200     		.2byte	0x2
  2262 023e 7D       		.byte	0x7d
  2263 023f 10       		.sleb128 16
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 41
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 41
 
 
  2264 0240 00000000 		.4byte	0
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  2318 02ab 00000000 		.4byte	.LVL40
  2319 02af 13000000 		.4byte	.LVL42-1
  2320 02b3 0100     		.2byte	0x1
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 42
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 42
 
 
  2321 02b5 51       		.byte	0x51
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  2375 0329 0200     		.2byte	0x2
  2376 032b 30       		.byte	0x30
  2377 032c 9F       		.byte	0x9f
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 43
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 43
 
 
  2378 032d 00000000 		.4byte	0
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  2432              	.Ldebug_line0:
  2433 0000 DA020000 		.section	.debug_str,"MS",%progbits,1
  2433      0200CB01 
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 44
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 44
 
 
  2433      00000201 
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  2461      696F00
  2462              	.LASF11:
  2463 0085 6C6F6E67 		.ascii	"long long int\000"
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 45
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 45
 
 
  2463      206C6F6E 
@@ -2673,74 +2673,74 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  2479 00d3 74737461 		.ascii	"tstate_t\000"
  2479      74655F74 
  2479      00
- 2480              	.LASF83:
- 2481 00dc 633A5C55 		.ascii	"c:\\Users\\TaisikHam\\Documents\\GitHub\\ChibiOS\\t"
- 2481      73657273 
- 2481      5C546169 
- 2481      73696B48 
- 2481      616D5C44 
- 2482 0109 65737468 		.ascii	"esthal\\STM32F30x\\TS_SPI\000"
- 2482      616C5C53 
- 2482      544D3332 
- 2482      46333078 
- 2482      5C54535F 
- 2483              	.LASF28:
- 2484 0121 705F6E65 		.ascii	"p_newer\000"
- 2484      77657200 
- 2485              	.LASF46:
- 2486 0129 72656761 		.ascii	"regarm_t\000"
- 2486      726D5F74 
- 2486      00
- 2487              	.LASF63:
- 2488 0132 616C6967 		.ascii	"align\000"
- 2488      6E00
- 2489              	.LASF31:
- 2490 0138 705F7374 		.ascii	"p_stklimit\000"
- 2490      6B6C696D 
- 2490      697400
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 46
+ 2480              	.LASF28:
+ 2481 00dc 705F6E65 		.ascii	"p_newer\000"
+ 2481      77657200 
+ 2482              	.LASF46:
+ 2483 00e4 72656761 		.ascii	"regarm_t\000"
+ 2483      726D5F74 
+ 2483      00
+ 2484              	.LASF63:
+ 2485 00ed 616C6967 		.ascii	"align\000"
+ 2485      6E00
+ 2486              	.LASF31:
+ 2487 00f3 705F7374 		.ascii	"p_stklimit\000"
+ 2487      6B6C696D 
+ 2487      697400
+ 2488              	.LASF0:
+ 2489 00fe 756E7369 		.ascii	"unsigned int\000"
+ 2489      676E6564 
+ 2489      20696E74 
+ 2489      00
+ 2490              	.LASF10:
+ 2491 010b 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2491      20756E73 
+ 2491      69676E65 
+ 2491      6420696E 
+ 2491      7400
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 46
 
 
- 2491              	.LASF0:
- 2492 0143 756E7369 		.ascii	"unsigned int\000"
- 2492      676E6564 
- 2492      20696E74 
- 2492      00
- 2493              	.LASF10:
- 2494 0150 6C6F6E67 		.ascii	"long unsigned int\000"
- 2494      20756E73 
- 2494      69676E65 
- 2494      6420696E 
- 2494      7400
- 2495              	.LASF49:
- 2496 0162 636F6E74 		.ascii	"context\000"
- 2496      65787400 
- 2497              	.LASF64:
- 2498 016a 73697A65 		.ascii	"size\000"
- 2498      00
- 2499              	.LASF6:
- 2500 016f 73686F72 		.ascii	"short unsigned int\000"
- 2500      7420756E 
- 2500      7369676E 
- 2500      65642069 
- 2500      6E7400
- 2501              	.LASF20:
- 2502 0182 6D73675F 		.ascii	"msg_t\000"
- 2502      7400
- 2503              	.LASF15:
- 2504 0188 746D6F64 		.ascii	"tmode_t\000"
- 2504      655F7400 
- 2505              	.LASF45:
- 2506 0190 54687265 		.ascii	"ThreadsList\000"
- 2506      6164734C 
- 2506      69737400 
- 2507              	.LASF21:
- 2508 019c 6576656E 		.ascii	"eventmask_t\000"
- 2508      746D6173 
- 2508      6B5F7400 
- 2509              	.LASF51:
- 2510 01a8 4D757465 		.ascii	"Mutex\000"
- 2510      7800
+ 2492              	.LASF49:
+ 2493 011d 636F6E74 		.ascii	"context\000"
+ 2493      65787400 
+ 2494              	.LASF64:
+ 2495 0125 73697A65 		.ascii	"size\000"
+ 2495      00
+ 2496              	.LASF6:
+ 2497 012a 73686F72 		.ascii	"short unsigned int\000"
+ 2497      7420756E 
+ 2497      7369676E 
+ 2497      65642069 
+ 2497      6E7400
+ 2498              	.LASF20:
+ 2499 013d 6D73675F 		.ascii	"msg_t\000"
+ 2499      7400
+ 2500              	.LASF15:
+ 2501 0143 746D6F64 		.ascii	"tmode_t\000"
+ 2501      655F7400 
+ 2502              	.LASF45:
+ 2503 014b 54687265 		.ascii	"ThreadsList\000"
+ 2503      6164734C 
+ 2503      69737400 
+ 2504              	.LASF21:
+ 2505 0157 6576656E 		.ascii	"eventmask_t\000"
+ 2505      746D6173 
+ 2505      6B5F7400 
+ 2506              	.LASF51:
+ 2507 0163 4D757465 		.ascii	"Mutex\000"
+ 2507      7800
+ 2508              	.LASF83:
+ 2509 0169 433A5C55 		.ascii	"C:\\Users\\TaisikHam\\Documents\\GitHub\\ChibiOS\\t"
+ 2509      73657273 
+ 2509      5C546169 
+ 2509      73696B48 
+ 2509      616D5C44 
+ 2510 0196 65737468 		.ascii	"esthal\\STM32F30x\\TS_SPI\000"
+ 2510      616C5C53 
+ 2510      544D3332 
+ 2510      46333078 
+ 2510      5C54535F 
  2511              	.LASF47:
  2512 01ae 73746B61 		.ascii	"stkalign_t\000"
  2512      6C69676E 
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  2517              	.LASF80:
  2518 01e2 63684D74 		.ascii	"chMtxLock\000"
  2518      784C6F63 
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 47
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 47
 
 
  2518      6B00
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  2548      65656D70 
  2548      7400
  2549              	.LASF84:
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 48
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 48
 
 
  2550 027c 68656170 		.ascii	"heap_header\000"
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  2579              	.LASF36:
  2580 0305 705F7469 		.ascii	"p_time\000"
  2580      6D6500
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 49
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 49
 
 
  2581              	.LASF48:
@@ -2926,32 +2926,32 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 1
  2606      72795F68 
  2606      65617000 
  2607              		.ident	"GCC: (GNU) 4.7.2"
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s 			page 50
+ARM GAS  C:\cygwin\tmp\ccmEJqw6.s 			page 50
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 chheap.c
-C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s:19     .text._heap_init:00000000 $t
-C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s:25     .text._heap_init:00000000 _heap_init
-C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s:507    .bss.default_heap:00000000 .LANCHOR0
-C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s:57     .text.chHeapInit:00000000 $t
-C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s:63     .text.chHeapInit:00000000 chHeapInit
-C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s:121    .text.chHeapInit:00000030 $d
-C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s:126    .text.chHeapAlloc:00000000 $t
-C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s:132    .text.chHeapAlloc:00000000 chHeapAlloc
-C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s:259    .text.chHeapAlloc:00000084 $d
-C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s:264    .text.chHeapFree:00000000 $t
-C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s:270    .text.chHeapFree:00000000 chHeapFree
-C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s:409    .text.chHeapFree:000000a8 $d
-C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s:415    .text.chHeapStatus:00000000 $t
-C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s:421    .text.chHeapStatus:00000000 chHeapStatus
-C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s:491    .text.chHeapStatus:0000003c $d
-C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s:496    .rodata.str1.4:00000000 $d
-C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s:506    .bss.default_heap:00000000 $d
-C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s:510    .bss.default_heap:00000000 default_heap
+C:\cygwin\tmp\ccmEJqw6.s:19     .text._heap_init:00000000 $t
+C:\cygwin\tmp\ccmEJqw6.s:25     .text._heap_init:00000000 _heap_init
+C:\cygwin\tmp\ccmEJqw6.s:507    .bss.default_heap:00000000 .LANCHOR0
+C:\cygwin\tmp\ccmEJqw6.s:57     .text.chHeapInit:00000000 $t
+C:\cygwin\tmp\ccmEJqw6.s:63     .text.chHeapInit:00000000 chHeapInit
+C:\cygwin\tmp\ccmEJqw6.s:121    .text.chHeapInit:00000030 $d
+C:\cygwin\tmp\ccmEJqw6.s:126    .text.chHeapAlloc:00000000 $t
+C:\cygwin\tmp\ccmEJqw6.s:132    .text.chHeapAlloc:00000000 chHeapAlloc
+C:\cygwin\tmp\ccmEJqw6.s:259    .text.chHeapAlloc:00000084 $d
+C:\cygwin\tmp\ccmEJqw6.s:264    .text.chHeapFree:00000000 $t
+C:\cygwin\tmp\ccmEJqw6.s:270    .text.chHeapFree:00000000 chHeapFree
+C:\cygwin\tmp\ccmEJqw6.s:409    .text.chHeapFree:000000a8 $d
+C:\cygwin\tmp\ccmEJqw6.s:415    .text.chHeapStatus:00000000 $t
+C:\cygwin\tmp\ccmEJqw6.s:421    .text.chHeapStatus:00000000 chHeapStatus
+C:\cygwin\tmp\ccmEJqw6.s:491    .text.chHeapStatus:0000003c $d
+C:\cygwin\tmp\ccmEJqw6.s:496    .rodata.str1.4:00000000 $d
+C:\cygwin\tmp\ccmEJqw6.s:506    .bss.default_heap:00000000 $d
+C:\cygwin\tmp\ccmEJqw6.s:510    .bss.default_heap:00000000 default_heap
                      .debug_frame:00000010 $d
-C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s:125    .text.chHeapInit:00000034 $t
-C:\Users\TaisikHam\AppData\Local\Temp\ccPyv4js.s:263    .text.chHeapAlloc:00000088 $t
+C:\cygwin\tmp\ccmEJqw6.s:125    .text.chHeapInit:00000034 $t
+C:\cygwin\tmp\ccmEJqw6.s:263    .text.chHeapAlloc:00000088 $t
 
 UNDEFINED SYMBOLS
 chCoreAlloc

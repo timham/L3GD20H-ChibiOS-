@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccJ5w2hw.s 			page 1
+ARM GAS  C:\cygwin\tmp\ccig8VLd.s 			page 1
 
 
    1              		.syntax unified
@@ -31,7 +31,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccJ5w2hw.s 			page 1
   28 000c 48000000 		.4byte	.LASF12
   29 0010 01       		.byte	0x1
   30 0011 2E000000 		.4byte	.LASF13
-  31 0015 7D000000 		.4byte	.LASF14
+  31 0015 54000000 		.4byte	.LASF14
   32 0019 00000000 		.4byte	.Ldebug_line0
   33 001d 02       		.uleb128 0x2
   34 001e 01       		.byte	0x1
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccJ5w2hw.s 			page 1
   55 0042 07       		.byte	0x7
   56 0043 21000000 		.4byte	.LASF4
   57 0047 02       		.uleb128 0x2
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccJ5w2hw.s 			page 2
+ARM GAS  C:\cygwin\tmp\ccig8VLd.s 			page 2
 
 
   58 0048 08       		.byte	0x8
@@ -67,7 +67,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccJ5w2hw.s 			page 1
   61 004e 02       		.uleb128 0x2
   62 004f 08       		.byte	0x8
   63 0050 07       		.byte	0x7
-  64 0051 66000000 		.4byte	.LASF6
+  64 0051 AB000000 		.4byte	.LASF6
   65 0055 02       		.uleb128 0x2
   66 0056 04       		.byte	0x4
   67 0057 05       		.byte	0x5
@@ -79,7 +79,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccJ5w2hw.s 			page 1
   73 0063 02       		.uleb128 0x2
   74 0064 04       		.byte	0x4
   75 0065 07       		.byte	0x7
-  76 0066 54000000 		.4byte	.LASF9
+  76 0066 99000000 		.4byte	.LASF9
   77 006a 02       		.uleb128 0x2
   78 006b 01       		.byte	0x1
   79 006c 08       		.byte	0x8
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccJ5w2hw.s 			page 1
  112 000a 0E       		.uleb128 0xe
  113 000b 10       		.uleb128 0x10
  114 000c 06       		.uleb128 0x6
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccJ5w2hw.s 			page 3
+ARM GAS  C:\cygwin\tmp\ccig8VLd.s 			page 3
 
 
  115 000d 00       		.byte	0
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccJ5w2hw.s 			page 1
  169 0043 13       		.uleb128 0x13
  170 0044 3F       		.uleb128 0x3f
  171 0045 0C       		.uleb128 0xc
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccJ5w2hw.s 			page 4
+ARM GAS  C:\cygwin\tmp\ccig8VLd.s 			page 4
 
 
  172 0046 3C       		.uleb128 0x3c
@@ -229,32 +229,32 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccJ5w2hw.s 			page 1
  199 0048 474E5520 		.ascii	"GNU C 4.7.2\000"
  199      4320342E 
  199      372E3200 
- 200              	.LASF9:
- 201 0054 6C6F6E67 		.ascii	"long unsigned int\000"
- 201      20756E73 
- 201      69676E65 
- 201      6420696E 
- 201      7400
- 202              	.LASF6:
- 203 0066 6C6F6E67 		.ascii	"long long unsigned int\000"
- 203      206C6F6E 
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccJ5w2hw.s 			page 5
+ 200              	.LASF14:
+ 201 0054 433A5C55 		.ascii	"C:\\Users\\TaisikHam\\Documents\\GitHub\\ChibiOS\\t"
+ 201      73657273 
+ 201      5C546169 
+ 201      73696B48 
+ 201      616D5C44 
+ 202 0081 65737468 		.ascii	"esthal\\STM32F30x\\TS_SPI\000"
+ 202      616C5C53 
+ 202      544D3332 
+ARM GAS  C:\cygwin\tmp\ccig8VLd.s 			page 5
 
 
- 203      6720756E 
- 203      7369676E 
- 203      65642069 
- 204              	.LASF14:
- 205 007d 633A5C55 		.ascii	"c:\\Users\\TaisikHam\\Documents\\GitHub\\ChibiOS\\t"
- 205      73657273 
- 205      5C546169 
- 205      73696B48 
- 205      616D5C44 
- 206 00aa 65737468 		.ascii	"esthal\\STM32F30x\\TS_SPI\000"
- 206      616C5C53 
- 206      544D3332 
- 206      46333078 
- 206      5C54535F 
+ 202      46333078 
+ 202      5C54535F 
+ 203              	.LASF9:
+ 204 0099 6C6F6E67 		.ascii	"long unsigned int\000"
+ 204      20756E73 
+ 204      69676E65 
+ 204      6420696E 
+ 204      7400
+ 205              	.LASF6:
+ 206 00ab 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 206      206C6F6E 
+ 206      6720756E 
+ 206      7369676E 
+ 206      65642069 
  207              	.LASF1:
  208 00c2 756E7369 		.ascii	"unsigned char\000"
  208      676E6564 
@@ -291,7 +291,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccJ5w2hw.s 			page 1
  224      74797065 
  224      00
  225              		.ident	"GCC: (GNU) 4.7.2"
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccJ5w2hw.s 			page 6
+ARM GAS  C:\cygwin\tmp\ccig8VLd.s 			page 6
 
 
 DEFINED SYMBOLS

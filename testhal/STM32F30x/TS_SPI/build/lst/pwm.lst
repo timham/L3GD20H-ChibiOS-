@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccDfEO8c.s 			page 1
+ARM GAS  C:\cygwin\tmp\ccWHaGqf.s 			page 1
 
 
    1              		.syntax unified
@@ -31,7 +31,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccDfEO8c.s 			page 1
   28 000c 2E000000 		.4byte	.LASF12
   29 0010 01       		.byte	0x1
   30 0011 C4000000 		.4byte	.LASF13
-  31 0015 63000000 		.4byte	.LASF14
+  31 0015 3A000000 		.4byte	.LASF14
   32 0019 00000000 		.4byte	.Ldebug_line0
   33 001d 02       		.uleb128 0x2
   34 001e 04       		.byte	0x4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccDfEO8c.s 			page 1
   55 0042 07       		.byte	0x7
   56 0043 0E000000 		.4byte	.LASF4
   57 0047 04       		.uleb128 0x4
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccDfEO8c.s 			page 2
+ARM GAS  C:\cygwin\tmp\ccWHaGqf.s 			page 2
 
 
   58 0048 07010000 		.4byte	.LASF15
@@ -72,7 +72,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccDfEO8c.s 			page 1
   66 0059 03       		.uleb128 0x3
   67 005a 04       		.byte	0x4
   68 005b 07       		.byte	0x7
-  69 005c 3A000000 		.4byte	.LASF6
+  69 005c 7F000000 		.4byte	.LASF6
   70 0060 03       		.uleb128 0x3
   71 0061 08       		.byte	0x8
   72 0062 05       		.byte	0x5
@@ -80,7 +80,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccDfEO8c.s 			page 1
   74 0067 03       		.uleb128 0x3
   75 0068 08       		.byte	0x8
   76 0069 07       		.byte	0x7
-  77 006a 4C000000 		.4byte	.LASF8
+  77 006a 91000000 		.4byte	.LASF8
   78 006e 03       		.uleb128 0x3
   79 006f 01       		.byte	0x1
   80 0070 02       		.byte	0x2
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccDfEO8c.s 			page 1
  112 000a 0E       		.uleb128 0xe
  113 000b 10       		.uleb128 0x10
  114 000c 06       		.uleb128 0x6
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccDfEO8c.s 			page 3
+ARM GAS  C:\cygwin\tmp\ccWHaGqf.s 			page 3
 
 
  115 000d 00       		.byte	0
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccDfEO8c.s 			page 1
  169 0043 13       		.uleb128 0x13
  170 0044 3F       		.uleb128 0x3f
  171 0045 0C       		.uleb128 0xc
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccDfEO8c.s 			page 4
+ARM GAS  C:\cygwin\tmp\ccWHaGqf.s 			page 4
 
 
  172 0046 3C       		.uleb128 0x3c
@@ -223,32 +223,32 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccDfEO8c.s 			page 1
  197 002e 474E5520 		.ascii	"GNU C 4.7.2\000"
  197      4320342E 
  197      372E3200 
- 198              	.LASF6:
- 199 003a 6C6F6E67 		.ascii	"long unsigned int\000"
- 199      20756E73 
- 199      69676E65 
- 199      6420696E 
- 199      7400
- 200              	.LASF8:
- 201 004c 6C6F6E67 		.ascii	"long long unsigned int\000"
- 201      206C6F6E 
- 201      6720756E 
- 201      7369676E 
- 201      65642069 
- 202              	.LASF14:
- 203 0063 633A5C55 		.ascii	"c:\\Users\\TaisikHam\\Documents\\GitHub\\ChibiOS\\t"
- 203      73657273 
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccDfEO8c.s 			page 5
+ 198              	.LASF14:
+ 199 003a 433A5C55 		.ascii	"C:\\Users\\TaisikHam\\Documents\\GitHub\\ChibiOS\\t"
+ 199      73657273 
+ 199      5C546169 
+ 199      73696B48 
+ 199      616D5C44 
+ 200 0067 65737468 		.ascii	"esthal\\STM32F30x\\TS_SPI\000"
+ 200      616C5C53 
+ 200      544D3332 
+ 200      46333078 
+ 200      5C54535F 
+ 201              	.LASF6:
+ 202 007f 6C6F6E67 		.ascii	"long unsigned int\000"
+ 202      20756E73 
+ 202      69676E65 
+ARM GAS  C:\cygwin\tmp\ccWHaGqf.s 			page 5
 
 
- 203      5C546169 
- 203      73696B48 
- 203      616D5C44 
- 204 0090 65737468 		.ascii	"esthal\\STM32F30x\\TS_SPI\000"
- 204      616C5C53 
- 204      544D3332 
- 204      46333078 
- 204      5C54535F 
+ 202      6420696E 
+ 202      7400
+ 203              	.LASF8:
+ 204 0091 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 204      206C6F6E 
+ 204      6720756E 
+ 204      7369676E 
+ 204      65642069 
  205              	.LASF2:
  206 00a8 756E7369 		.ascii	"unsigned char\000"
  206      676E6564 
@@ -291,7 +291,7 @@ ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccDfEO8c.s 			page 1
  224      74797065 
  224      00
  225              		.ident	"GCC: (GNU) 4.7.2"
-ARM GAS  C:\Users\TaisikHam\AppData\Local\Temp\ccDfEO8c.s 			page 6
+ARM GAS  C:\cygwin\tmp\ccWHaGqf.s 			page 6
 
 
 DEFINED SYMBOLS
