@@ -5,7 +5,7 @@
   * @version V1.1.0
   * @date    20-September-2012
   * @brief   This file provides a set of functions needed to manage the l3gd20
-  *          MEMS accelerometer available on STM32F3-Discovery Kit.
+  *             MEMS accelerometer available on STM32F3-Discovery Kit.
   ******************************************************************************
   * @attention
   *
@@ -25,12 +25,6 @@
   *
   ******************************************************************************
   */
-/* Includes ------------------------------------------------------------------*/
-/*
-#include "board.h"
-#include "stm32f3_discovery_l3gd20.h"
-#include "stm32f30x_gpio.h"
-*/
 
 #include  "ch.h"
 #include  "hal.h"
@@ -40,64 +34,8 @@
 #include "stm32f30x_gpio.h"
 #include "l3gdcomp.h"
 
-//#include "stm32f30x_spi.h"
-
-static uint8_t 	L3GD20_SendByte(uint8_t byte);
-
-/*****************************************************************************
-  External global Variables :
-*****************************************************************************/
-extern SPIDriver	gSpiDriver;
-extern SPIConfig        gSpiConfig;  
-
-/*****************************************************************************
-  TypeDef 				
-*****************************************************************************/
-
-#define SPI_Mode_Master              ((uint16_t)0x0104)
-#define SPI_Mode_Slave               ((uint16_t)0x0000)
-
-#define CR1_CLEAR_MASK       	     ((uint16_t)0x3040)
-
-#define SPI_I2S_FLAG_RXNE            ((uint16_t)0x0001)
-#define SPI_I2S_FLAG_TXE             ((uint16_t)0x0002)
-
 #define   VAR_OR(x)   (x.SPI_Direction | x.SPI_Mode | x.SPI_CPOL | x.SPI_CPHA  \
                       | x.SPI_NSS | x.SPI_BaudRatePrescaler | x.SPI_FirstBit) 
-/*
-typedef struct
-{
-  uint16_t 		SPI_Direction;           
-  uint16_t 		SPI_Mode;
-  uint16_t 		SPI_DataSize;
-  uint16_t 		SPI_CPOL; 
-  uint16_t 		SPI_CPHA;    
-  uint16_t 		SPI_NSS; 
-  uint16_t 		SPI_BaudRatePrescaler;
-  uint16_t 		SPI_FirstBit;            
-  uint16_t 		SPI_CRCPolynomial;
-}SPI_InitTypeDef_A;
-*/
-
-/**
-  * @brief  Initializes the low level interface used to drive the L3GD20
-  * @param  None
-  * @retval None
-  */
-
-/** 
-  * @brief Serial Peripheral Interface
-  */
-
-extern void RCC_APB2PeriphClockCmd(u32 RCC_APB2Periph, FunctionalState NewState);
-
-/**
-  * @brief  Reads a block of data from the L3GD20.
-  * @param  pBuffer : pointer to the buffer that receives the data read from the L3GD20.
-  * @param  ReadAddr : L3GD20's internal address to read from.
-  * @param  NumByteToRead : number of bytes to read from the L3GD20.
-  * @retval None
-  */
 
 
 ///////////////////////////////////////////////////////////////////////////
@@ -143,25 +81,6 @@ FlagStatus SPI_I2S_GetFlagStatus(SPI_TypeDef* SPIx, uint16_t SPI_I2S_FLAG)
 }
 
 
-static void SPI_Cmd(SPI_TypeDef* SPIx, FunctionalState NewState, SPIConfig *scfg)
-{
-  /* Check the parameters */
-
-  if (NewState != DISABLE)
-  {
-    /* Enable the selected SPI peripheral */
-    SPIx->CR1 |= SPI_CR1_SPE;
-  }
-  else
-  {
-    /* Disable the selected SPI peripheral */
-    SPIx->CR1 &= (uint16_t)~((uint16_t)SPI_CR1_SPE);
-  }
-
-  scfg->cr1 = SPIx->CR1; 
-}
-
-
 void L3GD20_Read(uint8_t* pBuffer, uint8_t *ReadAddr, uint16_t NumByteToRead)
 {  
   if(NumByteToRead > 0x01)
@@ -172,6 +91,7 @@ void L3GD20_Read(uint8_t* pBuffer, uint8_t *ReadAddr, uint16_t NumByteToRead)
   {
     *ReadAddr |= (uint8_t)READWRITE_CMD;
   }
+
   /* Set chip select Low at the start of the transmission */
   L3GD20_CS_LOW();
 
@@ -181,7 +101,9 @@ void L3GD20_Read(uint8_t* pBuffer, uint8_t *ReadAddr, uint16_t NumByteToRead)
   /* Receive the data that will be read from the device (MSB First) */
   while(NumByteToRead > 0x00)
   {
-    /* Send dummy byte (0x00) to generate the SPI clock to L3GD20 (Slave device) */
+     /* Send dummy byte (0x00) to generate the SPI clock 
+        to L3GD20 (Slave device) */
+
     *pBuffer = L3GD20_SendByte(DUMMY_BYTE);
     NumByteToRead--;
     pBuffer++;
@@ -191,25 +113,25 @@ void L3GD20_Read(uint8_t* pBuffer, uint8_t *ReadAddr, uint16_t NumByteToRead)
   L3GD20_CS_HIGH();
 }  
 
-/**
+  /**
   * @brief  Reboot memory content of L3GD20
   * @param  None
   * @retval None
   */
+
 void L3GD20_RebootCmd(void)
 {
   uint8_t tmpreg, tmpval;
 
- tmpval = L3GD20_CTRL_REG5_ADDR;
+  tmpval = L3GD20_CTRL_REG5_ADDR;
   
   /* Read CTRL_REG5 register */
   L3GD20_Read(&tmpreg, &tmpval, 1);
   
   /* Enable or Disable the reboot memory */
- 
   tmpreg |= L3GD20_BOOT_REBOOTMEMORY;
 
- tmpval = L3GD20_CTRL_REG5_ADDR;   
+  tmpval = L3GD20_CTRL_REG5_ADDR;   
   /* Write value to MEMS CTRL_REG5 regsister */
   L3GD20_Write(&tmpreg, &tmpval, 1);
 }
@@ -218,15 +140,18 @@ void L3GD20_RebootCmd(void)
 /**
   * @brief Set L3GD20 Interrupt configuration
   * @param  L3GD20_InterruptConfig_TypeDef: pointer to a L3GD20_InterruptConfig_TypeDef 
-  *         structure that contains the configuration setting for the L3GD20 Interrupt.
+  * structure that contains the configuration setting for the L3GD20 Interrupt.
   * @retval None
-  */
+  * 
+**/
+
 void L3GD20_INT1InterruptConfig(L3GD20_InterruptConfigTypeDef *L3GD20_IntConfigStruct)
 {
   uint8_t ctrl_cfr = 0x00, ctrl3 = 0x00;
   uint8_t tmpval; 
 
   tmpval = L3GD20_INT1_CFG_ADDR;
+
   /* Read INT1_CFG register */
   L3GD20_Read(&ctrl_cfr, &tmpval, 1);
 
@@ -281,9 +206,9 @@ void L3GD20_INT1InterruptCmd(uint8_t InterruptState)
 /**
   * @brief  Enable or disable INT2 interrupt
   * @param  InterruptState: State of INT1 Interrupt 
-  *      This parameter can be: 
-  *        @arg L3GD20_INT2INTERRUPT_DISABLE
-  *        @arg L3GD20_INT2INTERRUPT_ENABLE    
+  *  This parameter can be: 
+  *  @arg L3GD20_INT2INTERRUPT_DISABLE
+  *  @arg L3GD20_INT2INTERRUPT_ENABLE    
   * @retval None
   */
 void L3GD20_INT2InterruptCmd(uint8_t InterruptState)
@@ -305,9 +230,10 @@ void L3GD20_INT2InterruptCmd(uint8_t InterruptState)
 /**
   * @brief  Set High Pass Filter Modality
   * @param  L3GD20_FilterStruct: pointer to a L3GD20_FilterConfigTypeDef structure 
-  *         that contains the configuration setting for the L3GD20.        
+  *      that contains the configuration setting for the L3GD20.        
   * @retval None
-  */
+*/
+
 void L3GD20_FilterConfig(L3GD20_FilterConfigTypeDef *L3GD20_FilterStruct) 
 {
   uint8_t tmpreg, tmpval;
@@ -370,8 +296,7 @@ uint8_t L3GD20_GetDataStatus(void)
 
 __IO uint32_t  L3GD20Timeout = L3GD20_FLAG_TIMEOUT;  
 
-
-extern FlagStatus SPI_I2S_GetFlagStatus(SPI_TypeDef* SPIx, uint16_t SPI_I2S_FLAG);
+//extern FlagStatus SPI_I2S_GetFlagStatus(SPI_TypeDef* SPIx, uint16_t SPI_I2S_FLAG);
 
 
 /**
@@ -392,11 +317,52 @@ static uint8_t L3GD20_SendByte(uint8_t byte)
   {
     if((L3GD20Timeout--) == 0) return L3GD20_TIMEOUT_UserCallback();
   }
-
   
   spiExchange(&SPID1,1, &byte, &rxbuf); // to need checkig.
 
   return rxbuf;
+}
+
+void SPI_Initialize(SPI_TypeDef *SPIx, SPIConfig *scfg)
+{
+  uint16_t   reg = 0;
+
+  reg = (gSPI_Init.SPI_Mode == SPI_MODE_MASTER)   
+       ? SPIx->CR1 
+       : SPIx->CR2;
+
+  reg &= (gSPI_Init.SPI_Mode == SPI_MODE_MASTER)  
+       ? CR1_CLEAR_MASK 
+       : ~SPI_CR2_DS;
+
+  reg |= (gSPI_Init.SPI_Mode == SPI_MODE_MASTER)  
+       ? VAR_OR(gSPI_Init) 
+       : (gSPI_Init.SPI_DataSize);
+
+  (gSPI_Init.SPI_Mode == SPI_MODE_MASTER) 
+       ? (SPIx->CR1 = scfg->cr1 = reg) 
+       : (SPIx->CR2 = scfg->cr2 = reg);
+
+  if(gSPI_Init.SPI_Mode == SPI_MODE_MASTER){
+	reg = SPIx->CR2;
+	reg &= (uint16_t)~SPI_CR2_DS;
+
+	// Configure SPIx : Data Size */
+	reg |= (uint16_t)(gSPI_Init.SPI_DataSize);
+	SPIx->CR2 = scfg->cr2 = reg;
+  } else {
+	reg = SPIx->CR1;
+	reg &= CR1_CLEAR_MASK;
+	reg |= VAR_OR(gSPI_Init);
+
+	SPIx->CR1 = scfg->cr1 = reg;
+  }
+ 
+  /* Activate the SPI mode (Reset I2SMOD bit in I2SCFGR register) */
+  SPIx->I2SCFGR &= (uint16_t)~((uint16_t)SPI_I2SCFGR_I2SMOD);
+
+  /* Write to SPIx CRCPOLY */
+  SPIx->CRCPR = gSPI_Init.SPI_CRCPolynomial;
 }
 
 
@@ -408,22 +374,21 @@ static uint8_t L3GD20_SendByte(uint8_t byte)
   *         contains the configuration information for the specified SPI peripheral.
   * @retval None
   */
-
 void SPI_Init_A(SPI_TypeDef* SPIx, SPI_InitTypeDef_A* SPI_InitStruct, SPIConfig *scfg)
 {
   uint16_t tmpreg = 0;
 
   /* Configuring the SPI in master mode */
-  if(SPI_InitStruct->SPI_Mode == SPI_Mode_Master)
+  if(SPI_InitStruct->SPI_Mode == SPI_MODE_MASTER)
   {
     tmpreg = SPIx->CR1;
 	
-    tmpreg &= CR1_CLEAR_MASK;
+    tmpreg &= 0x3040;  //CR1_CLEAR_MASK;
 
     tmpreg |= (uint16_t)((uint16_t)(SPI_InitStruct->SPI_Direction | SPI_InitStruct->SPI_Mode) |
-              (uint16_t)((uint16_t)(SPI_InitStruct->SPI_CPOL | SPI_InitStruct->SPI_CPHA) |
-              (uint16_t)((uint16_t)(SPI_InitStruct->SPI_NSS | SPI_InitStruct->SPI_BaudRatePrescaler) | 
-                                    SPI_InitStruct->SPI_FirstBit)));
+                  (uint16_t)((uint16_t)(SPI_InitStruct->SPI_CPOL | SPI_InitStruct->SPI_CPHA) |
+                  (uint16_t)((uint16_t)(SPI_InitStruct->SPI_NSS | SPI_InitStruct->SPI_BaudRatePrescaler) | 
+                  SPI_InitStruct->SPI_FirstBit)));
     /* Write to SPIx CR1 */
     SPIx->CR1 = tmpreg;
     scfg->cr1 = tmpreg;
@@ -437,12 +402,13 @@ void SPI_Init_A(SPI_TypeDef* SPIx, SPI_InitTypeDef_A* SPI_InitStruct, SPIConfig 
     tmpreg |= (uint16_t)(SPI_InitStruct->SPI_DataSize);
     /* Write to SPIx CR2 */
     SPIx->CR2 = tmpreg;
-	scfg->cr2 = tmpreg;
+    scfg->cr2 = tmpreg;
   }
+
   /* Configuring the SPI in slave mode */
   else
   {
-/*---------------------------- Data size Configuration -----------------------*/
+    /*---------------------------- Data size Configuration -----------------------*/
     /* Get the SPIx CR2 value */
     tmpreg = SPIx->CR2;
     /* Clear DS[3:0] bits */
@@ -451,8 +417,8 @@ void SPI_Init_A(SPI_TypeDef* SPIx, SPI_InitTypeDef_A* SPI_InitStruct, SPIConfig 
     tmpreg |= (uint16_t)(SPI_InitStruct->SPI_DataSize);
     /* Write to SPIx CR2 */
     SPIx->CR2 = tmpreg;
-	scfg->cr2 = tmpreg;
-/*---------------------------- SPIx CR1 Configuration ------------------------*/
+    scfg->cr2 = tmpreg;
+    /*---------------------------- SPIx CR1 Configuration ------------------------*/
     /* Get the SPIx CR1 value */
     tmpreg = SPIx->CR1;
     /* Clear BIDIMode, BIDIOE, RxONLY, SSM, SSI, LSBFirst, BR, MSTR, CPOL and CPHA bits */
@@ -483,107 +449,83 @@ void SPI_Init_A(SPI_TypeDef* SPIx, SPI_InitTypeDef_A* SPI_InitStruct, SPIConfig 
   SPIx->CRCPR = SPI_InitStruct->SPI_CRCPolynomial;
 }
 
-// In order to replace SPI_Init_A, it will be reorganized.
 
-void SPI_Initialize(SPI_TypeDef *SPIx, SPIConfig *scfg)
+#define  SPI_ENABLE(state)  (  (state== ENABLE) ? (gSPI_TypeDef.CR1 |= gSpiConfig.cr1 |= SPI_CR1_SPE) : (gSpiConfig.cr1 &= gSPI_TypeDef.CR1 &=(uint16_t)~((uint16_t)SPI_CR1_SPE)) )
+
+static void SPI_Cmd(SPI_TypeDef* SPIx, FunctionalState NewState, SPIConfig *scfg)
 {
-  uint16_t   reg = 0;
+  /* Check the parameters */
 
-  reg = (gSPI_Init.SPI_Mode == SPI_MODE_MASTER)   
-       ? SPIx->CR1 
-       : SPIx->CR2;
-
-  reg &= (gSPI_Init.SPI_Mode == SPI_MODE_MASTER)  
-       ? CR1_CLEAR_MASK 
-       : ~SPI_CR2_DS;
-
-  reg |= (gSPI_Init.SPI_Mode == SPI_MODE_MASTER)  
-       ? VAR_OR(gSPI_Init) 
-       : (gSPI_Init.SPI_DataSize);
-
-  (gSPI_Init.SPI_Mode == SPI_MODE_MASTER) 
-       ? (SPIx->CR1 = scfg->cr1 = reg) 
-       : (SPIx->CR2 = scfg->cr2 = reg);
-
-  if(gSPI_Init.SPI_Mode == SPI_MODE_MASTER){
-       reg = SPIx->CR2;
-       reg &= (uint16_t)~SPI_CR2_DS;
-
-	// Configure SPIx : Data Size */
-       reg |= (uint16_t)(gSPI_Init.SPI_DataSize);
-       SPIx->CR2 = scfg->cr2 = reg;
-  } else {
-       reg = SPIx->CR1;
-       reg &= CR1_CLEAR_MASK;
-       reg |= VAR_OR(gSPI_Init);
-
-       SPIx->CR1 = scfg->cr1 = reg;
-  }
- 
-  /* Activate the SPI mode (Reset I2SMOD bit in I2SCFGR register) */
-  SPIx->I2SCFGR &= (uint16_t)~((uint16_t)SPI_I2SCFGR_I2SMOD);
-
-  /* Write to SPIx CRCPOLY */
-  SPIx->CRCPR = gSPI_Init.SPI_CRCPolynomial;
+  (NewState != DISABLE) ? (SPIx->CR1 |= scfg->cr1 |= SPI_CR1_SPE) 
+                        : (SPIx->CR1 &= scfg->cr1 &= (uint16_t)~((uint16_t)SPI_CR1_SPE));
 }
 
+static void SPI_RxFIFOThresholdConfig(  SPI_TypeDef* SPIx, 
+				  	uint16_t SPI_RxFIFOThreshold, 
+				  	SPIConfig *scfg)
+{
+  /* Clear FRXTH bit */
+  SPIx->CR2 &= (uint16_t)~((uint16_t)SPI_CR2_FRXTH);
+  
+  /* Set new FRXTH bit value */
+  SPIx->CR2 |= SPI_RxFIFOThreshold;
+  scfg->cr2 = SPIx->CR2;
+}
 
-#define SPI_RxFIFOThreshold_HF          	 ((uint16_t)0x0000)
-#define SPI_RxFIFOThreshold_QF          	 ((uint16_t)0x1000)
-#define IS_SPI_RX_FIFO_THRESHOLD(THRESHOLD)  (((THRESHOLD) == SPI_RxFIFOThreshold_HF) || \
-                                             ((THRESHOLD) == SPI_RxFIFOThreshold_QF))
+#define SPI_RxFIFOThreshold_HF                               ((uint16_t)0x0000)
+#define SPI_RxFIFOThreshold_QF                               ((uint16_t)0x1000)
+#define IS_SPI_RX_FIFO_THRESHOLD(THRESHOLD)    ( ((THRESHOLD) == SPI_RxFIFOThreshold_HF) || \
+                                                 ((THRESHOLD) == SPI_RxFIFOThreshold_QF))
+
+
+#define  SPI_THRESH_HOLD    	 (gSPI_TypeDef.CR2 &=(uint16_t)~((uint16_t)SPI_CR2_FRXTH))
+#define SPI_RXFIFO_CONFIG(value) (gSPI_TypeDef.CR2 |= gSpiConfig.cr2 = (value | SPI_THRESH_HOLD))
+
 
 static void  L3GD_SPI_Init(SPI_TypeDef *spi, SPIConfig *spiconfig)
 {
-#if 1
-	SPI_InitTypeDef_A  SPI_InitStructure;
+        SPI_Initialize(spi, spiconfig);
 
-	SPI_InitStructure.SPI_Direction = ((uint16_t)0x0000); //  2Lines_FullDuplex;
-	SPI_InitStructure.SPI_DataSize = ((uint16_t)0x0700);   //SPI_DataSize_8b;
-	SPI_InitStructure.SPI_CPOL = ((uint16_t)0x0000);		  //SPI_CPOL_Low;
-	SPI_InitStructure.SPI_CPHA =  ((uint16_t)0x0000); 	//SPI_CPHA_1Edge;
-	SPI_InitStructure.SPI_NSS = ((uint16_t)0x0200);      // SPI_NSS_Soft;
-	SPI_InitStructure.SPI_BaudRatePrescaler = ((uint16_t)0x0010); //SPI_BaudRatePrescaler_8;
-	SPI_InitStructure.SPI_FirstBit = ((uint16_t)0x0000);	// SPI_FirstBit_MSB
-	SPI_InitStructure.SPI_CRCPolynomial = 7;
-	SPI_InitStructure.SPI_Mode = ((uint16_t)0x0104); //SPI_Mode_Master;
-	
-	SPI_Init_A(spi, &SPI_InitStructure, spiconfig);
-#endif
-//  VAR_OR(gSPI_Init);
-//	SPI_Init_A(spi, &gSPI_Init, spiconfig);
- //   SPI_Initialize(spi, spiconfig);
-    
+       //SPI_Init_A(spi,&gSPI_Init, spiconfig);
 	/* Configure the RX FIFO Threshold */
+	SPI_RxFIFOThresholdConfig(spi, SPI_RxFIFOThreshold_QF, spiconfig);
+
+//	SPI_RXFIFO_CONFIG(SPI_RxFIFOThreshold_QF);
 	//SPI_RxFIFOThresholdConfig(spi, SPI_RxFIFOThreshold_QF, spiconfig);
 
+#if 1
 	/* Clear FRXTH bit */
 	spi->CR2 &= (uint16_t)~((uint16_t)SPI_CR2_FRXTH);	
-	/* Set new FRXTH bit value */
+
+        /* Set new FRXTH bit value */
 	spi->CR2 |= SPI_RxFIFOThreshold_QF;	
 	spiconfig->cr2 = spi->CR2;
 	
 	/* Enable SPI1	*/
 	SPI_Cmd(spi, ENABLE, spiconfig);
-	
+#else
+        SPI_ENABLE(ENABLE);
+ //     SPI_ENABLE(spi, ENABLE, spiconfig);
 }
 
 extern void SPI_I2S_DeInit(SPI_TypeDef* SPIx);
 
+#define  ALTERNATE_SHIFT   		7
+#define  PUDR_SHIFT 			5
+#define	 OSPEED_SHIFT			3
+#define  OTYPE_SHIFT			2
+#define	 MODE_SHIFT			0
+
 void RCC_AHBPeriphClockCmd(uint32_t RCC_AHBPeriph, FunctionalState NewState);
 
-/*****************************************************************************
-- 210313tsham,
+// 210313tsham,
+// The following TEST1 and TEST2 has the same function between ST and ChibiOS function.
+// TEST1, and TEST2 are tested reciprocally. As a result, the _pal_lld_setgroupmode made 
+// problem, the testing environment from /TS_SPI/main.c cannot read chip_id. 
+// So,the alternate part was changed( os/hal/platforms/pal_lld.c,
+// The other parts also occurs same problems. it seems to be set register value 
+// seriously damaged.
 
-   The following TEST1 and TEST2 has the same function between ST and ChibiOS function.
-   TEST1, and TEST2 are tested reciprocally. As a result, the _pal_lld_setgroupmode made 
-   problem, the testing environment from /TS_SPI/main.c cannot read chip_id. 
-   So,the alternate part was changed( os/hal/platforms/pal_lld.c,
-   The other parts also occurs same problems. it seems to be set register value 
-   seriously damaged.
-
-*****************************************************************************
-*****************************************************************************/
 
 static void L3GD20_LowLevel_Init(SPIDriver *drvspi, SPIConfig *spi_cfg)
 {
@@ -597,9 +539,9 @@ static void L3GD20_LowLevel_Init(SPIDriver *drvspi, SPIConfig *spi_cfg)
   _pal_lld_setgroupmode(GPIOA,L3GD20_SPI_MISO_AF, L3GD20_SPI_MISO_SOURCE << ALTERNATE_SHIFT);
   _pal_lld_setgroupmode(GPIOA,L3GD20_SPI_MOSI_AF, L3GD20_SPI_MOSI_SOURCE << ALTERNATE_SHIFT);
 
-  _pal_lld_setgroupmode(GPIOA, L3GD20_SPI_AF, 0x04 << MODE_SHIFT);  // GPIO_Mode_AF  0x02->0x04
+  _pal_lld_setgroupmode(GPIOA, L3GD20_SPI_AF, 0x04 << MODE_SHIFT);   // GPIO_Mode_AF  0x02->0x04
   _pal_lld_setgroupmode(GPIOA, L3GD20_SPI_AF, 0x00 << OTYPE_SHIFT); // GPIO_OType_PP
-  _pal_lld_setgroupmode(GPIOA, L3GD20_SPI_AF, 0x00 << PUDR_SHIFT);  //GPIO_PuPd_NOPUU
+  _pal_lld_setgroupmode(GPIOA, L3GD20_SPI_AF, 0x00 << PUDR_SHIFT); //GPIO_PuPd_NOPUU
   _pal_lld_setgroupmode(GPIOA, L3GD20_SPI_AF, 0x03 << OSPEED_SHIFT); // highest 50Hz
 
   pal_lld_writepad(GPIOA,GPIOA_SPI1_SCK, GPIO_BSRR_BS_5);  	//SCK
@@ -618,11 +560,11 @@ static void L3GD20_LowLevel_Init(SPIDriver *drvspi, SPIConfig *spi_cfg)
 	
   ///////////////////////////////////////////////////////////////////////////////
   //
-  L3GD_SPI_Init(drvspi->spi, spi_cfg); // drvspi->spi initialize, and spi_cfg initialize
+  L3GD_SPI_Init(drvspi->spi, spi_cfg); 		// drvspi->spi initialize, and spi_cfg initialize
 	
-  _pal_lld_setgroupmode(GPIOE, L3GD20_SPI_AF, 0x02 << MODE_SHIFT);   // GPIO_Mode_OUT
-  _pal_lld_setgroupmode(GPIOE, L3GD20_SPI_AF, 0x00 << OTYPE_SHIFT);  // 3: GPIO_OType_PP
-  _pal_lld_setgroupmode(GPIOE, L3GD20_SPI_AF, 0x03 << OSPEED_SHIFT); // 0x03:50MHz
+  _pal_lld_setgroupmode(GPIOE, L3GD20_SPI_AF, 0x02 << MODE_SHIFT);         // GPIO_Mode_OUT
+  _pal_lld_setgroupmode(GPIOE, L3GD20_SPI_AF, 0x00 << OTYPE_SHIFT);       // 3: GPIO_OType_PP
+  _pal_lld_setgroupmode(GPIOE, L3GD20_SPI_AF,  0x03 << OSPEED_SHIFT); // 0x03:50MHz
 
   pal_lld_writepad(GPIOE,3, GPIO_BSRR_BS_3);
   pal_lld_setport(GPIOE, GPIO_BSRR_BS_3);   // Deselect : Chip Select high
