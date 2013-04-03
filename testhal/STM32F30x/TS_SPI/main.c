@@ -35,7 +35,7 @@ SPIConfig   	gSpiConfig;
 #undef   TEST_CHIPID
 
 #define   gSpiDriver   SPID1
-#define   SLEEP_TIME   250
+#define   SLEEP_TIME   80 
  
 ///////////////////////////////////////////////////////////////////////////
 //
@@ -222,7 +222,7 @@ static msg_t spi_thread_1(void *p) {
 	addr = L3GD20_OUT_Y_H_ADDR;   L3GD20_Read(&OUT_Y_H, &addr, 1);
 	addr = L3GD20_OUT_Z_L_ADDR;   L3GD20_Read(&OUT_Z_L, &addr, 1);
 	addr = L3GD20_OUT_Z_H_ADDR;   L3GD20_Read(&OUT_Z_H, &addr, 1);
-	spiUnselect(&SPID1);                	/* Slave Select de-assertion.       */
+	spiUnselect(&SPID1);     /* Slave Select de-assertion.       */
 
 #if   defined(TEST_CHIPID) 
 	if(WHO_AM_I == I_AM_L3GD20) {
@@ -246,7 +246,7 @@ static msg_t spi_thread_1(void *p) {
 	palClearPad(GPIOE, NE);
 	chThdSleepMilliseconds(SLEEP_TIME);
 #endif	
-	spiReleaseBus(&SPID1);              	/* Ownership release.               */
+	spiReleaseBus(&SPID1);    /* Ownership release.               */
   }
 
   return 0;
@@ -264,7 +264,7 @@ static msg_t spi_thread_2(void *p) {
 
   while (TRUE) 
   {
-	spiAcquireBus(&SPID1); 		/* Acquire ownership of the bus.	*/
+	spiAcquireBus(&SPID1); 	/* Acquire ownership of the bus.  */
 
 #if defined(_TEST_LAMP)
 	palSetPad(GPIOE,NW);
