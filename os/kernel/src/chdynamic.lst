@@ -1,0 +1,2376 @@
+GAS LISTING C:\cygwin\tmp\ccewKIPh.s 			page 1
+
+
+   1              		.file	"chdynamic.c"
+   2              	 # GNU C (GCC) version 4.6.2 (mingw32)
+   3              	 #	compiled by GNU C version 4.6.2, GMP version 5.0.1, MPFR version 2.4.1, MPC version 0.8.1
+   4              	 # GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+   5              	 # options passed:  -I . -I ../../os/ports/GCC/SIMIA32
+   6              	 # -I ../../os/kernel/include -I ../../test -I ../../os/hal/include
+   7              	 # -I ../../os/hal/platforms/Win32 -I ../../boards/simulator
+   8              	 # -I ../../os/various -iprefix c:\mingw\bin\../lib/gcc/mingw32/4.6.2/
+   9              	 # -MD ../../os/kernel/src/chdynamic.d -MF .dep/chdynamic.o.d -MP
+  10              	 # -MQ ../../os/kernel/src/chdynamic.o -D SIMULATOR
+  11              	 # ../../os/kernel/src/chdynamic.c -mtune=i386 -march=i386
+  12              	 # -auxbase-strip ../../os/kernel/src/chdynamic.o -ggdb -O0 -Wall -Wextra
+  13              	 # -Wstrict-prototypes -fomit-frame-pointer -fprofile-arcs -ftest-coverage
+  14              	 # -fverbose-asm
+  15              	 # options enabled:  -fasynchronous-unwind-tables -fauto-inc-dec
+  16              	 # -fbranch-count-reg -fcommon -fdelete-null-pointer-checks
+  17              	 # -fdwarf2-cfi-asm -fearly-inlining -feliminate-unused-debug-types
+  18              	 # -ffunction-cse -fgcse-lm -fident -finline-functions-called-once
+  19              	 # -fira-share-save-slots -fira-share-spill-slots -fivopts
+  20              	 # -fkeep-inline-dllexport -fkeep-static-consts -fleading-underscore
+  21              	 # -fmath-errno -fmerge-debug-strings -fmove-loop-invariants
+  22              	 # -fomit-frame-pointer -fpeephole -fprefetch-loop-arrays -fprofile-arcs
+  23              	 # -freg-struct-return -fsched-critical-path-heuristic
+  24              	 # -fsched-dep-count-heuristic -fsched-group-heuristic -fsched-interblock
+  25              	 # -fsched-last-insn-heuristic -fsched-rank-heuristic -fsched-spec
+  26              	 # -fsched-spec-insn-heuristic -fsched-stalled-insns-dep
+  27              	 # -fset-stack-executable -fshow-column -fsigned-zeros
+  28              	 # -fsplit-ivs-in-unroller -fstrict-volatile-bitfields -ftest-coverage
+  29              	 # -ftrapping-math -ftree-cselim -ftree-forwprop -ftree-loop-if-convert
+  30              	 # -ftree-loop-im -ftree-loop-ivcanon -ftree-loop-optimize
+  31              	 # -ftree-parallelize-loops= -ftree-phiprop -ftree-pta -ftree-reassoc
+  32              	 # -ftree-scev-cprop -ftree-slp-vectorize -ftree-vect-loop-version
+  33              	 # -funit-at-a-time -funwind-tables -fvect-cost-model -fverbose-asm
+  34              	 # -fzero-initialized-in-bss -m32 -m80387 -m96bit-long-double
+  35              	 # -maccumulate-outgoing-args -malign-double -malign-stringops
+  36              	 # -mfancy-math-387 -mfp-ret-in-387 -mieee-fp -mno-red-zone -mno-sse4
+  37              	 # -mpush-args -msahf -mstack-arg-probe
+  38              	
+  39              		.text
+  40              	Ltext0:
+  41              	 # Compiler executable checksum: c20aed7c018482d7b62efcd5dcab2a9d
+  42              	
+  43              		.globl	_chThdAddRef
+  44              		.def	_chThdAddRef;	.scl	2;	.type	32;	.endef
+  45              	_chThdAddRef:
+  46              	LFB0:
+  47              		.file 1 "../../os/kernel/src/chdynamic.c"
+  48              		.loc 1 45 0
+  49              		.cfi_startproc
+  50 0000 83EC04   		subl	$4, %esp	 #,
+  51              	LCFI0:
+  52              		.cfi_def_cfa_offset 8
+  53              		.loc 1 45 0
+  54 0003 A1D80000 		movl	LPBX1+216, %eax	 # *LPBX1, PROF_edge_counter.3
+  54      00
+  55 0008 8B15DC00 		movl	LPBX1+220, %edx	 # *LPBX1, PROF_edge_counter.3
+  55      0000
+GAS LISTING C:\cygwin\tmp\ccewKIPh.s 			page 2
+
+
+  56 000e 83C001   		addl	$1, %eax	 #, PROF_edge_counter.3
+  57 0011 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.3
+  58 0014 A3D80000 		movl	%eax, LPBX1+216	 # PROF_edge_counter.3, *LPBX1
+  58      00
+  59 0019 8915DC00 		movl	%edx, LPBX1+220	 # PROF_edge_counter.3, *LPBX1
+  59      0000
+  60              		.loc 1 47 0
+  61              	/APP
+  62              	 # 47 "../../os/kernel/src/chdynamic.c" 1
+  63 001f 90       		nop
+  64              	 # 0 "" 2
+  65              	/NO_APP
+  66 0020 A1E00000 		movl	LPBX1+224, %eax	 # *LPBX1, PROF_edge_counter.3
+  66      00
+  67 0025 8B15E400 		movl	LPBX1+228, %edx	 # *LPBX1, PROF_edge_counter.3
+  67      0000
+  68 002b 83C001   		addl	$1, %eax	 #, PROF_edge_counter.3
+  69 002e 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.3
+  70 0031 A3E00000 		movl	%eax, LPBX1+224	 # PROF_edge_counter.3, *LPBX1
+  70      00
+  71 0036 8915E400 		movl	%edx, LPBX1+228	 # PROF_edge_counter.3, *LPBX1
+  71      0000
+  72              		.loc 1 49 0
+  73 003c 8B442408 		movl	8(%esp), %eax	 # tp, tmp71
+  74 0040 8A401E   		movb	30(%eax), %al	 # tp_1(D)->p_refs, D.2788
+  75 0043 8D5001   		leal	1(%eax), %edx	 #, D.2789
+  76 0046 8B442408 		movl	8(%esp), %eax	 # tp, tmp72
+  77 004a 88501E   		movb	%dl, 30(%eax)	 # D.2789, tp_1(D)->p_refs
+  78              		.loc 1 50 0
+  79              	/APP
+  80              	 # 50 "../../os/kernel/src/chdynamic.c" 1
+  81 004d 90       		nop
+  82              	 # 0 "" 2
+  83              	/NO_APP
+  84 004e A1E80000 		movl	LPBX1+232, %eax	 # *LPBX1, PROF_edge_counter.3
+  84      00
+  85 0053 8B15EC00 		movl	LPBX1+236, %edx	 # *LPBX1, PROF_edge_counter.3
+  85      0000
+  86 0059 83C001   		addl	$1, %eax	 #, PROF_edge_counter.3
+  87 005c 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.3
+  88 005f A3E80000 		movl	%eax, LPBX1+232	 # PROF_edge_counter.3, *LPBX1
+  88      00
+  89 0064 8915EC00 		movl	%edx, LPBX1+236	 # PROF_edge_counter.3, *LPBX1
+  89      0000
+  90              		.loc 1 51 0
+  91 006a 8B442408 		movl	8(%esp), %eax	 # tp, D.2790
+  92              		.loc 1 52 0
+  93 006e 83C404   		addl	$4, %esp	 #,
+  94              	LCFI1:
+  95              		.cfi_def_cfa_offset 4
+  96 0071 C3       		ret
+  97              		.cfi_endproc
+  98              	LFE0:
+  99              		.globl	_chThdRelease
+ 100              		.def	_chThdRelease;	.scl	2;	.type	32;	.endef
+ 101              	_chThdRelease:
+ 102              	LFB1:
+GAS LISTING C:\cygwin\tmp\ccewKIPh.s 			page 3
+
+
+ 103              		.loc 1 67 0
+ 104              		.cfi_startproc
+ 105 0072 83EC2C   		subl	$44, %esp	 #,
+ 106              	LCFI2:
+ 107              		.cfi_def_cfa_offset 48
+ 108              		.loc 1 67 0
+ 109 0075 A1900000 		movl	LPBX1+144, %eax	 # *LPBX1, PROF_edge_counter.2
+ 109      00
+ 110 007a 8B159400 		movl	LPBX1+148, %edx	 # *LPBX1, PROF_edge_counter.2
+ 110      0000
+ 111 0080 83C001   		addl	$1, %eax	 #, PROF_edge_counter.2
+ 112 0083 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.2
+ 113 0086 A3900000 		movl	%eax, LPBX1+144	 # PROF_edge_counter.2, *LPBX1
+ 113      00
+ 114 008b 89159400 		movl	%edx, LPBX1+148	 # PROF_edge_counter.2, *LPBX1
+ 114      0000
+ 115              		.loc 1 70 0
+ 116              	/APP
+ 117              	 # 70 "../../os/kernel/src/chdynamic.c" 1
+ 118 0091 90       		nop
+ 119              	 # 0 "" 2
+ 120              	/NO_APP
+ 121 0092 A1980000 		movl	LPBX1+152, %eax	 # *LPBX1, PROF_edge_counter.2
+ 121      00
+ 122 0097 8B159C00 		movl	LPBX1+156, %edx	 # *LPBX1, PROF_edge_counter.2
+ 122      0000
+ 123 009d 83C001   		addl	$1, %eax	 #, PROF_edge_counter.2
+ 124 00a0 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.2
+ 125 00a3 A3980000 		movl	%eax, LPBX1+152	 # PROF_edge_counter.2, *LPBX1
+ 125      00
+ 126 00a8 89159C00 		movl	%edx, LPBX1+156	 # PROF_edge_counter.2, *LPBX1
+ 126      0000
+ 127              		.loc 1 72 0
+ 128 00ae 8B442430 		movl	48(%esp), %eax	 # tp, tmp94
+ 129 00b2 8A401E   		movb	30(%eax), %al	 # tp_1(D)->p_refs, D.2764
+ 130 00b5 8D50FF   		leal	-1(%eax), %edx	 #, D.2765
+ 131 00b8 8B442430 		movl	48(%esp), %eax	 # tp, tmp95
+ 132 00bc 88501E   		movb	%dl, 30(%eax)	 # D.2765, tp_1(D)->p_refs
+ 133 00bf 8B442430 		movl	48(%esp), %eax	 # tp, tmp96
+ 134 00c3 8A401E   		movb	30(%eax), %al	 # tp_1(D)->p_refs, tmp97
+ 135 00c6 8844241F 		movb	%al, 31(%esp)	 # tmp97, refs
+ 136              		.loc 1 73 0
+ 137              	/APP
+ 138              	 # 73 "../../os/kernel/src/chdynamic.c" 1
+ 139 00ca 90       		nop
+ 140              	 # 0 "" 2
+ 141              	/NO_APP
+ 142 00cb A1A00000 		movl	LPBX1+160, %eax	 # *LPBX1, PROF_edge_counter.2
+ 142      00
+ 143 00d0 8B15A400 		movl	LPBX1+164, %edx	 # *LPBX1, PROF_edge_counter.2
+ 143      0000
+ 144 00d6 83C001   		addl	$1, %eax	 #, PROF_edge_counter.2
+ 145 00d9 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.2
+ 146 00dc A3A00000 		movl	%eax, LPBX1+160	 # PROF_edge_counter.2, *LPBX1
+ 146      00
+ 147 00e1 8915A400 		movl	%edx, LPBX1+164	 # PROF_edge_counter.2, *LPBX1
+ 147      0000
+GAS LISTING C:\cygwin\tmp\ccewKIPh.s 			page 4
+
+
+ 148              		.loc 1 78 0
+ 149 00e7 807C241F 		cmpb	$0, 31(%esp)	 #, refs
+ 149      00
+ 150 00ec 0F853C01 		jne	L2	 #,
+ 150      0000
+ 151              		.loc 1 78 0 is_stmt 0 discriminator 1
+ 152 00f2 A1A80000 		movl	LPBX1+168, %eax	 # *LPBX1, PROF_edge_counter.2
+ 152      00
+ 153 00f7 8B15AC00 		movl	LPBX1+172, %edx	 # *LPBX1, PROF_edge_counter.2
+ 153      0000
+ 154 00fd 83C001   		addl	$1, %eax	 #, PROF_edge_counter.2
+ 155 0100 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.2
+ 156 0103 A3A80000 		movl	%eax, LPBX1+168	 # PROF_edge_counter.2, *LPBX1
+ 156      00
+ 157 0108 8915AC00 		movl	%edx, LPBX1+172	 # PROF_edge_counter.2, *LPBX1
+ 157      0000
+ 158 010e 8B442430 		movl	48(%esp), %eax	 # tp, tmp98
+ 159 0112 8A401C   		movb	28(%eax), %al	 # tp_1(D)->p_state, D.2768
+ 160 0115 3C0E     		cmpb	$14, %al	 #, D.2768
+ 161 0117 0F851101 		jne	L2	 #,
+ 161      0000
+ 162              		.loc 1 78 0
+ 163 011d A1B00000 		movl	LPBX1+176, %eax	 # *LPBX1, PROF_edge_counter.2
+ 163      00
+ 164 0122 8B15B400 		movl	LPBX1+180, %edx	 # *LPBX1, PROF_edge_counter.2
+ 164      0000
+ 165 0128 83C001   		addl	$1, %eax	 #, PROF_edge_counter.2
+ 166 012b 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.2
+ 167 012e A3B00000 		movl	%eax, LPBX1+176	 # PROF_edge_counter.2, *LPBX1
+ 167      00
+ 168 0133 8915B400 		movl	%edx, LPBX1+180	 # PROF_edge_counter.2, *LPBX1
+ 168      0000
+ 169              		.loc 1 79 0 is_stmt 1
+ 170 0139 8B442430 		movl	48(%esp), %eax	 # tp, tmp99
+ 171 013d 8A401D   		movb	29(%eax), %al	 # tp_1(D)->p_flags, D.2771
+ 172 0140 0FB6C0   		movzbl	%al, %eax	 # D.2771, D.2772
+ 173 0143 83E003   		andl	$3, %eax	 #, D.2773
+ 174 0146 83F801   		cmpl	$1, %eax	 #, D.2773
+ 175 0149 740A     		je	L4	 #,
+ 176 014b 83F802   		cmpl	$2, %eax	 #, D.2773
+ 177 014e 746D     		je	L5	 #,
+ 178 0150 E9D90000 		jmp	L2	 #
+ 178      00
+ 179              	L4:
+ 180 0155 A1B80000 		movl	LPBX1+184, %eax	 # *LPBX1, PROF_edge_counter.2
+ 180      00
+ 181 015a 8B15BC00 		movl	LPBX1+188, %edx	 # *LPBX1, PROF_edge_counter.2
+ 181      0000
+ 182 0160 83C001   		addl	$1, %eax	 #, PROF_edge_counter.2
+ 183 0163 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.2
+ 184 0166 A3B80000 		movl	%eax, LPBX1+184	 # PROF_edge_counter.2, *LPBX1
+ 184      00
+ 185 016b 8915BC00 		movl	%edx, LPBX1+188	 # PROF_edge_counter.2, *LPBX1
+ 185      0000
+ 186              		.loc 1 83 0
+ 187 0171 8B442430 		movl	48(%esp), %eax	 # tp, tmp100
+ 188 0175 8B4014   		movl	20(%eax), %eax	 # tp_1(D)->p_older, D.2774
+GAS LISTING C:\cygwin\tmp\ccewKIPh.s 			page 5
+
+
+ 189 0178 8B542430 		movl	48(%esp), %edx	 # tp, tmp101
+ 190 017c 8B5210   		movl	16(%edx), %edx	 # tp_1(D)->p_newer, D.2775
+ 191 017f 895010   		movl	%edx, 16(%eax)	 # D.2775, D.2774_10->p_newer
+ 192 0182 8B442430 		movl	48(%esp), %eax	 # tp, tmp102
+ 193 0186 8B4010   		movl	16(%eax), %eax	 # tp_1(D)->p_newer, D.2776
+ 194 0189 8B542430 		movl	48(%esp), %edx	 # tp, tmp103
+ 195 018d 8B5214   		movl	20(%edx), %edx	 # tp_1(D)->p_older, D.2777
+ 196 0190 895014   		movl	%edx, 20(%eax)	 # D.2777, D.2776_12->p_older
+ 197              		.loc 1 85 0
+ 198 0193 8B442430 		movl	48(%esp), %eax	 # tp, tmp104
+ 199 0197 890424   		movl	%eax, (%esp)	 # tmp104,
+ 200 019a E8000000 		call	_chHeapFree	 #
+ 200      00
+ 201              		.loc 1 86 0
+ 202 019f A1C80000 		movl	LPBX1+200, %eax	 # *LPBX1, PROF_edge_counter.2
+ 202      00
+ 203 01a4 8B15CC00 		movl	LPBX1+204, %edx	 # *LPBX1, PROF_edge_counter.2
+ 203      0000
+ 204 01aa 83C001   		addl	$1, %eax	 #, PROF_edge_counter.2
+ 205 01ad 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.2
+ 206 01b0 A3C80000 		movl	%eax, LPBX1+200	 # PROF_edge_counter.2, *LPBX1
+ 206      00
+ 207 01b5 8915CC00 		movl	%edx, LPBX1+204	 # PROF_edge_counter.2, *LPBX1
+ 207      0000
+ 208 01bb EB71     		jmp	L2	 #
+ 209              	L5:
+ 210 01bd A1C00000 		movl	LPBX1+192, %eax	 # *LPBX1, PROF_edge_counter.2
+ 210      00
+ 211 01c2 8B15C400 		movl	LPBX1+196, %edx	 # *LPBX1, PROF_edge_counter.2
+ 211      0000
+ 212 01c8 83C001   		addl	$1, %eax	 #, PROF_edge_counter.2
+ 213 01cb 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.2
+ 214 01ce A3C00000 		movl	%eax, LPBX1+192	 # PROF_edge_counter.2, *LPBX1
+ 214      00
+ 215 01d3 8915C400 		movl	%edx, LPBX1+196	 # PROF_edge_counter.2, *LPBX1
+ 215      0000
+ 216              		.loc 1 91 0
+ 217 01d9 8B442430 		movl	48(%esp), %eax	 # tp, tmp105
+ 218 01dd 8B4014   		movl	20(%eax), %eax	 # tp_1(D)->p_older, D.2778
+ 219 01e0 8B542430 		movl	48(%esp), %edx	 # tp, tmp106
+ 220 01e4 8B5210   		movl	16(%edx), %edx	 # tp_1(D)->p_newer, D.2779
+ 221 01e7 895010   		movl	%edx, 16(%eax)	 # D.2779, D.2778_14->p_newer
+ 222 01ea 8B442430 		movl	48(%esp), %eax	 # tp, tmp107
+ 223 01ee 8B4010   		movl	16(%eax), %eax	 # tp_1(D)->p_newer, D.2780
+ 224 01f1 8B542430 		movl	48(%esp), %edx	 # tp, tmp108
+ 225 01f5 8B5214   		movl	20(%edx), %edx	 # tp_1(D)->p_older, D.2781
+ 226 01f8 895014   		movl	%edx, 20(%eax)	 # D.2781, D.2780_16->p_older
+ 227              		.loc 1 93 0
+ 228 01fb 8B442430 		movl	48(%esp), %eax	 # tp, tmp109
+ 229 01ff 8B4044   		movl	68(%eax), %eax	 # tp_1(D)->p_mpool, D.2782
+ 230 0202 8B542430 		movl	48(%esp), %edx	 # tp, tmp110
+ 231 0206 89542404 		movl	%edx, 4(%esp)	 # tmp110,
+ 232 020a 890424   		movl	%eax, (%esp)	 # D.2782,
+ 233 020d E8000000 		call	_chPoolFree	 #
+ 233      00
+ 234              		.loc 1 94 0
+ 235 0212 A1D00000 		movl	LPBX1+208, %eax	 # *LPBX1, PROF_edge_counter.2
+GAS LISTING C:\cygwin\tmp\ccewKIPh.s 			page 6
+
+
+ 235      00
+ 236 0217 8B15D400 		movl	LPBX1+212, %edx	 # *LPBX1, PROF_edge_counter.2
+ 236      0000
+ 237 021d 83C001   		addl	$1, %eax	 #, PROF_edge_counter.2
+ 238 0220 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.2
+ 239 0223 A3D00000 		movl	%eax, LPBX1+208	 # PROF_edge_counter.2, *LPBX1
+ 239      00
+ 240 0228 8915D400 		movl	%edx, LPBX1+212	 # PROF_edge_counter.2, *LPBX1
+ 240      0000
+ 241              	L2:
+ 242              		.loc 1 98 0
+ 243 022e 83C42C   		addl	$44, %esp	 #,
+ 244              	LCFI3:
+ 245              		.cfi_def_cfa_offset 4
+ 246 0231 C3       		ret
+ 247              		.cfi_endproc
+ 248              	LFE1:
+ 249              		.globl	_chThdCreateFromHeap
+ 250              		.def	_chThdCreateFromHeap;	.scl	2;	.type	32;	.endef
+ 251              	_chThdCreateFromHeap:
+ 252              	LFB2:
+ 253              		.loc 1 124 0
+ 254              		.cfi_startproc
+ 255 0232 83EC3C   		subl	$60, %esp	 #,
+ 256              	LCFI4:
+ 257              		.cfi_def_cfa_offset 64
+ 258              		.loc 1 124 0
+ 259 0235 A1480000 		movl	LPBX1+72, %eax	 # *LPBX1, PROF_edge_counter.1
+ 259      00
+ 260 023a 8B154C00 		movl	LPBX1+76, %edx	 # *LPBX1, PROF_edge_counter.1
+ 260      0000
+ 261 0240 83C001   		addl	$1, %eax	 #, PROF_edge_counter.1
+ 262 0243 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.1
+ 263 0246 A3480000 		movl	%eax, LPBX1+72	 # PROF_edge_counter.1, *LPBX1
+ 263      00
+ 264 024b 89154C00 		movl	%edx, LPBX1+76	 # PROF_edge_counter.1, *LPBX1
+ 264      0000
+ 265              		.loc 1 128 0
+ 266 0251 8B442444 		movl	68(%esp), %eax	 # size, tmp82
+ 267 0255 89442404 		movl	%eax, 4(%esp)	 # tmp82,
+ 268 0259 8B442440 		movl	64(%esp), %eax	 # heapp, tmp83
+ 269 025d 890424   		movl	%eax, (%esp)	 # tmp83,
+ 270 0260 E8000000 		call	_chHeapAlloc	 #
+ 270      00
+ 271 0265 8944242C 		movl	%eax, 44(%esp)	 # tmp84, wsp
+ 272              		.loc 1 129 0
+ 273 0269 837C242C 		cmpl	$0, 44(%esp)	 #, wsp
+ 273      00
+ 274 026e 7526     		jne	L7	 #,
+ 275              		.loc 1 130 0
+ 276 0270 B9000000 		movl	$0, %ecx	 #, D.2755
+ 276      00
+ 277 0275 A1580000 		movl	LPBX1+88, %eax	 # *LPBX1, PROF_edge_counter.1
+ 277      00
+ 278 027a 8B155C00 		movl	LPBX1+92, %edx	 # *LPBX1, PROF_edge_counter.1
+ 278      0000
+ 279 0280 83C001   		addl	$1, %eax	 #, PROF_edge_counter.1
+GAS LISTING C:\cygwin\tmp\ccewKIPh.s 			page 7
+
+
+ 280 0283 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.1
+ 281 0286 A3580000 		movl	%eax, LPBX1+88	 # PROF_edge_counter.1, *LPBX1
+ 281      00
+ 282 028b 89155C00 		movl	%edx, LPBX1+92	 # PROF_edge_counter.1, *LPBX1
+ 282      0000
+ 283 0291 E95A0100 		jmp	L8	 #
+ 283      00
+ 284              	L7:
+ 285 0296 A1500000 		movl	LPBX1+80, %eax	 # *LPBX1, PROF_edge_counter.1
+ 285      00
+ 286 029b 8B155400 		movl	LPBX1+84, %edx	 # *LPBX1, PROF_edge_counter.1
+ 286      0000
+ 287 02a1 83C001   		addl	$1, %eax	 #, PROF_edge_counter.1
+ 288 02a4 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.1
+ 289 02a7 A3500000 		movl	%eax, LPBX1+80	 # PROF_edge_counter.1, *LPBX1
+ 289      00
+ 290 02ac 89155400 		movl	%edx, LPBX1+84	 # PROF_edge_counter.1, *LPBX1
+ 290      0000
+ 291              		.loc 1 133 0
+ 292 02b2 8B44242C 		movl	44(%esp), %eax	 # wsp, tmp85
+ 293 02b6 83C048   		addl	$72, %eax	 #, D.2756
+ 294 02b9 C7442408 		movl	$255, 8(%esp)	 #,
+ 294      FF000000 
+ 295 02c1 89442404 		movl	%eax, 4(%esp)	 # D.2756,
+ 296 02c5 8B44242C 		movl	44(%esp), %eax	 # wsp, tmp86
+ 297 02c9 890424   		movl	%eax, (%esp)	 # tmp86,
+ 298 02cc E8000000 		call	__thread_memfill	 #
+ 298      00
+ 299 02d1 A1600000 		movl	LPBX1+96, %eax	 # *LPBX1, PROF_edge_counter.1
+ 299      00
+ 300 02d6 8B156400 		movl	LPBX1+100, %edx	 # *LPBX1, PROF_edge_counter.1
+ 300      0000
+ 301 02dc 83C001   		addl	$1, %eax	 #, PROF_edge_counter.1
+ 302 02df 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.1
+ 303 02e2 A3600000 		movl	%eax, LPBX1+96	 # PROF_edge_counter.1, *LPBX1
+ 303      00
+ 304 02e7 89156400 		movl	%edx, LPBX1+100	 # PROF_edge_counter.1, *LPBX1
+ 304      0000
+ 305              		.loc 1 136 0
+ 306 02ed 8B442444 		movl	68(%esp), %eax	 # size, tmp87
+ 307 02f1 8B54242C 		movl	44(%esp), %edx	 # wsp, tmp88
+ 308 02f5 01C2     		addl	%eax, %edx	 # tmp87, D.2757
+ 309 02f7 8B44242C 		movl	44(%esp), %eax	 # wsp, tmp89
+ 310 02fb 83C048   		addl	$72, %eax	 #, D.2758
+ 311 02fe C7442408 		movl	$85, 8(%esp)	 #,
+ 311      55000000 
+ 312 0306 89542404 		movl	%edx, 4(%esp)	 # D.2757,
+ 313 030a 890424   		movl	%eax, (%esp)	 # D.2758,
+ 314 030d E8000000 		call	__thread_memfill	 #
+ 314      00
+ 315 0312 A1680000 		movl	LPBX1+104, %eax	 # *LPBX1, PROF_edge_counter.1
+ 315      00
+ 316 0317 8B156C00 		movl	LPBX1+108, %edx	 # *LPBX1, PROF_edge_counter.1
+ 316      0000
+ 317 031d 83C001   		addl	$1, %eax	 #, PROF_edge_counter.1
+ 318 0320 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.1
+ 319 0323 A3680000 		movl	%eax, LPBX1+104	 # PROF_edge_counter.1, *LPBX1
+GAS LISTING C:\cygwin\tmp\ccewKIPh.s 			page 8
+
+
+ 319      00
+ 320 0328 89156C00 		movl	%edx, LPBX1+108	 # PROF_edge_counter.1, *LPBX1
+ 320      0000
+ 321              		.loc 1 141 0
+ 322              	/APP
+ 323              	 # 141 "../../os/kernel/src/chdynamic.c" 1
+ 324 032e 90       		nop
+ 325              	 # 0 "" 2
+ 326              	/NO_APP
+ 327 032f A1700000 		movl	LPBX1+112, %eax	 # *LPBX1, PROF_edge_counter.1
+ 327      00
+ 328 0334 8B157400 		movl	LPBX1+116, %edx	 # *LPBX1, PROF_edge_counter.1
+ 328      0000
+ 329 033a 83C001   		addl	$1, %eax	 #, PROF_edge_counter.1
+ 330 033d 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.1
+ 331 0340 A3700000 		movl	%eax, LPBX1+112	 # PROF_edge_counter.1, *LPBX1
+ 331      00
+ 332 0345 89157400 		movl	%edx, LPBX1+116	 # PROF_edge_counter.1, *LPBX1
+ 332      0000
+ 333              		.loc 1 142 0
+ 334 034b 8B442450 		movl	80(%esp), %eax	 # arg, tmp90
+ 335 034f 89442410 		movl	%eax, 16(%esp)	 # tmp90,
+ 336 0353 8B44244C 		movl	76(%esp), %eax	 # pf, tmp91
+ 337 0357 8944240C 		movl	%eax, 12(%esp)	 # tmp91,
+ 338 035b 8B442448 		movl	72(%esp), %eax	 # prio, tmp92
+ 339 035f 89442408 		movl	%eax, 8(%esp)	 # tmp92,
+ 340 0363 8B442444 		movl	68(%esp), %eax	 # size, tmp93
+ 341 0367 89442404 		movl	%eax, 4(%esp)	 # tmp93,
+ 342 036b 8B44242C 		movl	44(%esp), %eax	 # wsp, tmp94
+ 343 036f 890424   		movl	%eax, (%esp)	 # tmp94,
+ 344 0372 E8000000 		call	_chThdCreateI	 #
+ 344      00
+ 345 0377 89442428 		movl	%eax, 40(%esp)	 # tmp95, tp
+ 346 037b A1780000 		movl	LPBX1+120, %eax	 # *LPBX1, PROF_edge_counter.1
+ 346      00
+ 347 0380 8B157C00 		movl	LPBX1+124, %edx	 # *LPBX1, PROF_edge_counter.1
+ 347      0000
+ 348 0386 83C001   		addl	$1, %eax	 #, PROF_edge_counter.1
+ 349 0389 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.1
+ 350 038c A3780000 		movl	%eax, LPBX1+120	 # PROF_edge_counter.1, *LPBX1
+ 350      00
+ 351 0391 89157C00 		movl	%edx, LPBX1+124	 # PROF_edge_counter.1, *LPBX1
+ 351      0000
+ 352              		.loc 1 143 0
+ 353 0397 8B442428 		movl	40(%esp), %eax	 # tp, tmp96
+ 354 039b C6401D01 		movb	$1, 29(%eax)	 #, tp_12->p_flags
+ 355              		.loc 1 144 0
+ 356 039f C7442404 		movl	$0, 4(%esp)	 #,
+ 356      00000000 
+ 357 03a7 8B442428 		movl	40(%esp), %eax	 # tp, tmp97
+ 358 03ab 890424   		movl	%eax, (%esp)	 # tmp97,
+ 359 03ae E8000000 		call	_chSchWakeupS	 #
+ 359      00
+ 360 03b3 A1800000 		movl	LPBX1+128, %eax	 # *LPBX1, PROF_edge_counter.1
+ 360      00
+ 361 03b8 8B158400 		movl	LPBX1+132, %edx	 # *LPBX1, PROF_edge_counter.1
+ 361      0000
+GAS LISTING C:\cygwin\tmp\ccewKIPh.s 			page 9
+
+
+ 362 03be 83C001   		addl	$1, %eax	 #, PROF_edge_counter.1
+ 363 03c1 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.1
+ 364 03c4 A3800000 		movl	%eax, LPBX1+128	 # PROF_edge_counter.1, *LPBX1
+ 364      00
+ 365 03c9 89158400 		movl	%edx, LPBX1+132	 # PROF_edge_counter.1, *LPBX1
+ 365      0000
+ 366              		.loc 1 145 0
+ 367              	/APP
+ 368              	 # 145 "../../os/kernel/src/chdynamic.c" 1
+ 369 03cf 90       		nop
+ 370              	 # 0 "" 2
+ 371              		.loc 1 146 0
+ 372              	/NO_APP
+ 373 03d0 8B4C2428 		movl	40(%esp), %ecx	 # tp, D.2755
+ 374 03d4 A1880000 		movl	LPBX1+136, %eax	 # *LPBX1, PROF_edge_counter.1
+ 374      00
+ 375 03d9 8B158C00 		movl	LPBX1+140, %edx	 # *LPBX1, PROF_edge_counter.1
+ 375      0000
+ 376 03df 83C001   		addl	$1, %eax	 #, PROF_edge_counter.1
+ 377 03e2 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.1
+ 378 03e5 A3880000 		movl	%eax, LPBX1+136	 # PROF_edge_counter.1, *LPBX1
+ 378      00
+ 379 03ea 89158C00 		movl	%edx, LPBX1+140	 # PROF_edge_counter.1, *LPBX1
+ 379      0000
+ 380              	L8:
+ 381 03f0 89C8     		movl	%ecx, %eax	 # D.2755, <retval>
+ 382              		.loc 1 147 0
+ 383 03f2 83C43C   		addl	$60, %esp	 #,
+ 384              	LCFI5:
+ 385              		.cfi_def_cfa_offset 4
+ 386 03f5 C3       		ret
+ 387              		.cfi_endproc
+ 388              	LFE2:
+ 389              		.globl	_chThdCreateFromMemoryPool
+ 390              		.def	_chThdCreateFromMemoryPool;	.scl	2;	.type	32;	.endef
+ 391              	_chThdCreateFromMemoryPool:
+ 392              	LFB3:
+ 393              		.loc 1 173 0
+ 394              		.cfi_startproc
+ 395 03f6 83EC3C   		subl	$60, %esp	 #,
+ 396              	LCFI6:
+ 397              		.cfi_def_cfa_offset 64
+ 398              		.loc 1 173 0
+ 399 03f9 A1000000 		movl	LPBX1, %eax	 # *LPBX1, PROF_edge_counter.0
+ 399      00
+ 400 03fe 8B150400 		movl	LPBX1+4, %edx	 # *LPBX1, PROF_edge_counter.0
+ 400      0000
+ 401 0404 83C001   		addl	$1, %eax	 #, PROF_edge_counter.0
+ 402 0407 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.0
+ 403 040a A3000000 		movl	%eax, LPBX1	 # PROF_edge_counter.0, *LPBX1
+ 403      00
+ 404 040f 89150400 		movl	%edx, LPBX1+4	 # PROF_edge_counter.0, *LPBX1
+ 404      0000
+ 405              		.loc 1 179 0
+ 406 0415 8B442440 		movl	64(%esp), %eax	 # mp, tmp84
+ 407 0419 890424   		movl	%eax, (%esp)	 # tmp84,
+ 408 041c E8000000 		call	_chPoolAlloc	 #
+GAS LISTING C:\cygwin\tmp\ccewKIPh.s 			page 10
+
+
+ 408      00
+ 409 0421 8944242C 		movl	%eax, 44(%esp)	 # tmp85, wsp
+ 410              		.loc 1 180 0
+ 411 0425 837C242C 		cmpl	$0, 44(%esp)	 #, wsp
+ 411      00
+ 412 042a 7526     		jne	L10	 #,
+ 413              		.loc 1 181 0
+ 414 042c B9000000 		movl	$0, %ecx	 #, D.2746
+ 414      00
+ 415 0431 A1100000 		movl	LPBX1+16, %eax	 # *LPBX1, PROF_edge_counter.0
+ 415      00
+ 416 0436 8B151400 		movl	LPBX1+20, %edx	 # *LPBX1, PROF_edge_counter.0
+ 416      0000
+ 417 043c 83C001   		addl	$1, %eax	 #, PROF_edge_counter.0
+ 418 043f 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.0
+ 419 0442 A3100000 		movl	%eax, LPBX1+16	 # PROF_edge_counter.0, *LPBX1
+ 419      00
+ 420 0447 89151400 		movl	%edx, LPBX1+20	 # PROF_edge_counter.0, *LPBX1
+ 420      0000
+ 421 044d E9690100 		jmp	L11	 #
+ 421      00
+ 422              	L10:
+ 423 0452 A1080000 		movl	LPBX1+8, %eax	 # *LPBX1, PROF_edge_counter.0
+ 423      00
+ 424 0457 8B150C00 		movl	LPBX1+12, %edx	 # *LPBX1, PROF_edge_counter.0
+ 424      0000
+ 425 045d 83C001   		addl	$1, %eax	 #, PROF_edge_counter.0
+ 426 0460 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.0
+ 427 0463 A3080000 		movl	%eax, LPBX1+8	 # PROF_edge_counter.0, *LPBX1
+ 427      00
+ 428 0468 89150C00 		movl	%edx, LPBX1+12	 # PROF_edge_counter.0, *LPBX1
+ 428      0000
+ 429              		.loc 1 184 0
+ 430 046e 8B44242C 		movl	44(%esp), %eax	 # wsp, tmp86
+ 431 0472 83C048   		addl	$72, %eax	 #, D.2747
+ 432 0475 C7442408 		movl	$255, 8(%esp)	 #,
+ 432      FF000000 
+ 433 047d 89442404 		movl	%eax, 4(%esp)	 # D.2747,
+ 434 0481 8B44242C 		movl	44(%esp), %eax	 # wsp, tmp87
+ 435 0485 890424   		movl	%eax, (%esp)	 # tmp87,
+ 436 0488 E8000000 		call	__thread_memfill	 #
+ 436      00
+ 437 048d A1180000 		movl	LPBX1+24, %eax	 # *LPBX1, PROF_edge_counter.0
+ 437      00
+ 438 0492 8B151C00 		movl	LPBX1+28, %edx	 # *LPBX1, PROF_edge_counter.0
+ 438      0000
+ 439 0498 83C001   		addl	$1, %eax	 #, PROF_edge_counter.0
+ 440 049b 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.0
+ 441 049e A3180000 		movl	%eax, LPBX1+24	 # PROF_edge_counter.0, *LPBX1
+ 441      00
+ 442 04a3 89151C00 		movl	%edx, LPBX1+28	 # PROF_edge_counter.0, *LPBX1
+ 442      0000
+ 443              		.loc 1 188 0
+ 444 04a9 8B442440 		movl	64(%esp), %eax	 # mp, tmp88
+ 445 04ad 8B4004   		movl	4(%eax), %eax	 # mp_2(D)->mp_object_size, D.2748
+ 446              		.loc 1 187 0
+ 447 04b0 0344242C 		addl	44(%esp), %eax	 # wsp, D.2749
+GAS LISTING C:\cygwin\tmp\ccewKIPh.s 			page 11
+
+
+ 448 04b4 8B54242C 		movl	44(%esp), %edx	 # wsp, tmp89
+ 449 04b8 83C248   		addl	$72, %edx	 #, D.2750
+ 450 04bb C7442408 		movl	$85, 8(%esp)	 #,
+ 450      55000000 
+ 451 04c3 89442404 		movl	%eax, 4(%esp)	 # D.2749,
+ 452 04c7 891424   		movl	%edx, (%esp)	 # D.2750,
+ 453 04ca E8000000 		call	__thread_memfill	 #
+ 453      00
+ 454 04cf A1200000 		movl	LPBX1+32, %eax	 # *LPBX1, PROF_edge_counter.0
+ 454      00
+ 455 04d4 8B152400 		movl	LPBX1+36, %edx	 # *LPBX1, PROF_edge_counter.0
+ 455      0000
+ 456 04da 83C001   		addl	$1, %eax	 #, PROF_edge_counter.0
+ 457 04dd 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.0
+ 458 04e0 A3200000 		movl	%eax, LPBX1+32	 # PROF_edge_counter.0, *LPBX1
+ 458      00
+ 459 04e5 89152400 		movl	%edx, LPBX1+36	 # PROF_edge_counter.0, *LPBX1
+ 459      0000
+ 460              		.loc 1 192 0
+ 461              	/APP
+ 462              	 # 192 "../../os/kernel/src/chdynamic.c" 1
+ 463 04eb 90       		nop
+ 464              	 # 0 "" 2
+ 465              	/NO_APP
+ 466 04ec A1280000 		movl	LPBX1+40, %eax	 # *LPBX1, PROF_edge_counter.0
+ 466      00
+ 467 04f1 8B152C00 		movl	LPBX1+44, %edx	 # *LPBX1, PROF_edge_counter.0
+ 467      0000
+ 468 04f7 83C001   		addl	$1, %eax	 #, PROF_edge_counter.0
+ 469 04fa 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.0
+ 470 04fd A3280000 		movl	%eax, LPBX1+40	 # PROF_edge_counter.0, *LPBX1
+ 470      00
+ 471 0502 89152C00 		movl	%edx, LPBX1+44	 # PROF_edge_counter.0, *LPBX1
+ 471      0000
+ 472              		.loc 1 193 0
+ 473 0508 8B442440 		movl	64(%esp), %eax	 # mp, tmp90
+ 474 050c 8B4004   		movl	4(%eax), %eax	 # mp_2(D)->mp_object_size, D.2751
+ 475 050f 8B54244C 		movl	76(%esp), %edx	 # arg, tmp91
+ 476 0513 89542410 		movl	%edx, 16(%esp)	 # tmp91,
+ 477 0517 8B542448 		movl	72(%esp), %edx	 # pf, tmp92
+ 478 051b 8954240C 		movl	%edx, 12(%esp)	 # tmp92,
+ 479 051f 8B542444 		movl	68(%esp), %edx	 # prio, tmp93
+ 480 0523 89542408 		movl	%edx, 8(%esp)	 # tmp93,
+ 481 0527 89442404 		movl	%eax, 4(%esp)	 # D.2751,
+ 482 052b 8B44242C 		movl	44(%esp), %eax	 # wsp, tmp94
+ 483 052f 890424   		movl	%eax, (%esp)	 # tmp94,
+ 484 0532 E8000000 		call	_chThdCreateI	 #
+ 484      00
+ 485 0537 89442428 		movl	%eax, 40(%esp)	 # tmp95, tp
+ 486 053b A1300000 		movl	LPBX1+48, %eax	 # *LPBX1, PROF_edge_counter.0
+ 486      00
+ 487 0540 8B153400 		movl	LPBX1+52, %edx	 # *LPBX1, PROF_edge_counter.0
+ 487      0000
+ 488 0546 83C001   		addl	$1, %eax	 #, PROF_edge_counter.0
+ 489 0549 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.0
+ 490 054c A3300000 		movl	%eax, LPBX1+48	 # PROF_edge_counter.0, *LPBX1
+ 490      00
+GAS LISTING C:\cygwin\tmp\ccewKIPh.s 			page 12
+
+
+ 491 0551 89153400 		movl	%edx, LPBX1+52	 # PROF_edge_counter.0, *LPBX1
+ 491      0000
+ 492              		.loc 1 194 0
+ 493 0557 8B442428 		movl	40(%esp), %eax	 # tp, tmp96
+ 494 055b C6401D02 		movb	$2, 29(%eax)	 #, tp_13->p_flags
+ 495              		.loc 1 195 0
+ 496 055f 8B442428 		movl	40(%esp), %eax	 # tp, tmp97
+ 497 0563 8B542440 		movl	64(%esp), %edx	 # mp, tmp98
+ 498 0567 895044   		movl	%edx, 68(%eax)	 # tmp98, tp_13->p_mpool
+ 499              		.loc 1 196 0
+ 500 056a C7442404 		movl	$0, 4(%esp)	 #,
+ 500      00000000 
+ 501 0572 8B442428 		movl	40(%esp), %eax	 # tp, tmp99
+ 502 0576 890424   		movl	%eax, (%esp)	 # tmp99,
+ 503 0579 E8000000 		call	_chSchWakeupS	 #
+ 503      00
+ 504 057e A1380000 		movl	LPBX1+56, %eax	 # *LPBX1, PROF_edge_counter.0
+ 504      00
+ 505 0583 8B153C00 		movl	LPBX1+60, %edx	 # *LPBX1, PROF_edge_counter.0
+ 505      0000
+ 506 0589 83C001   		addl	$1, %eax	 #, PROF_edge_counter.0
+ 507 058c 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.0
+ 508 058f A3380000 		movl	%eax, LPBX1+56	 # PROF_edge_counter.0, *LPBX1
+ 508      00
+ 509 0594 89153C00 		movl	%edx, LPBX1+60	 # PROF_edge_counter.0, *LPBX1
+ 509      0000
+ 510              		.loc 1 197 0
+ 511              	/APP
+ 512              	 # 197 "../../os/kernel/src/chdynamic.c" 1
+ 513 059a 90       		nop
+ 514              	 # 0 "" 2
+ 515              		.loc 1 198 0
+ 516              	/NO_APP
+ 517 059b 8B4C2428 		movl	40(%esp), %ecx	 # tp, D.2746
+ 518 059f A1400000 		movl	LPBX1+64, %eax	 # *LPBX1, PROF_edge_counter.0
+ 518      00
+ 519 05a4 8B154400 		movl	LPBX1+68, %edx	 # *LPBX1, PROF_edge_counter.0
+ 519      0000
+ 520 05aa 83C001   		addl	$1, %eax	 #, PROF_edge_counter.0
+ 521 05ad 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.0
+ 522 05b0 A3400000 		movl	%eax, LPBX1+64	 # PROF_edge_counter.0, *LPBX1
+ 522      00
+ 523 05b5 89154400 		movl	%edx, LPBX1+68	 # PROF_edge_counter.0, *LPBX1
+ 523      0000
+ 524              	L11:
+ 525 05bb 89C8     		movl	%ecx, %eax	 # D.2746, <retval>
+ 526              		.loc 1 199 0
+ 527 05bd 83C43C   		addl	$60, %esp	 #,
+ 528              	LCFI7:
+ 529              		.cfi_def_cfa_offset 4
+ 530 05c0 C3       		ret
+ 531              		.cfi_endproc
+ 532              	LFE3:
+ 533              	.lcomm LPBX1,240,32
+ 534              		.section .rdata,"dr"
+ 535              		.align 4
+ 536              	LC0:
+GAS LISTING C:\cygwin\tmp\ccewKIPh.s 			page 13
+
+
+ 537 0000 433A5C64 		.ascii "C:\\develop\\gyro\\ChibiOS\\test\\coverage/../../os/kernel/src/chdynamic.gcda\0"
+ 537      6576656C 
+ 537      6F705C67 
+ 537      79726F5C 
+ 537      43686962 
+ 538 0049 000000   		.data
+ 539              		.align 32
+ 540              	LC1:
+ 541              	 # <anonymous>:
+ 542 0000 04000000 		.long	4
+ 543              	 # <anonymous>:
+ 544 0004 138C5A49 		.long	1230670867
+ 545              	 # <anonymous>:
+ 546 0008 09000000 		.long	9
+ 547              	 # <anonymous>:
+ 548 000c 03000000 		.long	3
+ 549              	 # <anonymous>:
+ 550 0010 3F59811A 		.long	444684607
+ 551              	 # <anonymous>:
+ 552 0014 09000000 		.long	9
+ 553              	 # <anonymous>:
+ 554 0018 02000000 		.long	2
+ 555              	 # <anonymous>:
+ 556 001c 767BB79F 		.long	-1615365258
+ 557              	 # <anonymous>:
+ 558 0020 09000000 		.long	9
+ 559              	 # <anonymous>:
+ 560 0024 01000000 		.long	1
+ 561              	 # <anonymous>:
+ 562 0028 D141C08E 		.long	-1900002863
+ 563              	 # <anonymous>:
+ 564 002c 03000000 		.long	3
+ 565 0030 00000000 		.align 32
+ 565      00000000 
+ 565      00000000 
+ 565      00000000 
+ 566              	LPBX0:
+ 567              	 # <anonymous>:
+ 568 0040 2A363034 		.long	875574826
+ 569              	 # <anonymous>:
+ 570 0044 00000000 		.long	0
+ 571              	 # <anonymous>:
+ 572 0048 A5197060 		.long	1617959333
+ 573              	 # <anonymous>:
+ 574 004c 00000000 		.long	LC0
+ 575              	 # <anonymous>:
+ 576 0050 04000000 		.long	4
+ 577              	 # <anonymous>:
+ 578 0054 00000000 		.long	LC1
+ 579              	 # <anonymous>:
+ 580 0058 01000000 		.long	1
+ 581              	 # <anonymous>:
+ 582              	 # <anonymous>:
+ 583 005c 1E000000 		.long	30
+ 584              	 # <anonymous>:
+ 585 0060 00000000 		.long	LPBX1
+ 586              	 # <anonymous>:
+GAS LISTING C:\cygwin\tmp\ccewKIPh.s 			page 14
+
+
+ 587 0064 00000000 		.long	___gcov_merge_add
+ 588 0068 00000000 		.space 12
+ 588      00000000 
+ 588      00000000 
+ 589 0074 00000000 		.text
+ 589      00000000 
+ 589      00000000 
+ 590              		.def	__GLOBAL__sub_I_65535_0_chThdAddRef;	.scl	3;	.type	32;	.endef
+ 591              	__GLOBAL__sub_I_65535_0_chThdAddRef:
+ 592              	LFB4:
+ 593              		.loc 1 199 0
+ 594              		.cfi_startproc
+ 595 05c1 83EC1C   		subl	$28, %esp	 #,
+ 596              	LCFI8:
+ 597              		.cfi_def_cfa_offset 32
+ 598              		.loc 1 199 0
+ 599 05c4 C7042440 		movl	$LPBX0, (%esp)	 #,
+ 599      000000
+ 600 05cb E8000000 		call	___gcov_init	 #
+ 600      00
+ 601 05d0 83C41C   		addl	$28, %esp	 #,
+ 602              	LCFI9:
+ 603              		.cfi_def_cfa_offset 4
+ 604 05d3 C3       		ret
+ 605              		.cfi_endproc
+ 606              	LFE4:
+ 607              		.section	.ctors,"w"
+ 608              		.align 4
+ 609 0000 C1050000 		.long	__GLOBAL__sub_I_65535_0_chThdAddRef
+ 610              		.text
+ 611              	Letext0:
+ 612              		.file 2 "c:/mingw/bin/../lib/gcc/mingw32/4.6.2/include/stddef.h"
+ 613              		.file 3 "c:/mingw/bin/../lib/gcc/mingw32/4.6.2/../../../../include/stdint.h"
+ 614              		.file 4 "../../os/ports/GCC/SIMIA32/chtypes.h"
+ 615              		.file 5 "../../os/kernel/include/chlists.h"
+ 616              		.file 6 "../../os/kernel/include/chthreads.h"
+ 617              		.file 7 "../../os/ports/GCC/SIMIA32/chcore.h"
+ 618              		.file 8 "../../os/kernel/include/chmtx.h"
+ 619              		.file 9 "../../os/kernel/include/chmemcore.h"
+ 620              		.file 10 "../../os/kernel/include/chheap.h"
+ 621              		.file 11 "../../os/kernel/include/chmempools.h"
+ 622              		.section	.debug_info,"dr"
+ 623              	Ldebug_info0:
+ 624 0000 93080000 		.long	0x893
+ 625 0004 0200     		.word	0x2
+ 626 0006 00000000 		.secrel32	Ldebug_abbrev0
+ 627 000a 04       		.byte	0x4
+ 628 000b 01       		.uleb128 0x1
+ 629 000c 474E5520 		.ascii "GNU C 4.6.2\0"
+ 629      4320342E 
+ 629      362E3200 
+ 630 0018 01       		.byte	0x1
+ 631 0019 2E2E2F2E 		.ascii "../../os/kernel/src/chdynamic.c\0"
+ 631      2E2F6F73 
+ 631      2F6B6572 
+ 631      6E656C2F 
+ 631      7372632F 
+GAS LISTING C:\cygwin\tmp\ccewKIPh.s 			page 15
+
+
+ 632 0039 433A5C64 		.ascii "C:\\develop\\gyro\\ChibiOS\\test\\coverage\0"
+ 632      6576656C 
+ 632      6F705C67 
+ 632      79726F5C 
+ 632      43686962 
+ 633 005f 00000000 		.long	Ltext0
+ 634 0063 D4050000 		.long	Letext0
+ 635 0067 00000000 		.secrel32	Ldebug_line0
+ 636 006b 02       		.uleb128 0x2
+ 637 006c 04       		.byte	0x4
+ 638 006d 05       		.byte	0x5
+ 639 006e 696E7400 		.ascii "int\0"
+ 640 0072 03       		.uleb128 0x3
+ 641 0073 73697A65 		.ascii "size_t\0"
+ 641      5F7400
+ 642 007a 02       		.byte	0x2
+ 643 007b D4       		.byte	0xd4
+ 644 007c 80000000 		.long	0x80
+ 645 0080 02       		.uleb128 0x2
+ 646 0081 04       		.byte	0x4
+ 647 0082 07       		.byte	0x7
+ 648 0083 756E7369 		.ascii "unsigned int\0"
+ 648      676E6564 
+ 648      20696E74 
+ 648      00
+ 649 0090 02       		.uleb128 0x2
+ 650 0091 02       		.byte	0x2
+ 651 0092 07       		.byte	0x7
+ 652 0093 73686F72 		.ascii "short unsigned int\0"
+ 652      7420756E 
+ 652      7369676E 
+ 652      65642069 
+ 652      6E7400
+ 653 00a6 02       		.uleb128 0x2
+ 654 00a7 01       		.byte	0x1
+ 655 00a8 06       		.byte	0x6
+ 656 00a9 7369676E 		.ascii "signed char\0"
+ 656      65642063 
+ 656      68617200 
+ 657 00b5 03       		.uleb128 0x3
+ 658 00b6 75696E74 		.ascii "uint8_t\0"
+ 658      385F7400 
+ 659 00be 03       		.byte	0x3
+ 660 00bf 1C       		.byte	0x1c
+ 661 00c0 C4000000 		.long	0xc4
+ 662 00c4 02       		.uleb128 0x2
+ 663 00c5 01       		.byte	0x1
+ 664 00c6 08       		.byte	0x8
+ 665 00c7 756E7369 		.ascii "unsigned char\0"
+ 665      676E6564 
+ 665      20636861 
+ 665      7200
+ 666 00d5 02       		.uleb128 0x2
+ 667 00d6 02       		.byte	0x2
+ 668 00d7 05       		.byte	0x5
+ 669 00d8 73686F72 		.ascii "short int\0"
+ 669      7420696E 
+GAS LISTING C:\cygwin\tmp\ccewKIPh.s 			page 16
+
+
+ 669      7400
+ 670 00e2 03       		.uleb128 0x3
+ 671 00e3 696E7433 		.ascii "int32_t\0"
+ 671      325F7400 
+ 672 00eb 03       		.byte	0x3
+ 673 00ec 1F       		.byte	0x1f
+ 674 00ed 6B000000 		.long	0x6b
+ 675 00f1 03       		.uleb128 0x3
+ 676 00f2 75696E74 		.ascii "uint32_t\0"
+ 676      33325F74 
+ 676      00
+ 677 00fb 03       		.byte	0x3
+ 678 00fc 20       		.byte	0x20
+ 679 00fd 80000000 		.long	0x80
+ 680 0101 02       		.uleb128 0x2
+ 681 0102 08       		.byte	0x8
+ 682 0103 05       		.byte	0x5
+ 683 0104 6C6F6E67 		.ascii "long long int\0"
+ 683      206C6F6E 
+ 683      6720696E 
+ 683      7400
+ 684 0112 02       		.uleb128 0x2
+ 685 0113 08       		.byte	0x8
+ 686 0114 07       		.byte	0x7
+ 687 0115 6C6F6E67 		.ascii "long long unsigned int\0"
+ 687      206C6F6E 
+ 687      6720756E 
+ 687      7369676E 
+ 687      65642069 
+ 688 012c 02       		.uleb128 0x2
+ 689 012d 01       		.byte	0x1
+ 690 012e 02       		.byte	0x2
+ 691 012f 5F426F6F 		.ascii "_Bool\0"
+ 691      6C00
+ 692 0135 03       		.uleb128 0x3
+ 693 0136 746D6F64 		.ascii "tmode_t\0"
+ 693      655F7400 
+ 694 013e 04       		.byte	0x4
+ 695 013f 1D       		.byte	0x1d
+ 696 0140 B5000000 		.long	0xb5
+ 697 0144 03       		.uleb128 0x3
+ 698 0145 74737461 		.ascii "tstate_t\0"
+ 698      74655F74 
+ 698      00
+ 699 014e 04       		.byte	0x4
+ 700 014f 1E       		.byte	0x1e
+ 701 0150 B5000000 		.long	0xb5
+ 702 0154 03       		.uleb128 0x3
+ 703 0155 74726566 		.ascii "trefs_t\0"
+ 703      735F7400 
+ 704 015d 04       		.byte	0x4
+ 705 015e 1F       		.byte	0x1f
+ 706 015f B5000000 		.long	0xb5
+ 707 0163 03       		.uleb128 0x3
+ 708 0164 74736C69 		.ascii "tslices_t\0"
+ 708      6365735F 
+ 708      7400
+GAS LISTING C:\cygwin\tmp\ccewKIPh.s 			page 17
+
+
+ 709 016e 04       		.byte	0x4
+ 710 016f 20       		.byte	0x20
+ 711 0170 B5000000 		.long	0xb5
+ 712 0174 03       		.uleb128 0x3
+ 713 0175 74707269 		.ascii "tprio_t\0"
+ 713      6F5F7400 
+ 714 017d 04       		.byte	0x4
+ 715 017e 21       		.byte	0x21
+ 716 017f F1000000 		.long	0xf1
+ 717 0183 03       		.uleb128 0x3
+ 718 0184 6D73675F 		.ascii "msg_t\0"
+ 718      7400
+ 719 018a 04       		.byte	0x4
+ 720 018b 22       		.byte	0x22
+ 721 018c E2000000 		.long	0xe2
+ 722 0190 03       		.uleb128 0x3
+ 723 0191 6576656E 		.ascii "eventmask_t\0"
+ 723      746D6173 
+ 723      6B5F7400 
+ 724 019d 04       		.byte	0x4
+ 725 019e 24       		.byte	0x24
+ 726 019f F1000000 		.long	0xf1
+ 727 01a3 03       		.uleb128 0x3
+ 728 01a4 73797374 		.ascii "systime_t\0"
+ 728      696D655F 
+ 728      7400
+ 729 01ae 04       		.byte	0x4
+ 730 01af 26       		.byte	0x26
+ 731 01b0 F1000000 		.long	0xf1
+ 732 01b4 03       		.uleb128 0x3
+ 733 01b5 54687265 		.ascii "Thread\0"
+ 733      616400
+ 734 01bc 05       		.byte	0x5
+ 735 01bd 23       		.byte	0x23
+ 736 01be C2010000 		.long	0x1c2
+ 737 01c2 04       		.uleb128 0x4
+ 738 01c3 54687265 		.ascii "Thread\0"
+ 738      616400
+ 739 01ca 48       		.byte	0x48
+ 740 01cb 06       		.byte	0x6
+ 741 01cc 57       		.byte	0x57
+ 742 01cd 38030000 		.long	0x338
+ 743 01d1 05       		.uleb128 0x5
+ 744 01d2 00000000 		.secrel32	LASF0
+ 745 01d6 06       		.byte	0x6
+ 746 01d7 58       		.byte	0x58
+ 747 01d8 60030000 		.long	0x360
+ 748 01dc 02       		.byte	0x2
+ 749 01dd 23       		.byte	0x23
+ 750 01de 00       		.uleb128 0
+ 751 01df 06       		.uleb128 0x6
+ 752 01e0 705F7072 		.ascii "p_prev\0"
+ 752      657600
+ 753 01e7 06       		.byte	0x6
+ 754 01e8 5A       		.byte	0x5a
+ 755 01e9 60030000 		.long	0x360
+ 756 01ed 02       		.byte	0x2
+GAS LISTING C:\cygwin\tmp\ccewKIPh.s 			page 18
+
+
+ 757 01ee 23       		.byte	0x23
+ 758 01ef 04       		.uleb128 0x4
+ 759 01f0 06       		.uleb128 0x6
+ 760 01f1 705F7072 		.ascii "p_prio\0"
+ 760      696F00
+ 761 01f8 06       		.byte	0x6
+ 762 01f9 5C       		.byte	0x5c
+ 763 01fa 74010000 		.long	0x174
+ 764 01fe 02       		.byte	0x2
+ 765 01ff 23       		.byte	0x23
+ 766 0200 08       		.uleb128 0x8
+ 767 0201 06       		.uleb128 0x6
+ 768 0202 705F6374 		.ascii "p_ctx\0"
+ 768      7800
+ 769 0208 06       		.byte	0x6
+ 770 0209 5D       		.byte	0x5d
+ 771 020a 41040000 		.long	0x441
+ 772 020e 02       		.byte	0x2
+ 773 020f 23       		.byte	0x23
+ 774 0210 0C       		.uleb128 0xc
+ 775 0211 06       		.uleb128 0x6
+ 776 0212 705F6E65 		.ascii "p_newer\0"
+ 776      77657200 
+ 777 021a 06       		.byte	0x6
+ 778 021b 5F       		.byte	0x5f
+ 779 021c 60030000 		.long	0x360
+ 780 0220 02       		.byte	0x2
+ 781 0221 23       		.byte	0x23
+ 782 0222 10       		.uleb128 0x10
+ 783 0223 06       		.uleb128 0x6
+ 784 0224 705F6F6C 		.ascii "p_older\0"
+ 784      64657200 
+ 785 022c 06       		.byte	0x6
+ 786 022d 60       		.byte	0x60
+ 787 022e 60030000 		.long	0x360
+ 788 0232 02       		.byte	0x2
+ 789 0233 23       		.byte	0x23
+ 790 0234 14       		.uleb128 0x14
+ 791 0235 06       		.uleb128 0x6
+ 792 0236 705F6E61 		.ascii "p_name\0"
+ 792      6D6500
+ 793 023d 06       		.byte	0x6
+ 794 023e 67       		.byte	0x67
+ 795 023f 96060000 		.long	0x696
+ 796 0243 02       		.byte	0x2
+ 797 0244 23       		.byte	0x23
+ 798 0245 18       		.uleb128 0x18
+ 799 0246 06       		.uleb128 0x6
+ 800 0247 705F7374 		.ascii "p_state\0"
+ 800      61746500 
+ 801 024f 06       		.byte	0x6
+ 802 0250 72       		.byte	0x72
+ 803 0251 44010000 		.long	0x144
+ 804 0255 02       		.byte	0x2
+ 805 0256 23       		.byte	0x23
+ 806 0257 1C       		.uleb128 0x1c
+ 807 0258 06       		.uleb128 0x6
+GAS LISTING C:\cygwin\tmp\ccewKIPh.s 			page 19
+
+
+ 808 0259 705F666C 		.ascii "p_flags\0"
+ 808      61677300 
+ 809 0261 06       		.byte	0x6
+ 810 0262 76       		.byte	0x76
+ 811 0263 35010000 		.long	0x135
+ 812 0267 02       		.byte	0x2
+ 813 0268 23       		.byte	0x23
+ 814 0269 1D       		.uleb128 0x1d
+ 815 026a 06       		.uleb128 0x6
+ 816 026b 705F7265 		.ascii "p_refs\0"
+ 816      667300
+ 817 0272 06       		.byte	0x6
+ 818 0273 7B       		.byte	0x7b
+ 819 0274 54010000 		.long	0x154
+ 820 0278 02       		.byte	0x2
+ 821 0279 23       		.byte	0x23
+ 822 027a 1E       		.uleb128 0x1e
+ 823 027b 06       		.uleb128 0x6
+ 824 027c 705F7072 		.ascii "p_preempt\0"
+ 824      65656D70 
+ 824      7400
+ 825 0286 06       		.byte	0x6
+ 826 0287 81       		.byte	0x81
+ 827 0288 63010000 		.long	0x163
+ 828 028c 02       		.byte	0x2
+ 829 028d 23       		.byte	0x23
+ 830 028e 1F       		.uleb128 0x1f
+ 831 028f 06       		.uleb128 0x6
+ 832 0290 705F7469 		.ascii "p_time\0"
+ 832      6D6500
+ 833 0297 06       		.byte	0x6
+ 834 0298 88       		.byte	0x88
+ 835 0299 6B040000 		.long	0x46b
+ 836 029d 02       		.byte	0x2
+ 837 029e 23       		.byte	0x23
+ 838 029f 20       		.uleb128 0x20
+ 839 02a0 06       		.uleb128 0x6
+ 840 02a1 705F7500 		.ascii "p_u\0"
+ 841 02a5 06       		.byte	0x6
+ 842 02a6 AD       		.byte	0xad
+ 843 02a7 53060000 		.long	0x653
+ 844 02ab 02       		.byte	0x2
+ 845 02ac 23       		.byte	0x23
+ 846 02ad 24       		.uleb128 0x24
+ 847 02ae 06       		.uleb128 0x6
+ 848 02af 705F7761 		.ascii "p_waiting\0"
+ 848      6974696E 
+ 848      6700
+ 849 02b9 06       		.byte	0x6
+ 850 02ba B2       		.byte	0xb2
+ 851 02bb 91030000 		.long	0x391
+ 852 02bf 02       		.byte	0x2
+ 853 02c0 23       		.byte	0x23
+ 854 02c1 28       		.uleb128 0x28
+ 855 02c2 06       		.uleb128 0x6
+ 856 02c3 705F6D73 		.ascii "p_msgqueue\0"
+ 856      67717565 
+GAS LISTING C:\cygwin\tmp\ccewKIPh.s 			page 20
+
+
+ 856      756500
+ 857 02ce 06       		.byte	0x6
+ 858 02cf B8       		.byte	0xb8
+ 859 02d0 66030000 		.long	0x366
+ 860 02d4 02       		.byte	0x2
+ 861 02d5 23       		.byte	0x23
+ 862 02d6 2C       		.uleb128 0x2c
+ 863 02d7 06       		.uleb128 0x6
+ 864 02d8 705F6D73 		.ascii "p_msg\0"
+ 864      6700
+ 865 02de 06       		.byte	0x6
+ 866 02df BC       		.byte	0xbc
+ 867 02e0 83010000 		.long	0x183
+ 868 02e4 02       		.byte	0x2
+ 869 02e5 23       		.byte	0x23
+ 870 02e6 34       		.uleb128 0x34
+ 871 02e7 06       		.uleb128 0x6
+ 872 02e8 705F6570 		.ascii "p_epending\0"
+ 872      656E6469 
+ 872      6E6700
+ 873 02f3 06       		.byte	0x6
+ 874 02f4 C2       		.byte	0xc2
+ 875 02f5 90010000 		.long	0x190
+ 876 02f9 02       		.byte	0x2
+ 877 02fa 23       		.byte	0x23
+ 878 02fb 38       		.uleb128 0x38
+ 879 02fc 06       		.uleb128 0x6
+ 880 02fd 705F6D74 		.ascii "p_mtxlist\0"
+ 880      786C6973 
+ 880      7400
+ 881 0307 06       		.byte	0x6
+ 882 0308 C9       		.byte	0xc9
+ 883 0309 A9060000 		.long	0x6a9
+ 884 030d 02       		.byte	0x2
+ 885 030e 23       		.byte	0x23
+ 886 030f 3C       		.uleb128 0x3c
+ 887 0310 06       		.uleb128 0x6
+ 888 0311 705F7265 		.ascii "p_realprio\0"
+ 888      616C7072 
+ 888      696F00
+ 889 031c 06       		.byte	0x6
+ 890 031d CD       		.byte	0xcd
+ 891 031e 74010000 		.long	0x174
+ 892 0322 02       		.byte	0x2
+ 893 0323 23       		.byte	0x23
+ 894 0324 40       		.uleb128 0x40
+ 895 0325 06       		.uleb128 0x6
+ 896 0326 705F6D70 		.ascii "p_mpool\0"
+ 896      6F6F6C00 
+ 897 032e 06       		.byte	0x6
+ 898 032f D3       		.byte	0xd3
+ 899 0330 E9030000 		.long	0x3e9
+ 900 0334 02       		.byte	0x2
+ 901 0335 23       		.byte	0x23
+ 902 0336 44       		.uleb128 0x44
+ 903 0337 00       		.byte	0
+ 904 0338 07       		.uleb128 0x7
+GAS LISTING C:\cygwin\tmp\ccewKIPh.s 			page 21
+
+
+ 905 0339 08       		.byte	0x8
+ 906 033a 05       		.byte	0x5
+ 907 033b 5A       		.byte	0x5a
+ 908 033c 60030000 		.long	0x360
+ 909 0340 05       		.uleb128 0x5
+ 910 0341 00000000 		.secrel32	LASF0
+ 911 0345 05       		.byte	0x5
+ 912 0346 5B       		.byte	0x5b
+ 913 0347 60030000 		.long	0x360
+ 914 034b 02       		.byte	0x2
+ 915 034c 23       		.byte	0x23
+ 916 034d 00       		.uleb128 0
+ 917 034e 06       		.uleb128 0x6
+ 918 034f 705F7072 		.ascii "p_prev\0"
+ 918      657600
+ 919 0356 05       		.byte	0x5
+ 920 0357 5D       		.byte	0x5d
+ 921 0358 60030000 		.long	0x360
+ 922 035c 02       		.byte	0x2
+ 923 035d 23       		.byte	0x23
+ 924 035e 04       		.uleb128 0x4
+ 925 035f 00       		.byte	0
+ 926 0360 08       		.uleb128 0x8
+ 927 0361 04       		.byte	0x4
+ 928 0362 B4010000 		.long	0x1b4
+ 929 0366 03       		.uleb128 0x3
+ 930 0367 54687265 		.ascii "ThreadsQueue\0"
+ 930      61647351 
+ 930      75657565 
+ 930      00
+ 931 0374 05       		.byte	0x5
+ 932 0375 5F       		.byte	0x5f
+ 933 0376 38030000 		.long	0x338
+ 934 037a 07       		.uleb128 0x7
+ 935 037b 04       		.byte	0x4
+ 936 037c 05       		.byte	0x5
+ 937 037d 64       		.byte	0x64
+ 938 037e 91030000 		.long	0x391
+ 939 0382 05       		.uleb128 0x5
+ 940 0383 00000000 		.secrel32	LASF0
+ 941 0387 05       		.byte	0x5
+ 942 0388 66       		.byte	0x66
+ 943 0389 60030000 		.long	0x360
+ 944 038d 02       		.byte	0x2
+ 945 038e 23       		.byte	0x23
+ 946 038f 00       		.uleb128 0
+ 947 0390 00       		.byte	0
+ 948 0391 03       		.uleb128 0x3
+ 949 0392 54687265 		.ascii "ThreadsList\0"
+ 949      6164734C 
+ 949      69737400 
+ 950 039e 05       		.byte	0x5
+ 951 039f 69       		.byte	0x69
+ 952 03a0 7A030000 		.long	0x37a
+ 953 03a4 07       		.uleb128 0x7
+ 954 03a5 10       		.byte	0x10
+ 955 03a6 07       		.byte	0x7
+GAS LISTING C:\cygwin\tmp\ccewKIPh.s 			page 22
+
+
+ 956 03a7 3D       		.byte	0x3d
+ 957 03a8 B9030000 		.long	0x3b9
+ 958 03ac 06       		.uleb128 0x6
+ 959 03ad 6100     		.ascii "a\0"
+ 960 03af 07       		.byte	0x7
+ 961 03b0 3E       		.byte	0x3e
+ 962 03b1 B9030000 		.long	0x3b9
+ 963 03b5 02       		.byte	0x2
+ 964 03b6 23       		.byte	0x23
+ 965 03b7 00       		.uleb128 0
+ 966 03b8 00       		.byte	0
+ 967 03b9 09       		.uleb128 0x9
+ 968 03ba B5000000 		.long	0xb5
+ 969 03be C9030000 		.long	0x3c9
+ 970 03c2 0A       		.uleb128 0xa
+ 971 03c3 80000000 		.long	0x80
+ 972 03c7 0F       		.byte	0xf
+ 973 03c8 00       		.byte	0
+ 974 03c9 03       		.uleb128 0x3
+ 975 03ca 73746B61 		.ascii "stkalign_t\0"
+ 975      6C69676E 
+ 975      5F7400
+ 976 03d5 07       		.byte	0x7
+ 977 03d6 3F       		.byte	0x3f
+ 978 03d7 A4030000 		.long	0x3a4
+ 979 03db 03       		.uleb128 0x3
+ 980 03dc 72656778 		.ascii "regx86\0"
+ 980      383600
+ 981 03e3 07       		.byte	0x7
+ 982 03e4 44       		.byte	0x44
+ 983 03e5 E9030000 		.long	0x3e9
+ 984 03e9 0B       		.uleb128 0xb
+ 985 03ea 04       		.byte	0x4
+ 986 03eb 04       		.uleb128 0x4
+ 987 03ec 696E7463 		.ascii "intctx\0"
+ 987      747800
+ 988 03f3 14       		.byte	0x14
+ 989 03f4 07       		.byte	0x7
+ 990 03f5 52       		.byte	0x52
+ 991 03f6 41040000 		.long	0x441
+ 992 03fa 06       		.uleb128 0x6
+ 993 03fb 65627800 		.ascii "ebx\0"
+ 994 03ff 07       		.byte	0x7
+ 995 0400 53       		.byte	0x53
+ 996 0401 DB030000 		.long	0x3db
+ 997 0405 02       		.byte	0x2
+ 998 0406 23       		.byte	0x23
+ 999 0407 00       		.uleb128 0
+ 1000 0408 06       		.uleb128 0x6
+ 1001 0409 65646900 		.ascii "edi\0"
+ 1002 040d 07       		.byte	0x7
+ 1003 040e 54       		.byte	0x54
+ 1004 040f DB030000 		.long	0x3db
+ 1005 0413 02       		.byte	0x2
+ 1006 0414 23       		.byte	0x23
+ 1007 0415 04       		.uleb128 0x4
+ 1008 0416 06       		.uleb128 0x6
+GAS LISTING C:\cygwin\tmp\ccewKIPh.s 			page 23
+
+
+ 1009 0417 65736900 		.ascii "esi\0"
+ 1010 041b 07       		.byte	0x7
+ 1011 041c 55       		.byte	0x55
+ 1012 041d DB030000 		.long	0x3db
+ 1013 0421 02       		.byte	0x2
+ 1014 0422 23       		.byte	0x23
+ 1015 0423 08       		.uleb128 0x8
+ 1016 0424 06       		.uleb128 0x6
+ 1017 0425 65627000 		.ascii "ebp\0"
+ 1018 0429 07       		.byte	0x7
+ 1019 042a 56       		.byte	0x56
+ 1020 042b DB030000 		.long	0x3db
+ 1021 042f 02       		.byte	0x2
+ 1022 0430 23       		.byte	0x23
+ 1023 0431 0C       		.uleb128 0xc
+ 1024 0432 06       		.uleb128 0x6
+ 1025 0433 65697000 		.ascii "eip\0"
+ 1026 0437 07       		.byte	0x7
+ 1027 0438 57       		.byte	0x57
+ 1028 0439 DB030000 		.long	0x3db
+ 1029 043d 02       		.byte	0x2
+ 1030 043e 23       		.byte	0x23
+ 1031 043f 10       		.uleb128 0x10
+ 1032 0440 00       		.byte	0
+ 1033 0441 04       		.uleb128 0x4
+ 1034 0442 636F6E74 		.ascii "context\0"
+ 1034      65787400 
+ 1035 044a 04       		.byte	0x4
+ 1036 044b 07       		.byte	0x7
+ 1037 044c 5F       		.byte	0x5f
+ 1038 044d 60040000 		.long	0x460
+ 1039 0451 06       		.uleb128 0x6
+ 1040 0452 65737000 		.ascii "esp\0"
+ 1041 0456 07       		.byte	0x7
+ 1042 0457 60       		.byte	0x60
+ 1043 0458 60040000 		.long	0x460
+ 1044 045c 02       		.byte	0x2
+ 1045 045d 23       		.byte	0x23
+ 1046 045e 00       		.uleb128 0
+ 1047 045f 00       		.byte	0
+ 1048 0460 08       		.uleb128 0x8
+ 1049 0461 04       		.byte	0x4
+ 1050 0462 66040000 		.long	0x466
+ 1051 0466 0C       		.uleb128 0xc
+ 1052 0467 EB030000 		.long	0x3eb
+ 1053 046b 0C       		.uleb128 0xc
+ 1054 046c A3010000 		.long	0x1a3
+ 1055 0470 04       		.uleb128 0x4
+ 1056 0471 4D757465 		.ascii "Mutex\0"
+ 1056      7800
+ 1057 0477 10       		.byte	0x10
+ 1058 0478 08       		.byte	0x8
+ 1059 0479 25       		.byte	0x25
+ 1060 047a B4040000 		.long	0x4b4
+ 1061 047e 06       		.uleb128 0x6
+ 1062 047f 6D5F7175 		.ascii "m_queue\0"
+ 1062      65756500 
+GAS LISTING C:\cygwin\tmp\ccewKIPh.s 			page 24
+
+
+ 1063 0487 08       		.byte	0x8
+ 1064 0488 26       		.byte	0x26
+ 1065 0489 66030000 		.long	0x366
+ 1066 048d 02       		.byte	0x2
+ 1067 048e 23       		.byte	0x23
+ 1068 048f 00       		.uleb128 0
+ 1069 0490 06       		.uleb128 0x6
+ 1070 0491 6D5F6F77 		.ascii "m_owner\0"
+ 1070      6E657200 
+ 1071 0499 08       		.byte	0x8
+ 1072 049a 28       		.byte	0x28
+ 1073 049b 60030000 		.long	0x360
+ 1074 049f 02       		.byte	0x2
+ 1075 04a0 23       		.byte	0x23
+ 1076 04a1 08       		.uleb128 0x8
+ 1077 04a2 06       		.uleb128 0x6
+ 1078 04a3 6D5F6E65 		.ascii "m_next\0"
+ 1078      787400
+ 1079 04aa 08       		.byte	0x8
+ 1080 04ab 2A       		.byte	0x2a
+ 1081 04ac B4040000 		.long	0x4b4
+ 1082 04b0 02       		.byte	0x2
+ 1083 04b1 23       		.byte	0x23
+ 1084 04b2 0C       		.uleb128 0xc
+ 1085 04b3 00       		.byte	0
+ 1086 04b4 08       		.uleb128 0x8
+ 1087 04b5 04       		.byte	0x4
+ 1088 04b6 70040000 		.long	0x470
+ 1089 04ba 03       		.uleb128 0x3
+ 1090 04bb 4D757465 		.ascii "Mutex\0"
+ 1090      7800
+ 1091 04c1 08       		.byte	0x8
+ 1092 04c2 2C       		.byte	0x2c
+ 1093 04c3 70040000 		.long	0x470
+ 1094 04c7 03       		.uleb128 0x3
+ 1095 04c8 6D656D67 		.ascii "memgetfunc_t\0"
+ 1095      65746675 
+ 1095      6E635F74 
+ 1095      00
+ 1096 04d5 09       		.byte	0x9
+ 1097 04d6 25       		.byte	0x25
+ 1098 04d7 DB040000 		.long	0x4db
+ 1099 04db 08       		.uleb128 0x8
+ 1100 04dc 04       		.byte	0x4
+ 1101 04dd E1040000 		.long	0x4e1
+ 1102 04e1 0D       		.uleb128 0xd
+ 1103 04e2 01       		.byte	0x1
+ 1104 04e3 E9030000 		.long	0x3e9
+ 1105 04e7 F1040000 		.long	0x4f1
+ 1106 04eb 0E       		.uleb128 0xe
+ 1107 04ec 72000000 		.long	0x72
+ 1108 04f0 00       		.byte	0
+ 1109 04f1 03       		.uleb128 0x3
+ 1110 04f2 4D656D6F 		.ascii "MemoryHeap\0"
+ 1110      72794865 
+ 1110      617000
+ 1111 04fd 0A       		.byte	0xa
+GAS LISTING C:\cygwin\tmp\ccewKIPh.s 			page 25
+
+
+ 1112 04fe 2D       		.byte	0x2d
+ 1113 04ff 03050000 		.long	0x503
+ 1114 0503 04       		.uleb128 0x4
+ 1115 0504 6D656D6F 		.ascii "memory_heap\0"
+ 1115      72795F68 
+ 1115      65617000 
+ 1116 0510 30       		.byte	0x30
+ 1117 0511 0A       		.byte	0xa
+ 1118 0512 40       		.byte	0x40
+ 1119 0513 4E050000 		.long	0x54e
+ 1120 0517 06       		.uleb128 0x6
+ 1121 0518 685F7072 		.ascii "h_provider\0"
+ 1121      6F766964 
+ 1121      657200
+ 1122 0523 0A       		.byte	0xa
+ 1123 0524 41       		.byte	0x41
+ 1124 0525 C7040000 		.long	0x4c7
+ 1125 0529 02       		.byte	0x2
+ 1126 052a 23       		.byte	0x23
+ 1127 052b 00       		.uleb128 0
+ 1128 052c 06       		.uleb128 0x6
+ 1129 052d 685F6672 		.ascii "h_free\0"
+ 1129      656500
+ 1130 0534 0A       		.byte	0xa
+ 1131 0535 43       		.byte	0x43
+ 1132 0536 6F050000 		.long	0x56f
+ 1133 053a 02       		.byte	0x2
+ 1134 053b 23       		.byte	0x23
+ 1135 053c 10       		.uleb128 0x10
+ 1136 053d 06       		.uleb128 0x6
+ 1137 053e 685F6D74 		.ascii "h_mtx\0"
+ 1137      7800
+ 1138 0544 0A       		.byte	0xa
+ 1139 0545 45       		.byte	0x45
+ 1140 0546 BA040000 		.long	0x4ba
+ 1141 054a 02       		.byte	0x2
+ 1142 054b 23       		.byte	0x23
+ 1143 054c 20       		.uleb128 0x20
+ 1144 054d 00       		.byte	0
+ 1145 054e 0F       		.uleb128 0xf
+ 1146 054f 04       		.byte	0x4
+ 1147 0550 0A       		.byte	0xa
+ 1148 0551 35       		.byte	0x35
+ 1149 0552 6F050000 		.long	0x56f
+ 1150 0556 10       		.uleb128 0x10
+ 1151 0557 6E657874 		.ascii "next\0"
+ 1151      00
+ 1152 055c 0A       		.byte	0xa
+ 1153 055d 36       		.byte	0x36
+ 1154 055e 9A050000 		.long	0x59a
+ 1155 0562 10       		.uleb128 0x10
+ 1156 0563 68656170 		.ascii "heap\0"
+ 1156      00
+ 1157 0568 0A       		.byte	0xa
+ 1158 0569 37       		.byte	0x37
+ 1159 056a A0050000 		.long	0x5a0
+ 1160 056e 00       		.byte	0
+GAS LISTING C:\cygwin\tmp\ccewKIPh.s 			page 26
+
+
+ 1161 056f 11       		.uleb128 0x11
+ 1162 0570 68656170 		.ascii "heap_header\0"
+ 1162      5F686561 
+ 1162      64657200 
+ 1163 057c 10       		.byte	0x10
+ 1164 057d 0A       		.byte	0xa
+ 1165 057e 32       		.byte	0x32
+ 1166 057f 9A050000 		.long	0x59a
+ 1167 0583 10       		.uleb128 0x10
+ 1168 0584 616C6967 		.ascii "align\0"
+ 1168      6E00
+ 1169 058a 0A       		.byte	0xa
+ 1170 058b 33       		.byte	0x33
+ 1171 058c C9030000 		.long	0x3c9
+ 1172 0590 10       		.uleb128 0x10
+ 1173 0591 6800     		.ascii "h\0"
+ 1174 0593 0A       		.byte	0xa
+ 1175 0594 3A       		.byte	0x3a
+ 1176 0595 A6050000 		.long	0x5a6
+ 1177 0599 00       		.byte	0
+ 1178 059a 08       		.uleb128 0x8
+ 1179 059b 04       		.byte	0x4
+ 1180 059c 6F050000 		.long	0x56f
+ 1181 05a0 08       		.uleb128 0x8
+ 1182 05a1 04       		.byte	0x4
+ 1183 05a2 F1040000 		.long	0x4f1
+ 1184 05a6 07       		.uleb128 0x7
+ 1185 05a7 08       		.byte	0x8
+ 1186 05a8 0A       		.byte	0xa
+ 1187 05a9 34       		.byte	0x34
+ 1188 05aa CA050000 		.long	0x5ca
+ 1189 05ae 06       		.uleb128 0x6
+ 1190 05af 7500     		.ascii "u\0"
+ 1191 05b1 0A       		.byte	0xa
+ 1192 05b2 38       		.byte	0x38
+ 1193 05b3 4E050000 		.long	0x54e
+ 1194 05b7 02       		.byte	0x2
+ 1195 05b8 23       		.byte	0x23
+ 1196 05b9 00       		.uleb128 0
+ 1197 05ba 06       		.uleb128 0x6
+ 1198 05bb 73697A65 		.ascii "size\0"
+ 1198      00
+ 1199 05c0 0A       		.byte	0xa
+ 1200 05c1 39       		.byte	0x39
+ 1201 05c2 72000000 		.long	0x72
+ 1202 05c6 02       		.byte	0x2
+ 1203 05c7 23       		.byte	0x23
+ 1204 05c8 04       		.uleb128 0x4
+ 1205 05c9 00       		.byte	0
+ 1206 05ca 04       		.uleb128 0x4
+ 1207 05cb 706F6F6C 		.ascii "pool_header\0"
+ 1207      5F686561 
+ 1207      64657200 
+ 1208 05d7 04       		.byte	0x4
+ 1209 05d8 0B       		.byte	0xb
+ 1210 05d9 25       		.byte	0x25
+ 1211 05da F1050000 		.long	0x5f1
+GAS LISTING C:\cygwin\tmp\ccewKIPh.s 			page 27
+
+
+ 1212 05de 06       		.uleb128 0x6
+ 1213 05df 70685F6E 		.ascii "ph_next\0"
+ 1213      65787400 
+ 1214 05e7 0B       		.byte	0xb
+ 1215 05e8 26       		.byte	0x26
+ 1216 05e9 F1050000 		.long	0x5f1
+ 1217 05ed 02       		.byte	0x2
+ 1218 05ee 23       		.byte	0x23
+ 1219 05ef 00       		.uleb128 0
+ 1220 05f0 00       		.byte	0
+ 1221 05f1 08       		.uleb128 0x8
+ 1222 05f2 04       		.byte	0x4
+ 1223 05f3 CA050000 		.long	0x5ca
+ 1224 05f7 07       		.uleb128 0x7
+ 1225 05f8 0C       		.byte	0xc
+ 1226 05f9 0B       		.byte	0xb
+ 1227 05fa 2D       		.byte	0x2d
+ 1228 05fb 41060000 		.long	0x641
+ 1229 05ff 06       		.uleb128 0x6
+ 1230 0600 6D705F6E 		.ascii "mp_next\0"
+ 1230      65787400 
+ 1231 0608 0B       		.byte	0xb
+ 1232 0609 2E       		.byte	0x2e
+ 1233 060a F1050000 		.long	0x5f1
+ 1234 060e 02       		.byte	0x2
+ 1235 060f 23       		.byte	0x23
+ 1236 0610 00       		.uleb128 0
+ 1237 0611 06       		.uleb128 0x6
+ 1238 0612 6D705F6F 		.ascii "mp_object_size\0"
+ 1238      626A6563 
+ 1238      745F7369 
+ 1238      7A6500
+ 1239 0621 0B       		.byte	0xb
+ 1240 0622 2F       		.byte	0x2f
+ 1241 0623 72000000 		.long	0x72
+ 1242 0627 02       		.byte	0x2
+ 1243 0628 23       		.byte	0x23
+ 1244 0629 04       		.uleb128 0x4
+ 1245 062a 06       		.uleb128 0x6
+ 1246 062b 6D705F70 		.ascii "mp_provider\0"
+ 1246      726F7669 
+ 1246      64657200 
+ 1247 0637 0B       		.byte	0xb
+ 1248 0638 31       		.byte	0x31
+ 1249 0639 C7040000 		.long	0x4c7
+ 1250 063d 02       		.byte	0x2
+ 1251 063e 23       		.byte	0x23
+ 1252 063f 08       		.uleb128 0x8
+ 1253 0640 00       		.byte	0
+ 1254 0641 03       		.uleb128 0x3
+ 1255 0642 4D656D6F 		.ascii "MemoryPool\0"
+ 1255      7279506F 
+ 1255      6F6C00
+ 1256 064d 0B       		.byte	0xb
+ 1257 064e 33       		.byte	0x33
+ 1258 064f F7050000 		.long	0x5f7
+ 1259 0653 0F       		.uleb128 0xf
+GAS LISTING C:\cygwin\tmp\ccewKIPh.s 			page 28
+
+
+ 1260 0654 04       		.byte	0x4
+ 1261 0655 06       		.byte	0x6
+ 1262 0656 8F       		.byte	0x8f
+ 1263 0657 96060000 		.long	0x696
+ 1264 065b 10       		.uleb128 0x10
+ 1265 065c 7264796D 		.ascii "rdymsg\0"
+ 1265      736700
+ 1266 0663 06       		.byte	0x6
+ 1267 0664 96       		.byte	0x96
+ 1268 0665 83010000 		.long	0x183
+ 1269 0669 10       		.uleb128 0x10
+ 1270 066a 65786974 		.ascii "exitcode\0"
+ 1270      636F6465 
+ 1270      00
+ 1271 0673 06       		.byte	0x6
+ 1272 0674 9D       		.byte	0x9d
+ 1273 0675 83010000 		.long	0x183
+ 1274 0679 10       		.uleb128 0x10
+ 1275 067a 77746F62 		.ascii "wtobjp\0"
+ 1275      6A7000
+ 1276 0681 06       		.byte	0x6
+ 1277 0682 A4       		.byte	0xa4
+ 1278 0683 E9030000 		.long	0x3e9
+ 1279 0687 10       		.uleb128 0x10
+ 1280 0688 65776D61 		.ascii "ewmask\0"
+ 1280      736B00
+ 1281 068f 06       		.byte	0x6
+ 1282 0690 AB       		.byte	0xab
+ 1283 0691 90010000 		.long	0x190
+ 1284 0695 00       		.byte	0
+ 1285 0696 08       		.uleb128 0x8
+ 1286 0697 04       		.byte	0x4
+ 1287 0698 9C060000 		.long	0x69c
+ 1288 069c 12       		.uleb128 0x12
+ 1289 069d A1060000 		.long	0x6a1
+ 1290 06a1 02       		.uleb128 0x2
+ 1291 06a2 01       		.byte	0x1
+ 1292 06a3 06       		.byte	0x6
+ 1293 06a4 63686172 		.ascii "char\0"
+ 1293      00
+ 1294 06a9 08       		.uleb128 0x8
+ 1295 06aa 04       		.byte	0x4
+ 1296 06ab BA040000 		.long	0x4ba
+ 1297 06af 03       		.uleb128 0x3
+ 1298 06b0 7466756E 		.ascii "tfunc_t\0"
+ 1298      635F7400 
+ 1299 06b8 06       		.byte	0x6
+ 1300 06b9 DE       		.byte	0xde
+ 1301 06ba BE060000 		.long	0x6be
+ 1302 06be 08       		.uleb128 0x8
+ 1303 06bf 04       		.byte	0x4
+ 1304 06c0 C4060000 		.long	0x6c4
+ 1305 06c4 0D       		.uleb128 0xd
+ 1306 06c5 01       		.byte	0x1
+ 1307 06c6 83010000 		.long	0x183
+ 1308 06ca D4060000 		.long	0x6d4
+ 1309 06ce 0E       		.uleb128 0xe
+GAS LISTING C:\cygwin\tmp\ccewKIPh.s 			page 29
+
+
+ 1310 06cf E9030000 		.long	0x3e9
+ 1311 06d3 00       		.byte	0
+ 1312 06d4 13       		.uleb128 0x13
+ 1313 06d5 01       		.byte	0x1
+ 1314 06d6 63685468 		.ascii "chThdAddRef\0"
+ 1314      64416464 
+ 1314      52656600 
+ 1315 06e2 01       		.byte	0x1
+ 1316 06e3 2D       		.byte	0x2d
+ 1317 06e4 01       		.byte	0x1
+ 1318 06e5 60030000 		.long	0x360
+ 1319 06e9 00000000 		.long	LFB0
+ 1320 06ed 72000000 		.long	LFE0
+ 1321 06f1 00000000 		.secrel32	LLST0
+ 1322 06f5 07070000 		.long	0x707
+ 1323 06f9 14       		.uleb128 0x14
+ 1324 06fa 747000   		.ascii "tp\0"
+ 1325 06fd 01       		.byte	0x1
+ 1326 06fe 2D       		.byte	0x2d
+ 1327 06ff 60030000 		.long	0x360
+ 1328 0703 02       		.byte	0x2
+ 1329 0704 91       		.byte	0x91
+ 1330 0705 00       		.sleb128 0
+ 1331 0706 00       		.byte	0
+ 1332 0707 15       		.uleb128 0x15
+ 1333 0708 01       		.byte	0x1
+ 1334 0709 63685468 		.ascii "chThdRelease\0"
+ 1334      6452656C 
+ 1334      65617365 
+ 1334      00
+ 1335 0716 01       		.byte	0x1
+ 1336 0717 43       		.byte	0x43
+ 1337 0718 01       		.byte	0x1
+ 1338 0719 72000000 		.long	LFB1
+ 1339 071d 32020000 		.long	LFE1
+ 1340 0721 2C000000 		.secrel32	LLST1
+ 1341 0725 46070000 		.long	0x746
+ 1342 0729 14       		.uleb128 0x14
+ 1343 072a 747000   		.ascii "tp\0"
+ 1344 072d 01       		.byte	0x1
+ 1345 072e 43       		.byte	0x43
+ 1346 072f 60030000 		.long	0x360
+ 1347 0733 02       		.byte	0x2
+ 1348 0734 91       		.byte	0x91
+ 1349 0735 00       		.sleb128 0
+ 1350 0736 16       		.uleb128 0x16
+ 1351 0737 72656673 		.ascii "refs\0"
+ 1351      00
+ 1352 073c 01       		.byte	0x1
+ 1353 073d 44       		.byte	0x44
+ 1354 073e 54010000 		.long	0x154
+ 1355 0742 02       		.byte	0x2
+ 1356 0743 91       		.byte	0x91
+ 1357 0744 6F       		.sleb128 -17
+ 1358 0745 00       		.byte	0
+ 1359 0746 13       		.uleb128 0x13
+ 1360 0747 01       		.byte	0x1
+GAS LISTING C:\cygwin\tmp\ccewKIPh.s 			page 30
+
+
+ 1361 0748 63685468 		.ascii "chThdCreateFromHeap\0"
+ 1361      64437265 
+ 1361      61746546 
+ 1361      726F6D48 
+ 1361      65617000 
+ 1362 075c 01       		.byte	0x1
+ 1363 075d 7B       		.byte	0x7b
+ 1364 075e 01       		.byte	0x1
+ 1365 075f 60030000 		.long	0x360
+ 1366 0763 32020000 		.long	LFB2
+ 1367 0767 F6030000 		.long	LFE2
+ 1368 076b 58000000 		.secrel32	LLST2
+ 1369 076f D8070000 		.long	0x7d8
+ 1370 0773 14       		.uleb128 0x14
+ 1371 0774 68656170 		.ascii "heapp\0"
+ 1371      7000
+ 1372 077a 01       		.byte	0x1
+ 1373 077b 7B       		.byte	0x7b
+ 1374 077c A0050000 		.long	0x5a0
+ 1375 0780 02       		.byte	0x2
+ 1376 0781 91       		.byte	0x91
+ 1377 0782 00       		.sleb128 0
+ 1378 0783 14       		.uleb128 0x14
+ 1379 0784 73697A65 		.ascii "size\0"
+ 1379      00
+ 1380 0789 01       		.byte	0x1
+ 1381 078a 7B       		.byte	0x7b
+ 1382 078b 72000000 		.long	0x72
+ 1383 078f 02       		.byte	0x2
+ 1384 0790 91       		.byte	0x91
+ 1385 0791 04       		.sleb128 4
+ 1386 0792 14       		.uleb128 0x14
+ 1387 0793 7072696F 		.ascii "prio\0"
+ 1387      00
+ 1388 0798 01       		.byte	0x1
+ 1389 0799 7C       		.byte	0x7c
+ 1390 079a 74010000 		.long	0x174
+ 1391 079e 02       		.byte	0x2
+ 1392 079f 91       		.byte	0x91
+ 1393 07a0 08       		.sleb128 8
+ 1394 07a1 14       		.uleb128 0x14
+ 1395 07a2 706600   		.ascii "pf\0"
+ 1396 07a5 01       		.byte	0x1
+ 1397 07a6 7C       		.byte	0x7c
+ 1398 07a7 AF060000 		.long	0x6af
+ 1399 07ab 02       		.byte	0x2
+ 1400 07ac 91       		.byte	0x91
+ 1401 07ad 0C       		.sleb128 12
+ 1402 07ae 14       		.uleb128 0x14
+ 1403 07af 61726700 		.ascii "arg\0"
+ 1404 07b3 01       		.byte	0x1
+ 1405 07b4 7C       		.byte	0x7c
+ 1406 07b5 E9030000 		.long	0x3e9
+ 1407 07b9 02       		.byte	0x2
+ 1408 07ba 91       		.byte	0x91
+ 1409 07bb 10       		.sleb128 16
+ 1410 07bc 16       		.uleb128 0x16
+GAS LISTING C:\cygwin\tmp\ccewKIPh.s 			page 31
+
+
+ 1411 07bd 77737000 		.ascii "wsp\0"
+ 1412 07c1 01       		.byte	0x1
+ 1413 07c2 7D       		.byte	0x7d
+ 1414 07c3 E9030000 		.long	0x3e9
+ 1415 07c7 02       		.byte	0x2
+ 1416 07c8 91       		.byte	0x91
+ 1417 07c9 6C       		.sleb128 -20
+ 1418 07ca 16       		.uleb128 0x16
+ 1419 07cb 747000   		.ascii "tp\0"
+ 1420 07ce 01       		.byte	0x1
+ 1421 07cf 7E       		.byte	0x7e
+ 1422 07d0 60030000 		.long	0x360
+ 1423 07d4 02       		.byte	0x2
+ 1424 07d5 91       		.byte	0x91
+ 1425 07d6 68       		.sleb128 -24
+ 1426 07d7 00       		.byte	0
+ 1427 07d8 13       		.uleb128 0x13
+ 1428 07d9 01       		.byte	0x1
+ 1429 07da 63685468 		.ascii "chThdCreateFromMemoryPool\0"
+ 1429      64437265 
+ 1429      61746546 
+ 1429      726F6D4D 
+ 1429      656D6F72 
+ 1430 07f4 01       		.byte	0x1
+ 1431 07f5 AC       		.byte	0xac
+ 1432 07f6 01       		.byte	0x1
+ 1433 07f7 60030000 		.long	0x360
+ 1434 07fb F6030000 		.long	LFB3
+ 1435 07ff C1050000 		.long	LFE3
+ 1436 0803 85000000 		.secrel32	LLST3
+ 1437 0807 5E080000 		.long	0x85e
+ 1438 080b 14       		.uleb128 0x14
+ 1439 080c 6D7000   		.ascii "mp\0"
+ 1440 080f 01       		.byte	0x1
+ 1441 0810 AC       		.byte	0xac
+ 1442 0811 5E080000 		.long	0x85e
+ 1443 0815 02       		.byte	0x2
+ 1444 0816 91       		.byte	0x91
+ 1445 0817 00       		.sleb128 0
+ 1446 0818 14       		.uleb128 0x14
+ 1447 0819 7072696F 		.ascii "prio\0"
+ 1447      00
+ 1448 081e 01       		.byte	0x1
+ 1449 081f AC       		.byte	0xac
+ 1450 0820 74010000 		.long	0x174
+ 1451 0824 02       		.byte	0x2
+ 1452 0825 91       		.byte	0x91
+ 1453 0826 04       		.sleb128 4
+ 1454 0827 14       		.uleb128 0x14
+ 1455 0828 706600   		.ascii "pf\0"
+ 1456 082b 01       		.byte	0x1
+ 1457 082c AD       		.byte	0xad
+ 1458 082d AF060000 		.long	0x6af
+ 1459 0831 02       		.byte	0x2
+ 1460 0832 91       		.byte	0x91
+ 1461 0833 08       		.sleb128 8
+ 1462 0834 14       		.uleb128 0x14
+GAS LISTING C:\cygwin\tmp\ccewKIPh.s 			page 32
+
+
+ 1463 0835 61726700 		.ascii "arg\0"
+ 1464 0839 01       		.byte	0x1
+ 1465 083a AD       		.byte	0xad
+ 1466 083b E9030000 		.long	0x3e9
+ 1467 083f 02       		.byte	0x2
+ 1468 0840 91       		.byte	0x91
+ 1469 0841 0C       		.sleb128 12
+ 1470 0842 16       		.uleb128 0x16
+ 1471 0843 77737000 		.ascii "wsp\0"
+ 1472 0847 01       		.byte	0x1
+ 1473 0848 AE       		.byte	0xae
+ 1474 0849 E9030000 		.long	0x3e9
+ 1475 084d 02       		.byte	0x2
+ 1476 084e 91       		.byte	0x91
+ 1477 084f 6C       		.sleb128 -20
+ 1478 0850 16       		.uleb128 0x16
+ 1479 0851 747000   		.ascii "tp\0"
+ 1480 0854 01       		.byte	0x1
+ 1481 0855 AF       		.byte	0xaf
+ 1482 0856 60030000 		.long	0x360
+ 1483 085a 02       		.byte	0x2
+ 1484 085b 91       		.byte	0x91
+ 1485 085c 68       		.sleb128 -24
+ 1486 085d 00       		.byte	0
+ 1487 085e 08       		.uleb128 0x8
+ 1488 085f 04       		.byte	0x4
+ 1489 0860 41060000 		.long	0x641
+ 1490 0864 17       		.uleb128 0x17
+ 1491 0865 5F474C4F 		.ascii "_GLOBAL__sub_I_65535_0_chThdAddRef\0"
+ 1491      42414C5F 
+ 1491      5F737562 
+ 1491      5F495F36 
+ 1491      35353335 
+ 1492 0888 01       		.byte	0x1
+ 1493 0889 01       		.byte	0x1
+ 1494 088a C1050000 		.long	LFB4
+ 1495 088e D4050000 		.long	LFE4
+ 1496 0892 B2000000 		.secrel32	LLST4
+ 1497 0896 00       		.byte	0
+ 1498              		.section	.debug_abbrev,"dr"
+ 1499              	Ldebug_abbrev0:
+ 1500 0000 01       		.uleb128 0x1
+ 1501 0001 11       		.uleb128 0x11
+ 1502 0002 01       		.byte	0x1
+ 1503 0003 25       		.uleb128 0x25
+ 1504 0004 08       		.uleb128 0x8
+ 1505 0005 13       		.uleb128 0x13
+ 1506 0006 0B       		.uleb128 0xb
+ 1507 0007 03       		.uleb128 0x3
+ 1508 0008 08       		.uleb128 0x8
+ 1509 0009 1B       		.uleb128 0x1b
+ 1510 000a 08       		.uleb128 0x8
+ 1511 000b 11       		.uleb128 0x11
+ 1512 000c 01       		.uleb128 0x1
+ 1513 000d 12       		.uleb128 0x12
+ 1514 000e 01       		.uleb128 0x1
+ 1515 000f 10       		.uleb128 0x10
+GAS LISTING C:\cygwin\tmp\ccewKIPh.s 			page 33
+
+
+ 1516 0010 06       		.uleb128 0x6
+ 1517 0011 00       		.byte	0
+ 1518 0012 00       		.byte	0
+ 1519 0013 02       		.uleb128 0x2
+ 1520 0014 24       		.uleb128 0x24
+ 1521 0015 00       		.byte	0
+ 1522 0016 0B       		.uleb128 0xb
+ 1523 0017 0B       		.uleb128 0xb
+ 1524 0018 3E       		.uleb128 0x3e
+ 1525 0019 0B       		.uleb128 0xb
+ 1526 001a 03       		.uleb128 0x3
+ 1527 001b 08       		.uleb128 0x8
+ 1528 001c 00       		.byte	0
+ 1529 001d 00       		.byte	0
+ 1530 001e 03       		.uleb128 0x3
+ 1531 001f 16       		.uleb128 0x16
+ 1532 0020 00       		.byte	0
+ 1533 0021 03       		.uleb128 0x3
+ 1534 0022 08       		.uleb128 0x8
+ 1535 0023 3A       		.uleb128 0x3a
+ 1536 0024 0B       		.uleb128 0xb
+ 1537 0025 3B       		.uleb128 0x3b
+ 1538 0026 0B       		.uleb128 0xb
+ 1539 0027 49       		.uleb128 0x49
+ 1540 0028 13       		.uleb128 0x13
+ 1541 0029 00       		.byte	0
+ 1542 002a 00       		.byte	0
+ 1543 002b 04       		.uleb128 0x4
+ 1544 002c 13       		.uleb128 0x13
+ 1545 002d 01       		.byte	0x1
+ 1546 002e 03       		.uleb128 0x3
+ 1547 002f 08       		.uleb128 0x8
+ 1548 0030 0B       		.uleb128 0xb
+ 1549 0031 0B       		.uleb128 0xb
+ 1550 0032 3A       		.uleb128 0x3a
+ 1551 0033 0B       		.uleb128 0xb
+ 1552 0034 3B       		.uleb128 0x3b
+ 1553 0035 0B       		.uleb128 0xb
+ 1554 0036 01       		.uleb128 0x1
+ 1555 0037 13       		.uleb128 0x13
+ 1556 0038 00       		.byte	0
+ 1557 0039 00       		.byte	0
+ 1558 003a 05       		.uleb128 0x5
+ 1559 003b 0D       		.uleb128 0xd
+ 1560 003c 00       		.byte	0
+ 1561 003d 03       		.uleb128 0x3
+ 1562 003e 0E       		.uleb128 0xe
+ 1563 003f 3A       		.uleb128 0x3a
+ 1564 0040 0B       		.uleb128 0xb
+ 1565 0041 3B       		.uleb128 0x3b
+ 1566 0042 0B       		.uleb128 0xb
+ 1567 0043 49       		.uleb128 0x49
+ 1568 0044 13       		.uleb128 0x13
+ 1569 0045 38       		.uleb128 0x38
+ 1570 0046 0A       		.uleb128 0xa
+ 1571 0047 00       		.byte	0
+ 1572 0048 00       		.byte	0
+GAS LISTING C:\cygwin\tmp\ccewKIPh.s 			page 34
+
+
+ 1573 0049 06       		.uleb128 0x6
+ 1574 004a 0D       		.uleb128 0xd
+ 1575 004b 00       		.byte	0
+ 1576 004c 03       		.uleb128 0x3
+ 1577 004d 08       		.uleb128 0x8
+ 1578 004e 3A       		.uleb128 0x3a
+ 1579 004f 0B       		.uleb128 0xb
+ 1580 0050 3B       		.uleb128 0x3b
+ 1581 0051 0B       		.uleb128 0xb
+ 1582 0052 49       		.uleb128 0x49
+ 1583 0053 13       		.uleb128 0x13
+ 1584 0054 38       		.uleb128 0x38
+ 1585 0055 0A       		.uleb128 0xa
+ 1586 0056 00       		.byte	0
+ 1587 0057 00       		.byte	0
+ 1588 0058 07       		.uleb128 0x7
+ 1589 0059 13       		.uleb128 0x13
+ 1590 005a 01       		.byte	0x1
+ 1591 005b 0B       		.uleb128 0xb
+ 1592 005c 0B       		.uleb128 0xb
+ 1593 005d 3A       		.uleb128 0x3a
+ 1594 005e 0B       		.uleb128 0xb
+ 1595 005f 3B       		.uleb128 0x3b
+ 1596 0060 0B       		.uleb128 0xb
+ 1597 0061 01       		.uleb128 0x1
+ 1598 0062 13       		.uleb128 0x13
+ 1599 0063 00       		.byte	0
+ 1600 0064 00       		.byte	0
+ 1601 0065 08       		.uleb128 0x8
+ 1602 0066 0F       		.uleb128 0xf
+ 1603 0067 00       		.byte	0
+ 1604 0068 0B       		.uleb128 0xb
+ 1605 0069 0B       		.uleb128 0xb
+ 1606 006a 49       		.uleb128 0x49
+ 1607 006b 13       		.uleb128 0x13
+ 1608 006c 00       		.byte	0
+ 1609 006d 00       		.byte	0
+ 1610 006e 09       		.uleb128 0x9
+ 1611 006f 01       		.uleb128 0x1
+ 1612 0070 01       		.byte	0x1
+ 1613 0071 49       		.uleb128 0x49
+ 1614 0072 13       		.uleb128 0x13
+ 1615 0073 01       		.uleb128 0x1
+ 1616 0074 13       		.uleb128 0x13
+ 1617 0075 00       		.byte	0
+ 1618 0076 00       		.byte	0
+ 1619 0077 0A       		.uleb128 0xa
+ 1620 0078 21       		.uleb128 0x21
+ 1621 0079 00       		.byte	0
+ 1622 007a 49       		.uleb128 0x49
+ 1623 007b 13       		.uleb128 0x13
+ 1624 007c 2F       		.uleb128 0x2f
+ 1625 007d 0B       		.uleb128 0xb
+ 1626 007e 00       		.byte	0
+ 1627 007f 00       		.byte	0
+ 1628 0080 0B       		.uleb128 0xb
+ 1629 0081 0F       		.uleb128 0xf
+GAS LISTING C:\cygwin\tmp\ccewKIPh.s 			page 35
+
+
+ 1630 0082 00       		.byte	0
+ 1631 0083 0B       		.uleb128 0xb
+ 1632 0084 0B       		.uleb128 0xb
+ 1633 0085 00       		.byte	0
+ 1634 0086 00       		.byte	0
+ 1635 0087 0C       		.uleb128 0xc
+ 1636 0088 35       		.uleb128 0x35
+ 1637 0089 00       		.byte	0
+ 1638 008a 49       		.uleb128 0x49
+ 1639 008b 13       		.uleb128 0x13
+ 1640 008c 00       		.byte	0
+ 1641 008d 00       		.byte	0
+ 1642 008e 0D       		.uleb128 0xd
+ 1643 008f 15       		.uleb128 0x15
+ 1644 0090 01       		.byte	0x1
+ 1645 0091 27       		.uleb128 0x27
+ 1646 0092 0C       		.uleb128 0xc
+ 1647 0093 49       		.uleb128 0x49
+ 1648 0094 13       		.uleb128 0x13
+ 1649 0095 01       		.uleb128 0x1
+ 1650 0096 13       		.uleb128 0x13
+ 1651 0097 00       		.byte	0
+ 1652 0098 00       		.byte	0
+ 1653 0099 0E       		.uleb128 0xe
+ 1654 009a 05       		.uleb128 0x5
+ 1655 009b 00       		.byte	0
+ 1656 009c 49       		.uleb128 0x49
+ 1657 009d 13       		.uleb128 0x13
+ 1658 009e 00       		.byte	0
+ 1659 009f 00       		.byte	0
+ 1660 00a0 0F       		.uleb128 0xf
+ 1661 00a1 17       		.uleb128 0x17
+ 1662 00a2 01       		.byte	0x1
+ 1663 00a3 0B       		.uleb128 0xb
+ 1664 00a4 0B       		.uleb128 0xb
+ 1665 00a5 3A       		.uleb128 0x3a
+ 1666 00a6 0B       		.uleb128 0xb
+ 1667 00a7 3B       		.uleb128 0x3b
+ 1668 00a8 0B       		.uleb128 0xb
+ 1669 00a9 01       		.uleb128 0x1
+ 1670 00aa 13       		.uleb128 0x13
+ 1671 00ab 00       		.byte	0
+ 1672 00ac 00       		.byte	0
+ 1673 00ad 10       		.uleb128 0x10
+ 1674 00ae 0D       		.uleb128 0xd
+ 1675 00af 00       		.byte	0
+ 1676 00b0 03       		.uleb128 0x3
+ 1677 00b1 08       		.uleb128 0x8
+ 1678 00b2 3A       		.uleb128 0x3a
+ 1679 00b3 0B       		.uleb128 0xb
+ 1680 00b4 3B       		.uleb128 0x3b
+ 1681 00b5 0B       		.uleb128 0xb
+ 1682 00b6 49       		.uleb128 0x49
+ 1683 00b7 13       		.uleb128 0x13
+ 1684 00b8 00       		.byte	0
+ 1685 00b9 00       		.byte	0
+ 1686 00ba 11       		.uleb128 0x11
+GAS LISTING C:\cygwin\tmp\ccewKIPh.s 			page 36
+
+
+ 1687 00bb 17       		.uleb128 0x17
+ 1688 00bc 01       		.byte	0x1
+ 1689 00bd 03       		.uleb128 0x3
+ 1690 00be 08       		.uleb128 0x8
+ 1691 00bf 0B       		.uleb128 0xb
+ 1692 00c0 0B       		.uleb128 0xb
+ 1693 00c1 3A       		.uleb128 0x3a
+ 1694 00c2 0B       		.uleb128 0xb
+ 1695 00c3 3B       		.uleb128 0x3b
+ 1696 00c4 0B       		.uleb128 0xb
+ 1697 00c5 01       		.uleb128 0x1
+ 1698 00c6 13       		.uleb128 0x13
+ 1699 00c7 00       		.byte	0
+ 1700 00c8 00       		.byte	0
+ 1701 00c9 12       		.uleb128 0x12
+ 1702 00ca 26       		.uleb128 0x26
+ 1703 00cb 00       		.byte	0
+ 1704 00cc 49       		.uleb128 0x49
+ 1705 00cd 13       		.uleb128 0x13
+ 1706 00ce 00       		.byte	0
+ 1707 00cf 00       		.byte	0
+ 1708 00d0 13       		.uleb128 0x13
+ 1709 00d1 2E       		.uleb128 0x2e
+ 1710 00d2 01       		.byte	0x1
+ 1711 00d3 3F       		.uleb128 0x3f
+ 1712 00d4 0C       		.uleb128 0xc
+ 1713 00d5 03       		.uleb128 0x3
+ 1714 00d6 08       		.uleb128 0x8
+ 1715 00d7 3A       		.uleb128 0x3a
+ 1716 00d8 0B       		.uleb128 0xb
+ 1717 00d9 3B       		.uleb128 0x3b
+ 1718 00da 0B       		.uleb128 0xb
+ 1719 00db 27       		.uleb128 0x27
+ 1720 00dc 0C       		.uleb128 0xc
+ 1721 00dd 49       		.uleb128 0x49
+ 1722 00de 13       		.uleb128 0x13
+ 1723 00df 11       		.uleb128 0x11
+ 1724 00e0 01       		.uleb128 0x1
+ 1725 00e1 12       		.uleb128 0x12
+ 1726 00e2 01       		.uleb128 0x1
+ 1727 00e3 40       		.uleb128 0x40
+ 1728 00e4 06       		.uleb128 0x6
+ 1729 00e5 01       		.uleb128 0x1
+ 1730 00e6 13       		.uleb128 0x13
+ 1731 00e7 00       		.byte	0
+ 1732 00e8 00       		.byte	0
+ 1733 00e9 14       		.uleb128 0x14
+ 1734 00ea 05       		.uleb128 0x5
+ 1735 00eb 00       		.byte	0
+ 1736 00ec 03       		.uleb128 0x3
+ 1737 00ed 08       		.uleb128 0x8
+ 1738 00ee 3A       		.uleb128 0x3a
+ 1739 00ef 0B       		.uleb128 0xb
+ 1740 00f0 3B       		.uleb128 0x3b
+ 1741 00f1 0B       		.uleb128 0xb
+ 1742 00f2 49       		.uleb128 0x49
+ 1743 00f3 13       		.uleb128 0x13
+GAS LISTING C:\cygwin\tmp\ccewKIPh.s 			page 37
+
+
+ 1744 00f4 02       		.uleb128 0x2
+ 1745 00f5 0A       		.uleb128 0xa
+ 1746 00f6 00       		.byte	0
+ 1747 00f7 00       		.byte	0
+ 1748 00f8 15       		.uleb128 0x15
+ 1749 00f9 2E       		.uleb128 0x2e
+ 1750 00fa 01       		.byte	0x1
+ 1751 00fb 3F       		.uleb128 0x3f
+ 1752 00fc 0C       		.uleb128 0xc
+ 1753 00fd 03       		.uleb128 0x3
+ 1754 00fe 08       		.uleb128 0x8
+ 1755 00ff 3A       		.uleb128 0x3a
+ 1756 0100 0B       		.uleb128 0xb
+ 1757 0101 3B       		.uleb128 0x3b
+ 1758 0102 0B       		.uleb128 0xb
+ 1759 0103 27       		.uleb128 0x27
+ 1760 0104 0C       		.uleb128 0xc
+ 1761 0105 11       		.uleb128 0x11
+ 1762 0106 01       		.uleb128 0x1
+ 1763 0107 12       		.uleb128 0x12
+ 1764 0108 01       		.uleb128 0x1
+ 1765 0109 40       		.uleb128 0x40
+ 1766 010a 06       		.uleb128 0x6
+ 1767 010b 01       		.uleb128 0x1
+ 1768 010c 13       		.uleb128 0x13
+ 1769 010d 00       		.byte	0
+ 1770 010e 00       		.byte	0
+ 1771 010f 16       		.uleb128 0x16
+ 1772 0110 34       		.uleb128 0x34
+ 1773 0111 00       		.byte	0
+ 1774 0112 03       		.uleb128 0x3
+ 1775 0113 08       		.uleb128 0x8
+ 1776 0114 3A       		.uleb128 0x3a
+ 1777 0115 0B       		.uleb128 0xb
+ 1778 0116 3B       		.uleb128 0x3b
+ 1779 0117 0B       		.uleb128 0xb
+ 1780 0118 49       		.uleb128 0x49
+ 1781 0119 13       		.uleb128 0x13
+ 1782 011a 02       		.uleb128 0x2
+ 1783 011b 0A       		.uleb128 0xa
+ 1784 011c 00       		.byte	0
+ 1785 011d 00       		.byte	0
+ 1786 011e 17       		.uleb128 0x17
+ 1787 011f 2E       		.uleb128 0x2e
+ 1788 0120 00       		.byte	0
+ 1789 0121 03       		.uleb128 0x3
+ 1790 0122 08       		.uleb128 0x8
+ 1791 0123 27       		.uleb128 0x27
+ 1792 0124 0C       		.uleb128 0xc
+ 1793 0125 34       		.uleb128 0x34
+ 1794 0126 0C       		.uleb128 0xc
+ 1795 0127 11       		.uleb128 0x11
+ 1796 0128 01       		.uleb128 0x1
+ 1797 0129 12       		.uleb128 0x12
+ 1798 012a 01       		.uleb128 0x1
+ 1799 012b 40       		.uleb128 0x40
+ 1800 012c 06       		.uleb128 0x6
+GAS LISTING C:\cygwin\tmp\ccewKIPh.s 			page 38
+
+
+ 1801 012d 00       		.byte	0
+ 1802 012e 00       		.byte	0
+ 1803 012f 00       		.byte	0
+ 1804              		.section	.debug_loc,"dr"
+ 1805              	Ldebug_loc0:
+ 1806              	LLST0:
+ 1807 0000 00000000 		.long	LFB0-Ltext0
+ 1808 0004 03000000 		.long	LCFI0-Ltext0
+ 1809 0008 0200     		.word	0x2
+ 1810 000a 74       		.byte	0x74
+ 1811 000b 04       		.sleb128 4
+ 1812 000c 03000000 		.long	LCFI0-Ltext0
+ 1813 0010 71000000 		.long	LCFI1-Ltext0
+ 1814 0014 0200     		.word	0x2
+ 1815 0016 74       		.byte	0x74
+ 1816 0017 08       		.sleb128 8
+ 1817 0018 71000000 		.long	LCFI1-Ltext0
+ 1818 001c 72000000 		.long	LFE0-Ltext0
+ 1819 0020 0200     		.word	0x2
+ 1820 0022 74       		.byte	0x74
+ 1821 0023 04       		.sleb128 4
+ 1822 0024 00000000 		.long	0
+ 1823 0028 00000000 		.long	0
+ 1824              	LLST1:
+ 1825 002c 72000000 		.long	LFB1-Ltext0
+ 1826 0030 75000000 		.long	LCFI2-Ltext0
+ 1827 0034 0200     		.word	0x2
+ 1828 0036 74       		.byte	0x74
+ 1829 0037 04       		.sleb128 4
+ 1830 0038 75000000 		.long	LCFI2-Ltext0
+ 1831 003c 31020000 		.long	LCFI3-Ltext0
+ 1832 0040 0200     		.word	0x2
+ 1833 0042 74       		.byte	0x74
+ 1834 0043 30       		.sleb128 48
+ 1835 0044 31020000 		.long	LCFI3-Ltext0
+ 1836 0048 32020000 		.long	LFE1-Ltext0
+ 1837 004c 0200     		.word	0x2
+ 1838 004e 74       		.byte	0x74
+ 1839 004f 04       		.sleb128 4
+ 1840 0050 00000000 		.long	0
+ 1841 0054 00000000 		.long	0
+ 1842              	LLST2:
+ 1843 0058 32020000 		.long	LFB2-Ltext0
+ 1844 005c 35020000 		.long	LCFI4-Ltext0
+ 1845 0060 0200     		.word	0x2
+ 1846 0062 74       		.byte	0x74
+ 1847 0063 04       		.sleb128 4
+ 1848 0064 35020000 		.long	LCFI4-Ltext0
+ 1849 0068 F5030000 		.long	LCFI5-Ltext0
+ 1850 006c 0300     		.word	0x3
+ 1851 006e 74       		.byte	0x74
+ 1852 006f C000     		.sleb128 64
+ 1853 0071 F5030000 		.long	LCFI5-Ltext0
+ 1854 0075 F6030000 		.long	LFE2-Ltext0
+ 1855 0079 0200     		.word	0x2
+ 1856 007b 74       		.byte	0x74
+ 1857 007c 04       		.sleb128 4
+GAS LISTING C:\cygwin\tmp\ccewKIPh.s 			page 39
+
+
+ 1858 007d 00000000 		.long	0
+ 1859 0081 00000000 		.long	0
+ 1860              	LLST3:
+ 1861 0085 F6030000 		.long	LFB3-Ltext0
+ 1862 0089 F9030000 		.long	LCFI6-Ltext0
+ 1863 008d 0200     		.word	0x2
+ 1864 008f 74       		.byte	0x74
+ 1865 0090 04       		.sleb128 4
+ 1866 0091 F9030000 		.long	LCFI6-Ltext0
+ 1867 0095 C0050000 		.long	LCFI7-Ltext0
+ 1868 0099 0300     		.word	0x3
+ 1869 009b 74       		.byte	0x74
+ 1870 009c C000     		.sleb128 64
+ 1871 009e C0050000 		.long	LCFI7-Ltext0
+ 1872 00a2 C1050000 		.long	LFE3-Ltext0
+ 1873 00a6 0200     		.word	0x2
+ 1874 00a8 74       		.byte	0x74
+ 1875 00a9 04       		.sleb128 4
+ 1876 00aa 00000000 		.long	0
+ 1877 00ae 00000000 		.long	0
+ 1878              	LLST4:
+ 1879 00b2 C1050000 		.long	LFB4-Ltext0
+ 1880 00b6 C4050000 		.long	LCFI8-Ltext0
+ 1881 00ba 0200     		.word	0x2
+ 1882 00bc 74       		.byte	0x74
+ 1883 00bd 04       		.sleb128 4
+ 1884 00be C4050000 		.long	LCFI8-Ltext0
+ 1885 00c2 D3050000 		.long	LCFI9-Ltext0
+ 1886 00c6 0200     		.word	0x2
+ 1887 00c8 74       		.byte	0x74
+ 1888 00c9 20       		.sleb128 32
+ 1889 00ca D3050000 		.long	LCFI9-Ltext0
+ 1890 00ce D4050000 		.long	LFE4-Ltext0
+ 1891 00d2 0200     		.word	0x2
+ 1892 00d4 74       		.byte	0x74
+ 1893 00d5 04       		.sleb128 4
+ 1894 00d6 00000000 		.long	0
+ 1895 00da 00000000 		.long	0
+ 1896              		.section	.debug_aranges,"dr"
+ 1897 0000 1C000000 		.long	0x1c
+ 1898 0004 0200     		.word	0x2
+ 1899 0006 00000000 		.secrel32	Ldebug_info0
+ 1900 000a 04       		.byte	0x4
+ 1901 000b 00       		.byte	0
+ 1902 000c 0000     		.word	0
+ 1903 000e 0000     		.word	0
+ 1904 0010 00000000 		.long	Ltext0
+ 1905 0014 D4050000 		.long	Letext0-Ltext0
+ 1906 0018 00000000 		.long	0
+ 1907 001c 00000000 		.long	0
+ 1908              		.section	.debug_line,"dr"
+ 1909              	Ldebug_line0:
+ 1910 0000 DD010000 		.section	.debug_str,"dr"
+ 1910      02005401 
+ 1910      00000101 
+ 1910      FB0E0D00 
+ 1910      01010101 
+GAS LISTING C:\cygwin\tmp\ccewKIPh.s 			page 40
+
+
+ 1911              	LASF0:
+ 1912 0000 705F6E65 		.ascii "p_next\0"
+ 1912      787400
+ 1913              		.def	_chHeapFree;	.scl	2;	.type	32;	.endef
+ 1914              		.def	_chPoolFree;	.scl	2;	.type	32;	.endef
+ 1915              		.def	_chHeapAlloc;	.scl	2;	.type	32;	.endef
+ 1916              		.def	__thread_memfill;	.scl	2;	.type	32;	.endef
+ 1917              		.def	_chThdCreateI;	.scl	2;	.type	32;	.endef
+ 1918              		.def	_chSchWakeupS;	.scl	2;	.type	32;	.endef
+ 1919              		.def	_chPoolAlloc;	.scl	2;	.type	32;	.endef
+ 1920              		.def	___gcov_merge_add;	.scl	2;	.type	32;	.endef
+ 1921              		.def	___gcov_init;	.scl	2;	.type	32;	.endef
+GAS LISTING C:\cygwin\tmp\ccewKIPh.s 			page 41
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 chdynamic.c
+C:\cygwin\tmp\ccewKIPh.s:45     .text:00000000 _chThdAddRef
+C:\cygwin\tmp\ccewKIPh.s:101    .text:00000072 _chThdRelease
+C:\cygwin\tmp\ccewKIPh.s:251    .text:00000232 _chThdCreateFromHeap
+C:\cygwin\tmp\ccewKIPh.s:391    .text:000003f6 _chThdCreateFromMemoryPool
+C:\cygwin\tmp\ccewKIPh.s:591    .text:000005c1 __GLOBAL__sub_I_65535_0_chThdAddRef
+
+UNDEFINED SYMBOLS
+_chHeapFree
+_chPoolFree
+_chHeapAlloc
+__thread_memfill
+_chThdCreateI
+_chSchWakeupS
+_chPoolAlloc
+___gcov_merge_add
+___gcov_init

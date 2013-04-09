@@ -1,0 +1,1423 @@
+GAS LISTING C:\cygwin\tmp\ccBmZQuf.s 			page 1
+
+
+   1              		.file	"chvt.c"
+   2              	 # GNU C (GCC) version 4.6.2 (mingw32)
+   3              	 #	compiled by GNU C version 4.6.2, GMP version 5.0.1, MPFR version 2.4.1, MPC version 0.8.1
+   4              	 # GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+   5              	 # options passed:  -I . -I ../../os/ports/GCC/SIMIA32
+   6              	 # -I ../../os/kernel/include -I ../../test -I ../../os/hal/include
+   7              	 # -I ../../os/hal/platforms/Win32 -I ../../boards/simulator
+   8              	 # -I ../../os/various -iprefix c:\mingw\bin\../lib/gcc/mingw32/4.6.2/
+   9              	 # -MD ../../os/kernel/src/chvt.d -MF .dep/chvt.o.d -MP
+  10              	 # -MQ ../../os/kernel/src/chvt.o -D SIMULATOR ../../os/kernel/src/chvt.c
+  11              	 # -mtune=i386 -march=i386 -auxbase-strip ../../os/kernel/src/chvt.o -ggdb
+  12              	 # -O0 -Wall -Wextra -Wstrict-prototypes -fomit-frame-pointer
+  13              	 # -fprofile-arcs -ftest-coverage -fverbose-asm
+  14              	 # options enabled:  -fasynchronous-unwind-tables -fauto-inc-dec
+  15              	 # -fbranch-count-reg -fcommon -fdelete-null-pointer-checks
+  16              	 # -fdwarf2-cfi-asm -fearly-inlining -feliminate-unused-debug-types
+  17              	 # -ffunction-cse -fgcse-lm -fident -finline-functions-called-once
+  18              	 # -fira-share-save-slots -fira-share-spill-slots -fivopts
+  19              	 # -fkeep-inline-dllexport -fkeep-static-consts -fleading-underscore
+  20              	 # -fmath-errno -fmerge-debug-strings -fmove-loop-invariants
+  21              	 # -fomit-frame-pointer -fpeephole -fprefetch-loop-arrays -fprofile-arcs
+  22              	 # -freg-struct-return -fsched-critical-path-heuristic
+  23              	 # -fsched-dep-count-heuristic -fsched-group-heuristic -fsched-interblock
+  24              	 # -fsched-last-insn-heuristic -fsched-rank-heuristic -fsched-spec
+  25              	 # -fsched-spec-insn-heuristic -fsched-stalled-insns-dep
+  26              	 # -fset-stack-executable -fshow-column -fsigned-zeros
+  27              	 # -fsplit-ivs-in-unroller -fstrict-volatile-bitfields -ftest-coverage
+  28              	 # -ftrapping-math -ftree-cselim -ftree-forwprop -ftree-loop-if-convert
+  29              	 # -ftree-loop-im -ftree-loop-ivcanon -ftree-loop-optimize
+  30              	 # -ftree-parallelize-loops= -ftree-phiprop -ftree-pta -ftree-reassoc
+  31              	 # -ftree-scev-cprop -ftree-slp-vectorize -ftree-vect-loop-version
+  32              	 # -funit-at-a-time -funwind-tables -fvect-cost-model -fverbose-asm
+  33              	 # -fzero-initialized-in-bss -m32 -m80387 -m96bit-long-double
+  34              	 # -maccumulate-outgoing-args -malign-double -malign-stringops
+  35              	 # -mfancy-math-387 -mfp-ret-in-387 -mieee-fp -mno-red-zone -mno-sse4
+  36              	 # -mpush-args -msahf -mstack-arg-probe
+  37              	
+  38              		.text
+  39              	Ltext0:
+  40              	 # Compiler executable checksum: c20aed7c018482d7b62efcd5dcab2a9d
+  41              	
+  42              		.comm	_vtlist, 16, 2
+  43              		.globl	__vt_init
+  44              		.def	__vt_init;	.scl	2;	.type	32;	.endef
+  45              	__vt_init:
+  46              	LFB0:
+  47              		.file 1 "../../os/kernel/src/chvt.c"
+  48              		.loc 1 43 0
+  49              		.cfi_startproc
+  50 0000 83EC04   		subl	$4, %esp	 #,
+  51              	LCFI0:
+  52              		.cfi_def_cfa_offset 8
+  53              		.loc 1 43 0
+  54 0003 A1700000 		movl	LPBX1+112, %eax	 # *LPBX1, PROF_edge_counter.7
+  54      00
+  55 0008 8B157400 		movl	LPBX1+116, %edx	 # *LPBX1, PROF_edge_counter.7
+  55      0000
+GAS LISTING C:\cygwin\tmp\ccBmZQuf.s 			page 2
+
+
+  56 000e 83C001   		addl	$1, %eax	 #, PROF_edge_counter.7
+  57 0011 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.7
+  58 0014 A3700000 		movl	%eax, LPBX1+112	 # PROF_edge_counter.7, *LPBX1
+  58      00
+  59 0019 89157400 		movl	%edx, LPBX1+116	 # PROF_edge_counter.7, *LPBX1
+  59      0000
+  60              		.loc 1 45 0
+  61 001f C7050400 		movl	$_vtlist, _vtlist+4	 #, vtlist.vt_prev
+  61      00000000 
+  61      0000
+  62 0029 A1040000 		movl	_vtlist+4, %eax	 # vtlist.vt_prev, D.2787
+  62      00
+  63 002e A3000000 		movl	%eax, _vtlist	 # D.2787, vtlist.vt_next
+  63      00
+  64              		.loc 1 46 0
+  65 0033 C7050800 		movl	$-1, _vtlist+8	 #, vtlist.vt_time
+  65      0000FFFF 
+  65      FFFF
+  66              		.loc 1 47 0
+  67 003d C7050C00 		movl	$0, _vtlist+12	 #, vtlist.vt_systime
+  67      00000000 
+  67      0000
+  68              		.loc 1 48 0
+  69 0047 83C404   		addl	$4, %esp	 #,
+  70              	LCFI1:
+  71              		.cfi_def_cfa_offset 4
+  72 004a C3       		ret
+  73              		.cfi_endproc
+  74              	LFE0:
+  75              		.globl	_chVTSetI
+  76              		.def	_chVTSetI;	.scl	2;	.type	32;	.endef
+  77              	_chVTSetI:
+  78              	LFB1:
+  79              		.loc 1 69 0
+  80              		.cfi_startproc
+  81 004b 83EC14   		subl	$20, %esp	 #,
+  82              	LCFI2:
+  83              		.cfi_def_cfa_offset 24
+  84              		.loc 1 73 0
+  85 004e 837C2418 		cmpl	$0, 24(%esp)	 #, vtp
+  85      00
+  86 0053 7446     		je	L3	 #,
+  87              		.loc 1 73 0 is_stmt 0 discriminator 1
+  88 0055 A1400000 		movl	LPBX1+64, %eax	 # *LPBX1, PROF_edge_counter.6
+  88      00
+  89 005a 8B154400 		movl	LPBX1+68, %edx	 # *LPBX1, PROF_edge_counter.6
+  89      0000
+  90 0060 83C001   		addl	$1, %eax	 #, PROF_edge_counter.6
+  91 0063 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.6
+  92 0066 A3400000 		movl	%eax, LPBX1+64	 # PROF_edge_counter.6, *LPBX1
+  92      00
+  93 006b 89154400 		movl	%edx, LPBX1+68	 # PROF_edge_counter.6, *LPBX1
+  93      0000
+  94 0071 837C2420 		cmpl	$0, 32(%esp)	 #, vtfunc
+  94      00
+  95 0076 7423     		je	L3	 #,
+  96              		.loc 1 73 0 discriminator 3
+GAS LISTING C:\cygwin\tmp\ccBmZQuf.s 			page 3
+
+
+  97 0078 A1480000 		movl	LPBX1+72, %eax	 # *LPBX1, PROF_edge_counter.6
+  97      00
+  98 007d 8B154C00 		movl	LPBX1+76, %edx	 # *LPBX1, PROF_edge_counter.6
+  98      0000
+  99 0083 83C001   		addl	$1, %eax	 #, PROF_edge_counter.6
+ 100 0086 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.6
+ 101 0089 A3480000 		movl	%eax, LPBX1+72	 # PROF_edge_counter.6, *LPBX1
+ 101      00
+ 102 008e 89154C00 		movl	%edx, LPBX1+76	 # PROF_edge_counter.6, *LPBX1
+ 102      0000
+ 103 0094 837C241C 		cmpl	$0, 28(%esp)	 #, time
+ 103      00
+ 104 0099 751C     		jne	L4	 #,
+ 105              	L3:
+ 106              		.loc 1 73 0 discriminator 2
+ 107 009b A1500000 		movl	LPBX1+80, %eax	 # *LPBX1, PROF_edge_counter.6
+ 107      00
+ 108 00a0 8B155400 		movl	LPBX1+84, %edx	 # *LPBX1, PROF_edge_counter.6
+ 108      0000
+ 109 00a6 83C001   		addl	$1, %eax	 #, PROF_edge_counter.6
+ 110 00a9 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.6
+ 111 00ac A3500000 		movl	%eax, LPBX1+80	 # PROF_edge_counter.6, *LPBX1
+ 111      00
+ 112 00b1 89155400 		movl	%edx, LPBX1+84	 # PROF_edge_counter.6, *LPBX1
+ 112      0000
+ 113              	L4:
+ 114              		.loc 1 76 0 is_stmt 1
+ 115 00b7 8B442418 		movl	24(%esp), %eax	 # vtp, tmp81
+ 116 00bb 8B542424 		movl	36(%esp), %edx	 # par, tmp82
+ 117 00bf 895010   		movl	%edx, 16(%eax)	 # tmp82, vtp_3(D)->vt_par
+ 118              		.loc 1 77 0
+ 119 00c2 8B442418 		movl	24(%esp), %eax	 # vtp, tmp83
+ 120 00c6 8B542420 		movl	32(%esp), %edx	 # vtfunc, tmp84
+ 121 00ca 89500C   		movl	%edx, 12(%eax)	 # tmp84, vtp_3(D)->vt_func
+ 122              		.loc 1 78 0
+ 123 00cd A1000000 		movl	_vtlist, %eax	 # vtlist.vt_next, tmp85
+ 123      00
+ 124 00d2 8944240C 		movl	%eax, 12(%esp)	 # tmp85, p
+ 125              		.loc 1 79 0
+ 126 00d6 EB31     		jmp	L5	 #
+ 127              	L6:
+ 128 00d8 A1580000 		movl	LPBX1+88, %eax	 # *LPBX1, PROF_edge_counter.6
+ 128      00
+ 129 00dd 8B155C00 		movl	LPBX1+92, %edx	 # *LPBX1, PROF_edge_counter.6
+ 129      0000
+ 130 00e3 83C001   		addl	$1, %eax	 #, PROF_edge_counter.6
+ 131 00e6 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.6
+ 132 00e9 A3580000 		movl	%eax, LPBX1+88	 # PROF_edge_counter.6, *LPBX1
+ 132      00
+ 133 00ee 89155C00 		movl	%edx, LPBX1+92	 # PROF_edge_counter.6, *LPBX1
+ 133      0000
+ 134              		.loc 1 80 0
+ 135 00f4 8B44240C 		movl	12(%esp), %eax	 # p, tmp86
+ 136 00f8 8B4008   		movl	8(%eax), %eax	 # p_2->vt_time, D.2777
+ 137 00fb 2944241C 		subl	%eax, 28(%esp)	 # D.2777, time
+ 138              		.loc 1 81 0
+ 139 00ff 8B44240C 		movl	12(%esp), %eax	 # p, tmp87
+GAS LISTING C:\cygwin\tmp\ccBmZQuf.s 			page 4
+
+
+ 140 0103 8B00     		movl	(%eax), %eax	 # p_2->vt_next, tmp88
+ 141 0105 8944240C 		movl	%eax, 12(%esp)	 # tmp88, p
+ 142              	L5:
+ 143              		.loc 1 79 0 discriminator 1
+ 144 0109 8B44240C 		movl	12(%esp), %eax	 # p, tmp89
+ 145 010d 8B4008   		movl	8(%eax), %eax	 # p_2->vt_time, D.2778
+ 146 0110 3B44241C 		cmpl	28(%esp), %eax	 # time, D.2778
+ 147 0114 72C2     		jb	L6	 #,
+ 148              		.loc 1 79 0 is_stmt 0
+ 149 0116 A1600000 		movl	LPBX1+96, %eax	 # *LPBX1, PROF_edge_counter.6
+ 149      00
+ 150 011b 8B156400 		movl	LPBX1+100, %edx	 # *LPBX1, PROF_edge_counter.6
+ 150      0000
+ 151 0121 83C001   		addl	$1, %eax	 #, PROF_edge_counter.6
+ 152 0124 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.6
+ 153 0127 A3600000 		movl	%eax, LPBX1+96	 # PROF_edge_counter.6, *LPBX1
+ 153      00
+ 154 012c 89156400 		movl	%edx, LPBX1+100	 # PROF_edge_counter.6, *LPBX1
+ 154      0000
+ 155              		.loc 1 84 0 is_stmt 1
+ 156 0132 8B442418 		movl	24(%esp), %eax	 # vtp, tmp90
+ 157 0136 8B54240C 		movl	12(%esp), %edx	 # p, tmp91
+ 158 013a 8910     		movl	%edx, (%eax)	 # tmp91, vtp_3(D)->vt_next
+ 159 013c 8B442418 		movl	24(%esp), %eax	 # vtp, tmp92
+ 160 0140 8B00     		movl	(%eax), %eax	 # vtp_3(D)->vt_next, D.2779
+ 161 0142 8B5004   		movl	4(%eax), %edx	 # D.2779_14->vt_prev, D.2780
+ 162 0145 8B442418 		movl	24(%esp), %eax	 # vtp, tmp93
+ 163 0149 895004   		movl	%edx, 4(%eax)	 # D.2780, vtp_3(D)->vt_prev
+ 164              		.loc 1 85 0
+ 165 014c 8B442418 		movl	24(%esp), %eax	 # vtp, tmp94
+ 166 0150 8B4004   		movl	4(%eax), %eax	 # vtp_3(D)->vt_prev, D.2781
+ 167 0153 8B54240C 		movl	12(%esp), %edx	 # p, tmp95
+ 168 0157 8B4C2418 		movl	24(%esp), %ecx	 # vtp, tmp96
+ 169 015b 894A04   		movl	%ecx, 4(%edx)	 # tmp96, p_2->vt_prev
+ 170 015e 8B54240C 		movl	12(%esp), %edx	 # p, tmp97
+ 171 0162 8B5204   		movl	4(%edx), %edx	 # p_2->vt_prev, D.2782
+ 172 0165 8910     		movl	%edx, (%eax)	 # D.2782, D.2781_16->vt_next
+ 173              		.loc 1 86 0
+ 174 0167 8B442418 		movl	24(%esp), %eax	 # vtp, tmp98
+ 175 016b 8B54241C 		movl	28(%esp), %edx	 # time, tmp99
+ 176 016f 895008   		movl	%edx, 8(%eax)	 # tmp99, vtp_3(D)->vt_time
+ 177              		.loc 1 87 0
+ 178 0172 817C240C 		cmpl	$_vtlist, 12(%esp)	 #, p
+ 178      00000000 
+ 179 017a 7430     		je	L2	 #,
+ 180              		.loc 1 88 0
+ 181 017c 8B44240C 		movl	12(%esp), %eax	 # p, tmp100
+ 182 0180 8B4008   		movl	8(%eax), %eax	 # p_2->vt_time, D.2785
+ 183 0183 89C2     		movl	%eax, %edx	 # D.2785, D.2786
+ 184 0185 2B54241C 		subl	28(%esp), %edx	 # time, D.2786
+ 185 0189 8B44240C 		movl	12(%esp), %eax	 # p, tmp101
+ 186 018d 895008   		movl	%edx, 8(%eax)	 # D.2786, p_2->vt_time
+ 187 0190 A1680000 		movl	LPBX1+104, %eax	 # *LPBX1, PROF_edge_counter.6
+ 187      00
+ 188 0195 8B156C00 		movl	LPBX1+108, %edx	 # *LPBX1, PROF_edge_counter.6
+ 188      0000
+ 189 019b 83C001   		addl	$1, %eax	 #, PROF_edge_counter.6
+GAS LISTING C:\cygwin\tmp\ccBmZQuf.s 			page 5
+
+
+ 190 019e 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.6
+ 191 01a1 A3680000 		movl	%eax, LPBX1+104	 # PROF_edge_counter.6, *LPBX1
+ 191      00
+ 192 01a6 89156C00 		movl	%edx, LPBX1+108	 # PROF_edge_counter.6, *LPBX1
+ 192      0000
+ 193              	L2:
+ 194              		.loc 1 89 0
+ 195 01ac 83C414   		addl	$20, %esp	 #,
+ 196              	LCFI3:
+ 197              		.cfi_def_cfa_offset 4
+ 198 01af C3       		ret
+ 199              		.cfi_endproc
+ 200              	LFE1:
+ 201              		.globl	_chVTResetI
+ 202              		.def	_chVTResetI;	.scl	2;	.type	32;	.endef
+ 203              	_chVTResetI:
+ 204              	LFB2:
+ 205              		.loc 1 99 0
+ 206              		.cfi_startproc
+ 207 01b0 83EC04   		subl	$4, %esp	 #,
+ 208              	LCFI4:
+ 209              		.cfi_def_cfa_offset 8
+ 210              		.loc 1 99 0
+ 211 01b3 A1300000 		movl	LPBX1+48, %eax	 # *LPBX1, PROF_edge_counter.5
+ 211      00
+ 212 01b8 8B153400 		movl	LPBX1+52, %edx	 # *LPBX1, PROF_edge_counter.5
+ 212      0000
+ 213 01be 83C001   		addl	$1, %eax	 #, PROF_edge_counter.5
+ 214 01c1 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.5
+ 215 01c4 A3300000 		movl	%eax, LPBX1+48	 # PROF_edge_counter.5, *LPBX1
+ 215      00
+ 216 01c9 89153400 		movl	%edx, LPBX1+52	 # PROF_edge_counter.5, *LPBX1
+ 216      0000
+ 217              		.loc 1 107 0
+ 218 01cf 8B442408 		movl	8(%esp), %eax	 # vtp, tmp75
+ 219 01d3 8B00     		movl	(%eax), %eax	 # vtp_1(D)->vt_next, D.2759
+ 220 01d5 3D000000 		cmpl	$_vtlist, %eax	 #, D.2759
+ 220      00
+ 221 01da 7437     		je	L9	 #,
+ 222              		.loc 1 108 0
+ 223 01dc 8B442408 		movl	8(%esp), %eax	 # vtp, tmp76
+ 224 01e0 8B00     		movl	(%eax), %eax	 # vtp_1(D)->vt_next, D.2762
+ 225 01e2 8B542408 		movl	8(%esp), %edx	 # vtp, tmp77
+ 226 01e6 8B12     		movl	(%edx), %edx	 # vtp_1(D)->vt_next, D.2763
+ 227 01e8 8B4A08   		movl	8(%edx), %ecx	 # D.2763_5->vt_time, D.2764
+ 228 01eb 8B542408 		movl	8(%esp), %edx	 # vtp, tmp78
+ 229 01ef 8B5208   		movl	8(%edx), %edx	 # vtp_1(D)->vt_time, D.2765
+ 230 01f2 01CA     		addl	%ecx, %edx	 # D.2764, D.2766
+ 231 01f4 895008   		movl	%edx, 8(%eax)	 # D.2766, D.2762_4->vt_time
+ 232 01f7 A1380000 		movl	LPBX1+56, %eax	 # *LPBX1, PROF_edge_counter.5
+ 232      00
+ 233 01fc 8B153C00 		movl	LPBX1+60, %edx	 # *LPBX1, PROF_edge_counter.5
+ 233      0000
+ 234 0202 83C001   		addl	$1, %eax	 #, PROF_edge_counter.5
+ 235 0205 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.5
+ 236 0208 A3380000 		movl	%eax, LPBX1+56	 # PROF_edge_counter.5, *LPBX1
+ 236      00
+GAS LISTING C:\cygwin\tmp\ccBmZQuf.s 			page 6
+
+
+ 237 020d 89153C00 		movl	%edx, LPBX1+60	 # PROF_edge_counter.5, *LPBX1
+ 237      0000
+ 238              	L9:
+ 239              		.loc 1 109 0
+ 240 0213 8B442408 		movl	8(%esp), %eax	 # vtp, tmp79
+ 241 0217 8B4004   		movl	4(%eax), %eax	 # vtp_1(D)->vt_prev, D.2767
+ 242 021a 8B542408 		movl	8(%esp), %edx	 # vtp, tmp80
+ 243 021e 8B12     		movl	(%edx), %edx	 # vtp_1(D)->vt_next, D.2768
+ 244 0220 8910     		movl	%edx, (%eax)	 # D.2768, D.2767_9->vt_next
+ 245              		.loc 1 110 0
+ 246 0222 8B442408 		movl	8(%esp), %eax	 # vtp, tmp81
+ 247 0226 8B00     		movl	(%eax), %eax	 # vtp_1(D)->vt_next, D.2769
+ 248 0228 8B542408 		movl	8(%esp), %edx	 # vtp, tmp82
+ 249 022c 8B5204   		movl	4(%edx), %edx	 # vtp_1(D)->vt_prev, D.2770
+ 250 022f 895004   		movl	%edx, 4(%eax)	 # D.2770, D.2769_11->vt_prev
+ 251              		.loc 1 111 0
+ 252 0232 8B442408 		movl	8(%esp), %eax	 # vtp, tmp83
+ 253 0236 C7400C00 		movl	$0, 12(%eax)	 #, vtp_1(D)->vt_func
+ 253      000000
+ 254              		.loc 1 112 0
+ 255 023d 83C404   		addl	$4, %esp	 #,
+ 256              	LCFI5:
+ 257              		.cfi_def_cfa_offset 4
+ 258 0240 C3       		ret
+ 259              		.cfi_endproc
+ 260              	LFE2:
+ 261              		.globl	_chTimeIsWithin
+ 262              		.def	_chTimeIsWithin;	.scl	2;	.type	32;	.endef
+ 263              	_chTimeIsWithin:
+ 264              	LFB3:
+ 265              		.loc 1 127 0
+ 266              		.cfi_startproc
+ 267 0241 83EC14   		subl	$20, %esp	 #,
+ 268              	LCFI6:
+ 269              		.cfi_def_cfa_offset 24
+ 270              		.loc 1 129 0
+ 271 0244 A10C0000 		movl	_vtlist+12, %eax	 # vtlist.vt_systime, tmp76
+ 271      00
+ 272 0249 8944240C 		movl	%eax, 12(%esp)	 # tmp76, time
+ 273              		.loc 1 130 0
+ 274 024d 8B44241C 		movl	28(%esp), %eax	 # end, tmp77
+ 275 0251 3B442418 		cmpl	24(%esp), %eax	 # start, tmp77
+ 276 0255 7676     		jbe	L11	 #,
+ 277              		.loc 1 130 0 is_stmt 0 discriminator 1
+ 278 0257 8B44240C 		movl	12(%esp), %eax	 # time, tmp78
+ 279 025b 3B442418 		cmpl	24(%esp), %eax	 # start, tmp78
+ 280 025f 722D     		jb	L12	 #,
+ 281              		.loc 1 130 0 discriminator 3
+ 282 0261 A1000000 		movl	LPBX1, %eax	 # *LPBX1, PROF_edge_counter.4
+ 282      00
+ 283 0266 8B150400 		movl	LPBX1+4, %edx	 # *LPBX1, PROF_edge_counter.4
+ 283      0000
+ 284 026c 83C001   		addl	$1, %eax	 #, PROF_edge_counter.4
+ 285 026f 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.4
+ 286 0272 A3000000 		movl	%eax, LPBX1	 # PROF_edge_counter.4, *LPBX1
+ 286      00
+ 287 0277 89150400 		movl	%edx, LPBX1+4	 # PROF_edge_counter.4, *LPBX1
+GAS LISTING C:\cygwin\tmp\ccBmZQuf.s 			page 7
+
+
+ 287      0000
+ 288 027d 8B44240C 		movl	12(%esp), %eax	 # time, tmp79
+ 289 0281 3B44241C 		cmpl	28(%esp), %eax	 # end, tmp79
+ 290 0285 7307     		jae	L12	 #,
+ 291              		.loc 1 130 0 discriminator 1
+ 292 0287 B9010000 		movl	$1, %ecx	 #, iftmp.1
+ 292      00
+ 293 028c EB21     		jmp	L13	 #
+ 294              	L12:
+ 295              		.loc 1 130 0 discriminator 4
+ 296 028e B9000000 		movl	$0, %ecx	 #, iftmp.1
+ 296      00
+ 297 0293 A1080000 		movl	LPBX1+8, %eax	 # *LPBX1, PROF_edge_counter.4
+ 297      00
+ 298 0298 8B150C00 		movl	LPBX1+12, %edx	 # *LPBX1, PROF_edge_counter.4
+ 298      0000
+ 299 029e 83C001   		addl	$1, %eax	 #, PROF_edge_counter.4
+ 300 02a1 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.4
+ 301 02a4 A3080000 		movl	%eax, LPBX1+8	 # PROF_edge_counter.4, *LPBX1
+ 301      00
+ 302 02a9 89150C00 		movl	%edx, LPBX1+12	 # PROF_edge_counter.4, *LPBX1
+ 302      0000
+ 303              	L13:
+ 304              		.loc 1 130 0 discriminator 5
+ 305 02af A1100000 		movl	LPBX1+16, %eax	 # *LPBX1, PROF_edge_counter.4
+ 305      00
+ 306 02b4 8B151400 		movl	LPBX1+20, %edx	 # *LPBX1, PROF_edge_counter.4
+ 306      0000
+ 307 02ba 83C001   		addl	$1, %eax	 #, PROF_edge_counter.4
+ 308 02bd 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.4
+ 309 02c0 A3100000 		movl	%eax, LPBX1+16	 # PROF_edge_counter.4, *LPBX1
+ 309      00
+ 310 02c5 89151400 		movl	%edx, LPBX1+20	 # PROF_edge_counter.4, *LPBX1
+ 310      0000
+ 311 02cb EB74     		jmp	L14	 #
+ 312              	L11:
+ 313              		.loc 1 130 0 discriminator 2
+ 314 02cd 8B44240C 		movl	12(%esp), %eax	 # time, tmp80
+ 315 02d1 3B442418 		cmpl	24(%esp), %eax	 # start, tmp80
+ 316 02d5 7326     		jae	L15	 #,
+ 317              		.loc 1 130 0
+ 318 02d7 A1180000 		movl	LPBX1+24, %eax	 # *LPBX1, PROF_edge_counter.4
+ 318      00
+ 319 02dc 8B151C00 		movl	LPBX1+28, %edx	 # *LPBX1, PROF_edge_counter.4
+ 319      0000
+ 320 02e2 83C001   		addl	$1, %eax	 #, PROF_edge_counter.4
+ 321 02e5 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.4
+ 322 02e8 A3180000 		movl	%eax, LPBX1+24	 # PROF_edge_counter.4, *LPBX1
+ 322      00
+ 323 02ed 89151C00 		movl	%edx, LPBX1+28	 # PROF_edge_counter.4, *LPBX1
+ 323      0000
+ 324              		.loc 1 131 0 is_stmt 1
+ 325 02f3 8B44240C 		movl	12(%esp), %eax	 # time, tmp81
+ 326 02f7 3B44241C 		cmpl	28(%esp), %eax	 # end, tmp81
+ 327 02fb 7307     		jae	L16	 #,
+ 328              	L15:
+ 329              		.loc 1 130 0 discriminator 6
+GAS LISTING C:\cygwin\tmp\ccBmZQuf.s 			page 8
+
+
+ 330 02fd B9010000 		movl	$1, %ecx	 #, iftmp.2
+ 330      00
+ 331 0302 EB21     		jmp	L17	 #
+ 332              	L16:
+ 333              		.loc 1 130 0 is_stmt 0
+ 334 0304 B9000000 		movl	$0, %ecx	 #, iftmp.2
+ 334      00
+ 335 0309 A1200000 		movl	LPBX1+32, %eax	 # *LPBX1, PROF_edge_counter.4
+ 335      00
+ 336 030e 8B152400 		movl	LPBX1+36, %edx	 # *LPBX1, PROF_edge_counter.4
+ 336      0000
+ 337 0314 83C001   		addl	$1, %eax	 #, PROF_edge_counter.4
+ 338 0317 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.4
+ 339 031a A3200000 		movl	%eax, LPBX1+32	 # PROF_edge_counter.4, *LPBX1
+ 339      00
+ 340 031f 89152400 		movl	%edx, LPBX1+36	 # PROF_edge_counter.4, *LPBX1
+ 340      0000
+ 341              	L17:
+ 342              		.loc 1 130 0 discriminator 7
+ 343 0325 A1280000 		movl	LPBX1+40, %eax	 # *LPBX1, PROF_edge_counter.4
+ 343      00
+ 344 032a 8B152C00 		movl	LPBX1+44, %edx	 # *LPBX1, PROF_edge_counter.4
+ 344      0000
+ 345 0330 83C001   		addl	$1, %eax	 #, PROF_edge_counter.4
+ 346 0333 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.4
+ 347 0336 A3280000 		movl	%eax, LPBX1+40	 # PROF_edge_counter.4, *LPBX1
+ 347      00
+ 348 033b 89152C00 		movl	%edx, LPBX1+44	 # PROF_edge_counter.4, *LPBX1
+ 348      0000
+ 349              	L14:
+ 350              		.loc 1 130 0 discriminator 8
+ 351 0341 88C8     		movb	%cl, %al	 # iftmp.0, D.2736
+ 352              		.loc 1 132 0 is_stmt 1 discriminator 8
+ 353 0343 83C414   		addl	$20, %esp	 #,
+ 354              	LCFI7:
+ 355              		.cfi_def_cfa_offset 4
+ 356 0346 C3       		ret
+ 357              		.cfi_endproc
+ 358              	LFE3:
+ 359              	.lcomm LPBX1,120,32
+ 360              		.section .rdata,"dr"
+ 361              		.align 4
+ 362              	LC0:
+ 363 0000 433A5C64 		.ascii "C:\\develop\\gyro\\ChibiOS\\test\\coverage/../../os/kernel/src/chvt.gcda\0"
+ 363      6576656C 
+ 363      6F705C67 
+ 363      79726F5C 
+ 363      43686962 
+ 364              		.data
+ 365              		.align 32
+ 366              	LC1:
+ 367              	 # <anonymous>:
+ 368 0000 04000000 		.long	4
+ 369              	 # <anonymous>:
+ 370 0004 99411E99 		.long	-1726070375
+ 371              	 # <anonymous>:
+ 372 0008 06000000 		.long	6
+GAS LISTING C:\cygwin\tmp\ccBmZQuf.s 			page 9
+
+
+ 373              	 # <anonymous>:
+ 374 000c 03000000 		.long	3
+ 375              	 # <anonymous>:
+ 376 0010 490B64D8 		.long	-664532151
+ 377              	 # <anonymous>:
+ 378 0014 02000000 		.long	2
+ 379              	 # <anonymous>:
+ 380 0018 02000000 		.long	2
+ 381              	 # <anonymous>:
+ 382 001c 1B10181F 		.long	521670683
+ 383              	 # <anonymous>:
+ 384 0020 06000000 		.long	6
+ 385              	 # <anonymous>:
+ 386 0024 01000000 		.long	1
+ 387              	 # <anonymous>:
+ 388 0028 C2A1DA67 		.long	1742381506
+ 389              	 # <anonymous>:
+ 390 002c 01000000 		.long	1
+ 391 0030 00000000 		.align 32
+ 391      00000000 
+ 391      00000000 
+ 391      00000000 
+ 392              	LPBX0:
+ 393              	 # <anonymous>:
+ 394 0040 2A363034 		.long	875574826
+ 395              	 # <anonymous>:
+ 396 0044 00000000 		.long	0
+ 397              	 # <anonymous>:
+ 398 0048 9D157060 		.long	1617958301
+ 399              	 # <anonymous>:
+ 400 004c 00000000 		.long	LC0
+ 401              	 # <anonymous>:
+ 402 0050 04000000 		.long	4
+ 403              	 # <anonymous>:
+ 404 0054 00000000 		.long	LC1
+ 405              	 # <anonymous>:
+ 406 0058 01000000 		.long	1
+ 407              	 # <anonymous>:
+ 408              	 # <anonymous>:
+ 409 005c 0F000000 		.long	15
+ 410              	 # <anonymous>:
+ 411 0060 00000000 		.long	LPBX1
+ 412              	 # <anonymous>:
+ 413 0064 00000000 		.long	___gcov_merge_add
+ 414 0068 00000000 		.space 12
+ 414      00000000 
+ 414      00000000 
+ 415 0074 00000000 		.text
+ 415      00000000 
+ 415      00000000 
+ 416              		.def	__GLOBAL__sub_I_65535_0__vt_init;	.scl	3;	.type	32;	.endef
+ 417              	__GLOBAL__sub_I_65535_0__vt_init:
+ 418              	LFB4:
+ 419              		.loc 1 132 0
+ 420              		.cfi_startproc
+ 421 0347 83EC1C   		subl	$28, %esp	 #,
+ 422              	LCFI8:
+GAS LISTING C:\cygwin\tmp\ccBmZQuf.s 			page 10
+
+
+ 423              		.cfi_def_cfa_offset 32
+ 424              		.loc 1 132 0
+ 425 034a C7042440 		movl	$LPBX0, (%esp)	 #,
+ 425      000000
+ 426 0351 E8000000 		call	___gcov_init	 #
+ 426      00
+ 427 0356 83C41C   		addl	$28, %esp	 #,
+ 428              	LCFI9:
+ 429              		.cfi_def_cfa_offset 4
+ 430 0359 C3       		ret
+ 431              		.cfi_endproc
+ 432              	LFE4:
+ 433              		.section	.ctors,"w"
+ 434              		.align 4
+ 435 0000 47030000 		.long	__GLOBAL__sub_I_65535_0__vt_init
+ 436              		.text
+ 437              	Letext0:
+ 438              		.file 2 "c:/mingw/bin/../lib/gcc/mingw32/4.6.2/../../../../include/stdint.h"
+ 439              		.file 3 "../../os/ports/GCC/SIMIA32/chtypes.h"
+ 440              		.file 4 "../../os/kernel/include/chvt.h"
+ 441 035a 9090     		.section	.debug_info,"dr"
+ 442              	Ldebug_info0:
+ 443 0000 84030000 		.long	0x384
+ 444 0004 0200     		.word	0x2
+ 445 0006 00000000 		.secrel32	Ldebug_abbrev0
+ 446 000a 04       		.byte	0x4
+ 447 000b 01       		.uleb128 0x1
+ 448 000c 474E5520 		.ascii "GNU C 4.6.2\0"
+ 448      4320342E 
+ 448      362E3200 
+ 449 0018 01       		.byte	0x1
+ 450 0019 2E2E2F2E 		.ascii "../../os/kernel/src/chvt.c\0"
+ 450      2E2F6F73 
+ 450      2F6B6572 
+ 450      6E656C2F 
+ 450      7372632F 
+ 451 0034 433A5C64 		.ascii "C:\\develop\\gyro\\ChibiOS\\test\\coverage\0"
+ 451      6576656C 
+ 451      6F705C67 
+ 451      79726F5C 
+ 451      43686962 
+ 452 005a 00000000 		.long	Ltext0
+ 453 005e 5A030000 		.long	Letext0
+ 454 0062 00000000 		.secrel32	Ldebug_line0
+ 455 0066 02       		.uleb128 0x2
+ 456 0067 04       		.byte	0x4
+ 457 0068 05       		.byte	0x5
+ 458 0069 696E7400 		.ascii "int\0"
+ 459 006d 02       		.uleb128 0x2
+ 460 006e 04       		.byte	0x4
+ 461 006f 07       		.byte	0x7
+ 462 0070 756E7369 		.ascii "unsigned int\0"
+ 462      676E6564 
+ 462      20696E74 
+ 462      00
+ 463 007d 02       		.uleb128 0x2
+ 464 007e 02       		.byte	0x2
+GAS LISTING C:\cygwin\tmp\ccBmZQuf.s 			page 11
+
+
+ 465 007f 07       		.byte	0x7
+ 466 0080 73686F72 		.ascii "short unsigned int\0"
+ 466      7420756E 
+ 466      7369676E 
+ 466      65642069 
+ 466      6E7400
+ 467 0093 02       		.uleb128 0x2
+ 468 0094 01       		.byte	0x1
+ 469 0095 06       		.byte	0x6
+ 470 0096 7369676E 		.ascii "signed char\0"
+ 470      65642063 
+ 470      68617200 
+ 471 00a2 02       		.uleb128 0x2
+ 472 00a3 01       		.byte	0x1
+ 473 00a4 08       		.byte	0x8
+ 474 00a5 756E7369 		.ascii "unsigned char\0"
+ 474      676E6564 
+ 474      20636861 
+ 474      7200
+ 475 00b3 02       		.uleb128 0x2
+ 476 00b4 02       		.byte	0x2
+ 477 00b5 05       		.byte	0x5
+ 478 00b6 73686F72 		.ascii "short int\0"
+ 478      7420696E 
+ 478      7400
+ 479 00c0 03       		.uleb128 0x3
+ 480 00c1 75696E74 		.ascii "uint32_t\0"
+ 480      33325F74 
+ 480      00
+ 481 00ca 02       		.byte	0x2
+ 482 00cb 20       		.byte	0x20
+ 483 00cc 6D000000 		.long	0x6d
+ 484 00d0 02       		.uleb128 0x2
+ 485 00d1 08       		.byte	0x8
+ 486 00d2 05       		.byte	0x5
+ 487 00d3 6C6F6E67 		.ascii "long long int\0"
+ 487      206C6F6E 
+ 487      6720696E 
+ 487      7400
+ 488 00e1 02       		.uleb128 0x2
+ 489 00e2 08       		.byte	0x8
+ 490 00e3 07       		.byte	0x7
+ 491 00e4 6C6F6E67 		.ascii "long long unsigned int\0"
+ 491      206C6F6E 
+ 491      6720756E 
+ 491      7369676E 
+ 491      65642069 
+ 492 00fb 03       		.uleb128 0x3
+ 493 00fc 626F6F6C 		.ascii "bool_t\0"
+ 493      5F7400
+ 494 0103 03       		.byte	0x3
+ 495 0104 1C       		.byte	0x1c
+ 496 0105 09010000 		.long	0x109
+ 497 0109 02       		.uleb128 0x2
+ 498 010a 01       		.byte	0x1
+ 499 010b 02       		.byte	0x2
+ 500 010c 5F426F6F 		.ascii "_Bool\0"
+GAS LISTING C:\cygwin\tmp\ccBmZQuf.s 			page 12
+
+
+ 500      6C00
+ 501 0112 03       		.uleb128 0x3
+ 502 0113 73797374 		.ascii "systime_t\0"
+ 502      696D655F 
+ 502      7400
+ 503 011d 03       		.byte	0x3
+ 504 011e 26       		.byte	0x26
+ 505 011f C0000000 		.long	0xc0
+ 506 0123 04       		.uleb128 0x4
+ 507 0124 04       		.byte	0x4
+ 508 0125 03       		.uleb128 0x3
+ 509 0126 76746675 		.ascii "vtfunc_t\0"
+ 509      6E635F74 
+ 509      00
+ 510 012f 04       		.byte	0x4
+ 511 0130 4E       		.byte	0x4e
+ 512 0131 35010000 		.long	0x135
+ 513 0135 05       		.uleb128 0x5
+ 514 0136 04       		.byte	0x4
+ 515 0137 3B010000 		.long	0x13b
+ 516 013b 06       		.uleb128 0x6
+ 517 013c 01       		.byte	0x1
+ 518 013d 47010000 		.long	0x147
+ 519 0141 07       		.uleb128 0x7
+ 520 0142 23010000 		.long	0x123
+ 521 0146 00       		.byte	0
+ 522 0147 08       		.uleb128 0x8
+ 523 0148 00000000 		.secrel32	LASF0
+ 524 014c 04       		.byte	0x4
+ 525 014d 53       		.byte	0x53
+ 526 014e 52010000 		.long	0x152
+ 527 0152 09       		.uleb128 0x9
+ 528 0153 00000000 		.secrel32	LASF0
+ 529 0157 14       		.byte	0x14
+ 530 0158 04       		.byte	0x4
+ 531 0159 5A       		.byte	0x5a
+ 532 015a B8010000 		.long	0x1b8
+ 533 015e 0A       		.uleb128 0xa
+ 534 015f 76745F6E 		.ascii "vt_next\0"
+ 534      65787400 
+ 535 0167 04       		.byte	0x4
+ 536 0168 5B       		.byte	0x5b
+ 537 0169 B8010000 		.long	0x1b8
+ 538 016d 02       		.byte	0x2
+ 539 016e 23       		.byte	0x23
+ 540 016f 00       		.uleb128 0
+ 541 0170 0A       		.uleb128 0xa
+ 542 0171 76745F70 		.ascii "vt_prev\0"
+ 542      72657600 
+ 543 0179 04       		.byte	0x4
+ 544 017a 5D       		.byte	0x5d
+ 545 017b B8010000 		.long	0x1b8
+ 546 017f 02       		.byte	0x2
+ 547 0180 23       		.byte	0x23
+ 548 0181 04       		.uleb128 0x4
+ 549 0182 0A       		.uleb128 0xa
+ 550 0183 76745F74 		.ascii "vt_time\0"
+GAS LISTING C:\cygwin\tmp\ccBmZQuf.s 			page 13
+
+
+ 550      696D6500 
+ 551 018b 04       		.byte	0x4
+ 552 018c 5F       		.byte	0x5f
+ 553 018d 12010000 		.long	0x112
+ 554 0191 02       		.byte	0x2
+ 555 0192 23       		.byte	0x23
+ 556 0193 08       		.uleb128 0x8
+ 557 0194 0A       		.uleb128 0xa
+ 558 0195 76745F66 		.ascii "vt_func\0"
+ 558      756E6300 
+ 559 019d 04       		.byte	0x4
+ 560 019e 60       		.byte	0x60
+ 561 019f 25010000 		.long	0x125
+ 562 01a3 02       		.byte	0x2
+ 563 01a4 23       		.byte	0x23
+ 564 01a5 0C       		.uleb128 0xc
+ 565 01a6 0A       		.uleb128 0xa
+ 566 01a7 76745F70 		.ascii "vt_par\0"
+ 566      617200
+ 567 01ae 04       		.byte	0x4
+ 568 01af 62       		.byte	0x62
+ 569 01b0 23010000 		.long	0x123
+ 570 01b4 02       		.byte	0x2
+ 571 01b5 23       		.byte	0x23
+ 572 01b6 10       		.uleb128 0x10
+ 573 01b7 00       		.byte	0
+ 574 01b8 05       		.uleb128 0x5
+ 575 01b9 04       		.byte	0x4
+ 576 01ba 47010000 		.long	0x147
+ 577 01be 0B       		.uleb128 0xb
+ 578 01bf 10       		.byte	0x10
+ 579 01c0 04       		.byte	0x4
+ 580 01c1 6C       		.byte	0x6c
+ 581 01c2 12020000 		.long	0x212
+ 582 01c6 0A       		.uleb128 0xa
+ 583 01c7 76745F6E 		.ascii "vt_next\0"
+ 583      65787400 
+ 584 01cf 04       		.byte	0x4
+ 585 01d0 6D       		.byte	0x6d
+ 586 01d1 B8010000 		.long	0x1b8
+ 587 01d5 02       		.byte	0x2
+ 588 01d6 23       		.byte	0x23
+ 589 01d7 00       		.uleb128 0
+ 590 01d8 0A       		.uleb128 0xa
+ 591 01d9 76745F70 		.ascii "vt_prev\0"
+ 591      72657600 
+ 592 01e1 04       		.byte	0x4
+ 593 01e2 6F       		.byte	0x6f
+ 594 01e3 B8010000 		.long	0x1b8
+ 595 01e7 02       		.byte	0x2
+ 596 01e8 23       		.byte	0x23
+ 597 01e9 04       		.uleb128 0x4
+ 598 01ea 0A       		.uleb128 0xa
+ 599 01eb 76745F74 		.ascii "vt_time\0"
+ 599      696D6500 
+ 600 01f3 04       		.byte	0x4
+ 601 01f4 71       		.byte	0x71
+GAS LISTING C:\cygwin\tmp\ccBmZQuf.s 			page 14
+
+
+ 602 01f5 12010000 		.long	0x112
+ 603 01f9 02       		.byte	0x2
+ 604 01fa 23       		.byte	0x23
+ 605 01fb 08       		.uleb128 0x8
+ 606 01fc 0A       		.uleb128 0xa
+ 607 01fd 76745F73 		.ascii "vt_systime\0"
+ 607      79737469 
+ 607      6D6500
+ 608 0208 04       		.byte	0x4
+ 609 0209 72       		.byte	0x72
+ 610 020a 12020000 		.long	0x212
+ 611 020e 02       		.byte	0x2
+ 612 020f 23       		.byte	0x23
+ 613 0210 0C       		.uleb128 0xc
+ 614 0211 00       		.byte	0
+ 615 0212 0C       		.uleb128 0xc
+ 616 0213 12010000 		.long	0x112
+ 617 0217 03       		.uleb128 0x3
+ 618 0218 56544C69 		.ascii "VTList\0"
+ 618      737400
+ 619 021f 04       		.byte	0x4
+ 620 0220 73       		.byte	0x73
+ 621 0221 BE010000 		.long	0x1be
+ 622 0225 02       		.uleb128 0x2
+ 623 0226 01       		.byte	0x1
+ 624 0227 06       		.byte	0x6
+ 625 0228 63686172 		.ascii "char\0"
+ 625      00
+ 626 022d 0D       		.uleb128 0xd
+ 627 022e 01       		.byte	0x1
+ 628 022f 5F76745F 		.ascii "_vt_init\0"
+ 628      696E6974 
+ 628      00
+ 629 0238 01       		.byte	0x1
+ 630 0239 2B       		.byte	0x2b
+ 631 023a 01       		.byte	0x1
+ 632 023b 00000000 		.long	LFB0
+ 633 023f 4B000000 		.long	LFE0
+ 634 0243 00000000 		.secrel32	LLST0
+ 635 0247 0E       		.uleb128 0xe
+ 636 0248 01       		.byte	0x1
+ 637 0249 63685654 		.ascii "chVTSetI\0"
+ 637      53657449 
+ 637      00
+ 638 0252 01       		.byte	0x1
+ 639 0253 45       		.byte	0x45
+ 640 0254 01       		.byte	0x1
+ 641 0255 4B000000 		.long	LFB1
+ 642 0259 B0010000 		.long	LFE1
+ 643 025d 2C000000 		.secrel32	LLST1
+ 644 0261 AE020000 		.long	0x2ae
+ 645 0265 0F       		.uleb128 0xf
+ 646 0266 76747000 		.ascii "vtp\0"
+ 647 026a 01       		.byte	0x1
+ 648 026b 45       		.byte	0x45
+ 649 026c B8010000 		.long	0x1b8
+ 650 0270 02       		.byte	0x2
+GAS LISTING C:\cygwin\tmp\ccBmZQuf.s 			page 15
+
+
+ 651 0271 91       		.byte	0x91
+ 652 0272 00       		.sleb128 0
+ 653 0273 0F       		.uleb128 0xf
+ 654 0274 74696D65 		.ascii "time\0"
+ 654      00
+ 655 0279 01       		.byte	0x1
+ 656 027a 45       		.byte	0x45
+ 657 027b 12010000 		.long	0x112
+ 658 027f 02       		.byte	0x2
+ 659 0280 91       		.byte	0x91
+ 660 0281 04       		.sleb128 4
+ 661 0282 0F       		.uleb128 0xf
+ 662 0283 76746675 		.ascii "vtfunc\0"
+ 662      6E6300
+ 663 028a 01       		.byte	0x1
+ 664 028b 45       		.byte	0x45
+ 665 028c 25010000 		.long	0x125
+ 666 0290 02       		.byte	0x2
+ 667 0291 91       		.byte	0x91
+ 668 0292 08       		.sleb128 8
+ 669 0293 0F       		.uleb128 0xf
+ 670 0294 70617200 		.ascii "par\0"
+ 671 0298 01       		.byte	0x1
+ 672 0299 45       		.byte	0x45
+ 673 029a 23010000 		.long	0x123
+ 674 029e 02       		.byte	0x2
+ 675 029f 91       		.byte	0x91
+ 676 02a0 0C       		.sleb128 12
+ 677 02a1 10       		.uleb128 0x10
+ 678 02a2 7000     		.ascii "p\0"
+ 679 02a4 01       		.byte	0x1
+ 680 02a5 46       		.byte	0x46
+ 681 02a6 B8010000 		.long	0x1b8
+ 682 02aa 02       		.byte	0x2
+ 683 02ab 91       		.byte	0x91
+ 684 02ac 74       		.sleb128 -12
+ 685 02ad 00       		.byte	0
+ 686 02ae 0E       		.uleb128 0xe
+ 687 02af 01       		.byte	0x1
+ 688 02b0 63685654 		.ascii "chVTResetI\0"
+ 688      52657365 
+ 688      744900
+ 689 02bb 01       		.byte	0x1
+ 690 02bc 63       		.byte	0x63
+ 691 02bd 01       		.byte	0x1
+ 692 02be B0010000 		.long	LFB2
+ 693 02c2 41020000 		.long	LFE2
+ 694 02c6 58000000 		.secrel32	LLST2
+ 695 02ca DD020000 		.long	0x2dd
+ 696 02ce 0F       		.uleb128 0xf
+ 697 02cf 76747000 		.ascii "vtp\0"
+ 698 02d3 01       		.byte	0x1
+ 699 02d4 63       		.byte	0x63
+ 700 02d5 B8010000 		.long	0x1b8
+ 701 02d9 02       		.byte	0x2
+ 702 02da 91       		.byte	0x91
+ 703 02db 00       		.sleb128 0
+GAS LISTING C:\cygwin\tmp\ccBmZQuf.s 			page 16
+
+
+ 704 02dc 00       		.byte	0
+ 705 02dd 11       		.uleb128 0x11
+ 706 02de 01       		.byte	0x1
+ 707 02df 63685469 		.ascii "chTimeIsWithin\0"
+ 707      6D654973 
+ 707      57697468 
+ 707      696E00
+ 708 02ee 01       		.byte	0x1
+ 709 02ef 7F       		.byte	0x7f
+ 710 02f0 01       		.byte	0x1
+ 711 02f1 FB000000 		.long	0xfb
+ 712 02f5 41020000 		.long	LFB3
+ 713 02f9 47030000 		.long	LFE3
+ 714 02fd 84000000 		.secrel32	LLST3
+ 715 0301 33030000 		.long	0x333
+ 716 0305 0F       		.uleb128 0xf
+ 717 0306 73746172 		.ascii "start\0"
+ 717      7400
+ 718 030c 01       		.byte	0x1
+ 719 030d 7F       		.byte	0x7f
+ 720 030e 12010000 		.long	0x112
+ 721 0312 02       		.byte	0x2
+ 722 0313 91       		.byte	0x91
+ 723 0314 00       		.sleb128 0
+ 724 0315 0F       		.uleb128 0xf
+ 725 0316 656E6400 		.ascii "end\0"
+ 726 031a 01       		.byte	0x1
+ 727 031b 7F       		.byte	0x7f
+ 728 031c 12010000 		.long	0x112
+ 729 0320 02       		.byte	0x2
+ 730 0321 91       		.byte	0x91
+ 731 0322 04       		.sleb128 4
+ 732 0323 10       		.uleb128 0x10
+ 733 0324 74696D65 		.ascii "time\0"
+ 733      00
+ 734 0329 01       		.byte	0x1
+ 735 032a 81       		.byte	0x81
+ 736 032b 12010000 		.long	0x112
+ 737 032f 02       		.byte	0x2
+ 738 0330 91       		.byte	0x91
+ 739 0331 74       		.sleb128 -12
+ 740 0332 00       		.byte	0
+ 741 0333 12       		.uleb128 0x12
+ 742 0334 5F474C4F 		.ascii "_GLOBAL__sub_I_65535_0__vt_init\0"
+ 742      42414C5F 
+ 742      5F737562 
+ 742      5F495F36 
+ 742      35353335 
+ 743 0354 01       		.byte	0x1
+ 744 0355 01       		.byte	0x1
+ 745 0356 47030000 		.long	LFB4
+ 746 035a 5A030000 		.long	LFE4
+ 747 035e B0000000 		.secrel32	LLST4
+ 748 0362 13       		.uleb128 0x13
+ 749 0363 76746C69 		.ascii "vtlist\0"
+ 749      737400
+ 750 036a 04       		.byte	0x4
+GAS LISTING C:\cygwin\tmp\ccBmZQuf.s 			page 17
+
+
+ 751 036b D1       		.byte	0xd1
+ 752 036c 17020000 		.long	0x217
+ 753 0370 01       		.byte	0x1
+ 754 0371 01       		.byte	0x1
+ 755 0372 14       		.uleb128 0x14
+ 756 0373 76746C69 		.ascii "vtlist\0"
+ 756      737400
+ 757 037a 01       		.byte	0x1
+ 758 037b 23       		.byte	0x23
+ 759 037c 17020000 		.long	0x217
+ 760 0380 01       		.byte	0x1
+ 761 0381 05       		.byte	0x5
+ 762 0382 03       		.byte	0x3
+ 763 0383 00000000 		.long	_vtlist
+ 764 0387 00       		.byte	0
+ 765              		.section	.debug_abbrev,"dr"
+ 766              	Ldebug_abbrev0:
+ 767 0000 01       		.uleb128 0x1
+ 768 0001 11       		.uleb128 0x11
+ 769 0002 01       		.byte	0x1
+ 770 0003 25       		.uleb128 0x25
+ 771 0004 08       		.uleb128 0x8
+ 772 0005 13       		.uleb128 0x13
+ 773 0006 0B       		.uleb128 0xb
+ 774 0007 03       		.uleb128 0x3
+ 775 0008 08       		.uleb128 0x8
+ 776 0009 1B       		.uleb128 0x1b
+ 777 000a 08       		.uleb128 0x8
+ 778 000b 11       		.uleb128 0x11
+ 779 000c 01       		.uleb128 0x1
+ 780 000d 12       		.uleb128 0x12
+ 781 000e 01       		.uleb128 0x1
+ 782 000f 10       		.uleb128 0x10
+ 783 0010 06       		.uleb128 0x6
+ 784 0011 00       		.byte	0
+ 785 0012 00       		.byte	0
+ 786 0013 02       		.uleb128 0x2
+ 787 0014 24       		.uleb128 0x24
+ 788 0015 00       		.byte	0
+ 789 0016 0B       		.uleb128 0xb
+ 790 0017 0B       		.uleb128 0xb
+ 791 0018 3E       		.uleb128 0x3e
+ 792 0019 0B       		.uleb128 0xb
+ 793 001a 03       		.uleb128 0x3
+ 794 001b 08       		.uleb128 0x8
+ 795 001c 00       		.byte	0
+ 796 001d 00       		.byte	0
+ 797 001e 03       		.uleb128 0x3
+ 798 001f 16       		.uleb128 0x16
+ 799 0020 00       		.byte	0
+ 800 0021 03       		.uleb128 0x3
+ 801 0022 08       		.uleb128 0x8
+ 802 0023 3A       		.uleb128 0x3a
+ 803 0024 0B       		.uleb128 0xb
+ 804 0025 3B       		.uleb128 0x3b
+ 805 0026 0B       		.uleb128 0xb
+ 806 0027 49       		.uleb128 0x49
+GAS LISTING C:\cygwin\tmp\ccBmZQuf.s 			page 18
+
+
+ 807 0028 13       		.uleb128 0x13
+ 808 0029 00       		.byte	0
+ 809 002a 00       		.byte	0
+ 810 002b 04       		.uleb128 0x4
+ 811 002c 0F       		.uleb128 0xf
+ 812 002d 00       		.byte	0
+ 813 002e 0B       		.uleb128 0xb
+ 814 002f 0B       		.uleb128 0xb
+ 815 0030 00       		.byte	0
+ 816 0031 00       		.byte	0
+ 817 0032 05       		.uleb128 0x5
+ 818 0033 0F       		.uleb128 0xf
+ 819 0034 00       		.byte	0
+ 820 0035 0B       		.uleb128 0xb
+ 821 0036 0B       		.uleb128 0xb
+ 822 0037 49       		.uleb128 0x49
+ 823 0038 13       		.uleb128 0x13
+ 824 0039 00       		.byte	0
+ 825 003a 00       		.byte	0
+ 826 003b 06       		.uleb128 0x6
+ 827 003c 15       		.uleb128 0x15
+ 828 003d 01       		.byte	0x1
+ 829 003e 27       		.uleb128 0x27
+ 830 003f 0C       		.uleb128 0xc
+ 831 0040 01       		.uleb128 0x1
+ 832 0041 13       		.uleb128 0x13
+ 833 0042 00       		.byte	0
+ 834 0043 00       		.byte	0
+ 835 0044 07       		.uleb128 0x7
+ 836 0045 05       		.uleb128 0x5
+ 837 0046 00       		.byte	0
+ 838 0047 49       		.uleb128 0x49
+ 839 0048 13       		.uleb128 0x13
+ 840 0049 00       		.byte	0
+ 841 004a 00       		.byte	0
+ 842 004b 08       		.uleb128 0x8
+ 843 004c 16       		.uleb128 0x16
+ 844 004d 00       		.byte	0
+ 845 004e 03       		.uleb128 0x3
+ 846 004f 0E       		.uleb128 0xe
+ 847 0050 3A       		.uleb128 0x3a
+ 848 0051 0B       		.uleb128 0xb
+ 849 0052 3B       		.uleb128 0x3b
+ 850 0053 0B       		.uleb128 0xb
+ 851 0054 49       		.uleb128 0x49
+ 852 0055 13       		.uleb128 0x13
+ 853 0056 00       		.byte	0
+ 854 0057 00       		.byte	0
+ 855 0058 09       		.uleb128 0x9
+ 856 0059 13       		.uleb128 0x13
+ 857 005a 01       		.byte	0x1
+ 858 005b 03       		.uleb128 0x3
+ 859 005c 0E       		.uleb128 0xe
+ 860 005d 0B       		.uleb128 0xb
+ 861 005e 0B       		.uleb128 0xb
+ 862 005f 3A       		.uleb128 0x3a
+ 863 0060 0B       		.uleb128 0xb
+GAS LISTING C:\cygwin\tmp\ccBmZQuf.s 			page 19
+
+
+ 864 0061 3B       		.uleb128 0x3b
+ 865 0062 0B       		.uleb128 0xb
+ 866 0063 01       		.uleb128 0x1
+ 867 0064 13       		.uleb128 0x13
+ 868 0065 00       		.byte	0
+ 869 0066 00       		.byte	0
+ 870 0067 0A       		.uleb128 0xa
+ 871 0068 0D       		.uleb128 0xd
+ 872 0069 00       		.byte	0
+ 873 006a 03       		.uleb128 0x3
+ 874 006b 08       		.uleb128 0x8
+ 875 006c 3A       		.uleb128 0x3a
+ 876 006d 0B       		.uleb128 0xb
+ 877 006e 3B       		.uleb128 0x3b
+ 878 006f 0B       		.uleb128 0xb
+ 879 0070 49       		.uleb128 0x49
+ 880 0071 13       		.uleb128 0x13
+ 881 0072 38       		.uleb128 0x38
+ 882 0073 0A       		.uleb128 0xa
+ 883 0074 00       		.byte	0
+ 884 0075 00       		.byte	0
+ 885 0076 0B       		.uleb128 0xb
+ 886 0077 13       		.uleb128 0x13
+ 887 0078 01       		.byte	0x1
+ 888 0079 0B       		.uleb128 0xb
+ 889 007a 0B       		.uleb128 0xb
+ 890 007b 3A       		.uleb128 0x3a
+ 891 007c 0B       		.uleb128 0xb
+ 892 007d 3B       		.uleb128 0x3b
+ 893 007e 0B       		.uleb128 0xb
+ 894 007f 01       		.uleb128 0x1
+ 895 0080 13       		.uleb128 0x13
+ 896 0081 00       		.byte	0
+ 897 0082 00       		.byte	0
+ 898 0083 0C       		.uleb128 0xc
+ 899 0084 35       		.uleb128 0x35
+ 900 0085 00       		.byte	0
+ 901 0086 49       		.uleb128 0x49
+ 902 0087 13       		.uleb128 0x13
+ 903 0088 00       		.byte	0
+ 904 0089 00       		.byte	0
+ 905 008a 0D       		.uleb128 0xd
+ 906 008b 2E       		.uleb128 0x2e
+ 907 008c 00       		.byte	0
+ 908 008d 3F       		.uleb128 0x3f
+ 909 008e 0C       		.uleb128 0xc
+ 910 008f 03       		.uleb128 0x3
+ 911 0090 08       		.uleb128 0x8
+ 912 0091 3A       		.uleb128 0x3a
+ 913 0092 0B       		.uleb128 0xb
+ 914 0093 3B       		.uleb128 0x3b
+ 915 0094 0B       		.uleb128 0xb
+ 916 0095 27       		.uleb128 0x27
+ 917 0096 0C       		.uleb128 0xc
+ 918 0097 11       		.uleb128 0x11
+ 919 0098 01       		.uleb128 0x1
+ 920 0099 12       		.uleb128 0x12
+GAS LISTING C:\cygwin\tmp\ccBmZQuf.s 			page 20
+
+
+ 921 009a 01       		.uleb128 0x1
+ 922 009b 40       		.uleb128 0x40
+ 923 009c 06       		.uleb128 0x6
+ 924 009d 00       		.byte	0
+ 925 009e 00       		.byte	0
+ 926 009f 0E       		.uleb128 0xe
+ 927 00a0 2E       		.uleb128 0x2e
+ 928 00a1 01       		.byte	0x1
+ 929 00a2 3F       		.uleb128 0x3f
+ 930 00a3 0C       		.uleb128 0xc
+ 931 00a4 03       		.uleb128 0x3
+ 932 00a5 08       		.uleb128 0x8
+ 933 00a6 3A       		.uleb128 0x3a
+ 934 00a7 0B       		.uleb128 0xb
+ 935 00a8 3B       		.uleb128 0x3b
+ 936 00a9 0B       		.uleb128 0xb
+ 937 00aa 27       		.uleb128 0x27
+ 938 00ab 0C       		.uleb128 0xc
+ 939 00ac 11       		.uleb128 0x11
+ 940 00ad 01       		.uleb128 0x1
+ 941 00ae 12       		.uleb128 0x12
+ 942 00af 01       		.uleb128 0x1
+ 943 00b0 40       		.uleb128 0x40
+ 944 00b1 06       		.uleb128 0x6
+ 945 00b2 01       		.uleb128 0x1
+ 946 00b3 13       		.uleb128 0x13
+ 947 00b4 00       		.byte	0
+ 948 00b5 00       		.byte	0
+ 949 00b6 0F       		.uleb128 0xf
+ 950 00b7 05       		.uleb128 0x5
+ 951 00b8 00       		.byte	0
+ 952 00b9 03       		.uleb128 0x3
+ 953 00ba 08       		.uleb128 0x8
+ 954 00bb 3A       		.uleb128 0x3a
+ 955 00bc 0B       		.uleb128 0xb
+ 956 00bd 3B       		.uleb128 0x3b
+ 957 00be 0B       		.uleb128 0xb
+ 958 00bf 49       		.uleb128 0x49
+ 959 00c0 13       		.uleb128 0x13
+ 960 00c1 02       		.uleb128 0x2
+ 961 00c2 0A       		.uleb128 0xa
+ 962 00c3 00       		.byte	0
+ 963 00c4 00       		.byte	0
+ 964 00c5 10       		.uleb128 0x10
+ 965 00c6 34       		.uleb128 0x34
+ 966 00c7 00       		.byte	0
+ 967 00c8 03       		.uleb128 0x3
+ 968 00c9 08       		.uleb128 0x8
+ 969 00ca 3A       		.uleb128 0x3a
+ 970 00cb 0B       		.uleb128 0xb
+ 971 00cc 3B       		.uleb128 0x3b
+ 972 00cd 0B       		.uleb128 0xb
+ 973 00ce 49       		.uleb128 0x49
+ 974 00cf 13       		.uleb128 0x13
+ 975 00d0 02       		.uleb128 0x2
+ 976 00d1 0A       		.uleb128 0xa
+ 977 00d2 00       		.byte	0
+GAS LISTING C:\cygwin\tmp\ccBmZQuf.s 			page 21
+
+
+ 978 00d3 00       		.byte	0
+ 979 00d4 11       		.uleb128 0x11
+ 980 00d5 2E       		.uleb128 0x2e
+ 981 00d6 01       		.byte	0x1
+ 982 00d7 3F       		.uleb128 0x3f
+ 983 00d8 0C       		.uleb128 0xc
+ 984 00d9 03       		.uleb128 0x3
+ 985 00da 08       		.uleb128 0x8
+ 986 00db 3A       		.uleb128 0x3a
+ 987 00dc 0B       		.uleb128 0xb
+ 988 00dd 3B       		.uleb128 0x3b
+ 989 00de 0B       		.uleb128 0xb
+ 990 00df 27       		.uleb128 0x27
+ 991 00e0 0C       		.uleb128 0xc
+ 992 00e1 49       		.uleb128 0x49
+ 993 00e2 13       		.uleb128 0x13
+ 994 00e3 11       		.uleb128 0x11
+ 995 00e4 01       		.uleb128 0x1
+ 996 00e5 12       		.uleb128 0x12
+ 997 00e6 01       		.uleb128 0x1
+ 998 00e7 40       		.uleb128 0x40
+ 999 00e8 06       		.uleb128 0x6
+ 1000 00e9 01       		.uleb128 0x1
+ 1001 00ea 13       		.uleb128 0x13
+ 1002 00eb 00       		.byte	0
+ 1003 00ec 00       		.byte	0
+ 1004 00ed 12       		.uleb128 0x12
+ 1005 00ee 2E       		.uleb128 0x2e
+ 1006 00ef 00       		.byte	0
+ 1007 00f0 03       		.uleb128 0x3
+ 1008 00f1 08       		.uleb128 0x8
+ 1009 00f2 27       		.uleb128 0x27
+ 1010 00f3 0C       		.uleb128 0xc
+ 1011 00f4 34       		.uleb128 0x34
+ 1012 00f5 0C       		.uleb128 0xc
+ 1013 00f6 11       		.uleb128 0x11
+ 1014 00f7 01       		.uleb128 0x1
+ 1015 00f8 12       		.uleb128 0x12
+ 1016 00f9 01       		.uleb128 0x1
+ 1017 00fa 40       		.uleb128 0x40
+ 1018 00fb 06       		.uleb128 0x6
+ 1019 00fc 00       		.byte	0
+ 1020 00fd 00       		.byte	0
+ 1021 00fe 13       		.uleb128 0x13
+ 1022 00ff 34       		.uleb128 0x34
+ 1023 0100 00       		.byte	0
+ 1024 0101 03       		.uleb128 0x3
+ 1025 0102 08       		.uleb128 0x8
+ 1026 0103 3A       		.uleb128 0x3a
+ 1027 0104 0B       		.uleb128 0xb
+ 1028 0105 3B       		.uleb128 0x3b
+ 1029 0106 0B       		.uleb128 0xb
+ 1030 0107 49       		.uleb128 0x49
+ 1031 0108 13       		.uleb128 0x13
+ 1032 0109 3F       		.uleb128 0x3f
+ 1033 010a 0C       		.uleb128 0xc
+ 1034 010b 3C       		.uleb128 0x3c
+GAS LISTING C:\cygwin\tmp\ccBmZQuf.s 			page 22
+
+
+ 1035 010c 0C       		.uleb128 0xc
+ 1036 010d 00       		.byte	0
+ 1037 010e 00       		.byte	0
+ 1038 010f 14       		.uleb128 0x14
+ 1039 0110 34       		.uleb128 0x34
+ 1040 0111 00       		.byte	0
+ 1041 0112 03       		.uleb128 0x3
+ 1042 0113 08       		.uleb128 0x8
+ 1043 0114 3A       		.uleb128 0x3a
+ 1044 0115 0B       		.uleb128 0xb
+ 1045 0116 3B       		.uleb128 0x3b
+ 1046 0117 0B       		.uleb128 0xb
+ 1047 0118 49       		.uleb128 0x49
+ 1048 0119 13       		.uleb128 0x13
+ 1049 011a 3F       		.uleb128 0x3f
+ 1050 011b 0C       		.uleb128 0xc
+ 1051 011c 02       		.uleb128 0x2
+ 1052 011d 0A       		.uleb128 0xa
+ 1053 011e 00       		.byte	0
+ 1054 011f 00       		.byte	0
+ 1055 0120 00       		.byte	0
+ 1056              		.section	.debug_loc,"dr"
+ 1057              	Ldebug_loc0:
+ 1058              	LLST0:
+ 1059 0000 00000000 		.long	LFB0-Ltext0
+ 1060 0004 03000000 		.long	LCFI0-Ltext0
+ 1061 0008 0200     		.word	0x2
+ 1062 000a 74       		.byte	0x74
+ 1063 000b 04       		.sleb128 4
+ 1064 000c 03000000 		.long	LCFI0-Ltext0
+ 1065 0010 4A000000 		.long	LCFI1-Ltext0
+ 1066 0014 0200     		.word	0x2
+ 1067 0016 74       		.byte	0x74
+ 1068 0017 08       		.sleb128 8
+ 1069 0018 4A000000 		.long	LCFI1-Ltext0
+ 1070 001c 4B000000 		.long	LFE0-Ltext0
+ 1071 0020 0200     		.word	0x2
+ 1072 0022 74       		.byte	0x74
+ 1073 0023 04       		.sleb128 4
+ 1074 0024 00000000 		.long	0
+ 1075 0028 00000000 		.long	0
+ 1076              	LLST1:
+ 1077 002c 4B000000 		.long	LFB1-Ltext0
+ 1078 0030 4E000000 		.long	LCFI2-Ltext0
+ 1079 0034 0200     		.word	0x2
+ 1080 0036 74       		.byte	0x74
+ 1081 0037 04       		.sleb128 4
+ 1082 0038 4E000000 		.long	LCFI2-Ltext0
+ 1083 003c AF010000 		.long	LCFI3-Ltext0
+ 1084 0040 0200     		.word	0x2
+ 1085 0042 74       		.byte	0x74
+ 1086 0043 18       		.sleb128 24
+ 1087 0044 AF010000 		.long	LCFI3-Ltext0
+ 1088 0048 B0010000 		.long	LFE1-Ltext0
+ 1089 004c 0200     		.word	0x2
+ 1090 004e 74       		.byte	0x74
+ 1091 004f 04       		.sleb128 4
+GAS LISTING C:\cygwin\tmp\ccBmZQuf.s 			page 23
+
+
+ 1092 0050 00000000 		.long	0
+ 1093 0054 00000000 		.long	0
+ 1094              	LLST2:
+ 1095 0058 B0010000 		.long	LFB2-Ltext0
+ 1096 005c B3010000 		.long	LCFI4-Ltext0
+ 1097 0060 0200     		.word	0x2
+ 1098 0062 74       		.byte	0x74
+ 1099 0063 04       		.sleb128 4
+ 1100 0064 B3010000 		.long	LCFI4-Ltext0
+ 1101 0068 40020000 		.long	LCFI5-Ltext0
+ 1102 006c 0200     		.word	0x2
+ 1103 006e 74       		.byte	0x74
+ 1104 006f 08       		.sleb128 8
+ 1105 0070 40020000 		.long	LCFI5-Ltext0
+ 1106 0074 41020000 		.long	LFE2-Ltext0
+ 1107 0078 0200     		.word	0x2
+ 1108 007a 74       		.byte	0x74
+ 1109 007b 04       		.sleb128 4
+ 1110 007c 00000000 		.long	0
+ 1111 0080 00000000 		.long	0
+ 1112              	LLST3:
+ 1113 0084 41020000 		.long	LFB3-Ltext0
+ 1114 0088 44020000 		.long	LCFI6-Ltext0
+ 1115 008c 0200     		.word	0x2
+ 1116 008e 74       		.byte	0x74
+ 1117 008f 04       		.sleb128 4
+ 1118 0090 44020000 		.long	LCFI6-Ltext0
+ 1119 0094 46030000 		.long	LCFI7-Ltext0
+ 1120 0098 0200     		.word	0x2
+ 1121 009a 74       		.byte	0x74
+ 1122 009b 18       		.sleb128 24
+ 1123 009c 46030000 		.long	LCFI7-Ltext0
+ 1124 00a0 47030000 		.long	LFE3-Ltext0
+ 1125 00a4 0200     		.word	0x2
+ 1126 00a6 74       		.byte	0x74
+ 1127 00a7 04       		.sleb128 4
+ 1128 00a8 00000000 		.long	0
+ 1129 00ac 00000000 		.long	0
+ 1130              	LLST4:
+ 1131 00b0 47030000 		.long	LFB4-Ltext0
+ 1132 00b4 4A030000 		.long	LCFI8-Ltext0
+ 1133 00b8 0200     		.word	0x2
+ 1134 00ba 74       		.byte	0x74
+ 1135 00bb 04       		.sleb128 4
+ 1136 00bc 4A030000 		.long	LCFI8-Ltext0
+ 1137 00c0 59030000 		.long	LCFI9-Ltext0
+ 1138 00c4 0200     		.word	0x2
+ 1139 00c6 74       		.byte	0x74
+ 1140 00c7 20       		.sleb128 32
+ 1141 00c8 59030000 		.long	LCFI9-Ltext0
+ 1142 00cc 5A030000 		.long	LFE4-Ltext0
+ 1143 00d0 0200     		.word	0x2
+ 1144 00d2 74       		.byte	0x74
+ 1145 00d3 04       		.sleb128 4
+ 1146 00d4 00000000 		.long	0
+ 1147 00d8 00000000 		.long	0
+ 1148              		.section	.debug_aranges,"dr"
+GAS LISTING C:\cygwin\tmp\ccBmZQuf.s 			page 24
+
+
+ 1149 0000 1C000000 		.long	0x1c
+ 1150 0004 0200     		.word	0x2
+ 1151 0006 00000000 		.secrel32	Ldebug_info0
+ 1152 000a 04       		.byte	0x4
+ 1153 000b 00       		.byte	0
+ 1154 000c 0000     		.word	0
+ 1155 000e 0000     		.word	0
+ 1156 0010 00000000 		.long	Ltext0
+ 1157 0014 5A030000 		.long	Letext0-Ltext0
+ 1158 0018 00000000 		.long	0
+ 1159 001c 00000000 		.long	0
+ 1160              		.section	.debug_line,"dr"
+ 1161              	Ldebug_line0:
+ 1162 0000 65010000 		.section	.debug_str,"dr"
+ 1162      0200C100 
+ 1162      00000101 
+ 1162      FB0E0D00 
+ 1162      01010101 
+ 1163              	LASF0:
+ 1164 0000 56697274 		.ascii "VirtualTimer\0"
+ 1164      75616C54 
+ 1164      696D6572 
+ 1164      00
+ 1165              		.def	___gcov_merge_add;	.scl	2;	.type	32;	.endef
+ 1166              		.def	___gcov_init;	.scl	2;	.type	32;	.endef
+GAS LISTING C:\cygwin\tmp\ccBmZQuf.s 			page 25
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 chvt.c
+                            *COM*:00000010 _vtlist
+C:\cygwin\tmp\ccBmZQuf.s:45     .text:00000000 __vt_init
+C:\cygwin\tmp\ccBmZQuf.s:77     .text:0000004b _chVTSetI
+C:\cygwin\tmp\ccBmZQuf.s:203    .text:000001b0 _chVTResetI
+C:\cygwin\tmp\ccBmZQuf.s:263    .text:00000241 _chTimeIsWithin
+C:\cygwin\tmp\ccBmZQuf.s:417    .text:00000347 __GLOBAL__sub_I_65535_0__vt_init
+
+UNDEFINED SYMBOLS
+___gcov_merge_add
+___gcov_init

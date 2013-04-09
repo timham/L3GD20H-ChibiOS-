@@ -1,0 +1,5013 @@
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m4
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"chevents.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text.chEvtRegisterMask,"ax",%progbits
+  19              		.align	2
+  20              		.p2align 4,,15
+  21              		.global	chEvtRegisterMask
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	chEvtRegisterMask, %function
+  25              	chEvtRegisterMask:
+  26              	.LFB7:
+  27              		.file 1 "../../os/kernel/src/chevents.c"
+  28              		.loc 1 78 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+  33              	.LVL0:
+  34 0000 30B4     		push	{r4, r5}
+  35              	.LCFI0:
+  36              		.cfi_def_cfa_offset 8
+  37              		.cfi_offset 5, -4
+  38              		.cfi_offset 4, -8
+  39              	.LBB2:
+  40              		.loc 1 82 0
+  41 0002 2023     		movs	r3, #32
+  42              	.LVL1:
+  43              	@ 82 "../../os/kernel/src/chevents.c" 1
+  44 0004 83F31188 		msr     BASEPRI, r3
+  45              	@ 0 "" 2
+  46              	.LVL2:
+  47              		.thumb
+  48              	.LBE2:
+  49              		.loc 1 85 0
+  50 0008 40F20003 		movw	r3, #:lower16:rlist
+  51              	.LVL3:
+  52 000c C0F20003 		movt	r3, #:upper16:rlist
+  53              		.loc 1 83 0
+  54 0010 0468     		ldr	r4, [r0, #0]
+  55              		.loc 1 85 0
+  56 0012 9D69     		ldr	r5, [r3, #24]
+  57              		.loc 1 83 0
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 2
+
+
+  58 0014 0C60     		str	r4, [r1, #0]
+  59              		.loc 1 87 0
+  60 0016 0024     		movs	r4, #0
+  61              		.loc 1 84 0
+  62 0018 0160     		str	r1, [r0, #0]
+  63              	.LBB3:
+  64              		.loc 1 88 0
+  65 001a 2346     		mov	r3, r4
+  66              	.LVL4:
+  67              	.LBE3:
+  68              		.loc 1 85 0
+  69 001c 4D60     		str	r5, [r1, #4]
+  70              		.loc 1 86 0
+  71 001e 8A60     		str	r2, [r1, #8]
+  72              		.loc 1 87 0
+  73 0020 CC60     		str	r4, [r1, #12]
+  74              	.LBB4:
+  75              		.loc 1 88 0
+  76              	@ 88 "../../os/kernel/src/chevents.c" 1
+  77 0022 83F31188 		msr     BASEPRI, r3
+  78              	@ 0 "" 2
+  79              	.LVL5:
+  80              		.thumb
+  81              	.LBE4:
+  82              		.loc 1 89 0
+  83 0026 30BC     		pop	{r4, r5}
+  84 0028 7047     		bx	lr
+  85              		.cfi_endproc
+  86              	.LFE7:
+  87              		.size	chEvtRegisterMask, .-chEvtRegisterMask
+  88 002a 00BFAFF3 		.section	.text.chEvtUnregister,"ax",%progbits
+  88      0080
+  89              		.align	2
+  90              		.p2align 4,,15
+  91              		.global	chEvtUnregister
+  92              		.thumb
+  93              		.thumb_func
+  94              		.type	chEvtUnregister, %function
+  95              	chEvtUnregister:
+  96              	.LFB8:
+  97              		.loc 1 104 0
+  98              		.cfi_startproc
+  99              		@ args = 0, pretend = 0, frame = 0
+ 100              		@ frame_needed = 0, uses_anonymous_args = 0
+ 101              		@ link register save eliminated.
+ 102              	.LVL6:
+ 103              	.LBB5:
+ 104              		.loc 1 110 0
+ 105 0000 2023     		movs	r3, #32
+ 106              	.LVL7:
+ 107              	@ 110 "../../os/kernel/src/chevents.c" 1
+ 108 0002 83F31188 		msr     BASEPRI, r3
+ 109              	@ 0 "" 2
+ 110              	.LVL8:
+ 111              		.thumb
+ 112              	.LBE5:
+ 113              		.loc 1 109 0
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 3
+
+
+ 114 0006 0246     		mov	r2, r0
+ 115              		.loc 1 111 0
+ 116 0008 02E0     		b	.L3
+ 117              	.LVL9:
+ 118              	.L5:
+ 119              		.loc 1 112 0
+ 120 000a 9942     		cmp	r1, r3
+ 121 000c 07D0     		beq	.L8
+ 122 000e 1A46     		mov	r2, r3
+ 123              	.LVL10:
+ 124              	.L3:
+ 125              		.loc 1 111 0 discriminator 1
+ 126 0010 1368     		ldr	r3, [r2, #0]
+ 127              	.LVL11:
+ 128 0012 8342     		cmp	r3, r0
+ 129 0014 F9D1     		bne	.L5
+ 130              	.LBB6:
+ 131              		.loc 1 118 0
+ 132 0016 0023     		movs	r3, #0
+ 133              	.LVL12:
+ 134              	@ 118 "../../os/kernel/src/chevents.c" 1
+ 135 0018 83F31188 		msr     BASEPRI, r3
+ 136              	@ 0 "" 2
+ 137              	.LVL13:
+ 138              		.thumb
+ 139              	.LBE6:
+ 140              		.loc 1 119 0
+ 141 001c 7047     		bx	lr
+ 142              	.LVL14:
+ 143              	.L8:
+ 144              		.loc 1 113 0
+ 145 001e 0B68     		ldr	r3, [r1, #0]
+ 146 0020 1360     		str	r3, [r2, #0]
+ 147              	.LBB7:
+ 148              		.loc 1 118 0
+ 149 0022 0023     		movs	r3, #0
+ 150              	@ 118 "../../os/kernel/src/chevents.c" 1
+ 151 0024 83F31188 		msr     BASEPRI, r3
+ 152              	@ 0 "" 2
+ 153              	.LVL15:
+ 154              		.thumb
+ 155              	.LBE7:
+ 156              		.loc 1 119 0
+ 157 0028 7047     		bx	lr
+ 158              		.cfi_endproc
+ 159              	.LFE8:
+ 160              		.size	chEvtUnregister, .-chEvtUnregister
+ 161 002a 00BFAFF3 		.section	.text.chEvtGetAndClearEvents,"ax",%progbits
+ 161      0080
+ 162              		.align	2
+ 163              		.p2align 4,,15
+ 164              		.global	chEvtGetAndClearEvents
+ 165              		.thumb
+ 166              		.thumb_func
+ 167              		.type	chEvtGetAndClearEvents, %function
+ 168              	chEvtGetAndClearEvents:
+ 169              	.LFB9:
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 4
+
+
+ 170              		.loc 1 129 0
+ 171              		.cfi_startproc
+ 172              		@ args = 0, pretend = 0, frame = 0
+ 173              		@ frame_needed = 0, uses_anonymous_args = 0
+ 174              		@ link register save eliminated.
+ 175              	.LVL16:
+ 176 0000 10B4     		push	{r4}
+ 177              	.LCFI1:
+ 178              		.cfi_def_cfa_offset 4
+ 179              		.cfi_offset 4, -4
+ 180              	.LBB8:
+ 181              		.loc 1 132 0
+ 182 0002 2023     		movs	r3, #32
+ 183              	.LVL17:
+ 184              	@ 132 "../../os/kernel/src/chevents.c" 1
+ 185 0004 83F31188 		msr     BASEPRI, r3
+ 186              	@ 0 "" 2
+ 187              	.LVL18:
+ 188              		.thumb
+ 189              	.LBE8:
+ 190              		.loc 1 134 0
+ 191 0008 40F20004 		movw	r4, #:lower16:rlist
+ 192 000c C0F20004 		movt	r4, #:upper16:rlist
+ 193              	.LBB9:
+ 194              		.loc 1 137 0
+ 195 0010 0023     		movs	r3, #0
+ 196              	.LVL19:
+ 197              	.LBE9:
+ 198              		.loc 1 134 0
+ 199 0012 A169     		ldr	r1, [r4, #24]
+ 200 0014 8A6B     		ldr	r2, [r1, #56]
+ 201              	.LVL20:
+ 202              		.loc 1 135 0
+ 203 0016 22EA0004 		bic	r4, r2, r0
+ 204              	.LVL21:
+ 205 001a 8C63     		str	r4, [r1, #56]
+ 206              	.LBB10:
+ 207              		.loc 1 137 0
+ 208              	@ 137 "../../os/kernel/src/chevents.c" 1
+ 209 001c 83F31188 		msr     BASEPRI, r3
+ 210              	@ 0 "" 2
+ 211              	.LVL22:
+ 212              		.thumb
+ 213              	.LBE10:
+ 214              		.loc 1 134 0
+ 215 0020 1040     		ands	r0, r0, r2
+ 216              	.LVL23:
+ 217              		.loc 1 139 0
+ 218 0022 10BC     		pop	{r4}
+ 219 0024 7047     		bx	lr
+ 220              		.cfi_endproc
+ 221              	.LFE9:
+ 222              		.size	chEvtGetAndClearEvents, .-chEvtGetAndClearEvents
+ 223 0026 00BFAFF3 		.section	.text.chEvtAddEvents,"ax",%progbits
+ 223      0080AFF3 
+ 223      0080
+ 224              		.align	2
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 5
+
+
+ 225              		.p2align 4,,15
+ 226              		.global	chEvtAddEvents
+ 227              		.thumb
+ 228              		.thumb_func
+ 229              		.type	chEvtAddEvents, %function
+ 230              	chEvtAddEvents:
+ 231              	.LFB10:
+ 232              		.loc 1 150 0
+ 233              		.cfi_startproc
+ 234              		@ args = 0, pretend = 0, frame = 0
+ 235              		@ frame_needed = 0, uses_anonymous_args = 0
+ 236              		@ link register save eliminated.
+ 237              	.LVL24:
+ 238              	.LBB11:
+ 239              		.loc 1 152 0
+ 240 0000 2023     		movs	r3, #32
+ 241              	.LVL25:
+ 242              	@ 152 "../../os/kernel/src/chevents.c" 1
+ 243 0002 83F31188 		msr     BASEPRI, r3
+ 244              	@ 0 "" 2
+ 245              	.LVL26:
+ 246              		.thumb
+ 247              	.LBE11:
+ 248              		.loc 1 154 0
+ 249 0006 40F2000C 		movw	ip, #:lower16:rlist
+ 250 000a C0F2000C 		movt	ip, #:upper16:rlist
+ 251              	.LBB12:
+ 252              		.loc 1 156 0
+ 253 000e 0023     		movs	r3, #0
+ 254              	.LVL27:
+ 255              	.LBE12:
+ 256              		.loc 1 154 0
+ 257 0010 DCF81820 		ldr	r2, [ip, #24]
+ 258 0014 916B     		ldr	r1, [r2, #56]
+ 259 0016 0843     		orrs	r0, r0, r1
+ 260              	.LVL28:
+ 261 0018 9063     		str	r0, [r2, #56]
+ 262              	.LVL29:
+ 263              	.LBB13:
+ 264              		.loc 1 156 0
+ 265              	@ 156 "../../os/kernel/src/chevents.c" 1
+ 266 001a 83F31188 		msr     BASEPRI, r3
+ 267              	@ 0 "" 2
+ 268              	.LVL30:
+ 269              		.thumb
+ 270              	.LBE13:
+ 271              		.loc 1 158 0
+ 272 001e 7047     		bx	lr
+ 273              		.cfi_endproc
+ 274              	.LFE10:
+ 275              		.size	chEvtAddEvents, .-chEvtAddEvents
+ 276              		.section	.text.chEvtGetAndClearFlags,"ax",%progbits
+ 277              		.align	2
+ 278              		.p2align 4,,15
+ 279              		.global	chEvtGetAndClearFlags
+ 280              		.thumb
+ 281              		.thumb_func
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 6
+
+
+ 282              		.type	chEvtGetAndClearFlags, %function
+ 283              	chEvtGetAndClearFlags:
+ 284              	.LFB12:
+ 285              		.loc 1 202 0
+ 286              		.cfi_startproc
+ 287              		@ args = 0, pretend = 0, frame = 0
+ 288              		@ frame_needed = 0, uses_anonymous_args = 0
+ 289              		@ link register save eliminated.
+ 290              	.LVL31:
+ 291              		.loc 1 202 0
+ 292 0000 0246     		mov	r2, r0
+ 293              	.LBB14:
+ 294              		.loc 1 205 0
+ 295 0002 2023     		movs	r3, #32
+ 296              	.LVL32:
+ 297              	@ 205 "../../os/kernel/src/chevents.c" 1
+ 298 0004 83F31188 		msr     BASEPRI, r3
+ 299              	@ 0 "" 2
+ 300              	.LVL33:
+ 301              		.thumb
+ 302              	.LBE14:
+ 303              		.loc 1 208 0
+ 304 0008 0023     		movs	r3, #0
+ 305              	.LVL34:
+ 306              		.loc 1 207 0
+ 307 000a C068     		ldr	r0, [r0, #12]
+ 308              	.LVL35:
+ 309              		.loc 1 208 0
+ 310 000c D360     		str	r3, [r2, #12]
+ 311              	.LBB15:
+ 312              		.loc 1 210 0
+ 313              	@ 210 "../../os/kernel/src/chevents.c" 1
+ 314 000e 83F31188 		msr     BASEPRI, r3
+ 315              	@ 0 "" 2
+ 316              	.LVL36:
+ 317              		.thumb
+ 318              	.LBE15:
+ 319              		.loc 1 212 0
+ 320 0012 7047     		bx	lr
+ 321              		.cfi_endproc
+ 322              	.LFE12:
+ 323              		.size	chEvtGetAndClearFlags, .-chEvtGetAndClearFlags
+ 324 0014 AFF30080 		.section	.text.chEvtSignalI,"ax",%progbits
+ 324      AFF30080 
+ 324      AFF30080 
+ 325              		.align	2
+ 326              		.p2align 4,,15
+ 327              		.global	chEvtSignalI
+ 328              		.thumb
+ 329              		.thumb_func
+ 330              		.type	chEvtSignalI, %function
+ 331              	chEvtSignalI:
+ 332              	.LFB14:
+ 333              		.loc 1 244 0
+ 334              		.cfi_startproc
+ 335              		@ args = 0, pretend = 0, frame = 0
+ 336              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 7
+
+
+ 337              	.LVL37:
+ 338 0000 08B5     		push	{r3, lr}
+ 339              	.LCFI2:
+ 340              		.cfi_def_cfa_offset 8
+ 341              		.cfi_offset 14, -4
+ 342              		.cfi_offset 3, -8
+ 343              		.loc 1 249 0
+ 344 0002 826B     		ldr	r2, [r0, #56]
+ 345              		.loc 1 251 0
+ 346 0004 037F     		ldrb	r3, [r0, #28]	@ zero_extendqisi2
+ 347              		.loc 1 249 0
+ 348 0006 1143     		orrs	r1, r1, r2
+ 349              	.LVL38:
+ 350              		.loc 1 251 0
+ 351 0008 082B     		cmp	r3, #8
+ 352              		.loc 1 249 0
+ 353 000a 8163     		str	r1, [r0, #56]
+ 354              		.loc 1 251 0
+ 355 000c 0BD0     		beq	.L16
+ 356              		.loc 1 252 0
+ 357 000e 092B     		cmp	r3, #9
+ 358 0010 00D0     		beq	.L17
+ 359              	.L12:
+ 360 0012 08BD     		pop	{r3, pc}
+ 361              	.L17:
+ 362              		.loc 1 254 0
+ 363 0014 426A     		ldr	r2, [r0, #36]
+ 364 0016 1140     		ands	r1, r1, r2
+ 365              		.loc 1 253 0
+ 366 0018 8A42     		cmp	r2, r1
+ 367 001a FAD1     		bne	.L12
+ 368              	.L14:
+ 369              	.LVL39:
+ 370              	.LBB18:
+ 371              	.LBB19:
+ 372              		.loc 1 255 0
+ 373 001c FFF7FEFF 		bl	chSchReadyI
+ 374              	.LVL40:
+ 375 0020 0023     		movs	r3, #0
+ 376 0022 4362     		str	r3, [r0, #36]
+ 377 0024 08BD     		pop	{r3, pc}
+ 378              	.LVL41:
+ 379              	.L16:
+ 380              	.LBE19:
+ 381              	.LBE18:
+ 382              		.loc 1 252 0 discriminator 1
+ 383 0026 436A     		ldr	r3, [r0, #36]
+ 384              		.loc 1 251 0 discriminator 1
+ 385 0028 1942     		tst	r1, r3
+ 386 002a F7D1     		bne	.L14
+ 387 002c 08BD     		pop	{r3, pc}
+ 388              		.cfi_endproc
+ 389              	.LFE14:
+ 390              		.size	chEvtSignalI, .-chEvtSignalI
+ 391 002e 00BF     		.section	.text.chEvtSignal,"ax",%progbits
+ 392              		.align	2
+ 393              		.p2align 4,,15
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 8
+
+
+ 394              		.global	chEvtSignal
+ 395              		.thumb
+ 396              		.thumb_func
+ 397              		.type	chEvtSignal, %function
+ 398              	chEvtSignal:
+ 399              	.LFB13:
+ 400              		.loc 1 222 0
+ 401              		.cfi_startproc
+ 402              		@ args = 0, pretend = 0, frame = 0
+ 403              		@ frame_needed = 0, uses_anonymous_args = 0
+ 404              	.LVL42:
+ 405 0000 08B5     		push	{r3, lr}
+ 406              	.LCFI3:
+ 407              		.cfi_def_cfa_offset 8
+ 408              		.cfi_offset 14, -4
+ 409              		.cfi_offset 3, -8
+ 410              	.LBB20:
+ 411              		.loc 1 226 0
+ 412 0002 2023     		movs	r3, #32
+ 413              	.LVL43:
+ 414              	@ 226 "../../os/kernel/src/chevents.c" 1
+ 415 0004 83F31188 		msr     BASEPRI, r3
+ 416              	@ 0 "" 2
+ 417              	.LVL44:
+ 418              		.thumb
+ 419              	.LBE20:
+ 420              		.loc 1 227 0
+ 421 0008 FFF7FEFF 		bl	chEvtSignalI
+ 422              	.LVL45:
+ 423              		.loc 1 228 0
+ 424 000c FFF7FEFF 		bl	chSchRescheduleS
+ 425              	.LBB21:
+ 426              		.loc 1 229 0
+ 427 0010 0023     		movs	r3, #0
+ 428              	.LVL46:
+ 429              	@ 229 "../../os/kernel/src/chevents.c" 1
+ 430 0012 83F31188 		msr     BASEPRI, r3
+ 431              	@ 0 "" 2
+ 432              	.LVL47:
+ 433              		.thumb
+ 434              	.LBE21:
+ 435              		.loc 1 230 0
+ 436 0016 08BD     		pop	{r3, pc}
+ 437              		.cfi_endproc
+ 438              	.LFE13:
+ 439              		.size	chEvtSignal, .-chEvtSignal
+ 440 0018 AFF30080 		.section	.text.chEvtBroadcastFlagsI,"ax",%progbits
+ 440      AFF30080 
+ 441              		.align	2
+ 442              		.p2align 4,,15
+ 443              		.global	chEvtBroadcastFlagsI
+ 444              		.thumb
+ 445              		.thumb_func
+ 446              		.type	chEvtBroadcastFlagsI, %function
+ 447              	chEvtBroadcastFlagsI:
+ 448              	.LFB11:
+ 449              		.loc 1 177 0
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 9
+
+
+ 450              		.cfi_startproc
+ 451              		@ args = 0, pretend = 0, frame = 0
+ 452              		@ frame_needed = 0, uses_anonymous_args = 0
+ 453              	.LVL48:
+ 454 0000 70B5     		push	{r4, r5, r6, lr}
+ 455              	.LCFI4:
+ 456              		.cfi_def_cfa_offset 16
+ 457              		.cfi_offset 14, -4
+ 458              		.cfi_offset 6, -8
+ 459              		.cfi_offset 5, -12
+ 460              		.cfi_offset 4, -16
+ 461              		.loc 1 183 0
+ 462 0002 0468     		ldr	r4, [r0, #0]
+ 463              	.LVL49:
+ 464              		.loc 1 184 0
+ 465 0004 A042     		cmp	r0, r4
+ 466              		.loc 1 177 0
+ 467 0006 0546     		mov	r5, r0
+ 468 0008 0E46     		mov	r6, r1
+ 469              		.loc 1 184 0
+ 470 000a 08D0     		beq	.L19
+ 471              	.LVL50:
+ 472              	.L22:
+ 473              		.loc 1 186 0
+ 474 000c 201D     		adds	r0, r4, #4
+ 475 000e 0BC8     		ldmia	r0, {r0, r1, r3}
+ 476              		.loc 1 185 0
+ 477 0010 3343     		orrs	r3, r3, r6
+ 478 0012 E360     		str	r3, [r4, #12]
+ 479              		.loc 1 186 0
+ 480 0014 FFF7FEFF 		bl	chEvtSignalI
+ 481              		.loc 1 187 0
+ 482 0018 2468     		ldr	r4, [r4, #0]
+ 483              	.LVL51:
+ 484              		.loc 1 184 0
+ 485 001a A542     		cmp	r5, r4
+ 486 001c F6D1     		bne	.L22
+ 487              	.L19:
+ 488 001e 70BD     		pop	{r4, r5, r6, pc}
+ 489              		.cfi_endproc
+ 490              	.LFE11:
+ 491              		.size	chEvtBroadcastFlagsI, .-chEvtBroadcastFlagsI
+ 492              		.section	.text.chEvtBroadcastFlags,"ax",%progbits
+ 493              		.align	2
+ 494              		.p2align 4,,15
+ 495              		.global	chEvtBroadcastFlags
+ 496              		.thumb
+ 497              		.thumb_func
+ 498              		.type	chEvtBroadcastFlags, %function
+ 499              	chEvtBroadcastFlags:
+ 500              	.LFB15:
+ 501              		.loc 1 271 0
+ 502              		.cfi_startproc
+ 503              		@ args = 0, pretend = 0, frame = 0
+ 504              		@ frame_needed = 0, uses_anonymous_args = 0
+ 505              	.LVL52:
+ 506 0000 08B5     		push	{r3, lr}
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 10
+
+
+ 507              	.LCFI5:
+ 508              		.cfi_def_cfa_offset 8
+ 509              		.cfi_offset 14, -4
+ 510              		.cfi_offset 3, -8
+ 511              	.LBB22:
+ 512              		.loc 1 273 0
+ 513 0002 2023     		movs	r3, #32
+ 514              	.LVL53:
+ 515              	@ 273 "../../os/kernel/src/chevents.c" 1
+ 516 0004 83F31188 		msr     BASEPRI, r3
+ 517              	@ 0 "" 2
+ 518              	.LVL54:
+ 519              		.thumb
+ 520              	.LBE22:
+ 521              		.loc 1 274 0
+ 522 0008 FFF7FEFF 		bl	chEvtBroadcastFlagsI
+ 523              	.LVL55:
+ 524              		.loc 1 275 0
+ 525 000c FFF7FEFF 		bl	chSchRescheduleS
+ 526              	.LBB23:
+ 527              		.loc 1 276 0
+ 528 0010 0023     		movs	r3, #0
+ 529              	.LVL56:
+ 530              	@ 276 "../../os/kernel/src/chevents.c" 1
+ 531 0012 83F31188 		msr     BASEPRI, r3
+ 532              	@ 0 "" 2
+ 533              	.LVL57:
+ 534              		.thumb
+ 535              	.LBE23:
+ 536              		.loc 1 277 0
+ 537 0016 08BD     		pop	{r3, pc}
+ 538              		.cfi_endproc
+ 539              	.LFE15:
+ 540              		.size	chEvtBroadcastFlags, .-chEvtBroadcastFlags
+ 541 0018 AFF30080 		.section	.text.chEvtGetAndClearFlagsI,"ax",%progbits
+ 541      AFF30080 
+ 542              		.align	2
+ 543              		.p2align 4,,15
+ 544              		.global	chEvtGetAndClearFlagsI
+ 545              		.thumb
+ 546              		.thumb_func
+ 547              		.type	chEvtGetAndClearFlagsI, %function
+ 548              	chEvtGetAndClearFlagsI:
+ 549              	.LFB16:
+ 550              		.loc 1 290 0
+ 551              		.cfi_startproc
+ 552              		@ args = 0, pretend = 0, frame = 0
+ 553              		@ frame_needed = 0, uses_anonymous_args = 0
+ 554              		@ link register save eliminated.
+ 555              	.LVL58:
+ 556              		.loc 1 290 0
+ 557 0000 0346     		mov	r3, r0
+ 558              		.loc 1 294 0
+ 559 0002 0022     		movs	r2, #0
+ 560              		.loc 1 293 0
+ 561 0004 C068     		ldr	r0, [r0, #12]
+ 562              	.LVL59:
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 11
+
+
+ 563              		.loc 1 294 0
+ 564 0006 DA60     		str	r2, [r3, #12]
+ 565              		.loc 1 297 0
+ 566 0008 7047     		bx	lr
+ 567              		.cfi_endproc
+ 568              	.LFE16:
+ 569              		.size	chEvtGetAndClearFlagsI, .-chEvtGetAndClearFlagsI
+ 570 000a 00BFAFF3 		.section	.text.chEvtDispatch,"ax",%progbits
+ 570      0080
+ 571              		.align	2
+ 572              		.p2align 4,,15
+ 573              		.global	chEvtDispatch
+ 574              		.thumb
+ 575              		.thumb_func
+ 576              		.type	chEvtDispatch, %function
+ 577              	chEvtDispatch:
+ 578              	.LFB17:
+ 579              		.loc 1 308 0
+ 580              		.cfi_startproc
+ 581              		@ args = 0, pretend = 0, frame = 0
+ 582              		@ frame_needed = 0, uses_anonymous_args = 0
+ 583              	.LVL60:
+ 584 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 585              	.LCFI6:
+ 586              		.cfi_def_cfa_offset 24
+ 587              		.cfi_offset 14, -4
+ 588              		.cfi_offset 7, -8
+ 589              		.cfi_offset 6, -12
+ 590              		.cfi_offset 5, -16
+ 591              		.cfi_offset 4, -20
+ 592              		.cfi_offset 3, -24
+ 593              		.loc 1 308 0
+ 594 0002 0D46     		mov	r5, r1
+ 595 0004 0746     		mov	r7, r0
+ 596              		.loc 1 314 0
+ 597 0006 41B1     		cbz	r1, .L26
+ 598 0008 0024     		movs	r4, #0
+ 599              		.loc 1 315 0
+ 600 000a 0126     		movs	r6, #1
+ 601              	.LVL61:
+ 602              	.L29:
+ 603 000c 06FA04F3 		lsl	r3, r6, r4
+ 604 0010 2B42     		tst	r3, r5
+ 605 0012 03D1     		bne	.L31
+ 606              		.loc 1 322 0
+ 607 0014 0134     		adds	r4, r4, #1
+ 608              	.LVL62:
+ 609              		.loc 1 314 0
+ 610 0016 002D     		cmp	r5, #0
+ 611 0018 F8D1     		bne	.L29
+ 612              	.LVL63:
+ 613              	.L26:
+ 614 001a F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 615              	.L31:
+ 616              		.loc 1 320 0
+ 617 001c 2046     		mov	r0, r4
+ 618              		.loc 1 319 0
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 12
+
+
+ 619 001e 25EA0305 		bic	r5, r5, r3
+ 620              	.LVL64:
+ 621              		.loc 1 320 0
+ 622 0022 57F82430 		ldr	r3, [r7, r4, lsl #2]
+ 623 0026 9847     		blx	r3
+ 624              		.loc 1 322 0
+ 625 0028 0134     		adds	r4, r4, #1
+ 626              	.LVL65:
+ 627              		.loc 1 314 0
+ 628 002a 002D     		cmp	r5, #0
+ 629 002c EED1     		bne	.L29
+ 630 002e F4E7     		b	.L26
+ 631              		.cfi_endproc
+ 632              	.LFE17:
+ 633              		.size	chEvtDispatch, .-chEvtDispatch
+ 634              		.section	.text.chEvtWaitOne,"ax",%progbits
+ 635              		.align	2
+ 636              		.p2align 4,,15
+ 637              		.global	chEvtWaitOne
+ 638              		.thumb
+ 639              		.thumb_func
+ 640              		.type	chEvtWaitOne, %function
+ 641              	chEvtWaitOne:
+ 642              	.LFB18:
+ 643              		.loc 1 343 0
+ 644              		.cfi_startproc
+ 645              		@ args = 0, pretend = 0, frame = 0
+ 646              		@ frame_needed = 0, uses_anonymous_args = 0
+ 647              	.LVL66:
+ 648 0000 38B5     		push	{r3, r4, r5, lr}
+ 649              	.LCFI7:
+ 650              		.cfi_def_cfa_offset 16
+ 651              		.cfi_offset 14, -4
+ 652              		.cfi_offset 5, -8
+ 653              		.cfi_offset 4, -12
+ 654              		.cfi_offset 3, -16
+ 655              		.loc 1 344 0
+ 656 0002 0D4B     		ldr	r3, .L34
+ 657              		.loc 1 343 0
+ 658 0004 0546     		mov	r5, r0
+ 659              		.loc 1 344 0
+ 660 0006 9C69     		ldr	r4, [r3, #24]
+ 661              	.LVL67:
+ 662              	.LBB24:
+ 663              		.loc 1 347 0
+ 664 0008 2023     		movs	r3, #32
+ 665              	.LVL68:
+ 666              	@ 347 "../../os/kernel/src/chevents.c" 1
+ 667 000a 83F31188 		msr     BASEPRI, r3
+ 668              	@ 0 "" 2
+ 669              	.LVL69:
+ 670              		.thumb
+ 671              	.LBE24:
+ 672              		.loc 1 349 0
+ 673 000e A36B     		ldr	r3, [r4, #56]
+ 674              	.LVL70:
+ 675 0010 10EA0302 		ands	r2, r0, r3
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 13
+
+
+ 676 0014 06D1     		bne	.L33
+ 677              		.loc 1 350 0
+ 678 0016 6062     		str	r0, [r4, #36]
+ 679              		.loc 1 351 0
+ 680 0018 0820     		movs	r0, #8
+ 681              	.LVL71:
+ 682 001a FFF7FEFF 		bl	chSchGoSleepS
+ 683              	.LVL72:
+ 684              		.loc 1 352 0
+ 685 001e A36B     		ldr	r3, [r4, #56]
+ 686 0020 05EA0302 		and	r2, r5, r3
+ 687              	.LVL73:
+ 688              	.L33:
+ 689              		.loc 1 354 0
+ 690 0024 5042     		negs	r0, r2
+ 691 0026 1040     		ands	r0, r0, r2
+ 692              	.LVL74:
+ 693              		.loc 1 355 0
+ 694 0028 23EA0001 		bic	r1, r3, r0
+ 695 002c A163     		str	r1, [r4, #56]
+ 696              	.LBB25:
+ 697              		.loc 1 357 0
+ 698 002e 0023     		movs	r3, #0
+ 699              	.LVL75:
+ 700              	@ 357 "../../os/kernel/src/chevents.c" 1
+ 701 0030 83F31188 		msr     BASEPRI, r3
+ 702              	@ 0 "" 2
+ 703              	.LVL76:
+ 704              		.thumb
+ 705              	.LBE25:
+ 706              		.loc 1 359 0
+ 707 0034 38BD     		pop	{r3, r4, r5, pc}
+ 708              	.L35:
+ 709 0036 00BF     		.align	2
+ 710              	.L34:
+ 711 0038 00000000 		.word	rlist
+ 712              		.cfi_endproc
+ 713              	.LFE18:
+ 714              		.size	chEvtWaitOne, .-chEvtWaitOne
+ 715 003c AFF30080 		.section	.text.chEvtWaitAny,"ax",%progbits
+ 716              		.align	2
+ 717              		.p2align 4,,15
+ 718              		.global	chEvtWaitAny
+ 719              		.thumb
+ 720              		.thumb_func
+ 721              		.type	chEvtWaitAny, %function
+ 722              	chEvtWaitAny:
+ 723              	.LFB19:
+ 724              		.loc 1 372 0
+ 725              		.cfi_startproc
+ 726              		@ args = 0, pretend = 0, frame = 0
+ 727              		@ frame_needed = 0, uses_anonymous_args = 0
+ 728              	.LVL77:
+ 729 0000 38B5     		push	{r3, r4, r5, lr}
+ 730              	.LCFI8:
+ 731              		.cfi_def_cfa_offset 16
+ 732              		.cfi_offset 14, -4
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 14
+
+
+ 733              		.cfi_offset 5, -8
+ 734              		.cfi_offset 4, -12
+ 735              		.cfi_offset 3, -16
+ 736              		.loc 1 373 0
+ 737 0002 0B4B     		ldr	r3, .L38
+ 738              		.loc 1 372 0
+ 739 0004 0546     		mov	r5, r0
+ 740              		.loc 1 373 0
+ 741 0006 9C69     		ldr	r4, [r3, #24]
+ 742              	.LVL78:
+ 743              	.LBB26:
+ 744              		.loc 1 376 0
+ 745 0008 2023     		movs	r3, #32
+ 746              	.LVL79:
+ 747              	@ 376 "../../os/kernel/src/chevents.c" 1
+ 748 000a 83F31188 		msr     BASEPRI, r3
+ 749              	@ 0 "" 2
+ 750              	.LVL80:
+ 751              		.thumb
+ 752              	.LBE26:
+ 753              		.loc 1 378 0
+ 754 000e A36B     		ldr	r3, [r4, #56]
+ 755              	.LVL81:
+ 756 0010 1840     		ands	r0, r0, r3
+ 757              	.LVL82:
+ 758 0012 06D1     		bne	.L37
+ 759              		.loc 1 380 0
+ 760 0014 0820     		movs	r0, #8
+ 761              		.loc 1 379 0
+ 762 0016 6562     		str	r5, [r4, #36]
+ 763              		.loc 1 380 0
+ 764 0018 FFF7FEFF 		bl	chSchGoSleepS
+ 765              	.LVL83:
+ 766              		.loc 1 381 0
+ 767 001c A36B     		ldr	r3, [r4, #56]
+ 768 001e 05EA0300 		and	r0, r5, r3
+ 769              	.LVL84:
+ 770              	.L37:
+ 771              		.loc 1 383 0
+ 772 0022 23EA0001 		bic	r1, r3, r0
+ 773 0026 A163     		str	r1, [r4, #56]
+ 774              	.LBB27:
+ 775              		.loc 1 385 0
+ 776 0028 0023     		movs	r3, #0
+ 777              	.LVL85:
+ 778              	@ 385 "../../os/kernel/src/chevents.c" 1
+ 779 002a 83F31188 		msr     BASEPRI, r3
+ 780              	@ 0 "" 2
+ 781              	.LVL86:
+ 782              		.thumb
+ 783              	.LBE27:
+ 784              		.loc 1 387 0
+ 785 002e 38BD     		pop	{r3, r4, r5, pc}
+ 786              	.L39:
+ 787              		.align	2
+ 788              	.L38:
+ 789 0030 00000000 		.word	rlist
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 15
+
+
+ 790              		.cfi_endproc
+ 791              	.LFE19:
+ 792              		.size	chEvtWaitAny, .-chEvtWaitAny
+ 793 0034 AFF30080 		.section	.text.chEvtWaitAll,"ax",%progbits
+ 793      AFF30080 
+ 793      AFF30080 
+ 794              		.align	2
+ 795              		.p2align 4,,15
+ 796              		.global	chEvtWaitAll
+ 797              		.thumb
+ 798              		.thumb_func
+ 799              		.type	chEvtWaitAll, %function
+ 800              	chEvtWaitAll:
+ 801              	.LFB20:
+ 802              		.loc 1 400 0
+ 803              		.cfi_startproc
+ 804              		@ args = 0, pretend = 0, frame = 0
+ 805              		@ frame_needed = 0, uses_anonymous_args = 0
+ 806              	.LVL87:
+ 807 0000 38B5     		push	{r3, r4, r5, lr}
+ 808              	.LCFI9:
+ 809              		.cfi_def_cfa_offset 16
+ 810              		.cfi_offset 14, -4
+ 811              		.cfi_offset 5, -8
+ 812              		.cfi_offset 4, -12
+ 813              		.cfi_offset 3, -16
+ 814              		.loc 1 401 0
+ 815 0002 0C4B     		ldr	r3, .L42
+ 816              		.loc 1 400 0
+ 817 0004 0446     		mov	r4, r0
+ 818              		.loc 1 401 0
+ 819 0006 9D69     		ldr	r5, [r3, #24]
+ 820              	.LVL88:
+ 821              	.LBB28:
+ 822              		.loc 1 403 0
+ 823 0008 2023     		movs	r3, #32
+ 824              	.LVL89:
+ 825              	@ 403 "../../os/kernel/src/chevents.c" 1
+ 826 000a 83F31188 		msr     BASEPRI, r3
+ 827              	@ 0 "" 2
+ 828              	.LVL90:
+ 829              		.thumb
+ 830              	.LBE28:
+ 831              		.loc 1 405 0
+ 832 000e AB6B     		ldr	r3, [r5, #56]
+ 833              	.LVL91:
+ 834 0010 00EA0302 		and	r2, r0, r3
+ 835 0014 8242     		cmp	r2, r0
+ 836 0016 04D0     		beq	.L41
+ 837              		.loc 1 406 0
+ 838 0018 6862     		str	r0, [r5, #36]
+ 839              		.loc 1 407 0
+ 840 001a 0920     		movs	r0, #9
+ 841              	.LVL92:
+ 842 001c FFF7FEFF 		bl	chSchGoSleepS
+ 843              	.LVL93:
+ 844 0020 AB6B     		ldr	r3, [r5, #56]
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 16
+
+
+ 845              	.L41:
+ 846              		.loc 1 409 0
+ 847 0022 23EA0400 		bic	r0, r3, r4
+ 848 0026 A863     		str	r0, [r5, #56]
+ 849              	.LBB29:
+ 850              		.loc 1 411 0
+ 851 0028 0023     		movs	r3, #0
+ 852              	.LVL94:
+ 853              	@ 411 "../../os/kernel/src/chevents.c" 1
+ 854 002a 83F31188 		msr     BASEPRI, r3
+ 855              	@ 0 "" 2
+ 856              	.LVL95:
+ 857              		.thumb
+ 858              	.LBE29:
+ 859              		.loc 1 413 0
+ 860 002e 2046     		mov	r0, r4
+ 861 0030 38BD     		pop	{r3, r4, r5, pc}
+ 862              	.L43:
+ 863 0032 00BF     		.align	2
+ 864              	.L42:
+ 865 0034 00000000 		.word	rlist
+ 866              		.cfi_endproc
+ 867              	.LFE20:
+ 868              		.size	chEvtWaitAll, .-chEvtWaitAll
+ 869 0038 AFF30080 		.section	.text.chEvtWaitOneTimeout,"ax",%progbits
+ 869      AFF30080 
+ 870              		.align	2
+ 871              		.p2align 4,,15
+ 872              		.global	chEvtWaitOneTimeout
+ 873              		.thumb
+ 874              		.thumb_func
+ 875              		.type	chEvtWaitOneTimeout, %function
+ 876              	chEvtWaitOneTimeout:
+ 877              	.LFB21:
+ 878              		.loc 1 439 0
+ 879              		.cfi_startproc
+ 880              		@ args = 0, pretend = 0, frame = 0
+ 881              		@ frame_needed = 0, uses_anonymous_args = 0
+ 882              	.LVL96:
+ 883              		.loc 1 440 0
+ 884 0000 114B     		ldr	r3, .L50
+ 885              		.loc 1 439 0
+ 886 0002 70B5     		push	{r4, r5, r6, lr}
+ 887              	.LCFI10:
+ 888              		.cfi_def_cfa_offset 16
+ 889              		.cfi_offset 14, -4
+ 890              		.cfi_offset 6, -8
+ 891              		.cfi_offset 5, -12
+ 892              		.cfi_offset 4, -16
+ 893              		.loc 1 440 0
+ 894 0004 9E69     		ldr	r6, [r3, #24]
+ 895              	.LVL97:
+ 896              		.loc 1 439 0
+ 897 0006 0546     		mov	r5, r0
+ 898              	.LBB30:
+ 899              		.loc 1 443 0
+ 900 0008 2023     		movs	r3, #32
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 17
+
+
+ 901              	.LVL98:
+ 902              	@ 443 "../../os/kernel/src/chevents.c" 1
+ 903 000a 83F31188 		msr     BASEPRI, r3
+ 904              	@ 0 "" 2
+ 905              	.LVL99:
+ 906              		.thumb
+ 907              	.LBE30:
+ 908              		.loc 1 445 0
+ 909 000e B36B     		ldr	r3, [r6, #56]
+ 910              	.LVL100:
+ 911 0010 10EA0304 		ands	r4, r0, r3
+ 912 0014 0ED1     		bne	.L45
+ 913              	.LVL101:
+ 914              		.loc 1 446 0
+ 915 0016 21B9     		cbnz	r1, .L46
+ 916              	.LVL102:
+ 917              	.L49:
+ 918              	.LBB31:
+ 919              		.loc 1 452 0
+ 920 0018 2346     		mov	r3, r4
+ 921              	.LVL103:
+ 922              	@ 452 "../../os/kernel/src/chevents.c" 1
+ 923 001a 83F31188 		msr     BASEPRI, r3
+ 924              	@ 0 "" 2
+ 925              	.LVL104:
+ 926              		.thumb
+ 927              	.LBE31:
+ 928              		.loc 1 462 0
+ 929 001e 2046     		mov	r0, r4
+ 930 0020 70BD     		pop	{r4, r5, r6, pc}
+ 931              	.LVL105:
+ 932              	.L46:
+ 933              		.loc 1 450 0
+ 934 0022 7062     		str	r0, [r6, #36]
+ 935              		.loc 1 451 0
+ 936 0024 0820     		movs	r0, #8
+ 937 0026 FFF7FEFF 		bl	chSchGoSleepTimeoutS
+ 938              	.LVL106:
+ 939 002a 0028     		cmp	r0, #0
+ 940 002c F4DB     		blt	.L49
+ 941              		.loc 1 455 0
+ 942 002e B36B     		ldr	r3, [r6, #56]
+ 943 0030 05EA0304 		and	r4, r5, r3
+ 944              	.LVL107:
+ 945              	.L45:
+ 946              		.loc 1 457 0
+ 947 0034 6242     		negs	r2, r4
+ 948 0036 1440     		ands	r4, r4, r2
+ 949              	.LVL108:
+ 950              		.loc 1 458 0
+ 951 0038 23EA0400 		bic	r0, r3, r4
+ 952 003c B063     		str	r0, [r6, #56]
+ 953              	.LBB32:
+ 954              		.loc 1 460 0
+ 955 003e 0023     		movs	r3, #0
+ 956              	.LVL109:
+ 957              	@ 460 "../../os/kernel/src/chevents.c" 1
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 18
+
+
+ 958 0040 83F31188 		msr     BASEPRI, r3
+ 959              	@ 0 "" 2
+ 960              	.LVL110:
+ 961              		.thumb
+ 962              	.LBE32:
+ 963              		.loc 1 462 0
+ 964 0044 2046     		mov	r0, r4
+ 965 0046 70BD     		pop	{r4, r5, r6, pc}
+ 966              	.L51:
+ 967              		.align	2
+ 968              	.L50:
+ 969 0048 00000000 		.word	rlist
+ 970              		.cfi_endproc
+ 971              	.LFE21:
+ 972              		.size	chEvtWaitOneTimeout, .-chEvtWaitOneTimeout
+ 973 004c AFF30080 		.section	.text.chEvtWaitAnyTimeout,"ax",%progbits
+ 974              		.align	2
+ 975              		.p2align 4,,15
+ 976              		.global	chEvtWaitAnyTimeout
+ 977              		.thumb
+ 978              		.thumb_func
+ 979              		.type	chEvtWaitAnyTimeout, %function
+ 980              	chEvtWaitAnyTimeout:
+ 981              	.LFB22:
+ 982              		.loc 1 482 0
+ 983              		.cfi_startproc
+ 984              		@ args = 0, pretend = 0, frame = 0
+ 985              		@ frame_needed = 0, uses_anonymous_args = 0
+ 986              	.LVL111:
+ 987              		.loc 1 483 0
+ 988 0000 104B     		ldr	r3, .L58
+ 989              		.loc 1 482 0
+ 990 0002 70B5     		push	{r4, r5, r6, lr}
+ 991              	.LCFI11:
+ 992              		.cfi_def_cfa_offset 16
+ 993              		.cfi_offset 14, -4
+ 994              		.cfi_offset 6, -8
+ 995              		.cfi_offset 5, -12
+ 996              		.cfi_offset 4, -16
+ 997              		.loc 1 483 0
+ 998 0004 9E69     		ldr	r6, [r3, #24]
+ 999              	.LVL112:
+ 1000              		.loc 1 482 0
+ 1001 0006 0446     		mov	r4, r0
+ 1002              	.LBB33:
+ 1003              		.loc 1 486 0
+ 1004 0008 2023     		movs	r3, #32
+ 1005              	.LVL113:
+ 1006              	@ 486 "../../os/kernel/src/chevents.c" 1
+ 1007 000a 83F31188 		msr     BASEPRI, r3
+ 1008              	@ 0 "" 2
+ 1009              	.LVL114:
+ 1010              		.thumb
+ 1011              	.LBE33:
+ 1012              		.loc 1 488 0
+ 1013 000e B36B     		ldr	r3, [r6, #56]
+ 1014              	.LVL115:
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 19
+
+
+ 1015 0010 10EA0305 		ands	r5, r0, r3
+ 1016 0014 0ED1     		bne	.L53
+ 1017              	.LVL116:
+ 1018              		.loc 1 489 0
+ 1019 0016 21B9     		cbnz	r1, .L54
+ 1020              	.LVL117:
+ 1021              	.L57:
+ 1022              	.LBB34:
+ 1023              		.loc 1 495 0
+ 1024 0018 2B46     		mov	r3, r5
+ 1025              	.LVL118:
+ 1026              	@ 495 "../../os/kernel/src/chevents.c" 1
+ 1027 001a 83F31188 		msr     BASEPRI, r3
+ 1028              	@ 0 "" 2
+ 1029              	.LVL119:
+ 1030              		.thumb
+ 1031              	.LBE34:
+ 1032              		.loc 1 504 0
+ 1033 001e 2846     		mov	r0, r5
+ 1034 0020 70BD     		pop	{r4, r5, r6, pc}
+ 1035              	.LVL120:
+ 1036              	.L54:
+ 1037              		.loc 1 493 0
+ 1038 0022 7062     		str	r0, [r6, #36]
+ 1039              		.loc 1 494 0
+ 1040 0024 0820     		movs	r0, #8
+ 1041 0026 FFF7FEFF 		bl	chSchGoSleepTimeoutS
+ 1042              	.LVL121:
+ 1043 002a 0028     		cmp	r0, #0
+ 1044 002c F4DB     		blt	.L57
+ 1045              		.loc 1 498 0
+ 1046 002e B36B     		ldr	r3, [r6, #56]
+ 1047 0030 04EA0305 		and	r5, r4, r3
+ 1048              	.LVL122:
+ 1049              	.L53:
+ 1050              		.loc 1 500 0
+ 1051 0034 23EA0500 		bic	r0, r3, r5
+ 1052 0038 B063     		str	r0, [r6, #56]
+ 1053              	.LBB35:
+ 1054              		.loc 1 502 0
+ 1055 003a 0023     		movs	r3, #0
+ 1056              	.LVL123:
+ 1057              	@ 502 "../../os/kernel/src/chevents.c" 1
+ 1058 003c 83F31188 		msr     BASEPRI, r3
+ 1059              	@ 0 "" 2
+ 1060              	.LVL124:
+ 1061              		.thumb
+ 1062              	.LBE35:
+ 1063              		.loc 1 504 0
+ 1064 0040 2846     		mov	r0, r5
+ 1065 0042 70BD     		pop	{r4, r5, r6, pc}
+ 1066              	.L59:
+ 1067              		.align	2
+ 1068              	.L58:
+ 1069 0044 00000000 		.word	rlist
+ 1070              		.cfi_endproc
+ 1071              	.LFE22:
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 20
+
+
+ 1072              		.size	chEvtWaitAnyTimeout, .-chEvtWaitAnyTimeout
+ 1073 0048 AFF30080 		.section	.text.chEvtWaitAllTimeout,"ax",%progbits
+ 1073      AFF30080 
+ 1074              		.align	2
+ 1075              		.p2align 4,,15
+ 1076              		.global	chEvtWaitAllTimeout
+ 1077              		.thumb
+ 1078              		.thumb_func
+ 1079              		.type	chEvtWaitAllTimeout, %function
+ 1080              	chEvtWaitAllTimeout:
+ 1081              	.LFB23:
+ 1082              		.loc 1 523 0
+ 1083              		.cfi_startproc
+ 1084              		@ args = 0, pretend = 0, frame = 0
+ 1085              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1086              	.LVL125:
+ 1087 0000 38B5     		push	{r3, r4, r5, lr}
+ 1088              	.LCFI12:
+ 1089              		.cfi_def_cfa_offset 16
+ 1090              		.cfi_offset 14, -4
+ 1091              		.cfi_offset 5, -8
+ 1092              		.cfi_offset 4, -12
+ 1093              		.cfi_offset 3, -16
+ 1094              		.loc 1 524 0
+ 1095 0002 134B     		ldr	r3, .L65
+ 1096              		.loc 1 523 0
+ 1097 0004 0446     		mov	r4, r0
+ 1098              		.loc 1 524 0
+ 1099 0006 9D69     		ldr	r5, [r3, #24]
+ 1100              	.LVL126:
+ 1101              	.LBB36:
+ 1102              		.loc 1 526 0
+ 1103 0008 2023     		movs	r3, #32
+ 1104              	.LVL127:
+ 1105              	@ 526 "../../os/kernel/src/chevents.c" 1
+ 1106 000a 83F31188 		msr     BASEPRI, r3
+ 1107              	@ 0 "" 2
+ 1108              	.LVL128:
+ 1109              		.thumb
+ 1110              	.LBE36:
+ 1111              		.loc 1 528 0
+ 1112 000e AB6B     		ldr	r3, [r5, #56]
+ 1113              	.LVL129:
+ 1114 0010 00EA0302 		and	r2, r0, r3
+ 1115 0014 8242     		cmp	r2, r0
+ 1116 0016 0DD0     		beq	.L61
+ 1117              		.loc 1 529 0
+ 1118 0018 29B9     		cbnz	r1, .L62
+ 1119              	.LBB37:
+ 1120              		.loc 1 530 0
+ 1121 001a 0B46     		mov	r3, r1
+ 1122              	.LVL130:
+ 1123              	@ 530 "../../os/kernel/src/chevents.c" 1
+ 1124 001c 83F31188 		msr     BASEPRI, r3
+ 1125              	@ 0 "" 2
+ 1126              	.LVL131:
+ 1127              		.thumb
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 21
+
+
+ 1128              	.LBE37:
+ 1129              		.loc 1 531 0
+ 1130 0020 0C46     		mov	r4, r1
+ 1131              		.loc 1 543 0
+ 1132 0022 2046     		mov	r0, r4
+ 1133              	.LVL132:
+ 1134 0024 38BD     		pop	{r3, r4, r5, pc}
+ 1135              	.LVL133:
+ 1136              	.L62:
+ 1137              		.loc 1 533 0
+ 1138 0026 6862     		str	r0, [r5, #36]
+ 1139              		.loc 1 534 0
+ 1140 0028 0920     		movs	r0, #9
+ 1141              	.LVL134:
+ 1142 002a FFF7FEFF 		bl	chSchGoSleepTimeoutS
+ 1143              	.LVL135:
+ 1144 002e 0028     		cmp	r0, #0
+ 1145 0030 08DB     		blt	.L64
+ 1146 0032 AB6B     		ldr	r3, [r5, #56]
+ 1147              	.L61:
+ 1148              		.loc 1 539 0
+ 1149 0034 23EA0400 		bic	r0, r3, r4
+ 1150 0038 A863     		str	r0, [r5, #56]
+ 1151              	.LBB38:
+ 1152              		.loc 1 541 0
+ 1153 003a 0023     		movs	r3, #0
+ 1154              	.LVL136:
+ 1155              	@ 541 "../../os/kernel/src/chevents.c" 1
+ 1156 003c 83F31188 		msr     BASEPRI, r3
+ 1157              	@ 0 "" 2
+ 1158              	.LVL137:
+ 1159              		.thumb
+ 1160              	.L63:
+ 1161              	.LBE38:
+ 1162              		.loc 1 543 0
+ 1163 0040 2046     		mov	r0, r4
+ 1164 0042 38BD     		pop	{r3, r4, r5, pc}
+ 1165              	.LVL138:
+ 1166              	.L64:
+ 1167              	.LBB39:
+ 1168              		.loc 1 535 0
+ 1169 0044 0023     		movs	r3, #0
+ 1170              	@ 535 "../../os/kernel/src/chevents.c" 1
+ 1171 0046 83F31188 		msr     BASEPRI, r3
+ 1172              	@ 0 "" 2
+ 1173              	.LVL139:
+ 1174              		.thumb
+ 1175              	.LBE39:
+ 1176              		.loc 1 536 0
+ 1177 004a 1C46     		mov	r4, r3
+ 1178              	.LVL140:
+ 1179 004c F8E7     		b	.L63
+ 1180              	.L66:
+ 1181 004e 00BF     		.align	2
+ 1182              	.L65:
+ 1183 0050 00000000 		.word	rlist
+ 1184              		.cfi_endproc
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 22
+
+
+ 1185              	.LFE23:
+ 1186              		.size	chEvtWaitAllTimeout, .-chEvtWaitAllTimeout
+ 1187 0054 AFF30080 		.text
+ 1187      AFF30080 
+ 1187      AFF30080 
+ 1188              	.Letext0:
+ 1189              		.file 2 "c:\\chibistudio\\tools\\gnu tools arm embedded\\4.6 2012q4\\bin\\../lib/gcc/arm-none-eabi
+ 1190              		.file 3 "../../os/ports/GCC/ARMCMx/chtypes.h"
+ 1191              		.file 4 "../../os/kernel/include/chlists.h"
+ 1192              		.file 5 "../../os/kernel/include/chthreads.h"
+ 1193              		.file 6 "../../os/ports/GCC/ARMCMx/chcore_v7m.h"
+ 1194              		.file 7 "../../os/kernel/include/chschd.h"
+ 1195              		.file 8 "../../os/kernel/include/chmtx.h"
+ 1196              		.file 9 "../../os/kernel/include/chevents.h"
+ 1197              		.section	.debug_info,"",%progbits
+ 1198              	.Ldebug_info0:
+ 1199 0000 F80C0000 		.4byte	0xcf8
+ 1200 0004 0200     		.2byte	0x2
+ 1201 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 1202 000a 04       		.byte	0x4
+ 1203 000b 01       		.uleb128 0x1
+ 1204 000c 19000000 		.4byte	.LASF93
+ 1205 0010 01       		.byte	0x1
+ 1206 0011 F6030000 		.4byte	.LASF94
+ 1207 0015 AC000000 		.4byte	.LASF95
+ 1208 0019 00000000 		.4byte	0
+ 1209 001d 00000000 		.4byte	0
+ 1210 0021 60000000 		.4byte	.Ldebug_ranges0+0x60
+ 1211 0025 00000000 		.4byte	.Ldebug_line0
+ 1212 0029 02       		.uleb128 0x2
+ 1213 002a 04       		.byte	0x4
+ 1214 002b 05       		.byte	0x5
+ 1215 002c 696E7400 		.ascii	"int\000"
+ 1216 0030 03       		.uleb128 0x3
+ 1217 0031 04       		.byte	0x4
+ 1218 0032 07       		.byte	0x7
+ 1219 0033 B4010000 		.4byte	.LASF0
+ 1220 0037 03       		.uleb128 0x3
+ 1221 0038 01       		.byte	0x1
+ 1222 0039 06       		.byte	0x6
+ 1223 003a F2000000 		.4byte	.LASF1
+ 1224 003e 04       		.uleb128 0x4
+ 1225 003f E8030000 		.4byte	.LASF5
+ 1226 0043 02       		.byte	0x2
+ 1227 0044 2A       		.byte	0x2a
+ 1228 0045 49000000 		.4byte	0x49
+ 1229 0049 03       		.uleb128 0x3
+ 1230 004a 01       		.byte	0x1
+ 1231 004b 08       		.byte	0x8
+ 1232 004c DE020000 		.4byte	.LASF2
+ 1233 0050 03       		.uleb128 0x3
+ 1234 0051 02       		.byte	0x2
+ 1235 0052 05       		.byte	0x5
+ 1236 0053 18030000 		.4byte	.LASF3
+ 1237 0057 03       		.uleb128 0x3
+ 1238 0058 02       		.byte	0x2
+ 1239 0059 07       		.byte	0x7
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 23
+
+
+ 1240 005a F2010000 		.4byte	.LASF4
+ 1241 005e 04       		.uleb128 0x4
+ 1242 005f D6020000 		.4byte	.LASF6
+ 1243 0063 02       		.byte	0x2
+ 1244 0064 4F       		.byte	0x4f
+ 1245 0065 69000000 		.4byte	0x69
+ 1246 0069 03       		.uleb128 0x3
+ 1247 006a 04       		.byte	0x4
+ 1248 006b 05       		.byte	0x5
+ 1249 006c 2C010000 		.4byte	.LASF7
+ 1250 0070 04       		.uleb128 0x4
+ 1251 0071 7A030000 		.4byte	.LASF8
+ 1252 0075 02       		.byte	0x2
+ 1253 0076 50       		.byte	0x50
+ 1254 0077 7B000000 		.4byte	0x7b
+ 1255 007b 03       		.uleb128 0x3
+ 1256 007c 04       		.byte	0x4
+ 1257 007d 07       		.byte	0x7
+ 1258 007e C1010000 		.4byte	.LASF9
+ 1259 0082 03       		.uleb128 0x3
+ 1260 0083 08       		.byte	0x8
+ 1261 0084 05       		.byte	0x5
+ 1262 0085 E4000000 		.4byte	.LASF10
+ 1263 0089 03       		.uleb128 0x3
+ 1264 008a 08       		.byte	0x8
+ 1265 008b 07       		.byte	0x7
+ 1266 008c 62000000 		.4byte	.LASF11
+ 1267 0090 03       		.uleb128 0x3
+ 1268 0091 01       		.byte	0x1
+ 1269 0092 02       		.byte	0x2
+ 1270 0093 D0020000 		.4byte	.LASF12
+ 1271 0097 04       		.uleb128 0x4
+ 1272 0098 35020000 		.4byte	.LASF13
+ 1273 009c 03       		.byte	0x3
+ 1274 009d 25       		.byte	0x25
+ 1275 009e 3E000000 		.4byte	0x3e
+ 1276 00a2 04       		.uleb128 0x4
+ 1277 00a3 35010000 		.4byte	.LASF14
+ 1278 00a7 03       		.byte	0x3
+ 1279 00a8 26       		.byte	0x26
+ 1280 00a9 3E000000 		.4byte	0x3e
+ 1281 00ad 04       		.uleb128 0x4
+ 1282 00ae B9020000 		.4byte	.LASF15
+ 1283 00b2 03       		.byte	0x3
+ 1284 00b3 27       		.byte	0x27
+ 1285 00b4 3E000000 		.4byte	0x3e
+ 1286 00b8 04       		.uleb128 0x4
+ 1287 00b9 22010000 		.4byte	.LASF16
+ 1288 00bd 03       		.byte	0x3
+ 1289 00be 28       		.byte	0x28
+ 1290 00bf 3E000000 		.4byte	0x3e
+ 1291 00c3 04       		.uleb128 0x4
+ 1292 00c4 C8020000 		.4byte	.LASF17
+ 1293 00c8 03       		.byte	0x3
+ 1294 00c9 29       		.byte	0x29
+ 1295 00ca 70000000 		.4byte	0x70
+ 1296 00ce 04       		.uleb128 0x4
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 24
+
+
+ 1297 00cf 17020000 		.4byte	.LASF18
+ 1298 00d3 03       		.byte	0x3
+ 1299 00d4 2A       		.byte	0x2a
+ 1300 00d5 5E000000 		.4byte	0x5e
+ 1301 00d9 04       		.uleb128 0x4
+ 1302 00da 92010000 		.4byte	.LASF19
+ 1303 00de 03       		.byte	0x3
+ 1304 00df 2B       		.byte	0x2b
+ 1305 00e0 5E000000 		.4byte	0x5e
+ 1306 00e4 04       		.uleb128 0x4
+ 1307 00e5 49020000 		.4byte	.LASF20
+ 1308 00e9 03       		.byte	0x3
+ 1309 00ea 2C       		.byte	0x2c
+ 1310 00eb 70000000 		.4byte	0x70
+ 1311 00ef 04       		.uleb128 0x4
+ 1312 00f0 C5030000 		.4byte	.LASF21
+ 1313 00f4 03       		.byte	0x3
+ 1314 00f5 2D       		.byte	0x2d
+ 1315 00f6 70000000 		.4byte	0x70
+ 1316 00fa 04       		.uleb128 0x4
+ 1317 00fb 97030000 		.4byte	.LASF22
+ 1318 00ff 03       		.byte	0x3
+ 1319 0100 2E       		.byte	0x2e
+ 1320 0101 70000000 		.4byte	0x70
+ 1321 0105 04       		.uleb128 0x4
+ 1322 0106 68030000 		.4byte	.LASF23
+ 1323 010a 04       		.byte	0x4
+ 1324 010b 23       		.byte	0x23
+ 1325 010c 10010000 		.4byte	0x110
+ 1326 0110 05       		.uleb128 0x5
+ 1327 0111 68030000 		.4byte	.LASF23
+ 1328 0115 48       		.byte	0x48
+ 1329 0116 05       		.byte	0x5
+ 1330 0117 57       		.byte	0x57
+ 1331 0118 35020000 		.4byte	0x235
+ 1332 011c 06       		.uleb128 0x6
+ 1333 011d 59030000 		.4byte	.LASF24
+ 1334 0121 05       		.byte	0x5
+ 1335 0122 58       		.byte	0x58
+ 1336 0123 5A020000 		.4byte	0x25a
+ 1337 0127 02       		.byte	0x2
+ 1338 0128 23       		.byte	0x23
+ 1339 0129 00       		.uleb128 0
+ 1340 012a 06       		.uleb128 0x6
+ 1341 012b C1020000 		.4byte	.LASF25
+ 1342 012f 05       		.byte	0x5
+ 1343 0130 5A       		.byte	0x5a
+ 1344 0131 5A020000 		.4byte	0x25a
+ 1345 0135 02       		.byte	0x2
+ 1346 0136 23       		.byte	0x23
+ 1347 0137 04       		.uleb128 0x4
+ 1348 0138 06       		.uleb128 0x6
+ 1349 0139 A5000000 		.4byte	.LASF26
+ 1350 013d 05       		.byte	0x5
+ 1351 013e 5C       		.byte	0x5c
+ 1352 013f C3000000 		.4byte	0xc3
+ 1353 0143 02       		.byte	0x2
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 25
+
+
+ 1354 0144 23       		.byte	0x23
+ 1355 0145 08       		.uleb128 0x8
+ 1356 0146 06       		.uleb128 0x6
+ 1357 0147 6B040000 		.4byte	.LASF27
+ 1358 014b 05       		.byte	0x5
+ 1359 014c 5D       		.byte	0x5d
+ 1360 014d 28030000 		.4byte	0x328
+ 1361 0151 02       		.byte	0x2
+ 1362 0152 23       		.byte	0x23
+ 1363 0153 0C       		.uleb128 0xc
+ 1364 0154 06       		.uleb128 0x6
+ 1365 0155 60010000 		.4byte	.LASF28
+ 1366 0159 05       		.byte	0x5
+ 1367 015a 5F       		.byte	0x5f
+ 1368 015b 5A020000 		.4byte	0x25a
+ 1369 015f 02       		.byte	0x2
+ 1370 0160 23       		.byte	0x23
+ 1371 0161 10       		.uleb128 0x10
+ 1372 0162 06       		.uleb128 0x6
+ 1373 0163 69020000 		.4byte	.LASF29
+ 1374 0167 05       		.byte	0x5
+ 1375 0168 60       		.byte	0x60
+ 1376 0169 5A020000 		.4byte	0x25a
+ 1377 016d 02       		.byte	0x2
+ 1378 016e 23       		.byte	0x23
+ 1379 016f 14       		.uleb128 0x14
+ 1380 0170 06       		.uleb128 0x6
+ 1381 0171 3E040000 		.4byte	.LASF30
+ 1382 0175 05       		.byte	0x5
+ 1383 0176 67       		.byte	0x67
+ 1384 0177 CE040000 		.4byte	0x4ce
+ 1385 017b 02       		.byte	0x2
+ 1386 017c 23       		.byte	0x23
+ 1387 017d 18       		.uleb128 0x18
+ 1388 017e 06       		.uleb128 0x6
+ 1389 017f 22030000 		.4byte	.LASF31
+ 1390 0183 05       		.byte	0x5
+ 1391 0184 72       		.byte	0x72
+ 1392 0185 A2000000 		.4byte	0xa2
+ 1393 0189 02       		.byte	0x2
+ 1394 018a 23       		.byte	0x23
+ 1395 018b 1C       		.uleb128 0x1c
+ 1396 018c 06       		.uleb128 0x6
+ 1397 018d 60030000 		.4byte	.LASF32
+ 1398 0191 05       		.byte	0x5
+ 1399 0192 76       		.byte	0x76
+ 1400 0193 97000000 		.4byte	0x97
+ 1401 0197 02       		.byte	0x2
+ 1402 0198 23       		.byte	0x23
+ 1403 0199 1D       		.uleb128 0x1d
+ 1404 019a 06       		.uleb128 0x6
+ 1405 019b D1030000 		.4byte	.LASF33
+ 1406 019f 05       		.byte	0x5
+ 1407 01a0 7B       		.byte	0x7b
+ 1408 01a1 AD000000 		.4byte	0xad
+ 1409 01a5 02       		.byte	0x2
+ 1410 01a6 23       		.byte	0x23
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 26
+
+
+ 1411 01a7 1E       		.uleb128 0x1e
+ 1412 01a8 06       		.uleb128 0x6
+ 1413 01a9 2A030000 		.4byte	.LASF34
+ 1414 01ad 05       		.byte	0x5
+ 1415 01ae 81       		.byte	0x81
+ 1416 01af B8000000 		.4byte	0xb8
+ 1417 01b3 02       		.byte	0x2
+ 1418 01b4 23       		.byte	0x23
+ 1419 01b5 1F       		.uleb128 0x1f
+ 1420 01b6 06       		.uleb128 0x6
+ 1421 01b7 AC030000 		.4byte	.LASF35
+ 1422 01bb 05       		.byte	0x5
+ 1423 01bc 88       		.byte	0x88
+ 1424 01bd 4B030000 		.4byte	0x34b
+ 1425 01c1 02       		.byte	0x2
+ 1426 01c2 23       		.byte	0x23
+ 1427 01c3 20       		.uleb128 0x20
+ 1428 01c4 07       		.uleb128 0x7
+ 1429 01c5 705F7500 		.ascii	"p_u\000"
+ 1430 01c9 05       		.byte	0x5
+ 1431 01ca AD       		.byte	0xad
+ 1432 01cb 99040000 		.4byte	0x499
+ 1433 01cf 02       		.byte	0x2
+ 1434 01d0 23       		.byte	0x23
+ 1435 01d1 24       		.uleb128 0x24
+ 1436 01d2 06       		.uleb128 0x6
+ 1437 01d3 71040000 		.4byte	.LASF36
+ 1438 01d7 05       		.byte	0x5
+ 1439 01d8 B2       		.byte	0xb2
+ 1440 01d9 82020000 		.4byte	0x282
+ 1441 01dd 02       		.byte	0x2
+ 1442 01de 23       		.byte	0x23
+ 1443 01df 28       		.uleb128 0x28
+ 1444 01e0 06       		.uleb128 0x6
+ 1445 01e1 BA030000 		.4byte	.LASF37
+ 1446 01e5 05       		.byte	0x5
+ 1447 01e6 B8       		.byte	0xb8
+ 1448 01e7 60020000 		.4byte	0x260
+ 1449 01eb 02       		.byte	0x2
+ 1450 01ec 23       		.byte	0x23
+ 1451 01ed 2C       		.uleb128 0x2c
+ 1452 01ee 06       		.uleb128 0x6
+ 1453 01ef 00000000 		.4byte	.LASF38
+ 1454 01f3 05       		.byte	0x5
+ 1455 01f4 BC       		.byte	0xbc
+ 1456 01f5 CE000000 		.4byte	0xce
+ 1457 01f9 02       		.byte	0x2
+ 1458 01fa 23       		.byte	0x23
+ 1459 01fb 34       		.uleb128 0x34
+ 1460 01fc 06       		.uleb128 0x6
+ 1461 01fd 6F030000 		.4byte	.LASF39
+ 1462 0201 05       		.byte	0x5
+ 1463 0202 C2       		.byte	0xc2
+ 1464 0203 E4000000 		.4byte	0xe4
+ 1465 0207 02       		.byte	0x2
+ 1466 0208 23       		.byte	0x23
+ 1467 0209 38       		.uleb128 0x38
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 27
+
+
+ 1468 020a 06       		.uleb128 0x6
+ 1469 020b 0E030000 		.4byte	.LASF40
+ 1470 020f 05       		.byte	0x5
+ 1471 0210 C9       		.byte	0xc9
+ 1472 0211 E0040000 		.4byte	0x4e0
+ 1473 0215 02       		.byte	0x2
+ 1474 0216 23       		.byte	0x23
+ 1475 0217 3C       		.uleb128 0x3c
+ 1476 0218 06       		.uleb128 0x6
+ 1477 0219 A1030000 		.4byte	.LASF41
+ 1478 021d 05       		.byte	0x5
+ 1479 021e CD       		.byte	0xcd
+ 1480 021f C3000000 		.4byte	0xc3
+ 1481 0223 02       		.byte	0x2
+ 1482 0224 23       		.byte	0x23
+ 1483 0225 40       		.uleb128 0x40
+ 1484 0226 06       		.uleb128 0x6
+ 1485 0227 12010000 		.4byte	.LASF42
+ 1486 022b 05       		.byte	0x5
+ 1487 022c D3       		.byte	0xd3
+ 1488 022d 98020000 		.4byte	0x298
+ 1489 0231 02       		.byte	0x2
+ 1490 0232 23       		.byte	0x23
+ 1491 0233 44       		.uleb128 0x44
+ 1492 0234 00       		.byte	0
+ 1493 0235 08       		.uleb128 0x8
+ 1494 0236 08       		.byte	0x8
+ 1495 0237 04       		.byte	0x4
+ 1496 0238 5A       		.byte	0x5a
+ 1497 0239 5A020000 		.4byte	0x25a
+ 1498 023d 06       		.uleb128 0x6
+ 1499 023e 59030000 		.4byte	.LASF24
+ 1500 0242 04       		.byte	0x4
+ 1501 0243 5B       		.byte	0x5b
+ 1502 0244 5A020000 		.4byte	0x25a
+ 1503 0248 02       		.byte	0x2
+ 1504 0249 23       		.byte	0x23
+ 1505 024a 00       		.uleb128 0
+ 1506 024b 06       		.uleb128 0x6
+ 1507 024c C1020000 		.4byte	.LASF25
+ 1508 0250 04       		.byte	0x4
+ 1509 0251 5D       		.byte	0x5d
+ 1510 0252 5A020000 		.4byte	0x25a
+ 1511 0256 02       		.byte	0x2
+ 1512 0257 23       		.byte	0x23
+ 1513 0258 04       		.uleb128 0x4
+ 1514 0259 00       		.byte	0
+ 1515 025a 09       		.uleb128 0x9
+ 1516 025b 04       		.byte	0x4
+ 1517 025c 05010000 		.4byte	0x105
+ 1518 0260 04       		.uleb128 0x4
+ 1519 0261 77020000 		.4byte	.LASF43
+ 1520 0265 04       		.byte	0x4
+ 1521 0266 5F       		.byte	0x5f
+ 1522 0267 35020000 		.4byte	0x235
+ 1523 026b 08       		.uleb128 0x8
+ 1524 026c 04       		.byte	0x4
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 28
+
+
+ 1525 026d 04       		.byte	0x4
+ 1526 026e 64       		.byte	0x64
+ 1527 026f 82020000 		.4byte	0x282
+ 1528 0273 06       		.uleb128 0x6
+ 1529 0274 59030000 		.4byte	.LASF24
+ 1530 0278 04       		.byte	0x4
+ 1531 0279 66       		.byte	0x66
+ 1532 027a 5A020000 		.4byte	0x25a
+ 1533 027e 02       		.byte	0x2
+ 1534 027f 23       		.byte	0x23
+ 1535 0280 00       		.uleb128 0
+ 1536 0281 00       		.byte	0
+ 1537 0282 04       		.uleb128 0x4
+ 1538 0283 3D020000 		.4byte	.LASF44
+ 1539 0287 04       		.byte	0x4
+ 1540 0288 69       		.byte	0x69
+ 1541 0289 6B020000 		.4byte	0x26b
+ 1542 028d 04       		.uleb128 0x4
+ 1543 028e 75010000 		.4byte	.LASF45
+ 1544 0292 06       		.byte	0x6
+ 1545 0293 DE       		.byte	0xde
+ 1546 0294 98020000 		.4byte	0x298
+ 1547 0298 0A       		.uleb128 0xa
+ 1548 0299 04       		.byte	0x4
+ 1549 029a 0B       		.uleb128 0xb
+ 1550 029b B3030000 		.4byte	.LASF46
+ 1551 029f 24       		.byte	0x24
+ 1552 02a0 06       		.byte	0x6
+ 1553 02a1 0501     		.2byte	0x105
+ 1554 02a3 28030000 		.4byte	0x328
+ 1555 02a7 0C       		.uleb128 0xc
+ 1556 02a8 723400   		.ascii	"r4\000"
+ 1557 02ab 06       		.byte	0x6
+ 1558 02ac 1801     		.2byte	0x118
+ 1559 02ae 8D020000 		.4byte	0x28d
+ 1560 02b2 02       		.byte	0x2
+ 1561 02b3 23       		.byte	0x23
+ 1562 02b4 00       		.uleb128 0
+ 1563 02b5 0C       		.uleb128 0xc
+ 1564 02b6 723500   		.ascii	"r5\000"
+ 1565 02b9 06       		.byte	0x6
+ 1566 02ba 1901     		.2byte	0x119
+ 1567 02bc 8D020000 		.4byte	0x28d
+ 1568 02c0 02       		.byte	0x2
+ 1569 02c1 23       		.byte	0x23
+ 1570 02c2 04       		.uleb128 0x4
+ 1571 02c3 0C       		.uleb128 0xc
+ 1572 02c4 723600   		.ascii	"r6\000"
+ 1573 02c7 06       		.byte	0x6
+ 1574 02c8 1A01     		.2byte	0x11a
+ 1575 02ca 8D020000 		.4byte	0x28d
+ 1576 02ce 02       		.byte	0x2
+ 1577 02cf 23       		.byte	0x23
+ 1578 02d0 08       		.uleb128 0x8
+ 1579 02d1 0C       		.uleb128 0xc
+ 1580 02d2 723700   		.ascii	"r7\000"
+ 1581 02d5 06       		.byte	0x6
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 29
+
+
+ 1582 02d6 1B01     		.2byte	0x11b
+ 1583 02d8 8D020000 		.4byte	0x28d
+ 1584 02dc 02       		.byte	0x2
+ 1585 02dd 23       		.byte	0x23
+ 1586 02de 0C       		.uleb128 0xc
+ 1587 02df 0C       		.uleb128 0xc
+ 1588 02e0 723800   		.ascii	"r8\000"
+ 1589 02e3 06       		.byte	0x6
+ 1590 02e4 1C01     		.2byte	0x11c
+ 1591 02e6 8D020000 		.4byte	0x28d
+ 1592 02ea 02       		.byte	0x2
+ 1593 02eb 23       		.byte	0x23
+ 1594 02ec 10       		.uleb128 0x10
+ 1595 02ed 0C       		.uleb128 0xc
+ 1596 02ee 723900   		.ascii	"r9\000"
+ 1597 02f1 06       		.byte	0x6
+ 1598 02f2 1D01     		.2byte	0x11d
+ 1599 02f4 8D020000 		.4byte	0x28d
+ 1600 02f8 02       		.byte	0x2
+ 1601 02f9 23       		.byte	0x23
+ 1602 02fa 14       		.uleb128 0x14
+ 1603 02fb 0C       		.uleb128 0xc
+ 1604 02fc 72313000 		.ascii	"r10\000"
+ 1605 0300 06       		.byte	0x6
+ 1606 0301 1E01     		.2byte	0x11e
+ 1607 0303 8D020000 		.4byte	0x28d
+ 1608 0307 02       		.byte	0x2
+ 1609 0308 23       		.byte	0x23
+ 1610 0309 18       		.uleb128 0x18
+ 1611 030a 0C       		.uleb128 0xc
+ 1612 030b 72313100 		.ascii	"r11\000"
+ 1613 030f 06       		.byte	0x6
+ 1614 0310 1F01     		.2byte	0x11f
+ 1615 0312 8D020000 		.4byte	0x28d
+ 1616 0316 02       		.byte	0x2
+ 1617 0317 23       		.byte	0x23
+ 1618 0318 1C       		.uleb128 0x1c
+ 1619 0319 0C       		.uleb128 0xc
+ 1620 031a 6C7200   		.ascii	"lr\000"
+ 1621 031d 06       		.byte	0x6
+ 1622 031e 2001     		.2byte	0x120
+ 1623 0320 8D020000 		.4byte	0x28d
+ 1624 0324 02       		.byte	0x2
+ 1625 0325 23       		.byte	0x23
+ 1626 0326 20       		.uleb128 0x20
+ 1627 0327 00       		.byte	0
+ 1628 0328 0B       		.uleb128 0xb
+ 1629 0329 EA010000 		.4byte	.LASF47
+ 1630 032d 04       		.byte	0x4
+ 1631 032e 06       		.byte	0x6
+ 1632 032f 2A01     		.2byte	0x12a
+ 1633 0331 45030000 		.4byte	0x345
+ 1634 0335 0C       		.uleb128 0xc
+ 1635 0336 72313300 		.ascii	"r13\000"
+ 1636 033a 06       		.byte	0x6
+ 1637 033b 2B01     		.2byte	0x12b
+ 1638 033d 45030000 		.4byte	0x345
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 30
+
+
+ 1639 0341 02       		.byte	0x2
+ 1640 0342 23       		.byte	0x23
+ 1641 0343 00       		.uleb128 0
+ 1642 0344 00       		.byte	0
+ 1643 0345 09       		.uleb128 0x9
+ 1644 0346 04       		.byte	0x4
+ 1645 0347 9A020000 		.4byte	0x29a
+ 1646 034b 0D       		.uleb128 0xd
+ 1647 034c FA000000 		.4byte	0xfa
+ 1648 0350 08       		.uleb128 0x8
+ 1649 0351 1C       		.byte	0x1c
+ 1650 0352 07       		.byte	0x7
+ 1651 0353 57       		.byte	0x57
+ 1652 0354 AD030000 		.4byte	0x3ad
+ 1653 0358 06       		.uleb128 0x6
+ 1654 0359 83030000 		.4byte	.LASF48
+ 1655 035d 07       		.byte	0x7
+ 1656 035e 58       		.byte	0x58
+ 1657 035f 60020000 		.4byte	0x260
+ 1658 0363 02       		.byte	0x2
+ 1659 0364 23       		.byte	0x23
+ 1660 0365 00       		.uleb128 0
+ 1661 0366 06       		.uleb128 0x6
+ 1662 0367 34030000 		.4byte	.LASF49
+ 1663 036b 07       		.byte	0x7
+ 1664 036c 59       		.byte	0x59
+ 1665 036d C3000000 		.4byte	0xc3
+ 1666 0371 02       		.byte	0x2
+ 1667 0372 23       		.byte	0x23
+ 1668 0373 08       		.uleb128 0x8
+ 1669 0374 06       		.uleb128 0x6
+ 1670 0375 71020000 		.4byte	.LASF50
+ 1671 0379 07       		.byte	0x7
+ 1672 037a 5B       		.byte	0x5b
+ 1673 037b 28030000 		.4byte	0x328
+ 1674 037f 02       		.byte	0x2
+ 1675 0380 23       		.byte	0x23
+ 1676 0381 0C       		.uleb128 0xc
+ 1677 0382 06       		.uleb128 0x6
+ 1678 0383 68010000 		.4byte	.LASF51
+ 1679 0387 07       		.byte	0x7
+ 1680 0388 5E       		.byte	0x5e
+ 1681 0389 5A020000 		.4byte	0x25a
+ 1682 038d 02       		.byte	0x2
+ 1683 038e 23       		.byte	0x23
+ 1684 038f 10       		.uleb128 0x10
+ 1685 0390 06       		.uleb128 0x6
+ 1686 0391 A0020000 		.4byte	.LASF52
+ 1687 0395 07       		.byte	0x7
+ 1688 0396 5F       		.byte	0x5f
+ 1689 0397 5A020000 		.4byte	0x25a
+ 1690 039b 02       		.byte	0x2
+ 1691 039c 23       		.byte	0x23
+ 1692 039d 14       		.uleb128 0x14
+ 1693 039e 06       		.uleb128 0x6
+ 1694 039f 96020000 		.4byte	.LASF53
+ 1695 03a3 07       		.byte	0x7
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 31
+
+
+ 1696 03a4 62       		.byte	0x62
+ 1697 03a5 5A020000 		.4byte	0x25a
+ 1698 03a9 02       		.byte	0x2
+ 1699 03aa 23       		.byte	0x23
+ 1700 03ab 18       		.uleb128 0x18
+ 1701 03ac 00       		.byte	0
+ 1702 03ad 04       		.uleb128 0x4
+ 1703 03ae D8030000 		.4byte	.LASF54
+ 1704 03b2 07       		.byte	0x7
+ 1705 03b3 64       		.byte	0x64
+ 1706 03b4 50030000 		.4byte	0x350
+ 1707 03b8 05       		.uleb128 0x5
+ 1708 03b9 55020000 		.4byte	.LASF55
+ 1709 03bd 10       		.byte	0x10
+ 1710 03be 08       		.byte	0x8
+ 1711 03bf 25       		.byte	0x25
+ 1712 03c0 EF030000 		.4byte	0x3ef
+ 1713 03c4 06       		.uleb128 0x6
+ 1714 03c5 1A010000 		.4byte	.LASF56
+ 1715 03c9 08       		.byte	0x8
+ 1716 03ca 26       		.byte	0x26
+ 1717 03cb 60020000 		.4byte	0x260
+ 1718 03cf 02       		.byte	0x2
+ 1719 03d0 23       		.byte	0x23
+ 1720 03d1 00       		.uleb128 0
+ 1721 03d2 06       		.uleb128 0x6
+ 1722 03d3 63040000 		.4byte	.LASF57
+ 1723 03d7 08       		.byte	0x8
+ 1724 03d8 28       		.byte	0x28
+ 1725 03d9 5A020000 		.4byte	0x25a
+ 1726 03dd 02       		.byte	0x2
+ 1727 03de 23       		.byte	0x23
+ 1728 03df 08       		.uleb128 0x8
+ 1729 03e0 06       		.uleb128 0x6
+ 1730 03e1 90030000 		.4byte	.LASF58
+ 1731 03e5 08       		.byte	0x8
+ 1732 03e6 2A       		.byte	0x2a
+ 1733 03e7 EF030000 		.4byte	0x3ef
+ 1734 03eb 02       		.byte	0x2
+ 1735 03ec 23       		.byte	0x23
+ 1736 03ed 0C       		.uleb128 0xc
+ 1737 03ee 00       		.byte	0
+ 1738 03ef 09       		.uleb128 0x9
+ 1739 03f0 04       		.byte	0x4
+ 1740 03f1 B8030000 		.4byte	0x3b8
+ 1741 03f5 04       		.uleb128 0x4
+ 1742 03f6 55020000 		.4byte	.LASF55
+ 1743 03fa 08       		.byte	0x8
+ 1744 03fb 2C       		.byte	0x2c
+ 1745 03fc B8030000 		.4byte	0x3b8
+ 1746 0400 04       		.uleb128 0x4
+ 1747 0401 15040000 		.4byte	.LASF59
+ 1748 0405 09       		.byte	0x9
+ 1749 0406 25       		.byte	0x25
+ 1750 0407 0B040000 		.4byte	0x40b
+ 1751 040b 05       		.uleb128 0x5
+ 1752 040c 15040000 		.4byte	.LASF59
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 32
+
+
+ 1753 0410 10       		.byte	0x10
+ 1754 0411 09       		.byte	0x9
+ 1755 0412 2A       		.byte	0x2a
+ 1756 0413 50040000 		.4byte	0x450
+ 1757 0417 06       		.uleb128 0x6
+ 1758 0418 1D020000 		.4byte	.LASF60
+ 1759 041c 09       		.byte	0x9
+ 1760 041d 2B       		.byte	0x2b
+ 1761 041e 50040000 		.4byte	0x450
+ 1762 0422 02       		.byte	0x2
+ 1763 0423 23       		.byte	0x23
+ 1764 0424 00       		.uleb128 0
+ 1765 0425 06       		.uleb128 0x6
+ 1766 0426 F9020000 		.4byte	.LASF61
+ 1767 042a 09       		.byte	0x9
+ 1768 042b 2E       		.byte	0x2e
+ 1769 042c 5A020000 		.4byte	0x25a
+ 1770 0430 02       		.byte	0x2
+ 1771 0431 23       		.byte	0x23
+ 1772 0432 04       		.uleb128 0x4
+ 1773 0433 06       		.uleb128 0x6
+ 1774 0434 A8020000 		.4byte	.LASF62
+ 1775 0438 09       		.byte	0x9
+ 1776 0439 30       		.byte	0x30
+ 1777 043a E4000000 		.4byte	0xe4
+ 1778 043e 02       		.byte	0x2
+ 1779 043f 23       		.byte	0x23
+ 1780 0440 08       		.uleb128 0x8
+ 1781 0441 06       		.uleb128 0x6
+ 1782 0442 05030000 		.4byte	.LASF63
+ 1783 0446 09       		.byte	0x9
+ 1784 0447 33       		.byte	0x33
+ 1785 0448 EF000000 		.4byte	0xef
+ 1786 044c 02       		.byte	0x2
+ 1787 044d 23       		.byte	0x23
+ 1788 044e 0C       		.uleb128 0xc
+ 1789 044f 00       		.byte	0
+ 1790 0450 09       		.uleb128 0x9
+ 1791 0451 04       		.byte	0x4
+ 1792 0452 00040000 		.4byte	0x400
+ 1793 0456 05       		.uleb128 0x5
+ 1794 0457 9C010000 		.4byte	.LASF64
+ 1795 045b 04       		.byte	0x4
+ 1796 045c 09       		.byte	0x9
+ 1797 045d 3A       		.byte	0x3a
+ 1798 045e 71040000 		.4byte	0x471
+ 1799 0462 06       		.uleb128 0x6
+ 1800 0463 45040000 		.4byte	.LASF65
+ 1801 0467 09       		.byte	0x9
+ 1802 0468 3B       		.byte	0x3b
+ 1803 0469 50040000 		.4byte	0x450
+ 1804 046d 02       		.byte	0x2
+ 1805 046e 23       		.byte	0x23
+ 1806 046f 00       		.uleb128 0
+ 1807 0470 00       		.byte	0
+ 1808 0471 04       		.uleb128 0x4
+ 1809 0472 9C010000 		.4byte	.LASF64
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 33
+
+
+ 1810 0476 09       		.byte	0x9
+ 1811 0477 3E       		.byte	0x3e
+ 1812 0478 56040000 		.4byte	0x456
+ 1813 047c 04       		.uleb128 0x4
+ 1814 047d A8010000 		.4byte	.LASF66
+ 1815 0481 09       		.byte	0x9
+ 1816 0482 43       		.byte	0x43
+ 1817 0483 87040000 		.4byte	0x487
+ 1818 0487 09       		.uleb128 0x9
+ 1819 0488 04       		.byte	0x4
+ 1820 0489 8D040000 		.4byte	0x48d
+ 1821 048d 0E       		.uleb128 0xe
+ 1822 048e 01       		.byte	0x1
+ 1823 048f 99040000 		.4byte	0x499
+ 1824 0493 0F       		.uleb128 0xf
+ 1825 0494 D9000000 		.4byte	0xd9
+ 1826 0498 00       		.byte	0
+ 1827 0499 10       		.uleb128 0x10
+ 1828 049a 04       		.byte	0x4
+ 1829 049b 05       		.byte	0x5
+ 1830 049c 8F       		.byte	0x8f
+ 1831 049d CE040000 		.4byte	0x4ce
+ 1832 04a1 11       		.uleb128 0x11
+ 1833 04a2 06000000 		.4byte	.LASF67
+ 1834 04a6 05       		.byte	0x5
+ 1835 04a7 96       		.byte	0x96
+ 1836 04a8 CE000000 		.4byte	0xce
+ 1837 04ac 11       		.uleb128 0x11
+ 1838 04ad 88000000 		.4byte	.LASF68
+ 1839 04b1 05       		.byte	0x5
+ 1840 04b2 9D       		.byte	0x9d
+ 1841 04b3 CE000000 		.4byte	0xce
+ 1842 04b7 11       		.uleb128 0x11
+ 1843 04b8 37040000 		.4byte	.LASF69
+ 1844 04bc 05       		.byte	0x5
+ 1845 04bd A4       		.byte	0xa4
+ 1846 04be 98020000 		.4byte	0x298
+ 1847 04c2 11       		.uleb128 0x11
+ 1848 04c3 52030000 		.4byte	.LASF70
+ 1849 04c7 05       		.byte	0x5
+ 1850 04c8 AB       		.byte	0xab
+ 1851 04c9 E4000000 		.4byte	0xe4
+ 1852 04cd 00       		.byte	0
+ 1853 04ce 09       		.uleb128 0x9
+ 1854 04cf 04       		.byte	0x4
+ 1855 04d0 D4040000 		.4byte	0x4d4
+ 1856 04d4 12       		.uleb128 0x12
+ 1857 04d5 D9040000 		.4byte	0x4d9
+ 1858 04d9 03       		.uleb128 0x3
+ 1859 04da 01       		.byte	0x1
+ 1860 04db 08       		.byte	0x8
+ 1861 04dc 8B030000 		.4byte	.LASF71
+ 1862 04e0 09       		.uleb128 0x9
+ 1863 04e1 04       		.byte	0x4
+ 1864 04e2 F5030000 		.4byte	0x3f5
+ 1865 04e6 13       		.uleb128 0x13
+ 1866 04e7 01       		.byte	0x1
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 34
+
+
+ 1867 04e8 7B040000 		.4byte	.LASF96
+ 1868 04ec 01       		.byte	0x1
+ 1869 04ed F4       		.byte	0xf4
+ 1870 04ee 01       		.byte	0x1
+ 1871 04ef 01       		.byte	0x1
+ 1872 04f0 0A050000 		.4byte	0x50a
+ 1873 04f4 14       		.uleb128 0x14
+ 1874 04f5 747000   		.ascii	"tp\000"
+ 1875 04f8 01       		.byte	0x1
+ 1876 04f9 F4       		.byte	0xf4
+ 1877 04fa 5A020000 		.4byte	0x25a
+ 1878 04fe 15       		.uleb128 0x15
+ 1879 04ff 70010000 		.4byte	.LASF72
+ 1880 0503 01       		.byte	0x1
+ 1881 0504 F4       		.byte	0xf4
+ 1882 0505 E4000000 		.4byte	0xe4
+ 1883 0509 00       		.byte	0
+ 1884 050a 16       		.uleb128 0x16
+ 1885 050b 01       		.byte	0x1
+ 1886 050c 05020000 		.4byte	.LASF73
+ 1887 0510 01       		.byte	0x1
+ 1888 0511 4E       		.byte	0x4e
+ 1889 0512 01       		.byte	0x1
+ 1890 0513 00000000 		.4byte	.LFB7
+ 1891 0517 2A000000 		.4byte	.LFE7
+ 1892 051b 00000000 		.4byte	.LLST0
+ 1893 051f 7D050000 		.4byte	0x57d
+ 1894 0523 17       		.uleb128 0x17
+ 1895 0524 65737000 		.ascii	"esp\000"
+ 1896 0528 01       		.byte	0x1
+ 1897 0529 4E       		.byte	0x4e
+ 1898 052a 7D050000 		.4byte	0x57d
+ 1899 052e 01       		.byte	0x1
+ 1900 052f 50       		.byte	0x50
+ 1901 0530 17       		.uleb128 0x17
+ 1902 0531 656C7000 		.ascii	"elp\000"
+ 1903 0535 01       		.byte	0x1
+ 1904 0536 4E       		.byte	0x4e
+ 1905 0537 50040000 		.4byte	0x450
+ 1906 053b 01       		.byte	0x1
+ 1907 053c 51       		.byte	0x51
+ 1908 053d 18       		.uleb128 0x18
+ 1909 053e 70010000 		.4byte	.LASF72
+ 1910 0542 01       		.byte	0x1
+ 1911 0543 4E       		.byte	0x4e
+ 1912 0544 E4000000 		.4byte	0xe4
+ 1913 0548 01       		.byte	0x1
+ 1914 0549 52       		.byte	0x52
+ 1915 054a 19       		.uleb128 0x19
+ 1916 054b 02000000 		.4byte	.LBB2
+ 1917 054f 08000000 		.4byte	.LBE2
+ 1918 0553 67050000 		.4byte	0x567
+ 1919 0557 1A       		.uleb128 0x1a
+ 1920 0558 746D7000 		.ascii	"tmp\000"
+ 1921 055c 01       		.byte	0x1
+ 1922 055d 52       		.byte	0x52
+ 1923 055e 70000000 		.4byte	0x70
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 35
+
+
+ 1924 0562 20000000 		.4byte	.LLST1
+ 1925 0566 00       		.byte	0
+ 1926 0567 1B       		.uleb128 0x1b
+ 1927 0568 00000000 		.4byte	.Ldebug_ranges0+0
+ 1928 056c 1A       		.uleb128 0x1a
+ 1929 056d 746D7000 		.ascii	"tmp\000"
+ 1930 0571 01       		.byte	0x1
+ 1931 0572 58       		.byte	0x58
+ 1932 0573 70000000 		.4byte	0x70
+ 1933 0577 33000000 		.4byte	.LLST2
+ 1934 057b 00       		.byte	0
+ 1935 057c 00       		.byte	0
+ 1936 057d 09       		.uleb128 0x9
+ 1937 057e 04       		.byte	0x4
+ 1938 057f 71040000 		.4byte	0x471
+ 1939 0583 1C       		.uleb128 0x1c
+ 1940 0584 01       		.byte	0x1
+ 1941 0585 25020000 		.4byte	.LASF74
+ 1942 0589 01       		.byte	0x1
+ 1943 058a 68       		.byte	0x68
+ 1944 058b 01       		.byte	0x1
+ 1945 058c 00000000 		.4byte	.LFB8
+ 1946 0590 2A000000 		.4byte	.LFE8
+ 1947 0594 02       		.byte	0x2
+ 1948 0595 7D       		.byte	0x7d
+ 1949 0596 00       		.sleb128 0
+ 1950 0597 F5050000 		.4byte	0x5f5
+ 1951 059b 17       		.uleb128 0x17
+ 1952 059c 65737000 		.ascii	"esp\000"
+ 1953 05a0 01       		.byte	0x1
+ 1954 05a1 68       		.byte	0x68
+ 1955 05a2 7D050000 		.4byte	0x57d
+ 1956 05a6 01       		.byte	0x1
+ 1957 05a7 50       		.byte	0x50
+ 1958 05a8 17       		.uleb128 0x17
+ 1959 05a9 656C7000 		.ascii	"elp\000"
+ 1960 05ad 01       		.byte	0x1
+ 1961 05ae 68       		.byte	0x68
+ 1962 05af 50040000 		.4byte	0x450
+ 1963 05b3 01       		.byte	0x1
+ 1964 05b4 51       		.byte	0x51
+ 1965 05b5 1A       		.uleb128 0x1a
+ 1966 05b6 7000     		.ascii	"p\000"
+ 1967 05b8 01       		.byte	0x1
+ 1968 05b9 69       		.byte	0x69
+ 1969 05ba 50040000 		.4byte	0x450
+ 1970 05be 46000000 		.4byte	.LLST3
+ 1971 05c2 19       		.uleb128 0x19
+ 1972 05c3 00000000 		.4byte	.LBB5
+ 1973 05c7 06000000 		.4byte	.LBE5
+ 1974 05cb DF050000 		.4byte	0x5df
+ 1975 05cf 1A       		.uleb128 0x1a
+ 1976 05d0 746D7000 		.ascii	"tmp\000"
+ 1977 05d4 01       		.byte	0x1
+ 1978 05d5 6E       		.byte	0x6e
+ 1979 05d6 70000000 		.4byte	0x70
+ 1980 05da 64000000 		.4byte	.LLST4
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 36
+
+
+ 1981 05de 00       		.byte	0
+ 1982 05df 1B       		.uleb128 0x1b
+ 1983 05e0 18000000 		.4byte	.Ldebug_ranges0+0x18
+ 1984 05e4 1A       		.uleb128 0x1a
+ 1985 05e5 746D7000 		.ascii	"tmp\000"
+ 1986 05e9 01       		.byte	0x1
+ 1987 05ea 76       		.byte	0x76
+ 1988 05eb 70000000 		.4byte	0x70
+ 1989 05ef 82000000 		.4byte	.LLST5
+ 1990 05f3 00       		.byte	0
+ 1991 05f4 00       		.byte	0
+ 1992 05f5 1D       		.uleb128 0x1d
+ 1993 05f6 01       		.byte	0x1
+ 1994 05f7 D3010000 		.4byte	.LASF75
+ 1995 05fb 01       		.byte	0x1
+ 1996 05fc 81       		.byte	0x81
+ 1997 05fd 01       		.byte	0x1
+ 1998 05fe E4000000 		.4byte	0xe4
+ 1999 0602 00000000 		.4byte	.LFB9
+ 2000 0606 26000000 		.4byte	.LFE9
+ 2001 060a A0000000 		.4byte	.LLST6
+ 2002 060e 61060000 		.4byte	0x661
+ 2003 0612 1E       		.uleb128 0x1e
+ 2004 0613 70010000 		.4byte	.LASF72
+ 2005 0617 01       		.byte	0x1
+ 2006 0618 81       		.byte	0x81
+ 2007 0619 E4000000 		.4byte	0xe4
+ 2008 061d C0000000 		.4byte	.LLST7
+ 2009 0621 1A       		.uleb128 0x1a
+ 2010 0622 6D00     		.ascii	"m\000"
+ 2011 0624 01       		.byte	0x1
+ 2012 0625 82       		.byte	0x82
+ 2013 0626 E4000000 		.4byte	0xe4
+ 2014 062a D3000000 		.4byte	.LLST8
+ 2015 062e 19       		.uleb128 0x19
+ 2016 062f 02000000 		.4byte	.LBB8
+ 2017 0633 08000000 		.4byte	.LBE8
+ 2018 0637 4B060000 		.4byte	0x64b
+ 2019 063b 1A       		.uleb128 0x1a
+ 2020 063c 746D7000 		.ascii	"tmp\000"
+ 2021 0640 01       		.byte	0x1
+ 2022 0641 84       		.byte	0x84
+ 2023 0642 70000000 		.4byte	0x70
+ 2024 0646 FA000000 		.4byte	.LLST9
+ 2025 064a 00       		.byte	0
+ 2026 064b 1B       		.uleb128 0x1b
+ 2027 064c 30000000 		.4byte	.Ldebug_ranges0+0x30
+ 2028 0650 1A       		.uleb128 0x1a
+ 2029 0651 746D7000 		.ascii	"tmp\000"
+ 2030 0655 01       		.byte	0x1
+ 2031 0656 89       		.byte	0x89
+ 2032 0657 70000000 		.4byte	0x70
+ 2033 065b 0D010000 		.4byte	.LLST10
+ 2034 065f 00       		.byte	0
+ 2035 0660 00       		.byte	0
+ 2036 0661 1F       		.uleb128 0x1f
+ 2037 0662 01       		.byte	0x1
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 37
+
+
+ 2038 0663 79000000 		.4byte	.LASF76
+ 2039 0667 01       		.byte	0x1
+ 2040 0668 96       		.byte	0x96
+ 2041 0669 01       		.byte	0x1
+ 2042 066a E4000000 		.4byte	0xe4
+ 2043 066e 00000000 		.4byte	.LFB10
+ 2044 0672 20000000 		.4byte	.LFE10
+ 2045 0676 02       		.byte	0x2
+ 2046 0677 7D       		.byte	0x7d
+ 2047 0678 00       		.sleb128 0
+ 2048 0679 BF060000 		.4byte	0x6bf
+ 2049 067d 1E       		.uleb128 0x1e
+ 2050 067e 70010000 		.4byte	.LASF72
+ 2051 0682 01       		.byte	0x1
+ 2052 0683 96       		.byte	0x96
+ 2053 0684 E4000000 		.4byte	0xe4
+ 2054 0688 20010000 		.4byte	.LLST11
+ 2055 068c 19       		.uleb128 0x19
+ 2056 068d 00000000 		.4byte	.LBB11
+ 2057 0691 06000000 		.4byte	.LBE11
+ 2058 0695 A9060000 		.4byte	0x6a9
+ 2059 0699 1A       		.uleb128 0x1a
+ 2060 069a 746D7000 		.ascii	"tmp\000"
+ 2061 069e 01       		.byte	0x1
+ 2062 069f 98       		.byte	0x98
+ 2063 06a0 70000000 		.4byte	0x70
+ 2064 06a4 3E010000 		.4byte	.LLST12
+ 2065 06a8 00       		.byte	0
+ 2066 06a9 1B       		.uleb128 0x1b
+ 2067 06aa 48000000 		.4byte	.Ldebug_ranges0+0x48
+ 2068 06ae 1A       		.uleb128 0x1a
+ 2069 06af 746D7000 		.ascii	"tmp\000"
+ 2070 06b3 01       		.byte	0x1
+ 2071 06b4 9C       		.byte	0x9c
+ 2072 06b5 70000000 		.4byte	0x70
+ 2073 06b9 51010000 		.4byte	.LLST13
+ 2074 06bd 00       		.byte	0
+ 2075 06be 00       		.byte	0
+ 2076 06bf 1F       		.uleb128 0x1f
+ 2077 06c0 01       		.byte	0x1
+ 2078 06c1 4D040000 		.4byte	.LASF77
+ 2079 06c5 01       		.byte	0x1
+ 2080 06c6 CA       		.byte	0xca
+ 2081 06c7 01       		.byte	0x1
+ 2082 06c8 EF000000 		.4byte	0xef
+ 2083 06cc 00000000 		.4byte	.LFB12
+ 2084 06d0 14000000 		.4byte	.LFE12
+ 2085 06d4 02       		.byte	0x2
+ 2086 06d5 7D       		.byte	0x7d
+ 2087 06d6 00       		.sleb128 0
+ 2088 06d7 2D070000 		.4byte	0x72d
+ 2089 06db 20       		.uleb128 0x20
+ 2090 06dc 656C7000 		.ascii	"elp\000"
+ 2091 06e0 01       		.byte	0x1
+ 2092 06e1 CA       		.byte	0xca
+ 2093 06e2 50040000 		.4byte	0x450
+ 2094 06e6 64010000 		.4byte	.LLST14
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 38
+
+
+ 2095 06ea 21       		.uleb128 0x21
+ 2096 06eb F0030000 		.4byte	.LASF78
+ 2097 06ef 01       		.byte	0x1
+ 2098 06f0 CB       		.byte	0xcb
+ 2099 06f1 EF000000 		.4byte	0xef
+ 2100 06f5 02       		.byte	0x2
+ 2101 06f6 72       		.byte	0x72
+ 2102 06f7 0C       		.sleb128 12
+ 2103 06f8 19       		.uleb128 0x19
+ 2104 06f9 02000000 		.4byte	.LBB14
+ 2105 06fd 08000000 		.4byte	.LBE14
+ 2106 0701 15070000 		.4byte	0x715
+ 2107 0705 1A       		.uleb128 0x1a
+ 2108 0706 746D7000 		.ascii	"tmp\000"
+ 2109 070a 01       		.byte	0x1
+ 2110 070b CD       		.byte	0xcd
+ 2111 070c 70000000 		.4byte	0x70
+ 2112 0710 82010000 		.4byte	.LLST15
+ 2113 0714 00       		.byte	0
+ 2114 0715 22       		.uleb128 0x22
+ 2115 0716 0E000000 		.4byte	.LBB15
+ 2116 071a 12000000 		.4byte	.LBE15
+ 2117 071e 23       		.uleb128 0x23
+ 2118 071f 746D7000 		.ascii	"tmp\000"
+ 2119 0723 01       		.byte	0x1
+ 2120 0724 D2       		.byte	0xd2
+ 2121 0725 70000000 		.4byte	0x70
+ 2122 0729 01       		.byte	0x1
+ 2123 072a 53       		.byte	0x53
+ 2124 072b 00       		.byte	0
+ 2125 072c 00       		.byte	0
+ 2126 072d 24       		.uleb128 0x24
+ 2127 072e E6040000 		.4byte	0x4e6
+ 2128 0732 00000000 		.4byte	.LFB14
+ 2129 0736 2E000000 		.4byte	.LFE14
+ 2130 073a 95010000 		.4byte	.LLST16
+ 2131 073e 7D070000 		.4byte	0x77d
+ 2132 0742 25       		.uleb128 0x25
+ 2133 0743 F4040000 		.4byte	0x4f4
+ 2134 0747 B5010000 		.4byte	.LLST17
+ 2135 074b 25       		.uleb128 0x25
+ 2136 074c FE040000 		.4byte	0x4fe
+ 2137 0750 D3010000 		.4byte	.LLST18
+ 2138 0754 26       		.uleb128 0x26
+ 2139 0755 E6040000 		.4byte	0x4e6
+ 2140 0759 1C000000 		.4byte	.LBB18
+ 2141 075d 26000000 		.4byte	.LBE18
+ 2142 0761 01       		.byte	0x1
+ 2143 0762 F4       		.byte	0xf4
+ 2144 0763 25       		.uleb128 0x25
+ 2145 0764 F4040000 		.4byte	0x4f4
+ 2146 0768 E6010000 		.4byte	.LLST19
+ 2147 076c 22       		.uleb128 0x22
+ 2148 076d 1C000000 		.4byte	.LBB19
+ 2149 0771 26000000 		.4byte	.LBE19
+ 2150 0775 27       		.uleb128 0x27
+ 2151 0776 FE040000 		.4byte	0x4fe
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 39
+
+
+ 2152 077a 00       		.byte	0
+ 2153 077b 00       		.byte	0
+ 2154 077c 00       		.byte	0
+ 2155 077d 16       		.uleb128 0x16
+ 2156 077e 01       		.byte	0x1
+ 2157 077f 0D000000 		.4byte	.LASF79
+ 2158 0783 01       		.byte	0x1
+ 2159 0784 DE       		.byte	0xde
+ 2160 0785 01       		.byte	0x1
+ 2161 0786 00000000 		.4byte	.LFB13
+ 2162 078a 18000000 		.4byte	.LFE13
+ 2163 078e F9010000 		.4byte	.LLST20
+ 2164 0792 EA070000 		.4byte	0x7ea
+ 2165 0796 20       		.uleb128 0x20
+ 2166 0797 747000   		.ascii	"tp\000"
+ 2167 079a 01       		.byte	0x1
+ 2168 079b DE       		.byte	0xde
+ 2169 079c 5A020000 		.4byte	0x25a
+ 2170 07a0 19020000 		.4byte	.LLST21
+ 2171 07a4 1E       		.uleb128 0x1e
+ 2172 07a5 70010000 		.4byte	.LASF72
+ 2173 07a9 01       		.byte	0x1
+ 2174 07aa DE       		.byte	0xde
+ 2175 07ab E4000000 		.4byte	0xe4
+ 2176 07af 2C020000 		.4byte	.LLST22
+ 2177 07b3 19       		.uleb128 0x19
+ 2178 07b4 02000000 		.4byte	.LBB20
+ 2179 07b8 08000000 		.4byte	.LBE20
+ 2180 07bc D0070000 		.4byte	0x7d0
+ 2181 07c0 1A       		.uleb128 0x1a
+ 2182 07c1 746D7000 		.ascii	"tmp\000"
+ 2183 07c5 01       		.byte	0x1
+ 2184 07c6 E2       		.byte	0xe2
+ 2185 07c7 70000000 		.4byte	0x70
+ 2186 07cb 3F020000 		.4byte	.LLST23
+ 2187 07cf 00       		.byte	0
+ 2188 07d0 22       		.uleb128 0x22
+ 2189 07d1 10000000 		.4byte	.LBB21
+ 2190 07d5 16000000 		.4byte	.LBE21
+ 2191 07d9 1A       		.uleb128 0x1a
+ 2192 07da 746D7000 		.ascii	"tmp\000"
+ 2193 07de 01       		.byte	0x1
+ 2194 07df E5       		.byte	0xe5
+ 2195 07e0 70000000 		.4byte	0x70
+ 2196 07e4 52020000 		.4byte	.LLST24
+ 2197 07e8 00       		.byte	0
+ 2198 07e9 00       		.byte	0
+ 2199 07ea 16       		.uleb128 0x16
+ 2200 07eb 01       		.byte	0x1
+ 2201 07ec 4B010000 		.4byte	.LASF80
+ 2202 07f0 01       		.byte	0x1
+ 2203 07f1 B1       		.byte	0xb1
+ 2204 07f2 01       		.byte	0x1
+ 2205 07f3 00000000 		.4byte	.LFB11
+ 2206 07f7 20000000 		.4byte	.LFE11
+ 2207 07fb 65020000 		.4byte	.LLST25
+ 2208 07ff 31080000 		.4byte	0x831
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 40
+
+
+ 2209 0803 20       		.uleb128 0x20
+ 2210 0804 65737000 		.ascii	"esp\000"
+ 2211 0808 01       		.byte	0x1
+ 2212 0809 B1       		.byte	0xb1
+ 2213 080a 7D050000 		.4byte	0x57d
+ 2214 080e 85020000 		.4byte	.LLST26
+ 2215 0812 1E       		.uleb128 0x1e
+ 2216 0813 F0030000 		.4byte	.LASF78
+ 2217 0817 01       		.byte	0x1
+ 2218 0818 B1       		.byte	0xb1
+ 2219 0819 EF000000 		.4byte	0xef
+ 2220 081d A3020000 		.4byte	.LLST27
+ 2221 0821 1A       		.uleb128 0x1a
+ 2222 0822 656C7000 		.ascii	"elp\000"
+ 2223 0826 01       		.byte	0x1
+ 2224 0827 B2       		.byte	0xb2
+ 2225 0828 50040000 		.4byte	0x450
+ 2226 082c C1020000 		.4byte	.LLST28
+ 2227 0830 00       		.byte	0
+ 2228 0831 28       		.uleb128 0x28
+ 2229 0832 01       		.byte	0x1
+ 2230 0833 7E010000 		.4byte	.LASF81
+ 2231 0837 01       		.byte	0x1
+ 2232 0838 0F01     		.2byte	0x10f
+ 2233 083a 01       		.byte	0x1
+ 2234 083b 00000000 		.4byte	.LFB15
+ 2235 083f 18000000 		.4byte	.LFE15
+ 2236 0843 E0020000 		.4byte	.LLST29
+ 2237 0847 A4080000 		.4byte	0x8a4
+ 2238 084b 29       		.uleb128 0x29
+ 2239 084c 65737000 		.ascii	"esp\000"
+ 2240 0850 01       		.byte	0x1
+ 2241 0851 0F01     		.2byte	0x10f
+ 2242 0853 7D050000 		.4byte	0x57d
+ 2243 0857 00030000 		.4byte	.LLST30
+ 2244 085b 2A       		.uleb128 0x2a
+ 2245 085c F0030000 		.4byte	.LASF78
+ 2246 0860 01       		.byte	0x1
+ 2247 0861 0F01     		.2byte	0x10f
+ 2248 0863 EF000000 		.4byte	0xef
+ 2249 0867 13030000 		.4byte	.LLST31
+ 2250 086b 19       		.uleb128 0x19
+ 2251 086c 02000000 		.4byte	.LBB22
+ 2252 0870 08000000 		.4byte	.LBE22
+ 2253 0874 89080000 		.4byte	0x889
+ 2254 0878 2B       		.uleb128 0x2b
+ 2255 0879 746D7000 		.ascii	"tmp\000"
+ 2256 087d 01       		.byte	0x1
+ 2257 087e 1101     		.2byte	0x111
+ 2258 0880 70000000 		.4byte	0x70
+ 2259 0884 26030000 		.4byte	.LLST32
+ 2260 0888 00       		.byte	0
+ 2261 0889 22       		.uleb128 0x22
+ 2262 088a 10000000 		.4byte	.LBB23
+ 2263 088e 16000000 		.4byte	.LBE23
+ 2264 0892 2B       		.uleb128 0x2b
+ 2265 0893 746D7000 		.ascii	"tmp\000"
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 41
+
+
+ 2266 0897 01       		.byte	0x1
+ 2267 0898 1401     		.2byte	0x114
+ 2268 089a 70000000 		.4byte	0x70
+ 2269 089e 39030000 		.4byte	.LLST33
+ 2270 08a2 00       		.byte	0
+ 2271 08a3 00       		.byte	0
+ 2272 08a4 2C       		.uleb128 0x2c
+ 2273 08a5 01       		.byte	0x1
+ 2274 08a6 3B030000 		.4byte	.LASF82
+ 2275 08aa 01       		.byte	0x1
+ 2276 08ab 2201     		.2byte	0x122
+ 2277 08ad 01       		.byte	0x1
+ 2278 08ae EF000000 		.4byte	0xef
+ 2279 08b2 00000000 		.4byte	.LFB16
+ 2280 08b6 0A000000 		.4byte	.LFE16
+ 2281 08ba 02       		.byte	0x2
+ 2282 08bb 7D       		.byte	0x7d
+ 2283 08bc 00       		.sleb128 0
+ 2284 08bd E1080000 		.4byte	0x8e1
+ 2285 08c1 29       		.uleb128 0x29
+ 2286 08c2 656C7000 		.ascii	"elp\000"
+ 2287 08c6 01       		.byte	0x1
+ 2288 08c7 2201     		.2byte	0x122
+ 2289 08c9 50040000 		.4byte	0x450
+ 2290 08cd 4C030000 		.4byte	.LLST34
+ 2291 08d1 2D       		.uleb128 0x2d
+ 2292 08d2 F0030000 		.4byte	.LASF78
+ 2293 08d6 01       		.byte	0x1
+ 2294 08d7 2301     		.2byte	0x123
+ 2295 08d9 EF000000 		.4byte	0xef
+ 2296 08dd 02       		.byte	0x2
+ 2297 08de 73       		.byte	0x73
+ 2298 08df 0C       		.sleb128 12
+ 2299 08e0 00       		.byte	0
+ 2300 08e1 28       		.uleb128 0x28
+ 2301 08e2 01       		.byte	0x1
+ 2302 08e3 5B020000 		.4byte	.LASF83
+ 2303 08e7 01       		.byte	0x1
+ 2304 08e8 3401     		.2byte	0x134
+ 2305 08ea 01       		.byte	0x1
+ 2306 08eb 00000000 		.4byte	.LFB17
+ 2307 08ef 30000000 		.4byte	.LFE17
+ 2308 08f3 6A030000 		.4byte	.LLST35
+ 2309 08f7 2C090000 		.4byte	0x92c
+ 2310 08fb 2A       		.uleb128 0x2a
+ 2311 08fc B0020000 		.4byte	.LASF84
+ 2312 0900 01       		.byte	0x1
+ 2313 0901 3401     		.2byte	0x134
+ 2314 0903 2C090000 		.4byte	0x92c
+ 2315 0907 8A030000 		.4byte	.LLST36
+ 2316 090b 2A       		.uleb128 0x2a
+ 2317 090c 70010000 		.4byte	.LASF72
+ 2318 0910 01       		.byte	0x1
+ 2319 0911 3401     		.2byte	0x134
+ 2320 0913 E4000000 		.4byte	0xe4
+ 2321 0917 A8030000 		.4byte	.LLST37
+ 2322 091b 2B       		.uleb128 0x2b
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 42
+
+
+ 2323 091c 65696400 		.ascii	"eid\000"
+ 2324 0920 01       		.byte	0x1
+ 2325 0921 3501     		.2byte	0x135
+ 2326 0923 D9000000 		.4byte	0xd9
+ 2327 0927 C6030000 		.4byte	.LLST38
+ 2328 092b 00       		.byte	0
+ 2329 092c 09       		.uleb128 0x9
+ 2330 092d 04       		.byte	0x4
+ 2331 092e 32090000 		.4byte	0x932
+ 2332 0932 12       		.uleb128 0x12
+ 2333 0933 7C040000 		.4byte	0x47c
+ 2334 0937 2E       		.uleb128 0x2e
+ 2335 0938 01       		.byte	0x1
+ 2336 0939 EC020000 		.4byte	.LASF85
+ 2337 093d 01       		.byte	0x1
+ 2338 093e 5701     		.2byte	0x157
+ 2339 0940 01       		.byte	0x1
+ 2340 0941 E4000000 		.4byte	0xe4
+ 2341 0945 00000000 		.4byte	.LFB18
+ 2342 0949 3C000000 		.4byte	.LFE18
+ 2343 094d F0030000 		.4byte	.LLST39
+ 2344 0951 BC090000 		.4byte	0x9bc
+ 2345 0955 2A       		.uleb128 0x2a
+ 2346 0956 70010000 		.4byte	.LASF72
+ 2347 095a 01       		.byte	0x1
+ 2348 095b 5701     		.2byte	0x157
+ 2349 095d E4000000 		.4byte	0xe4
+ 2350 0961 10040000 		.4byte	.LLST40
+ 2351 0965 2B       		.uleb128 0x2b
+ 2352 0966 63747000 		.ascii	"ctp\000"
+ 2353 096a 01       		.byte	0x1
+ 2354 096b 5801     		.2byte	0x158
+ 2355 096d 5A020000 		.4byte	0x25a
+ 2356 0971 2E040000 		.4byte	.LLST41
+ 2357 0975 2B       		.uleb128 0x2b
+ 2358 0976 6D00     		.ascii	"m\000"
+ 2359 0978 01       		.byte	0x1
+ 2360 0979 5901     		.2byte	0x159
+ 2361 097b E4000000 		.4byte	0xe4
+ 2362 097f 4D040000 		.4byte	.LLST42
+ 2363 0983 19       		.uleb128 0x19
+ 2364 0984 08000000 		.4byte	.LBB24
+ 2365 0988 0E000000 		.4byte	.LBE24
+ 2366 098c A1090000 		.4byte	0x9a1
+ 2367 0990 2B       		.uleb128 0x2b
+ 2368 0991 746D7000 		.ascii	"tmp\000"
+ 2369 0995 01       		.byte	0x1
+ 2370 0996 5B01     		.2byte	0x15b
+ 2371 0998 70000000 		.4byte	0x70
+ 2372 099c 6B040000 		.4byte	.LLST43
+ 2373 09a0 00       		.byte	0
+ 2374 09a1 22       		.uleb128 0x22
+ 2375 09a2 2E000000 		.4byte	.LBB25
+ 2376 09a6 34000000 		.4byte	.LBE25
+ 2377 09aa 2B       		.uleb128 0x2b
+ 2378 09ab 746D7000 		.ascii	"tmp\000"
+ 2379 09af 01       		.byte	0x1
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 43
+
+
+ 2380 09b0 6501     		.2byte	0x165
+ 2381 09b2 70000000 		.4byte	0x70
+ 2382 09b6 7E040000 		.4byte	.LLST44
+ 2383 09ba 00       		.byte	0
+ 2384 09bb 00       		.byte	0
+ 2385 09bc 2E       		.uleb128 0x2e
+ 2386 09bd 01       		.byte	0x1
+ 2387 09be 3E010000 		.4byte	.LASF86
+ 2388 09c2 01       		.byte	0x1
+ 2389 09c3 7401     		.2byte	0x174
+ 2390 09c5 01       		.byte	0x1
+ 2391 09c6 E4000000 		.4byte	0xe4
+ 2392 09ca 00000000 		.4byte	.LFB19
+ 2393 09ce 34000000 		.4byte	.LFE19
+ 2394 09d2 91040000 		.4byte	.LLST45
+ 2395 09d6 410A0000 		.4byte	0xa41
+ 2396 09da 2A       		.uleb128 0x2a
+ 2397 09db 70010000 		.4byte	.LASF72
+ 2398 09df 01       		.byte	0x1
+ 2399 09e0 7401     		.2byte	0x174
+ 2400 09e2 E4000000 		.4byte	0xe4
+ 2401 09e6 B1040000 		.4byte	.LLST46
+ 2402 09ea 2B       		.uleb128 0x2b
+ 2403 09eb 63747000 		.ascii	"ctp\000"
+ 2404 09ef 01       		.byte	0x1
+ 2405 09f0 7501     		.2byte	0x175
+ 2406 09f2 5A020000 		.4byte	0x25a
+ 2407 09f6 CF040000 		.4byte	.LLST47
+ 2408 09fa 2B       		.uleb128 0x2b
+ 2409 09fb 6D00     		.ascii	"m\000"
+ 2410 09fd 01       		.byte	0x1
+ 2411 09fe 7601     		.2byte	0x176
+ 2412 0a00 E4000000 		.4byte	0xe4
+ 2413 0a04 EE040000 		.4byte	.LLST48
+ 2414 0a08 19       		.uleb128 0x19
+ 2415 0a09 08000000 		.4byte	.LBB26
+ 2416 0a0d 0E000000 		.4byte	.LBE26
+ 2417 0a11 260A0000 		.4byte	0xa26
+ 2418 0a15 2B       		.uleb128 0x2b
+ 2419 0a16 746D7000 		.ascii	"tmp\000"
+ 2420 0a1a 01       		.byte	0x1
+ 2421 0a1b 7801     		.2byte	0x178
+ 2422 0a1d 70000000 		.4byte	0x70
+ 2423 0a21 01050000 		.4byte	.LLST49
+ 2424 0a25 00       		.byte	0
+ 2425 0a26 22       		.uleb128 0x22
+ 2426 0a27 28000000 		.4byte	.LBB27
+ 2427 0a2b 2E000000 		.4byte	.LBE27
+ 2428 0a2f 2B       		.uleb128 0x2b
+ 2429 0a30 746D7000 		.ascii	"tmp\000"
+ 2430 0a34 01       		.byte	0x1
+ 2431 0a35 8101     		.2byte	0x181
+ 2432 0a37 70000000 		.4byte	0x70
+ 2433 0a3b 14050000 		.4byte	.LLST50
+ 2434 0a3f 00       		.byte	0
+ 2435 0a40 00       		.byte	0
+ 2436 0a41 2E       		.uleb128 0x2e
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 44
+
+
+ 2437 0a42 01       		.byte	0x1
+ 2438 0a43 89020000 		.4byte	.LASF87
+ 2439 0a47 01       		.byte	0x1
+ 2440 0a48 9001     		.2byte	0x190
+ 2441 0a4a 01       		.byte	0x1
+ 2442 0a4b E4000000 		.4byte	0xe4
+ 2443 0a4f 00000000 		.4byte	.LFB20
+ 2444 0a53 38000000 		.4byte	.LFE20
+ 2445 0a57 27050000 		.4byte	.LLST51
+ 2446 0a5b B80A0000 		.4byte	0xab8
+ 2447 0a5f 2A       		.uleb128 0x2a
+ 2448 0a60 70010000 		.4byte	.LASF72
+ 2449 0a64 01       		.byte	0x1
+ 2450 0a65 9001     		.2byte	0x190
+ 2451 0a67 E4000000 		.4byte	0xe4
+ 2452 0a6b 47050000 		.4byte	.LLST52
+ 2453 0a6f 2B       		.uleb128 0x2b
+ 2454 0a70 63747000 		.ascii	"ctp\000"
+ 2455 0a74 01       		.byte	0x1
+ 2456 0a75 9101     		.2byte	0x191
+ 2457 0a77 5A020000 		.4byte	0x25a
+ 2458 0a7b 65050000 		.4byte	.LLST53
+ 2459 0a7f 19       		.uleb128 0x19
+ 2460 0a80 08000000 		.4byte	.LBB28
+ 2461 0a84 0E000000 		.4byte	.LBE28
+ 2462 0a88 9D0A0000 		.4byte	0xa9d
+ 2463 0a8c 2B       		.uleb128 0x2b
+ 2464 0a8d 746D7000 		.ascii	"tmp\000"
+ 2465 0a91 01       		.byte	0x1
+ 2466 0a92 9301     		.2byte	0x193
+ 2467 0a94 70000000 		.4byte	0x70
+ 2468 0a98 84050000 		.4byte	.LLST54
+ 2469 0a9c 00       		.byte	0
+ 2470 0a9d 22       		.uleb128 0x22
+ 2471 0a9e 28000000 		.4byte	.LBB29
+ 2472 0aa2 2E000000 		.4byte	.LBE29
+ 2473 0aa6 2B       		.uleb128 0x2b
+ 2474 0aa7 746D7000 		.ascii	"tmp\000"
+ 2475 0aab 01       		.byte	0x1
+ 2476 0aac 9B01     		.2byte	0x19b
+ 2477 0aae 70000000 		.4byte	0x70
+ 2478 0ab2 97050000 		.4byte	.LLST55
+ 2479 0ab6 00       		.byte	0
+ 2480 0ab7 00       		.byte	0
+ 2481 0ab8 2E       		.uleb128 0x2e
+ 2482 0ab9 01       		.byte	0x1
+ 2483 0aba 23040000 		.4byte	.LASF88
+ 2484 0abe 01       		.byte	0x1
+ 2485 0abf B701     		.2byte	0x1b7
+ 2486 0ac1 01       		.byte	0x1
+ 2487 0ac2 E4000000 		.4byte	0xe4
+ 2488 0ac6 00000000 		.4byte	.LFB21
+ 2489 0aca 4C000000 		.4byte	.LFE21
+ 2490 0ace AA050000 		.4byte	.LLST56
+ 2491 0ad2 6B0B0000 		.4byte	0xb6b
+ 2492 0ad6 2A       		.uleb128 0x2a
+ 2493 0ad7 70010000 		.4byte	.LASF72
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 45
+
+
+ 2494 0adb 01       		.byte	0x1
+ 2495 0adc B701     		.2byte	0x1b7
+ 2496 0ade E4000000 		.4byte	0xe4
+ 2497 0ae2 CA050000 		.4byte	.LLST57
+ 2498 0ae6 2A       		.uleb128 0x2a
+ 2499 0ae7 84020000 		.4byte	.LASF89
+ 2500 0aeb 01       		.byte	0x1
+ 2501 0aec B701     		.2byte	0x1b7
+ 2502 0aee FA000000 		.4byte	0xfa
+ 2503 0af2 E8050000 		.4byte	.LLST58
+ 2504 0af6 2B       		.uleb128 0x2b
+ 2505 0af7 63747000 		.ascii	"ctp\000"
+ 2506 0afb 01       		.byte	0x1
+ 2507 0afc B801     		.2byte	0x1b8
+ 2508 0afe 5A020000 		.4byte	0x25a
+ 2509 0b02 06060000 		.4byte	.LLST59
+ 2510 0b06 2B       		.uleb128 0x2b
+ 2511 0b07 6D00     		.ascii	"m\000"
+ 2512 0b09 01       		.byte	0x1
+ 2513 0b0a B901     		.2byte	0x1b9
+ 2514 0b0c E4000000 		.4byte	0xe4
+ 2515 0b10 25060000 		.4byte	.LLST60
+ 2516 0b14 19       		.uleb128 0x19
+ 2517 0b15 08000000 		.4byte	.LBB30
+ 2518 0b19 0E000000 		.4byte	.LBE30
+ 2519 0b1d 320B0000 		.4byte	0xb32
+ 2520 0b21 2B       		.uleb128 0x2b
+ 2521 0b22 746D7000 		.ascii	"tmp\000"
+ 2522 0b26 01       		.byte	0x1
+ 2523 0b27 BB01     		.2byte	0x1bb
+ 2524 0b29 70000000 		.4byte	0x70
+ 2525 0b2d 38060000 		.4byte	.LLST61
+ 2526 0b31 00       		.byte	0
+ 2527 0b32 19       		.uleb128 0x19
+ 2528 0b33 18000000 		.4byte	.LBB31
+ 2529 0b37 1E000000 		.4byte	.LBE31
+ 2530 0b3b 500B0000 		.4byte	0xb50
+ 2531 0b3f 2B       		.uleb128 0x2b
+ 2532 0b40 746D7000 		.ascii	"tmp\000"
+ 2533 0b44 01       		.byte	0x1
+ 2534 0b45 C401     		.2byte	0x1c4
+ 2535 0b47 70000000 		.4byte	0x70
+ 2536 0b4b 4B060000 		.4byte	.LLST62
+ 2537 0b4f 00       		.byte	0
+ 2538 0b50 22       		.uleb128 0x22
+ 2539 0b51 3E000000 		.4byte	.LBB32
+ 2540 0b55 44000000 		.4byte	.LBE32
+ 2541 0b59 2B       		.uleb128 0x2b
+ 2542 0b5a 746D7000 		.ascii	"tmp\000"
+ 2543 0b5e 01       		.byte	0x1
+ 2544 0b5f CC01     		.2byte	0x1cc
+ 2545 0b61 70000000 		.4byte	0x70
+ 2546 0b65 5E060000 		.4byte	.LLST63
+ 2547 0b69 00       		.byte	0
+ 2548 0b6a 00       		.byte	0
+ 2549 0b6b 2E       		.uleb128 0x2e
+ 2550 0b6c 01       		.byte	0x1
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 46
+
+
+ 2551 0b6d 91000000 		.4byte	.LASF90
+ 2552 0b71 01       		.byte	0x1
+ 2553 0b72 E201     		.2byte	0x1e2
+ 2554 0b74 01       		.byte	0x1
+ 2555 0b75 E4000000 		.4byte	0xe4
+ 2556 0b79 00000000 		.4byte	.LFB22
+ 2557 0b7d 48000000 		.4byte	.LFE22
+ 2558 0b81 71060000 		.4byte	.LLST64
+ 2559 0b85 1E0C0000 		.4byte	0xc1e
+ 2560 0b89 2A       		.uleb128 0x2a
+ 2561 0b8a 70010000 		.4byte	.LASF72
+ 2562 0b8e 01       		.byte	0x1
+ 2563 0b8f E201     		.2byte	0x1e2
+ 2564 0b91 E4000000 		.4byte	0xe4
+ 2565 0b95 91060000 		.4byte	.LLST65
+ 2566 0b99 2A       		.uleb128 0x2a
+ 2567 0b9a 84020000 		.4byte	.LASF89
+ 2568 0b9e 01       		.byte	0x1
+ 2569 0b9f E201     		.2byte	0x1e2
+ 2570 0ba1 FA000000 		.4byte	0xfa
+ 2571 0ba5 AF060000 		.4byte	.LLST66
+ 2572 0ba9 2B       		.uleb128 0x2b
+ 2573 0baa 63747000 		.ascii	"ctp\000"
+ 2574 0bae 01       		.byte	0x1
+ 2575 0baf E301     		.2byte	0x1e3
+ 2576 0bb1 5A020000 		.4byte	0x25a
+ 2577 0bb5 CD060000 		.4byte	.LLST67
+ 2578 0bb9 2B       		.uleb128 0x2b
+ 2579 0bba 6D00     		.ascii	"m\000"
+ 2580 0bbc 01       		.byte	0x1
+ 2581 0bbd E401     		.2byte	0x1e4
+ 2582 0bbf E4000000 		.4byte	0xe4
+ 2583 0bc3 EC060000 		.4byte	.LLST68
+ 2584 0bc7 19       		.uleb128 0x19
+ 2585 0bc8 08000000 		.4byte	.LBB33
+ 2586 0bcc 0E000000 		.4byte	.LBE33
+ 2587 0bd0 E50B0000 		.4byte	0xbe5
+ 2588 0bd4 2B       		.uleb128 0x2b
+ 2589 0bd5 746D7000 		.ascii	"tmp\000"
+ 2590 0bd9 01       		.byte	0x1
+ 2591 0bda E601     		.2byte	0x1e6
+ 2592 0bdc 70000000 		.4byte	0x70
+ 2593 0be0 FF060000 		.4byte	.LLST69
+ 2594 0be4 00       		.byte	0
+ 2595 0be5 19       		.uleb128 0x19
+ 2596 0be6 18000000 		.4byte	.LBB34
+ 2597 0bea 1E000000 		.4byte	.LBE34
+ 2598 0bee 030C0000 		.4byte	0xc03
+ 2599 0bf2 2B       		.uleb128 0x2b
+ 2600 0bf3 746D7000 		.ascii	"tmp\000"
+ 2601 0bf7 01       		.byte	0x1
+ 2602 0bf8 EF01     		.2byte	0x1ef
+ 2603 0bfa 70000000 		.4byte	0x70
+ 2604 0bfe 12070000 		.4byte	.LLST70
+ 2605 0c02 00       		.byte	0
+ 2606 0c03 22       		.uleb128 0x22
+ 2607 0c04 3A000000 		.4byte	.LBB35
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 47
+
+
+ 2608 0c08 40000000 		.4byte	.LBE35
+ 2609 0c0c 2B       		.uleb128 0x2b
+ 2610 0c0d 746D7000 		.ascii	"tmp\000"
+ 2611 0c11 01       		.byte	0x1
+ 2612 0c12 F601     		.2byte	0x1f6
+ 2613 0c14 70000000 		.4byte	0x70
+ 2614 0c18 25070000 		.4byte	.LLST71
+ 2615 0c1c 00       		.byte	0
+ 2616 0c1d 00       		.byte	0
+ 2617 0c1e 2E       		.uleb128 0x2e
+ 2618 0c1f 01       		.byte	0x1
+ 2619 0c20 FE000000 		.4byte	.LASF91
+ 2620 0c24 01       		.byte	0x1
+ 2621 0c25 0B02     		.2byte	0x20b
+ 2622 0c27 01       		.byte	0x1
+ 2623 0c28 E4000000 		.4byte	0xe4
+ 2624 0c2c 00000000 		.4byte	.LFB23
+ 2625 0c30 54000000 		.4byte	.LFE23
+ 2626 0c34 38070000 		.4byte	.LLST72
+ 2627 0c38 E10C0000 		.4byte	0xce1
+ 2628 0c3c 2A       		.uleb128 0x2a
+ 2629 0c3d 70010000 		.4byte	.LASF72
+ 2630 0c41 01       		.byte	0x1
+ 2631 0c42 0B02     		.2byte	0x20b
+ 2632 0c44 E4000000 		.4byte	0xe4
+ 2633 0c48 58070000 		.4byte	.LLST73
+ 2634 0c4c 2A       		.uleb128 0x2a
+ 2635 0c4d 84020000 		.4byte	.LASF89
+ 2636 0c51 01       		.byte	0x1
+ 2637 0c52 0B02     		.2byte	0x20b
+ 2638 0c54 FA000000 		.4byte	0xfa
+ 2639 0c58 8C070000 		.4byte	.LLST74
+ 2640 0c5c 2B       		.uleb128 0x2b
+ 2641 0c5d 63747000 		.ascii	"ctp\000"
+ 2642 0c61 01       		.byte	0x1
+ 2643 0c62 0C02     		.2byte	0x20c
+ 2644 0c64 5A020000 		.4byte	0x25a
+ 2645 0c68 9F070000 		.4byte	.LLST75
+ 2646 0c6c 19       		.uleb128 0x19
+ 2647 0c6d 08000000 		.4byte	.LBB36
+ 2648 0c71 0E000000 		.4byte	.LBE36
+ 2649 0c75 8A0C0000 		.4byte	0xc8a
+ 2650 0c79 2B       		.uleb128 0x2b
+ 2651 0c7a 746D7000 		.ascii	"tmp\000"
+ 2652 0c7e 01       		.byte	0x1
+ 2653 0c7f 0E02     		.2byte	0x20e
+ 2654 0c81 70000000 		.4byte	0x70
+ 2655 0c85 BE070000 		.4byte	.LLST76
+ 2656 0c89 00       		.byte	0
+ 2657 0c8a 19       		.uleb128 0x19
+ 2658 0c8b 1A000000 		.4byte	.LBB37
+ 2659 0c8f 20000000 		.4byte	.LBE37
+ 2660 0c93 A80C0000 		.4byte	0xca8
+ 2661 0c97 2B       		.uleb128 0x2b
+ 2662 0c98 746D7000 		.ascii	"tmp\000"
+ 2663 0c9c 01       		.byte	0x1
+ 2664 0c9d 1202     		.2byte	0x212
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 48
+
+
+ 2665 0c9f 70000000 		.4byte	0x70
+ 2666 0ca3 D1070000 		.4byte	.LLST77
+ 2667 0ca7 00       		.byte	0
+ 2668 0ca8 19       		.uleb128 0x19
+ 2669 0ca9 3A000000 		.4byte	.LBB38
+ 2670 0cad 40000000 		.4byte	.LBE38
+ 2671 0cb1 C60C0000 		.4byte	0xcc6
+ 2672 0cb5 2B       		.uleb128 0x2b
+ 2673 0cb6 746D7000 		.ascii	"tmp\000"
+ 2674 0cba 01       		.byte	0x1
+ 2675 0cbb 1D02     		.2byte	0x21d
+ 2676 0cbd 70000000 		.4byte	0x70
+ 2677 0cc1 E4070000 		.4byte	.LLST78
+ 2678 0cc5 00       		.byte	0
+ 2679 0cc6 22       		.uleb128 0x22
+ 2680 0cc7 44000000 		.4byte	.LBB39
+ 2681 0ccb 4A000000 		.4byte	.LBE39
+ 2682 0ccf 2B       		.uleb128 0x2b
+ 2683 0cd0 746D7000 		.ascii	"tmp\000"
+ 2684 0cd4 01       		.byte	0x1
+ 2685 0cd5 1702     		.2byte	0x217
+ 2686 0cd7 70000000 		.4byte	0x70
+ 2687 0cdb F7070000 		.4byte	.LLST79
+ 2688 0cdf 00       		.byte	0
+ 2689 0ce0 00       		.byte	0
+ 2690 0ce1 2F       		.uleb128 0x2f
+ 2691 0ce2 E2030000 		.4byte	.LASF92
+ 2692 0ce6 07       		.byte	0x7
+ 2693 0ce7 68       		.byte	0x68
+ 2694 0ce8 AD030000 		.4byte	0x3ad
+ 2695 0cec 01       		.byte	0x1
+ 2696 0ced 01       		.byte	0x1
+ 2697 0cee 2F       		.uleb128 0x2f
+ 2698 0cef E2030000 		.4byte	.LASF92
+ 2699 0cf3 07       		.byte	0x7
+ 2700 0cf4 68       		.byte	0x68
+ 2701 0cf5 AD030000 		.4byte	0x3ad
+ 2702 0cf9 01       		.byte	0x1
+ 2703 0cfa 01       		.byte	0x1
+ 2704 0cfb 00       		.byte	0
+ 2705              		.section	.debug_abbrev,"",%progbits
+ 2706              	.Ldebug_abbrev0:
+ 2707 0000 01       		.uleb128 0x1
+ 2708 0001 11       		.uleb128 0x11
+ 2709 0002 01       		.byte	0x1
+ 2710 0003 25       		.uleb128 0x25
+ 2711 0004 0E       		.uleb128 0xe
+ 2712 0005 13       		.uleb128 0x13
+ 2713 0006 0B       		.uleb128 0xb
+ 2714 0007 03       		.uleb128 0x3
+ 2715 0008 0E       		.uleb128 0xe
+ 2716 0009 1B       		.uleb128 0x1b
+ 2717 000a 0E       		.uleb128 0xe
+ 2718 000b 11       		.uleb128 0x11
+ 2719 000c 01       		.uleb128 0x1
+ 2720 000d 52       		.uleb128 0x52
+ 2721 000e 01       		.uleb128 0x1
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 49
+
+
+ 2722 000f 55       		.uleb128 0x55
+ 2723 0010 06       		.uleb128 0x6
+ 2724 0011 10       		.uleb128 0x10
+ 2725 0012 06       		.uleb128 0x6
+ 2726 0013 00       		.byte	0
+ 2727 0014 00       		.byte	0
+ 2728 0015 02       		.uleb128 0x2
+ 2729 0016 24       		.uleb128 0x24
+ 2730 0017 00       		.byte	0
+ 2731 0018 0B       		.uleb128 0xb
+ 2732 0019 0B       		.uleb128 0xb
+ 2733 001a 3E       		.uleb128 0x3e
+ 2734 001b 0B       		.uleb128 0xb
+ 2735 001c 03       		.uleb128 0x3
+ 2736 001d 08       		.uleb128 0x8
+ 2737 001e 00       		.byte	0
+ 2738 001f 00       		.byte	0
+ 2739 0020 03       		.uleb128 0x3
+ 2740 0021 24       		.uleb128 0x24
+ 2741 0022 00       		.byte	0
+ 2742 0023 0B       		.uleb128 0xb
+ 2743 0024 0B       		.uleb128 0xb
+ 2744 0025 3E       		.uleb128 0x3e
+ 2745 0026 0B       		.uleb128 0xb
+ 2746 0027 03       		.uleb128 0x3
+ 2747 0028 0E       		.uleb128 0xe
+ 2748 0029 00       		.byte	0
+ 2749 002a 00       		.byte	0
+ 2750 002b 04       		.uleb128 0x4
+ 2751 002c 16       		.uleb128 0x16
+ 2752 002d 00       		.byte	0
+ 2753 002e 03       		.uleb128 0x3
+ 2754 002f 0E       		.uleb128 0xe
+ 2755 0030 3A       		.uleb128 0x3a
+ 2756 0031 0B       		.uleb128 0xb
+ 2757 0032 3B       		.uleb128 0x3b
+ 2758 0033 0B       		.uleb128 0xb
+ 2759 0034 49       		.uleb128 0x49
+ 2760 0035 13       		.uleb128 0x13
+ 2761 0036 00       		.byte	0
+ 2762 0037 00       		.byte	0
+ 2763 0038 05       		.uleb128 0x5
+ 2764 0039 13       		.uleb128 0x13
+ 2765 003a 01       		.byte	0x1
+ 2766 003b 03       		.uleb128 0x3
+ 2767 003c 0E       		.uleb128 0xe
+ 2768 003d 0B       		.uleb128 0xb
+ 2769 003e 0B       		.uleb128 0xb
+ 2770 003f 3A       		.uleb128 0x3a
+ 2771 0040 0B       		.uleb128 0xb
+ 2772 0041 3B       		.uleb128 0x3b
+ 2773 0042 0B       		.uleb128 0xb
+ 2774 0043 01       		.uleb128 0x1
+ 2775 0044 13       		.uleb128 0x13
+ 2776 0045 00       		.byte	0
+ 2777 0046 00       		.byte	0
+ 2778 0047 06       		.uleb128 0x6
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 50
+
+
+ 2779 0048 0D       		.uleb128 0xd
+ 2780 0049 00       		.byte	0
+ 2781 004a 03       		.uleb128 0x3
+ 2782 004b 0E       		.uleb128 0xe
+ 2783 004c 3A       		.uleb128 0x3a
+ 2784 004d 0B       		.uleb128 0xb
+ 2785 004e 3B       		.uleb128 0x3b
+ 2786 004f 0B       		.uleb128 0xb
+ 2787 0050 49       		.uleb128 0x49
+ 2788 0051 13       		.uleb128 0x13
+ 2789 0052 38       		.uleb128 0x38
+ 2790 0053 0A       		.uleb128 0xa
+ 2791 0054 00       		.byte	0
+ 2792 0055 00       		.byte	0
+ 2793 0056 07       		.uleb128 0x7
+ 2794 0057 0D       		.uleb128 0xd
+ 2795 0058 00       		.byte	0
+ 2796 0059 03       		.uleb128 0x3
+ 2797 005a 08       		.uleb128 0x8
+ 2798 005b 3A       		.uleb128 0x3a
+ 2799 005c 0B       		.uleb128 0xb
+ 2800 005d 3B       		.uleb128 0x3b
+ 2801 005e 0B       		.uleb128 0xb
+ 2802 005f 49       		.uleb128 0x49
+ 2803 0060 13       		.uleb128 0x13
+ 2804 0061 38       		.uleb128 0x38
+ 2805 0062 0A       		.uleb128 0xa
+ 2806 0063 00       		.byte	0
+ 2807 0064 00       		.byte	0
+ 2808 0065 08       		.uleb128 0x8
+ 2809 0066 13       		.uleb128 0x13
+ 2810 0067 01       		.byte	0x1
+ 2811 0068 0B       		.uleb128 0xb
+ 2812 0069 0B       		.uleb128 0xb
+ 2813 006a 3A       		.uleb128 0x3a
+ 2814 006b 0B       		.uleb128 0xb
+ 2815 006c 3B       		.uleb128 0x3b
+ 2816 006d 0B       		.uleb128 0xb
+ 2817 006e 01       		.uleb128 0x1
+ 2818 006f 13       		.uleb128 0x13
+ 2819 0070 00       		.byte	0
+ 2820 0071 00       		.byte	0
+ 2821 0072 09       		.uleb128 0x9
+ 2822 0073 0F       		.uleb128 0xf
+ 2823 0074 00       		.byte	0
+ 2824 0075 0B       		.uleb128 0xb
+ 2825 0076 0B       		.uleb128 0xb
+ 2826 0077 49       		.uleb128 0x49
+ 2827 0078 13       		.uleb128 0x13
+ 2828 0079 00       		.byte	0
+ 2829 007a 00       		.byte	0
+ 2830 007b 0A       		.uleb128 0xa
+ 2831 007c 0F       		.uleb128 0xf
+ 2832 007d 00       		.byte	0
+ 2833 007e 0B       		.uleb128 0xb
+ 2834 007f 0B       		.uleb128 0xb
+ 2835 0080 00       		.byte	0
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 51
+
+
+ 2836 0081 00       		.byte	0
+ 2837 0082 0B       		.uleb128 0xb
+ 2838 0083 13       		.uleb128 0x13
+ 2839 0084 01       		.byte	0x1
+ 2840 0085 03       		.uleb128 0x3
+ 2841 0086 0E       		.uleb128 0xe
+ 2842 0087 0B       		.uleb128 0xb
+ 2843 0088 0B       		.uleb128 0xb
+ 2844 0089 3A       		.uleb128 0x3a
+ 2845 008a 0B       		.uleb128 0xb
+ 2846 008b 3B       		.uleb128 0x3b
+ 2847 008c 05       		.uleb128 0x5
+ 2848 008d 01       		.uleb128 0x1
+ 2849 008e 13       		.uleb128 0x13
+ 2850 008f 00       		.byte	0
+ 2851 0090 00       		.byte	0
+ 2852 0091 0C       		.uleb128 0xc
+ 2853 0092 0D       		.uleb128 0xd
+ 2854 0093 00       		.byte	0
+ 2855 0094 03       		.uleb128 0x3
+ 2856 0095 08       		.uleb128 0x8
+ 2857 0096 3A       		.uleb128 0x3a
+ 2858 0097 0B       		.uleb128 0xb
+ 2859 0098 3B       		.uleb128 0x3b
+ 2860 0099 05       		.uleb128 0x5
+ 2861 009a 49       		.uleb128 0x49
+ 2862 009b 13       		.uleb128 0x13
+ 2863 009c 38       		.uleb128 0x38
+ 2864 009d 0A       		.uleb128 0xa
+ 2865 009e 00       		.byte	0
+ 2866 009f 00       		.byte	0
+ 2867 00a0 0D       		.uleb128 0xd
+ 2868 00a1 35       		.uleb128 0x35
+ 2869 00a2 00       		.byte	0
+ 2870 00a3 49       		.uleb128 0x49
+ 2871 00a4 13       		.uleb128 0x13
+ 2872 00a5 00       		.byte	0
+ 2873 00a6 00       		.byte	0
+ 2874 00a7 0E       		.uleb128 0xe
+ 2875 00a8 15       		.uleb128 0x15
+ 2876 00a9 01       		.byte	0x1
+ 2877 00aa 27       		.uleb128 0x27
+ 2878 00ab 0C       		.uleb128 0xc
+ 2879 00ac 01       		.uleb128 0x1
+ 2880 00ad 13       		.uleb128 0x13
+ 2881 00ae 00       		.byte	0
+ 2882 00af 00       		.byte	0
+ 2883 00b0 0F       		.uleb128 0xf
+ 2884 00b1 05       		.uleb128 0x5
+ 2885 00b2 00       		.byte	0
+ 2886 00b3 49       		.uleb128 0x49
+ 2887 00b4 13       		.uleb128 0x13
+ 2888 00b5 00       		.byte	0
+ 2889 00b6 00       		.byte	0
+ 2890 00b7 10       		.uleb128 0x10
+ 2891 00b8 17       		.uleb128 0x17
+ 2892 00b9 01       		.byte	0x1
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 52
+
+
+ 2893 00ba 0B       		.uleb128 0xb
+ 2894 00bb 0B       		.uleb128 0xb
+ 2895 00bc 3A       		.uleb128 0x3a
+ 2896 00bd 0B       		.uleb128 0xb
+ 2897 00be 3B       		.uleb128 0x3b
+ 2898 00bf 0B       		.uleb128 0xb
+ 2899 00c0 01       		.uleb128 0x1
+ 2900 00c1 13       		.uleb128 0x13
+ 2901 00c2 00       		.byte	0
+ 2902 00c3 00       		.byte	0
+ 2903 00c4 11       		.uleb128 0x11
+ 2904 00c5 0D       		.uleb128 0xd
+ 2905 00c6 00       		.byte	0
+ 2906 00c7 03       		.uleb128 0x3
+ 2907 00c8 0E       		.uleb128 0xe
+ 2908 00c9 3A       		.uleb128 0x3a
+ 2909 00ca 0B       		.uleb128 0xb
+ 2910 00cb 3B       		.uleb128 0x3b
+ 2911 00cc 0B       		.uleb128 0xb
+ 2912 00cd 49       		.uleb128 0x49
+ 2913 00ce 13       		.uleb128 0x13
+ 2914 00cf 00       		.byte	0
+ 2915 00d0 00       		.byte	0
+ 2916 00d1 12       		.uleb128 0x12
+ 2917 00d2 26       		.uleb128 0x26
+ 2918 00d3 00       		.byte	0
+ 2919 00d4 49       		.uleb128 0x49
+ 2920 00d5 13       		.uleb128 0x13
+ 2921 00d6 00       		.byte	0
+ 2922 00d7 00       		.byte	0
+ 2923 00d8 13       		.uleb128 0x13
+ 2924 00d9 2E       		.uleb128 0x2e
+ 2925 00da 01       		.byte	0x1
+ 2926 00db 3F       		.uleb128 0x3f
+ 2927 00dc 0C       		.uleb128 0xc
+ 2928 00dd 03       		.uleb128 0x3
+ 2929 00de 0E       		.uleb128 0xe
+ 2930 00df 3A       		.uleb128 0x3a
+ 2931 00e0 0B       		.uleb128 0xb
+ 2932 00e1 3B       		.uleb128 0x3b
+ 2933 00e2 0B       		.uleb128 0xb
+ 2934 00e3 27       		.uleb128 0x27
+ 2935 00e4 0C       		.uleb128 0xc
+ 2936 00e5 20       		.uleb128 0x20
+ 2937 00e6 0B       		.uleb128 0xb
+ 2938 00e7 01       		.uleb128 0x1
+ 2939 00e8 13       		.uleb128 0x13
+ 2940 00e9 00       		.byte	0
+ 2941 00ea 00       		.byte	0
+ 2942 00eb 14       		.uleb128 0x14
+ 2943 00ec 05       		.uleb128 0x5
+ 2944 00ed 00       		.byte	0
+ 2945 00ee 03       		.uleb128 0x3
+ 2946 00ef 08       		.uleb128 0x8
+ 2947 00f0 3A       		.uleb128 0x3a
+ 2948 00f1 0B       		.uleb128 0xb
+ 2949 00f2 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 53
+
+
+ 2950 00f3 0B       		.uleb128 0xb
+ 2951 00f4 49       		.uleb128 0x49
+ 2952 00f5 13       		.uleb128 0x13
+ 2953 00f6 00       		.byte	0
+ 2954 00f7 00       		.byte	0
+ 2955 00f8 15       		.uleb128 0x15
+ 2956 00f9 05       		.uleb128 0x5
+ 2957 00fa 00       		.byte	0
+ 2958 00fb 03       		.uleb128 0x3
+ 2959 00fc 0E       		.uleb128 0xe
+ 2960 00fd 3A       		.uleb128 0x3a
+ 2961 00fe 0B       		.uleb128 0xb
+ 2962 00ff 3B       		.uleb128 0x3b
+ 2963 0100 0B       		.uleb128 0xb
+ 2964 0101 49       		.uleb128 0x49
+ 2965 0102 13       		.uleb128 0x13
+ 2966 0103 00       		.byte	0
+ 2967 0104 00       		.byte	0
+ 2968 0105 16       		.uleb128 0x16
+ 2969 0106 2E       		.uleb128 0x2e
+ 2970 0107 01       		.byte	0x1
+ 2971 0108 3F       		.uleb128 0x3f
+ 2972 0109 0C       		.uleb128 0xc
+ 2973 010a 03       		.uleb128 0x3
+ 2974 010b 0E       		.uleb128 0xe
+ 2975 010c 3A       		.uleb128 0x3a
+ 2976 010d 0B       		.uleb128 0xb
+ 2977 010e 3B       		.uleb128 0x3b
+ 2978 010f 0B       		.uleb128 0xb
+ 2979 0110 27       		.uleb128 0x27
+ 2980 0111 0C       		.uleb128 0xc
+ 2981 0112 11       		.uleb128 0x11
+ 2982 0113 01       		.uleb128 0x1
+ 2983 0114 12       		.uleb128 0x12
+ 2984 0115 01       		.uleb128 0x1
+ 2985 0116 40       		.uleb128 0x40
+ 2986 0117 06       		.uleb128 0x6
+ 2987 0118 01       		.uleb128 0x1
+ 2988 0119 13       		.uleb128 0x13
+ 2989 011a 00       		.byte	0
+ 2990 011b 00       		.byte	0
+ 2991 011c 17       		.uleb128 0x17
+ 2992 011d 05       		.uleb128 0x5
+ 2993 011e 00       		.byte	0
+ 2994 011f 03       		.uleb128 0x3
+ 2995 0120 08       		.uleb128 0x8
+ 2996 0121 3A       		.uleb128 0x3a
+ 2997 0122 0B       		.uleb128 0xb
+ 2998 0123 3B       		.uleb128 0x3b
+ 2999 0124 0B       		.uleb128 0xb
+ 3000 0125 49       		.uleb128 0x49
+ 3001 0126 13       		.uleb128 0x13
+ 3002 0127 02       		.uleb128 0x2
+ 3003 0128 0A       		.uleb128 0xa
+ 3004 0129 00       		.byte	0
+ 3005 012a 00       		.byte	0
+ 3006 012b 18       		.uleb128 0x18
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 54
+
+
+ 3007 012c 05       		.uleb128 0x5
+ 3008 012d 00       		.byte	0
+ 3009 012e 03       		.uleb128 0x3
+ 3010 012f 0E       		.uleb128 0xe
+ 3011 0130 3A       		.uleb128 0x3a
+ 3012 0131 0B       		.uleb128 0xb
+ 3013 0132 3B       		.uleb128 0x3b
+ 3014 0133 0B       		.uleb128 0xb
+ 3015 0134 49       		.uleb128 0x49
+ 3016 0135 13       		.uleb128 0x13
+ 3017 0136 02       		.uleb128 0x2
+ 3018 0137 0A       		.uleb128 0xa
+ 3019 0138 00       		.byte	0
+ 3020 0139 00       		.byte	0
+ 3021 013a 19       		.uleb128 0x19
+ 3022 013b 0B       		.uleb128 0xb
+ 3023 013c 01       		.byte	0x1
+ 3024 013d 11       		.uleb128 0x11
+ 3025 013e 01       		.uleb128 0x1
+ 3026 013f 12       		.uleb128 0x12
+ 3027 0140 01       		.uleb128 0x1
+ 3028 0141 01       		.uleb128 0x1
+ 3029 0142 13       		.uleb128 0x13
+ 3030 0143 00       		.byte	0
+ 3031 0144 00       		.byte	0
+ 3032 0145 1A       		.uleb128 0x1a
+ 3033 0146 34       		.uleb128 0x34
+ 3034 0147 00       		.byte	0
+ 3035 0148 03       		.uleb128 0x3
+ 3036 0149 08       		.uleb128 0x8
+ 3037 014a 3A       		.uleb128 0x3a
+ 3038 014b 0B       		.uleb128 0xb
+ 3039 014c 3B       		.uleb128 0x3b
+ 3040 014d 0B       		.uleb128 0xb
+ 3041 014e 49       		.uleb128 0x49
+ 3042 014f 13       		.uleb128 0x13
+ 3043 0150 02       		.uleb128 0x2
+ 3044 0151 06       		.uleb128 0x6
+ 3045 0152 00       		.byte	0
+ 3046 0153 00       		.byte	0
+ 3047 0154 1B       		.uleb128 0x1b
+ 3048 0155 0B       		.uleb128 0xb
+ 3049 0156 01       		.byte	0x1
+ 3050 0157 55       		.uleb128 0x55
+ 3051 0158 06       		.uleb128 0x6
+ 3052 0159 00       		.byte	0
+ 3053 015a 00       		.byte	0
+ 3054 015b 1C       		.uleb128 0x1c
+ 3055 015c 2E       		.uleb128 0x2e
+ 3056 015d 01       		.byte	0x1
+ 3057 015e 3F       		.uleb128 0x3f
+ 3058 015f 0C       		.uleb128 0xc
+ 3059 0160 03       		.uleb128 0x3
+ 3060 0161 0E       		.uleb128 0xe
+ 3061 0162 3A       		.uleb128 0x3a
+ 3062 0163 0B       		.uleb128 0xb
+ 3063 0164 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 55
+
+
+ 3064 0165 0B       		.uleb128 0xb
+ 3065 0166 27       		.uleb128 0x27
+ 3066 0167 0C       		.uleb128 0xc
+ 3067 0168 11       		.uleb128 0x11
+ 3068 0169 01       		.uleb128 0x1
+ 3069 016a 12       		.uleb128 0x12
+ 3070 016b 01       		.uleb128 0x1
+ 3071 016c 40       		.uleb128 0x40
+ 3072 016d 0A       		.uleb128 0xa
+ 3073 016e 01       		.uleb128 0x1
+ 3074 016f 13       		.uleb128 0x13
+ 3075 0170 00       		.byte	0
+ 3076 0171 00       		.byte	0
+ 3077 0172 1D       		.uleb128 0x1d
+ 3078 0173 2E       		.uleb128 0x2e
+ 3079 0174 01       		.byte	0x1
+ 3080 0175 3F       		.uleb128 0x3f
+ 3081 0176 0C       		.uleb128 0xc
+ 3082 0177 03       		.uleb128 0x3
+ 3083 0178 0E       		.uleb128 0xe
+ 3084 0179 3A       		.uleb128 0x3a
+ 3085 017a 0B       		.uleb128 0xb
+ 3086 017b 3B       		.uleb128 0x3b
+ 3087 017c 0B       		.uleb128 0xb
+ 3088 017d 27       		.uleb128 0x27
+ 3089 017e 0C       		.uleb128 0xc
+ 3090 017f 49       		.uleb128 0x49
+ 3091 0180 13       		.uleb128 0x13
+ 3092 0181 11       		.uleb128 0x11
+ 3093 0182 01       		.uleb128 0x1
+ 3094 0183 12       		.uleb128 0x12
+ 3095 0184 01       		.uleb128 0x1
+ 3096 0185 40       		.uleb128 0x40
+ 3097 0186 06       		.uleb128 0x6
+ 3098 0187 01       		.uleb128 0x1
+ 3099 0188 13       		.uleb128 0x13
+ 3100 0189 00       		.byte	0
+ 3101 018a 00       		.byte	0
+ 3102 018b 1E       		.uleb128 0x1e
+ 3103 018c 05       		.uleb128 0x5
+ 3104 018d 00       		.byte	0
+ 3105 018e 03       		.uleb128 0x3
+ 3106 018f 0E       		.uleb128 0xe
+ 3107 0190 3A       		.uleb128 0x3a
+ 3108 0191 0B       		.uleb128 0xb
+ 3109 0192 3B       		.uleb128 0x3b
+ 3110 0193 0B       		.uleb128 0xb
+ 3111 0194 49       		.uleb128 0x49
+ 3112 0195 13       		.uleb128 0x13
+ 3113 0196 02       		.uleb128 0x2
+ 3114 0197 06       		.uleb128 0x6
+ 3115 0198 00       		.byte	0
+ 3116 0199 00       		.byte	0
+ 3117 019a 1F       		.uleb128 0x1f
+ 3118 019b 2E       		.uleb128 0x2e
+ 3119 019c 01       		.byte	0x1
+ 3120 019d 3F       		.uleb128 0x3f
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 56
+
+
+ 3121 019e 0C       		.uleb128 0xc
+ 3122 019f 03       		.uleb128 0x3
+ 3123 01a0 0E       		.uleb128 0xe
+ 3124 01a1 3A       		.uleb128 0x3a
+ 3125 01a2 0B       		.uleb128 0xb
+ 3126 01a3 3B       		.uleb128 0x3b
+ 3127 01a4 0B       		.uleb128 0xb
+ 3128 01a5 27       		.uleb128 0x27
+ 3129 01a6 0C       		.uleb128 0xc
+ 3130 01a7 49       		.uleb128 0x49
+ 3131 01a8 13       		.uleb128 0x13
+ 3132 01a9 11       		.uleb128 0x11
+ 3133 01aa 01       		.uleb128 0x1
+ 3134 01ab 12       		.uleb128 0x12
+ 3135 01ac 01       		.uleb128 0x1
+ 3136 01ad 40       		.uleb128 0x40
+ 3137 01ae 0A       		.uleb128 0xa
+ 3138 01af 01       		.uleb128 0x1
+ 3139 01b0 13       		.uleb128 0x13
+ 3140 01b1 00       		.byte	0
+ 3141 01b2 00       		.byte	0
+ 3142 01b3 20       		.uleb128 0x20
+ 3143 01b4 05       		.uleb128 0x5
+ 3144 01b5 00       		.byte	0
+ 3145 01b6 03       		.uleb128 0x3
+ 3146 01b7 08       		.uleb128 0x8
+ 3147 01b8 3A       		.uleb128 0x3a
+ 3148 01b9 0B       		.uleb128 0xb
+ 3149 01ba 3B       		.uleb128 0x3b
+ 3150 01bb 0B       		.uleb128 0xb
+ 3151 01bc 49       		.uleb128 0x49
+ 3152 01bd 13       		.uleb128 0x13
+ 3153 01be 02       		.uleb128 0x2
+ 3154 01bf 06       		.uleb128 0x6
+ 3155 01c0 00       		.byte	0
+ 3156 01c1 00       		.byte	0
+ 3157 01c2 21       		.uleb128 0x21
+ 3158 01c3 34       		.uleb128 0x34
+ 3159 01c4 00       		.byte	0
+ 3160 01c5 03       		.uleb128 0x3
+ 3161 01c6 0E       		.uleb128 0xe
+ 3162 01c7 3A       		.uleb128 0x3a
+ 3163 01c8 0B       		.uleb128 0xb
+ 3164 01c9 3B       		.uleb128 0x3b
+ 3165 01ca 0B       		.uleb128 0xb
+ 3166 01cb 49       		.uleb128 0x49
+ 3167 01cc 13       		.uleb128 0x13
+ 3168 01cd 02       		.uleb128 0x2
+ 3169 01ce 0A       		.uleb128 0xa
+ 3170 01cf 00       		.byte	0
+ 3171 01d0 00       		.byte	0
+ 3172 01d1 22       		.uleb128 0x22
+ 3173 01d2 0B       		.uleb128 0xb
+ 3174 01d3 01       		.byte	0x1
+ 3175 01d4 11       		.uleb128 0x11
+ 3176 01d5 01       		.uleb128 0x1
+ 3177 01d6 12       		.uleb128 0x12
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 57
+
+
+ 3178 01d7 01       		.uleb128 0x1
+ 3179 01d8 00       		.byte	0
+ 3180 01d9 00       		.byte	0
+ 3181 01da 23       		.uleb128 0x23
+ 3182 01db 34       		.uleb128 0x34
+ 3183 01dc 00       		.byte	0
+ 3184 01dd 03       		.uleb128 0x3
+ 3185 01de 08       		.uleb128 0x8
+ 3186 01df 3A       		.uleb128 0x3a
+ 3187 01e0 0B       		.uleb128 0xb
+ 3188 01e1 3B       		.uleb128 0x3b
+ 3189 01e2 0B       		.uleb128 0xb
+ 3190 01e3 49       		.uleb128 0x49
+ 3191 01e4 13       		.uleb128 0x13
+ 3192 01e5 02       		.uleb128 0x2
+ 3193 01e6 0A       		.uleb128 0xa
+ 3194 01e7 00       		.byte	0
+ 3195 01e8 00       		.byte	0
+ 3196 01e9 24       		.uleb128 0x24
+ 3197 01ea 2E       		.uleb128 0x2e
+ 3198 01eb 01       		.byte	0x1
+ 3199 01ec 31       		.uleb128 0x31
+ 3200 01ed 13       		.uleb128 0x13
+ 3201 01ee 11       		.uleb128 0x11
+ 3202 01ef 01       		.uleb128 0x1
+ 3203 01f0 12       		.uleb128 0x12
+ 3204 01f1 01       		.uleb128 0x1
+ 3205 01f2 40       		.uleb128 0x40
+ 3206 01f3 06       		.uleb128 0x6
+ 3207 01f4 01       		.uleb128 0x1
+ 3208 01f5 13       		.uleb128 0x13
+ 3209 01f6 00       		.byte	0
+ 3210 01f7 00       		.byte	0
+ 3211 01f8 25       		.uleb128 0x25
+ 3212 01f9 05       		.uleb128 0x5
+ 3213 01fa 00       		.byte	0
+ 3214 01fb 31       		.uleb128 0x31
+ 3215 01fc 13       		.uleb128 0x13
+ 3216 01fd 02       		.uleb128 0x2
+ 3217 01fe 06       		.uleb128 0x6
+ 3218 01ff 00       		.byte	0
+ 3219 0200 00       		.byte	0
+ 3220 0201 26       		.uleb128 0x26
+ 3221 0202 1D       		.uleb128 0x1d
+ 3222 0203 01       		.byte	0x1
+ 3223 0204 31       		.uleb128 0x31
+ 3224 0205 13       		.uleb128 0x13
+ 3225 0206 11       		.uleb128 0x11
+ 3226 0207 01       		.uleb128 0x1
+ 3227 0208 12       		.uleb128 0x12
+ 3228 0209 01       		.uleb128 0x1
+ 3229 020a 58       		.uleb128 0x58
+ 3230 020b 0B       		.uleb128 0xb
+ 3231 020c 59       		.uleb128 0x59
+ 3232 020d 0B       		.uleb128 0xb
+ 3233 020e 00       		.byte	0
+ 3234 020f 00       		.byte	0
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 58
+
+
+ 3235 0210 27       		.uleb128 0x27
+ 3236 0211 05       		.uleb128 0x5
+ 3237 0212 00       		.byte	0
+ 3238 0213 31       		.uleb128 0x31
+ 3239 0214 13       		.uleb128 0x13
+ 3240 0215 00       		.byte	0
+ 3241 0216 00       		.byte	0
+ 3242 0217 28       		.uleb128 0x28
+ 3243 0218 2E       		.uleb128 0x2e
+ 3244 0219 01       		.byte	0x1
+ 3245 021a 3F       		.uleb128 0x3f
+ 3246 021b 0C       		.uleb128 0xc
+ 3247 021c 03       		.uleb128 0x3
+ 3248 021d 0E       		.uleb128 0xe
+ 3249 021e 3A       		.uleb128 0x3a
+ 3250 021f 0B       		.uleb128 0xb
+ 3251 0220 3B       		.uleb128 0x3b
+ 3252 0221 05       		.uleb128 0x5
+ 3253 0222 27       		.uleb128 0x27
+ 3254 0223 0C       		.uleb128 0xc
+ 3255 0224 11       		.uleb128 0x11
+ 3256 0225 01       		.uleb128 0x1
+ 3257 0226 12       		.uleb128 0x12
+ 3258 0227 01       		.uleb128 0x1
+ 3259 0228 40       		.uleb128 0x40
+ 3260 0229 06       		.uleb128 0x6
+ 3261 022a 01       		.uleb128 0x1
+ 3262 022b 13       		.uleb128 0x13
+ 3263 022c 00       		.byte	0
+ 3264 022d 00       		.byte	0
+ 3265 022e 29       		.uleb128 0x29
+ 3266 022f 05       		.uleb128 0x5
+ 3267 0230 00       		.byte	0
+ 3268 0231 03       		.uleb128 0x3
+ 3269 0232 08       		.uleb128 0x8
+ 3270 0233 3A       		.uleb128 0x3a
+ 3271 0234 0B       		.uleb128 0xb
+ 3272 0235 3B       		.uleb128 0x3b
+ 3273 0236 05       		.uleb128 0x5
+ 3274 0237 49       		.uleb128 0x49
+ 3275 0238 13       		.uleb128 0x13
+ 3276 0239 02       		.uleb128 0x2
+ 3277 023a 06       		.uleb128 0x6
+ 3278 023b 00       		.byte	0
+ 3279 023c 00       		.byte	0
+ 3280 023d 2A       		.uleb128 0x2a
+ 3281 023e 05       		.uleb128 0x5
+ 3282 023f 00       		.byte	0
+ 3283 0240 03       		.uleb128 0x3
+ 3284 0241 0E       		.uleb128 0xe
+ 3285 0242 3A       		.uleb128 0x3a
+ 3286 0243 0B       		.uleb128 0xb
+ 3287 0244 3B       		.uleb128 0x3b
+ 3288 0245 05       		.uleb128 0x5
+ 3289 0246 49       		.uleb128 0x49
+ 3290 0247 13       		.uleb128 0x13
+ 3291 0248 02       		.uleb128 0x2
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 59
+
+
+ 3292 0249 06       		.uleb128 0x6
+ 3293 024a 00       		.byte	0
+ 3294 024b 00       		.byte	0
+ 3295 024c 2B       		.uleb128 0x2b
+ 3296 024d 34       		.uleb128 0x34
+ 3297 024e 00       		.byte	0
+ 3298 024f 03       		.uleb128 0x3
+ 3299 0250 08       		.uleb128 0x8
+ 3300 0251 3A       		.uleb128 0x3a
+ 3301 0252 0B       		.uleb128 0xb
+ 3302 0253 3B       		.uleb128 0x3b
+ 3303 0254 05       		.uleb128 0x5
+ 3304 0255 49       		.uleb128 0x49
+ 3305 0256 13       		.uleb128 0x13
+ 3306 0257 02       		.uleb128 0x2
+ 3307 0258 06       		.uleb128 0x6
+ 3308 0259 00       		.byte	0
+ 3309 025a 00       		.byte	0
+ 3310 025b 2C       		.uleb128 0x2c
+ 3311 025c 2E       		.uleb128 0x2e
+ 3312 025d 01       		.byte	0x1
+ 3313 025e 3F       		.uleb128 0x3f
+ 3314 025f 0C       		.uleb128 0xc
+ 3315 0260 03       		.uleb128 0x3
+ 3316 0261 0E       		.uleb128 0xe
+ 3317 0262 3A       		.uleb128 0x3a
+ 3318 0263 0B       		.uleb128 0xb
+ 3319 0264 3B       		.uleb128 0x3b
+ 3320 0265 05       		.uleb128 0x5
+ 3321 0266 27       		.uleb128 0x27
+ 3322 0267 0C       		.uleb128 0xc
+ 3323 0268 49       		.uleb128 0x49
+ 3324 0269 13       		.uleb128 0x13
+ 3325 026a 11       		.uleb128 0x11
+ 3326 026b 01       		.uleb128 0x1
+ 3327 026c 12       		.uleb128 0x12
+ 3328 026d 01       		.uleb128 0x1
+ 3329 026e 40       		.uleb128 0x40
+ 3330 026f 0A       		.uleb128 0xa
+ 3331 0270 01       		.uleb128 0x1
+ 3332 0271 13       		.uleb128 0x13
+ 3333 0272 00       		.byte	0
+ 3334 0273 00       		.byte	0
+ 3335 0274 2D       		.uleb128 0x2d
+ 3336 0275 34       		.uleb128 0x34
+ 3337 0276 00       		.byte	0
+ 3338 0277 03       		.uleb128 0x3
+ 3339 0278 0E       		.uleb128 0xe
+ 3340 0279 3A       		.uleb128 0x3a
+ 3341 027a 0B       		.uleb128 0xb
+ 3342 027b 3B       		.uleb128 0x3b
+ 3343 027c 05       		.uleb128 0x5
+ 3344 027d 49       		.uleb128 0x49
+ 3345 027e 13       		.uleb128 0x13
+ 3346 027f 02       		.uleb128 0x2
+ 3347 0280 0A       		.uleb128 0xa
+ 3348 0281 00       		.byte	0
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 60
+
+
+ 3349 0282 00       		.byte	0
+ 3350 0283 2E       		.uleb128 0x2e
+ 3351 0284 2E       		.uleb128 0x2e
+ 3352 0285 01       		.byte	0x1
+ 3353 0286 3F       		.uleb128 0x3f
+ 3354 0287 0C       		.uleb128 0xc
+ 3355 0288 03       		.uleb128 0x3
+ 3356 0289 0E       		.uleb128 0xe
+ 3357 028a 3A       		.uleb128 0x3a
+ 3358 028b 0B       		.uleb128 0xb
+ 3359 028c 3B       		.uleb128 0x3b
+ 3360 028d 05       		.uleb128 0x5
+ 3361 028e 27       		.uleb128 0x27
+ 3362 028f 0C       		.uleb128 0xc
+ 3363 0290 49       		.uleb128 0x49
+ 3364 0291 13       		.uleb128 0x13
+ 3365 0292 11       		.uleb128 0x11
+ 3366 0293 01       		.uleb128 0x1
+ 3367 0294 12       		.uleb128 0x12
+ 3368 0295 01       		.uleb128 0x1
+ 3369 0296 40       		.uleb128 0x40
+ 3370 0297 06       		.uleb128 0x6
+ 3371 0298 01       		.uleb128 0x1
+ 3372 0299 13       		.uleb128 0x13
+ 3373 029a 00       		.byte	0
+ 3374 029b 00       		.byte	0
+ 3375 029c 2F       		.uleb128 0x2f
+ 3376 029d 34       		.uleb128 0x34
+ 3377 029e 00       		.byte	0
+ 3378 029f 03       		.uleb128 0x3
+ 3379 02a0 0E       		.uleb128 0xe
+ 3380 02a1 3A       		.uleb128 0x3a
+ 3381 02a2 0B       		.uleb128 0xb
+ 3382 02a3 3B       		.uleb128 0x3b
+ 3383 02a4 0B       		.uleb128 0xb
+ 3384 02a5 49       		.uleb128 0x49
+ 3385 02a6 13       		.uleb128 0x13
+ 3386 02a7 3F       		.uleb128 0x3f
+ 3387 02a8 0C       		.uleb128 0xc
+ 3388 02a9 3C       		.uleb128 0x3c
+ 3389 02aa 0C       		.uleb128 0xc
+ 3390 02ab 00       		.byte	0
+ 3391 02ac 00       		.byte	0
+ 3392 02ad 00       		.byte	0
+ 3393              		.section	.debug_loc,"",%progbits
+ 3394              	.Ldebug_loc0:
+ 3395              	.LLST0:
+ 3396 0000 00000000 		.4byte	.LFB7
+ 3397 0004 02000000 		.4byte	.LCFI0
+ 3398 0008 0200     		.2byte	0x2
+ 3399 000a 7D       		.byte	0x7d
+ 3400 000b 00       		.sleb128 0
+ 3401 000c 02000000 		.4byte	.LCFI0
+ 3402 0010 2A000000 		.4byte	.LFE7
+ 3403 0014 0200     		.2byte	0x2
+ 3404 0016 7D       		.byte	0x7d
+ 3405 0017 08       		.sleb128 8
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 61
+
+
+ 3406 0018 00000000 		.4byte	0
+ 3407 001c 00000000 		.4byte	0
+ 3408              	.LLST1:
+ 3409 0020 08000000 		.4byte	.LVL2
+ 3410 0024 0C000000 		.4byte	.LVL3
+ 3411 0028 0100     		.2byte	0x1
+ 3412 002a 53       		.byte	0x53
+ 3413 002b 00000000 		.4byte	0
+ 3414 002f 00000000 		.4byte	0
+ 3415              	.LLST2:
+ 3416 0033 26000000 		.4byte	.LVL5
+ 3417 0037 2A000000 		.4byte	.LFE7
+ 3418 003b 0100     		.2byte	0x1
+ 3419 003d 53       		.byte	0x53
+ 3420 003e 00000000 		.4byte	0
+ 3421 0042 00000000 		.4byte	0
+ 3422              	.LLST3:
+ 3423 0046 00000000 		.4byte	.LVL6
+ 3424 004a 0A000000 		.4byte	.LVL9
+ 3425 004e 0100     		.2byte	0x1
+ 3426 0050 50       		.byte	0x50
+ 3427 0051 0A000000 		.4byte	.LVL9
+ 3428 0055 2A000000 		.4byte	.LFE8
+ 3429 0059 0100     		.2byte	0x1
+ 3430 005b 52       		.byte	0x52
+ 3431 005c 00000000 		.4byte	0
+ 3432 0060 00000000 		.4byte	0
+ 3433              	.LLST4:
+ 3434 0064 06000000 		.4byte	.LVL8
+ 3435 0068 0A000000 		.4byte	.LVL9
+ 3436 006c 0100     		.2byte	0x1
+ 3437 006e 53       		.byte	0x53
+ 3438 006f 10000000 		.4byte	.LVL10
+ 3439 0073 12000000 		.4byte	.LVL11
+ 3440 0077 0100     		.2byte	0x1
+ 3441 0079 53       		.byte	0x53
+ 3442 007a 00000000 		.4byte	0
+ 3443 007e 00000000 		.4byte	0
+ 3444              	.LLST5:
+ 3445 0082 1C000000 		.4byte	.LVL13
+ 3446 0086 1E000000 		.4byte	.LVL14
+ 3447 008a 0100     		.2byte	0x1
+ 3448 008c 53       		.byte	0x53
+ 3449 008d 28000000 		.4byte	.LVL15
+ 3450 0091 2A000000 		.4byte	.LFE8
+ 3451 0095 0100     		.2byte	0x1
+ 3452 0097 53       		.byte	0x53
+ 3453 0098 00000000 		.4byte	0
+ 3454 009c 00000000 		.4byte	0
+ 3455              	.LLST6:
+ 3456 00a0 00000000 		.4byte	.LFB9
+ 3457 00a4 02000000 		.4byte	.LCFI1
+ 3458 00a8 0200     		.2byte	0x2
+ 3459 00aa 7D       		.byte	0x7d
+ 3460 00ab 00       		.sleb128 0
+ 3461 00ac 02000000 		.4byte	.LCFI1
+ 3462 00b0 26000000 		.4byte	.LFE9
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 62
+
+
+ 3463 00b4 0200     		.2byte	0x2
+ 3464 00b6 7D       		.byte	0x7d
+ 3465 00b7 04       		.sleb128 4
+ 3466 00b8 00000000 		.4byte	0
+ 3467 00bc 00000000 		.4byte	0
+ 3468              	.LLST7:
+ 3469 00c0 00000000 		.4byte	.LVL16
+ 3470 00c4 22000000 		.4byte	.LVL23
+ 3471 00c8 0100     		.2byte	0x1
+ 3472 00ca 50       		.byte	0x50
+ 3473 00cb 00000000 		.4byte	0
+ 3474 00cf 00000000 		.4byte	0
+ 3475              	.LLST8:
+ 3476 00d3 16000000 		.4byte	.LVL20
+ 3477 00d7 1A000000 		.4byte	.LVL21
+ 3478 00db 0A00     		.2byte	0xa
+ 3479 00dd 70       		.byte	0x70
+ 3480 00de 00       		.sleb128 0
+ 3481 00df 74       		.byte	0x74
+ 3482 00e0 18       		.sleb128 24
+ 3483 00e1 06       		.byte	0x6
+ 3484 00e2 23       		.byte	0x23
+ 3485 00e3 38       		.uleb128 0x38
+ 3486 00e4 06       		.byte	0x6
+ 3487 00e5 1A       		.byte	0x1a
+ 3488 00e6 9F       		.byte	0x9f
+ 3489 00e7 22000000 		.4byte	.LVL23
+ 3490 00eb 26000000 		.4byte	.LFE9
+ 3491 00ef 0100     		.2byte	0x1
+ 3492 00f1 50       		.byte	0x50
+ 3493 00f2 00000000 		.4byte	0
+ 3494 00f6 00000000 		.4byte	0
+ 3495              	.LLST9:
+ 3496 00fa 08000000 		.4byte	.LVL18
+ 3497 00fe 12000000 		.4byte	.LVL19
+ 3498 0102 0100     		.2byte	0x1
+ 3499 0104 53       		.byte	0x53
+ 3500 0105 00000000 		.4byte	0
+ 3501 0109 00000000 		.4byte	0
+ 3502              	.LLST10:
+ 3503 010d 20000000 		.4byte	.LVL22
+ 3504 0111 26000000 		.4byte	.LFE9
+ 3505 0115 0100     		.2byte	0x1
+ 3506 0117 53       		.byte	0x53
+ 3507 0118 00000000 		.4byte	0
+ 3508 011c 00000000 		.4byte	0
+ 3509              	.LLST11:
+ 3510 0120 00000000 		.4byte	.LVL24
+ 3511 0124 18000000 		.4byte	.LVL28
+ 3512 0128 0100     		.2byte	0x1
+ 3513 012a 50       		.byte	0x50
+ 3514 012b 1A000000 		.4byte	.LVL29
+ 3515 012f 20000000 		.4byte	.LFE10
+ 3516 0133 0100     		.2byte	0x1
+ 3517 0135 50       		.byte	0x50
+ 3518 0136 00000000 		.4byte	0
+ 3519 013a 00000000 		.4byte	0
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 63
+
+
+ 3520              	.LLST12:
+ 3521 013e 06000000 		.4byte	.LVL26
+ 3522 0142 10000000 		.4byte	.LVL27
+ 3523 0146 0100     		.2byte	0x1
+ 3524 0148 53       		.byte	0x53
+ 3525 0149 00000000 		.4byte	0
+ 3526 014d 00000000 		.4byte	0
+ 3527              	.LLST13:
+ 3528 0151 1E000000 		.4byte	.LVL30
+ 3529 0155 20000000 		.4byte	.LFE10
+ 3530 0159 0100     		.2byte	0x1
+ 3531 015b 53       		.byte	0x53
+ 3532 015c 00000000 		.4byte	0
+ 3533 0160 00000000 		.4byte	0
+ 3534              	.LLST14:
+ 3535 0164 00000000 		.4byte	.LVL31
+ 3536 0168 0C000000 		.4byte	.LVL35
+ 3537 016c 0100     		.2byte	0x1
+ 3538 016e 50       		.byte	0x50
+ 3539 016f 0C000000 		.4byte	.LVL35
+ 3540 0173 14000000 		.4byte	.LFE12
+ 3541 0177 0100     		.2byte	0x1
+ 3542 0179 52       		.byte	0x52
+ 3543 017a 00000000 		.4byte	0
+ 3544 017e 00000000 		.4byte	0
+ 3545              	.LLST15:
+ 3546 0182 08000000 		.4byte	.LVL33
+ 3547 0186 0A000000 		.4byte	.LVL34
+ 3548 018a 0100     		.2byte	0x1
+ 3549 018c 53       		.byte	0x53
+ 3550 018d 00000000 		.4byte	0
+ 3551 0191 00000000 		.4byte	0
+ 3552              	.LLST16:
+ 3553 0195 00000000 		.4byte	.LFB14
+ 3554 0199 02000000 		.4byte	.LCFI2
+ 3555 019d 0200     		.2byte	0x2
+ 3556 019f 7D       		.byte	0x7d
+ 3557 01a0 00       		.sleb128 0
+ 3558 01a1 02000000 		.4byte	.LCFI2
+ 3559 01a5 2E000000 		.4byte	.LFE14
+ 3560 01a9 0200     		.2byte	0x2
+ 3561 01ab 7D       		.byte	0x7d
+ 3562 01ac 08       		.sleb128 8
+ 3563 01ad 00000000 		.4byte	0
+ 3564 01b1 00000000 		.4byte	0
+ 3565              	.LLST17:
+ 3566 01b5 00000000 		.4byte	.LVL37
+ 3567 01b9 1F000000 		.4byte	.LVL40-1
+ 3568 01bd 0100     		.2byte	0x1
+ 3569 01bf 50       		.byte	0x50
+ 3570 01c0 26000000 		.4byte	.LVL41
+ 3571 01c4 2E000000 		.4byte	.LFE14
+ 3572 01c8 0100     		.2byte	0x1
+ 3573 01ca 50       		.byte	0x50
+ 3574 01cb 00000000 		.4byte	0
+ 3575 01cf 00000000 		.4byte	0
+ 3576              	.LLST18:
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 64
+
+
+ 3577 01d3 00000000 		.4byte	.LVL37
+ 3578 01d7 08000000 		.4byte	.LVL38
+ 3579 01db 0100     		.2byte	0x1
+ 3580 01dd 51       		.byte	0x51
+ 3581 01de 00000000 		.4byte	0
+ 3582 01e2 00000000 		.4byte	0
+ 3583              	.LLST19:
+ 3584 01e6 1C000000 		.4byte	.LVL39
+ 3585 01ea 1F000000 		.4byte	.LVL40-1
+ 3586 01ee 0100     		.2byte	0x1
+ 3587 01f0 50       		.byte	0x50
+ 3588 01f1 00000000 		.4byte	0
+ 3589 01f5 00000000 		.4byte	0
+ 3590              	.LLST20:
+ 3591 01f9 00000000 		.4byte	.LFB13
+ 3592 01fd 02000000 		.4byte	.LCFI3
+ 3593 0201 0200     		.2byte	0x2
+ 3594 0203 7D       		.byte	0x7d
+ 3595 0204 00       		.sleb128 0
+ 3596 0205 02000000 		.4byte	.LCFI3
+ 3597 0209 18000000 		.4byte	.LFE13
+ 3598 020d 0200     		.2byte	0x2
+ 3599 020f 7D       		.byte	0x7d
+ 3600 0210 08       		.sleb128 8
+ 3601 0211 00000000 		.4byte	0
+ 3602 0215 00000000 		.4byte	0
+ 3603              	.LLST21:
+ 3604 0219 00000000 		.4byte	.LVL42
+ 3605 021d 0B000000 		.4byte	.LVL45-1
+ 3606 0221 0100     		.2byte	0x1
+ 3607 0223 50       		.byte	0x50
+ 3608 0224 00000000 		.4byte	0
+ 3609 0228 00000000 		.4byte	0
+ 3610              	.LLST22:
+ 3611 022c 00000000 		.4byte	.LVL42
+ 3612 0230 0B000000 		.4byte	.LVL45-1
+ 3613 0234 0100     		.2byte	0x1
+ 3614 0236 51       		.byte	0x51
+ 3615 0237 00000000 		.4byte	0
+ 3616 023b 00000000 		.4byte	0
+ 3617              	.LLST23:
+ 3618 023f 08000000 		.4byte	.LVL44
+ 3619 0243 0B000000 		.4byte	.LVL45-1
+ 3620 0247 0100     		.2byte	0x1
+ 3621 0249 53       		.byte	0x53
+ 3622 024a 00000000 		.4byte	0
+ 3623 024e 00000000 		.4byte	0
+ 3624              	.LLST24:
+ 3625 0252 16000000 		.4byte	.LVL47
+ 3626 0256 18000000 		.4byte	.LFE13
+ 3627 025a 0100     		.2byte	0x1
+ 3628 025c 53       		.byte	0x53
+ 3629 025d 00000000 		.4byte	0
+ 3630 0261 00000000 		.4byte	0
+ 3631              	.LLST25:
+ 3632 0265 00000000 		.4byte	.LFB11
+ 3633 0269 02000000 		.4byte	.LCFI4
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 65
+
+
+ 3634 026d 0200     		.2byte	0x2
+ 3635 026f 7D       		.byte	0x7d
+ 3636 0270 00       		.sleb128 0
+ 3637 0271 02000000 		.4byte	.LCFI4
+ 3638 0275 20000000 		.4byte	.LFE11
+ 3639 0279 0200     		.2byte	0x2
+ 3640 027b 7D       		.byte	0x7d
+ 3641 027c 10       		.sleb128 16
+ 3642 027d 00000000 		.4byte	0
+ 3643 0281 00000000 		.4byte	0
+ 3644              	.LLST26:
+ 3645 0285 00000000 		.4byte	.LVL48
+ 3646 0289 0C000000 		.4byte	.LVL50
+ 3647 028d 0100     		.2byte	0x1
+ 3648 028f 50       		.byte	0x50
+ 3649 0290 0C000000 		.4byte	.LVL50
+ 3650 0294 20000000 		.4byte	.LFE11
+ 3651 0298 0100     		.2byte	0x1
+ 3652 029a 55       		.byte	0x55
+ 3653 029b 00000000 		.4byte	0
+ 3654 029f 00000000 		.4byte	0
+ 3655              	.LLST27:
+ 3656 02a3 00000000 		.4byte	.LVL48
+ 3657 02a7 0C000000 		.4byte	.LVL50
+ 3658 02ab 0100     		.2byte	0x1
+ 3659 02ad 51       		.byte	0x51
+ 3660 02ae 0C000000 		.4byte	.LVL50
+ 3661 02b2 20000000 		.4byte	.LFE11
+ 3662 02b6 0100     		.2byte	0x1
+ 3663 02b8 56       		.byte	0x56
+ 3664 02b9 00000000 		.4byte	0
+ 3665 02bd 00000000 		.4byte	0
+ 3666              	.LLST28:
+ 3667 02c1 04000000 		.4byte	.LVL49
+ 3668 02c5 0C000000 		.4byte	.LVL50
+ 3669 02c9 0200     		.2byte	0x2
+ 3670 02cb 70       		.byte	0x70
+ 3671 02cc 00       		.sleb128 0
+ 3672 02cd 0C000000 		.4byte	.LVL50
+ 3673 02d1 20000000 		.4byte	.LFE11
+ 3674 02d5 0100     		.2byte	0x1
+ 3675 02d7 54       		.byte	0x54
+ 3676 02d8 00000000 		.4byte	0
+ 3677 02dc 00000000 		.4byte	0
+ 3678              	.LLST29:
+ 3679 02e0 00000000 		.4byte	.LFB15
+ 3680 02e4 02000000 		.4byte	.LCFI5
+ 3681 02e8 0200     		.2byte	0x2
+ 3682 02ea 7D       		.byte	0x7d
+ 3683 02eb 00       		.sleb128 0
+ 3684 02ec 02000000 		.4byte	.LCFI5
+ 3685 02f0 18000000 		.4byte	.LFE15
+ 3686 02f4 0200     		.2byte	0x2
+ 3687 02f6 7D       		.byte	0x7d
+ 3688 02f7 08       		.sleb128 8
+ 3689 02f8 00000000 		.4byte	0
+ 3690 02fc 00000000 		.4byte	0
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 66
+
+
+ 3691              	.LLST30:
+ 3692 0300 00000000 		.4byte	.LVL52
+ 3693 0304 0B000000 		.4byte	.LVL55-1
+ 3694 0308 0100     		.2byte	0x1
+ 3695 030a 50       		.byte	0x50
+ 3696 030b 00000000 		.4byte	0
+ 3697 030f 00000000 		.4byte	0
+ 3698              	.LLST31:
+ 3699 0313 00000000 		.4byte	.LVL52
+ 3700 0317 0B000000 		.4byte	.LVL55-1
+ 3701 031b 0100     		.2byte	0x1
+ 3702 031d 51       		.byte	0x51
+ 3703 031e 00000000 		.4byte	0
+ 3704 0322 00000000 		.4byte	0
+ 3705              	.LLST32:
+ 3706 0326 08000000 		.4byte	.LVL54
+ 3707 032a 0B000000 		.4byte	.LVL55-1
+ 3708 032e 0100     		.2byte	0x1
+ 3709 0330 53       		.byte	0x53
+ 3710 0331 00000000 		.4byte	0
+ 3711 0335 00000000 		.4byte	0
+ 3712              	.LLST33:
+ 3713 0339 16000000 		.4byte	.LVL57
+ 3714 033d 18000000 		.4byte	.LFE15
+ 3715 0341 0100     		.2byte	0x1
+ 3716 0343 53       		.byte	0x53
+ 3717 0344 00000000 		.4byte	0
+ 3718 0348 00000000 		.4byte	0
+ 3719              	.LLST34:
+ 3720 034c 00000000 		.4byte	.LVL58
+ 3721 0350 06000000 		.4byte	.LVL59
+ 3722 0354 0100     		.2byte	0x1
+ 3723 0356 50       		.byte	0x50
+ 3724 0357 06000000 		.4byte	.LVL59
+ 3725 035b 0A000000 		.4byte	.LFE16
+ 3726 035f 0100     		.2byte	0x1
+ 3727 0361 53       		.byte	0x53
+ 3728 0362 00000000 		.4byte	0
+ 3729 0366 00000000 		.4byte	0
+ 3730              	.LLST35:
+ 3731 036a 00000000 		.4byte	.LFB17
+ 3732 036e 02000000 		.4byte	.LCFI6
+ 3733 0372 0200     		.2byte	0x2
+ 3734 0374 7D       		.byte	0x7d
+ 3735 0375 00       		.sleb128 0
+ 3736 0376 02000000 		.4byte	.LCFI6
+ 3737 037a 30000000 		.4byte	.LFE17
+ 3738 037e 0200     		.2byte	0x2
+ 3739 0380 7D       		.byte	0x7d
+ 3740 0381 18       		.sleb128 24
+ 3741 0382 00000000 		.4byte	0
+ 3742 0386 00000000 		.4byte	0
+ 3743              	.LLST36:
+ 3744 038a 00000000 		.4byte	.LVL60
+ 3745 038e 0C000000 		.4byte	.LVL61
+ 3746 0392 0100     		.2byte	0x1
+ 3747 0394 50       		.byte	0x50
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 67
+
+
+ 3748 0395 0C000000 		.4byte	.LVL61
+ 3749 0399 30000000 		.4byte	.LFE17
+ 3750 039d 0100     		.2byte	0x1
+ 3751 039f 57       		.byte	0x57
+ 3752 03a0 00000000 		.4byte	0
+ 3753 03a4 00000000 		.4byte	0
+ 3754              	.LLST37:
+ 3755 03a8 00000000 		.4byte	.LVL60
+ 3756 03ac 0C000000 		.4byte	.LVL61
+ 3757 03b0 0100     		.2byte	0x1
+ 3758 03b2 51       		.byte	0x51
+ 3759 03b3 0C000000 		.4byte	.LVL61
+ 3760 03b7 30000000 		.4byte	.LFE17
+ 3761 03bb 0100     		.2byte	0x1
+ 3762 03bd 55       		.byte	0x55
+ 3763 03be 00000000 		.4byte	0
+ 3764 03c2 00000000 		.4byte	0
+ 3765              	.LLST38:
+ 3766 03c6 00000000 		.4byte	.LVL60
+ 3767 03ca 0C000000 		.4byte	.LVL61
+ 3768 03ce 0200     		.2byte	0x2
+ 3769 03d0 30       		.byte	0x30
+ 3770 03d1 9F       		.byte	0x9f
+ 3771 03d2 16000000 		.4byte	.LVL62
+ 3772 03d6 1A000000 		.4byte	.LVL63
+ 3773 03da 0100     		.2byte	0x1
+ 3774 03dc 54       		.byte	0x54
+ 3775 03dd 2A000000 		.4byte	.LVL65
+ 3776 03e1 30000000 		.4byte	.LFE17
+ 3777 03e5 0100     		.2byte	0x1
+ 3778 03e7 54       		.byte	0x54
+ 3779 03e8 00000000 		.4byte	0
+ 3780 03ec 00000000 		.4byte	0
+ 3781              	.LLST39:
+ 3782 03f0 00000000 		.4byte	.LFB18
+ 3783 03f4 02000000 		.4byte	.LCFI7
+ 3784 03f8 0200     		.2byte	0x2
+ 3785 03fa 7D       		.byte	0x7d
+ 3786 03fb 00       		.sleb128 0
+ 3787 03fc 02000000 		.4byte	.LCFI7
+ 3788 0400 3C000000 		.4byte	.LFE18
+ 3789 0404 0200     		.2byte	0x2
+ 3790 0406 7D       		.byte	0x7d
+ 3791 0407 10       		.sleb128 16
+ 3792 0408 00000000 		.4byte	0
+ 3793 040c 00000000 		.4byte	0
+ 3794              	.LLST40:
+ 3795 0410 00000000 		.4byte	.LVL66
+ 3796 0414 1A000000 		.4byte	.LVL71
+ 3797 0418 0100     		.2byte	0x1
+ 3798 041a 50       		.byte	0x50
+ 3799 041b 1A000000 		.4byte	.LVL71
+ 3800 041f 3C000000 		.4byte	.LFE18
+ 3801 0423 0100     		.2byte	0x1
+ 3802 0425 55       		.byte	0x55
+ 3803 0426 00000000 		.4byte	0
+ 3804 042a 00000000 		.4byte	0
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 68
+
+
+ 3805              	.LLST41:
+ 3806 042e 08000000 		.4byte	.LVL67
+ 3807 0432 0A000000 		.4byte	.LVL68
+ 3808 0436 0200     		.2byte	0x2
+ 3809 0438 73       		.byte	0x73
+ 3810 0439 18       		.sleb128 24
+ 3811 043a 1D000000 		.4byte	.LVL72-1
+ 3812 043e 3C000000 		.4byte	.LFE18
+ 3813 0442 0100     		.2byte	0x1
+ 3814 0444 54       		.byte	0x54
+ 3815 0445 00000000 		.4byte	0
+ 3816 0449 00000000 		.4byte	0
+ 3817              	.LLST42:
+ 3818 044d 24000000 		.4byte	.LVL73
+ 3819 0451 28000000 		.4byte	.LVL74
+ 3820 0455 0100     		.2byte	0x1
+ 3821 0457 52       		.byte	0x52
+ 3822 0458 28000000 		.4byte	.LVL74
+ 3823 045c 3C000000 		.4byte	.LFE18
+ 3824 0460 0100     		.2byte	0x1
+ 3825 0462 50       		.byte	0x50
+ 3826 0463 00000000 		.4byte	0
+ 3827 0467 00000000 		.4byte	0
+ 3828              	.LLST43:
+ 3829 046b 0E000000 		.4byte	.LVL69
+ 3830 046f 10000000 		.4byte	.LVL70
+ 3831 0473 0100     		.2byte	0x1
+ 3832 0475 53       		.byte	0x53
+ 3833 0476 00000000 		.4byte	0
+ 3834 047a 00000000 		.4byte	0
+ 3835              	.LLST44:
+ 3836 047e 34000000 		.4byte	.LVL76
+ 3837 0482 3C000000 		.4byte	.LFE18
+ 3838 0486 0100     		.2byte	0x1
+ 3839 0488 53       		.byte	0x53
+ 3840 0489 00000000 		.4byte	0
+ 3841 048d 00000000 		.4byte	0
+ 3842              	.LLST45:
+ 3843 0491 00000000 		.4byte	.LFB19
+ 3844 0495 02000000 		.4byte	.LCFI8
+ 3845 0499 0200     		.2byte	0x2
+ 3846 049b 7D       		.byte	0x7d
+ 3847 049c 00       		.sleb128 0
+ 3848 049d 02000000 		.4byte	.LCFI8
+ 3849 04a1 34000000 		.4byte	.LFE19
+ 3850 04a5 0200     		.2byte	0x2
+ 3851 04a7 7D       		.byte	0x7d
+ 3852 04a8 10       		.sleb128 16
+ 3853 04a9 00000000 		.4byte	0
+ 3854 04ad 00000000 		.4byte	0
+ 3855              	.LLST46:
+ 3856 04b1 00000000 		.4byte	.LVL77
+ 3857 04b5 12000000 		.4byte	.LVL82
+ 3858 04b9 0100     		.2byte	0x1
+ 3859 04bb 50       		.byte	0x50
+ 3860 04bc 22000000 		.4byte	.LVL84
+ 3861 04c0 34000000 		.4byte	.LFE19
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 69
+
+
+ 3862 04c4 0100     		.2byte	0x1
+ 3863 04c6 55       		.byte	0x55
+ 3864 04c7 00000000 		.4byte	0
+ 3865 04cb 00000000 		.4byte	0
+ 3866              	.LLST47:
+ 3867 04cf 08000000 		.4byte	.LVL78
+ 3868 04d3 0A000000 		.4byte	.LVL79
+ 3869 04d7 0200     		.2byte	0x2
+ 3870 04d9 73       		.byte	0x73
+ 3871 04da 18       		.sleb128 24
+ 3872 04db 1B000000 		.4byte	.LVL83-1
+ 3873 04df 34000000 		.4byte	.LFE19
+ 3874 04e3 0100     		.2byte	0x1
+ 3875 04e5 54       		.byte	0x54
+ 3876 04e6 00000000 		.4byte	0
+ 3877 04ea 00000000 		.4byte	0
+ 3878              	.LLST48:
+ 3879 04ee 22000000 		.4byte	.LVL84
+ 3880 04f2 34000000 		.4byte	.LFE19
+ 3881 04f6 0100     		.2byte	0x1
+ 3882 04f8 50       		.byte	0x50
+ 3883 04f9 00000000 		.4byte	0
+ 3884 04fd 00000000 		.4byte	0
+ 3885              	.LLST49:
+ 3886 0501 0E000000 		.4byte	.LVL80
+ 3887 0505 10000000 		.4byte	.LVL81
+ 3888 0509 0100     		.2byte	0x1
+ 3889 050b 53       		.byte	0x53
+ 3890 050c 00000000 		.4byte	0
+ 3891 0510 00000000 		.4byte	0
+ 3892              	.LLST50:
+ 3893 0514 2E000000 		.4byte	.LVL86
+ 3894 0518 34000000 		.4byte	.LFE19
+ 3895 051c 0100     		.2byte	0x1
+ 3896 051e 53       		.byte	0x53
+ 3897 051f 00000000 		.4byte	0
+ 3898 0523 00000000 		.4byte	0
+ 3899              	.LLST51:
+ 3900 0527 00000000 		.4byte	.LFB20
+ 3901 052b 02000000 		.4byte	.LCFI9
+ 3902 052f 0200     		.2byte	0x2
+ 3903 0531 7D       		.byte	0x7d
+ 3904 0532 00       		.sleb128 0
+ 3905 0533 02000000 		.4byte	.LCFI9
+ 3906 0537 38000000 		.4byte	.LFE20
+ 3907 053b 0200     		.2byte	0x2
+ 3908 053d 7D       		.byte	0x7d
+ 3909 053e 10       		.sleb128 16
+ 3910 053f 00000000 		.4byte	0
+ 3911 0543 00000000 		.4byte	0
+ 3912              	.LLST52:
+ 3913 0547 00000000 		.4byte	.LVL87
+ 3914 054b 1C000000 		.4byte	.LVL92
+ 3915 054f 0100     		.2byte	0x1
+ 3916 0551 50       		.byte	0x50
+ 3917 0552 1C000000 		.4byte	.LVL92
+ 3918 0556 38000000 		.4byte	.LFE20
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 70
+
+
+ 3919 055a 0100     		.2byte	0x1
+ 3920 055c 54       		.byte	0x54
+ 3921 055d 00000000 		.4byte	0
+ 3922 0561 00000000 		.4byte	0
+ 3923              	.LLST53:
+ 3924 0565 08000000 		.4byte	.LVL88
+ 3925 0569 0A000000 		.4byte	.LVL89
+ 3926 056d 0200     		.2byte	0x2
+ 3927 056f 73       		.byte	0x73
+ 3928 0570 18       		.sleb128 24
+ 3929 0571 1F000000 		.4byte	.LVL93-1
+ 3930 0575 38000000 		.4byte	.LFE20
+ 3931 0579 0100     		.2byte	0x1
+ 3932 057b 55       		.byte	0x55
+ 3933 057c 00000000 		.4byte	0
+ 3934 0580 00000000 		.4byte	0
+ 3935              	.LLST54:
+ 3936 0584 0E000000 		.4byte	.LVL90
+ 3937 0588 10000000 		.4byte	.LVL91
+ 3938 058c 0100     		.2byte	0x1
+ 3939 058e 53       		.byte	0x53
+ 3940 058f 00000000 		.4byte	0
+ 3941 0593 00000000 		.4byte	0
+ 3942              	.LLST55:
+ 3943 0597 2E000000 		.4byte	.LVL95
+ 3944 059b 38000000 		.4byte	.LFE20
+ 3945 059f 0100     		.2byte	0x1
+ 3946 05a1 53       		.byte	0x53
+ 3947 05a2 00000000 		.4byte	0
+ 3948 05a6 00000000 		.4byte	0
+ 3949              	.LLST56:
+ 3950 05aa 00000000 		.4byte	.LFB21
+ 3951 05ae 04000000 		.4byte	.LCFI10
+ 3952 05b2 0200     		.2byte	0x2
+ 3953 05b4 7D       		.byte	0x7d
+ 3954 05b5 00       		.sleb128 0
+ 3955 05b6 04000000 		.4byte	.LCFI10
+ 3956 05ba 4C000000 		.4byte	.LFE21
+ 3957 05be 0200     		.2byte	0x2
+ 3958 05c0 7D       		.byte	0x7d
+ 3959 05c1 10       		.sleb128 16
+ 3960 05c2 00000000 		.4byte	0
+ 3961 05c6 00000000 		.4byte	0
+ 3962              	.LLST57:
+ 3963 05ca 00000000 		.4byte	.LVL96
+ 3964 05ce 16000000 		.4byte	.LVL101
+ 3965 05d2 0100     		.2byte	0x1
+ 3966 05d4 50       		.byte	0x50
+ 3967 05d5 18000000 		.4byte	.LVL102
+ 3968 05d9 4C000000 		.4byte	.LFE21
+ 3969 05dd 0100     		.2byte	0x1
+ 3970 05df 55       		.byte	0x55
+ 3971 05e0 00000000 		.4byte	0
+ 3972 05e4 00000000 		.4byte	0
+ 3973              	.LLST58:
+ 3974 05e8 00000000 		.4byte	.LVL96
+ 3975 05ec 18000000 		.4byte	.LVL102
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 71
+
+
+ 3976 05f0 0100     		.2byte	0x1
+ 3977 05f2 51       		.byte	0x51
+ 3978 05f3 22000000 		.4byte	.LVL105
+ 3979 05f7 29000000 		.4byte	.LVL106-1
+ 3980 05fb 0100     		.2byte	0x1
+ 3981 05fd 51       		.byte	0x51
+ 3982 05fe 00000000 		.4byte	0
+ 3983 0602 00000000 		.4byte	0
+ 3984              	.LLST59:
+ 3985 0606 06000000 		.4byte	.LVL97
+ 3986 060a 0A000000 		.4byte	.LVL98
+ 3987 060e 0200     		.2byte	0x2
+ 3988 0610 73       		.byte	0x73
+ 3989 0611 18       		.sleb128 24
+ 3990 0612 18000000 		.4byte	.LVL102
+ 3991 0616 4C000000 		.4byte	.LFE21
+ 3992 061a 0100     		.2byte	0x1
+ 3993 061c 56       		.byte	0x56
+ 3994 061d 00000000 		.4byte	0
+ 3995 0621 00000000 		.4byte	0
+ 3996              	.LLST60:
+ 3997 0625 18000000 		.4byte	.LVL102
+ 3998 0629 4C000000 		.4byte	.LFE21
+ 3999 062d 0100     		.2byte	0x1
+ 4000 062f 54       		.byte	0x54
+ 4001 0630 00000000 		.4byte	0
+ 4002 0634 00000000 		.4byte	0
+ 4003              	.LLST61:
+ 4004 0638 0E000000 		.4byte	.LVL99
+ 4005 063c 10000000 		.4byte	.LVL100
+ 4006 0640 0100     		.2byte	0x1
+ 4007 0642 53       		.byte	0x53
+ 4008 0643 00000000 		.4byte	0
+ 4009 0647 00000000 		.4byte	0
+ 4010              	.LLST62:
+ 4011 064b 1E000000 		.4byte	.LVL104
+ 4012 064f 22000000 		.4byte	.LVL105
+ 4013 0653 0100     		.2byte	0x1
+ 4014 0655 53       		.byte	0x53
+ 4015 0656 00000000 		.4byte	0
+ 4016 065a 00000000 		.4byte	0
+ 4017              	.LLST63:
+ 4018 065e 44000000 		.4byte	.LVL110
+ 4019 0662 4C000000 		.4byte	.LFE21
+ 4020 0666 0100     		.2byte	0x1
+ 4021 0668 53       		.byte	0x53
+ 4022 0669 00000000 		.4byte	0
+ 4023 066d 00000000 		.4byte	0
+ 4024              	.LLST64:
+ 4025 0671 00000000 		.4byte	.LFB22
+ 4026 0675 04000000 		.4byte	.LCFI11
+ 4027 0679 0200     		.2byte	0x2
+ 4028 067b 7D       		.byte	0x7d
+ 4029 067c 00       		.sleb128 0
+ 4030 067d 04000000 		.4byte	.LCFI11
+ 4031 0681 48000000 		.4byte	.LFE22
+ 4032 0685 0200     		.2byte	0x2
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 72
+
+
+ 4033 0687 7D       		.byte	0x7d
+ 4034 0688 10       		.sleb128 16
+ 4035 0689 00000000 		.4byte	0
+ 4036 068d 00000000 		.4byte	0
+ 4037              	.LLST65:
+ 4038 0691 00000000 		.4byte	.LVL111
+ 4039 0695 16000000 		.4byte	.LVL116
+ 4040 0699 0100     		.2byte	0x1
+ 4041 069b 50       		.byte	0x50
+ 4042 069c 18000000 		.4byte	.LVL117
+ 4043 06a0 48000000 		.4byte	.LFE22
+ 4044 06a4 0100     		.2byte	0x1
+ 4045 06a6 54       		.byte	0x54
+ 4046 06a7 00000000 		.4byte	0
+ 4047 06ab 00000000 		.4byte	0
+ 4048              	.LLST66:
+ 4049 06af 00000000 		.4byte	.LVL111
+ 4050 06b3 18000000 		.4byte	.LVL117
+ 4051 06b7 0100     		.2byte	0x1
+ 4052 06b9 51       		.byte	0x51
+ 4053 06ba 22000000 		.4byte	.LVL120
+ 4054 06be 29000000 		.4byte	.LVL121-1
+ 4055 06c2 0100     		.2byte	0x1
+ 4056 06c4 51       		.byte	0x51
+ 4057 06c5 00000000 		.4byte	0
+ 4058 06c9 00000000 		.4byte	0
+ 4059              	.LLST67:
+ 4060 06cd 06000000 		.4byte	.LVL112
+ 4061 06d1 0A000000 		.4byte	.LVL113
+ 4062 06d5 0200     		.2byte	0x2
+ 4063 06d7 73       		.byte	0x73
+ 4064 06d8 18       		.sleb128 24
+ 4065 06d9 18000000 		.4byte	.LVL117
+ 4066 06dd 48000000 		.4byte	.LFE22
+ 4067 06e1 0100     		.2byte	0x1
+ 4068 06e3 56       		.byte	0x56
+ 4069 06e4 00000000 		.4byte	0
+ 4070 06e8 00000000 		.4byte	0
+ 4071              	.LLST68:
+ 4072 06ec 18000000 		.4byte	.LVL117
+ 4073 06f0 48000000 		.4byte	.LFE22
+ 4074 06f4 0100     		.2byte	0x1
+ 4075 06f6 55       		.byte	0x55
+ 4076 06f7 00000000 		.4byte	0
+ 4077 06fb 00000000 		.4byte	0
+ 4078              	.LLST69:
+ 4079 06ff 0E000000 		.4byte	.LVL114
+ 4080 0703 10000000 		.4byte	.LVL115
+ 4081 0707 0100     		.2byte	0x1
+ 4082 0709 53       		.byte	0x53
+ 4083 070a 00000000 		.4byte	0
+ 4084 070e 00000000 		.4byte	0
+ 4085              	.LLST70:
+ 4086 0712 1E000000 		.4byte	.LVL119
+ 4087 0716 22000000 		.4byte	.LVL120
+ 4088 071a 0100     		.2byte	0x1
+ 4089 071c 53       		.byte	0x53
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 73
+
+
+ 4090 071d 00000000 		.4byte	0
+ 4091 0721 00000000 		.4byte	0
+ 4092              	.LLST71:
+ 4093 0725 40000000 		.4byte	.LVL124
+ 4094 0729 48000000 		.4byte	.LFE22
+ 4095 072d 0100     		.2byte	0x1
+ 4096 072f 53       		.byte	0x53
+ 4097 0730 00000000 		.4byte	0
+ 4098 0734 00000000 		.4byte	0
+ 4099              	.LLST72:
+ 4100 0738 00000000 		.4byte	.LFB23
+ 4101 073c 02000000 		.4byte	.LCFI12
+ 4102 0740 0200     		.2byte	0x2
+ 4103 0742 7D       		.byte	0x7d
+ 4104 0743 00       		.sleb128 0
+ 4105 0744 02000000 		.4byte	.LCFI12
+ 4106 0748 54000000 		.4byte	.LFE23
+ 4107 074c 0200     		.2byte	0x2
+ 4108 074e 7D       		.byte	0x7d
+ 4109 074f 10       		.sleb128 16
+ 4110 0750 00000000 		.4byte	0
+ 4111 0754 00000000 		.4byte	0
+ 4112              	.LLST73:
+ 4113 0758 00000000 		.4byte	.LVL125
+ 4114 075c 24000000 		.4byte	.LVL132
+ 4115 0760 0100     		.2byte	0x1
+ 4116 0762 50       		.byte	0x50
+ 4117 0763 26000000 		.4byte	.LVL133
+ 4118 0767 2A000000 		.4byte	.LVL134
+ 4119 076b 0100     		.2byte	0x1
+ 4120 076d 50       		.byte	0x50
+ 4121 076e 2A000000 		.4byte	.LVL134
+ 4122 0772 40000000 		.4byte	.LVL137
+ 4123 0776 0100     		.2byte	0x1
+ 4124 0778 54       		.byte	0x54
+ 4125 0779 44000000 		.4byte	.LVL138
+ 4126 077d 4C000000 		.4byte	.LVL140
+ 4127 0781 0100     		.2byte	0x1
+ 4128 0783 54       		.byte	0x54
+ 4129 0784 00000000 		.4byte	0
+ 4130 0788 00000000 		.4byte	0
+ 4131              	.LLST74:
+ 4132 078c 00000000 		.4byte	.LVL125
+ 4133 0790 2D000000 		.4byte	.LVL135-1
+ 4134 0794 0100     		.2byte	0x1
+ 4135 0796 51       		.byte	0x51
+ 4136 0797 00000000 		.4byte	0
+ 4137 079b 00000000 		.4byte	0
+ 4138              	.LLST75:
+ 4139 079f 08000000 		.4byte	.LVL126
+ 4140 07a3 0A000000 		.4byte	.LVL127
+ 4141 07a7 0200     		.2byte	0x2
+ 4142 07a9 73       		.byte	0x73
+ 4143 07aa 18       		.sleb128 24
+ 4144 07ab 2D000000 		.4byte	.LVL135-1
+ 4145 07af 54000000 		.4byte	.LFE23
+ 4146 07b3 0100     		.2byte	0x1
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 74
+
+
+ 4147 07b5 55       		.byte	0x55
+ 4148 07b6 00000000 		.4byte	0
+ 4149 07ba 00000000 		.4byte	0
+ 4150              	.LLST76:
+ 4151 07be 0E000000 		.4byte	.LVL128
+ 4152 07c2 10000000 		.4byte	.LVL129
+ 4153 07c6 0100     		.2byte	0x1
+ 4154 07c8 53       		.byte	0x53
+ 4155 07c9 00000000 		.4byte	0
+ 4156 07cd 00000000 		.4byte	0
+ 4157              	.LLST77:
+ 4158 07d1 20000000 		.4byte	.LVL131
+ 4159 07d5 26000000 		.4byte	.LVL133
+ 4160 07d9 0100     		.2byte	0x1
+ 4161 07db 53       		.byte	0x53
+ 4162 07dc 00000000 		.4byte	0
+ 4163 07e0 00000000 		.4byte	0
+ 4164              	.LLST78:
+ 4165 07e4 40000000 		.4byte	.LVL137
+ 4166 07e8 44000000 		.4byte	.LVL138
+ 4167 07ec 0100     		.2byte	0x1
+ 4168 07ee 53       		.byte	0x53
+ 4169 07ef 00000000 		.4byte	0
+ 4170 07f3 00000000 		.4byte	0
+ 4171              	.LLST79:
+ 4172 07f7 40000000 		.4byte	.LVL137
+ 4173 07fb 44000000 		.4byte	.LVL138
+ 4174 07ff 0100     		.2byte	0x1
+ 4175 0801 53       		.byte	0x53
+ 4176 0802 4A000000 		.4byte	.LVL139
+ 4177 0806 54000000 		.4byte	.LFE23
+ 4178 080a 0100     		.2byte	0x1
+ 4179 080c 53       		.byte	0x53
+ 4180 080d 00000000 		.4byte	0
+ 4181 0811 00000000 		.4byte	0
+ 4182              		.section	.debug_aranges,"",%progbits
+ 4183 0000 9C000000 		.4byte	0x9c
+ 4184 0004 0200     		.2byte	0x2
+ 4185 0006 00000000 		.4byte	.Ldebug_info0
+ 4186 000a 04       		.byte	0x4
+ 4187 000b 00       		.byte	0
+ 4188 000c 0000     		.2byte	0
+ 4189 000e 0000     		.2byte	0
+ 4190 0010 00000000 		.4byte	.LFB7
+ 4191 0014 2A000000 		.4byte	.LFE7-.LFB7
+ 4192 0018 00000000 		.4byte	.LFB8
+ 4193 001c 2A000000 		.4byte	.LFE8-.LFB8
+ 4194 0020 00000000 		.4byte	.LFB9
+ 4195 0024 26000000 		.4byte	.LFE9-.LFB9
+ 4196 0028 00000000 		.4byte	.LFB10
+ 4197 002c 20000000 		.4byte	.LFE10-.LFB10
+ 4198 0030 00000000 		.4byte	.LFB12
+ 4199 0034 14000000 		.4byte	.LFE12-.LFB12
+ 4200 0038 00000000 		.4byte	.LFB14
+ 4201 003c 2E000000 		.4byte	.LFE14-.LFB14
+ 4202 0040 00000000 		.4byte	.LFB13
+ 4203 0044 18000000 		.4byte	.LFE13-.LFB13
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 75
+
+
+ 4204 0048 00000000 		.4byte	.LFB11
+ 4205 004c 20000000 		.4byte	.LFE11-.LFB11
+ 4206 0050 00000000 		.4byte	.LFB15
+ 4207 0054 18000000 		.4byte	.LFE15-.LFB15
+ 4208 0058 00000000 		.4byte	.LFB16
+ 4209 005c 0A000000 		.4byte	.LFE16-.LFB16
+ 4210 0060 00000000 		.4byte	.LFB17
+ 4211 0064 30000000 		.4byte	.LFE17-.LFB17
+ 4212 0068 00000000 		.4byte	.LFB18
+ 4213 006c 3C000000 		.4byte	.LFE18-.LFB18
+ 4214 0070 00000000 		.4byte	.LFB19
+ 4215 0074 34000000 		.4byte	.LFE19-.LFB19
+ 4216 0078 00000000 		.4byte	.LFB20
+ 4217 007c 38000000 		.4byte	.LFE20-.LFB20
+ 4218 0080 00000000 		.4byte	.LFB21
+ 4219 0084 4C000000 		.4byte	.LFE21-.LFB21
+ 4220 0088 00000000 		.4byte	.LFB22
+ 4221 008c 48000000 		.4byte	.LFE22-.LFB22
+ 4222 0090 00000000 		.4byte	.LFB23
+ 4223 0094 54000000 		.4byte	.LFE23-.LFB23
+ 4224 0098 00000000 		.4byte	0
+ 4225 009c 00000000 		.4byte	0
+ 4226              		.section	.debug_ranges,"",%progbits
+ 4227              	.Ldebug_ranges0:
+ 4228 0000 1A000000 		.4byte	.LBB3
+ 4229 0004 1C000000 		.4byte	.LBE3
+ 4230 0008 22000000 		.4byte	.LBB4
+ 4231 000c 26000000 		.4byte	.LBE4
+ 4232 0010 00000000 		.4byte	0
+ 4233 0014 00000000 		.4byte	0
+ 4234 0018 16000000 		.4byte	.LBB6
+ 4235 001c 1C000000 		.4byte	.LBE6
+ 4236 0020 22000000 		.4byte	.LBB7
+ 4237 0024 28000000 		.4byte	.LBE7
+ 4238 0028 00000000 		.4byte	0
+ 4239 002c 00000000 		.4byte	0
+ 4240 0030 10000000 		.4byte	.LBB9
+ 4241 0034 12000000 		.4byte	.LBE9
+ 4242 0038 1C000000 		.4byte	.LBB10
+ 4243 003c 20000000 		.4byte	.LBE10
+ 4244 0040 00000000 		.4byte	0
+ 4245 0044 00000000 		.4byte	0
+ 4246 0048 0E000000 		.4byte	.LBB12
+ 4247 004c 10000000 		.4byte	.LBE12
+ 4248 0050 1A000000 		.4byte	.LBB13
+ 4249 0054 1E000000 		.4byte	.LBE13
+ 4250 0058 00000000 		.4byte	0
+ 4251 005c 00000000 		.4byte	0
+ 4252 0060 00000000 		.4byte	.LFB7
+ 4253 0064 2A000000 		.4byte	.LFE7
+ 4254 0068 00000000 		.4byte	.LFB8
+ 4255 006c 2A000000 		.4byte	.LFE8
+ 4256 0070 00000000 		.4byte	.LFB9
+ 4257 0074 26000000 		.4byte	.LFE9
+ 4258 0078 00000000 		.4byte	.LFB10
+ 4259 007c 20000000 		.4byte	.LFE10
+ 4260 0080 00000000 		.4byte	.LFB12
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 76
+
+
+ 4261 0084 14000000 		.4byte	.LFE12
+ 4262 0088 00000000 		.4byte	.LFB14
+ 4263 008c 2E000000 		.4byte	.LFE14
+ 4264 0090 00000000 		.4byte	.LFB13
+ 4265 0094 18000000 		.4byte	.LFE13
+ 4266 0098 00000000 		.4byte	.LFB11
+ 4267 009c 20000000 		.4byte	.LFE11
+ 4268 00a0 00000000 		.4byte	.LFB15
+ 4269 00a4 18000000 		.4byte	.LFE15
+ 4270 00a8 00000000 		.4byte	.LFB16
+ 4271 00ac 0A000000 		.4byte	.LFE16
+ 4272 00b0 00000000 		.4byte	.LFB17
+ 4273 00b4 30000000 		.4byte	.LFE17
+ 4274 00b8 00000000 		.4byte	.LFB18
+ 4275 00bc 3C000000 		.4byte	.LFE18
+ 4276 00c0 00000000 		.4byte	.LFB19
+ 4277 00c4 34000000 		.4byte	.LFE19
+ 4278 00c8 00000000 		.4byte	.LFB20
+ 4279 00cc 38000000 		.4byte	.LFE20
+ 4280 00d0 00000000 		.4byte	.LFB21
+ 4281 00d4 4C000000 		.4byte	.LFE21
+ 4282 00d8 00000000 		.4byte	.LFB22
+ 4283 00dc 48000000 		.4byte	.LFE22
+ 4284 00e0 00000000 		.4byte	.LFB23
+ 4285 00e4 54000000 		.4byte	.LFE23
+ 4286 00e8 00000000 		.4byte	0
+ 4287 00ec 00000000 		.4byte	0
+ 4288              		.section	.debug_line,"",%progbits
+ 4289              	.Ldebug_line0:
+ 4290 0000 30030000 		.section	.debug_str,"MS",%progbits,1
+ 4290      02004D01 
+ 4290      00000201 
+ 4290      FB0E0D00 
+ 4290      01010101 
+ 4291              	.LASF38:
+ 4292 0000 705F6D73 		.ascii	"p_msg\000"
+ 4292      6700
+ 4293              	.LASF67:
+ 4294 0006 7264796D 		.ascii	"rdymsg\000"
+ 4294      736700
+ 4295              	.LASF79:
+ 4296 000d 63684576 		.ascii	"chEvtSignal\000"
+ 4296      74536967 
+ 4296      6E616C00 
+ 4297              	.LASF93:
+ 4298 0019 474E5520 		.ascii	"GNU C 4.6.2 20121016 (release) [ARM/embedded-4_6-br"
+ 4298      4320342E 
+ 4298      362E3220 
+ 4298      32303132 
+ 4298      31303136 
+ 4299 004c 616E6368 		.ascii	"anch revision 192487]\000"
+ 4299      20726576 
+ 4299      6973696F 
+ 4299      6E203139 
+ 4299      32343837 
+ 4300              	.LASF11:
+ 4301 0062 6C6F6E67 		.ascii	"long long unsigned int\000"
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 77
+
+
+ 4301      206C6F6E 
+ 4301      6720756E 
+ 4301      7369676E 
+ 4301      65642069 
+ 4302              	.LASF76:
+ 4303 0079 63684576 		.ascii	"chEvtAddEvents\000"
+ 4303      74416464 
+ 4303      4576656E 
+ 4303      747300
+ 4304              	.LASF68:
+ 4305 0088 65786974 		.ascii	"exitcode\000"
+ 4305      636F6465 
+ 4305      00
+ 4306              	.LASF90:
+ 4307 0091 63684576 		.ascii	"chEvtWaitAnyTimeout\000"
+ 4307      74576169 
+ 4307      74416E79 
+ 4307      54696D65 
+ 4307      6F757400 
+ 4308              	.LASF26:
+ 4309 00a5 705F7072 		.ascii	"p_prio\000"
+ 4309      696F00
+ 4310              	.LASF95:
+ 4311 00ac 433A5C43 		.ascii	"C:\\ChibiStudio\\chibios\\demos\\ARMCM4-STM32F303-D"
+ 4311      68696269 
+ 4311      53747564 
+ 4311      696F5C63 
+ 4311      68696269 
+ 4312 00db 4953434F 		.ascii	"ISCOVERY\000"
+ 4312      56455259 
+ 4312      00
+ 4313              	.LASF10:
+ 4314 00e4 6C6F6E67 		.ascii	"long long int\000"
+ 4314      206C6F6E 
+ 4314      6720696E 
+ 4314      7400
+ 4315              	.LASF1:
+ 4316 00f2 7369676E 		.ascii	"signed char\000"
+ 4316      65642063 
+ 4316      68617200 
+ 4317              	.LASF91:
+ 4318 00fe 63684576 		.ascii	"chEvtWaitAllTimeout\000"
+ 4318      74576169 
+ 4318      74416C6C 
+ 4318      54696D65 
+ 4318      6F757400 
+ 4319              	.LASF42:
+ 4320 0112 705F6D70 		.ascii	"p_mpool\000"
+ 4320      6F6F6C00 
+ 4321              	.LASF56:
+ 4322 011a 6D5F7175 		.ascii	"m_queue\000"
+ 4322      65756500 
+ 4323              	.LASF16:
+ 4324 0122 74736C69 		.ascii	"tslices_t\000"
+ 4324      6365735F 
+ 4324      7400
+ 4325              	.LASF7:
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 78
+
+
+ 4326 012c 6C6F6E67 		.ascii	"long int\000"
+ 4326      20696E74 
+ 4326      00
+ 4327              	.LASF14:
+ 4328 0135 74737461 		.ascii	"tstate_t\000"
+ 4328      74655F74 
+ 4328      00
+ 4329              	.LASF86:
+ 4330 013e 63684576 		.ascii	"chEvtWaitAny\000"
+ 4330      74576169 
+ 4330      74416E79 
+ 4330      00
+ 4331              	.LASF80:
+ 4332 014b 63684576 		.ascii	"chEvtBroadcastFlagsI\000"
+ 4332      7442726F 
+ 4332      61646361 
+ 4332      7374466C 
+ 4332      61677349 
+ 4333              	.LASF28:
+ 4334 0160 705F6E65 		.ascii	"p_newer\000"
+ 4334      77657200 
+ 4335              	.LASF51:
+ 4336 0168 725F6E65 		.ascii	"r_newer\000"
+ 4336      77657200 
+ 4337              	.LASF72:
+ 4338 0170 6D61736B 		.ascii	"mask\000"
+ 4338      00
+ 4339              	.LASF45:
+ 4340 0175 72656761 		.ascii	"regarm_t\000"
+ 4340      726D5F74 
+ 4340      00
+ 4341              	.LASF81:
+ 4342 017e 63684576 		.ascii	"chEvtBroadcastFlags\000"
+ 4342      7442726F 
+ 4342      61646361 
+ 4342      7374466C 
+ 4342      61677300 
+ 4343              	.LASF19:
+ 4344 0192 6576656E 		.ascii	"eventid_t\000"
+ 4344      7469645F 
+ 4344      7400
+ 4345              	.LASF64:
+ 4346 019c 4576656E 		.ascii	"EventSource\000"
+ 4346      74536F75 
+ 4346      72636500 
+ 4347              	.LASF66:
+ 4348 01a8 65766861 		.ascii	"evhandler_t\000"
+ 4348      6E646C65 
+ 4348      725F7400 
+ 4349              	.LASF0:
+ 4350 01b4 756E7369 		.ascii	"unsigned int\000"
+ 4350      676E6564 
+ 4350      20696E74 
+ 4350      00
+ 4351              	.LASF9:
+ 4352 01c1 6C6F6E67 		.ascii	"long unsigned int\000"
+ 4352      20756E73 
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 79
+
+
+ 4352      69676E65 
+ 4352      6420696E 
+ 4352      7400
+ 4353              	.LASF75:
+ 4354 01d3 63684576 		.ascii	"chEvtGetAndClearEvents\000"
+ 4354      74476574 
+ 4354      416E6443 
+ 4354      6C656172 
+ 4354      4576656E 
+ 4355              	.LASF47:
+ 4356 01ea 636F6E74 		.ascii	"context\000"
+ 4356      65787400 
+ 4357              	.LASF4:
+ 4358 01f2 73686F72 		.ascii	"short unsigned int\000"
+ 4358      7420756E 
+ 4358      7369676E 
+ 4358      65642069 
+ 4358      6E7400
+ 4359              	.LASF73:
+ 4360 0205 63684576 		.ascii	"chEvtRegisterMask\000"
+ 4360      74526567 
+ 4360      69737465 
+ 4360      724D6173 
+ 4360      6B00
+ 4361              	.LASF18:
+ 4362 0217 6D73675F 		.ascii	"msg_t\000"
+ 4362      7400
+ 4363              	.LASF60:
+ 4364 021d 656C5F6E 		.ascii	"el_next\000"
+ 4364      65787400 
+ 4365              	.LASF74:
+ 4366 0225 63684576 		.ascii	"chEvtUnregister\000"
+ 4366      74556E72 
+ 4366      65676973 
+ 4366      74657200 
+ 4367              	.LASF13:
+ 4368 0235 746D6F64 		.ascii	"tmode_t\000"
+ 4368      655F7400 
+ 4369              	.LASF44:
+ 4370 023d 54687265 		.ascii	"ThreadsList\000"
+ 4370      6164734C 
+ 4370      69737400 
+ 4371              	.LASF20:
+ 4372 0249 6576656E 		.ascii	"eventmask_t\000"
+ 4372      746D6173 
+ 4372      6B5F7400 
+ 4373              	.LASF55:
+ 4374 0255 4D757465 		.ascii	"Mutex\000"
+ 4374      7800
+ 4375              	.LASF83:
+ 4376 025b 63684576 		.ascii	"chEvtDispatch\000"
+ 4376      74446973 
+ 4376      70617463 
+ 4376      6800
+ 4377              	.LASF29:
+ 4378 0269 705F6F6C 		.ascii	"p_older\000"
+ 4378      64657200 
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 80
+
+
+ 4379              	.LASF50:
+ 4380 0271 725F6374 		.ascii	"r_ctx\000"
+ 4380      7800
+ 4381              	.LASF43:
+ 4382 0277 54687265 		.ascii	"ThreadsQueue\000"
+ 4382      61647351 
+ 4382      75657565 
+ 4382      00
+ 4383              	.LASF89:
+ 4384 0284 74696D65 		.ascii	"time\000"
+ 4384      00
+ 4385              	.LASF87:
+ 4386 0289 63684576 		.ascii	"chEvtWaitAll\000"
+ 4386      74576169 
+ 4386      74416C6C 
+ 4386      00
+ 4387              	.LASF53:
+ 4388 0296 725F6375 		.ascii	"r_current\000"
+ 4388      7272656E 
+ 4388      7400
+ 4389              	.LASF52:
+ 4390 02a0 725F6F6C 		.ascii	"r_older\000"
+ 4390      64657200 
+ 4391              	.LASF62:
+ 4392 02a8 656C5F6D 		.ascii	"el_mask\000"
+ 4392      61736B00 
+ 4393              	.LASF84:
+ 4394 02b0 68616E64 		.ascii	"handlers\000"
+ 4394      6C657273 
+ 4394      00
+ 4395              	.LASF15:
+ 4396 02b9 74726566 		.ascii	"trefs_t\000"
+ 4396      735F7400 
+ 4397              	.LASF25:
+ 4398 02c1 705F7072 		.ascii	"p_prev\000"
+ 4398      657600
+ 4399              	.LASF17:
+ 4400 02c8 74707269 		.ascii	"tprio_t\000"
+ 4400      6F5F7400 
+ 4401              	.LASF12:
+ 4402 02d0 5F426F6F 		.ascii	"_Bool\000"
+ 4402      6C00
+ 4403              	.LASF6:
+ 4404 02d6 696E7433 		.ascii	"int32_t\000"
+ 4404      325F7400 
+ 4405              	.LASF2:
+ 4406 02de 756E7369 		.ascii	"unsigned char\000"
+ 4406      676E6564 
+ 4406      20636861 
+ 4406      7200
+ 4407              	.LASF85:
+ 4408 02ec 63684576 		.ascii	"chEvtWaitOne\000"
+ 4408      74576169 
+ 4408      744F6E65 
+ 4408      00
+ 4409              	.LASF61:
+ 4410 02f9 656C5F6C 		.ascii	"el_listener\000"
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 81
+
+
+ 4410      69737465 
+ 4410      6E657200 
+ 4411              	.LASF63:
+ 4412 0305 656C5F66 		.ascii	"el_flags\000"
+ 4412      6C616773 
+ 4412      00
+ 4413              	.LASF40:
+ 4414 030e 705F6D74 		.ascii	"p_mtxlist\000"
+ 4414      786C6973 
+ 4414      7400
+ 4415              	.LASF3:
+ 4416 0318 73686F72 		.ascii	"short int\000"
+ 4416      7420696E 
+ 4416      7400
+ 4417              	.LASF31:
+ 4418 0322 705F7374 		.ascii	"p_state\000"
+ 4418      61746500 
+ 4419              	.LASF34:
+ 4420 032a 705F7072 		.ascii	"p_preempt\000"
+ 4420      65656D70 
+ 4420      7400
+ 4421              	.LASF49:
+ 4422 0334 725F7072 		.ascii	"r_prio\000"
+ 4422      696F00
+ 4423              	.LASF82:
+ 4424 033b 63684576 		.ascii	"chEvtGetAndClearFlagsI\000"
+ 4424      74476574 
+ 4424      416E6443 
+ 4424      6C656172 
+ 4424      466C6167 
+ 4425              	.LASF70:
+ 4426 0352 65776D61 		.ascii	"ewmask\000"
+ 4426      736B00
+ 4427              	.LASF24:
+ 4428 0359 705F6E65 		.ascii	"p_next\000"
+ 4428      787400
+ 4429              	.LASF32:
+ 4430 0360 705F666C 		.ascii	"p_flags\000"
+ 4430      61677300 
+ 4431              	.LASF23:
+ 4432 0368 54687265 		.ascii	"Thread\000"
+ 4432      616400
+ 4433              	.LASF39:
+ 4434 036f 705F6570 		.ascii	"p_epending\000"
+ 4434      656E6469 
+ 4434      6E6700
+ 4435              	.LASF8:
+ 4436 037a 75696E74 		.ascii	"uint32_t\000"
+ 4436      33325F74 
+ 4436      00
+ 4437              	.LASF48:
+ 4438 0383 725F7175 		.ascii	"r_queue\000"
+ 4438      65756500 
+ 4439              	.LASF71:
+ 4440 038b 63686172 		.ascii	"char\000"
+ 4440      00
+ 4441              	.LASF58:
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 82
+
+
+ 4442 0390 6D5F6E65 		.ascii	"m_next\000"
+ 4442      787400
+ 4443              	.LASF22:
+ 4444 0397 73797374 		.ascii	"systime_t\000"
+ 4444      696D655F 
+ 4444      7400
+ 4445              	.LASF41:
+ 4446 03a1 705F7265 		.ascii	"p_realprio\000"
+ 4446      616C7072 
+ 4446      696F00
+ 4447              	.LASF35:
+ 4448 03ac 705F7469 		.ascii	"p_time\000"
+ 4448      6D6500
+ 4449              	.LASF46:
+ 4450 03b3 696E7463 		.ascii	"intctx\000"
+ 4450      747800
+ 4451              	.LASF37:
+ 4452 03ba 705F6D73 		.ascii	"p_msgqueue\000"
+ 4452      67717565 
+ 4452      756500
+ 4453              	.LASF21:
+ 4454 03c5 666C6167 		.ascii	"flagsmask_t\000"
+ 4454      736D6173 
+ 4454      6B5F7400 
+ 4455              	.LASF33:
+ 4456 03d1 705F7265 		.ascii	"p_refs\000"
+ 4456      667300
+ 4457              	.LASF54:
+ 4458 03d8 52656164 		.ascii	"ReadyList\000"
+ 4458      794C6973 
+ 4458      7400
+ 4459              	.LASF92:
+ 4460 03e2 726C6973 		.ascii	"rlist\000"
+ 4460      7400
+ 4461              	.LASF5:
+ 4462 03e8 75696E74 		.ascii	"uint8_t\000"
+ 4462      385F7400 
+ 4463              	.LASF78:
+ 4464 03f0 666C6167 		.ascii	"flags\000"
+ 4464      7300
+ 4465              	.LASF94:
+ 4466 03f6 2E2E2F2E 		.ascii	"../../os/kernel/src/chevents.c\000"
+ 4466      2E2F6F73 
+ 4466      2F6B6572 
+ 4466      6E656C2F 
+ 4466      7372632F 
+ 4467              	.LASF59:
+ 4468 0415 4576656E 		.ascii	"EventListener\000"
+ 4468      744C6973 
+ 4468      74656E65 
+ 4468      7200
+ 4469              	.LASF88:
+ 4470 0423 63684576 		.ascii	"chEvtWaitOneTimeout\000"
+ 4470      74576169 
+ 4470      744F6E65 
+ 4470      54696D65 
+ 4470      6F757400 
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 83
+
+
+ 4471              	.LASF69:
+ 4472 0437 77746F62 		.ascii	"wtobjp\000"
+ 4472      6A7000
+ 4473              	.LASF30:
+ 4474 043e 705F6E61 		.ascii	"p_name\000"
+ 4474      6D6500
+ 4475              	.LASF65:
+ 4476 0445 65735F6E 		.ascii	"es_next\000"
+ 4476      65787400 
+ 4477              	.LASF77:
+ 4478 044d 63684576 		.ascii	"chEvtGetAndClearFlags\000"
+ 4478      74476574 
+ 4478      416E6443 
+ 4478      6C656172 
+ 4478      466C6167 
+ 4479              	.LASF57:
+ 4480 0463 6D5F6F77 		.ascii	"m_owner\000"
+ 4480      6E657200 
+ 4481              	.LASF27:
+ 4482 046b 705F6374 		.ascii	"p_ctx\000"
+ 4482      7800
+ 4483              	.LASF36:
+ 4484 0471 705F7761 		.ascii	"p_waiting\000"
+ 4484      6974696E 
+ 4484      6700
+ 4485              	.LASF96:
+ 4486 047b 63684576 		.ascii	"chEvtSignalI\000"
+ 4486      74536967 
+ 4486      6E616C49 
+ 4486      00
+ 4487              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.6.2 20121016 (release) [ARM/embedded-4_6-br
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s 			page 84
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 chevents.c
+C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s:19     .text.chEvtRegisterMask:00000000 $t
+C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s:25     .text.chEvtRegisterMask:00000000 chEvtRegisterMask
+C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s:89     .text.chEvtUnregister:00000000 $t
+C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s:95     .text.chEvtUnregister:00000000 chEvtUnregister
+C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s:162    .text.chEvtGetAndClearEvents:00000000 $t
+C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s:168    .text.chEvtGetAndClearEvents:00000000 chEvtGetAndClearEvents
+C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s:224    .text.chEvtAddEvents:00000000 $t
+C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s:230    .text.chEvtAddEvents:00000000 chEvtAddEvents
+C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s:277    .text.chEvtGetAndClearFlags:00000000 $t
+C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s:283    .text.chEvtGetAndClearFlags:00000000 chEvtGetAndClearFlags
+C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s:325    .text.chEvtSignalI:00000000 $t
+C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s:331    .text.chEvtSignalI:00000000 chEvtSignalI
+C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s:392    .text.chEvtSignal:00000000 $t
+C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s:398    .text.chEvtSignal:00000000 chEvtSignal
+C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s:441    .text.chEvtBroadcastFlagsI:00000000 $t
+C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s:447    .text.chEvtBroadcastFlagsI:00000000 chEvtBroadcastFlagsI
+C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s:493    .text.chEvtBroadcastFlags:00000000 $t
+C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s:499    .text.chEvtBroadcastFlags:00000000 chEvtBroadcastFlags
+C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s:542    .text.chEvtGetAndClearFlagsI:00000000 $t
+C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s:548    .text.chEvtGetAndClearFlagsI:00000000 chEvtGetAndClearFlagsI
+C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s:571    .text.chEvtDispatch:00000000 $t
+C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s:577    .text.chEvtDispatch:00000000 chEvtDispatch
+C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s:635    .text.chEvtWaitOne:00000000 $t
+C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s:641    .text.chEvtWaitOne:00000000 chEvtWaitOne
+C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s:711    .text.chEvtWaitOne:00000038 $d
+C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s:716    .text.chEvtWaitAny:00000000 $t
+C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s:722    .text.chEvtWaitAny:00000000 chEvtWaitAny
+C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s:789    .text.chEvtWaitAny:00000030 $d
+C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s:794    .text.chEvtWaitAll:00000000 $t
+C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s:800    .text.chEvtWaitAll:00000000 chEvtWaitAll
+C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s:865    .text.chEvtWaitAll:00000034 $d
+C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s:870    .text.chEvtWaitOneTimeout:00000000 $t
+C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s:876    .text.chEvtWaitOneTimeout:00000000 chEvtWaitOneTimeout
+C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s:969    .text.chEvtWaitOneTimeout:00000048 $d
+C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s:974    .text.chEvtWaitAnyTimeout:00000000 $t
+C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s:980    .text.chEvtWaitAnyTimeout:00000000 chEvtWaitAnyTimeout
+C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s:1069   .text.chEvtWaitAnyTimeout:00000044 $d
+C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s:1074   .text.chEvtWaitAllTimeout:00000000 $t
+C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s:1080   .text.chEvtWaitAllTimeout:00000000 chEvtWaitAllTimeout
+C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s:1183   .text.chEvtWaitAllTimeout:00000050 $d
+                     .debug_frame:00000010 $d
+C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s:715    .text.chEvtWaitOne:0000003c $t
+C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s:793    .text.chEvtWaitAny:00000034 $t
+C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s:869    .text.chEvtWaitAll:00000038 $t
+C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s:973    .text.chEvtWaitOneTimeout:0000004c $t
+C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s:1073   .text.chEvtWaitAnyTimeout:00000048 $t
+C:\Users\TAISIK~1\AppData\Local\Temp\ccjKyvwk.s:1187   .text.chEvtWaitAllTimeout:00000054 $t
+
+UNDEFINED SYMBOLS
+rlist
+chSchReadyI
+chSchRescheduleS
+chSchGoSleepS
+chSchGoSleepTimeoutS

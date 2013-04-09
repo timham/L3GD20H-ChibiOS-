@@ -1,0 +1,1165 @@
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m4
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"vectors.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text._unhandled_exception,"ax",%progbits
+  19              		.align	2
+  20              		.p2align 4,,15
+  21              		.global	_unhandled_exception
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	_unhandled_exception, %function
+  25              	_unhandled_exception:
+  26              	.LFB7:
+  27              		.file 1 "../../os/ports/GCC/ARMCMx/STM32F3xx/vectors.c"
+  28              		.loc 1 208 0
+  29              		.cfi_startproc
+  30              		@ Naked Function: prologue and epilogue provided by programmer.
+  31              		@ Volatile: function does not return.
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              	.L2:
+  35 0000 FEE7     		b	.L2
+  36              		.cfi_endproc
+  37              	.LFE7:
+  38              		.size	_unhandled_exception, .-_unhandled_exception
+  39              		.global	_vectors
+  40              		.weak	NMIVector
+  41              		.thumb_set NMIVector,_unhandled_exception
+  42              		.weak	HardFaultVector
+  43              		.thumb_set HardFaultVector,_unhandled_exception
+  44              		.weak	MemManageVector
+  45              		.thumb_set MemManageVector,_unhandled_exception
+  46              		.weak	BusFaultVector
+  47              		.thumb_set BusFaultVector,_unhandled_exception
+  48              		.weak	UsageFaultVector
+  49              		.thumb_set UsageFaultVector,_unhandled_exception
+  50              		.weak	Vector1C
+  51              		.thumb_set Vector1C,_unhandled_exception
+  52              		.weak	Vector20
+  53              		.thumb_set Vector20,_unhandled_exception
+  54              		.weak	Vector24
+  55              		.thumb_set Vector24,_unhandled_exception
+  56              		.weak	Vector28
+  57              		.thumb_set Vector28,_unhandled_exception
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s 			page 2
+
+
+  58              		.weak	SVCallVector
+  59              		.thumb_set SVCallVector,_unhandled_exception
+  60              		.weak	DebugMonitorVector
+  61              		.thumb_set DebugMonitorVector,_unhandled_exception
+  62              		.weak	Vector34
+  63              		.thumb_set Vector34,_unhandled_exception
+  64              		.weak	PendSVVector
+  65              		.thumb_set PendSVVector,_unhandled_exception
+  66              		.weak	SysTickVector
+  67              		.thumb_set SysTickVector,_unhandled_exception
+  68              		.weak	Vector40
+  69              		.thumb_set Vector40,_unhandled_exception
+  70              		.weak	Vector44
+  71              		.thumb_set Vector44,_unhandled_exception
+  72              		.weak	Vector48
+  73              		.thumb_set Vector48,_unhandled_exception
+  74              		.weak	Vector4C
+  75              		.thumb_set Vector4C,_unhandled_exception
+  76              		.weak	Vector50
+  77              		.thumb_set Vector50,_unhandled_exception
+  78              		.weak	Vector54
+  79              		.thumb_set Vector54,_unhandled_exception
+  80              		.weak	Vector58
+  81              		.thumb_set Vector58,_unhandled_exception
+  82              		.weak	Vector5C
+  83              		.thumb_set Vector5C,_unhandled_exception
+  84              		.weak	Vector60
+  85              		.thumb_set Vector60,_unhandled_exception
+  86              		.weak	Vector64
+  87              		.thumb_set Vector64,_unhandled_exception
+  88              		.weak	Vector68
+  89              		.thumb_set Vector68,_unhandled_exception
+  90              		.weak	Vector6C
+  91              		.thumb_set Vector6C,_unhandled_exception
+  92              		.weak	Vector70
+  93              		.thumb_set Vector70,_unhandled_exception
+  94              		.weak	Vector74
+  95              		.thumb_set Vector74,_unhandled_exception
+  96              		.weak	Vector78
+  97              		.thumb_set Vector78,_unhandled_exception
+  98              		.weak	Vector7C
+  99              		.thumb_set Vector7C,_unhandled_exception
+ 100              		.weak	Vector80
+ 101              		.thumb_set Vector80,_unhandled_exception
+ 102              		.weak	Vector84
+ 103              		.thumb_set Vector84,_unhandled_exception
+ 104              		.weak	Vector88
+ 105              		.thumb_set Vector88,_unhandled_exception
+ 106              		.weak	Vector8C
+ 107              		.thumb_set Vector8C,_unhandled_exception
+ 108              		.weak	Vector90
+ 109              		.thumb_set Vector90,_unhandled_exception
+ 110              		.weak	Vector94
+ 111              		.thumb_set Vector94,_unhandled_exception
+ 112              		.weak	Vector98
+ 113              		.thumb_set Vector98,_unhandled_exception
+ 114              		.weak	Vector9C
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s 			page 3
+
+
+ 115              		.thumb_set Vector9C,_unhandled_exception
+ 116              		.weak	VectorA0
+ 117              		.thumb_set VectorA0,_unhandled_exception
+ 118              		.weak	VectorA4
+ 119              		.thumb_set VectorA4,_unhandled_exception
+ 120              		.weak	VectorA8
+ 121              		.thumb_set VectorA8,_unhandled_exception
+ 122              		.weak	VectorAC
+ 123              		.thumb_set VectorAC,_unhandled_exception
+ 124              		.weak	VectorB0
+ 125              		.thumb_set VectorB0,_unhandled_exception
+ 126              		.weak	VectorB4
+ 127              		.thumb_set VectorB4,_unhandled_exception
+ 128              		.weak	VectorB8
+ 129              		.thumb_set VectorB8,_unhandled_exception
+ 130              		.weak	VectorBC
+ 131              		.thumb_set VectorBC,_unhandled_exception
+ 132              		.weak	VectorC0
+ 133              		.thumb_set VectorC0,_unhandled_exception
+ 134              		.weak	VectorC4
+ 135              		.thumb_set VectorC4,_unhandled_exception
+ 136              		.weak	VectorC8
+ 137              		.thumb_set VectorC8,_unhandled_exception
+ 138              		.weak	VectorCC
+ 139              		.thumb_set VectorCC,_unhandled_exception
+ 140              		.weak	VectorD0
+ 141              		.thumb_set VectorD0,_unhandled_exception
+ 142              		.weak	VectorD4
+ 143              		.thumb_set VectorD4,_unhandled_exception
+ 144              		.weak	VectorD8
+ 145              		.thumb_set VectorD8,_unhandled_exception
+ 146              		.weak	VectorDC
+ 147              		.thumb_set VectorDC,_unhandled_exception
+ 148              		.weak	VectorE0
+ 149              		.thumb_set VectorE0,_unhandled_exception
+ 150              		.weak	VectorE4
+ 151              		.thumb_set VectorE4,_unhandled_exception
+ 152              		.weak	VectorE8
+ 153              		.thumb_set VectorE8,_unhandled_exception
+ 154              		.weak	VectorEC
+ 155              		.thumb_set VectorEC,_unhandled_exception
+ 156              		.weak	VectorF0
+ 157              		.thumb_set VectorF0,_unhandled_exception
+ 158              		.weak	VectorF4
+ 159              		.thumb_set VectorF4,_unhandled_exception
+ 160              		.weak	VectorF8
+ 161              		.thumb_set VectorF8,_unhandled_exception
+ 162              		.weak	VectorFC
+ 163              		.thumb_set VectorFC,_unhandled_exception
+ 164              		.weak	Vector100
+ 165              		.thumb_set Vector100,_unhandled_exception
+ 166              		.weak	Vector104
+ 167              		.thumb_set Vector104,_unhandled_exception
+ 168              		.weak	Vector108
+ 169              		.thumb_set Vector108,_unhandled_exception
+ 170              		.weak	Vector10C
+ 171              		.thumb_set Vector10C,_unhandled_exception
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s 			page 4
+
+
+ 172              		.weak	Vector110
+ 173              		.thumb_set Vector110,_unhandled_exception
+ 174              		.weak	Vector114
+ 175              		.thumb_set Vector114,_unhandled_exception
+ 176              		.weak	Vector118
+ 177              		.thumb_set Vector118,_unhandled_exception
+ 178              		.weak	Vector11C
+ 179              		.thumb_set Vector11C,_unhandled_exception
+ 180              		.weak	Vector120
+ 181              		.thumb_set Vector120,_unhandled_exception
+ 182              		.weak	Vector124
+ 183              		.thumb_set Vector124,_unhandled_exception
+ 184              		.weak	Vector128
+ 185              		.thumb_set Vector128,_unhandled_exception
+ 186              		.weak	Vector12C
+ 187              		.thumb_set Vector12C,_unhandled_exception
+ 188              		.weak	Vector130
+ 189              		.thumb_set Vector130,_unhandled_exception
+ 190              		.weak	Vector134
+ 191              		.thumb_set Vector134,_unhandled_exception
+ 192              		.weak	Vector138
+ 193              		.thumb_set Vector138,_unhandled_exception
+ 194              		.weak	Vector13C
+ 195              		.thumb_set Vector13C,_unhandled_exception
+ 196              		.weak	Vector140
+ 197              		.thumb_set Vector140,_unhandled_exception
+ 198              		.weak	Vector144
+ 199              		.thumb_set Vector144,_unhandled_exception
+ 200              		.weak	Vector148
+ 201              		.thumb_set Vector148,_unhandled_exception
+ 202              		.weak	Vector14C
+ 203              		.thumb_set Vector14C,_unhandled_exception
+ 204              		.weak	Vector150
+ 205              		.thumb_set Vector150,_unhandled_exception
+ 206              		.weak	Vector154
+ 207              		.thumb_set Vector154,_unhandled_exception
+ 208              		.weak	Vector158
+ 209              		.thumb_set Vector158,_unhandled_exception
+ 210              		.weak	Vector15C
+ 211              		.thumb_set Vector15C,_unhandled_exception
+ 212              		.weak	Vector160
+ 213              		.thumb_set Vector160,_unhandled_exception
+ 214              		.weak	Vector164
+ 215              		.thumb_set Vector164,_unhandled_exception
+ 216              		.weak	Vector168
+ 217              		.thumb_set Vector168,_unhandled_exception
+ 218              		.weak	Vector16C
+ 219              		.thumb_set Vector16C,_unhandled_exception
+ 220              		.weak	Vector170
+ 221              		.thumb_set Vector170,_unhandled_exception
+ 222              		.weak	Vector174
+ 223              		.thumb_set Vector174,_unhandled_exception
+ 224              		.weak	Vector178
+ 225              		.thumb_set Vector178,_unhandled_exception
+ 226              		.weak	Vector17C
+ 227              		.thumb_set Vector17C,_unhandled_exception
+ 228              		.weak	Vector180
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s 			page 5
+
+
+ 229              		.thumb_set Vector180,_unhandled_exception
+ 230              		.weak	Vector184
+ 231              		.thumb_set Vector184,_unhandled_exception
+ 232 0002 00BFAFF3 		.section	vectors,"aw",%progbits
+ 232      0080AFF3 
+ 232      0080AFF3 
+ 232      0080
+ 233              		.align	2
+ 234              		.type	_vectors, %object
+ 235              		.size	_vectors, 392
+ 236              	_vectors:
+ 237 0000 00000000 		.word	__main_stack_end__
+ 238 0004 00000000 		.word	ResetHandler
+ 239 0008 00000000 		.word	NMIVector
+ 240 000c 00000000 		.word	HardFaultVector
+ 241 0010 00000000 		.word	MemManageVector
+ 242 0014 00000000 		.word	BusFaultVector
+ 243 0018 00000000 		.word	UsageFaultVector
+ 244 001c 00000000 		.word	Vector1C
+ 245 0020 00000000 		.word	Vector20
+ 246 0024 00000000 		.word	Vector24
+ 247 0028 00000000 		.word	Vector28
+ 248 002c 00000000 		.word	SVCallVector
+ 249 0030 00000000 		.word	DebugMonitorVector
+ 250 0034 00000000 		.word	Vector34
+ 251 0038 00000000 		.word	PendSVVector
+ 252 003c 00000000 		.word	SysTickVector
+ 253 0040 00000000 		.word	Vector40
+ 254 0044 00000000 		.word	Vector44
+ 255 0048 00000000 		.word	Vector48
+ 256 004c 00000000 		.word	Vector4C
+ 257 0050 00000000 		.word	Vector50
+ 258 0054 00000000 		.word	Vector54
+ 259 0058 00000000 		.word	Vector58
+ 260 005c 00000000 		.word	Vector5C
+ 261 0060 00000000 		.word	Vector60
+ 262 0064 00000000 		.word	Vector64
+ 263 0068 00000000 		.word	Vector68
+ 264 006c 00000000 		.word	Vector6C
+ 265 0070 00000000 		.word	Vector70
+ 266 0074 00000000 		.word	Vector74
+ 267 0078 00000000 		.word	Vector78
+ 268 007c 00000000 		.word	Vector7C
+ 269 0080 00000000 		.word	Vector80
+ 270 0084 00000000 		.word	Vector84
+ 271 0088 00000000 		.word	Vector88
+ 272 008c 00000000 		.word	Vector8C
+ 273 0090 00000000 		.word	Vector90
+ 274 0094 00000000 		.word	Vector94
+ 275 0098 00000000 		.word	Vector98
+ 276 009c 00000000 		.word	Vector9C
+ 277 00a0 00000000 		.word	VectorA0
+ 278 00a4 00000000 		.word	VectorA4
+ 279 00a8 00000000 		.word	VectorA8
+ 280 00ac 00000000 		.word	VectorAC
+ 281 00b0 00000000 		.word	VectorB0
+ 282 00b4 00000000 		.word	VectorB4
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s 			page 6
+
+
+ 283 00b8 00000000 		.word	VectorB8
+ 284 00bc 00000000 		.word	VectorBC
+ 285 00c0 00000000 		.word	VectorC0
+ 286 00c4 00000000 		.word	VectorC4
+ 287 00c8 00000000 		.word	VectorC8
+ 288 00cc 00000000 		.word	VectorCC
+ 289 00d0 00000000 		.word	VectorD0
+ 290 00d4 00000000 		.word	VectorD4
+ 291 00d8 00000000 		.word	VectorD8
+ 292 00dc 00000000 		.word	VectorDC
+ 293 00e0 00000000 		.word	VectorE0
+ 294 00e4 00000000 		.word	VectorE4
+ 295 00e8 00000000 		.word	VectorE8
+ 296 00ec 00000000 		.word	VectorEC
+ 297 00f0 00000000 		.word	VectorF0
+ 298 00f4 00000000 		.word	VectorF4
+ 299 00f8 00000000 		.word	VectorF8
+ 300 00fc 00000000 		.word	VectorFC
+ 301 0100 00000000 		.word	Vector100
+ 302 0104 00000000 		.word	Vector104
+ 303 0108 00000000 		.word	Vector108
+ 304 010c 00000000 		.word	Vector10C
+ 305 0110 00000000 		.word	Vector110
+ 306 0114 00000000 		.word	Vector114
+ 307 0118 00000000 		.word	Vector118
+ 308 011c 00000000 		.word	Vector11C
+ 309 0120 00000000 		.word	Vector120
+ 310 0124 00000000 		.word	Vector124
+ 311 0128 00000000 		.word	Vector128
+ 312 012c 00000000 		.word	Vector12C
+ 313 0130 00000000 		.word	Vector130
+ 314 0134 00000000 		.word	Vector134
+ 315 0138 00000000 		.word	Vector138
+ 316 013c 00000000 		.word	Vector13C
+ 317 0140 00000000 		.word	Vector140
+ 318 0144 00000000 		.word	Vector144
+ 319 0148 00000000 		.word	Vector148
+ 320 014c 00000000 		.word	Vector14C
+ 321 0150 00000000 		.word	Vector150
+ 322 0154 00000000 		.word	Vector154
+ 323 0158 00000000 		.word	Vector158
+ 324 015c 00000000 		.word	Vector15C
+ 325 0160 00000000 		.word	Vector160
+ 326 0164 00000000 		.word	Vector164
+ 327 0168 00000000 		.word	Vector168
+ 328 016c 00000000 		.word	Vector16C
+ 329 0170 00000000 		.word	Vector170
+ 330 0174 00000000 		.word	Vector174
+ 331 0178 00000000 		.word	Vector178
+ 332 017c 00000000 		.word	Vector17C
+ 333 0180 00000000 		.word	Vector180
+ 334 0184 00000000 		.word	Vector184
+ 335              		.text
+ 336              	.Letext0:
+ 337              		.file 2 "c:\\chibistudio\\tools\\gnu tools arm embedded\\4.6 2012q4\\bin\\../lib/gcc/arm-none-eabi
+ 338              		.section	.debug_info,"",%progbits
+ 339              	.Ldebug_info0:
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s 			page 7
+
+
+ 340 0000 F1010000 		.4byte	0x1f1
+ 341 0004 0200     		.2byte	0x2
+ 342 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 343 000a 04       		.byte	0x4
+ 344 000b 01       		.uleb128 0x1
+ 345 000c 56000000 		.4byte	.LASF33
+ 346 0010 01       		.byte	0x1
+ 347 0011 16000000 		.4byte	.LASF34
+ 348 0015 F4000000 		.4byte	.LASF35
+ 349 0019 00000000 		.4byte	0
+ 350 001d 00000000 		.4byte	0
+ 351 0021 00000000 		.4byte	.Ldebug_ranges0+0
+ 352 0025 00000000 		.4byte	.Ldebug_line0
+ 353 0029 02       		.uleb128 0x2
+ 354 002a 04       		.byte	0x4
+ 355 002b 05       		.byte	0x5
+ 356 002c 696E7400 		.ascii	"int\000"
+ 357 0030 03       		.uleb128 0x3
+ 358 0031 04       		.byte	0x4
+ 359 0032 07       		.byte	0x7
+ 360 0033 3B010000 		.4byte	.LASF0
+ 361 0037 03       		.uleb128 0x3
+ 362 0038 01       		.byte	0x1
+ 363 0039 06       		.byte	0x6
+ 364 003a 28020000 		.4byte	.LASF1
+ 365 003e 03       		.uleb128 0x3
+ 366 003f 01       		.byte	0x1
+ 367 0040 08       		.byte	0x8
+ 368 0041 B8000000 		.4byte	.LASF2
+ 369 0045 03       		.uleb128 0x3
+ 370 0046 02       		.byte	0x2
+ 371 0047 05       		.byte	0x5
+ 372 0048 FF010000 		.4byte	.LASF3
+ 373 004c 03       		.uleb128 0x3
+ 374 004d 02       		.byte	0x2
+ 375 004e 07       		.byte	0x7
+ 376 004f D8000000 		.4byte	.LASF4
+ 377 0053 03       		.uleb128 0x3
+ 378 0054 04       		.byte	0x4
+ 379 0055 05       		.byte	0x5
+ 380 0056 1F020000 		.4byte	.LASF5
+ 381 005a 04       		.uleb128 0x4
+ 382 005b 16020000 		.4byte	.LASF11
+ 383 005f 02       		.byte	0x2
+ 384 0060 50       		.byte	0x50
+ 385 0061 65000000 		.4byte	0x65
+ 386 0065 03       		.uleb128 0x3
+ 387 0066 04       		.byte	0x4
+ 388 0067 07       		.byte	0x7
+ 389 0068 C6000000 		.4byte	.LASF6
+ 390 006c 03       		.uleb128 0x3
+ 391 006d 08       		.byte	0x8
+ 392 006e 05       		.byte	0x5
+ 393 006f BE010000 		.4byte	.LASF7
+ 394 0073 03       		.uleb128 0x3
+ 395 0074 08       		.byte	0x8
+ 396 0075 07       		.byte	0x7
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s 			page 8
+
+
+ 397 0076 53010000 		.4byte	.LASF8
+ 398 007a 03       		.uleb128 0x3
+ 399 007b 01       		.byte	0x1
+ 400 007c 02       		.byte	0x2
+ 401 007d 51020000 		.4byte	.LASF9
+ 402 0081 03       		.uleb128 0x3
+ 403 0082 01       		.byte	0x1
+ 404 0083 08       		.byte	0x8
+ 405 0084 CC010000 		.4byte	.LASF10
+ 406 0088 04       		.uleb128 0x4
+ 407 0089 09000000 		.4byte	.LASF12
+ 408 008d 01       		.byte	0x1
+ 409 008e 24       		.byte	0x24
+ 410 008f 93000000 		.4byte	0x93
+ 411 0093 05       		.uleb128 0x5
+ 412 0094 04       		.byte	0x4
+ 413 0095 99000000 		.4byte	0x99
+ 414 0099 06       		.uleb128 0x6
+ 415 009a 01       		.byte	0x1
+ 416 009b 07       		.uleb128 0x7
+ 417 009c 8801     		.2byte	0x188
+ 418 009e 01       		.byte	0x1
+ 419 009f 29       		.byte	0x29
+ 420 00a0 93010000 		.4byte	0x193
+ 421 00a4 08       		.uleb128 0x8
+ 422 00a5 9F000000 		.4byte	.LASF13
+ 423 00a9 01       		.byte	0x1
+ 424 00aa 2A       		.byte	0x2a
+ 425 00ab 93010000 		.4byte	0x193
+ 426 00af 02       		.byte	0x2
+ 427 00b0 23       		.byte	0x23
+ 428 00b1 00       		.uleb128 0
+ 429 00b2 08       		.uleb128 0x8
+ 430 00b3 09020000 		.4byte	.LASF14
+ 431 00b7 01       		.byte	0x1
+ 432 00b8 2B       		.byte	0x2b
+ 433 00b9 88000000 		.4byte	0x88
+ 434 00bd 02       		.byte	0x2
+ 435 00be 23       		.byte	0x23
+ 436 00bf 04       		.uleb128 0x4
+ 437 00c0 08       		.uleb128 0x8
+ 438 00c1 48010000 		.4byte	.LASF15
+ 439 00c5 01       		.byte	0x1
+ 440 00c6 2C       		.byte	0x2c
+ 441 00c7 88000000 		.4byte	0x88
+ 442 00cb 02       		.byte	0x2
+ 443 00cc 23       		.byte	0x23
+ 444 00cd 08       		.uleb128 0x8
+ 445 00ce 08       		.uleb128 0x8
+ 446 00cf AD010000 		.4byte	.LASF16
+ 447 00d3 01       		.byte	0x1
+ 448 00d4 2D       		.byte	0x2d
+ 449 00d5 88000000 		.4byte	0x88
+ 450 00d9 02       		.byte	0x2
+ 451 00da 23       		.byte	0x23
+ 452 00db 0C       		.uleb128 0xc
+ 453 00dc 08       		.uleb128 0x8
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s 			page 9
+
+
+ 454 00dd D1010000 		.4byte	.LASF17
+ 455 00e1 01       		.byte	0x1
+ 456 00e2 2E       		.byte	0x2e
+ 457 00e3 88000000 		.4byte	0x88
+ 458 00e7 02       		.byte	0x2
+ 459 00e8 23       		.byte	0x23
+ 460 00e9 10       		.uleb128 0x10
+ 461 00ea 08       		.uleb128 0x8
+ 462 00eb 6A010000 		.4byte	.LASF18
+ 463 00ef 01       		.byte	0x1
+ 464 00f0 2F       		.byte	0x2f
+ 465 00f1 88000000 		.4byte	0x88
+ 466 00f5 02       		.byte	0x2
+ 467 00f6 23       		.byte	0x23
+ 468 00f7 14       		.uleb128 0x14
+ 469 00f8 08       		.uleb128 0x8
+ 470 00f9 83010000 		.4byte	.LASF19
+ 471 00fd 01       		.byte	0x1
+ 472 00fe 30       		.byte	0x30
+ 473 00ff 88000000 		.4byte	0x88
+ 474 0103 02       		.byte	0x2
+ 475 0104 23       		.byte	0x23
+ 476 0105 18       		.uleb128 0x18
+ 477 0106 08       		.uleb128 0x8
+ 478 0107 EB000000 		.4byte	.LASF20
+ 479 010b 01       		.byte	0x1
+ 480 010c 31       		.byte	0x31
+ 481 010d 88000000 		.4byte	0x88
+ 482 0111 02       		.byte	0x2
+ 483 0112 23       		.byte	0x23
+ 484 0113 1C       		.uleb128 0x1c
+ 485 0114 08       		.uleb128 0x8
+ 486 0115 48020000 		.4byte	.LASF21
+ 487 0119 01       		.byte	0x1
+ 488 011a 32       		.byte	0x32
+ 489 011b 88000000 		.4byte	0x88
+ 490 011f 02       		.byte	0x2
+ 491 0120 23       		.byte	0x23
+ 492 0121 20       		.uleb128 0x20
+ 493 0122 08       		.uleb128 0x8
+ 494 0123 00000000 		.4byte	.LASF22
+ 495 0127 01       		.byte	0x1
+ 496 0128 33       		.byte	0x33
+ 497 0129 88000000 		.4byte	0x88
+ 498 012d 02       		.byte	0x2
+ 499 012e 23       		.byte	0x23
+ 500 012f 24       		.uleb128 0x24
+ 501 0130 08       		.uleb128 0x8
+ 502 0131 7A010000 		.4byte	.LASF23
+ 503 0135 01       		.byte	0x1
+ 504 0136 34       		.byte	0x34
+ 505 0137 88000000 		.4byte	0x88
+ 506 013b 02       		.byte	0x2
+ 507 013c 23       		.byte	0x23
+ 508 013d 28       		.uleb128 0x28
+ 509 013e 08       		.uleb128 0x8
+ 510 013f AA000000 		.4byte	.LASF24
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s 			page 10
+
+
+ 511 0143 01       		.byte	0x1
+ 512 0144 35       		.byte	0x35
+ 513 0145 88000000 		.4byte	0x88
+ 514 0149 02       		.byte	0x2
+ 515 014a 23       		.byte	0x23
+ 516 014b 2C       		.uleb128 0x2c
+ 517 014c 08       		.uleb128 0x8
+ 518 014d 34020000 		.4byte	.LASF25
+ 519 0151 01       		.byte	0x1
+ 520 0152 36       		.byte	0x36
+ 521 0153 88000000 		.4byte	0x88
+ 522 0157 02       		.byte	0x2
+ 523 0158 23       		.byte	0x23
+ 524 0159 30       		.uleb128 0x30
+ 525 015a 08       		.uleb128 0x8
+ 526 015b 44000000 		.4byte	.LASF26
+ 527 015f 01       		.byte	0x1
+ 528 0160 37       		.byte	0x37
+ 529 0161 88000000 		.4byte	0x88
+ 530 0165 02       		.byte	0x2
+ 531 0166 23       		.byte	0x23
+ 532 0167 34       		.uleb128 0x34
+ 533 0168 08       		.uleb128 0x8
+ 534 0169 9F010000 		.4byte	.LASF27
+ 535 016d 01       		.byte	0x1
+ 536 016e 38       		.byte	0x38
+ 537 016f 88000000 		.4byte	0x88
+ 538 0173 02       		.byte	0x2
+ 539 0174 23       		.byte	0x23
+ 540 0175 38       		.uleb128 0x38
+ 541 0176 08       		.uleb128 0x8
+ 542 0177 2C010000 		.4byte	.LASF28
+ 543 017b 01       		.byte	0x1
+ 544 017c 39       		.byte	0x39
+ 545 017d 88000000 		.4byte	0x88
+ 546 0181 02       		.byte	0x2
+ 547 0182 23       		.byte	0x23
+ 548 0183 3C       		.uleb128 0x3c
+ 549 0184 08       		.uleb128 0x8
+ 550 0185 F7010000 		.4byte	.LASF29
+ 551 0189 01       		.byte	0x1
+ 552 018a 3A       		.byte	0x3a
+ 553 018b 99010000 		.4byte	0x199
+ 554 018f 02       		.byte	0x2
+ 555 0190 23       		.byte	0x23
+ 556 0191 40       		.uleb128 0x40
+ 557 0192 00       		.byte	0
+ 558 0193 05       		.uleb128 0x5
+ 559 0194 04       		.byte	0x4
+ 560 0195 5A000000 		.4byte	0x5a
+ 561 0199 09       		.uleb128 0x9
+ 562 019a 88000000 		.4byte	0x88
+ 563 019e A9010000 		.4byte	0x1a9
+ 564 01a2 0A       		.uleb128 0xa
+ 565 01a3 30000000 		.4byte	0x30
+ 566 01a7 51       		.byte	0x51
+ 567 01a8 00       		.byte	0
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s 			page 11
+
+
+ 568 01a9 04       		.uleb128 0x4
+ 569 01aa 95010000 		.4byte	.LASF30
+ 570 01ae 01       		.byte	0x1
+ 571 01af 3B       		.byte	0x3b
+ 572 01b0 9B000000 		.4byte	0x9b
+ 573 01b4 0B       		.uleb128 0xb
+ 574 01b5 01       		.byte	0x1
+ 575 01b6 E2010000 		.4byte	.LASF36
+ 576 01ba 01       		.byte	0x1
+ 577 01bb D0       		.byte	0xd0
+ 578 01bc 01       		.byte	0x1
+ 579 01bd 00000000 		.4byte	.LFB7
+ 580 01c1 02000000 		.4byte	.LFE7
+ 581 01c5 02       		.byte	0x2
+ 582 01c6 7D       		.byte	0x7d
+ 583 01c7 00       		.sleb128 0
+ 584 01c8 0C       		.uleb128 0xc
+ 585 01c9 57020000 		.4byte	.LASF31
+ 586 01cd 01       		.byte	0x1
+ 587 01ce 3E       		.byte	0x3e
+ 588 01cf 5A000000 		.4byte	0x5a
+ 589 01d3 01       		.byte	0x1
+ 590 01d4 01       		.byte	0x1
+ 591 01d5 0C       		.uleb128 0xc
+ 592 01d6 57020000 		.4byte	.LASF31
+ 593 01da 01       		.byte	0x1
+ 594 01db 3E       		.byte	0x3e
+ 595 01dc 5A000000 		.4byte	0x5a
+ 596 01e0 01       		.byte	0x1
+ 597 01e1 01       		.byte	0x1
+ 598 01e2 0D       		.uleb128 0xd
+ 599 01e3 4D000000 		.4byte	.LASF32
+ 600 01e7 01       		.byte	0x1
+ 601 01e8 A8       		.byte	0xa8
+ 602 01e9 A9010000 		.4byte	0x1a9
+ 603 01ed 01       		.byte	0x1
+ 604 01ee 05       		.byte	0x5
+ 605 01ef 03       		.byte	0x3
+ 606 01f0 00000000 		.4byte	_vectors
+ 607 01f4 00       		.byte	0
+ 608              		.section	.debug_abbrev,"",%progbits
+ 609              	.Ldebug_abbrev0:
+ 610 0000 01       		.uleb128 0x1
+ 611 0001 11       		.uleb128 0x11
+ 612 0002 01       		.byte	0x1
+ 613 0003 25       		.uleb128 0x25
+ 614 0004 0E       		.uleb128 0xe
+ 615 0005 13       		.uleb128 0x13
+ 616 0006 0B       		.uleb128 0xb
+ 617 0007 03       		.uleb128 0x3
+ 618 0008 0E       		.uleb128 0xe
+ 619 0009 1B       		.uleb128 0x1b
+ 620 000a 0E       		.uleb128 0xe
+ 621 000b 11       		.uleb128 0x11
+ 622 000c 01       		.uleb128 0x1
+ 623 000d 52       		.uleb128 0x52
+ 624 000e 01       		.uleb128 0x1
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s 			page 12
+
+
+ 625 000f 55       		.uleb128 0x55
+ 626 0010 06       		.uleb128 0x6
+ 627 0011 10       		.uleb128 0x10
+ 628 0012 06       		.uleb128 0x6
+ 629 0013 00       		.byte	0
+ 630 0014 00       		.byte	0
+ 631 0015 02       		.uleb128 0x2
+ 632 0016 24       		.uleb128 0x24
+ 633 0017 00       		.byte	0
+ 634 0018 0B       		.uleb128 0xb
+ 635 0019 0B       		.uleb128 0xb
+ 636 001a 3E       		.uleb128 0x3e
+ 637 001b 0B       		.uleb128 0xb
+ 638 001c 03       		.uleb128 0x3
+ 639 001d 08       		.uleb128 0x8
+ 640 001e 00       		.byte	0
+ 641 001f 00       		.byte	0
+ 642 0020 03       		.uleb128 0x3
+ 643 0021 24       		.uleb128 0x24
+ 644 0022 00       		.byte	0
+ 645 0023 0B       		.uleb128 0xb
+ 646 0024 0B       		.uleb128 0xb
+ 647 0025 3E       		.uleb128 0x3e
+ 648 0026 0B       		.uleb128 0xb
+ 649 0027 03       		.uleb128 0x3
+ 650 0028 0E       		.uleb128 0xe
+ 651 0029 00       		.byte	0
+ 652 002a 00       		.byte	0
+ 653 002b 04       		.uleb128 0x4
+ 654 002c 16       		.uleb128 0x16
+ 655 002d 00       		.byte	0
+ 656 002e 03       		.uleb128 0x3
+ 657 002f 0E       		.uleb128 0xe
+ 658 0030 3A       		.uleb128 0x3a
+ 659 0031 0B       		.uleb128 0xb
+ 660 0032 3B       		.uleb128 0x3b
+ 661 0033 0B       		.uleb128 0xb
+ 662 0034 49       		.uleb128 0x49
+ 663 0035 13       		.uleb128 0x13
+ 664 0036 00       		.byte	0
+ 665 0037 00       		.byte	0
+ 666 0038 05       		.uleb128 0x5
+ 667 0039 0F       		.uleb128 0xf
+ 668 003a 00       		.byte	0
+ 669 003b 0B       		.uleb128 0xb
+ 670 003c 0B       		.uleb128 0xb
+ 671 003d 49       		.uleb128 0x49
+ 672 003e 13       		.uleb128 0x13
+ 673 003f 00       		.byte	0
+ 674 0040 00       		.byte	0
+ 675 0041 06       		.uleb128 0x6
+ 676 0042 15       		.uleb128 0x15
+ 677 0043 00       		.byte	0
+ 678 0044 27       		.uleb128 0x27
+ 679 0045 0C       		.uleb128 0xc
+ 680 0046 00       		.byte	0
+ 681 0047 00       		.byte	0
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s 			page 13
+
+
+ 682 0048 07       		.uleb128 0x7
+ 683 0049 13       		.uleb128 0x13
+ 684 004a 01       		.byte	0x1
+ 685 004b 0B       		.uleb128 0xb
+ 686 004c 05       		.uleb128 0x5
+ 687 004d 3A       		.uleb128 0x3a
+ 688 004e 0B       		.uleb128 0xb
+ 689 004f 3B       		.uleb128 0x3b
+ 690 0050 0B       		.uleb128 0xb
+ 691 0051 01       		.uleb128 0x1
+ 692 0052 13       		.uleb128 0x13
+ 693 0053 00       		.byte	0
+ 694 0054 00       		.byte	0
+ 695 0055 08       		.uleb128 0x8
+ 696 0056 0D       		.uleb128 0xd
+ 697 0057 00       		.byte	0
+ 698 0058 03       		.uleb128 0x3
+ 699 0059 0E       		.uleb128 0xe
+ 700 005a 3A       		.uleb128 0x3a
+ 701 005b 0B       		.uleb128 0xb
+ 702 005c 3B       		.uleb128 0x3b
+ 703 005d 0B       		.uleb128 0xb
+ 704 005e 49       		.uleb128 0x49
+ 705 005f 13       		.uleb128 0x13
+ 706 0060 38       		.uleb128 0x38
+ 707 0061 0A       		.uleb128 0xa
+ 708 0062 00       		.byte	0
+ 709 0063 00       		.byte	0
+ 710 0064 09       		.uleb128 0x9
+ 711 0065 01       		.uleb128 0x1
+ 712 0066 01       		.byte	0x1
+ 713 0067 49       		.uleb128 0x49
+ 714 0068 13       		.uleb128 0x13
+ 715 0069 01       		.uleb128 0x1
+ 716 006a 13       		.uleb128 0x13
+ 717 006b 00       		.byte	0
+ 718 006c 00       		.byte	0
+ 719 006d 0A       		.uleb128 0xa
+ 720 006e 21       		.uleb128 0x21
+ 721 006f 00       		.byte	0
+ 722 0070 49       		.uleb128 0x49
+ 723 0071 13       		.uleb128 0x13
+ 724 0072 2F       		.uleb128 0x2f
+ 725 0073 0B       		.uleb128 0xb
+ 726 0074 00       		.byte	0
+ 727 0075 00       		.byte	0
+ 728 0076 0B       		.uleb128 0xb
+ 729 0077 2E       		.uleb128 0x2e
+ 730 0078 00       		.byte	0
+ 731 0079 3F       		.uleb128 0x3f
+ 732 007a 0C       		.uleb128 0xc
+ 733 007b 03       		.uleb128 0x3
+ 734 007c 0E       		.uleb128 0xe
+ 735 007d 3A       		.uleb128 0x3a
+ 736 007e 0B       		.uleb128 0xb
+ 737 007f 3B       		.uleb128 0x3b
+ 738 0080 0B       		.uleb128 0xb
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s 			page 14
+
+
+ 739 0081 27       		.uleb128 0x27
+ 740 0082 0C       		.uleb128 0xc
+ 741 0083 11       		.uleb128 0x11
+ 742 0084 01       		.uleb128 0x1
+ 743 0085 12       		.uleb128 0x12
+ 744 0086 01       		.uleb128 0x1
+ 745 0087 40       		.uleb128 0x40
+ 746 0088 0A       		.uleb128 0xa
+ 747 0089 00       		.byte	0
+ 748 008a 00       		.byte	0
+ 749 008b 0C       		.uleb128 0xc
+ 750 008c 34       		.uleb128 0x34
+ 751 008d 00       		.byte	0
+ 752 008e 03       		.uleb128 0x3
+ 753 008f 0E       		.uleb128 0xe
+ 754 0090 3A       		.uleb128 0x3a
+ 755 0091 0B       		.uleb128 0xb
+ 756 0092 3B       		.uleb128 0x3b
+ 757 0093 0B       		.uleb128 0xb
+ 758 0094 49       		.uleb128 0x49
+ 759 0095 13       		.uleb128 0x13
+ 760 0096 3F       		.uleb128 0x3f
+ 761 0097 0C       		.uleb128 0xc
+ 762 0098 3C       		.uleb128 0x3c
+ 763 0099 0C       		.uleb128 0xc
+ 764 009a 00       		.byte	0
+ 765 009b 00       		.byte	0
+ 766 009c 0D       		.uleb128 0xd
+ 767 009d 34       		.uleb128 0x34
+ 768 009e 00       		.byte	0
+ 769 009f 03       		.uleb128 0x3
+ 770 00a0 0E       		.uleb128 0xe
+ 771 00a1 3A       		.uleb128 0x3a
+ 772 00a2 0B       		.uleb128 0xb
+ 773 00a3 3B       		.uleb128 0x3b
+ 774 00a4 0B       		.uleb128 0xb
+ 775 00a5 49       		.uleb128 0x49
+ 776 00a6 13       		.uleb128 0x13
+ 777 00a7 3F       		.uleb128 0x3f
+ 778 00a8 0C       		.uleb128 0xc
+ 779 00a9 02       		.uleb128 0x2
+ 780 00aa 0A       		.uleb128 0xa
+ 781 00ab 00       		.byte	0
+ 782 00ac 00       		.byte	0
+ 783 00ad 00       		.byte	0
+ 784              		.section	.debug_aranges,"",%progbits
+ 785 0000 1C000000 		.4byte	0x1c
+ 786 0004 0200     		.2byte	0x2
+ 787 0006 00000000 		.4byte	.Ldebug_info0
+ 788 000a 04       		.byte	0x4
+ 789 000b 00       		.byte	0
+ 790 000c 0000     		.2byte	0
+ 791 000e 0000     		.2byte	0
+ 792 0010 00000000 		.4byte	.LFB7
+ 793 0014 02000000 		.4byte	.LFE7-.LFB7
+ 794 0018 00000000 		.4byte	0
+ 795 001c 00000000 		.4byte	0
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s 			page 15
+
+
+ 796              		.section	.debug_ranges,"",%progbits
+ 797              	.Ldebug_ranges0:
+ 798 0000 00000000 		.4byte	.LFB7
+ 799 0004 02000000 		.4byte	.LFE7
+ 800 0008 00000000 		.4byte	0
+ 801 000c 00000000 		.4byte	0
+ 802              		.section	.debug_line,"",%progbits
+ 803              	.Ldebug_line0:
+ 804 0000 E2000000 		.section	.debug_str,"MS",%progbits,1
+ 804      0200CC00 
+ 804      00000201 
+ 804      FB0E0D00 
+ 804      01010101 
+ 805              	.LASF22:
+ 806 0000 76656374 		.ascii	"vector24\000"
+ 806      6F723234 
+ 806      00
+ 807              	.LASF12:
+ 808 0009 6972715F 		.ascii	"irq_vector_t\000"
+ 808      76656374 
+ 808      6F725F74 
+ 808      00
+ 809              	.LASF34:
+ 810 0016 2E2E2F2E 		.ascii	"../../os/ports/GCC/ARMCMx/STM32F3xx/vectors.c\000"
+ 810      2E2F6F73 
+ 810      2F706F72 
+ 810      74732F47 
+ 810      43432F41 
+ 811              	.LASF26:
+ 812 0044 76656374 		.ascii	"vector34\000"
+ 812      6F723334 
+ 812      00
+ 813              	.LASF32:
+ 814 004d 5F766563 		.ascii	"_vectors\000"
+ 814      746F7273 
+ 814      00
+ 815              	.LASF33:
+ 816 0056 474E5520 		.ascii	"GNU C 4.6.2 20121016 (release) [ARM/embedded-4_6-br"
+ 816      4320342E 
+ 816      362E3220 
+ 816      32303132 
+ 816      31303136 
+ 817 0089 616E6368 		.ascii	"anch revision 192487]\000"
+ 817      20726576 
+ 817      6973696F 
+ 817      6E203139 
+ 817      32343837 
+ 818              	.LASF13:
+ 819 009f 696E6974 		.ascii	"init_stack\000"
+ 819      5F737461 
+ 819      636B00
+ 820              	.LASF24:
+ 821 00aa 73766361 		.ascii	"svcall_vector\000"
+ 821      6C6C5F76 
+ 821      6563746F 
+ 821      7200
+ 822              	.LASF2:
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s 			page 16
+
+
+ 823 00b8 756E7369 		.ascii	"unsigned char\000"
+ 823      676E6564 
+ 823      20636861 
+ 823      7200
+ 824              	.LASF6:
+ 825 00c6 6C6F6E67 		.ascii	"long unsigned int\000"
+ 825      20756E73 
+ 825      69676E65 
+ 825      6420696E 
+ 825      7400
+ 826              	.LASF4:
+ 827 00d8 73686F72 		.ascii	"short unsigned int\000"
+ 827      7420756E 
+ 827      7369676E 
+ 827      65642069 
+ 827      6E7400
+ 828              	.LASF20:
+ 829 00eb 76656374 		.ascii	"vector1c\000"
+ 829      6F723163 
+ 829      00
+ 830              	.LASF35:
+ 831 00f4 433A5C43 		.ascii	"C:\\ChibiStudio\\chibios\\demos\\ARMCM4-STM32F303-D"
+ 831      68696269 
+ 831      53747564 
+ 831      696F5C63 
+ 831      68696269 
+ 832 0123 4953434F 		.ascii	"ISCOVERY\000"
+ 832      56455259 
+ 832      00
+ 833              	.LASF28:
+ 834 012c 73797374 		.ascii	"systick_vector\000"
+ 834      69636B5F 
+ 834      76656374 
+ 834      6F7200
+ 835              	.LASF0:
+ 836 013b 756E7369 		.ascii	"unsigned int\000"
+ 836      676E6564 
+ 836      20696E74 
+ 836      00
+ 837              	.LASF15:
+ 838 0148 6E6D695F 		.ascii	"nmi_vector\000"
+ 838      76656374 
+ 838      6F7200
+ 839              	.LASF8:
+ 840 0153 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 840      206C6F6E 
+ 840      6720756E 
+ 840      7369676E 
+ 840      65642069 
+ 841              	.LASF18:
+ 842 016a 62757366 		.ascii	"busfault_vector\000"
+ 842      61756C74 
+ 842      5F766563 
+ 842      746F7200 
+ 843              	.LASF23:
+ 844 017a 76656374 		.ascii	"vector28\000"
+ 844      6F723238 
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s 			page 17
+
+
+ 844      00
+ 845              	.LASF19:
+ 846 0183 75736167 		.ascii	"usagefault_vector\000"
+ 846      65666175 
+ 846      6C745F76 
+ 846      6563746F 
+ 846      7200
+ 847              	.LASF30:
+ 848 0195 76656374 		.ascii	"vectors_t\000"
+ 848      6F72735F 
+ 848      7400
+ 849              	.LASF27:
+ 850 019f 70656E64 		.ascii	"pendsv_vector\000"
+ 850      73765F76 
+ 850      6563746F 
+ 850      7200
+ 851              	.LASF16:
+ 852 01ad 68617264 		.ascii	"hardfault_vector\000"
+ 852      6661756C 
+ 852      745F7665 
+ 852      63746F72 
+ 852      00
+ 853              	.LASF7:
+ 854 01be 6C6F6E67 		.ascii	"long long int\000"
+ 854      206C6F6E 
+ 854      6720696E 
+ 854      7400
+ 855              	.LASF10:
+ 856 01cc 63686172 		.ascii	"char\000"
+ 856      00
+ 857              	.LASF17:
+ 858 01d1 6D656D6D 		.ascii	"memmanage_vector\000"
+ 858      616E6167 
+ 858      655F7665 
+ 858      63746F72 
+ 858      00
+ 859              	.LASF36:
+ 860 01e2 5F756E68 		.ascii	"_unhandled_exception\000"
+ 860      616E646C 
+ 860      65645F65 
+ 860      78636570 
+ 860      74696F6E 
+ 861              	.LASF29:
+ 862 01f7 76656374 		.ascii	"vectors\000"
+ 862      6F727300 
+ 863              	.LASF3:
+ 864 01ff 73686F72 		.ascii	"short int\000"
+ 864      7420696E 
+ 864      7400
+ 865              	.LASF14:
+ 866 0209 72657365 		.ascii	"reset_vector\000"
+ 866      745F7665 
+ 866      63746F72 
+ 866      00
+ 867              	.LASF11:
+ 868 0216 75696E74 		.ascii	"uint32_t\000"
+ 868      33325F74 
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s 			page 18
+
+
+ 868      00
+ 869              	.LASF5:
+ 870 021f 6C6F6E67 		.ascii	"long int\000"
+ 870      20696E74 
+ 870      00
+ 871              	.LASF1:
+ 872 0228 7369676E 		.ascii	"signed char\000"
+ 872      65642063 
+ 872      68617200 
+ 873              	.LASF25:
+ 874 0234 64656275 		.ascii	"debugmonitor_vector\000"
+ 874      676D6F6E 
+ 874      69746F72 
+ 874      5F766563 
+ 874      746F7200 
+ 875              	.LASF21:
+ 876 0248 76656374 		.ascii	"vector20\000"
+ 876      6F723230 
+ 876      00
+ 877              	.LASF9:
+ 878 0251 5F426F6F 		.ascii	"_Bool\000"
+ 878      6C00
+ 879              	.LASF31:
+ 880 0257 5F5F6D61 		.ascii	"__main_stack_end__\000"
+ 880      696E5F73 
+ 880      7461636B 
+ 880      5F656E64 
+ 880      5F5F00
+ 881              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.6.2 20121016 (release) [ARM/embedded-4_6-br
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s 			page 19
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 vectors.c
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:19     .text._unhandled_exception:00000000 $t
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 _unhandled_exception
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:236    vectors:00000000 _vectors
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 NMIVector
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 HardFaultVector
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 MemManageVector
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 BusFaultVector
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 UsageFaultVector
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector1C
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector20
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector24
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector28
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 SVCallVector
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 DebugMonitorVector
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector34
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 PendSVVector
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 SysTickVector
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector40
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector44
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector48
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector4C
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector50
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector54
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector58
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector5C
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector60
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector64
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector68
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector6C
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector70
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector74
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector78
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector7C
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector80
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector84
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector88
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector8C
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector90
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector94
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector98
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector9C
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 VectorA0
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 VectorA4
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 VectorA8
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 VectorAC
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 VectorB0
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 VectorB4
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 VectorB8
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 VectorBC
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 VectorC0
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 VectorC4
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 VectorC8
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 VectorCC
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 VectorD0
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 VectorD4
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s 			page 20
+
+
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 VectorD8
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 VectorDC
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 VectorE0
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 VectorE4
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 VectorE8
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 VectorEC
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 VectorF0
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 VectorF4
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 VectorF8
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 VectorFC
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector100
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector104
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector108
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector10C
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector110
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector114
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector118
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector11C
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector120
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector124
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector128
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector12C
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector130
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector134
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector138
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector13C
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector140
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector144
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector148
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector14C
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector150
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector154
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector158
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector15C
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector160
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector164
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector168
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector16C
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector170
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector174
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector178
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector17C
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector180
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:25     .text._unhandled_exception:00000000 Vector184
+C:\Users\TAISIK~1\AppData\Local\Temp\cc0A3oaJ.s:233    vectors:00000000 $d
+                     .debug_frame:00000010 $d
+
+UNDEFINED SYMBOLS
+__main_stack_end__
+ResetHandler

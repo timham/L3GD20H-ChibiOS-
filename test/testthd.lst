@@ -1,0 +1,3542 @@
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 1
+
+
+   1              		.file	"testthd.c"
+   2              	 # GNU C (GCC) version 4.6.2 (mingw32)
+   3              	 #	compiled by GNU C version 4.6.2, GMP version 5.0.1, MPFR version 2.4.1, MPC version 0.8.1
+   4              	 # GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+   5              	 # options passed:  -I . -I ../../os/ports/GCC/SIMIA32
+   6              	 # -I ../../os/kernel/include -I ../../test -I ../../os/hal/include
+   7              	 # -I ../../os/hal/platforms/Win32 -I ../../boards/simulator
+   8              	 # -I ../../os/various -iprefix c:\mingw\bin\../lib/gcc/mingw32/4.6.2/
+   9              	 # -MD ../../test/testthd.d -MF .dep/testthd.o.d -MP
+  10              	 # -MQ ../../test/testthd.o -D SIMULATOR ../../test/testthd.c -mtune=i386
+  11              	 # -march=i386 -auxbase-strip ../../test/testthd.o -ggdb -O0 -Wall -Wextra
+  12              	 # -Wstrict-prototypes -fomit-frame-pointer -fprofile-arcs -ftest-coverage
+  13              	 # -fverbose-asm
+  14              	 # options enabled:  -fasynchronous-unwind-tables -fauto-inc-dec
+  15              	 # -fbranch-count-reg -fcommon -fdelete-null-pointer-checks
+  16              	 # -fdwarf2-cfi-asm -fearly-inlining -feliminate-unused-debug-types
+  17              	 # -ffunction-cse -fgcse-lm -fident -finline-functions-called-once
+  18              	 # -fira-share-save-slots -fira-share-spill-slots -fivopts
+  19              	 # -fkeep-inline-dllexport -fkeep-static-consts -fleading-underscore
+  20              	 # -fmath-errno -fmerge-debug-strings -fmove-loop-invariants
+  21              	 # -fomit-frame-pointer -fpeephole -fprefetch-loop-arrays -fprofile-arcs
+  22              	 # -freg-struct-return -fsched-critical-path-heuristic
+  23              	 # -fsched-dep-count-heuristic -fsched-group-heuristic -fsched-interblock
+  24              	 # -fsched-last-insn-heuristic -fsched-rank-heuristic -fsched-spec
+  25              	 # -fsched-spec-insn-heuristic -fsched-stalled-insns-dep
+  26              	 # -fset-stack-executable -fshow-column -fsigned-zeros
+  27              	 # -fsplit-ivs-in-unroller -fstrict-volatile-bitfields -ftest-coverage
+  28              	 # -ftrapping-math -ftree-cselim -ftree-forwprop -ftree-loop-if-convert
+  29              	 # -ftree-loop-im -ftree-loop-ivcanon -ftree-loop-optimize
+  30              	 # -ftree-parallelize-loops= -ftree-phiprop -ftree-pta -ftree-reassoc
+  31              	 # -ftree-scev-cprop -ftree-slp-vectorize -ftree-vect-loop-version
+  32              	 # -funit-at-a-time -funwind-tables -fvect-cost-model -fverbose-asm
+  33              	 # -fzero-initialized-in-bss -m32 -m80387 -m96bit-long-double
+  34              	 # -maccumulate-outgoing-args -malign-double -malign-stringops
+  35              	 # -mfancy-math-387 -mfp-ret-in-387 -mieee-fp -mno-red-zone -mno-sse4
+  36              	 # -mpush-args -msahf -mstack-arg-probe
+  37              	
+  38              		.text
+  39              	Ltext0:
+  40              	 # Compiler executable checksum: c20aed7c018482d7b62efcd5dcab2a9d
+  41              	
+  42              		.def	_thread;	.scl	3;	.type	32;	.endef
+  43              	_thread:
+  44              	LFB0:
+  45              		.file 1 "../../test/testthd.c"
+  46              		.loc 1 64 0
+  47              		.cfi_startproc
+  48 0000 83EC1C   		subl	$28, %esp	 #,
+  49              	LCFI0:
+  50              		.cfi_def_cfa_offset 32
+  51              		.loc 1 64 0
+  52 0003 A1100200 		movl	LPBX1+528, %eax	 # *LPBX1, PROF_edge_counter.4
+  52      00
+  53 0008 8B151402 		movl	LPBX1+532, %edx	 # *LPBX1, PROF_edge_counter.4
+  53      0000
+  54 000e 83C001   		addl	$1, %eax	 #, PROF_edge_counter.4
+  55 0011 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.4
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 2
+
+
+  56 0014 A3100200 		movl	%eax, LPBX1+528	 # PROF_edge_counter.4, *LPBX1
+  56      00
+  57 0019 89151402 		movl	%edx, LPBX1+532	 # PROF_edge_counter.4, *LPBX1
+  57      0000
+  58              		.loc 1 66 0
+  59 001f 8B442420 		movl	32(%esp), %eax	 # p, tmp67
+  60 0023 8A00     		movb	(%eax), %al	 # MEM[(char *)p_1(D)], D.2972
+  61 0025 0FBEC0   		movsbl	%al, %eax	 # D.2972, D.2973
+  62 0028 890424   		movl	%eax, (%esp)	 # D.2973,
+  63 002b E8000000 		call	_test_emit_token	 #
+  63      00
+  64 0030 A1180200 		movl	LPBX1+536, %eax	 # *LPBX1, PROF_edge_counter.4
+  64      00
+  65 0035 8B151C02 		movl	LPBX1+540, %edx	 # *LPBX1, PROF_edge_counter.4
+  65      0000
+  66 003b 83C001   		addl	$1, %eax	 #, PROF_edge_counter.4
+  67 003e 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.4
+  68 0041 A3180200 		movl	%eax, LPBX1+536	 # PROF_edge_counter.4, *LPBX1
+  68      00
+  69 0046 89151C02 		movl	%edx, LPBX1+540	 # PROF_edge_counter.4, *LPBX1
+  69      0000
+  70              		.loc 1 67 0
+  71 004c B8000000 		movl	$0, %eax	 #, D.2974
+  71      00
+  72              		.loc 1 68 0
+  73 0051 83C41C   		addl	$28, %esp	 #,
+  74              	LCFI1:
+  75              		.cfi_def_cfa_offset 4
+  76 0054 C3       		ret
+  77              		.cfi_endproc
+  78              	LFE0:
+  79              		.section .rdata,"dr"
+  80              	LC0:
+  81 0000 4500     		.ascii "E\0"
+  82              	LC1:
+  83 0002 4400     		.ascii "D\0"
+  84              	LC2:
+  85 0004 4300     		.ascii "C\0"
+  86              	LC3:
+  87 0006 4200     		.ascii "B\0"
+  88              	LC4:
+  89 0008 4100     		.ascii "A\0"
+  90              	LC5:
+  91 000a 41424344 		.ascii "ABCDE\0"
+  91      4500
+  92              		.text
+  93              		.def	_thd1_execute;	.scl	3;	.type	32;	.endef
+  94              	_thd1_execute:
+  95              	LFB1:
+  96              		.loc 1 70 0
+  97              		.cfi_startproc
+  98 0055 83EC2C   		subl	$44, %esp	 #,
+  99              	LCFI2:
+ 100              		.cfi_def_cfa_offset 48
+ 101              		.loc 1 70 0
+ 102 0058 A1C80100 		movl	LPBX1+456, %eax	 # *LPBX1, PROF_edge_counter.3
+ 102      00
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 3
+
+
+ 103 005d 8B15CC01 		movl	LPBX1+460, %edx	 # *LPBX1, PROF_edge_counter.3
+ 103      0000
+ 104 0063 83C001   		addl	$1, %eax	 #, PROF_edge_counter.3
+ 105 0066 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.3
+ 106 0069 A3C80100 		movl	%eax, LPBX1+456	 # PROF_edge_counter.3, *LPBX1
+ 106      00
+ 107 006e 8915CC01 		movl	%edx, LPBX1+460	 # PROF_edge_counter.3, *LPBX1
+ 107      0000
+ 108              		.loc 1 72 0
+ 109 0074 A1180000 		movl	_rlist+24, %eax	 # rlist.r_current, D.2943
+ 109      00
+ 110 0079 8B4008   		movl	8(%eax), %eax	 # D.2943_1->p_prio, D.2944
+ 111 007c 8D50FB   		leal	-5(%eax), %edx	 #, D.2945
+ 112 007f A1000000 		movl	_wa, %eax	 # wa, D.2946
+ 112      00
+ 113 0084 C7442410 		movl	$LC0, 16(%esp)	 #,
+ 113      00000000 
+ 114 008c C744240C 		movl	$_thread, 12(%esp)	 #,
+ 114      00000000 
+ 115 0094 89542408 		movl	%edx, 8(%esp)	 # D.2945,
+ 116 0098 C7442404 		movl	$17008, 4(%esp)	 #,
+ 116      70420000 
+ 117 00a0 890424   		movl	%eax, (%esp)	 # D.2946,
+ 118 00a3 E8000000 		call	_chThdCreateStatic	 #
+ 118      00
+ 119 00a8 89C1     		movl	%eax, %ecx	 #, D.2947
+ 120 00aa A1D00100 		movl	LPBX1+464, %eax	 # *LPBX1, PROF_edge_counter.3
+ 120      00
+ 121 00af 8B15D401 		movl	LPBX1+468, %edx	 # *LPBX1, PROF_edge_counter.3
+ 121      0000
+ 122 00b5 83C001   		addl	$1, %eax	 #, PROF_edge_counter.3
+ 123 00b8 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.3
+ 124 00bb A3D00100 		movl	%eax, LPBX1+464	 # PROF_edge_counter.3, *LPBX1
+ 124      00
+ 125 00c0 8915D401 		movl	%edx, LPBX1+468	 # PROF_edge_counter.3, *LPBX1
+ 125      0000
+ 126 00c6 890D0000 		movl	%ecx, _threads	 # D.2947, threads
+ 126      0000
+ 127              		.loc 1 73 0
+ 128 00cc A1180000 		movl	_rlist+24, %eax	 # rlist.r_current, D.2948
+ 128      00
+ 129 00d1 8B4008   		movl	8(%eax), %eax	 # D.2948_6->p_prio, D.2949
+ 130 00d4 8D50FC   		leal	-4(%eax), %edx	 #, D.2950
+ 131 00d7 A1040000 		movl	_wa+4, %eax	 # wa, D.2951
+ 131      00
+ 132 00dc C7442410 		movl	$LC1, 16(%esp)	 #,
+ 132      02000000 
+ 133 00e4 C744240C 		movl	$_thread, 12(%esp)	 #,
+ 133      00000000 
+ 134 00ec 89542408 		movl	%edx, 8(%esp)	 # D.2950,
+ 135 00f0 C7442404 		movl	$17008, 4(%esp)	 #,
+ 135      70420000 
+ 136 00f8 890424   		movl	%eax, (%esp)	 # D.2951,
+ 137 00fb E8000000 		call	_chThdCreateStatic	 #
+ 137      00
+ 138 0100 89C1     		movl	%eax, %ecx	 #, D.2952
+ 139 0102 A1D80100 		movl	LPBX1+472, %eax	 # *LPBX1, PROF_edge_counter.3
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 4
+
+
+ 139      00
+ 140 0107 8B15DC01 		movl	LPBX1+476, %edx	 # *LPBX1, PROF_edge_counter.3
+ 140      0000
+ 141 010d 83C001   		addl	$1, %eax	 #, PROF_edge_counter.3
+ 142 0110 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.3
+ 143 0113 A3D80100 		movl	%eax, LPBX1+472	 # PROF_edge_counter.3, *LPBX1
+ 143      00
+ 144 0118 8915DC01 		movl	%edx, LPBX1+476	 # PROF_edge_counter.3, *LPBX1
+ 144      0000
+ 145 011e 890D0400 		movl	%ecx, _threads+4	 # D.2952, threads
+ 145      0000
+ 146              		.loc 1 74 0
+ 147 0124 A1180000 		movl	_rlist+24, %eax	 # rlist.r_current, D.2953
+ 147      00
+ 148 0129 8B4008   		movl	8(%eax), %eax	 # D.2953_11->p_prio, D.2954
+ 149 012c 8D50FD   		leal	-3(%eax), %edx	 #, D.2955
+ 150 012f A1080000 		movl	_wa+8, %eax	 # wa, D.2956
+ 150      00
+ 151 0134 C7442410 		movl	$LC2, 16(%esp)	 #,
+ 151      04000000 
+ 152 013c C744240C 		movl	$_thread, 12(%esp)	 #,
+ 152      00000000 
+ 153 0144 89542408 		movl	%edx, 8(%esp)	 # D.2955,
+ 154 0148 C7442404 		movl	$17008, 4(%esp)	 #,
+ 154      70420000 
+ 155 0150 890424   		movl	%eax, (%esp)	 # D.2956,
+ 156 0153 E8000000 		call	_chThdCreateStatic	 #
+ 156      00
+ 157 0158 89C1     		movl	%eax, %ecx	 #, D.2957
+ 158 015a A1E00100 		movl	LPBX1+480, %eax	 # *LPBX1, PROF_edge_counter.3
+ 158      00
+ 159 015f 8B15E401 		movl	LPBX1+484, %edx	 # *LPBX1, PROF_edge_counter.3
+ 159      0000
+ 160 0165 83C001   		addl	$1, %eax	 #, PROF_edge_counter.3
+ 161 0168 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.3
+ 162 016b A3E00100 		movl	%eax, LPBX1+480	 # PROF_edge_counter.3, *LPBX1
+ 162      00
+ 163 0170 8915E401 		movl	%edx, LPBX1+484	 # PROF_edge_counter.3, *LPBX1
+ 163      0000
+ 164 0176 890D0800 		movl	%ecx, _threads+8	 # D.2957, threads
+ 164      0000
+ 165              		.loc 1 75 0
+ 166 017c A1180000 		movl	_rlist+24, %eax	 # rlist.r_current, D.2958
+ 166      00
+ 167 0181 8B4008   		movl	8(%eax), %eax	 # D.2958_16->p_prio, D.2959
+ 168 0184 8D50FE   		leal	-2(%eax), %edx	 #, D.2960
+ 169 0187 A10C0000 		movl	_wa+12, %eax	 # wa, D.2961
+ 169      00
+ 170 018c C7442410 		movl	$LC3, 16(%esp)	 #,
+ 170      06000000 
+ 171 0194 C744240C 		movl	$_thread, 12(%esp)	 #,
+ 171      00000000 
+ 172 019c 89542408 		movl	%edx, 8(%esp)	 # D.2960,
+ 173 01a0 C7442404 		movl	$17008, 4(%esp)	 #,
+ 173      70420000 
+ 174 01a8 890424   		movl	%eax, (%esp)	 # D.2961,
+ 175 01ab E8000000 		call	_chThdCreateStatic	 #
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 5
+
+
+ 175      00
+ 176 01b0 89C1     		movl	%eax, %ecx	 #, D.2962
+ 177 01b2 A1E80100 		movl	LPBX1+488, %eax	 # *LPBX1, PROF_edge_counter.3
+ 177      00
+ 178 01b7 8B15EC01 		movl	LPBX1+492, %edx	 # *LPBX1, PROF_edge_counter.3
+ 178      0000
+ 179 01bd 83C001   		addl	$1, %eax	 #, PROF_edge_counter.3
+ 180 01c0 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.3
+ 181 01c3 A3E80100 		movl	%eax, LPBX1+488	 # PROF_edge_counter.3, *LPBX1
+ 181      00
+ 182 01c8 8915EC01 		movl	%edx, LPBX1+492	 # PROF_edge_counter.3, *LPBX1
+ 182      0000
+ 183 01ce 890D0C00 		movl	%ecx, _threads+12	 # D.2962, threads
+ 183      0000
+ 184              		.loc 1 76 0
+ 185 01d4 A1180000 		movl	_rlist+24, %eax	 # rlist.r_current, D.2963
+ 185      00
+ 186 01d9 8B4008   		movl	8(%eax), %eax	 # D.2963_21->p_prio, D.2964
+ 187 01dc 8D50FF   		leal	-1(%eax), %edx	 #, D.2965
+ 188 01df A1100000 		movl	_wa+16, %eax	 # wa, D.2966
+ 188      00
+ 189 01e4 C7442410 		movl	$LC4, 16(%esp)	 #,
+ 189      08000000 
+ 190 01ec C744240C 		movl	$_thread, 12(%esp)	 #,
+ 190      00000000 
+ 191 01f4 89542408 		movl	%edx, 8(%esp)	 # D.2965,
+ 192 01f8 C7442404 		movl	$17008, 4(%esp)	 #,
+ 192      70420000 
+ 193 0200 890424   		movl	%eax, (%esp)	 # D.2966,
+ 194 0203 E8000000 		call	_chThdCreateStatic	 #
+ 194      00
+ 195 0208 89C1     		movl	%eax, %ecx	 #, D.2967
+ 196 020a A1F00100 		movl	LPBX1+496, %eax	 # *LPBX1, PROF_edge_counter.3
+ 196      00
+ 197 020f 8B15F401 		movl	LPBX1+500, %edx	 # *LPBX1, PROF_edge_counter.3
+ 197      0000
+ 198 0215 83C001   		addl	$1, %eax	 #, PROF_edge_counter.3
+ 199 0218 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.3
+ 200 021b A3F00100 		movl	%eax, LPBX1+496	 # PROF_edge_counter.3, *LPBX1
+ 200      00
+ 201 0220 8915F401 		movl	%edx, LPBX1+500	 # PROF_edge_counter.3, *LPBX1
+ 201      0000
+ 202 0226 890D1000 		movl	%ecx, _threads+16	 # D.2967, threads
+ 202      0000
+ 203              		.loc 1 77 0
+ 204 022c E8000000 		call	_test_wait_threads	 #
+ 204      00
+ 205 0231 A1F80100 		movl	LPBX1+504, %eax	 # *LPBX1, PROF_edge_counter.3
+ 205      00
+ 206 0236 8B15FC01 		movl	LPBX1+508, %edx	 # *LPBX1, PROF_edge_counter.3
+ 206      0000
+ 207 023c 83C001   		addl	$1, %eax	 #, PROF_edge_counter.3
+ 208 023f 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.3
+ 209 0242 A3F80100 		movl	%eax, LPBX1+504	 # PROF_edge_counter.3, *LPBX1
+ 209      00
+ 210 0247 8915FC01 		movl	%edx, LPBX1+508	 # PROF_edge_counter.3, *LPBX1
+ 210      0000
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 6
+
+
+ 211              		.loc 1 78 0
+ 212 024d C7442404 		movl	$LC5, 4(%esp)	 #,
+ 212      0A000000 
+ 213 0255 C7042401 		movl	$1, (%esp)	 #,
+ 213      000000
+ 214 025c E8000000 		call	__test_assert_sequence	 #
+ 214      00
+ 215 0261 88C1     		movb	%al, %cl	 #, D.2968
+ 216 0263 A1000200 		movl	LPBX1+512, %eax	 # *LPBX1, PROF_edge_counter.3
+ 216      00
+ 217 0268 8B150402 		movl	LPBX1+516, %edx	 # *LPBX1, PROF_edge_counter.3
+ 217      0000
+ 218 026e 83C001   		addl	$1, %eax	 #, PROF_edge_counter.3
+ 219 0271 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.3
+ 220 0274 A3000200 		movl	%eax, LPBX1+512	 # PROF_edge_counter.3, *LPBX1
+ 220      00
+ 221 0279 89150402 		movl	%edx, LPBX1+516	 # PROF_edge_counter.3, *LPBX1
+ 221      0000
+ 222 027f 84C9     		testb	%cl, %cl	 # D.2968
+ 223 0281 741C     		je	L2	 #,
+ 224              		.loc 1 78 0 is_stmt 0 discriminator 1
+ 225 0283 A1080200 		movl	LPBX1+520, %eax	 # *LPBX1, PROF_edge_counter.3
+ 225      00
+ 226 0288 8B150C02 		movl	LPBX1+524, %edx	 # *LPBX1, PROF_edge_counter.3
+ 226      0000
+ 227 028e 83C001   		addl	$1, %eax	 #, PROF_edge_counter.3
+ 228 0291 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.3
+ 229 0294 A3080200 		movl	%eax, LPBX1+520	 # PROF_edge_counter.3, *LPBX1
+ 229      00
+ 230 0299 89150C02 		movl	%edx, LPBX1+524	 # PROF_edge_counter.3, *LPBX1
+ 230      0000
+ 231              	L2:
+ 232              		.loc 1 79 0 is_stmt 1
+ 233 029f 83C42C   		addl	$44, %esp	 #,
+ 234              	LCFI3:
+ 235              		.cfi_def_cfa_offset 4
+ 236 02a2 C3       		ret
+ 237              		.cfi_endproc
+ 238              	LFE1:
+ 239              		.globl	_testthd1
+ 240              		.section .rdata,"dr"
+ 241              	LC6:
+ 242 0010 54687265 		.ascii "Threads, enqueuing test #1\0"
+ 242      6164732C 
+ 242      20656E71 
+ 242      75657569 
+ 242      6E672074 
+ 243 002b 00       		.align 4
+ 244              	_testthd1:
+ 245              	 # name:
+ 246 002c 10000000 		.long	LC6
+ 247              	 # setup:
+ 248 0030 00000000 		.long	0
+ 249              	 # teardown:
+ 250 0034 00000000 		.long	0
+ 251              	 # execute:
+ 252 0038 55000000 		.long	_thd1_execute
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 7
+
+
+ 253              		.text
+ 254              		.def	_thd2_execute;	.scl	3;	.type	32;	.endef
+ 255              	_thd2_execute:
+ 256              	LFB2:
+ 257              		.loc 1 98 0
+ 258              		.cfi_startproc
+ 259 02a3 83EC2C   		subl	$44, %esp	 #,
+ 260              	LCFI4:
+ 261              		.cfi_def_cfa_offset 48
+ 262              		.loc 1 98 0
+ 263 02a6 A1680100 		movl	LPBX1+360, %eax	 # *LPBX1, PROF_edge_counter.2
+ 263      00
+ 264 02ab 8B156C01 		movl	LPBX1+364, %edx	 # *LPBX1, PROF_edge_counter.2
+ 264      0000
+ 265 02b1 83C001   		addl	$1, %eax	 #, PROF_edge_counter.2
+ 266 02b4 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.2
+ 267 02b7 A3680100 		movl	%eax, LPBX1+360	 # PROF_edge_counter.2, *LPBX1
+ 267      00
+ 268 02bc 89156C01 		movl	%edx, LPBX1+364	 # PROF_edge_counter.2, *LPBX1
+ 268      0000
+ 269              		.loc 1 100 0
+ 270 02c2 A1180000 		movl	_rlist+24, %eax	 # rlist.r_current, D.2913
+ 270      00
+ 271 02c7 8B4008   		movl	8(%eax), %eax	 # D.2913_1->p_prio, D.2914
+ 272 02ca 8D50FC   		leal	-4(%eax), %edx	 #, D.2915
+ 273 02cd A1040000 		movl	_wa+4, %eax	 # wa, D.2916
+ 273      00
+ 274 02d2 C7442410 		movl	$LC1, 16(%esp)	 #,
+ 274      02000000 
+ 275 02da C744240C 		movl	$_thread, 12(%esp)	 #,
+ 275      00000000 
+ 276 02e2 89542408 		movl	%edx, 8(%esp)	 # D.2915,
+ 277 02e6 C7442404 		movl	$17008, 4(%esp)	 #,
+ 277      70420000 
+ 278 02ee 890424   		movl	%eax, (%esp)	 # D.2916,
+ 279 02f1 E8000000 		call	_chThdCreateStatic	 #
+ 279      00
+ 280 02f6 89C1     		movl	%eax, %ecx	 #, D.2917
+ 281 02f8 A1700100 		movl	LPBX1+368, %eax	 # *LPBX1, PROF_edge_counter.2
+ 281      00
+ 282 02fd 8B157401 		movl	LPBX1+372, %edx	 # *LPBX1, PROF_edge_counter.2
+ 282      0000
+ 283 0303 83C001   		addl	$1, %eax	 #, PROF_edge_counter.2
+ 284 0306 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.2
+ 285 0309 A3700100 		movl	%eax, LPBX1+368	 # PROF_edge_counter.2, *LPBX1
+ 285      00
+ 286 030e 89157401 		movl	%edx, LPBX1+372	 # PROF_edge_counter.2, *LPBX1
+ 286      0000
+ 287 0314 890D0400 		movl	%ecx, _threads+4	 # D.2917, threads
+ 287      0000
+ 288              		.loc 1 101 0
+ 289 031a A1180000 		movl	_rlist+24, %eax	 # rlist.r_current, D.2918
+ 289      00
+ 290 031f 8B4008   		movl	8(%eax), %eax	 # D.2918_6->p_prio, D.2919
+ 291 0322 8D50FB   		leal	-5(%eax), %edx	 #, D.2920
+ 292 0325 A1000000 		movl	_wa, %eax	 # wa, D.2921
+ 292      00
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 8
+
+
+ 293 032a C7442410 		movl	$LC0, 16(%esp)	 #,
+ 293      00000000 
+ 294 0332 C744240C 		movl	$_thread, 12(%esp)	 #,
+ 294      00000000 
+ 295 033a 89542408 		movl	%edx, 8(%esp)	 # D.2920,
+ 296 033e C7442404 		movl	$17008, 4(%esp)	 #,
+ 296      70420000 
+ 297 0346 890424   		movl	%eax, (%esp)	 # D.2921,
+ 298 0349 E8000000 		call	_chThdCreateStatic	 #
+ 298      00
+ 299 034e 89C1     		movl	%eax, %ecx	 #, D.2922
+ 300 0350 A1780100 		movl	LPBX1+376, %eax	 # *LPBX1, PROF_edge_counter.2
+ 300      00
+ 301 0355 8B157C01 		movl	LPBX1+380, %edx	 # *LPBX1, PROF_edge_counter.2
+ 301      0000
+ 302 035b 83C001   		addl	$1, %eax	 #, PROF_edge_counter.2
+ 303 035e 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.2
+ 304 0361 A3780100 		movl	%eax, LPBX1+376	 # PROF_edge_counter.2, *LPBX1
+ 304      00
+ 305 0366 89157C01 		movl	%edx, LPBX1+380	 # PROF_edge_counter.2, *LPBX1
+ 305      0000
+ 306 036c 890D0000 		movl	%ecx, _threads	 # D.2922, threads
+ 306      0000
+ 307              		.loc 1 102 0
+ 308 0372 A1180000 		movl	_rlist+24, %eax	 # rlist.r_current, D.2923
+ 308      00
+ 309 0377 8B4008   		movl	8(%eax), %eax	 # D.2923_11->p_prio, D.2924
+ 310 037a 8D50FF   		leal	-1(%eax), %edx	 #, D.2925
+ 311 037d A1100000 		movl	_wa+16, %eax	 # wa, D.2926
+ 311      00
+ 312 0382 C7442410 		movl	$LC4, 16(%esp)	 #,
+ 312      08000000 
+ 313 038a C744240C 		movl	$_thread, 12(%esp)	 #,
+ 313      00000000 
+ 314 0392 89542408 		movl	%edx, 8(%esp)	 # D.2925,
+ 315 0396 C7442404 		movl	$17008, 4(%esp)	 #,
+ 315      70420000 
+ 316 039e 890424   		movl	%eax, (%esp)	 # D.2926,
+ 317 03a1 E8000000 		call	_chThdCreateStatic	 #
+ 317      00
+ 318 03a6 89C1     		movl	%eax, %ecx	 #, D.2927
+ 319 03a8 A1800100 		movl	LPBX1+384, %eax	 # *LPBX1, PROF_edge_counter.2
+ 319      00
+ 320 03ad 8B158401 		movl	LPBX1+388, %edx	 # *LPBX1, PROF_edge_counter.2
+ 320      0000
+ 321 03b3 83C001   		addl	$1, %eax	 #, PROF_edge_counter.2
+ 322 03b6 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.2
+ 323 03b9 A3800100 		movl	%eax, LPBX1+384	 # PROF_edge_counter.2, *LPBX1
+ 323      00
+ 324 03be 89158401 		movl	%edx, LPBX1+388	 # PROF_edge_counter.2, *LPBX1
+ 324      0000
+ 325 03c4 890D1000 		movl	%ecx, _threads+16	 # D.2927, threads
+ 325      0000
+ 326              		.loc 1 103 0
+ 327 03ca A1180000 		movl	_rlist+24, %eax	 # rlist.r_current, D.2928
+ 327      00
+ 328 03cf 8B4008   		movl	8(%eax), %eax	 # D.2928_16->p_prio, D.2929
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 9
+
+
+ 329 03d2 8D50FE   		leal	-2(%eax), %edx	 #, D.2930
+ 330 03d5 A10C0000 		movl	_wa+12, %eax	 # wa, D.2931
+ 330      00
+ 331 03da C7442410 		movl	$LC3, 16(%esp)	 #,
+ 331      06000000 
+ 332 03e2 C744240C 		movl	$_thread, 12(%esp)	 #,
+ 332      00000000 
+ 333 03ea 89542408 		movl	%edx, 8(%esp)	 # D.2930,
+ 334 03ee C7442404 		movl	$17008, 4(%esp)	 #,
+ 334      70420000 
+ 335 03f6 890424   		movl	%eax, (%esp)	 # D.2931,
+ 336 03f9 E8000000 		call	_chThdCreateStatic	 #
+ 336      00
+ 337 03fe 89C1     		movl	%eax, %ecx	 #, D.2932
+ 338 0400 A1880100 		movl	LPBX1+392, %eax	 # *LPBX1, PROF_edge_counter.2
+ 338      00
+ 339 0405 8B158C01 		movl	LPBX1+396, %edx	 # *LPBX1, PROF_edge_counter.2
+ 339      0000
+ 340 040b 83C001   		addl	$1, %eax	 #, PROF_edge_counter.2
+ 341 040e 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.2
+ 342 0411 A3880100 		movl	%eax, LPBX1+392	 # PROF_edge_counter.2, *LPBX1
+ 342      00
+ 343 0416 89158C01 		movl	%edx, LPBX1+396	 # PROF_edge_counter.2, *LPBX1
+ 343      0000
+ 344 041c 890D0C00 		movl	%ecx, _threads+12	 # D.2932, threads
+ 344      0000
+ 345              		.loc 1 105 0
+ 346              	/APP
+ 347              	 # 105 "../../test/testthd.c" 1
+ 348 0422 90       		nop
+ 349              	 # 0 "" 2
+ 350              	/NO_APP
+ 351 0423 A1900100 		movl	LPBX1+400, %eax	 # *LPBX1, PROF_edge_counter.2
+ 351      00
+ 352 0428 8B159401 		movl	LPBX1+404, %edx	 # *LPBX1, PROF_edge_counter.2
+ 352      0000
+ 353 042e 83C001   		addl	$1, %eax	 #, PROF_edge_counter.2
+ 354 0431 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.2
+ 355 0434 A3900100 		movl	%eax, LPBX1+400	 # PROF_edge_counter.2, *LPBX1
+ 355      00
+ 356 0439 89159401 		movl	%edx, LPBX1+404	 # PROF_edge_counter.2, *LPBX1
+ 356      0000
+ 357              		.loc 1 106 0
+ 358 043f A1180000 		movl	_rlist+24, %eax	 # rlist.r_current, D.2933
+ 358      00
+ 359 0444 8B4008   		movl	8(%eax), %eax	 # D.2933_21->p_prio, D.2934
+ 360 0447 8D50FD   		leal	-3(%eax), %edx	 #, D.2935
+ 361 044a A1080000 		movl	_wa+8, %eax	 # wa, D.2936
+ 361      00
+ 362 044f C7442410 		movl	$LC2, 16(%esp)	 #,
+ 362      04000000 
+ 363 0457 C744240C 		movl	$_thread, 12(%esp)	 #,
+ 363      00000000 
+ 364 045f 89542408 		movl	%edx, 8(%esp)	 # D.2935,
+ 365 0463 C7442404 		movl	$17008, 4(%esp)	 #,
+ 365      70420000 
+ 366 046b 890424   		movl	%eax, (%esp)	 # D.2936,
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 10
+
+
+ 367 046e E8000000 		call	_chThdCreateI	 #
+ 367      00
+ 368 0473 89C1     		movl	%eax, %ecx	 #, D.2937
+ 369 0475 A1980100 		movl	LPBX1+408, %eax	 # *LPBX1, PROF_edge_counter.2
+ 369      00
+ 370 047a 8B159C01 		movl	LPBX1+412, %edx	 # *LPBX1, PROF_edge_counter.2
+ 370      0000
+ 371 0480 83C001   		addl	$1, %eax	 #, PROF_edge_counter.2
+ 372 0483 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.2
+ 373 0486 A3980100 		movl	%eax, LPBX1+408	 # PROF_edge_counter.2, *LPBX1
+ 373      00
+ 374 048b 89159C01 		movl	%edx, LPBX1+412	 # PROF_edge_counter.2, *LPBX1
+ 374      0000
+ 375 0491 890D0800 		movl	%ecx, _threads+8	 # D.2937, threads
+ 375      0000
+ 376              		.loc 1 107 0
+ 377              	/APP
+ 378              	 # 107 "../../test/testthd.c" 1
+ 379 0497 90       		nop
+ 380              	 # 0 "" 2
+ 381              	/NO_APP
+ 382 0498 A1A00100 		movl	LPBX1+416, %eax	 # *LPBX1, PROF_edge_counter.2
+ 382      00
+ 383 049d 8B15A401 		movl	LPBX1+420, %edx	 # *LPBX1, PROF_edge_counter.2
+ 383      0000
+ 384 04a3 83C001   		addl	$1, %eax	 #, PROF_edge_counter.2
+ 385 04a6 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.2
+ 386 04a9 A3A00100 		movl	%eax, LPBX1+416	 # PROF_edge_counter.2, *LPBX1
+ 386      00
+ 387 04ae 8915A401 		movl	%edx, LPBX1+420	 # PROF_edge_counter.2, *LPBX1
+ 387      0000
+ 388              		.loc 1 108 0
+ 389 04b4 A1080000 		movl	_threads+8, %eax	 # threads, D.2938
+ 389      00
+ 390 04b9 890424   		movl	%eax, (%esp)	 # D.2938,
+ 391 04bc E8000000 		call	_chThdResume	 #
+ 391      00
+ 392 04c1 A1A80100 		movl	LPBX1+424, %eax	 # *LPBX1, PROF_edge_counter.2
+ 392      00
+ 393 04c6 8B15AC01 		movl	LPBX1+428, %edx	 # *LPBX1, PROF_edge_counter.2
+ 393      0000
+ 394 04cc 83C001   		addl	$1, %eax	 #, PROF_edge_counter.2
+ 395 04cf 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.2
+ 396 04d2 A3A80100 		movl	%eax, LPBX1+424	 # PROF_edge_counter.2, *LPBX1
+ 396      00
+ 397 04d7 8915AC01 		movl	%edx, LPBX1+428	 # PROF_edge_counter.2, *LPBX1
+ 397      0000
+ 398              		.loc 1 109 0
+ 399 04dd E8000000 		call	_test_wait_threads	 #
+ 399      00
+ 400 04e2 A1B00100 		movl	LPBX1+432, %eax	 # *LPBX1, PROF_edge_counter.2
+ 400      00
+ 401 04e7 8B15B401 		movl	LPBX1+436, %edx	 # *LPBX1, PROF_edge_counter.2
+ 401      0000
+ 402 04ed 83C001   		addl	$1, %eax	 #, PROF_edge_counter.2
+ 403 04f0 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.2
+ 404 04f3 A3B00100 		movl	%eax, LPBX1+432	 # PROF_edge_counter.2, *LPBX1
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 11
+
+
+ 404      00
+ 405 04f8 8915B401 		movl	%edx, LPBX1+436	 # PROF_edge_counter.2, *LPBX1
+ 405      0000
+ 406              		.loc 1 110 0
+ 407 04fe C7442404 		movl	$LC5, 4(%esp)	 #,
+ 407      0A000000 
+ 408 0506 C7042401 		movl	$1, (%esp)	 #,
+ 408      000000
+ 409 050d E8000000 		call	__test_assert_sequence	 #
+ 409      00
+ 410 0512 88C1     		movb	%al, %cl	 #, D.2939
+ 411 0514 A1B80100 		movl	LPBX1+440, %eax	 # *LPBX1, PROF_edge_counter.2
+ 411      00
+ 412 0519 8B15BC01 		movl	LPBX1+444, %edx	 # *LPBX1, PROF_edge_counter.2
+ 412      0000
+ 413 051f 83C001   		addl	$1, %eax	 #, PROF_edge_counter.2
+ 414 0522 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.2
+ 415 0525 A3B80100 		movl	%eax, LPBX1+440	 # PROF_edge_counter.2, *LPBX1
+ 415      00
+ 416 052a 8915BC01 		movl	%edx, LPBX1+444	 # PROF_edge_counter.2, *LPBX1
+ 416      0000
+ 417 0530 84C9     		testb	%cl, %cl	 # D.2939
+ 418 0532 741C     		je	L4	 #,
+ 419              		.loc 1 110 0 is_stmt 0 discriminator 1
+ 420 0534 A1C00100 		movl	LPBX1+448, %eax	 # *LPBX1, PROF_edge_counter.2
+ 420      00
+ 421 0539 8B15C401 		movl	LPBX1+452, %edx	 # *LPBX1, PROF_edge_counter.2
+ 421      0000
+ 422 053f 83C001   		addl	$1, %eax	 #, PROF_edge_counter.2
+ 423 0542 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.2
+ 424 0545 A3C00100 		movl	%eax, LPBX1+448	 # PROF_edge_counter.2, *LPBX1
+ 424      00
+ 425 054a 8915C401 		movl	%edx, LPBX1+452	 # PROF_edge_counter.2, *LPBX1
+ 425      0000
+ 426              	L4:
+ 427              		.loc 1 111 0 is_stmt 1
+ 428 0550 83C42C   		addl	$44, %esp	 #,
+ 429              	LCFI5:
+ 430              		.cfi_def_cfa_offset 4
+ 431 0553 C3       		ret
+ 432              		.cfi_endproc
+ 433              	LFE2:
+ 434              		.globl	_testthd2
+ 435              		.section .rdata,"dr"
+ 436              	LC7:
+ 437 003c 54687265 		.ascii "Threads, enqueuing test #2\0"
+ 437      6164732C 
+ 437      20656E71 
+ 437      75657569 
+ 437      6E672074 
+ 438 0057 00       		.align 4
+ 439              	_testthd2:
+ 440              	 # name:
+ 441 0058 3C000000 		.long	LC7
+ 442              	 # setup:
+ 443 005c 00000000 		.long	0
+ 444              	 # teardown:
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 12
+
+
+ 445 0060 00000000 		.long	0
+ 446              	 # execute:
+ 447 0064 A3020000 		.long	_thd2_execute
+ 448              		.text
+ 449              		.def	_thd3_execute;	.scl	3;	.type	32;	.endef
+ 450              	_thd3_execute:
+ 451              	LFB3:
+ 452              		.loc 1 130 0
+ 453              		.cfi_startproc
+ 454 0554 83EC2C   		subl	$44, %esp	 #,
+ 455              	LCFI6:
+ 456              		.cfi_def_cfa_offset 48
+ 457              		.loc 1 130 0
+ 458 0557 A1700000 		movl	LPBX1+112, %eax	 # *LPBX1, PROF_edge_counter.1
+ 458      00
+ 459 055c 8B157400 		movl	LPBX1+116, %edx	 # *LPBX1, PROF_edge_counter.1
+ 459      0000
+ 460 0562 83C001   		addl	$1, %eax	 #, PROF_edge_counter.1
+ 461 0565 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.1
+ 462 0568 A3700000 		movl	%eax, LPBX1+112	 # PROF_edge_counter.1, *LPBX1
+ 462      00
+ 463 056d 89157400 		movl	%edx, LPBX1+116	 # PROF_edge_counter.1, *LPBX1
+ 463      0000
+ 464              		.loc 1 133 0
+ 465 0573 A1180000 		movl	_rlist+24, %eax	 # rlist.r_current, D.2836
+ 465      00
+ 466 0578 8B4008   		movl	8(%eax), %eax	 # D.2836_1->p_prio, tmp175
+ 467 057b 8944241C 		movl	%eax, 28(%esp)	 # tmp175, prio
+ 468              		.loc 1 134 0
+ 469 057f 8B44241C 		movl	28(%esp), %eax	 # prio, tmp176
+ 470 0583 40       		incl	%eax	 # D.2837
+ 471 0584 890424   		movl	%eax, (%esp)	 # D.2837,
+ 472 0587 E8000000 		call	_chThdSetPriority	 #
+ 472      00
+ 473 058c 89442418 		movl	%eax, 24(%esp)	 # tmp177, p1
+ 474 0590 A1780000 		movl	LPBX1+120, %eax	 # *LPBX1, PROF_edge_counter.1
+ 474      00
+ 475 0595 8B157C00 		movl	LPBX1+124, %edx	 # *LPBX1, PROF_edge_counter.1
+ 475      0000
+ 476 059b 83C001   		addl	$1, %eax	 #, PROF_edge_counter.1
+ 477 059e 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.1
+ 478 05a1 A3780000 		movl	%eax, LPBX1+120	 # PROF_edge_counter.1, *LPBX1
+ 478      00
+ 479 05a6 89157C00 		movl	%edx, LPBX1+124	 # PROF_edge_counter.1, *LPBX1
+ 479      0000
+ 480              		.loc 1 135 0
+ 481 05ac 8B442418 		movl	24(%esp), %eax	 # p1, tmp179
+ 482 05b0 3B44241C 		cmpl	28(%esp), %eax	 # prio, tmp179
+ 483 05b4 0F94C0   		sete	%al	 #, tmp178
+ 484 05b7 0FB6C0   		movzbl	%al, %eax	 # tmp178, D.2838
+ 485 05ba 89442404 		movl	%eax, 4(%esp)	 # D.2838,
+ 486 05be C7042401 		movl	$1, (%esp)	 #,
+ 486      000000
+ 487 05c5 E8000000 		call	__test_assert	 #
+ 487      00
+ 488 05ca 84C0     		testb	%al, %al	 # D.2839
+ 489 05cc 7421     		je	L7	 #,
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 13
+
+
+ 490              		.loc 1 135 0 is_stmt 0 discriminator 1
+ 491 05ce A1880000 		movl	LPBX1+136, %eax	 # *LPBX1, PROF_edge_counter.1
+ 491      00
+ 492 05d3 8B158C00 		movl	LPBX1+140, %edx	 # *LPBX1, PROF_edge_counter.1
+ 492      0000
+ 493 05d9 83C001   		addl	$1, %eax	 #, PROF_edge_counter.1
+ 494 05dc 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.1
+ 495 05df A3880000 		movl	%eax, LPBX1+136	 # PROF_edge_counter.1, *LPBX1
+ 495      00
+ 496 05e4 89158C00 		movl	%edx, LPBX1+140	 # PROF_edge_counter.1, *LPBX1
+ 496      0000
+ 497 05ea E92F0500 		jmp	L6	 #
+ 497      00
+ 498              	L7:
+ 499              		.loc 1 135 0
+ 500 05ef A1800000 		movl	LPBX1+128, %eax	 # *LPBX1, PROF_edge_counter.1
+ 500      00
+ 501 05f4 8B158400 		movl	LPBX1+132, %edx	 # *LPBX1, PROF_edge_counter.1
+ 501      0000
+ 502 05fa 83C001   		addl	$1, %eax	 #, PROF_edge_counter.1
+ 503 05fd 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.1
+ 504 0600 A3800000 		movl	%eax, LPBX1+128	 # PROF_edge_counter.1, *LPBX1
+ 504      00
+ 505 0605 89158400 		movl	%edx, LPBX1+132	 # PROF_edge_counter.1, *LPBX1
+ 505      0000
+ 506              		.loc 1 137 0 is_stmt 1
+ 507 060b A1180000 		movl	_rlist+24, %eax	 # rlist.r_current, D.2842
+ 507      00
+ 508 0610 8B4008   		movl	8(%eax), %eax	 # D.2842_7->p_prio, D.2843
+ 509 0613 8B54241C 		movl	28(%esp), %edx	 # prio, tmp180
+ 510 0617 42       		incl	%edx	 # D.2844
+ 511 0618 39D0     		cmpl	%edx, %eax	 # D.2844, D.2843
+ 512 061a 0F94C0   		sete	%al	 #, tmp181
+ 513 061d 0FB6C0   		movzbl	%al, %eax	 # tmp181, D.2845
+ 514 0620 89442404 		movl	%eax, 4(%esp)	 # D.2845,
+ 515 0624 C7042402 		movl	$2, (%esp)	 #,
+ 515      000000
+ 516 062b E8000000 		call	__test_assert	 #
+ 516      00
+ 517 0630 84C0     		testb	%al, %al	 # D.2846
+ 518 0632 7421     		je	L9	 #,
+ 519              		.loc 1 137 0 is_stmt 0 discriminator 1
+ 520 0634 A1980000 		movl	LPBX1+152, %eax	 # *LPBX1, PROF_edge_counter.1
+ 520      00
+ 521 0639 8B159C00 		movl	LPBX1+156, %edx	 # *LPBX1, PROF_edge_counter.1
+ 521      0000
+ 522 063f 83C001   		addl	$1, %eax	 #, PROF_edge_counter.1
+ 523 0642 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.1
+ 524 0645 A3980000 		movl	%eax, LPBX1+152	 # PROF_edge_counter.1, *LPBX1
+ 524      00
+ 525 064a 89159C00 		movl	%edx, LPBX1+156	 # PROF_edge_counter.1, *LPBX1
+ 525      0000
+ 526 0650 E9C90400 		jmp	L6	 #
+ 526      00
+ 527              	L9:
+ 528              		.loc 1 137 0
+ 529 0655 A1900000 		movl	LPBX1+144, %eax	 # *LPBX1, PROF_edge_counter.1
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 14
+
+
+ 529      00
+ 530 065a 8B159400 		movl	LPBX1+148, %edx	 # *LPBX1, PROF_edge_counter.1
+ 530      0000
+ 531 0660 83C001   		addl	$1, %eax	 #, PROF_edge_counter.1
+ 532 0663 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.1
+ 533 0666 A3900000 		movl	%eax, LPBX1+144	 # PROF_edge_counter.1, *LPBX1
+ 533      00
+ 534 066b 89159400 		movl	%edx, LPBX1+148	 # PROF_edge_counter.1, *LPBX1
+ 534      0000
+ 535              		.loc 1 139 0 is_stmt 1
+ 536 0671 8B442418 		movl	24(%esp), %eax	 # p1, tmp182
+ 537 0675 890424   		movl	%eax, (%esp)	 # tmp182,
+ 538 0678 E8000000 		call	_chThdSetPriority	 #
+ 538      00
+ 539 067d 89442418 		movl	%eax, 24(%esp)	 # tmp183, p1
+ 540 0681 A1A00000 		movl	LPBX1+160, %eax	 # *LPBX1, PROF_edge_counter.1
+ 540      00
+ 541 0686 8B15A400 		movl	LPBX1+164, %edx	 # *LPBX1, PROF_edge_counter.1
+ 541      0000
+ 542 068c 83C001   		addl	$1, %eax	 #, PROF_edge_counter.1
+ 543 068f 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.1
+ 544 0692 A3A00000 		movl	%eax, LPBX1+160	 # PROF_edge_counter.1, *LPBX1
+ 544      00
+ 545 0697 8915A400 		movl	%edx, LPBX1+164	 # PROF_edge_counter.1, *LPBX1
+ 545      0000
+ 546              		.loc 1 140 0
+ 547 069d 8B44241C 		movl	28(%esp), %eax	 # prio, tmp184
+ 548 06a1 40       		incl	%eax	 # D.2849
+ 549 06a2 3B442418 		cmpl	24(%esp), %eax	 # p1, D.2849
+ 550 06a6 0F94C0   		sete	%al	 #, tmp185
+ 551 06a9 0FB6C0   		movzbl	%al, %eax	 # tmp185, D.2850
+ 552 06ac 89442404 		movl	%eax, 4(%esp)	 # D.2850,
+ 553 06b0 C7042403 		movl	$3, (%esp)	 #,
+ 553      000000
+ 554 06b7 E8000000 		call	__test_assert	 #
+ 554      00
+ 555 06bc 84C0     		testb	%al, %al	 # D.2851
+ 556 06be 7421     		je	L10	 #,
+ 557              		.loc 1 140 0 is_stmt 0 discriminator 1
+ 558 06c0 A1B00000 		movl	LPBX1+176, %eax	 # *LPBX1, PROF_edge_counter.1
+ 558      00
+ 559 06c5 8B15B400 		movl	LPBX1+180, %edx	 # *LPBX1, PROF_edge_counter.1
+ 559      0000
+ 560 06cb 83C001   		addl	$1, %eax	 #, PROF_edge_counter.1
+ 561 06ce 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.1
+ 562 06d1 A3B00000 		movl	%eax, LPBX1+176	 # PROF_edge_counter.1, *LPBX1
+ 562      00
+ 563 06d6 8915B400 		movl	%edx, LPBX1+180	 # PROF_edge_counter.1, *LPBX1
+ 563      0000
+ 564 06dc E93D0400 		jmp	L6	 #
+ 564      00
+ 565              	L10:
+ 566              		.loc 1 140 0
+ 567 06e1 A1A80000 		movl	LPBX1+168, %eax	 # *LPBX1, PROF_edge_counter.1
+ 567      00
+ 568 06e6 8B15AC00 		movl	LPBX1+172, %edx	 # *LPBX1, PROF_edge_counter.1
+ 568      0000
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 15
+
+
+ 569 06ec 83C001   		addl	$1, %eax	 #, PROF_edge_counter.1
+ 570 06ef 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.1
+ 571 06f2 A3A80000 		movl	%eax, LPBX1+168	 # PROF_edge_counter.1, *LPBX1
+ 571      00
+ 572 06f7 8915AC00 		movl	%edx, LPBX1+172	 # PROF_edge_counter.1, *LPBX1
+ 572      0000
+ 573              		.loc 1 142 0 is_stmt 1
+ 574 06fd A1180000 		movl	_rlist+24, %eax	 # rlist.r_current, D.2854
+ 574      00
+ 575 0702 8B4008   		movl	8(%eax), %eax	 # D.2854_16->p_prio, D.2855
+ 576 0705 3B44241C 		cmpl	28(%esp), %eax	 # prio, D.2855
+ 577 0709 0F94C0   		sete	%al	 #, tmp186
+ 578 070c 0FB6C0   		movzbl	%al, %eax	 # tmp186, D.2856
+ 579 070f 89442404 		movl	%eax, 4(%esp)	 # D.2856,
+ 580 0713 C7042404 		movl	$4, (%esp)	 #,
+ 580      000000
+ 581 071a E8000000 		call	__test_assert	 #
+ 581      00
+ 582 071f 84C0     		testb	%al, %al	 # D.2857
+ 583 0721 7421     		je	L11	 #,
+ 584              		.loc 1 142 0 is_stmt 0 discriminator 1
+ 585 0723 A1C00000 		movl	LPBX1+192, %eax	 # *LPBX1, PROF_edge_counter.1
+ 585      00
+ 586 0728 8B15C400 		movl	LPBX1+196, %edx	 # *LPBX1, PROF_edge_counter.1
+ 586      0000
+ 587 072e 83C001   		addl	$1, %eax	 #, PROF_edge_counter.1
+ 588 0731 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.1
+ 589 0734 A3C00000 		movl	%eax, LPBX1+192	 # PROF_edge_counter.1, *LPBX1
+ 589      00
+ 590 0739 8915C400 		movl	%edx, LPBX1+196	 # PROF_edge_counter.1, *LPBX1
+ 590      0000
+ 591 073f E9DA0300 		jmp	L6	 #
+ 591      00
+ 592              	L11:
+ 593              		.loc 1 142 0
+ 594 0744 A1B80000 		movl	LPBX1+184, %eax	 # *LPBX1, PROF_edge_counter.1
+ 594      00
+ 595 0749 8B15BC00 		movl	LPBX1+188, %edx	 # *LPBX1, PROF_edge_counter.1
+ 595      0000
+ 596 074f 83C001   		addl	$1, %eax	 #, PROF_edge_counter.1
+ 597 0752 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.1
+ 598 0755 A3B80000 		movl	%eax, LPBX1+184	 # PROF_edge_counter.1, *LPBX1
+ 598      00
+ 599 075a 8915BC00 		movl	%edx, LPBX1+188	 # PROF_edge_counter.1, *LPBX1
+ 599      0000
+ 600              		.loc 1 147 0 is_stmt 1
+ 601              	/APP
+ 602              	 # 147 "../../test/testthd.c" 1
+ 603 0760 90       		nop
+ 604              	 # 0 "" 2
+ 605              	/NO_APP
+ 606 0761 A1C80000 		movl	LPBX1+200, %eax	 # *LPBX1, PROF_edge_counter.1
+ 606      00
+ 607 0766 8B15CC00 		movl	LPBX1+204, %edx	 # *LPBX1, PROF_edge_counter.1
+ 607      0000
+ 608 076c 83C001   		addl	$1, %eax	 #, PROF_edge_counter.1
+ 609 076f 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.1
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 16
+
+
+ 610 0772 A3C80000 		movl	%eax, LPBX1+200	 # PROF_edge_counter.1, *LPBX1
+ 610      00
+ 611 0777 8915CC00 		movl	%edx, LPBX1+204	 # PROF_edge_counter.1, *LPBX1
+ 611      0000
+ 612              		.loc 1 148 0
+ 613 077d A1180000 		movl	_rlist+24, %eax	 # rlist.r_current, D.2860
+ 613      00
+ 614 0782 8B151800 		movl	_rlist+24, %edx	 # rlist.r_current, D.2861
+ 614      0000
+ 615 0788 8B5208   		movl	8(%edx), %edx	 # D.2861_21->p_prio, D.2862
+ 616 078b 83C202   		addl	$2, %edx	 #, D.2863
+ 617 078e 895008   		movl	%edx, 8(%eax)	 # D.2863, D.2860_20->p_prio
+ 618              		.loc 1 149 0
+ 619              	/APP
+ 620              	 # 149 "../../test/testthd.c" 1
+ 621 0791 90       		nop
+ 622              	 # 0 "" 2
+ 623              	/NO_APP
+ 624 0792 A1D00000 		movl	LPBX1+208, %eax	 # *LPBX1, PROF_edge_counter.1
+ 624      00
+ 625 0797 8B15D400 		movl	LPBX1+212, %edx	 # *LPBX1, PROF_edge_counter.1
+ 625      0000
+ 626 079d 83C001   		addl	$1, %eax	 #, PROF_edge_counter.1
+ 627 07a0 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.1
+ 628 07a3 A3D00000 		movl	%eax, LPBX1+208	 # PROF_edge_counter.1, *LPBX1
+ 628      00
+ 629 07a8 8915D400 		movl	%edx, LPBX1+212	 # PROF_edge_counter.1, *LPBX1
+ 629      0000
+ 630              		.loc 1 150 0
+ 631 07ae A1180000 		movl	_rlist+24, %eax	 # rlist.r_current, D.2864
+ 631      00
+ 632 07b3 8B4008   		movl	8(%eax), %eax	 # D.2864_24->p_prio, D.2865
+ 633 07b6 8B54241C 		movl	28(%esp), %edx	 # prio, tmp187
+ 634 07ba 83C202   		addl	$2, %edx	 #, D.2866
+ 635 07bd 39D0     		cmpl	%edx, %eax	 # D.2866, D.2865
+ 636 07bf 0F94C0   		sete	%al	 #, tmp188
+ 637 07c2 0FB6C0   		movzbl	%al, %eax	 # tmp188, D.2867
+ 638 07c5 89442404 		movl	%eax, 4(%esp)	 # D.2867,
+ 639 07c9 C7042405 		movl	$5, (%esp)	 #,
+ 639      000000
+ 640 07d0 E8000000 		call	__test_assert	 #
+ 640      00
+ 641 07d5 84C0     		testb	%al, %al	 # D.2868
+ 642 07d7 7421     		je	L12	 #,
+ 643              		.loc 1 150 0 is_stmt 0 discriminator 1
+ 644 07d9 A1E00000 		movl	LPBX1+224, %eax	 # *LPBX1, PROF_edge_counter.1
+ 644      00
+ 645 07de 8B15E400 		movl	LPBX1+228, %edx	 # *LPBX1, PROF_edge_counter.1
+ 645      0000
+ 646 07e4 83C001   		addl	$1, %eax	 #, PROF_edge_counter.1
+ 647 07e7 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.1
+ 648 07ea A3E00000 		movl	%eax, LPBX1+224	 # PROF_edge_counter.1, *LPBX1
+ 648      00
+ 649 07ef 8915E400 		movl	%edx, LPBX1+228	 # PROF_edge_counter.1, *LPBX1
+ 649      0000
+ 650 07f5 E9240300 		jmp	L6	 #
+ 650      00
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 17
+
+
+ 651              	L12:
+ 652              		.loc 1 150 0
+ 653 07fa A1D80000 		movl	LPBX1+216, %eax	 # *LPBX1, PROF_edge_counter.1
+ 653      00
+ 654 07ff 8B15DC00 		movl	LPBX1+220, %edx	 # *LPBX1, PROF_edge_counter.1
+ 654      0000
+ 655 0805 83C001   		addl	$1, %eax	 #, PROF_edge_counter.1
+ 656 0808 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.1
+ 657 080b A3D80000 		movl	%eax, LPBX1+216	 # PROF_edge_counter.1, *LPBX1
+ 657      00
+ 658 0810 8915DC00 		movl	%edx, LPBX1+220	 # PROF_edge_counter.1, *LPBX1
+ 658      0000
+ 659              		.loc 1 154 0 is_stmt 1
+ 660 0816 8B44241C 		movl	28(%esp), %eax	 # prio, tmp189
+ 661 081a 40       		incl	%eax	 # D.2871
+ 662 081b 890424   		movl	%eax, (%esp)	 # D.2871,
+ 663 081e E8000000 		call	_chThdSetPriority	 #
+ 663      00
+ 664 0823 89442418 		movl	%eax, 24(%esp)	 # tmp190, p1
+ 665 0827 A1E80000 		movl	LPBX1+232, %eax	 # *LPBX1, PROF_edge_counter.1
+ 665      00
+ 666 082c 8B15EC00 		movl	LPBX1+236, %edx	 # *LPBX1, PROF_edge_counter.1
+ 666      0000
+ 667 0832 83C001   		addl	$1, %eax	 #, PROF_edge_counter.1
+ 668 0835 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.1
+ 669 0838 A3E80000 		movl	%eax, LPBX1+232	 # PROF_edge_counter.1, *LPBX1
+ 669      00
+ 670 083d 8915EC00 		movl	%edx, LPBX1+236	 # PROF_edge_counter.1, *LPBX1
+ 670      0000
+ 671              		.loc 1 155 0
+ 672 0843 8B442418 		movl	24(%esp), %eax	 # p1, tmp192
+ 673 0847 3B44241C 		cmpl	28(%esp), %eax	 # prio, tmp192
+ 674 084b 0F94C0   		sete	%al	 #, tmp191
+ 675 084e 0FB6C0   		movzbl	%al, %eax	 # tmp191, D.2872
+ 676 0851 89442404 		movl	%eax, 4(%esp)	 # D.2872,
+ 677 0855 C7042406 		movl	$6, (%esp)	 #,
+ 677      000000
+ 678 085c E8000000 		call	__test_assert	 #
+ 678      00
+ 679 0861 84C0     		testb	%al, %al	 # D.2873
+ 680 0863 7421     		je	L13	 #,
+ 681              		.loc 1 155 0 is_stmt 0 discriminator 1
+ 682 0865 A1F80000 		movl	LPBX1+248, %eax	 # *LPBX1, PROF_edge_counter.1
+ 682      00
+ 683 086a 8B15FC00 		movl	LPBX1+252, %edx	 # *LPBX1, PROF_edge_counter.1
+ 683      0000
+ 684 0870 83C001   		addl	$1, %eax	 #, PROF_edge_counter.1
+ 685 0873 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.1
+ 686 0876 A3F80000 		movl	%eax, LPBX1+248	 # PROF_edge_counter.1, *LPBX1
+ 686      00
+ 687 087b 8915FC00 		movl	%edx, LPBX1+252	 # PROF_edge_counter.1, *LPBX1
+ 687      0000
+ 688 0881 E9980200 		jmp	L6	 #
+ 688      00
+ 689              	L13:
+ 690              		.loc 1 155 0
+ 691 0886 A1F00000 		movl	LPBX1+240, %eax	 # *LPBX1, PROF_edge_counter.1
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 18
+
+
+ 691      00
+ 692 088b 8B15F400 		movl	LPBX1+244, %edx	 # *LPBX1, PROF_edge_counter.1
+ 692      0000
+ 693 0891 83C001   		addl	$1, %eax	 #, PROF_edge_counter.1
+ 694 0894 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.1
+ 695 0897 A3F00000 		movl	%eax, LPBX1+240	 # PROF_edge_counter.1, *LPBX1
+ 695      00
+ 696 089c 8915F400 		movl	%edx, LPBX1+244	 # PROF_edge_counter.1, *LPBX1
+ 696      0000
+ 697              		.loc 1 157 0 is_stmt 1
+ 698 08a2 A1180000 		movl	_rlist+24, %eax	 # rlist.r_current, D.2876
+ 698      00
+ 699 08a7 8B4008   		movl	8(%eax), %eax	 # D.2876_33->p_prio, D.2877
+ 700 08aa 8B54241C 		movl	28(%esp), %edx	 # prio, tmp193
+ 701 08ae 83C202   		addl	$2, %edx	 #, D.2878
+ 702 08b1 39D0     		cmpl	%edx, %eax	 # D.2878, D.2877
+ 703 08b3 0F94C0   		sete	%al	 #, tmp194
+ 704 08b6 0FB6C0   		movzbl	%al, %eax	 # tmp194, D.2879
+ 705 08b9 89442404 		movl	%eax, 4(%esp)	 # D.2879,
+ 706 08bd C7042407 		movl	$7, (%esp)	 #,
+ 706      000000
+ 707 08c4 E8000000 		call	__test_assert	 #
+ 707      00
+ 708 08c9 84C0     		testb	%al, %al	 # D.2880
+ 709 08cb 7421     		je	L14	 #,
+ 710              		.loc 1 157 0 is_stmt 0 discriminator 1
+ 711 08cd A1080100 		movl	LPBX1+264, %eax	 # *LPBX1, PROF_edge_counter.1
+ 711      00
+ 712 08d2 8B150C01 		movl	LPBX1+268, %edx	 # *LPBX1, PROF_edge_counter.1
+ 712      0000
+ 713 08d8 83C001   		addl	$1, %eax	 #, PROF_edge_counter.1
+ 714 08db 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.1
+ 715 08de A3080100 		movl	%eax, LPBX1+264	 # PROF_edge_counter.1, *LPBX1
+ 715      00
+ 716 08e3 89150C01 		movl	%edx, LPBX1+268	 # PROF_edge_counter.1, *LPBX1
+ 716      0000
+ 717 08e9 E9300200 		jmp	L6	 #
+ 717      00
+ 718              	L14:
+ 719              		.loc 1 157 0
+ 720 08ee A1000100 		movl	LPBX1+256, %eax	 # *LPBX1, PROF_edge_counter.1
+ 720      00
+ 721 08f3 8B150401 		movl	LPBX1+260, %edx	 # *LPBX1, PROF_edge_counter.1
+ 721      0000
+ 722 08f9 83C001   		addl	$1, %eax	 #, PROF_edge_counter.1
+ 723 08fc 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.1
+ 724 08ff A3000100 		movl	%eax, LPBX1+256	 # PROF_edge_counter.1, *LPBX1
+ 724      00
+ 725 0904 89150401 		movl	%edx, LPBX1+260	 # PROF_edge_counter.1, *LPBX1
+ 725      0000
+ 726              		.loc 1 159 0 is_stmt 1
+ 727 090a A1180000 		movl	_rlist+24, %eax	 # rlist.r_current, D.2883
+ 727      00
+ 728 090f 8B4040   		movl	64(%eax), %eax	 # D.2883_38->p_realprio, D.2884
+ 729 0912 8B54241C 		movl	28(%esp), %edx	 # prio, tmp195
+ 730 0916 42       		incl	%edx	 # D.2885
+ 731 0917 39D0     		cmpl	%edx, %eax	 # D.2885, D.2884
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 19
+
+
+ 732 0919 0F94C0   		sete	%al	 #, tmp196
+ 733 091c 0FB6C0   		movzbl	%al, %eax	 # tmp196, D.2886
+ 734 091f 89442404 		movl	%eax, 4(%esp)	 # D.2886,
+ 735 0923 C7042408 		movl	$8, (%esp)	 #,
+ 735      000000
+ 736 092a E8000000 		call	__test_assert	 #
+ 736      00
+ 737 092f 84C0     		testb	%al, %al	 # D.2887
+ 738 0931 7421     		je	L15	 #,
+ 739              		.loc 1 159 0 is_stmt 0 discriminator 1
+ 740 0933 A1180100 		movl	LPBX1+280, %eax	 # *LPBX1, PROF_edge_counter.1
+ 740      00
+ 741 0938 8B151C01 		movl	LPBX1+284, %edx	 # *LPBX1, PROF_edge_counter.1
+ 741      0000
+ 742 093e 83C001   		addl	$1, %eax	 #, PROF_edge_counter.1
+ 743 0941 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.1
+ 744 0944 A3180100 		movl	%eax, LPBX1+280	 # PROF_edge_counter.1, *LPBX1
+ 744      00
+ 745 0949 89151C01 		movl	%edx, LPBX1+284	 # PROF_edge_counter.1, *LPBX1
+ 745      0000
+ 746 094f E9CA0100 		jmp	L6	 #
+ 746      00
+ 747              	L15:
+ 748              		.loc 1 159 0
+ 749 0954 A1100100 		movl	LPBX1+272, %eax	 # *LPBX1, PROF_edge_counter.1
+ 749      00
+ 750 0959 8B151401 		movl	LPBX1+276, %edx	 # *LPBX1, PROF_edge_counter.1
+ 750      0000
+ 751 095f 83C001   		addl	$1, %eax	 #, PROF_edge_counter.1
+ 752 0962 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.1
+ 753 0965 A3100100 		movl	%eax, LPBX1+272	 # PROF_edge_counter.1, *LPBX1
+ 753      00
+ 754 096a 89151401 		movl	%edx, LPBX1+276	 # PROF_edge_counter.1, *LPBX1
+ 754      0000
+ 755              		.loc 1 163 0 is_stmt 1
+ 756 0970 8B44241C 		movl	28(%esp), %eax	 # prio, tmp197
+ 757 0974 83C003   		addl	$3, %eax	 #, D.2890
+ 758 0977 890424   		movl	%eax, (%esp)	 # D.2890,
+ 759 097a E8000000 		call	_chThdSetPriority	 #
+ 759      00
+ 760 097f 89442418 		movl	%eax, 24(%esp)	 # tmp198, p1
+ 761 0983 A1200100 		movl	LPBX1+288, %eax	 # *LPBX1, PROF_edge_counter.1
+ 761      00
+ 762 0988 8B152401 		movl	LPBX1+292, %edx	 # *LPBX1, PROF_edge_counter.1
+ 762      0000
+ 763 098e 83C001   		addl	$1, %eax	 #, PROF_edge_counter.1
+ 764 0991 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.1
+ 765 0994 A3200100 		movl	%eax, LPBX1+288	 # PROF_edge_counter.1, *LPBX1
+ 765      00
+ 766 0999 89152401 		movl	%edx, LPBX1+292	 # PROF_edge_counter.1, *LPBX1
+ 766      0000
+ 767              		.loc 1 164 0
+ 768 099f 8B44241C 		movl	28(%esp), %eax	 # prio, tmp199
+ 769 09a3 40       		incl	%eax	 # D.2891
+ 770 09a4 3B442418 		cmpl	24(%esp), %eax	 # p1, D.2891
+ 771 09a8 0F94C0   		sete	%al	 #, tmp200
+ 772 09ab 0FB6C0   		movzbl	%al, %eax	 # tmp200, D.2892
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 20
+
+
+ 773 09ae 89442404 		movl	%eax, 4(%esp)	 # D.2892,
+ 774 09b2 C7042409 		movl	$9, (%esp)	 #,
+ 774      000000
+ 775 09b9 E8000000 		call	__test_assert	 #
+ 775      00
+ 776 09be 84C0     		testb	%al, %al	 # D.2893
+ 777 09c0 7421     		je	L16	 #,
+ 778              		.loc 1 164 0 is_stmt 0 discriminator 1
+ 779 09c2 A1300100 		movl	LPBX1+304, %eax	 # *LPBX1, PROF_edge_counter.1
+ 779      00
+ 780 09c7 8B153401 		movl	LPBX1+308, %edx	 # *LPBX1, PROF_edge_counter.1
+ 780      0000
+ 781 09cd 83C001   		addl	$1, %eax	 #, PROF_edge_counter.1
+ 782 09d0 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.1
+ 783 09d3 A3300100 		movl	%eax, LPBX1+304	 # PROF_edge_counter.1, *LPBX1
+ 783      00
+ 784 09d8 89153401 		movl	%edx, LPBX1+308	 # PROF_edge_counter.1, *LPBX1
+ 784      0000
+ 785 09de E93B0100 		jmp	L6	 #
+ 785      00
+ 786              	L16:
+ 787              		.loc 1 164 0
+ 788 09e3 A1280100 		movl	LPBX1+296, %eax	 # *LPBX1, PROF_edge_counter.1
+ 788      00
+ 789 09e8 8B152C01 		movl	LPBX1+300, %edx	 # *LPBX1, PROF_edge_counter.1
+ 789      0000
+ 790 09ee 83C001   		addl	$1, %eax	 #, PROF_edge_counter.1
+ 791 09f1 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.1
+ 792 09f4 A3280100 		movl	%eax, LPBX1+296	 # PROF_edge_counter.1, *LPBX1
+ 792      00
+ 793 09f9 89152C01 		movl	%edx, LPBX1+300	 # PROF_edge_counter.1, *LPBX1
+ 793      0000
+ 794              		.loc 1 166 0 is_stmt 1
+ 795 09ff A1180000 		movl	_rlist+24, %eax	 # rlist.r_current, D.2896
+ 795      00
+ 796 0a04 8B4008   		movl	8(%eax), %eax	 # D.2896_48->p_prio, D.2897
+ 797 0a07 8B54241C 		movl	28(%esp), %edx	 # prio, tmp201
+ 798 0a0b 83C203   		addl	$3, %edx	 #, D.2898
+ 799 0a0e 39D0     		cmpl	%edx, %eax	 # D.2898, D.2897
+ 800 0a10 0F94C0   		sete	%al	 #, tmp202
+ 801 0a13 0FB6C0   		movzbl	%al, %eax	 # tmp202, D.2899
+ 802 0a16 89442404 		movl	%eax, 4(%esp)	 # D.2899,
+ 803 0a1a C704240A 		movl	$10, (%esp)	 #,
+ 803      000000
+ 804 0a21 E8000000 		call	__test_assert	 #
+ 804      00
+ 805 0a26 84C0     		testb	%al, %al	 # D.2900
+ 806 0a28 7421     		je	L17	 #,
+ 807              		.loc 1 166 0 is_stmt 0 discriminator 1
+ 808 0a2a A1400100 		movl	LPBX1+320, %eax	 # *LPBX1, PROF_edge_counter.1
+ 808      00
+ 809 0a2f 8B154401 		movl	LPBX1+324, %edx	 # *LPBX1, PROF_edge_counter.1
+ 809      0000
+ 810 0a35 83C001   		addl	$1, %eax	 #, PROF_edge_counter.1
+ 811 0a38 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.1
+ 812 0a3b A3400100 		movl	%eax, LPBX1+320	 # PROF_edge_counter.1, *LPBX1
+ 812      00
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 21
+
+
+ 813 0a40 89154401 		movl	%edx, LPBX1+324	 # PROF_edge_counter.1, *LPBX1
+ 813      0000
+ 814 0a46 E9D30000 		jmp	L6	 #
+ 814      00
+ 815              	L17:
+ 816              		.loc 1 166 0
+ 817 0a4b A1380100 		movl	LPBX1+312, %eax	 # *LPBX1, PROF_edge_counter.1
+ 817      00
+ 818 0a50 8B153C01 		movl	LPBX1+316, %edx	 # *LPBX1, PROF_edge_counter.1
+ 818      0000
+ 819 0a56 83C001   		addl	$1, %eax	 #, PROF_edge_counter.1
+ 820 0a59 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.1
+ 821 0a5c A3380100 		movl	%eax, LPBX1+312	 # PROF_edge_counter.1, *LPBX1
+ 821      00
+ 822 0a61 89153C01 		movl	%edx, LPBX1+316	 # PROF_edge_counter.1, *LPBX1
+ 822      0000
+ 823              		.loc 1 168 0 is_stmt 1
+ 824 0a67 A1180000 		movl	_rlist+24, %eax	 # rlist.r_current, D.2903
+ 824      00
+ 825 0a6c 8B4040   		movl	64(%eax), %eax	 # D.2903_53->p_realprio, D.2904
+ 826 0a6f 8B54241C 		movl	28(%esp), %edx	 # prio, tmp203
+ 827 0a73 83C203   		addl	$3, %edx	 #, D.2905
+ 828 0a76 39D0     		cmpl	%edx, %eax	 # D.2905, D.2904
+ 829 0a78 0F94C0   		sete	%al	 #, tmp204
+ 830 0a7b 0FB6C0   		movzbl	%al, %eax	 # tmp204, D.2906
+ 831 0a7e 89442404 		movl	%eax, 4(%esp)	 # D.2906,
+ 832 0a82 C704240B 		movl	$11, (%esp)	 #,
+ 832      000000
+ 833 0a89 E8000000 		call	__test_assert	 #
+ 833      00
+ 834 0a8e 84C0     		testb	%al, %al	 # D.2907
+ 835 0a90 741E     		je	L18	 #,
+ 836              		.loc 1 168 0 is_stmt 0 discriminator 1
+ 837 0a92 A1500100 		movl	LPBX1+336, %eax	 # *LPBX1, PROF_edge_counter.1
+ 837      00
+ 838 0a97 8B155401 		movl	LPBX1+340, %edx	 # *LPBX1, PROF_edge_counter.1
+ 838      0000
+ 839 0a9d 83C001   		addl	$1, %eax	 #, PROF_edge_counter.1
+ 840 0aa0 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.1
+ 841 0aa3 A3500100 		movl	%eax, LPBX1+336	 # PROF_edge_counter.1, *LPBX1
+ 841      00
+ 842 0aa8 89155401 		movl	%edx, LPBX1+340	 # PROF_edge_counter.1, *LPBX1
+ 842      0000
+ 843 0aae EB6E     		jmp	L6	 #
+ 844              	L18:
+ 845              		.loc 1 168 0
+ 846 0ab0 A1480100 		movl	LPBX1+328, %eax	 # *LPBX1, PROF_edge_counter.1
+ 846      00
+ 847 0ab5 8B154C01 		movl	LPBX1+332, %edx	 # *LPBX1, PROF_edge_counter.1
+ 847      0000
+ 848 0abb 83C001   		addl	$1, %eax	 #, PROF_edge_counter.1
+ 849 0abe 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.1
+ 850 0ac1 A3480100 		movl	%eax, LPBX1+328	 # PROF_edge_counter.1, *LPBX1
+ 850      00
+ 851 0ac6 89154C01 		movl	%edx, LPBX1+332	 # PROF_edge_counter.1, *LPBX1
+ 851      0000
+ 852              		.loc 1 171 0 is_stmt 1
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 22
+
+
+ 853              	/APP
+ 854              	 # 171 "../../test/testthd.c" 1
+ 855 0acc 90       		nop
+ 856              	 # 0 "" 2
+ 857              	/NO_APP
+ 858 0acd A1580100 		movl	LPBX1+344, %eax	 # *LPBX1, PROF_edge_counter.1
+ 858      00
+ 859 0ad2 8B155C01 		movl	LPBX1+348, %edx	 # *LPBX1, PROF_edge_counter.1
+ 859      0000
+ 860 0ad8 83C001   		addl	$1, %eax	 #, PROF_edge_counter.1
+ 861 0adb 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.1
+ 862 0ade A3580100 		movl	%eax, LPBX1+344	 # PROF_edge_counter.1, *LPBX1
+ 862      00
+ 863 0ae3 89155C01 		movl	%edx, LPBX1+348	 # PROF_edge_counter.1, *LPBX1
+ 863      0000
+ 864              		.loc 1 172 0
+ 865 0ae9 A1180000 		movl	_rlist+24, %eax	 # rlist.r_current, D.2910
+ 865      00
+ 866 0aee 8B54241C 		movl	28(%esp), %edx	 # prio, tmp205
+ 867 0af2 895008   		movl	%edx, 8(%eax)	 # tmp205, D.2910_58->p_prio
+ 868              		.loc 1 173 0
+ 869 0af5 A1180000 		movl	_rlist+24, %eax	 # rlist.r_current, D.2911
+ 869      00
+ 870 0afa 8B54241C 		movl	28(%esp), %edx	 # prio, tmp206
+ 871 0afe 895040   		movl	%edx, 64(%eax)	 # tmp206, D.2911_59->p_realprio
+ 872              		.loc 1 174 0
+ 873              	/APP
+ 874              	 # 174 "../../test/testthd.c" 1
+ 875 0b01 90       		nop
+ 876              	 # 0 "" 2
+ 877              	/NO_APP
+ 878 0b02 A1600100 		movl	LPBX1+352, %eax	 # *LPBX1, PROF_edge_counter.1
+ 878      00
+ 879 0b07 8B156401 		movl	LPBX1+356, %edx	 # *LPBX1, PROF_edge_counter.1
+ 879      0000
+ 880 0b0d 83C001   		addl	$1, %eax	 #, PROF_edge_counter.1
+ 881 0b10 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.1
+ 882 0b13 A3600100 		movl	%eax, LPBX1+352	 # PROF_edge_counter.1, *LPBX1
+ 882      00
+ 883 0b18 89156401 		movl	%edx, LPBX1+356	 # PROF_edge_counter.1, *LPBX1
+ 883      0000
+ 884              	L6:
+ 885              		.loc 1 176 0
+ 886 0b1e 83C42C   		addl	$44, %esp	 #,
+ 887              	LCFI7:
+ 888              		.cfi_def_cfa_offset 4
+ 889 0b21 C3       		ret
+ 890              		.cfi_endproc
+ 891              	LFE3:
+ 892              		.globl	_testthd3
+ 893              		.section .rdata,"dr"
+ 894              	LC8:
+ 895 0068 54687265 		.ascii "Threads, priority change\0"
+ 895      6164732C 
+ 895      20707269 
+ 895      6F726974 
+ 895      79206368 
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 23
+
+
+ 896 0081 000000   		.align 4
+ 897              	_testthd3:
+ 898              	 # name:
+ 899 0084 68000000 		.long	LC8
+ 900              	 # setup:
+ 901 0088 00000000 		.long	0
+ 902              	 # teardown:
+ 903 008c 00000000 		.long	0
+ 904              	 # execute:
+ 905 0090 54050000 		.long	_thd3_execute
+ 906              		.text
+ 907              		.def	_thd4_execute;	.scl	3;	.type	32;	.endef
+ 908              	_thd4_execute:
+ 909              	LFB4:
+ 910              		.loc 1 193 0
+ 911              		.cfi_startproc
+ 912 0b22 83EC2C   		subl	$44, %esp	 #,
+ 913              	LCFI8:
+ 914              		.cfi_def_cfa_offset 48
+ 915              		.loc 1 193 0
+ 916 0b25 A1000000 		movl	LPBX1, %eax	 # *LPBX1, PROF_edge_counter.0
+ 916      00
+ 917 0b2a 8B150400 		movl	LPBX1+4, %edx	 # *LPBX1, PROF_edge_counter.0
+ 917      0000
+ 918 0b30 83C001   		addl	$1, %eax	 #, PROF_edge_counter.0
+ 919 0b33 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.0
+ 920 0b36 A3000000 		movl	%eax, LPBX1	 # PROF_edge_counter.0, *LPBX1
+ 920      00
+ 921 0b3b 89150400 		movl	%edx, LPBX1+4	 # PROF_edge_counter.0, *LPBX1
+ 921      0000
+ 922              		.loc 1 196 0
+ 923 0b41 E8000000 		call	_test_wait_tick	 #
+ 923      00
+ 924 0b46 A1080000 		movl	LPBX1+8, %eax	 # *LPBX1, PROF_edge_counter.0
+ 924      00
+ 925 0b4b 8B150C00 		movl	LPBX1+12, %edx	 # *LPBX1, PROF_edge_counter.0
+ 925      0000
+ 926 0b51 83C001   		addl	$1, %eax	 #, PROF_edge_counter.0
+ 927 0b54 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.0
+ 928 0b57 A3080000 		movl	%eax, LPBX1+8	 # PROF_edge_counter.0, *LPBX1
+ 928      00
+ 929 0b5c 89150C00 		movl	%edx, LPBX1+12	 # PROF_edge_counter.0, *LPBX1
+ 929      0000
+ 930              		.loc 1 199 0
+ 931 0b62 A10C0000 		movl	_vtlist+12, %eax	 # vtlist.vt_systime, tmp99
+ 931      00
+ 932 0b67 8944241C 		movl	%eax, 28(%esp)	 # tmp99, time
+ 933              		.loc 1 200 0
+ 934 0b6b C7042464 		movl	$100, (%esp)	 #,
+ 934      000000
+ 935 0b72 E8000000 		call	_chThdSleep	 #
+ 935      00
+ 936 0b77 A1100000 		movl	LPBX1+16, %eax	 # *LPBX1, PROF_edge_counter.0
+ 936      00
+ 937 0b7c 8B151400 		movl	LPBX1+20, %edx	 # *LPBX1, PROF_edge_counter.0
+ 937      0000
+ 938 0b82 83C001   		addl	$1, %eax	 #, PROF_edge_counter.0
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 24
+
+
+ 939 0b85 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.0
+ 940 0b88 A3100000 		movl	%eax, LPBX1+16	 # PROF_edge_counter.0, *LPBX1
+ 940      00
+ 941 0b8d 89151400 		movl	%edx, LPBX1+20	 # PROF_edge_counter.0, *LPBX1
+ 941      0000
+ 942              		.loc 1 201 0
+ 943 0b93 8B44241C 		movl	28(%esp), %eax	 # time, tmp100
+ 944 0b97 8D5065   		leal	101(%eax), %edx	 #, D.2815
+ 945 0b9a 8B44241C 		movl	28(%esp), %eax	 # time, tmp101
+ 946 0b9e 83C064   		addl	$100, %eax	 #, D.2816
+ 947 0ba1 89542408 		movl	%edx, 8(%esp)	 # D.2815,
+ 948 0ba5 89442404 		movl	%eax, 4(%esp)	 # D.2816,
+ 949 0ba9 C7042401 		movl	$1, (%esp)	 #,
+ 949      000000
+ 950 0bb0 E8000000 		call	__test_assert_time_window	 #
+ 950      00
+ 951 0bb5 84C0     		testb	%al, %al	 # D.2817
+ 952 0bb7 7421     		je	L20	 #,
+ 953              		.loc 1 201 0 is_stmt 0 discriminator 1
+ 954 0bb9 A1200000 		movl	LPBX1+32, %eax	 # *LPBX1, PROF_edge_counter.0
+ 954      00
+ 955 0bbe 8B152400 		movl	LPBX1+36, %edx	 # *LPBX1, PROF_edge_counter.0
+ 955      0000
+ 956 0bc4 83C001   		addl	$1, %eax	 #, PROF_edge_counter.0
+ 957 0bc7 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.0
+ 958 0bca A3200000 		movl	%eax, LPBX1+32	 # PROF_edge_counter.0, *LPBX1
+ 958      00
+ 959 0bcf 89152400 		movl	%edx, LPBX1+36	 # PROF_edge_counter.0, *LPBX1
+ 959      0000
+ 960 0bd5 E9D80100 		jmp	L19	 #
+ 960      00
+ 961              	L20:
+ 962              		.loc 1 201 0
+ 963 0bda A1180000 		movl	LPBX1+24, %eax	 # *LPBX1, PROF_edge_counter.0
+ 963      00
+ 964 0bdf 8B151C00 		movl	LPBX1+28, %edx	 # *LPBX1, PROF_edge_counter.0
+ 964      0000
+ 965 0be5 83C001   		addl	$1, %eax	 #, PROF_edge_counter.0
+ 966 0be8 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.0
+ 967 0beb A3180000 		movl	%eax, LPBX1+24	 # PROF_edge_counter.0, *LPBX1
+ 967      00
+ 968 0bf0 89151C00 		movl	%edx, LPBX1+28	 # PROF_edge_counter.0, *LPBX1
+ 968      0000
+ 969              		.loc 1 204 0 is_stmt 1
+ 970 0bf6 A10C0000 		movl	_vtlist+12, %eax	 # vtlist.vt_systime, tmp102
+ 970      00
+ 971 0bfb 8944241C 		movl	%eax, 28(%esp)	 # tmp102, time
+ 972              		.loc 1 205 0
+ 973 0bff C7042464 		movl	$100, (%esp)	 #,
+ 973      000000
+ 974 0c06 E8000000 		call	_chThdSleep	 #
+ 974      00
+ 975 0c0b A1280000 		movl	LPBX1+40, %eax	 # *LPBX1, PROF_edge_counter.0
+ 975      00
+ 976 0c10 8B152C00 		movl	LPBX1+44, %edx	 # *LPBX1, PROF_edge_counter.0
+ 976      0000
+ 977 0c16 83C001   		addl	$1, %eax	 #, PROF_edge_counter.0
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 25
+
+
+ 978 0c19 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.0
+ 979 0c1c A3280000 		movl	%eax, LPBX1+40	 # PROF_edge_counter.0, *LPBX1
+ 979      00
+ 980 0c21 89152C00 		movl	%edx, LPBX1+44	 # PROF_edge_counter.0, *LPBX1
+ 980      0000
+ 981              		.loc 1 206 0
+ 982 0c27 8B44241C 		movl	28(%esp), %eax	 # time, tmp103
+ 983 0c2b 8D5065   		leal	101(%eax), %edx	 #, D.2820
+ 984 0c2e 8B44241C 		movl	28(%esp), %eax	 # time, tmp104
+ 985 0c32 83C064   		addl	$100, %eax	 #, D.2821
+ 986 0c35 89542408 		movl	%edx, 8(%esp)	 # D.2820,
+ 987 0c39 89442404 		movl	%eax, 4(%esp)	 # D.2821,
+ 988 0c3d C7042402 		movl	$2, (%esp)	 #,
+ 988      000000
+ 989 0c44 E8000000 		call	__test_assert_time_window	 #
+ 989      00
+ 990 0c49 84C0     		testb	%al, %al	 # D.2822
+ 991 0c4b 7421     		je	L22	 #,
+ 992              		.loc 1 206 0 is_stmt 0 discriminator 1
+ 993 0c4d A1380000 		movl	LPBX1+56, %eax	 # *LPBX1, PROF_edge_counter.0
+ 993      00
+ 994 0c52 8B153C00 		movl	LPBX1+60, %edx	 # *LPBX1, PROF_edge_counter.0
+ 994      0000
+ 995 0c58 83C001   		addl	$1, %eax	 #, PROF_edge_counter.0
+ 996 0c5b 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.0
+ 997 0c5e A3380000 		movl	%eax, LPBX1+56	 # PROF_edge_counter.0, *LPBX1
+ 997      00
+ 998 0c63 89153C00 		movl	%edx, LPBX1+60	 # PROF_edge_counter.0, *LPBX1
+ 998      0000
+ 999 0c69 E9440100 		jmp	L19	 #
+ 999      00
+ 1000              	L22:
+ 1001              		.loc 1 206 0
+ 1002 0c6e A1300000 		movl	LPBX1+48, %eax	 # *LPBX1, PROF_edge_counter.0
+ 1002      00
+ 1003 0c73 8B153400 		movl	LPBX1+52, %edx	 # *LPBX1, PROF_edge_counter.0
+ 1003      0000
+ 1004 0c79 83C001   		addl	$1, %eax	 #, PROF_edge_counter.0
+ 1005 0c7c 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.0
+ 1006 0c7f A3300000 		movl	%eax, LPBX1+48	 # PROF_edge_counter.0, *LPBX1
+ 1006      00
+ 1007 0c84 89153400 		movl	%edx, LPBX1+52	 # PROF_edge_counter.0, *LPBX1
+ 1007      0000
+ 1008              		.loc 1 209 0 is_stmt 1
+ 1009 0c8a A10C0000 		movl	_vtlist+12, %eax	 # vtlist.vt_systime, tmp105
+ 1009      00
+ 1010 0c8f 8944241C 		movl	%eax, 28(%esp)	 # tmp105, time
+ 1011              		.loc 1 210 0
+ 1012 0c93 C70424E8 		movl	$1000, (%esp)	 #,
+ 1012      030000
+ 1013 0c9a E8000000 		call	_chThdSleep	 #
+ 1013      00
+ 1014 0c9f A1400000 		movl	LPBX1+64, %eax	 # *LPBX1, PROF_edge_counter.0
+ 1014      00
+ 1015 0ca4 8B154400 		movl	LPBX1+68, %edx	 # *LPBX1, PROF_edge_counter.0
+ 1015      0000
+ 1016 0caa 83C001   		addl	$1, %eax	 #, PROF_edge_counter.0
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 26
+
+
+ 1017 0cad 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.0
+ 1018 0cb0 A3400000 		movl	%eax, LPBX1+64	 # PROF_edge_counter.0, *LPBX1
+ 1018      00
+ 1019 0cb5 89154400 		movl	%edx, LPBX1+68	 # PROF_edge_counter.0, *LPBX1
+ 1019      0000
+ 1020              		.loc 1 211 0
+ 1021 0cbb 8B44241C 		movl	28(%esp), %eax	 # time, tmp106
+ 1022 0cbf 8D90E903 		leal	1001(%eax), %edx	 #, D.2825
+ 1022      0000
+ 1023 0cc5 8B44241C 		movl	28(%esp), %eax	 # time, tmp107
+ 1024 0cc9 05E80300 		addl	$1000, %eax	 #, D.2826
+ 1024      00
+ 1025 0cce 89542408 		movl	%edx, 8(%esp)	 # D.2825,
+ 1026 0cd2 89442404 		movl	%eax, 4(%esp)	 # D.2826,
+ 1027 0cd6 C7042403 		movl	$3, (%esp)	 #,
+ 1027      000000
+ 1028 0cdd E8000000 		call	__test_assert_time_window	 #
+ 1028      00
+ 1029 0ce2 84C0     		testb	%al, %al	 # D.2827
+ 1030 0ce4 7421     		je	L23	 #,
+ 1031              		.loc 1 211 0 is_stmt 0 discriminator 1
+ 1032 0ce6 A1500000 		movl	LPBX1+80, %eax	 # *LPBX1, PROF_edge_counter.0
+ 1032      00
+ 1033 0ceb 8B155400 		movl	LPBX1+84, %edx	 # *LPBX1, PROF_edge_counter.0
+ 1033      0000
+ 1034 0cf1 83C001   		addl	$1, %eax	 #, PROF_edge_counter.0
+ 1035 0cf4 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.0
+ 1036 0cf7 A3500000 		movl	%eax, LPBX1+80	 # PROF_edge_counter.0, *LPBX1
+ 1036      00
+ 1037 0cfc 89155400 		movl	%edx, LPBX1+84	 # PROF_edge_counter.0, *LPBX1
+ 1037      0000
+ 1038 0d02 E9AB0000 		jmp	L19	 #
+ 1038      00
+ 1039              	L23:
+ 1040              		.loc 1 211 0
+ 1041 0d07 A1480000 		movl	LPBX1+72, %eax	 # *LPBX1, PROF_edge_counter.0
+ 1041      00
+ 1042 0d0c 8B154C00 		movl	LPBX1+76, %edx	 # *LPBX1, PROF_edge_counter.0
+ 1042      0000
+ 1043 0d12 83C001   		addl	$1, %eax	 #, PROF_edge_counter.0
+ 1044 0d15 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.0
+ 1045 0d18 A3480000 		movl	%eax, LPBX1+72	 # PROF_edge_counter.0, *LPBX1
+ 1045      00
+ 1046 0d1d 89154C00 		movl	%edx, LPBX1+76	 # PROF_edge_counter.0, *LPBX1
+ 1046      0000
+ 1047              		.loc 1 214 0 is_stmt 1
+ 1048 0d23 A10C0000 		movl	_vtlist+12, %eax	 # vtlist.vt_systime, D.2830
+ 1048      00
+ 1049 0d28 83C064   		addl	$100, %eax	 #, tmp108
+ 1050 0d2b 8944241C 		movl	%eax, 28(%esp)	 # tmp108, time
+ 1051              		.loc 1 215 0
+ 1052 0d2f 8B44241C 		movl	28(%esp), %eax	 # time, tmp109
+ 1053 0d33 890424   		movl	%eax, (%esp)	 # tmp109,
+ 1054 0d36 E8000000 		call	_chThdSleepUntil	 #
+ 1054      00
+ 1055 0d3b A1580000 		movl	LPBX1+88, %eax	 # *LPBX1, PROF_edge_counter.0
+ 1055      00
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 27
+
+
+ 1056 0d40 8B155C00 		movl	LPBX1+92, %edx	 # *LPBX1, PROF_edge_counter.0
+ 1056      0000
+ 1057 0d46 83C001   		addl	$1, %eax	 #, PROF_edge_counter.0
+ 1058 0d49 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.0
+ 1059 0d4c A3580000 		movl	%eax, LPBX1+88	 # PROF_edge_counter.0, *LPBX1
+ 1059      00
+ 1060 0d51 89155C00 		movl	%edx, LPBX1+92	 # PROF_edge_counter.0, *LPBX1
+ 1060      0000
+ 1061              		.loc 1 216 0
+ 1062 0d57 8B44241C 		movl	28(%esp), %eax	 # time, tmp110
+ 1063 0d5b 40       		incl	%eax	 # D.2831
+ 1064 0d5c 89442408 		movl	%eax, 8(%esp)	 # D.2831,
+ 1065 0d60 8B44241C 		movl	28(%esp), %eax	 # time, tmp111
+ 1066 0d64 89442404 		movl	%eax, 4(%esp)	 # tmp111,
+ 1067 0d68 C7042404 		movl	$4, (%esp)	 #,
+ 1067      000000
+ 1068 0d6f E8000000 		call	__test_assert_time_window	 #
+ 1068      00
+ 1069 0d74 88C1     		movb	%al, %cl	 #, D.2832
+ 1070 0d76 A1600000 		movl	LPBX1+96, %eax	 # *LPBX1, PROF_edge_counter.0
+ 1070      00
+ 1071 0d7b 8B156400 		movl	LPBX1+100, %edx	 # *LPBX1, PROF_edge_counter.0
+ 1071      0000
+ 1072 0d81 83C001   		addl	$1, %eax	 #, PROF_edge_counter.0
+ 1073 0d84 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.0
+ 1074 0d87 A3600000 		movl	%eax, LPBX1+96	 # PROF_edge_counter.0, *LPBX1
+ 1074      00
+ 1075 0d8c 89156400 		movl	%edx, LPBX1+100	 # PROF_edge_counter.0, *LPBX1
+ 1075      0000
+ 1076 0d92 84C9     		testb	%cl, %cl	 # D.2832
+ 1077 0d94 741C     		je	L19	 #,
+ 1078              		.loc 1 216 0 is_stmt 0 discriminator 1
+ 1079 0d96 A1680000 		movl	LPBX1+104, %eax	 # *LPBX1, PROF_edge_counter.0
+ 1079      00
+ 1080 0d9b 8B156C00 		movl	LPBX1+108, %edx	 # *LPBX1, PROF_edge_counter.0
+ 1080      0000
+ 1081 0da1 83C001   		addl	$1, %eax	 #, PROF_edge_counter.0
+ 1082 0da4 83D200   		adcl	$0, %edx	 #, PROF_edge_counter.0
+ 1083 0da7 A3680000 		movl	%eax, LPBX1+104	 # PROF_edge_counter.0, *LPBX1
+ 1083      00
+ 1084 0dac 89156C00 		movl	%edx, LPBX1+108	 # PROF_edge_counter.0, *LPBX1
+ 1084      0000
+ 1085              	L19:
+ 1086              		.loc 1 217 0 is_stmt 1
+ 1087 0db2 83C42C   		addl	$44, %esp	 #,
+ 1088              	LCFI9:
+ 1089              		.cfi_def_cfa_offset 4
+ 1090 0db5 C3       		ret
+ 1091              		.cfi_endproc
+ 1092              	LFE4:
+ 1093              		.globl	_testthd4
+ 1094              		.section .rdata,"dr"
+ 1095              	LC9:
+ 1096 0094 54687265 		.ascii "Threads, delays\0"
+ 1096      6164732C 
+ 1096      2064656C 
+ 1096      61797300 
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 28
+
+
+ 1097              		.align 4
+ 1098              	_testthd4:
+ 1099              	 # name:
+ 1100 00a4 94000000 		.long	LC9
+ 1101              	 # setup:
+ 1102 00a8 00000000 		.long	0
+ 1103              	 # teardown:
+ 1104 00ac 00000000 		.long	0
+ 1105              	 # execute:
+ 1106 00b0 220B0000 		.long	_thd4_execute
+ 1107              		.globl	_patternthd
+ 1108              		.align 4
+ 1109              	_patternthd:
+ 1110 00b4 2C000000 		.long	_testthd1
+ 1111 00b8 58000000 		.long	_testthd2
+ 1112 00bc 84000000 		.long	_testthd3
+ 1113 00c0 A4000000 		.long	_testthd4
+ 1114 00c4 00000000 		.long	0
+ 1115              	.lcomm LPBX1,544,32
+ 1116              		.align 4
+ 1117              	LC10:
+ 1118 00c8 433A5C64 		.ascii "C:\\develop\\gyro\\ChibiOS\\test\\coverage/../../test/testthd.gcda\0"
+ 1118      6576656C 
+ 1118      6F705C67 
+ 1118      79726F5C 
+ 1118      43686962 
+ 1119 0106 0000     		.data
+ 1120              		.align 32
+ 1121              	LC11:
+ 1122              	 # <anonymous>:
+ 1123 0000 05000000 		.long	5
+ 1124              	 # <anonymous>:
+ 1125 0004 9F153342 		.long	1110644127
+ 1126              	 # <anonymous>:
+ 1127 0008 0E000000 		.long	14
+ 1128              	 # <anonymous>:
+ 1129 000c 04000000 		.long	4
+ 1130              	 # <anonymous>:
+ 1131 0010 43B59AEB 		.long	-342182589
+ 1132              	 # <anonymous>:
+ 1133 0014 1F000000 		.long	31
+ 1134              	 # <anonymous>:
+ 1135 0018 03000000 		.long	3
+ 1136              	 # <anonymous>:
+ 1137 001c 30F85387 		.long	-2024540112
+ 1138              	 # <anonymous>:
+ 1139 0020 0C000000 		.long	12
+ 1140              	 # <anonymous>:
+ 1141 0024 02000000 		.long	2
+ 1142              	 # <anonymous>:
+ 1143 0028 12CDDEA6 		.long	-1495347950
+ 1144              	 # <anonymous>:
+ 1145 002c 09000000 		.long	9
+ 1146              	 # <anonymous>:
+ 1147 0030 01000000 		.long	1
+ 1148              	 # <anonymous>:
+ 1149 0034 E1958863 		.long	1669895649
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 29
+
+
+ 1150              	 # <anonymous>:
+ 1151 0038 02000000 		.long	2
+ 1152 003c 00000000 		.align 32
+ 1153              	LPBX0:
+ 1154              	 # <anonymous>:
+ 1155 0040 2A363034 		.long	875574826
+ 1156              	 # <anonymous>:
+ 1157 0044 00000000 		.long	0
+ 1158              	 # <anonymous>:
+ 1159 0048 792C7060 		.long	1617964153
+ 1160              	 # <anonymous>:
+ 1161 004c C8000000 		.long	LC10
+ 1162              	 # <anonymous>:
+ 1163 0050 05000000 		.long	5
+ 1164              	 # <anonymous>:
+ 1165 0054 00000000 		.long	LC11
+ 1166              	 # <anonymous>:
+ 1167 0058 01000000 		.long	1
+ 1168              	 # <anonymous>:
+ 1169              	 # <anonymous>:
+ 1170 005c 44000000 		.long	68
+ 1171              	 # <anonymous>:
+ 1172 0060 00000000 		.long	LPBX1
+ 1173              	 # <anonymous>:
+ 1174 0064 00000000 		.long	___gcov_merge_add
+ 1175 0068 00000000 		.space 12
+ 1175      00000000 
+ 1175      00000000 
+ 1176 0074 00000000 		.text
+ 1176      00000000 
+ 1176      00000000 
+ 1177              		.def	__GLOBAL__sub_I_65535_0_testthd1;	.scl	3;	.type	32;	.endef
+ 1178              	__GLOBAL__sub_I_65535_0_testthd1:
+ 1179              	LFB5:
+ 1180              		.loc 1 235 0
+ 1181              		.cfi_startproc
+ 1182 0db6 83EC1C   		subl	$28, %esp	 #,
+ 1183              	LCFI10:
+ 1184              		.cfi_def_cfa_offset 32
+ 1185              		.loc 1 235 0
+ 1186 0db9 C7042440 		movl	$LPBX0, (%esp)	 #,
+ 1186      000000
+ 1187 0dc0 E8000000 		call	___gcov_init	 #
+ 1187      00
+ 1188 0dc5 83C41C   		addl	$28, %esp	 #,
+ 1189              	LCFI11:
+ 1190              		.cfi_def_cfa_offset 4
+ 1191 0dc8 C3       		ret
+ 1192              		.cfi_endproc
+ 1193              	LFE5:
+ 1194              		.section	.ctors,"w"
+ 1195              		.align 4
+ 1196 0000 B60D0000 		.long	__GLOBAL__sub_I_65535_0_testthd1
+ 1197              		.text
+ 1198              	Letext0:
+ 1199              		.file 2 "c:/mingw/bin/../lib/gcc/mingw32/4.6.2/../../../../include/stdint.h"
+ 1200              		.file 3 "../../os/ports/GCC/SIMIA32/chtypes.h"
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 30
+
+
+ 1201              		.file 4 "../../os/kernel/include/chlists.h"
+ 1202              		.file 5 "../../os/kernel/include/chthreads.h"
+ 1203              		.file 6 "../../os/ports/GCC/SIMIA32/chcore.h"
+ 1204              		.file 7 "../../os/kernel/include/chvt.h"
+ 1205              		.file 8 "../../os/kernel/include/chschd.h"
+ 1206              		.file 9 "../../os/kernel/include/chmtx.h"
+ 1207              		.file 10 "../../test/test.h"
+ 1208 0dc9 909090   		.section	.debug_info,"dr"
+ 1209              	Ldebug_info0:
+ 1210 0000 04090000 		.long	0x904
+ 1211 0004 0200     		.word	0x2
+ 1212 0006 00000000 		.secrel32	Ldebug_abbrev0
+ 1213 000a 04       		.byte	0x4
+ 1214 000b 01       		.uleb128 0x1
+ 1215 000c 474E5520 		.ascii "GNU C 4.6.2\0"
+ 1215      4320342E 
+ 1215      362E3200 
+ 1216 0018 01       		.byte	0x1
+ 1217 0019 2E2E2F2E 		.ascii "../../test/testthd.c\0"
+ 1217      2E2F7465 
+ 1217      73742F74 
+ 1217      65737474 
+ 1217      68642E63 
+ 1218 002e 433A5C64 		.ascii "C:\\develop\\gyro\\ChibiOS\\test\\coverage\0"
+ 1218      6576656C 
+ 1218      6F705C67 
+ 1218      79726F5C 
+ 1218      43686962 
+ 1219 0054 00000000 		.long	Ltext0
+ 1220 0058 C90D0000 		.long	Letext0
+ 1221 005c 00000000 		.secrel32	Ldebug_line0
+ 1222 0060 02       		.uleb128 0x2
+ 1223 0061 04       		.byte	0x4
+ 1224 0062 05       		.byte	0x5
+ 1225 0063 696E7400 		.ascii "int\0"
+ 1226 0067 02       		.uleb128 0x2
+ 1227 0068 04       		.byte	0x4
+ 1228 0069 07       		.byte	0x7
+ 1229 006a 756E7369 		.ascii "unsigned int\0"
+ 1229      676E6564 
+ 1229      20696E74 
+ 1229      00
+ 1230 0077 02       		.uleb128 0x2
+ 1231 0078 02       		.byte	0x2
+ 1232 0079 07       		.byte	0x7
+ 1233 007a 73686F72 		.ascii "short unsigned int\0"
+ 1233      7420756E 
+ 1233      7369676E 
+ 1233      65642069 
+ 1233      6E7400
+ 1234 008d 02       		.uleb128 0x2
+ 1235 008e 01       		.byte	0x1
+ 1236 008f 06       		.byte	0x6
+ 1237 0090 7369676E 		.ascii "signed char\0"
+ 1237      65642063 
+ 1237      68617200 
+ 1238 009c 03       		.uleb128 0x3
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 31
+
+
+ 1239 009d 75696E74 		.ascii "uint8_t\0"
+ 1239      385F7400 
+ 1240 00a5 02       		.byte	0x2
+ 1241 00a6 1C       		.byte	0x1c
+ 1242 00a7 AB000000 		.long	0xab
+ 1243 00ab 02       		.uleb128 0x2
+ 1244 00ac 01       		.byte	0x1
+ 1245 00ad 08       		.byte	0x8
+ 1246 00ae 756E7369 		.ascii "unsigned char\0"
+ 1246      676E6564 
+ 1246      20636861 
+ 1246      7200
+ 1247 00bc 02       		.uleb128 0x2
+ 1248 00bd 02       		.byte	0x2
+ 1249 00be 05       		.byte	0x5
+ 1250 00bf 73686F72 		.ascii "short int\0"
+ 1250      7420696E 
+ 1250      7400
+ 1251 00c9 03       		.uleb128 0x3
+ 1252 00ca 696E7433 		.ascii "int32_t\0"
+ 1252      325F7400 
+ 1253 00d2 02       		.byte	0x2
+ 1254 00d3 1F       		.byte	0x1f
+ 1255 00d4 60000000 		.long	0x60
+ 1256 00d8 03       		.uleb128 0x3
+ 1257 00d9 75696E74 		.ascii "uint32_t\0"
+ 1257      33325F74 
+ 1257      00
+ 1258 00e2 02       		.byte	0x2
+ 1259 00e3 20       		.byte	0x20
+ 1260 00e4 67000000 		.long	0x67
+ 1261 00e8 02       		.uleb128 0x2
+ 1262 00e9 08       		.byte	0x8
+ 1263 00ea 05       		.byte	0x5
+ 1264 00eb 6C6F6E67 		.ascii "long long int\0"
+ 1264      206C6F6E 
+ 1264      6720696E 
+ 1264      7400
+ 1265 00f9 02       		.uleb128 0x2
+ 1266 00fa 08       		.byte	0x8
+ 1267 00fb 07       		.byte	0x7
+ 1268 00fc 6C6F6E67 		.ascii "long long unsigned int\0"
+ 1268      206C6F6E 
+ 1268      6720756E 
+ 1268      7369676E 
+ 1268      65642069 
+ 1269 0113 02       		.uleb128 0x2
+ 1270 0114 01       		.byte	0x1
+ 1271 0115 02       		.byte	0x2
+ 1272 0116 5F426F6F 		.ascii "_Bool\0"
+ 1272      6C00
+ 1273 011c 03       		.uleb128 0x3
+ 1274 011d 746D6F64 		.ascii "tmode_t\0"
+ 1274      655F7400 
+ 1275 0125 03       		.byte	0x3
+ 1276 0126 1D       		.byte	0x1d
+ 1277 0127 9C000000 		.long	0x9c
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 32
+
+
+ 1278 012b 03       		.uleb128 0x3
+ 1279 012c 74737461 		.ascii "tstate_t\0"
+ 1279      74655F74 
+ 1279      00
+ 1280 0135 03       		.byte	0x3
+ 1281 0136 1E       		.byte	0x1e
+ 1282 0137 9C000000 		.long	0x9c
+ 1283 013b 03       		.uleb128 0x3
+ 1284 013c 74726566 		.ascii "trefs_t\0"
+ 1284      735F7400 
+ 1285 0144 03       		.byte	0x3
+ 1286 0145 1F       		.byte	0x1f
+ 1287 0146 9C000000 		.long	0x9c
+ 1288 014a 03       		.uleb128 0x3
+ 1289 014b 74736C69 		.ascii "tslices_t\0"
+ 1289      6365735F 
+ 1289      7400
+ 1290 0155 03       		.byte	0x3
+ 1291 0156 20       		.byte	0x20
+ 1292 0157 9C000000 		.long	0x9c
+ 1293 015b 03       		.uleb128 0x3
+ 1294 015c 74707269 		.ascii "tprio_t\0"
+ 1294      6F5F7400 
+ 1295 0164 03       		.byte	0x3
+ 1296 0165 21       		.byte	0x21
+ 1297 0166 D8000000 		.long	0xd8
+ 1298 016a 03       		.uleb128 0x3
+ 1299 016b 6D73675F 		.ascii "msg_t\0"
+ 1299      7400
+ 1300 0171 03       		.byte	0x3
+ 1301 0172 22       		.byte	0x22
+ 1302 0173 C9000000 		.long	0xc9
+ 1303 0177 03       		.uleb128 0x3
+ 1304 0178 6576656E 		.ascii "eventmask_t\0"
+ 1304      746D6173 
+ 1304      6B5F7400 
+ 1305 0184 03       		.byte	0x3
+ 1306 0185 24       		.byte	0x24
+ 1307 0186 D8000000 		.long	0xd8
+ 1308 018a 03       		.uleb128 0x3
+ 1309 018b 73797374 		.ascii "systime_t\0"
+ 1309      696D655F 
+ 1309      7400
+ 1310 0195 03       		.byte	0x3
+ 1311 0196 26       		.byte	0x26
+ 1312 0197 D8000000 		.long	0xd8
+ 1313 019b 03       		.uleb128 0x3
+ 1314 019c 54687265 		.ascii "Thread\0"
+ 1314      616400
+ 1315 01a3 04       		.byte	0x4
+ 1316 01a4 23       		.byte	0x23
+ 1317 01a5 A9010000 		.long	0x1a9
+ 1318 01a9 04       		.uleb128 0x4
+ 1319 01aa 54687265 		.ascii "Thread\0"
+ 1319      616400
+ 1320 01b1 48       		.byte	0x48
+ 1321 01b2 05       		.byte	0x5
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 33
+
+
+ 1322 01b3 57       		.byte	0x57
+ 1323 01b4 1F030000 		.long	0x31f
+ 1324 01b8 05       		.uleb128 0x5
+ 1325 01b9 00000000 		.secrel32	LASF0
+ 1326 01bd 05       		.byte	0x5
+ 1327 01be 58       		.byte	0x58
+ 1328 01bf 47030000 		.long	0x347
+ 1329 01c3 02       		.byte	0x2
+ 1330 01c4 23       		.byte	0x23
+ 1331 01c5 00       		.uleb128 0
+ 1332 01c6 06       		.uleb128 0x6
+ 1333 01c7 705F7072 		.ascii "p_prev\0"
+ 1333      657600
+ 1334 01ce 05       		.byte	0x5
+ 1335 01cf 5A       		.byte	0x5a
+ 1336 01d0 47030000 		.long	0x347
+ 1337 01d4 02       		.byte	0x2
+ 1338 01d5 23       		.byte	0x23
+ 1339 01d6 04       		.uleb128 0x4
+ 1340 01d7 06       		.uleb128 0x6
+ 1341 01d8 705F7072 		.ascii "p_prio\0"
+ 1341      696F00
+ 1342 01df 05       		.byte	0x5
+ 1343 01e0 5C       		.byte	0x5c
+ 1344 01e1 5B010000 		.long	0x15b
+ 1345 01e5 02       		.byte	0x2
+ 1346 01e6 23       		.byte	0x23
+ 1347 01e7 08       		.uleb128 0x8
+ 1348 01e8 06       		.uleb128 0x6
+ 1349 01e9 705F6374 		.ascii "p_ctx\0"
+ 1349      7800
+ 1350 01ef 05       		.byte	0x5
+ 1351 01f0 5D       		.byte	0x5d
+ 1352 01f1 F1030000 		.long	0x3f1
+ 1353 01f5 02       		.byte	0x2
+ 1354 01f6 23       		.byte	0x23
+ 1355 01f7 0C       		.uleb128 0xc
+ 1356 01f8 06       		.uleb128 0x6
+ 1357 01f9 705F6E65 		.ascii "p_newer\0"
+ 1357      77657200 
+ 1358 0201 05       		.byte	0x5
+ 1359 0202 5F       		.byte	0x5f
+ 1360 0203 47030000 		.long	0x347
+ 1361 0207 02       		.byte	0x2
+ 1362 0208 23       		.byte	0x23
+ 1363 0209 10       		.uleb128 0x10
+ 1364 020a 06       		.uleb128 0x6
+ 1365 020b 705F6F6C 		.ascii "p_older\0"
+ 1365      64657200 
+ 1366 0213 05       		.byte	0x5
+ 1367 0214 60       		.byte	0x60
+ 1368 0215 47030000 		.long	0x347
+ 1369 0219 02       		.byte	0x2
+ 1370 021a 23       		.byte	0x23
+ 1371 021b 14       		.uleb128 0x14
+ 1372 021c 06       		.uleb128 0x6
+ 1373 021d 705F6E61 		.ascii "p_name\0"
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 34
+
+
+ 1373      6D6500
+ 1374 0224 05       		.byte	0x5
+ 1375 0225 67       		.byte	0x67
+ 1376 0226 3A060000 		.long	0x63a
+ 1377 022a 02       		.byte	0x2
+ 1378 022b 23       		.byte	0x23
+ 1379 022c 18       		.uleb128 0x18
+ 1380 022d 06       		.uleb128 0x6
+ 1381 022e 705F7374 		.ascii "p_state\0"
+ 1381      61746500 
+ 1382 0236 05       		.byte	0x5
+ 1383 0237 72       		.byte	0x72
+ 1384 0238 2B010000 		.long	0x12b
+ 1385 023c 02       		.byte	0x2
+ 1386 023d 23       		.byte	0x23
+ 1387 023e 1C       		.uleb128 0x1c
+ 1388 023f 06       		.uleb128 0x6
+ 1389 0240 705F666C 		.ascii "p_flags\0"
+ 1389      61677300 
+ 1390 0248 05       		.byte	0x5
+ 1391 0249 76       		.byte	0x76
+ 1392 024a 1C010000 		.long	0x11c
+ 1393 024e 02       		.byte	0x2
+ 1394 024f 23       		.byte	0x23
+ 1395 0250 1D       		.uleb128 0x1d
+ 1396 0251 06       		.uleb128 0x6
+ 1397 0252 705F7265 		.ascii "p_refs\0"
+ 1397      667300
+ 1398 0259 05       		.byte	0x5
+ 1399 025a 7B       		.byte	0x7b
+ 1400 025b 3B010000 		.long	0x13b
+ 1401 025f 02       		.byte	0x2
+ 1402 0260 23       		.byte	0x23
+ 1403 0261 1E       		.uleb128 0x1e
+ 1404 0262 06       		.uleb128 0x6
+ 1405 0263 705F7072 		.ascii "p_preempt\0"
+ 1405      65656D70 
+ 1405      7400
+ 1406 026d 05       		.byte	0x5
+ 1407 026e 81       		.byte	0x81
+ 1408 026f 4A010000 		.long	0x14a
+ 1409 0273 02       		.byte	0x2
+ 1410 0274 23       		.byte	0x23
+ 1411 0275 1F       		.uleb128 0x1f
+ 1412 0276 06       		.uleb128 0x6
+ 1413 0277 705F7469 		.ascii "p_time\0"
+ 1413      6D6500
+ 1414 027e 05       		.byte	0x5
+ 1415 027f 88       		.byte	0x88
+ 1416 0280 08050000 		.long	0x508
+ 1417 0284 02       		.byte	0x2
+ 1418 0285 23       		.byte	0x23
+ 1419 0286 20       		.uleb128 0x20
+ 1420 0287 06       		.uleb128 0x6
+ 1421 0288 705F7500 		.ascii "p_u\0"
+ 1422 028c 05       		.byte	0x5
+ 1423 028d AD       		.byte	0xad
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 35
+
+
+ 1424 028e F7050000 		.long	0x5f7
+ 1425 0292 02       		.byte	0x2
+ 1426 0293 23       		.byte	0x23
+ 1427 0294 24       		.uleb128 0x24
+ 1428 0295 06       		.uleb128 0x6
+ 1429 0296 705F7761 		.ascii "p_waiting\0"
+ 1429      6974696E 
+ 1429      6700
+ 1430 02a0 05       		.byte	0x5
+ 1431 02a1 B2       		.byte	0xb2
+ 1432 02a2 78030000 		.long	0x378
+ 1433 02a6 02       		.byte	0x2
+ 1434 02a7 23       		.byte	0x23
+ 1435 02a8 28       		.uleb128 0x28
+ 1436 02a9 06       		.uleb128 0x6
+ 1437 02aa 705F6D73 		.ascii "p_msgqueue\0"
+ 1437      67717565 
+ 1437      756500
+ 1438 02b5 05       		.byte	0x5
+ 1439 02b6 B8       		.byte	0xb8
+ 1440 02b7 4D030000 		.long	0x34d
+ 1441 02bb 02       		.byte	0x2
+ 1442 02bc 23       		.byte	0x23
+ 1443 02bd 2C       		.uleb128 0x2c
+ 1444 02be 06       		.uleb128 0x6
+ 1445 02bf 705F6D73 		.ascii "p_msg\0"
+ 1445      6700
+ 1446 02c5 05       		.byte	0x5
+ 1447 02c6 BC       		.byte	0xbc
+ 1448 02c7 6A010000 		.long	0x16a
+ 1449 02cb 02       		.byte	0x2
+ 1450 02cc 23       		.byte	0x23
+ 1451 02cd 34       		.uleb128 0x34
+ 1452 02ce 06       		.uleb128 0x6
+ 1453 02cf 705F6570 		.ascii "p_epending\0"
+ 1453      656E6469 
+ 1453      6E6700
+ 1454 02da 05       		.byte	0x5
+ 1455 02db C2       		.byte	0xc2
+ 1456 02dc 77010000 		.long	0x177
+ 1457 02e0 02       		.byte	0x2
+ 1458 02e1 23       		.byte	0x23
+ 1459 02e2 38       		.uleb128 0x38
+ 1460 02e3 06       		.uleb128 0x6
+ 1461 02e4 705F6D74 		.ascii "p_mtxlist\0"
+ 1461      786C6973 
+ 1461      7400
+ 1462 02ee 05       		.byte	0x5
+ 1463 02ef C9       		.byte	0xc9
+ 1464 02f0 4D060000 		.long	0x64d
+ 1465 02f4 02       		.byte	0x2
+ 1466 02f5 23       		.byte	0x23
+ 1467 02f6 3C       		.uleb128 0x3c
+ 1468 02f7 06       		.uleb128 0x6
+ 1469 02f8 705F7265 		.ascii "p_realprio\0"
+ 1469      616C7072 
+ 1469      696F00
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 36
+
+
+ 1470 0303 05       		.byte	0x5
+ 1471 0304 CD       		.byte	0xcd
+ 1472 0305 5B010000 		.long	0x15b
+ 1473 0309 02       		.byte	0x2
+ 1474 030a 23       		.byte	0x23
+ 1475 030b 40       		.uleb128 0x40
+ 1476 030c 06       		.uleb128 0x6
+ 1477 030d 705F6D70 		.ascii "p_mpool\0"
+ 1477      6F6F6C00 
+ 1478 0315 05       		.byte	0x5
+ 1479 0316 D3       		.byte	0xd3
+ 1480 0317 99030000 		.long	0x399
+ 1481 031b 02       		.byte	0x2
+ 1482 031c 23       		.byte	0x23
+ 1483 031d 44       		.uleb128 0x44
+ 1484 031e 00       		.byte	0
+ 1485 031f 07       		.uleb128 0x7
+ 1486 0320 08       		.byte	0x8
+ 1487 0321 04       		.byte	0x4
+ 1488 0322 5A       		.byte	0x5a
+ 1489 0323 47030000 		.long	0x347
+ 1490 0327 05       		.uleb128 0x5
+ 1491 0328 00000000 		.secrel32	LASF0
+ 1492 032c 04       		.byte	0x4
+ 1493 032d 5B       		.byte	0x5b
+ 1494 032e 47030000 		.long	0x347
+ 1495 0332 02       		.byte	0x2
+ 1496 0333 23       		.byte	0x23
+ 1497 0334 00       		.uleb128 0
+ 1498 0335 06       		.uleb128 0x6
+ 1499 0336 705F7072 		.ascii "p_prev\0"
+ 1499      657600
+ 1500 033d 04       		.byte	0x4
+ 1501 033e 5D       		.byte	0x5d
+ 1502 033f 47030000 		.long	0x347
+ 1503 0343 02       		.byte	0x2
+ 1504 0344 23       		.byte	0x23
+ 1505 0345 04       		.uleb128 0x4
+ 1506 0346 00       		.byte	0
+ 1507 0347 08       		.uleb128 0x8
+ 1508 0348 04       		.byte	0x4
+ 1509 0349 9B010000 		.long	0x19b
+ 1510 034d 03       		.uleb128 0x3
+ 1511 034e 54687265 		.ascii "ThreadsQueue\0"
+ 1511      61647351 
+ 1511      75657565 
+ 1511      00
+ 1512 035b 04       		.byte	0x4
+ 1513 035c 5F       		.byte	0x5f
+ 1514 035d 1F030000 		.long	0x31f
+ 1515 0361 07       		.uleb128 0x7
+ 1516 0362 04       		.byte	0x4
+ 1517 0363 04       		.byte	0x4
+ 1518 0364 64       		.byte	0x64
+ 1519 0365 78030000 		.long	0x378
+ 1520 0369 05       		.uleb128 0x5
+ 1521 036a 00000000 		.secrel32	LASF0
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 37
+
+
+ 1522 036e 04       		.byte	0x4
+ 1523 036f 66       		.byte	0x66
+ 1524 0370 47030000 		.long	0x347
+ 1525 0374 02       		.byte	0x2
+ 1526 0375 23       		.byte	0x23
+ 1527 0376 00       		.uleb128 0
+ 1528 0377 00       		.byte	0
+ 1529 0378 03       		.uleb128 0x3
+ 1530 0379 54687265 		.ascii "ThreadsList\0"
+ 1530      6164734C 
+ 1530      69737400 
+ 1531 0385 04       		.byte	0x4
+ 1532 0386 69       		.byte	0x69
+ 1533 0387 61030000 		.long	0x361
+ 1534 038b 03       		.uleb128 0x3
+ 1535 038c 72656778 		.ascii "regx86\0"
+ 1535      383600
+ 1536 0393 06       		.byte	0x6
+ 1537 0394 44       		.byte	0x44
+ 1538 0395 99030000 		.long	0x399
+ 1539 0399 09       		.uleb128 0x9
+ 1540 039a 04       		.byte	0x4
+ 1541 039b 04       		.uleb128 0x4
+ 1542 039c 696E7463 		.ascii "intctx\0"
+ 1542      747800
+ 1543 03a3 14       		.byte	0x14
+ 1544 03a4 06       		.byte	0x6
+ 1545 03a5 52       		.byte	0x52
+ 1546 03a6 F1030000 		.long	0x3f1
+ 1547 03aa 06       		.uleb128 0x6
+ 1548 03ab 65627800 		.ascii "ebx\0"
+ 1549 03af 06       		.byte	0x6
+ 1550 03b0 53       		.byte	0x53
+ 1551 03b1 8B030000 		.long	0x38b
+ 1552 03b5 02       		.byte	0x2
+ 1553 03b6 23       		.byte	0x23
+ 1554 03b7 00       		.uleb128 0
+ 1555 03b8 06       		.uleb128 0x6
+ 1556 03b9 65646900 		.ascii "edi\0"
+ 1557 03bd 06       		.byte	0x6
+ 1558 03be 54       		.byte	0x54
+ 1559 03bf 8B030000 		.long	0x38b
+ 1560 03c3 02       		.byte	0x2
+ 1561 03c4 23       		.byte	0x23
+ 1562 03c5 04       		.uleb128 0x4
+ 1563 03c6 06       		.uleb128 0x6
+ 1564 03c7 65736900 		.ascii "esi\0"
+ 1565 03cb 06       		.byte	0x6
+ 1566 03cc 55       		.byte	0x55
+ 1567 03cd 8B030000 		.long	0x38b
+ 1568 03d1 02       		.byte	0x2
+ 1569 03d2 23       		.byte	0x23
+ 1570 03d3 08       		.uleb128 0x8
+ 1571 03d4 06       		.uleb128 0x6
+ 1572 03d5 65627000 		.ascii "ebp\0"
+ 1573 03d9 06       		.byte	0x6
+ 1574 03da 56       		.byte	0x56
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 38
+
+
+ 1575 03db 8B030000 		.long	0x38b
+ 1576 03df 02       		.byte	0x2
+ 1577 03e0 23       		.byte	0x23
+ 1578 03e1 0C       		.uleb128 0xc
+ 1579 03e2 06       		.uleb128 0x6
+ 1580 03e3 65697000 		.ascii "eip\0"
+ 1581 03e7 06       		.byte	0x6
+ 1582 03e8 57       		.byte	0x57
+ 1583 03e9 8B030000 		.long	0x38b
+ 1584 03ed 02       		.byte	0x2
+ 1585 03ee 23       		.byte	0x23
+ 1586 03ef 10       		.uleb128 0x10
+ 1587 03f0 00       		.byte	0
+ 1588 03f1 04       		.uleb128 0x4
+ 1589 03f2 636F6E74 		.ascii "context\0"
+ 1589      65787400 
+ 1590 03fa 04       		.byte	0x4
+ 1591 03fb 06       		.byte	0x6
+ 1592 03fc 5F       		.byte	0x5f
+ 1593 03fd 10040000 		.long	0x410
+ 1594 0401 06       		.uleb128 0x6
+ 1595 0402 65737000 		.ascii "esp\0"
+ 1596 0406 06       		.byte	0x6
+ 1597 0407 60       		.byte	0x60
+ 1598 0408 10040000 		.long	0x410
+ 1599 040c 02       		.byte	0x2
+ 1600 040d 23       		.byte	0x23
+ 1601 040e 00       		.uleb128 0
+ 1602 040f 00       		.byte	0
+ 1603 0410 08       		.uleb128 0x8
+ 1604 0411 04       		.byte	0x4
+ 1605 0412 16040000 		.long	0x416
+ 1606 0416 0A       		.uleb128 0xa
+ 1607 0417 9B030000 		.long	0x39b
+ 1608 041b 03       		.uleb128 0x3
+ 1609 041c 76746675 		.ascii "vtfunc_t\0"
+ 1609      6E635F74 
+ 1609      00
+ 1610 0425 07       		.byte	0x7
+ 1611 0426 4E       		.byte	0x4e
+ 1612 0427 2B040000 		.long	0x42b
+ 1613 042b 08       		.uleb128 0x8
+ 1614 042c 04       		.byte	0x4
+ 1615 042d 31040000 		.long	0x431
+ 1616 0431 0B       		.uleb128 0xb
+ 1617 0432 01       		.byte	0x1
+ 1618 0433 3D040000 		.long	0x43d
+ 1619 0437 0C       		.uleb128 0xc
+ 1620 0438 99030000 		.long	0x399
+ 1621 043c 00       		.byte	0
+ 1622 043d 0D       		.uleb128 0xd
+ 1623 043e 07000000 		.secrel32	LASF1
+ 1624 0442 07       		.byte	0x7
+ 1625 0443 53       		.byte	0x53
+ 1626 0444 48040000 		.long	0x448
+ 1627 0448 0E       		.uleb128 0xe
+ 1628 0449 07000000 		.secrel32	LASF1
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 39
+
+
+ 1629 044d 14       		.byte	0x14
+ 1630 044e 07       		.byte	0x7
+ 1631 044f 5A       		.byte	0x5a
+ 1632 0450 AE040000 		.long	0x4ae
+ 1633 0454 06       		.uleb128 0x6
+ 1634 0455 76745F6E 		.ascii "vt_next\0"
+ 1634      65787400 
+ 1635 045d 07       		.byte	0x7
+ 1636 045e 5B       		.byte	0x5b
+ 1637 045f AE040000 		.long	0x4ae
+ 1638 0463 02       		.byte	0x2
+ 1639 0464 23       		.byte	0x23
+ 1640 0465 00       		.uleb128 0
+ 1641 0466 06       		.uleb128 0x6
+ 1642 0467 76745F70 		.ascii "vt_prev\0"
+ 1642      72657600 
+ 1643 046f 07       		.byte	0x7
+ 1644 0470 5D       		.byte	0x5d
+ 1645 0471 AE040000 		.long	0x4ae
+ 1646 0475 02       		.byte	0x2
+ 1647 0476 23       		.byte	0x23
+ 1648 0477 04       		.uleb128 0x4
+ 1649 0478 06       		.uleb128 0x6
+ 1650 0479 76745F74 		.ascii "vt_time\0"
+ 1650      696D6500 
+ 1651 0481 07       		.byte	0x7
+ 1652 0482 5F       		.byte	0x5f
+ 1653 0483 8A010000 		.long	0x18a
+ 1654 0487 02       		.byte	0x2
+ 1655 0488 23       		.byte	0x23
+ 1656 0489 08       		.uleb128 0x8
+ 1657 048a 06       		.uleb128 0x6
+ 1658 048b 76745F66 		.ascii "vt_func\0"
+ 1658      756E6300 
+ 1659 0493 07       		.byte	0x7
+ 1660 0494 60       		.byte	0x60
+ 1661 0495 1B040000 		.long	0x41b
+ 1662 0499 02       		.byte	0x2
+ 1663 049a 23       		.byte	0x23
+ 1664 049b 0C       		.uleb128 0xc
+ 1665 049c 06       		.uleb128 0x6
+ 1666 049d 76745F70 		.ascii "vt_par\0"
+ 1666      617200
+ 1667 04a4 07       		.byte	0x7
+ 1668 04a5 62       		.byte	0x62
+ 1669 04a6 99030000 		.long	0x399
+ 1670 04aa 02       		.byte	0x2
+ 1671 04ab 23       		.byte	0x23
+ 1672 04ac 10       		.uleb128 0x10
+ 1673 04ad 00       		.byte	0
+ 1674 04ae 08       		.uleb128 0x8
+ 1675 04af 04       		.byte	0x4
+ 1676 04b0 3D040000 		.long	0x43d
+ 1677 04b4 07       		.uleb128 0x7
+ 1678 04b5 10       		.byte	0x10
+ 1679 04b6 07       		.byte	0x7
+ 1680 04b7 6C       		.byte	0x6c
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 40
+
+
+ 1681 04b8 08050000 		.long	0x508
+ 1682 04bc 06       		.uleb128 0x6
+ 1683 04bd 76745F6E 		.ascii "vt_next\0"
+ 1683      65787400 
+ 1684 04c5 07       		.byte	0x7
+ 1685 04c6 6D       		.byte	0x6d
+ 1686 04c7 AE040000 		.long	0x4ae
+ 1687 04cb 02       		.byte	0x2
+ 1688 04cc 23       		.byte	0x23
+ 1689 04cd 00       		.uleb128 0
+ 1690 04ce 06       		.uleb128 0x6
+ 1691 04cf 76745F70 		.ascii "vt_prev\0"
+ 1691      72657600 
+ 1692 04d7 07       		.byte	0x7
+ 1693 04d8 6F       		.byte	0x6f
+ 1694 04d9 AE040000 		.long	0x4ae
+ 1695 04dd 02       		.byte	0x2
+ 1696 04de 23       		.byte	0x23
+ 1697 04df 04       		.uleb128 0x4
+ 1698 04e0 06       		.uleb128 0x6
+ 1699 04e1 76745F74 		.ascii "vt_time\0"
+ 1699      696D6500 
+ 1700 04e9 07       		.byte	0x7
+ 1701 04ea 71       		.byte	0x71
+ 1702 04eb 8A010000 		.long	0x18a
+ 1703 04ef 02       		.byte	0x2
+ 1704 04f0 23       		.byte	0x23
+ 1705 04f1 08       		.uleb128 0x8
+ 1706 04f2 06       		.uleb128 0x6
+ 1707 04f3 76745F73 		.ascii "vt_systime\0"
+ 1707      79737469 
+ 1707      6D6500
+ 1708 04fe 07       		.byte	0x7
+ 1709 04ff 72       		.byte	0x72
+ 1710 0500 08050000 		.long	0x508
+ 1711 0504 02       		.byte	0x2
+ 1712 0505 23       		.byte	0x23
+ 1713 0506 0C       		.uleb128 0xc
+ 1714 0507 00       		.byte	0
+ 1715 0508 0A       		.uleb128 0xa
+ 1716 0509 8A010000 		.long	0x18a
+ 1717 050d 03       		.uleb128 0x3
+ 1718 050e 56544C69 		.ascii "VTList\0"
+ 1718      737400
+ 1719 0515 07       		.byte	0x7
+ 1720 0516 73       		.byte	0x73
+ 1721 0517 B4040000 		.long	0x4b4
+ 1722 051b 07       		.uleb128 0x7
+ 1723 051c 1C       		.byte	0x1c
+ 1724 051d 08       		.byte	0x8
+ 1725 051e 57       		.byte	0x57
+ 1726 051f 8F050000 		.long	0x58f
+ 1727 0523 06       		.uleb128 0x6
+ 1728 0524 725F7175 		.ascii "r_queue\0"
+ 1728      65756500 
+ 1729 052c 08       		.byte	0x8
+ 1730 052d 58       		.byte	0x58
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 41
+
+
+ 1731 052e 4D030000 		.long	0x34d
+ 1732 0532 02       		.byte	0x2
+ 1733 0533 23       		.byte	0x23
+ 1734 0534 00       		.uleb128 0
+ 1735 0535 06       		.uleb128 0x6
+ 1736 0536 725F7072 		.ascii "r_prio\0"
+ 1736      696F00
+ 1737 053d 08       		.byte	0x8
+ 1738 053e 59       		.byte	0x59
+ 1739 053f 5B010000 		.long	0x15b
+ 1740 0543 02       		.byte	0x2
+ 1741 0544 23       		.byte	0x23
+ 1742 0545 08       		.uleb128 0x8
+ 1743 0546 06       		.uleb128 0x6
+ 1744 0547 725F6374 		.ascii "r_ctx\0"
+ 1744      7800
+ 1745 054d 08       		.byte	0x8
+ 1746 054e 5B       		.byte	0x5b
+ 1747 054f F1030000 		.long	0x3f1
+ 1748 0553 02       		.byte	0x2
+ 1749 0554 23       		.byte	0x23
+ 1750 0555 0C       		.uleb128 0xc
+ 1751 0556 06       		.uleb128 0x6
+ 1752 0557 725F6E65 		.ascii "r_newer\0"
+ 1752      77657200 
+ 1753 055f 08       		.byte	0x8
+ 1754 0560 5E       		.byte	0x5e
+ 1755 0561 47030000 		.long	0x347
+ 1756 0565 02       		.byte	0x2
+ 1757 0566 23       		.byte	0x23
+ 1758 0567 10       		.uleb128 0x10
+ 1759 0568 06       		.uleb128 0x6
+ 1760 0569 725F6F6C 		.ascii "r_older\0"
+ 1760      64657200 
+ 1761 0571 08       		.byte	0x8
+ 1762 0572 5F       		.byte	0x5f
+ 1763 0573 47030000 		.long	0x347
+ 1764 0577 02       		.byte	0x2
+ 1765 0578 23       		.byte	0x23
+ 1766 0579 14       		.uleb128 0x14
+ 1767 057a 06       		.uleb128 0x6
+ 1768 057b 725F6375 		.ascii "r_current\0"
+ 1768      7272656E 
+ 1768      7400
+ 1769 0585 08       		.byte	0x8
+ 1770 0586 62       		.byte	0x62
+ 1771 0587 47030000 		.long	0x347
+ 1772 058b 02       		.byte	0x2
+ 1773 058c 23       		.byte	0x23
+ 1774 058d 18       		.uleb128 0x18
+ 1775 058e 00       		.byte	0
+ 1776 058f 03       		.uleb128 0x3
+ 1777 0590 52656164 		.ascii "ReadyList\0"
+ 1777      794C6973 
+ 1777      7400
+ 1778 059a 08       		.byte	0x8
+ 1779 059b 64       		.byte	0x64
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 42
+
+
+ 1780 059c 1B050000 		.long	0x51b
+ 1781 05a0 04       		.uleb128 0x4
+ 1782 05a1 4D757465 		.ascii "Mutex\0"
+ 1782      7800
+ 1783 05a7 10       		.byte	0x10
+ 1784 05a8 09       		.byte	0x9
+ 1785 05a9 25       		.byte	0x25
+ 1786 05aa E4050000 		.long	0x5e4
+ 1787 05ae 06       		.uleb128 0x6
+ 1788 05af 6D5F7175 		.ascii "m_queue\0"
+ 1788      65756500 
+ 1789 05b7 09       		.byte	0x9
+ 1790 05b8 26       		.byte	0x26
+ 1791 05b9 4D030000 		.long	0x34d
+ 1792 05bd 02       		.byte	0x2
+ 1793 05be 23       		.byte	0x23
+ 1794 05bf 00       		.uleb128 0
+ 1795 05c0 06       		.uleb128 0x6
+ 1796 05c1 6D5F6F77 		.ascii "m_owner\0"
+ 1796      6E657200 
+ 1797 05c9 09       		.byte	0x9
+ 1798 05ca 28       		.byte	0x28
+ 1799 05cb 47030000 		.long	0x347
+ 1800 05cf 02       		.byte	0x2
+ 1801 05d0 23       		.byte	0x23
+ 1802 05d1 08       		.uleb128 0x8
+ 1803 05d2 06       		.uleb128 0x6
+ 1804 05d3 6D5F6E65 		.ascii "m_next\0"
+ 1804      787400
+ 1805 05da 09       		.byte	0x9
+ 1806 05db 2A       		.byte	0x2a
+ 1807 05dc E4050000 		.long	0x5e4
+ 1808 05e0 02       		.byte	0x2
+ 1809 05e1 23       		.byte	0x23
+ 1810 05e2 0C       		.uleb128 0xc
+ 1811 05e3 00       		.byte	0
+ 1812 05e4 08       		.uleb128 0x8
+ 1813 05e5 04       		.byte	0x4
+ 1814 05e6 A0050000 		.long	0x5a0
+ 1815 05ea 03       		.uleb128 0x3
+ 1816 05eb 4D757465 		.ascii "Mutex\0"
+ 1816      7800
+ 1817 05f1 09       		.byte	0x9
+ 1818 05f2 2C       		.byte	0x2c
+ 1819 05f3 A0050000 		.long	0x5a0
+ 1820 05f7 0F       		.uleb128 0xf
+ 1821 05f8 04       		.byte	0x4
+ 1822 05f9 05       		.byte	0x5
+ 1823 05fa 8F       		.byte	0x8f
+ 1824 05fb 3A060000 		.long	0x63a
+ 1825 05ff 10       		.uleb128 0x10
+ 1826 0600 7264796D 		.ascii "rdymsg\0"
+ 1826      736700
+ 1827 0607 05       		.byte	0x5
+ 1828 0608 96       		.byte	0x96
+ 1829 0609 6A010000 		.long	0x16a
+ 1830 060d 10       		.uleb128 0x10
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 43
+
+
+ 1831 060e 65786974 		.ascii "exitcode\0"
+ 1831      636F6465 
+ 1831      00
+ 1832 0617 05       		.byte	0x5
+ 1833 0618 9D       		.byte	0x9d
+ 1834 0619 6A010000 		.long	0x16a
+ 1835 061d 10       		.uleb128 0x10
+ 1836 061e 77746F62 		.ascii "wtobjp\0"
+ 1836      6A7000
+ 1837 0625 05       		.byte	0x5
+ 1838 0626 A4       		.byte	0xa4
+ 1839 0627 99030000 		.long	0x399
+ 1840 062b 10       		.uleb128 0x10
+ 1841 062c 65776D61 		.ascii "ewmask\0"
+ 1841      736B00
+ 1842 0633 05       		.byte	0x5
+ 1843 0634 AB       		.byte	0xab
+ 1844 0635 77010000 		.long	0x177
+ 1845 0639 00       		.byte	0
+ 1846 063a 08       		.uleb128 0x8
+ 1847 063b 04       		.byte	0x4
+ 1848 063c 40060000 		.long	0x640
+ 1849 0640 11       		.uleb128 0x11
+ 1850 0641 45060000 		.long	0x645
+ 1851 0645 02       		.uleb128 0x2
+ 1852 0646 01       		.byte	0x1
+ 1853 0647 06       		.byte	0x6
+ 1854 0648 63686172 		.ascii "char\0"
+ 1854      00
+ 1855 064d 08       		.uleb128 0x8
+ 1856 064e 04       		.byte	0x4
+ 1857 064f EA050000 		.long	0x5ea
+ 1858 0653 04       		.uleb128 0x4
+ 1859 0654 74657374 		.ascii "testcase\0"
+ 1859      63617365 
+ 1859      00
+ 1860 065d 10       		.byte	0x10
+ 1861 065e 0A       		.byte	0xa
+ 1862 065f 3F       		.byte	0x3f
+ 1863 0660 A9060000 		.long	0x6a9
+ 1864 0664 06       		.uleb128 0x6
+ 1865 0665 6E616D65 		.ascii "name\0"
+ 1865      00
+ 1866 066a 0A       		.byte	0xa
+ 1867 066b 40       		.byte	0x40
+ 1868 066c 3A060000 		.long	0x63a
+ 1869 0670 02       		.byte	0x2
+ 1870 0671 23       		.byte	0x23
+ 1871 0672 00       		.uleb128 0
+ 1872 0673 06       		.uleb128 0x6
+ 1873 0674 73657475 		.ascii "setup\0"
+ 1873      7000
+ 1874 067a 0A       		.byte	0xa
+ 1875 067b 41       		.byte	0x41
+ 1876 067c AB060000 		.long	0x6ab
+ 1877 0680 02       		.byte	0x2
+ 1878 0681 23       		.byte	0x23
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 44
+
+
+ 1879 0682 04       		.uleb128 0x4
+ 1880 0683 06       		.uleb128 0x6
+ 1881 0684 74656172 		.ascii "teardown\0"
+ 1881      646F776E 
+ 1881      00
+ 1882 068d 0A       		.byte	0xa
+ 1883 068e 42       		.byte	0x42
+ 1884 068f AB060000 		.long	0x6ab
+ 1885 0693 02       		.byte	0x2
+ 1886 0694 23       		.byte	0x23
+ 1887 0695 08       		.uleb128 0x8
+ 1888 0696 06       		.uleb128 0x6
+ 1889 0697 65786563 		.ascii "execute\0"
+ 1889      75746500 
+ 1890 069f 0A       		.byte	0xa
+ 1891 06a0 43       		.byte	0x43
+ 1892 06a1 AB060000 		.long	0x6ab
+ 1893 06a5 02       		.byte	0x2
+ 1894 06a6 23       		.byte	0x23
+ 1895 06a7 0C       		.uleb128 0xc
+ 1896 06a8 00       		.byte	0
+ 1897 06a9 12       		.uleb128 0x12
+ 1898 06aa 01       		.byte	0x1
+ 1899 06ab 08       		.uleb128 0x8
+ 1900 06ac 04       		.byte	0x4
+ 1901 06ad A9060000 		.long	0x6a9
+ 1902 06b1 13       		.uleb128 0x13
+ 1903 06b2 74687265 		.ascii "thread\0"
+ 1903      616400
+ 1904 06b9 01       		.byte	0x1
+ 1905 06ba 40       		.byte	0x40
+ 1906 06bb 01       		.byte	0x1
+ 1907 06bc 6A010000 		.long	0x16a
+ 1908 06c0 00000000 		.long	LFB0
+ 1909 06c4 55000000 		.long	LFE0
+ 1910 06c8 00000000 		.secrel32	LLST0
+ 1911 06cc DD060000 		.long	0x6dd
+ 1912 06d0 14       		.uleb128 0x14
+ 1913 06d1 7000     		.ascii "p\0"
+ 1914 06d3 01       		.byte	0x1
+ 1915 06d4 40       		.byte	0x40
+ 1916 06d5 99030000 		.long	0x399
+ 1917 06d9 02       		.byte	0x2
+ 1918 06da 91       		.byte	0x91
+ 1919 06db 00       		.sleb128 0
+ 1920 06dc 00       		.byte	0
+ 1921 06dd 15       		.uleb128 0x15
+ 1922 06de 74686431 		.ascii "thd1_execute\0"
+ 1922      5F657865 
+ 1922      63757465 
+ 1922      00
+ 1923 06eb 01       		.byte	0x1
+ 1924 06ec 46       		.byte	0x46
+ 1925 06ed 01       		.byte	0x1
+ 1926 06ee 55000000 		.long	LFB1
+ 1927 06f2 A3020000 		.long	LFE1
+ 1928 06f6 2C000000 		.secrel32	LLST1
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 45
+
+
+ 1929 06fa 15       		.uleb128 0x15
+ 1930 06fb 74686432 		.ascii "thd2_execute\0"
+ 1930      5F657865 
+ 1930      63757465 
+ 1930      00
+ 1931 0708 01       		.byte	0x1
+ 1932 0709 62       		.byte	0x62
+ 1933 070a 01       		.byte	0x1
+ 1934 070b A3020000 		.long	LFB2
+ 1935 070f 54050000 		.long	LFE2
+ 1936 0713 58000000 		.secrel32	LLST2
+ 1937 0717 16       		.uleb128 0x16
+ 1938 0718 74686433 		.ascii "thd3_execute\0"
+ 1938      5F657865 
+ 1938      63757465 
+ 1938      00
+ 1939 0725 01       		.byte	0x1
+ 1940 0726 82       		.byte	0x82
+ 1941 0727 01       		.byte	0x1
+ 1942 0728 54050000 		.long	LFB3
+ 1943 072c 220B0000 		.long	LFE3
+ 1944 0730 84000000 		.secrel32	LLST3
+ 1945 0734 55070000 		.long	0x755
+ 1946 0738 17       		.uleb128 0x17
+ 1947 0739 7072696F 		.ascii "prio\0"
+ 1947      00
+ 1948 073e 01       		.byte	0x1
+ 1949 073f 83       		.byte	0x83
+ 1950 0740 5B010000 		.long	0x15b
+ 1951 0744 02       		.byte	0x2
+ 1952 0745 91       		.byte	0x91
+ 1953 0746 6C       		.sleb128 -20
+ 1954 0747 17       		.uleb128 0x17
+ 1955 0748 703100   		.ascii "p1\0"
+ 1956 074b 01       		.byte	0x1
+ 1957 074c 83       		.byte	0x83
+ 1958 074d 5B010000 		.long	0x15b
+ 1959 0751 02       		.byte	0x2
+ 1960 0752 91       		.byte	0x91
+ 1961 0753 68       		.sleb128 -24
+ 1962 0754 00       		.byte	0
+ 1963 0755 16       		.uleb128 0x16
+ 1964 0756 74686434 		.ascii "thd4_execute\0"
+ 1964      5F657865 
+ 1964      63757465 
+ 1964      00
+ 1965 0763 01       		.byte	0x1
+ 1966 0764 C1       		.byte	0xc1
+ 1967 0765 01       		.byte	0x1
+ 1968 0766 220B0000 		.long	LFB4
+ 1969 076a B60D0000 		.long	LFE4
+ 1970 076e B0000000 		.secrel32	LLST4
+ 1971 0772 86070000 		.long	0x786
+ 1972 0776 17       		.uleb128 0x17
+ 1973 0777 74696D65 		.ascii "time\0"
+ 1973      00
+ 1974 077c 01       		.byte	0x1
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 46
+
+
+ 1975 077d C2       		.byte	0xc2
+ 1976 077e 8A010000 		.long	0x18a
+ 1977 0782 02       		.byte	0x2
+ 1978 0783 91       		.byte	0x91
+ 1979 0784 6C       		.sleb128 -20
+ 1980 0785 00       		.byte	0
+ 1981 0786 18       		.uleb128 0x18
+ 1982 0787 5F474C4F 		.ascii "_GLOBAL__sub_I_65535_0_testthd1\0"
+ 1982      42414C5F 
+ 1982      5F737562 
+ 1982      5F495F36 
+ 1982      35353335 
+ 1983 07a7 01       		.byte	0x1
+ 1984 07a8 01       		.byte	0x1
+ 1985 07a9 B60D0000 		.long	LFB5
+ 1986 07ad C90D0000 		.long	LFE5
+ 1987 07b1 DC000000 		.secrel32	LLST5
+ 1988 07b5 19       		.uleb128 0x19
+ 1989 07b6 76746C69 		.ascii "vtlist\0"
+ 1989      737400
+ 1990 07bd 07       		.byte	0x7
+ 1991 07be D1       		.byte	0xd1
+ 1992 07bf 0D050000 		.long	0x50d
+ 1993 07c3 01       		.byte	0x1
+ 1994 07c4 01       		.byte	0x1
+ 1995 07c5 19       		.uleb128 0x19
+ 1996 07c6 726C6973 		.ascii "rlist\0"
+ 1996      7400
+ 1997 07cc 08       		.byte	0x8
+ 1998 07cd 68       		.byte	0x68
+ 1999 07ce 8F050000 		.long	0x58f
+ 2000 07d2 01       		.byte	0x1
+ 2001 07d3 01       		.byte	0x1
+ 2002 07d4 1A       		.uleb128 0x1a
+ 2003 07d5 47030000 		.long	0x347
+ 2004 07d9 E4070000 		.long	0x7e4
+ 2005 07dd 1B       		.uleb128 0x1b
+ 2006 07de 67000000 		.long	0x67
+ 2007 07e2 04       		.byte	0x4
+ 2008 07e3 00       		.byte	0
+ 2009 07e4 19       		.uleb128 0x19
+ 2010 07e5 74687265 		.ascii "threads\0"
+ 2010      61647300 
+ 2011 07ed 0A       		.byte	0xa
+ 2012 07ee A9       		.byte	0xa9
+ 2013 07ef D4070000 		.long	0x7d4
+ 2014 07f3 01       		.byte	0x1
+ 2015 07f4 01       		.byte	0x1
+ 2016 07f5 1A       		.uleb128 0x1a
+ 2017 07f6 99030000 		.long	0x399
+ 2018 07fa 00080000 		.long	0x800
+ 2019 07fe 1C       		.uleb128 0x1c
+ 2020 07ff 00       		.byte	0
+ 2021 0800 19       		.uleb128 0x19
+ 2022 0801 776100   		.ascii "wa\0"
+ 2023 0804 0A       		.byte	0xa
+ 2024 0805 AB       		.byte	0xab
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 47
+
+
+ 2025 0806 0C080000 		.long	0x80c
+ 2026 080a 01       		.byte	0x1
+ 2027 080b 01       		.byte	0x1
+ 2028 080c 11       		.uleb128 0x11
+ 2029 080d F5070000 		.long	0x7f5
+ 2030 0811 1D       		.uleb128 0x1d
+ 2031 0812 14000000 		.secrel32	LASF2
+ 2032 0816 01       		.byte	0x1
+ 2033 0817 51       		.byte	0x51
+ 2034 0818 1E080000 		.long	0x81e
+ 2035 081c 01       		.byte	0x1
+ 2036 081d 01       		.byte	0x1
+ 2037 081e 11       		.uleb128 0x11
+ 2038 081f 53060000 		.long	0x653
+ 2039 0823 1D       		.uleb128 0x1d
+ 2040 0824 1D000000 		.secrel32	LASF3
+ 2041 0828 01       		.byte	0x1
+ 2042 0829 71       		.byte	0x71
+ 2043 082a 1E080000 		.long	0x81e
+ 2044 082e 01       		.byte	0x1
+ 2045 082f 01       		.byte	0x1
+ 2046 0830 1D       		.uleb128 0x1d
+ 2047 0831 26000000 		.secrel32	LASF4
+ 2048 0835 01       		.byte	0x1
+ 2049 0836 B2       		.byte	0xb2
+ 2050 0837 1E080000 		.long	0x81e
+ 2051 083b 01       		.byte	0x1
+ 2052 083c 01       		.byte	0x1
+ 2053 083d 1D       		.uleb128 0x1d
+ 2054 083e 2F000000 		.secrel32	LASF5
+ 2055 0842 01       		.byte	0x1
+ 2056 0843 DB       		.byte	0xdb
+ 2057 0844 1E080000 		.long	0x81e
+ 2058 0848 01       		.byte	0x1
+ 2059 0849 01       		.byte	0x1
+ 2060 084a 19       		.uleb128 0x19
+ 2061 084b 76746C69 		.ascii "vtlist\0"
+ 2061      737400
+ 2062 0852 07       		.byte	0x7
+ 2063 0853 D1       		.byte	0xd1
+ 2064 0854 0D050000 		.long	0x50d
+ 2065 0858 01       		.byte	0x1
+ 2066 0859 01       		.byte	0x1
+ 2067 085a 19       		.uleb128 0x19
+ 2068 085b 726C6973 		.ascii "rlist\0"
+ 2068      7400
+ 2069 0861 08       		.byte	0x8
+ 2070 0862 68       		.byte	0x68
+ 2071 0863 8F050000 		.long	0x58f
+ 2072 0867 01       		.byte	0x1
+ 2073 0868 01       		.byte	0x1
+ 2074 0869 19       		.uleb128 0x19
+ 2075 086a 74687265 		.ascii "threads\0"
+ 2075      61647300 
+ 2076 0872 0A       		.byte	0xa
+ 2077 0873 A9       		.byte	0xa9
+ 2078 0874 D4070000 		.long	0x7d4
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 48
+
+
+ 2079 0878 01       		.byte	0x1
+ 2080 0879 01       		.byte	0x1
+ 2081 087a 19       		.uleb128 0x19
+ 2082 087b 776100   		.ascii "wa\0"
+ 2083 087e 0A       		.byte	0xa
+ 2084 087f AB       		.byte	0xab
+ 2085 0880 86080000 		.long	0x886
+ 2086 0884 01       		.byte	0x1
+ 2087 0885 01       		.byte	0x1
+ 2088 0886 11       		.uleb128 0x11
+ 2089 0887 F5070000 		.long	0x7f5
+ 2090 088b 1E       		.uleb128 0x1e
+ 2091 088c 14000000 		.secrel32	LASF2
+ 2092 0890 01       		.byte	0x1
+ 2093 0891 51       		.byte	0x51
+ 2094 0892 1E080000 		.long	0x81e
+ 2095 0896 01       		.byte	0x1
+ 2096 0897 05       		.byte	0x5
+ 2097 0898 03       		.byte	0x3
+ 2098 0899 2C000000 		.long	_testthd1
+ 2099 089d 1E       		.uleb128 0x1e
+ 2100 089e 1D000000 		.secrel32	LASF3
+ 2101 08a2 01       		.byte	0x1
+ 2102 08a3 71       		.byte	0x71
+ 2103 08a4 1E080000 		.long	0x81e
+ 2104 08a8 01       		.byte	0x1
+ 2105 08a9 05       		.byte	0x5
+ 2106 08aa 03       		.byte	0x3
+ 2107 08ab 58000000 		.long	_testthd2
+ 2108 08af 1E       		.uleb128 0x1e
+ 2109 08b0 26000000 		.secrel32	LASF4
+ 2110 08b4 01       		.byte	0x1
+ 2111 08b5 B2       		.byte	0xb2
+ 2112 08b6 1E080000 		.long	0x81e
+ 2113 08ba 01       		.byte	0x1
+ 2114 08bb 05       		.byte	0x5
+ 2115 08bc 03       		.byte	0x3
+ 2116 08bd 84000000 		.long	_testthd3
+ 2117 08c1 1E       		.uleb128 0x1e
+ 2118 08c2 2F000000 		.secrel32	LASF5
+ 2119 08c6 01       		.byte	0x1
+ 2120 08c7 DB       		.byte	0xdb
+ 2121 08c8 1E080000 		.long	0x81e
+ 2122 08cc 01       		.byte	0x1
+ 2123 08cd 05       		.byte	0x5
+ 2124 08ce 03       		.byte	0x3
+ 2125 08cf A4000000 		.long	_testthd4
+ 2126 08d3 1A       		.uleb128 0x1a
+ 2127 08d4 E3080000 		.long	0x8e3
+ 2128 08d8 E3080000 		.long	0x8e3
+ 2129 08dc 1B       		.uleb128 0x1b
+ 2130 08dd 67000000 		.long	0x67
+ 2131 08e1 04       		.byte	0x4
+ 2132 08e2 00       		.byte	0
+ 2133 08e3 08       		.uleb128 0x8
+ 2134 08e4 04       		.byte	0x4
+ 2135 08e5 1E080000 		.long	0x81e
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 49
+
+
+ 2136 08e9 1F       		.uleb128 0x1f
+ 2137 08ea 70617474 		.ascii "patternthd\0"
+ 2137      65726E74 
+ 2137      686400
+ 2138 08f5 01       		.byte	0x1
+ 2139 08f6 E5       		.byte	0xe5
+ 2140 08f7 02090000 		.long	0x902
+ 2141 08fb 01       		.byte	0x1
+ 2142 08fc 05       		.byte	0x5
+ 2143 08fd 03       		.byte	0x3
+ 2144 08fe B4000000 		.long	_patternthd
+ 2145 0902 11       		.uleb128 0x11
+ 2146 0903 D3080000 		.long	0x8d3
+ 2147 0907 00       		.byte	0
+ 2148              		.section	.debug_abbrev,"dr"
+ 2149              	Ldebug_abbrev0:
+ 2150 0000 01       		.uleb128 0x1
+ 2151 0001 11       		.uleb128 0x11
+ 2152 0002 01       		.byte	0x1
+ 2153 0003 25       		.uleb128 0x25
+ 2154 0004 08       		.uleb128 0x8
+ 2155 0005 13       		.uleb128 0x13
+ 2156 0006 0B       		.uleb128 0xb
+ 2157 0007 03       		.uleb128 0x3
+ 2158 0008 08       		.uleb128 0x8
+ 2159 0009 1B       		.uleb128 0x1b
+ 2160 000a 08       		.uleb128 0x8
+ 2161 000b 11       		.uleb128 0x11
+ 2162 000c 01       		.uleb128 0x1
+ 2163 000d 12       		.uleb128 0x12
+ 2164 000e 01       		.uleb128 0x1
+ 2165 000f 10       		.uleb128 0x10
+ 2166 0010 06       		.uleb128 0x6
+ 2167 0011 00       		.byte	0
+ 2168 0012 00       		.byte	0
+ 2169 0013 02       		.uleb128 0x2
+ 2170 0014 24       		.uleb128 0x24
+ 2171 0015 00       		.byte	0
+ 2172 0016 0B       		.uleb128 0xb
+ 2173 0017 0B       		.uleb128 0xb
+ 2174 0018 3E       		.uleb128 0x3e
+ 2175 0019 0B       		.uleb128 0xb
+ 2176 001a 03       		.uleb128 0x3
+ 2177 001b 08       		.uleb128 0x8
+ 2178 001c 00       		.byte	0
+ 2179 001d 00       		.byte	0
+ 2180 001e 03       		.uleb128 0x3
+ 2181 001f 16       		.uleb128 0x16
+ 2182 0020 00       		.byte	0
+ 2183 0021 03       		.uleb128 0x3
+ 2184 0022 08       		.uleb128 0x8
+ 2185 0023 3A       		.uleb128 0x3a
+ 2186 0024 0B       		.uleb128 0xb
+ 2187 0025 3B       		.uleb128 0x3b
+ 2188 0026 0B       		.uleb128 0xb
+ 2189 0027 49       		.uleb128 0x49
+ 2190 0028 13       		.uleb128 0x13
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 50
+
+
+ 2191 0029 00       		.byte	0
+ 2192 002a 00       		.byte	0
+ 2193 002b 04       		.uleb128 0x4
+ 2194 002c 13       		.uleb128 0x13
+ 2195 002d 01       		.byte	0x1
+ 2196 002e 03       		.uleb128 0x3
+ 2197 002f 08       		.uleb128 0x8
+ 2198 0030 0B       		.uleb128 0xb
+ 2199 0031 0B       		.uleb128 0xb
+ 2200 0032 3A       		.uleb128 0x3a
+ 2201 0033 0B       		.uleb128 0xb
+ 2202 0034 3B       		.uleb128 0x3b
+ 2203 0035 0B       		.uleb128 0xb
+ 2204 0036 01       		.uleb128 0x1
+ 2205 0037 13       		.uleb128 0x13
+ 2206 0038 00       		.byte	0
+ 2207 0039 00       		.byte	0
+ 2208 003a 05       		.uleb128 0x5
+ 2209 003b 0D       		.uleb128 0xd
+ 2210 003c 00       		.byte	0
+ 2211 003d 03       		.uleb128 0x3
+ 2212 003e 0E       		.uleb128 0xe
+ 2213 003f 3A       		.uleb128 0x3a
+ 2214 0040 0B       		.uleb128 0xb
+ 2215 0041 3B       		.uleb128 0x3b
+ 2216 0042 0B       		.uleb128 0xb
+ 2217 0043 49       		.uleb128 0x49
+ 2218 0044 13       		.uleb128 0x13
+ 2219 0045 38       		.uleb128 0x38
+ 2220 0046 0A       		.uleb128 0xa
+ 2221 0047 00       		.byte	0
+ 2222 0048 00       		.byte	0
+ 2223 0049 06       		.uleb128 0x6
+ 2224 004a 0D       		.uleb128 0xd
+ 2225 004b 00       		.byte	0
+ 2226 004c 03       		.uleb128 0x3
+ 2227 004d 08       		.uleb128 0x8
+ 2228 004e 3A       		.uleb128 0x3a
+ 2229 004f 0B       		.uleb128 0xb
+ 2230 0050 3B       		.uleb128 0x3b
+ 2231 0051 0B       		.uleb128 0xb
+ 2232 0052 49       		.uleb128 0x49
+ 2233 0053 13       		.uleb128 0x13
+ 2234 0054 38       		.uleb128 0x38
+ 2235 0055 0A       		.uleb128 0xa
+ 2236 0056 00       		.byte	0
+ 2237 0057 00       		.byte	0
+ 2238 0058 07       		.uleb128 0x7
+ 2239 0059 13       		.uleb128 0x13
+ 2240 005a 01       		.byte	0x1
+ 2241 005b 0B       		.uleb128 0xb
+ 2242 005c 0B       		.uleb128 0xb
+ 2243 005d 3A       		.uleb128 0x3a
+ 2244 005e 0B       		.uleb128 0xb
+ 2245 005f 3B       		.uleb128 0x3b
+ 2246 0060 0B       		.uleb128 0xb
+ 2247 0061 01       		.uleb128 0x1
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 51
+
+
+ 2248 0062 13       		.uleb128 0x13
+ 2249 0063 00       		.byte	0
+ 2250 0064 00       		.byte	0
+ 2251 0065 08       		.uleb128 0x8
+ 2252 0066 0F       		.uleb128 0xf
+ 2253 0067 00       		.byte	0
+ 2254 0068 0B       		.uleb128 0xb
+ 2255 0069 0B       		.uleb128 0xb
+ 2256 006a 49       		.uleb128 0x49
+ 2257 006b 13       		.uleb128 0x13
+ 2258 006c 00       		.byte	0
+ 2259 006d 00       		.byte	0
+ 2260 006e 09       		.uleb128 0x9
+ 2261 006f 0F       		.uleb128 0xf
+ 2262 0070 00       		.byte	0
+ 2263 0071 0B       		.uleb128 0xb
+ 2264 0072 0B       		.uleb128 0xb
+ 2265 0073 00       		.byte	0
+ 2266 0074 00       		.byte	0
+ 2267 0075 0A       		.uleb128 0xa
+ 2268 0076 35       		.uleb128 0x35
+ 2269 0077 00       		.byte	0
+ 2270 0078 49       		.uleb128 0x49
+ 2271 0079 13       		.uleb128 0x13
+ 2272 007a 00       		.byte	0
+ 2273 007b 00       		.byte	0
+ 2274 007c 0B       		.uleb128 0xb
+ 2275 007d 15       		.uleb128 0x15
+ 2276 007e 01       		.byte	0x1
+ 2277 007f 27       		.uleb128 0x27
+ 2278 0080 0C       		.uleb128 0xc
+ 2279 0081 01       		.uleb128 0x1
+ 2280 0082 13       		.uleb128 0x13
+ 2281 0083 00       		.byte	0
+ 2282 0084 00       		.byte	0
+ 2283 0085 0C       		.uleb128 0xc
+ 2284 0086 05       		.uleb128 0x5
+ 2285 0087 00       		.byte	0
+ 2286 0088 49       		.uleb128 0x49
+ 2287 0089 13       		.uleb128 0x13
+ 2288 008a 00       		.byte	0
+ 2289 008b 00       		.byte	0
+ 2290 008c 0D       		.uleb128 0xd
+ 2291 008d 16       		.uleb128 0x16
+ 2292 008e 00       		.byte	0
+ 2293 008f 03       		.uleb128 0x3
+ 2294 0090 0E       		.uleb128 0xe
+ 2295 0091 3A       		.uleb128 0x3a
+ 2296 0092 0B       		.uleb128 0xb
+ 2297 0093 3B       		.uleb128 0x3b
+ 2298 0094 0B       		.uleb128 0xb
+ 2299 0095 49       		.uleb128 0x49
+ 2300 0096 13       		.uleb128 0x13
+ 2301 0097 00       		.byte	0
+ 2302 0098 00       		.byte	0
+ 2303 0099 0E       		.uleb128 0xe
+ 2304 009a 13       		.uleb128 0x13
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 52
+
+
+ 2305 009b 01       		.byte	0x1
+ 2306 009c 03       		.uleb128 0x3
+ 2307 009d 0E       		.uleb128 0xe
+ 2308 009e 0B       		.uleb128 0xb
+ 2309 009f 0B       		.uleb128 0xb
+ 2310 00a0 3A       		.uleb128 0x3a
+ 2311 00a1 0B       		.uleb128 0xb
+ 2312 00a2 3B       		.uleb128 0x3b
+ 2313 00a3 0B       		.uleb128 0xb
+ 2314 00a4 01       		.uleb128 0x1
+ 2315 00a5 13       		.uleb128 0x13
+ 2316 00a6 00       		.byte	0
+ 2317 00a7 00       		.byte	0
+ 2318 00a8 0F       		.uleb128 0xf
+ 2319 00a9 17       		.uleb128 0x17
+ 2320 00aa 01       		.byte	0x1
+ 2321 00ab 0B       		.uleb128 0xb
+ 2322 00ac 0B       		.uleb128 0xb
+ 2323 00ad 3A       		.uleb128 0x3a
+ 2324 00ae 0B       		.uleb128 0xb
+ 2325 00af 3B       		.uleb128 0x3b
+ 2326 00b0 0B       		.uleb128 0xb
+ 2327 00b1 01       		.uleb128 0x1
+ 2328 00b2 13       		.uleb128 0x13
+ 2329 00b3 00       		.byte	0
+ 2330 00b4 00       		.byte	0
+ 2331 00b5 10       		.uleb128 0x10
+ 2332 00b6 0D       		.uleb128 0xd
+ 2333 00b7 00       		.byte	0
+ 2334 00b8 03       		.uleb128 0x3
+ 2335 00b9 08       		.uleb128 0x8
+ 2336 00ba 3A       		.uleb128 0x3a
+ 2337 00bb 0B       		.uleb128 0xb
+ 2338 00bc 3B       		.uleb128 0x3b
+ 2339 00bd 0B       		.uleb128 0xb
+ 2340 00be 49       		.uleb128 0x49
+ 2341 00bf 13       		.uleb128 0x13
+ 2342 00c0 00       		.byte	0
+ 2343 00c1 00       		.byte	0
+ 2344 00c2 11       		.uleb128 0x11
+ 2345 00c3 26       		.uleb128 0x26
+ 2346 00c4 00       		.byte	0
+ 2347 00c5 49       		.uleb128 0x49
+ 2348 00c6 13       		.uleb128 0x13
+ 2349 00c7 00       		.byte	0
+ 2350 00c8 00       		.byte	0
+ 2351 00c9 12       		.uleb128 0x12
+ 2352 00ca 15       		.uleb128 0x15
+ 2353 00cb 00       		.byte	0
+ 2354 00cc 27       		.uleb128 0x27
+ 2355 00cd 0C       		.uleb128 0xc
+ 2356 00ce 00       		.byte	0
+ 2357 00cf 00       		.byte	0
+ 2358 00d0 13       		.uleb128 0x13
+ 2359 00d1 2E       		.uleb128 0x2e
+ 2360 00d2 01       		.byte	0x1
+ 2361 00d3 03       		.uleb128 0x3
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 53
+
+
+ 2362 00d4 08       		.uleb128 0x8
+ 2363 00d5 3A       		.uleb128 0x3a
+ 2364 00d6 0B       		.uleb128 0xb
+ 2365 00d7 3B       		.uleb128 0x3b
+ 2366 00d8 0B       		.uleb128 0xb
+ 2367 00d9 27       		.uleb128 0x27
+ 2368 00da 0C       		.uleb128 0xc
+ 2369 00db 49       		.uleb128 0x49
+ 2370 00dc 13       		.uleb128 0x13
+ 2371 00dd 11       		.uleb128 0x11
+ 2372 00de 01       		.uleb128 0x1
+ 2373 00df 12       		.uleb128 0x12
+ 2374 00e0 01       		.uleb128 0x1
+ 2375 00e1 40       		.uleb128 0x40
+ 2376 00e2 06       		.uleb128 0x6
+ 2377 00e3 01       		.uleb128 0x1
+ 2378 00e4 13       		.uleb128 0x13
+ 2379 00e5 00       		.byte	0
+ 2380 00e6 00       		.byte	0
+ 2381 00e7 14       		.uleb128 0x14
+ 2382 00e8 05       		.uleb128 0x5
+ 2383 00e9 00       		.byte	0
+ 2384 00ea 03       		.uleb128 0x3
+ 2385 00eb 08       		.uleb128 0x8
+ 2386 00ec 3A       		.uleb128 0x3a
+ 2387 00ed 0B       		.uleb128 0xb
+ 2388 00ee 3B       		.uleb128 0x3b
+ 2389 00ef 0B       		.uleb128 0xb
+ 2390 00f0 49       		.uleb128 0x49
+ 2391 00f1 13       		.uleb128 0x13
+ 2392 00f2 02       		.uleb128 0x2
+ 2393 00f3 0A       		.uleb128 0xa
+ 2394 00f4 00       		.byte	0
+ 2395 00f5 00       		.byte	0
+ 2396 00f6 15       		.uleb128 0x15
+ 2397 00f7 2E       		.uleb128 0x2e
+ 2398 00f8 00       		.byte	0
+ 2399 00f9 03       		.uleb128 0x3
+ 2400 00fa 08       		.uleb128 0x8
+ 2401 00fb 3A       		.uleb128 0x3a
+ 2402 00fc 0B       		.uleb128 0xb
+ 2403 00fd 3B       		.uleb128 0x3b
+ 2404 00fe 0B       		.uleb128 0xb
+ 2405 00ff 27       		.uleb128 0x27
+ 2406 0100 0C       		.uleb128 0xc
+ 2407 0101 11       		.uleb128 0x11
+ 2408 0102 01       		.uleb128 0x1
+ 2409 0103 12       		.uleb128 0x12
+ 2410 0104 01       		.uleb128 0x1
+ 2411 0105 40       		.uleb128 0x40
+ 2412 0106 06       		.uleb128 0x6
+ 2413 0107 00       		.byte	0
+ 2414 0108 00       		.byte	0
+ 2415 0109 16       		.uleb128 0x16
+ 2416 010a 2E       		.uleb128 0x2e
+ 2417 010b 01       		.byte	0x1
+ 2418 010c 03       		.uleb128 0x3
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 54
+
+
+ 2419 010d 08       		.uleb128 0x8
+ 2420 010e 3A       		.uleb128 0x3a
+ 2421 010f 0B       		.uleb128 0xb
+ 2422 0110 3B       		.uleb128 0x3b
+ 2423 0111 0B       		.uleb128 0xb
+ 2424 0112 27       		.uleb128 0x27
+ 2425 0113 0C       		.uleb128 0xc
+ 2426 0114 11       		.uleb128 0x11
+ 2427 0115 01       		.uleb128 0x1
+ 2428 0116 12       		.uleb128 0x12
+ 2429 0117 01       		.uleb128 0x1
+ 2430 0118 40       		.uleb128 0x40
+ 2431 0119 06       		.uleb128 0x6
+ 2432 011a 01       		.uleb128 0x1
+ 2433 011b 13       		.uleb128 0x13
+ 2434 011c 00       		.byte	0
+ 2435 011d 00       		.byte	0
+ 2436 011e 17       		.uleb128 0x17
+ 2437 011f 34       		.uleb128 0x34
+ 2438 0120 00       		.byte	0
+ 2439 0121 03       		.uleb128 0x3
+ 2440 0122 08       		.uleb128 0x8
+ 2441 0123 3A       		.uleb128 0x3a
+ 2442 0124 0B       		.uleb128 0xb
+ 2443 0125 3B       		.uleb128 0x3b
+ 2444 0126 0B       		.uleb128 0xb
+ 2445 0127 49       		.uleb128 0x49
+ 2446 0128 13       		.uleb128 0x13
+ 2447 0129 02       		.uleb128 0x2
+ 2448 012a 0A       		.uleb128 0xa
+ 2449 012b 00       		.byte	0
+ 2450 012c 00       		.byte	0
+ 2451 012d 18       		.uleb128 0x18
+ 2452 012e 2E       		.uleb128 0x2e
+ 2453 012f 00       		.byte	0
+ 2454 0130 03       		.uleb128 0x3
+ 2455 0131 08       		.uleb128 0x8
+ 2456 0132 27       		.uleb128 0x27
+ 2457 0133 0C       		.uleb128 0xc
+ 2458 0134 34       		.uleb128 0x34
+ 2459 0135 0C       		.uleb128 0xc
+ 2460 0136 11       		.uleb128 0x11
+ 2461 0137 01       		.uleb128 0x1
+ 2462 0138 12       		.uleb128 0x12
+ 2463 0139 01       		.uleb128 0x1
+ 2464 013a 40       		.uleb128 0x40
+ 2465 013b 06       		.uleb128 0x6
+ 2466 013c 00       		.byte	0
+ 2467 013d 00       		.byte	0
+ 2468 013e 19       		.uleb128 0x19
+ 2469 013f 34       		.uleb128 0x34
+ 2470 0140 00       		.byte	0
+ 2471 0141 03       		.uleb128 0x3
+ 2472 0142 08       		.uleb128 0x8
+ 2473 0143 3A       		.uleb128 0x3a
+ 2474 0144 0B       		.uleb128 0xb
+ 2475 0145 3B       		.uleb128 0x3b
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 55
+
+
+ 2476 0146 0B       		.uleb128 0xb
+ 2477 0147 49       		.uleb128 0x49
+ 2478 0148 13       		.uleb128 0x13
+ 2479 0149 3F       		.uleb128 0x3f
+ 2480 014a 0C       		.uleb128 0xc
+ 2481 014b 3C       		.uleb128 0x3c
+ 2482 014c 0C       		.uleb128 0xc
+ 2483 014d 00       		.byte	0
+ 2484 014e 00       		.byte	0
+ 2485 014f 1A       		.uleb128 0x1a
+ 2486 0150 01       		.uleb128 0x1
+ 2487 0151 01       		.byte	0x1
+ 2488 0152 49       		.uleb128 0x49
+ 2489 0153 13       		.uleb128 0x13
+ 2490 0154 01       		.uleb128 0x1
+ 2491 0155 13       		.uleb128 0x13
+ 2492 0156 00       		.byte	0
+ 2493 0157 00       		.byte	0
+ 2494 0158 1B       		.uleb128 0x1b
+ 2495 0159 21       		.uleb128 0x21
+ 2496 015a 00       		.byte	0
+ 2497 015b 49       		.uleb128 0x49
+ 2498 015c 13       		.uleb128 0x13
+ 2499 015d 2F       		.uleb128 0x2f
+ 2500 015e 0B       		.uleb128 0xb
+ 2501 015f 00       		.byte	0
+ 2502 0160 00       		.byte	0
+ 2503 0161 1C       		.uleb128 0x1c
+ 2504 0162 21       		.uleb128 0x21
+ 2505 0163 00       		.byte	0
+ 2506 0164 00       		.byte	0
+ 2507 0165 00       		.byte	0
+ 2508 0166 1D       		.uleb128 0x1d
+ 2509 0167 34       		.uleb128 0x34
+ 2510 0168 00       		.byte	0
+ 2511 0169 03       		.uleb128 0x3
+ 2512 016a 0E       		.uleb128 0xe
+ 2513 016b 3A       		.uleb128 0x3a
+ 2514 016c 0B       		.uleb128 0xb
+ 2515 016d 3B       		.uleb128 0x3b
+ 2516 016e 0B       		.uleb128 0xb
+ 2517 016f 49       		.uleb128 0x49
+ 2518 0170 13       		.uleb128 0x13
+ 2519 0171 3F       		.uleb128 0x3f
+ 2520 0172 0C       		.uleb128 0xc
+ 2521 0173 3C       		.uleb128 0x3c
+ 2522 0174 0C       		.uleb128 0xc
+ 2523 0175 00       		.byte	0
+ 2524 0176 00       		.byte	0
+ 2525 0177 1E       		.uleb128 0x1e
+ 2526 0178 34       		.uleb128 0x34
+ 2527 0179 00       		.byte	0
+ 2528 017a 03       		.uleb128 0x3
+ 2529 017b 0E       		.uleb128 0xe
+ 2530 017c 3A       		.uleb128 0x3a
+ 2531 017d 0B       		.uleb128 0xb
+ 2532 017e 3B       		.uleb128 0x3b
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 56
+
+
+ 2533 017f 0B       		.uleb128 0xb
+ 2534 0180 49       		.uleb128 0x49
+ 2535 0181 13       		.uleb128 0x13
+ 2536 0182 3F       		.uleb128 0x3f
+ 2537 0183 0C       		.uleb128 0xc
+ 2538 0184 02       		.uleb128 0x2
+ 2539 0185 0A       		.uleb128 0xa
+ 2540 0186 00       		.byte	0
+ 2541 0187 00       		.byte	0
+ 2542 0188 1F       		.uleb128 0x1f
+ 2543 0189 34       		.uleb128 0x34
+ 2544 018a 00       		.byte	0
+ 2545 018b 03       		.uleb128 0x3
+ 2546 018c 08       		.uleb128 0x8
+ 2547 018d 3A       		.uleb128 0x3a
+ 2548 018e 0B       		.uleb128 0xb
+ 2549 018f 3B       		.uleb128 0x3b
+ 2550 0190 0B       		.uleb128 0xb
+ 2551 0191 49       		.uleb128 0x49
+ 2552 0192 13       		.uleb128 0x13
+ 2553 0193 3F       		.uleb128 0x3f
+ 2554 0194 0C       		.uleb128 0xc
+ 2555 0195 02       		.uleb128 0x2
+ 2556 0196 0A       		.uleb128 0xa
+ 2557 0197 00       		.byte	0
+ 2558 0198 00       		.byte	0
+ 2559 0199 00       		.byte	0
+ 2560              		.section	.debug_loc,"dr"
+ 2561              	Ldebug_loc0:
+ 2562              	LLST0:
+ 2563 0000 00000000 		.long	LFB0-Ltext0
+ 2564 0004 03000000 		.long	LCFI0-Ltext0
+ 2565 0008 0200     		.word	0x2
+ 2566 000a 74       		.byte	0x74
+ 2567 000b 04       		.sleb128 4
+ 2568 000c 03000000 		.long	LCFI0-Ltext0
+ 2569 0010 54000000 		.long	LCFI1-Ltext0
+ 2570 0014 0200     		.word	0x2
+ 2571 0016 74       		.byte	0x74
+ 2572 0017 20       		.sleb128 32
+ 2573 0018 54000000 		.long	LCFI1-Ltext0
+ 2574 001c 55000000 		.long	LFE0-Ltext0
+ 2575 0020 0200     		.word	0x2
+ 2576 0022 74       		.byte	0x74
+ 2577 0023 04       		.sleb128 4
+ 2578 0024 00000000 		.long	0
+ 2579 0028 00000000 		.long	0
+ 2580              	LLST1:
+ 2581 002c 55000000 		.long	LFB1-Ltext0
+ 2582 0030 58000000 		.long	LCFI2-Ltext0
+ 2583 0034 0200     		.word	0x2
+ 2584 0036 74       		.byte	0x74
+ 2585 0037 04       		.sleb128 4
+ 2586 0038 58000000 		.long	LCFI2-Ltext0
+ 2587 003c A2020000 		.long	LCFI3-Ltext0
+ 2588 0040 0200     		.word	0x2
+ 2589 0042 74       		.byte	0x74
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 57
+
+
+ 2590 0043 30       		.sleb128 48
+ 2591 0044 A2020000 		.long	LCFI3-Ltext0
+ 2592 0048 A3020000 		.long	LFE1-Ltext0
+ 2593 004c 0200     		.word	0x2
+ 2594 004e 74       		.byte	0x74
+ 2595 004f 04       		.sleb128 4
+ 2596 0050 00000000 		.long	0
+ 2597 0054 00000000 		.long	0
+ 2598              	LLST2:
+ 2599 0058 A3020000 		.long	LFB2-Ltext0
+ 2600 005c A6020000 		.long	LCFI4-Ltext0
+ 2601 0060 0200     		.word	0x2
+ 2602 0062 74       		.byte	0x74
+ 2603 0063 04       		.sleb128 4
+ 2604 0064 A6020000 		.long	LCFI4-Ltext0
+ 2605 0068 53050000 		.long	LCFI5-Ltext0
+ 2606 006c 0200     		.word	0x2
+ 2607 006e 74       		.byte	0x74
+ 2608 006f 30       		.sleb128 48
+ 2609 0070 53050000 		.long	LCFI5-Ltext0
+ 2610 0074 54050000 		.long	LFE2-Ltext0
+ 2611 0078 0200     		.word	0x2
+ 2612 007a 74       		.byte	0x74
+ 2613 007b 04       		.sleb128 4
+ 2614 007c 00000000 		.long	0
+ 2615 0080 00000000 		.long	0
+ 2616              	LLST3:
+ 2617 0084 54050000 		.long	LFB3-Ltext0
+ 2618 0088 57050000 		.long	LCFI6-Ltext0
+ 2619 008c 0200     		.word	0x2
+ 2620 008e 74       		.byte	0x74
+ 2621 008f 04       		.sleb128 4
+ 2622 0090 57050000 		.long	LCFI6-Ltext0
+ 2623 0094 210B0000 		.long	LCFI7-Ltext0
+ 2624 0098 0200     		.word	0x2
+ 2625 009a 74       		.byte	0x74
+ 2626 009b 30       		.sleb128 48
+ 2627 009c 210B0000 		.long	LCFI7-Ltext0
+ 2628 00a0 220B0000 		.long	LFE3-Ltext0
+ 2629 00a4 0200     		.word	0x2
+ 2630 00a6 74       		.byte	0x74
+ 2631 00a7 04       		.sleb128 4
+ 2632 00a8 00000000 		.long	0
+ 2633 00ac 00000000 		.long	0
+ 2634              	LLST4:
+ 2635 00b0 220B0000 		.long	LFB4-Ltext0
+ 2636 00b4 250B0000 		.long	LCFI8-Ltext0
+ 2637 00b8 0200     		.word	0x2
+ 2638 00ba 74       		.byte	0x74
+ 2639 00bb 04       		.sleb128 4
+ 2640 00bc 250B0000 		.long	LCFI8-Ltext0
+ 2641 00c0 B50D0000 		.long	LCFI9-Ltext0
+ 2642 00c4 0200     		.word	0x2
+ 2643 00c6 74       		.byte	0x74
+ 2644 00c7 30       		.sleb128 48
+ 2645 00c8 B50D0000 		.long	LCFI9-Ltext0
+ 2646 00cc B60D0000 		.long	LFE4-Ltext0
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 58
+
+
+ 2647 00d0 0200     		.word	0x2
+ 2648 00d2 74       		.byte	0x74
+ 2649 00d3 04       		.sleb128 4
+ 2650 00d4 00000000 		.long	0
+ 2651 00d8 00000000 		.long	0
+ 2652              	LLST5:
+ 2653 00dc B60D0000 		.long	LFB5-Ltext0
+ 2654 00e0 B90D0000 		.long	LCFI10-Ltext0
+ 2655 00e4 0200     		.word	0x2
+ 2656 00e6 74       		.byte	0x74
+ 2657 00e7 04       		.sleb128 4
+ 2658 00e8 B90D0000 		.long	LCFI10-Ltext0
+ 2659 00ec C80D0000 		.long	LCFI11-Ltext0
+ 2660 00f0 0200     		.word	0x2
+ 2661 00f2 74       		.byte	0x74
+ 2662 00f3 20       		.sleb128 32
+ 2663 00f4 C80D0000 		.long	LCFI11-Ltext0
+ 2664 00f8 C90D0000 		.long	LFE5-Ltext0
+ 2665 00fc 0200     		.word	0x2
+ 2666 00fe 74       		.byte	0x74
+ 2667 00ff 04       		.sleb128 4
+ 2668 0100 00000000 		.long	0
+ 2669 0104 00000000 		.long	0
+ 2670              		.section	.debug_aranges,"dr"
+ 2671 0000 1C000000 		.long	0x1c
+ 2672 0004 0200     		.word	0x2
+ 2673 0006 00000000 		.secrel32	Ldebug_info0
+ 2674 000a 04       		.byte	0x4
+ 2675 000b 00       		.byte	0
+ 2676 000c 0000     		.word	0
+ 2677 000e 0000     		.word	0
+ 2678 0010 00000000 		.long	Ltext0
+ 2679 0014 C90D0000 		.long	Letext0-Ltext0
+ 2680 0018 00000000 		.long	0
+ 2681 001c 00000000 		.long	0
+ 2682              		.section	.debug_line,"dr"
+ 2683              	Ldebug_line0:
+ 2684 0000 65020000 		.section	.debug_str,"dr"
+ 2684      02000401 
+ 2684      00000101 
+ 2684      FB0E0D00 
+ 2684      01010101 
+ 2685              	LASF0:
+ 2686 0000 705F6E65 		.ascii "p_next\0"
+ 2686      787400
+ 2687              	LASF1:
+ 2688 0007 56697274 		.ascii "VirtualTimer\0"
+ 2688      75616C54 
+ 2688      696D6572 
+ 2688      00
+ 2689              	LASF2:
+ 2690 0014 74657374 		.ascii "testthd1\0"
+ 2690      74686431 
+ 2690      00
+ 2691              	LASF3:
+ 2692 001d 74657374 		.ascii "testthd2\0"
+ 2692      74686432 
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 59
+
+
+ 2692      00
+ 2693              	LASF4:
+ 2694 0026 74657374 		.ascii "testthd3\0"
+ 2694      74686433 
+ 2694      00
+ 2695              	LASF5:
+ 2696 002f 74657374 		.ascii "testthd4\0"
+ 2696      74686434 
+ 2696      00
+ 2697              		.def	_test_emit_token;	.scl	2;	.type	32;	.endef
+ 2698              		.def	_chThdCreateStatic;	.scl	2;	.type	32;	.endef
+ 2699              		.def	_test_wait_threads;	.scl	2;	.type	32;	.endef
+ 2700              		.def	__test_assert_sequence;	.scl	2;	.type	32;	.endef
+ 2701              		.def	_chThdCreateI;	.scl	2;	.type	32;	.endef
+ 2702              		.def	_chThdResume;	.scl	2;	.type	32;	.endef
+ 2703              		.def	_chThdSetPriority;	.scl	2;	.type	32;	.endef
+ 2704              		.def	__test_assert;	.scl	2;	.type	32;	.endef
+ 2705              		.def	_test_wait_tick;	.scl	2;	.type	32;	.endef
+ 2706              		.def	_chThdSleep;	.scl	2;	.type	32;	.endef
+ 2707              		.def	__test_assert_time_window;	.scl	2;	.type	32;	.endef
+ 2708              		.def	_chThdSleepUntil;	.scl	2;	.type	32;	.endef
+ 2709              		.def	___gcov_merge_add;	.scl	2;	.type	32;	.endef
+ 2710              		.def	___gcov_init;	.scl	2;	.type	32;	.endef
+GAS LISTING C:\cygwin\tmp\cckjuxoe.s 			page 60
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 testthd.c
+C:\cygwin\tmp\cckjuxoe.s:43     .text:00000000 _thread
+C:\cygwin\tmp\cckjuxoe.s:94     .text:00000055 _thd1_execute
+C:\cygwin\tmp\cckjuxoe.s:244    .rdata:0000002c _testthd1
+C:\cygwin\tmp\cckjuxoe.s:255    .text:000002a3 _thd2_execute
+C:\cygwin\tmp\cckjuxoe.s:439    .rdata:00000058 _testthd2
+C:\cygwin\tmp\cckjuxoe.s:450    .text:00000554 _thd3_execute
+C:\cygwin\tmp\cckjuxoe.s:897    .rdata:00000084 _testthd3
+C:\cygwin\tmp\cckjuxoe.s:908    .text:00000b22 _thd4_execute
+C:\cygwin\tmp\cckjuxoe.s:1098   .rdata:000000a4 _testthd4
+C:\cygwin\tmp\cckjuxoe.s:1109   .rdata:000000b4 _patternthd
+C:\cygwin\tmp\cckjuxoe.s:1178   .text:00000db6 __GLOBAL__sub_I_65535_0_testthd1
+
+UNDEFINED SYMBOLS
+_rlist
+_wa
+_threads
+_vtlist
+_test_emit_token
+_chThdCreateStatic
+_test_wait_threads
+__test_assert_sequence
+_chThdCreateI
+_chThdResume
+_chThdSetPriority
+__test_assert
+_test_wait_tick
+_chThdSleep
+__test_assert_time_window
+_chThdSleepUntil
+___gcov_merge_add
+___gcov_init

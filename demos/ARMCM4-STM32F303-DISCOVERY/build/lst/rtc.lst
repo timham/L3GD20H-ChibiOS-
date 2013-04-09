@@ -1,0 +1,300 @@
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccnIDHI2.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m4
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"rtc.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              	.Letext0:
+  19              		.file 1 "../../os/ports/common/ARMCMx/CMSIS/include/core_cm4.h"
+  20              		.file 2 "c:\\chibistudio\\tools\\gnu tools arm embedded\\4.6 2012q4\\bin\\../lib/gcc/arm-none-eabi
+  21              		.section	.debug_info,"",%progbits
+  22              	.Ldebug_info0:
+  23 0000 A2000000 		.4byte	0xa2
+  24 0004 0200     		.2byte	0x2
+  25 0006 00000000 		.4byte	.Ldebug_abbrev0
+  26 000a 04       		.byte	0x4
+  27 000b 01       		.uleb128 0x1
+  28 000c F3000000 		.4byte	.LASF12
+  29 0010 01       		.byte	0x1
+  30 0011 92000000 		.4byte	.LASF13
+  31 0015 A9000000 		.4byte	.LASF14
+  32 0019 00000000 		.4byte	.Ltext0
+  33 001d 00000000 		.4byte	.Letext0
+  34 0021 00000000 		.4byte	.Ldebug_line0
+  35 0025 02       		.uleb128 0x2
+  36 0026 04       		.byte	0x4
+  37 0027 05       		.byte	0x5
+  38 0028 696E7400 		.ascii	"int\000"
+  39 002c 03       		.uleb128 0x3
+  40 002d 04       		.byte	0x4
+  41 002e 07       		.byte	0x7
+  42 002f 21000000 		.4byte	.LASF0
+  43 0033 03       		.uleb128 0x3
+  44 0034 01       		.byte	0x1
+  45 0035 06       		.byte	0x6
+  46 0036 86000000 		.4byte	.LASF1
+  47 003a 03       		.uleb128 0x3
+  48 003b 01       		.byte	0x1
+  49 003c 08       		.byte	0x8
+  50 003d 57000000 		.4byte	.LASF2
+  51 0041 03       		.uleb128 0x3
+  52 0042 02       		.byte	0x2
+  53 0043 05       		.byte	0x5
+  54 0044 E1000000 		.4byte	.LASF3
+  55 0048 03       		.uleb128 0x3
+  56 0049 02       		.byte	0x2
+  57 004a 07       		.byte	0x7
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccnIDHI2.s 			page 2
+
+
+  58 004b 0E000000 		.4byte	.LASF4
+  59 004f 04       		.uleb128 0x4
+  60 0050 EB000000 		.4byte	.LASF15
+  61 0054 02       		.byte	0x2
+  62 0055 4F       		.byte	0x4f
+  63 0056 5A000000 		.4byte	0x5a
+  64 005a 03       		.uleb128 0x3
+  65 005b 04       		.byte	0x4
+  66 005c 05       		.byte	0x5
+  67 005d 6A000000 		.4byte	.LASF5
+  68 0061 03       		.uleb128 0x3
+  69 0062 04       		.byte	0x4
+  70 0063 07       		.byte	0x7
+  71 0064 2E000000 		.4byte	.LASF6
+  72 0068 03       		.uleb128 0x3
+  73 0069 08       		.byte	0x8
+  74 006a 05       		.byte	0x5
+  75 006b 00000000 		.4byte	.LASF7
+  76 006f 03       		.uleb128 0x3
+  77 0070 08       		.byte	0x8
+  78 0071 07       		.byte	0x7
+  79 0072 40000000 		.4byte	.LASF8
+  80 0076 03       		.uleb128 0x3
+  81 0077 01       		.byte	0x1
+  82 0078 02       		.byte	0x2
+  83 0079 73000000 		.4byte	.LASF9
+  84 007d 03       		.uleb128 0x3
+  85 007e 01       		.byte	0x1
+  86 007f 08       		.byte	0x8
+  87 0080 65000000 		.4byte	.LASF10
+  88 0084 05       		.uleb128 0x5
+  89 0085 4F000000 		.4byte	0x4f
+  90 0089 06       		.uleb128 0x6
+  91 008a 79000000 		.4byte	.LASF11
+  92 008e 01       		.byte	0x1
+  93 008f 9806     		.2byte	0x698
+  94 0091 84000000 		.4byte	0x84
+  95 0095 01       		.byte	0x1
+  96 0096 01       		.byte	0x1
+  97 0097 06       		.uleb128 0x6
+  98 0098 79000000 		.4byte	.LASF11
+  99 009c 01       		.byte	0x1
+ 100 009d 9806     		.2byte	0x698
+ 101 009f 84000000 		.4byte	0x84
+ 102 00a3 01       		.byte	0x1
+ 103 00a4 01       		.byte	0x1
+ 104 00a5 00       		.byte	0
+ 105              		.section	.debug_abbrev,"",%progbits
+ 106              	.Ldebug_abbrev0:
+ 107 0000 01       		.uleb128 0x1
+ 108 0001 11       		.uleb128 0x11
+ 109 0002 01       		.byte	0x1
+ 110 0003 25       		.uleb128 0x25
+ 111 0004 0E       		.uleb128 0xe
+ 112 0005 13       		.uleb128 0x13
+ 113 0006 0B       		.uleb128 0xb
+ 114 0007 03       		.uleb128 0x3
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccnIDHI2.s 			page 3
+
+
+ 115 0008 0E       		.uleb128 0xe
+ 116 0009 1B       		.uleb128 0x1b
+ 117 000a 0E       		.uleb128 0xe
+ 118 000b 11       		.uleb128 0x11
+ 119 000c 01       		.uleb128 0x1
+ 120 000d 12       		.uleb128 0x12
+ 121 000e 01       		.uleb128 0x1
+ 122 000f 10       		.uleb128 0x10
+ 123 0010 06       		.uleb128 0x6
+ 124 0011 00       		.byte	0
+ 125 0012 00       		.byte	0
+ 126 0013 02       		.uleb128 0x2
+ 127 0014 24       		.uleb128 0x24
+ 128 0015 00       		.byte	0
+ 129 0016 0B       		.uleb128 0xb
+ 130 0017 0B       		.uleb128 0xb
+ 131 0018 3E       		.uleb128 0x3e
+ 132 0019 0B       		.uleb128 0xb
+ 133 001a 03       		.uleb128 0x3
+ 134 001b 08       		.uleb128 0x8
+ 135 001c 00       		.byte	0
+ 136 001d 00       		.byte	0
+ 137 001e 03       		.uleb128 0x3
+ 138 001f 24       		.uleb128 0x24
+ 139 0020 00       		.byte	0
+ 140 0021 0B       		.uleb128 0xb
+ 141 0022 0B       		.uleb128 0xb
+ 142 0023 3E       		.uleb128 0x3e
+ 143 0024 0B       		.uleb128 0xb
+ 144 0025 03       		.uleb128 0x3
+ 145 0026 0E       		.uleb128 0xe
+ 146 0027 00       		.byte	0
+ 147 0028 00       		.byte	0
+ 148 0029 04       		.uleb128 0x4
+ 149 002a 16       		.uleb128 0x16
+ 150 002b 00       		.byte	0
+ 151 002c 03       		.uleb128 0x3
+ 152 002d 0E       		.uleb128 0xe
+ 153 002e 3A       		.uleb128 0x3a
+ 154 002f 0B       		.uleb128 0xb
+ 155 0030 3B       		.uleb128 0x3b
+ 156 0031 0B       		.uleb128 0xb
+ 157 0032 49       		.uleb128 0x49
+ 158 0033 13       		.uleb128 0x13
+ 159 0034 00       		.byte	0
+ 160 0035 00       		.byte	0
+ 161 0036 05       		.uleb128 0x5
+ 162 0037 35       		.uleb128 0x35
+ 163 0038 00       		.byte	0
+ 164 0039 49       		.uleb128 0x49
+ 165 003a 13       		.uleb128 0x13
+ 166 003b 00       		.byte	0
+ 167 003c 00       		.byte	0
+ 168 003d 06       		.uleb128 0x6
+ 169 003e 34       		.uleb128 0x34
+ 170 003f 00       		.byte	0
+ 171 0040 03       		.uleb128 0x3
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccnIDHI2.s 			page 4
+
+
+ 172 0041 0E       		.uleb128 0xe
+ 173 0042 3A       		.uleb128 0x3a
+ 174 0043 0B       		.uleb128 0xb
+ 175 0044 3B       		.uleb128 0x3b
+ 176 0045 05       		.uleb128 0x5
+ 177 0046 49       		.uleb128 0x49
+ 178 0047 13       		.uleb128 0x13
+ 179 0048 3F       		.uleb128 0x3f
+ 180 0049 0C       		.uleb128 0xc
+ 181 004a 3C       		.uleb128 0x3c
+ 182 004b 0C       		.uleb128 0xc
+ 183 004c 00       		.byte	0
+ 184 004d 00       		.byte	0
+ 185 004e 00       		.byte	0
+ 186              		.section	.debug_line,"",%progbits
+ 187              	.Ldebug_line0:
+ 188 0000 DA000000 		.section	.debug_str,"MS",%progbits,1
+ 188      0200D400 
+ 188      00000201 
+ 188      FB0E0D00 
+ 188      01010101 
+ 189              	.LASF7:
+ 190 0000 6C6F6E67 		.ascii	"long long int\000"
+ 190      206C6F6E 
+ 190      6720696E 
+ 190      7400
+ 191              	.LASF4:
+ 192 000e 73686F72 		.ascii	"short unsigned int\000"
+ 192      7420756E 
+ 192      7369676E 
+ 192      65642069 
+ 192      6E7400
+ 193              	.LASF0:
+ 194 0021 756E7369 		.ascii	"unsigned int\000"
+ 194      676E6564 
+ 194      20696E74 
+ 194      00
+ 195              	.LASF6:
+ 196 002e 6C6F6E67 		.ascii	"long unsigned int\000"
+ 196      20756E73 
+ 196      69676E65 
+ 196      6420696E 
+ 196      7400
+ 197              	.LASF8:
+ 198 0040 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 198      206C6F6E 
+ 198      6720756E 
+ 198      7369676E 
+ 198      65642069 
+ 199              	.LASF2:
+ 200 0057 756E7369 		.ascii	"unsigned char\000"
+ 200      676E6564 
+ 200      20636861 
+ 200      7200
+ 201              	.LASF10:
+ 202 0065 63686172 		.ascii	"char\000"
+ 202      00
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccnIDHI2.s 			page 5
+
+
+ 203              	.LASF5:
+ 204 006a 6C6F6E67 		.ascii	"long int\000"
+ 204      20696E74 
+ 204      00
+ 205              	.LASF9:
+ 206 0073 5F426F6F 		.ascii	"_Bool\000"
+ 206      6C00
+ 207              	.LASF11:
+ 208 0079 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 208      52784275 
+ 208      66666572 
+ 208      00
+ 209              	.LASF1:
+ 210 0086 7369676E 		.ascii	"signed char\000"
+ 210      65642063 
+ 210      68617200 
+ 211              	.LASF13:
+ 212 0092 2E2E2F2E 		.ascii	"../../os/hal/src/rtc.c\000"
+ 212      2E2F6F73 
+ 212      2F68616C 
+ 212      2F737263 
+ 212      2F727463 
+ 213              	.LASF14:
+ 214 00a9 433A5C43 		.ascii	"C:\\ChibiStudio\\chibios\\demos\\ARMCM4-STM32F303-D"
+ 214      68696269 
+ 214      53747564 
+ 214      696F5C63 
+ 214      68696269 
+ 215 00d8 4953434F 		.ascii	"ISCOVERY\000"
+ 215      56455259 
+ 215      00
+ 216              	.LASF3:
+ 217 00e1 73686F72 		.ascii	"short int\000"
+ 217      7420696E 
+ 217      7400
+ 218              	.LASF15:
+ 219 00eb 696E7433 		.ascii	"int32_t\000"
+ 219      325F7400 
+ 220              	.LASF12:
+ 221 00f3 474E5520 		.ascii	"GNU C 4.6.2 20121016 (release) [ARM/embedded-4_6-br"
+ 221      4320342E 
+ 221      362E3220 
+ 221      32303132 
+ 221      31303136 
+ 222 0126 616E6368 		.ascii	"anch revision 192487]\000"
+ 222      20726576 
+ 222      6973696F 
+ 222      6E203139 
+ 222      32343837 
+ 223              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.6.2 20121016 (release) [ARM/embedded-4_6-br
+ARM GAS  C:\Users\TAISIK~1\AppData\Local\Temp\ccnIDHI2.s 			page 6
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 rtc.c
+
+NO UNDEFINED SYMBOLS

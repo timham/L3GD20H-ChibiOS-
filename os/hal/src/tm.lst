@@ -1,0 +1,417 @@
+GAS LISTING C:\cygwin\tmp\ccuW6zpz.s 			page 1
+
+
+   1              		.file	"tm.c"
+   2              	 # GNU C (GCC) version 4.6.2 (mingw32)
+   3              	 #	compiled by GNU C version 4.6.2, GMP version 5.0.1, MPFR version 2.4.1, MPC version 0.8.1
+   4              	 # GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+   5              	 # options passed:  -I . -I ../../os/ports/GCC/SIMIA32
+   6              	 # -I ../../os/kernel/include -I ../../test -I ../../os/hal/include
+   7              	 # -I ../../os/hal/platforms/Win32 -I ../../boards/simulator
+   8              	 # -I ../../os/various -iprefix c:\mingw\bin\../lib/gcc/mingw32/4.6.2/
+   9              	 # -MD ../../os/hal/src/tm.d -MF .dep/tm.o.d -MP -MQ ../../os/hal/src/tm.o
+  10              	 # -D SIMULATOR ../../os/hal/src/tm.c -mtune=i386 -march=i386
+  11              	 # -auxbase-strip ../../os/hal/src/tm.o -ggdb -O0 -Wall -Wextra
+  12              	 # -Wstrict-prototypes -fomit-frame-pointer -fprofile-arcs -ftest-coverage
+  13              	 # -fverbose-asm
+  14              	 # options enabled:  -fasynchronous-unwind-tables -fauto-inc-dec
+  15              	 # -fbranch-count-reg -fcommon -fdelete-null-pointer-checks
+  16              	 # -fdwarf2-cfi-asm -fearly-inlining -feliminate-unused-debug-types
+  17              	 # -ffunction-cse -fgcse-lm -fident -finline-functions-called-once
+  18              	 # -fira-share-save-slots -fira-share-spill-slots -fivopts
+  19              	 # -fkeep-inline-dllexport -fkeep-static-consts -fleading-underscore
+  20              	 # -fmath-errno -fmerge-debug-strings -fmove-loop-invariants
+  21              	 # -fomit-frame-pointer -fpeephole -fprefetch-loop-arrays -fprofile-arcs
+  22              	 # -freg-struct-return -fsched-critical-path-heuristic
+  23              	 # -fsched-dep-count-heuristic -fsched-group-heuristic -fsched-interblock
+  24              	 # -fsched-last-insn-heuristic -fsched-rank-heuristic -fsched-spec
+  25              	 # -fsched-spec-insn-heuristic -fsched-stalled-insns-dep
+  26              	 # -fset-stack-executable -fshow-column -fsigned-zeros
+  27              	 # -fsplit-ivs-in-unroller -fstrict-volatile-bitfields -ftest-coverage
+  28              	 # -ftrapping-math -ftree-cselim -ftree-forwprop -ftree-loop-if-convert
+  29              	 # -ftree-loop-im -ftree-loop-ivcanon -ftree-loop-optimize
+  30              	 # -ftree-parallelize-loops= -ftree-phiprop -ftree-pta -ftree-reassoc
+  31              	 # -ftree-scev-cprop -ftree-slp-vectorize -ftree-vect-loop-version
+  32              	 # -funit-at-a-time -funwind-tables -fvect-cost-model -fverbose-asm
+  33              	 # -fzero-initialized-in-bss -m32 -m80387 -m96bit-long-double
+  34              	 # -maccumulate-outgoing-args -malign-double -malign-stringops
+  35              	 # -mfancy-math-387 -mfp-ret-in-387 -mieee-fp -mno-red-zone -mno-sse4
+  36              	 # -mpush-args -msahf -mstack-arg-probe
+  37              	
+  38              		.text
+  39              	Ltext0:
+  40              	 # Compiler executable checksum: c20aed7c018482d7b62efcd5dcab2a9d
+  41              	
+  42              	Letext0:
+  43              		.file 1 "c:/mingw/bin/../lib/gcc/mingw32/4.6.2/../../../../include/stdio.h"
+  44              		.section	.debug_info,"dr"
+  45              	Ldebug_info0:
+  46 0000 F8010000 		.long	0x1f8
+  47 0004 0200     		.word	0x2
+  48 0006 00000000 		.secrel32	Ldebug_abbrev0
+  49 000a 04       		.byte	0x4
+  50 000b 01       		.uleb128 0x1
+  51 000c 474E5520 		.ascii "GNU C 4.6.2\0"
+  51      4320342E 
+  51      362E3200 
+  52 0018 01       		.byte	0x1
+  53 0019 2E2E2F2E 		.ascii "../../os/hal/src/tm.c\0"
+  53      2E2F6F73 
+  53      2F68616C 
+GAS LISTING C:\cygwin\tmp\ccuW6zpz.s 			page 2
+
+
+  53      2F737263 
+  53      2F746D2E 
+  54 002f 433A5C64 		.ascii "C:\\develop\\gyro\\ChibiOS\\test\\coverage\0"
+  54      6576656C 
+  54      6F705C67 
+  54      79726F5C 
+  54      43686962 
+  55 0055 00000000 		.long	Ltext0
+  56 0059 00000000 		.long	Letext0
+  57 005d 00000000 		.secrel32	Ldebug_line0
+  58 0061 02       		.uleb128 0x2
+  59 0062 04       		.byte	0x4
+  60 0063 05       		.byte	0x5
+  61 0064 696E7400 		.ascii "int\0"
+  62 0068 02       		.uleb128 0x2
+  63 0069 04       		.byte	0x4
+  64 006a 07       		.byte	0x7
+  65 006b 756E7369 		.ascii "unsigned int\0"
+  65      676E6564 
+  65      20696E74 
+  65      00
+  66 0078 02       		.uleb128 0x2
+  67 0079 02       		.byte	0x2
+  68 007a 07       		.byte	0x7
+  69 007b 73686F72 		.ascii "short unsigned int\0"
+  69      7420756E 
+  69      7369676E 
+  69      65642069 
+  69      6E7400
+  70 008e 02       		.uleb128 0x2
+  71 008f 01       		.byte	0x1
+  72 0090 06       		.byte	0x6
+  73 0091 7369676E 		.ascii "signed char\0"
+  73      65642063 
+  73      68617200 
+  74 009d 02       		.uleb128 0x2
+  75 009e 01       		.byte	0x1
+  76 009f 08       		.byte	0x8
+  77 00a0 756E7369 		.ascii "unsigned char\0"
+  77      676E6564 
+  77      20636861 
+  77      7200
+  78 00ae 02       		.uleb128 0x2
+  79 00af 02       		.byte	0x2
+  80 00b0 05       		.byte	0x5
+  81 00b1 73686F72 		.ascii "short int\0"
+  81      7420696E 
+  81      7400
+  82 00bb 02       		.uleb128 0x2
+  83 00bc 08       		.byte	0x8
+  84 00bd 05       		.byte	0x5
+  85 00be 6C6F6E67 		.ascii "long long int\0"
+  85      206C6F6E 
+  85      6720696E 
+  85      7400
+  86 00cc 02       		.uleb128 0x2
+  87 00cd 08       		.byte	0x8
+GAS LISTING C:\cygwin\tmp\ccuW6zpz.s 			page 3
+
+
+  88 00ce 07       		.byte	0x7
+  89 00cf 6C6F6E67 		.ascii "long long unsigned int\0"
+  89      206C6F6E 
+  89      6720756E 
+  89      7369676E 
+  89      65642069 
+  90 00e6 02       		.uleb128 0x2
+  91 00e7 01       		.byte	0x1
+  92 00e8 02       		.byte	0x2
+  93 00e9 5F426F6F 		.ascii "_Bool\0"
+  93      6C00
+  94 00ef 02       		.uleb128 0x2
+  95 00f0 01       		.byte	0x1
+  96 00f1 06       		.byte	0x6
+  97 00f2 63686172 		.ascii "char\0"
+  97      00
+  98 00f7 02       		.uleb128 0x2
+  99 00f8 04       		.byte	0x4
+ 100 00f9 07       		.byte	0x7
+ 101 00fa 6C6F6E67 		.ascii "long unsigned int\0"
+ 101      20756E73 
+ 101      69676E65 
+ 101      6420696E 
+ 101      7400
+ 102 010c 02       		.uleb128 0x2
+ 103 010d 04       		.byte	0x4
+ 104 010e 04       		.byte	0x4
+ 105 010f 666C6F61 		.ascii "float\0"
+ 105      7400
+ 106 0115 02       		.uleb128 0x2
+ 107 0116 04       		.byte	0x4
+ 108 0117 05       		.byte	0x5
+ 109 0118 6C6F6E67 		.ascii "long int\0"
+ 109      20696E74 
+ 109      00
+ 110 0121 03       		.uleb128 0x3
+ 111 0122 04       		.byte	0x4
+ 112 0123 EF000000 		.long	0xef
+ 113 0127 02       		.uleb128 0x2
+ 114 0128 08       		.byte	0x8
+ 115 0129 04       		.byte	0x4
+ 116 012a 646F7562 		.ascii "double\0"
+ 116      6C6500
+ 117 0131 04       		.uleb128 0x4
+ 118 0132 5F696F62 		.ascii "_iobuf\0"
+ 118      756600
+ 119 0139 20       		.byte	0x20
+ 120 013a 01       		.byte	0x1
+ 121 013b 81       		.byte	0x81
+ 122 013c C8010000 		.long	0x1c8
+ 123 0140 05       		.uleb128 0x5
+ 124 0141 5F707472 		.ascii "_ptr\0"
+ 124      00
+ 125 0146 01       		.byte	0x1
+ 126 0147 83       		.byte	0x83
+ 127 0148 21010000 		.long	0x121
+ 128 014c 02       		.byte	0x2
+GAS LISTING C:\cygwin\tmp\ccuW6zpz.s 			page 4
+
+
+ 129 014d 23       		.byte	0x23
+ 130 014e 00       		.uleb128 0
+ 131 014f 05       		.uleb128 0x5
+ 132 0150 5F636E74 		.ascii "_cnt\0"
+ 132      00
+ 133 0155 01       		.byte	0x1
+ 134 0156 84       		.byte	0x84
+ 135 0157 61000000 		.long	0x61
+ 136 015b 02       		.byte	0x2
+ 137 015c 23       		.byte	0x23
+ 138 015d 04       		.uleb128 0x4
+ 139 015e 05       		.uleb128 0x5
+ 140 015f 5F626173 		.ascii "_base\0"
+ 140      6500
+ 141 0165 01       		.byte	0x1
+ 142 0166 85       		.byte	0x85
+ 143 0167 21010000 		.long	0x121
+ 144 016b 02       		.byte	0x2
+ 145 016c 23       		.byte	0x23
+ 146 016d 08       		.uleb128 0x8
+ 147 016e 05       		.uleb128 0x5
+ 148 016f 5F666C61 		.ascii "_flag\0"
+ 148      6700
+ 149 0175 01       		.byte	0x1
+ 150 0176 86       		.byte	0x86
+ 151 0177 61000000 		.long	0x61
+ 152 017b 02       		.byte	0x2
+ 153 017c 23       		.byte	0x23
+ 154 017d 0C       		.uleb128 0xc
+ 155 017e 05       		.uleb128 0x5
+ 156 017f 5F66696C 		.ascii "_file\0"
+ 156      6500
+ 157 0185 01       		.byte	0x1
+ 158 0186 87       		.byte	0x87
+ 159 0187 61000000 		.long	0x61
+ 160 018b 02       		.byte	0x2
+ 161 018c 23       		.byte	0x23
+ 162 018d 10       		.uleb128 0x10
+ 163 018e 05       		.uleb128 0x5
+ 164 018f 5F636861 		.ascii "_charbuf\0"
+ 164      72627566 
+ 164      00
+ 165 0198 01       		.byte	0x1
+ 166 0199 88       		.byte	0x88
+ 167 019a 61000000 		.long	0x61
+ 168 019e 02       		.byte	0x2
+ 169 019f 23       		.byte	0x23
+ 170 01a0 14       		.uleb128 0x14
+ 171 01a1 05       		.uleb128 0x5
+ 172 01a2 5F627566 		.ascii "_bufsiz\0"
+ 172      73697A00 
+ 173 01aa 01       		.byte	0x1
+ 174 01ab 89       		.byte	0x89
+ 175 01ac 61000000 		.long	0x61
+ 176 01b0 02       		.byte	0x2
+ 177 01b1 23       		.byte	0x23
+ 178 01b2 18       		.uleb128 0x18
+GAS LISTING C:\cygwin\tmp\ccuW6zpz.s 			page 5
+
+
+ 179 01b3 05       		.uleb128 0x5
+ 180 01b4 5F746D70 		.ascii "_tmpfname\0"
+ 180      666E616D 
+ 180      6500
+ 181 01be 01       		.byte	0x1
+ 182 01bf 8A       		.byte	0x8a
+ 183 01c0 21010000 		.long	0x121
+ 184 01c4 02       		.byte	0x2
+ 185 01c5 23       		.byte	0x23
+ 186 01c6 1C       		.uleb128 0x1c
+ 187 01c7 00       		.byte	0
+ 188 01c8 06       		.uleb128 0x6
+ 189 01c9 46494C45 		.ascii "FILE\0"
+ 189      00
+ 190 01ce 01       		.byte	0x1
+ 191 01cf 8B       		.byte	0x8b
+ 192 01d0 31010000 		.long	0x131
+ 193 01d4 07       		.uleb128 0x7
+ 194 01d5 C8010000 		.long	0x1c8
+ 195 01d9 DF010000 		.long	0x1df
+ 196 01dd 08       		.uleb128 0x8
+ 197 01de 00       		.byte	0
+ 198 01df 09       		.uleb128 0x9
+ 199 01e0 5F696F62 		.ascii "_iob\0"
+ 199      00
+ 200 01e5 01       		.byte	0x1
+ 201 01e6 9A       		.byte	0x9a
+ 202 01e7 D4010000 		.long	0x1d4
+ 203 01eb 01       		.byte	0x1
+ 204 01ec 01       		.byte	0x1
+ 205 01ed 09       		.uleb128 0x9
+ 206 01ee 5F696F62 		.ascii "_iob\0"
+ 206      00
+ 207 01f3 01       		.byte	0x1
+ 208 01f4 9A       		.byte	0x9a
+ 209 01f5 D4010000 		.long	0x1d4
+ 210 01f9 01       		.byte	0x1
+ 211 01fa 01       		.byte	0x1
+ 212 01fb 00       		.byte	0
+ 213              		.section	.debug_abbrev,"dr"
+ 214              	Ldebug_abbrev0:
+ 215 0000 01       		.uleb128 0x1
+ 216 0001 11       		.uleb128 0x11
+ 217 0002 01       		.byte	0x1
+ 218 0003 25       		.uleb128 0x25
+ 219 0004 08       		.uleb128 0x8
+ 220 0005 13       		.uleb128 0x13
+ 221 0006 0B       		.uleb128 0xb
+ 222 0007 03       		.uleb128 0x3
+ 223 0008 08       		.uleb128 0x8
+ 224 0009 1B       		.uleb128 0x1b
+ 225 000a 08       		.uleb128 0x8
+ 226 000b 11       		.uleb128 0x11
+ 227 000c 01       		.uleb128 0x1
+ 228 000d 12       		.uleb128 0x12
+ 229 000e 01       		.uleb128 0x1
+ 230 000f 10       		.uleb128 0x10
+GAS LISTING C:\cygwin\tmp\ccuW6zpz.s 			page 6
+
+
+ 231 0010 06       		.uleb128 0x6
+ 232 0011 00       		.byte	0
+ 233 0012 00       		.byte	0
+ 234 0013 02       		.uleb128 0x2
+ 235 0014 24       		.uleb128 0x24
+ 236 0015 00       		.byte	0
+ 237 0016 0B       		.uleb128 0xb
+ 238 0017 0B       		.uleb128 0xb
+ 239 0018 3E       		.uleb128 0x3e
+ 240 0019 0B       		.uleb128 0xb
+ 241 001a 03       		.uleb128 0x3
+ 242 001b 08       		.uleb128 0x8
+ 243 001c 00       		.byte	0
+ 244 001d 00       		.byte	0
+ 245 001e 03       		.uleb128 0x3
+ 246 001f 0F       		.uleb128 0xf
+ 247 0020 00       		.byte	0
+ 248 0021 0B       		.uleb128 0xb
+ 249 0022 0B       		.uleb128 0xb
+ 250 0023 49       		.uleb128 0x49
+ 251 0024 13       		.uleb128 0x13
+ 252 0025 00       		.byte	0
+ 253 0026 00       		.byte	0
+ 254 0027 04       		.uleb128 0x4
+ 255 0028 13       		.uleb128 0x13
+ 256 0029 01       		.byte	0x1
+ 257 002a 03       		.uleb128 0x3
+ 258 002b 08       		.uleb128 0x8
+ 259 002c 0B       		.uleb128 0xb
+ 260 002d 0B       		.uleb128 0xb
+ 261 002e 3A       		.uleb128 0x3a
+ 262 002f 0B       		.uleb128 0xb
+ 263 0030 3B       		.uleb128 0x3b
+ 264 0031 0B       		.uleb128 0xb
+ 265 0032 01       		.uleb128 0x1
+ 266 0033 13       		.uleb128 0x13
+ 267 0034 00       		.byte	0
+ 268 0035 00       		.byte	0
+ 269 0036 05       		.uleb128 0x5
+ 270 0037 0D       		.uleb128 0xd
+ 271 0038 00       		.byte	0
+ 272 0039 03       		.uleb128 0x3
+ 273 003a 08       		.uleb128 0x8
+ 274 003b 3A       		.uleb128 0x3a
+ 275 003c 0B       		.uleb128 0xb
+ 276 003d 3B       		.uleb128 0x3b
+ 277 003e 0B       		.uleb128 0xb
+ 278 003f 49       		.uleb128 0x49
+ 279 0040 13       		.uleb128 0x13
+ 280 0041 38       		.uleb128 0x38
+ 281 0042 0A       		.uleb128 0xa
+ 282 0043 00       		.byte	0
+ 283 0044 00       		.byte	0
+ 284 0045 06       		.uleb128 0x6
+ 285 0046 16       		.uleb128 0x16
+ 286 0047 00       		.byte	0
+ 287 0048 03       		.uleb128 0x3
+GAS LISTING C:\cygwin\tmp\ccuW6zpz.s 			page 7
+
+
+ 288 0049 08       		.uleb128 0x8
+ 289 004a 3A       		.uleb128 0x3a
+ 290 004b 0B       		.uleb128 0xb
+ 291 004c 3B       		.uleb128 0x3b
+ 292 004d 0B       		.uleb128 0xb
+ 293 004e 49       		.uleb128 0x49
+ 294 004f 13       		.uleb128 0x13
+ 295 0050 00       		.byte	0
+ 296 0051 00       		.byte	0
+ 297 0052 07       		.uleb128 0x7
+ 298 0053 01       		.uleb128 0x1
+ 299 0054 01       		.byte	0x1
+ 300 0055 49       		.uleb128 0x49
+ 301 0056 13       		.uleb128 0x13
+ 302 0057 01       		.uleb128 0x1
+ 303 0058 13       		.uleb128 0x13
+ 304 0059 00       		.byte	0
+ 305 005a 00       		.byte	0
+ 306 005b 08       		.uleb128 0x8
+ 307 005c 21       		.uleb128 0x21
+ 308 005d 00       		.byte	0
+ 309 005e 00       		.byte	0
+ 310 005f 00       		.byte	0
+ 311 0060 09       		.uleb128 0x9
+ 312 0061 34       		.uleb128 0x34
+ 313 0062 00       		.byte	0
+ 314 0063 03       		.uleb128 0x3
+ 315 0064 08       		.uleb128 0x8
+ 316 0065 3A       		.uleb128 0x3a
+ 317 0066 0B       		.uleb128 0xb
+ 318 0067 3B       		.uleb128 0x3b
+ 319 0068 0B       		.uleb128 0xb
+ 320 0069 49       		.uleb128 0x49
+ 321 006a 13       		.uleb128 0x13
+ 322 006b 3F       		.uleb128 0x3f
+ 323 006c 0C       		.uleb128 0xc
+ 324 006d 3C       		.uleb128 0x3c
+ 325 006e 0C       		.uleb128 0xc
+ 326 006f 00       		.byte	0
+ 327 0070 00       		.byte	0
+ 328 0071 00       		.byte	0
+ 329              		.section	.debug_line,"dr"
+ 330 0000 5E000000 	Ldebug_line0:
+ 330      02005800 
+ 330      00000101 
+ 330      FB0E0D00 
+ 330      01010101 
+GAS LISTING C:\cygwin\tmp\ccuW6zpz.s 			page 8
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 tm.c
+
+NO UNDEFINED SYMBOLS
